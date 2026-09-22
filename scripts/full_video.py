@@ -119,8 +119,11 @@ def main():
     expected = len(probe['frames'])
     if not expected:
         raise RuntimeError('No video frames reported')
+    # Preserve the demuxer's timestamp precision. The MJPEG default time base
+    # can round distinct VFR frames to the same PTS and stop encoding.
     stage('extract', ['ffmpeg', '-nostdin', '-y', '-v', 'warning', '-threads', '2', '-i', a.video,
-        '-map', '0:v:0', '-fps_mode', 'passthrough', '-q:v', '1', '-threads', '2', frames / 'frame_%06d.jpg'],
+        '-map', '0:v:0', '-fps_mode', 'passthrough', '-enc_time_base', '-1',
+        '-q:v', '1', '-threads', '2', frames / 'frame_%06d.jpg'],
         [frames / f'frame_{expected:06d}.jpg'])
     files = sorted(frames.glob('frame_*.jpg'))
     if len(files) != expected:
