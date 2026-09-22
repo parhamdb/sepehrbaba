@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111413">
+  <meta name="description" content="Explore a 3D reconstruction from a continuous handheld recording. Reconstruction coverage is shown explicitly.">
+  <title>Sepehr Baba · 3D scene</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <div id="viewer" aria-label="Interactive 3D scene"></div>
+  <header>
+    <a class="brand" href="./" aria-label="Sepehr Baba home"><span class="mark">S<span>·</span>B</span><span>SEPEHR BABA<small>SPATIAL RECORD</small></span></a>
+    <span class="coverage">Preview · 00:16–00:26</span>
+  </header>
+  <main id="intro">
+    <div class="intro-card">
+      <p class="eyebrow">ONE RECORDING / A SPACE TO EXPLORE</p>
+      <h1>Sepehr Baba<span>in three dimensions.</span></h1>
+      <p class="lede">Look around and move through the reconstructed scene.</p>
+      <div class="scope"><span class="dot"></span><div><strong>A partial preview</strong><p>About 10 seconds of the 12-minute recording are represented here. The full-video reconstruction is not available yet.</p></div></div>
+      <p class="content-note">This recording contains imagery of deceased people.</p>
+      <button id="enter" class="primary">Enter the 3D scene <span aria-hidden="true">↗</span></button>
+      <p class="requirements">Desktop and mobile · No installation</p>
+    </div>
+    <aside class="intro-aside" aria-hidden="true"><div class="wireframe"></div><span>01 / RECONSTRUCTION PREVIEW</span></aside>
+  </main>
+  <div id="loading" class="loading" role="status" hidden><span class="spinner"></span><span id="progress">Opening scene…</span></div>
+  <section id="error" class="error" role="alert" hidden><h2>The scene could not load</h2><p id="error-message"></p><button id="retry">Try again</button><a href="./assets/preview.ply" download>Download the scene</a></section>
+  <nav id="toolbar" class="toolbar" aria-label="Scene controls" hidden>
+    <button id="orbit" aria-pressed="true">Orbit</button>
+    <button id="fly" aria-pressed="false">Move freely</button>
+    <span class="divider"></span>
+    <button id="reset">Reset view</button>
+    <button id="fullscreen" aria-label="Toggle fullscreen">⛶</button>
+    <button id="help-button" aria-expanded="false" aria-controls="help">Help</button>
+  </nav>
+  <div id="move-pad" class="move-pad" role="group" aria-label="Movement controls" hidden>
+    <button data-move="0,1" aria-label="Move forward">↑</button>
+    <button data-move="-1,0" aria-label="Move left">←</button>
+    <button data-move="0,-1" aria-label="Move backward">↓</button>
+    <button data-move="1,0" aria-label="Move right">→</button>
+  </div>
+  <section id="help" class="help" hidden><h2>Explore the scene</h2><dl><dt>Orbit</dt><dd>Drag to rotate. Scroll or pinch to zoom. Right-drag to pan.</dd><dt>Move freely</dt><dd>Drag to look. Use W A S D or the arrow buttons to move. W A S D captures the mouse; press Esc to release it and use the controls.</dd><dt>Lost your place?</dt><dd>Choose Reset view to return to the starting camera.</dd></dl><p>This is a visual reconstruction. Unseen surfaces and gaps remain empty; movement has no collision barriers.</p><button id="close-help">Close help</button></section>
+  <footer><span id="hint">A continuous recording, reconstructed in 3D.</span><a href="https://github.com/parhamdb/sepehrbaba" target="_blank" rel="noopener noreferrer">About this project ↗</a></footer>
+  <noscript><p class="error">JavaScript is needed to explore this 3D scene.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "sepehrbaba",
+  "version": "1.0.0",
+  "description": "Interactive 3D scene from a continuous handheld recording",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "dependencies": {
+    "@playcanvas/supersplat-viewer": "1.32.0",
+    "esbuild": "0.28.2",
+    "playcanvas": "2.22.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "pngjs": "7.0.0"
+  },
+  "private": true
+}

@@ -1,0 +1,24 @@
+{
+  "asset": "./assets/preview.ply",
+  "coverage": {
+    "start_seconds": 16,
+    "end_seconds": 26.5,
+    "source_duration_seconds": 737.301333,
+    "status": "partial-preview",
+    "registered_frames": 21,
+    "source_frames": 12793
+  },
+  "camera": {
+    "position": [
+      -0.8544957210209977,
+      -2.003143252184909,
+      -0.2774863318012225
+    ],
+    "target": [
+      -0.5252359144619743,
+      -0.8678116935772606,
+      2.4797967932721257
+    ],
+    "fov": 60
+  }
+}
