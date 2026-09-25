@@ -143,6 +143,9 @@ python3 scripts/video_to_splat.py --stage train \
 ```
 
 Use a fresh work directory and retain the accepted scene during the comparison.
+Add `--preserve-poses` to the cleanup command to skip bundle adjustment and keep
+both the original camera poses and the retained points' original coordinates.
+Point filtering remains identical, allowing its effect to be tested separately.
 `quality.json` records removed points, frozen cameras, actual reprojection errors
 and camera-pose changes. Geometry must remain connected and pass the accuracy
 checks before training. Cleaner inputs do not guarantee a better splat: compare

@@ -113,6 +113,8 @@ def main():
     parser.add_argument('--work', type=Path, required=True)
     parser.add_argument('--colmap', required=True)
     parser.add_argument('--minimum-camera-observations', type=int, default=30)
+    parser.add_argument('--preserve-poses', action='store_true',
+                        help='Skip bundle adjustment; retain original camera poses and retained point coordinates')
     args = parser.parse_args()
     if args.minimum_camera_observations < 6:
         parser.error('At least six observations per refined camera required')
@@ -205,14 +207,17 @@ def main():
         raise RuntimeError('Static geometry disconnected or too small; training blocked')
     before = measure(images, points, cameras_text)
     filtered = work / 'filtered'; write_model(filtered, cameras_text, active, points)
-    adjusted = work / 'adjusted'; adjusted.mkdir()
-    run('refine', 'bundle_adjuster', '--input_path', filtered, '--output_path', adjusted,
-        '--BundleAdjustment.refine_focal_length', '0', '--BundleAdjustment.refine_principal_point', '0',
-        '--BundleAdjustment.refine_extra_params', '0', '--BundleAdjustment.refine_sensor_from_rig', '0')
-    adjusted_text = work / 'adjusted-text'; adjusted_text.mkdir()
-    run('inspect', 'model_converter', '--input_path', adjusted, '--output_path', adjusted_text,
-        '--output_type', 'TXT')
-    refined_images, refined_points = read_model(adjusted_text)
+    if args.preserve_poses:
+        refined_images, refined_points = active, points
+    else:
+        adjusted = work / 'adjusted'; adjusted.mkdir()
+        run('refine', 'bundle_adjuster', '--input_path', filtered, '--output_path', adjusted,
+            '--BundleAdjustment.refine_focal_length', '0', '--BundleAdjustment.refine_principal_point', '0',
+            '--BundleAdjustment.refine_extra_params', '0', '--BundleAdjustment.refine_sensor_from_rig', '0')
+        adjusted_text = work / 'adjusted-text'; adjusted_text.mkdir()
+        run('inspect', 'model_converter', '--input_path', adjusted, '--output_path', adjusted_text,
+            '--output_type', 'TXT')
+        refined_images, refined_points = read_model(adjusted_text)
     if set(refined_images) != set(active) or set(refined_points) != set(points):
         raise RuntimeError('Bundle adjustment changed the camera or point inventory')
     translations, angles = [], []
@@ -226,7 +231,9 @@ def main():
               'original_points': before_count, 'retained_points': len(refined_points),
               'removed_points': before_count-len(refined_points), 'frames': len(images),
               'duplicate_observations_removed': duplicate_observations_removed,
-              'refined_cameras': len(active), 'frozen_camera_names': [images[i]['row'][9] for i in sorted(frozen)],
+              'preserve_poses': args.preserve_poses,
+              'refined_cameras': 0 if args.preserve_poses else len(active),
+              'frozen_camera_names': [images[i]['row'][9] for i in sorted(frozen)],
               'before_static_refinement': before, 'after_static_refinement': after,
               'maximum_camera_translation': max(translations), 'maximum_camera_rotation_degrees': max(angles)}
     report['accepted_geometry'] = (after['mean_reprojection_px'] <= 1.5 and after['p95_reprojection_px'] <= 3.5
