@@ -147,3 +147,7 @@ Use a fresh work directory and retain the accepted scene during the comparison.
 and camera-pose changes. Geometry must remain connected and pass the accuracy
 checks before training. Cleaner inputs do not guarantee a better splat: compare
 the same held-out images and identical viewer camera positions before publishing.
+
+The [first controlled comparison](docs/static-cleanup-comparison.md) produced a
+smaller model but no clear visual gain. The published scene remains the accepted
+baseline; the cleanup candidate was not promoted.
