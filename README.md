@@ -163,3 +163,8 @@ PLY by filtering needle-shaped Gaussians or large, faint, isolated Gaussians.
 It preserves retained records exactly and saves excluded records separately.
 The [three-candidate experiment](docs/post-training-cleanup.md) found no clear
 visual improvement; these filters are diagnostic tools, not proven ghost detectors.
+
+The [ranked ghosting research and fallback options](docs/ghosting-options.md)
+preserve 26 approaches, ordered by suitability for this recording, with source
+links, implementation limits, prior failures, and criteria for revisiting each.
+The ranking is a research assessment; no new method is claimed as validated.
