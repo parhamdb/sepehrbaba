@@ -155,3 +155,11 @@ The [controlled comparisons](docs/static-cleanup-comparison.md) tested cleanup
 with refined poses and with original poses. Both produced smaller models but no
 clear visual gain. The published scene remains the accepted baseline; neither
 cleanup candidate was promoted.
+
+### Post-training cleanup
+
+`scripts/prune_splat_candidates.py` exports reversible candidates from a trained
+PLY by filtering needle-shaped Gaussians or large, faint, isolated Gaussians.
+It preserves retained records exactly and saves excluded records separately.
+The [three-candidate experiment](docs/post-training-cleanup.md) found no clear
+visual improvement; these filters are diagnostic tools, not proven ghost detectors.
