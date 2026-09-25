@@ -1,0 +1,5 @@
+-r requirements.txt
+# Select appropriate CPU/CUDA wheels for your platform before installing.
+# These package versions were used on Thor; do not replace a vendor runtime blindly.
+torch==2.10.0
+torchvision==0.25.0

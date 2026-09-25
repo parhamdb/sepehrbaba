@@ -1,0 +1,57 @@
+{
+  "purpose": "Visual artifact inspection only, not ground-truth labels or deletion masks. Coordinates normalized to source view. Frozen before inspecting candidate renders.",
+  "regions": [
+    {
+      "image": "frame_003139",
+      "box": [
+        0,
+        0.05,
+        0.2,
+        0.4
+      ],
+      "description": "Left edge ghost streaks near moving-person region"
+    },
+    {
+      "image": "frame_003140",
+      "box": [
+        0,
+        0.05,
+        0.2,
+        0.4
+      ],
+      "description": "Adjacent view of same streaks"
+    },
+    {
+      "image": "frame_003269",
+      "box": [
+        0,
+        0,
+        1,
+        0.35
+      ],
+      "description": "Upper background smearing and rays"
+    }
+  ],
+  "protected_detail": [
+    {
+      "image": "frame_003139",
+      "box": [
+        0.05,
+        0.4,
+        0.8,
+        0.95
+      ],
+      "description": "Floor texture and foreground fabric edges"
+    },
+    {
+      "image": "frame_003269",
+      "box": [
+        0,
+        0.4,
+        1,
+        1
+      ],
+      "description": "Central and foreground fabric folds"
+    }
+  ]
+}

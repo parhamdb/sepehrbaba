@@ -1,0 +1,3 @@
+# Core reconstruction/reference/evaluation helpers (Python 3).
+numpy>=2.3,<3
+Pillow>=10.2,<13

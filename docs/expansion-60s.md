@@ -5,6 +5,29 @@ Authorized scope: expand the same reconstruction from **199–217 s** to
 change transient masking or training method at the same time. This experiment
 does not reconstruct the full 12:17 recording.
 
+## Observed first attempt — 2026-09-25
+
+The 900-second attempt stopped during mapper global bundle adjustment. Matching
+completed. The log reached **494 registered cameras**, but the latest completed
+snapshot contains **452 cameras**, compared with the original 252-camera seed.
+These are recovery counts, not accepted geometry or expanded published coverage.
+No final reprojection assessment, undistortion, mask generation, training or
+publication followed the stop.
+
+Runtime record: `expansion-180-240-20260925/state.json`; latest retained snapshot
+`snapshots/1790348186087`. The original pilot and match database were preserved.
+Source was frozen at `347f633` for the launch. The current site still shows
+199–217 seconds.
+
+Acceptance status: **0 passed, 0 failed, 5 blocked, 0 untested** (E1 blocked by
+the bounded mapper stop; E2–E5 depend on it). Matching is a passed substep, not
+an accepted end-to-end geometry result. No final regression pass was run.
+
+Smallest resumption: inspect and reuse the retained 452-camera snapshot with the
+existing copied database in a separately budgeted continuation. Do not replay
+frame extraction/features, claim the unsaved 494-camera in-memory state was
+retained, or assume a mapper snapshot is an optimizer checkpoint.
+
 ## Frozen geometry checkpoint
 
 The native-frame inventory contains **903 frames** in this minute, from

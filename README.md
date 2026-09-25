@@ -1,6 +1,20 @@
 # Sepehr Baba
 
-An interactive 3D Gaussian-splat viewer published on GitHub Pages.
+A reconstruction and preservation project for the specific recording known as
+**“Sepehr Baba” / «سپهر بابا … کجایی؟»**, with an interactive 3D view on GitHub Pages.
+
+The aim is to preserve and study the recorded aftermath of the January 8–9,
+2026 killings in Iran for human-rights documentation and future accountability.
+Reporting describes a father searching among bodies at Kahrizak; the
+[provenance research](docs/provenance.md) attributes those reports and records
+what has and has not been independently verified about our copy.
+
+**[Preserved source video and checksum](evidence/README.md)** ·
+**[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
+
+The 3D scene is an experimental derived visualization. Preserve the source video
+and its audio separately from masks, inferred geometry, and rendered views. The
+project does not claim a complete chain of custody or court-certified accuracy.
 
 **[Open the 3D scene](https://parhamdb.github.io/sepehrbaba/)**
 

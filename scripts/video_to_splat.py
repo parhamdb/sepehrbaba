@@ -19,7 +19,7 @@ import time
 import urllib.request
 
 DEFAULT_URL = "https://video.twimg.com/amplify_video/2015558220249530368/vid/avc1/1080x1920/2LxgD15qCvFD42mt.mp4?tag=21"
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 
 
 def save_json(path, data):

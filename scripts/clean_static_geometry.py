@@ -33,7 +33,7 @@ def read_model(path):
             if not line.strip() or line.startswith('#'):
                 continue
             row = line.split()
-            obs = np.fromstring(next(f), sep=' ').reshape(-1, 3)
+            obs = np.fromstring(next(f).strip(), sep=' ').reshape(-1, 3)
             images[int(row[0])] = {'row': row, 'obs': obs}
     for line in (path / 'points3D.txt').read_text().splitlines():
         if line.strip() and not line.startswith('#'):

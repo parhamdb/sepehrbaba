@@ -20,6 +20,14 @@
       "action": "Verified retained download checksum against prior local project record and copied unchanged bytes to a Git LFS tracked path",
       "transcoding": false,
       "audio_preserved": true
+    },
+    {
+      "time_utc": "2026-09-25T15:02:56.048126+00:00",
+      "action": "Fetched the uploaded object from GitHub LFS into an independent empty local LFS store and verified SHA-256",
+      "repository": "https://github.com/parhamdb/sepehrbaba",
+      "archive_commit": "17b0f5b",
+      "sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a",
+      "result": "matched acquired file"
     }
   ],
   "verification_limits": "Hash verifies file identity and subsequent fixity, not authenticity, authorship, capture time, location, complete chain of custody or legal admissibility."
