@@ -100,8 +100,10 @@ def main():
     parser.add_argument('--start',type=float,required=True)
     parser.add_argument('--end',type=float,required=True)
     parser.add_argument('--max-seconds',type=int,default=900)
+    parser.add_argument('--global-refine-ratio',type=float,default=1.5,
+                        help='Trigger global refinement after this relative growth; local and final refinement remain enabled')
     args = parser.parse_args()
-    if not 0 <= args.start < args.end or args.max_seconds <= 0:
+    if not 0 <= args.start < args.end or args.max_seconds <= 0 or not 1 < args.global_refine_ratio <= 2:
         parser.error('Invalid interval or runtime budget')
     work=args.work.resolve();work.mkdir(parents=True,exist_ok=True)
     lock=(work/'.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -110,6 +112,7 @@ def main():
     source=args.source_run.resolve()
     config={'start':args.start,'end':args.end,'source':str(source),
         'database':str(args.database.resolve()),'seed_model':str(args.seed_model.resolve()),
+        'global_refine_ratio':args.global_refine_ratio,
         'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     if state.get('config',config)!=config:
         raise RuntimeError('Settings changed; retain this evidence and use a new work directory')
@@ -166,6 +169,8 @@ def main():
     stage('map',[exe,'mapper','--database_path',db,'--image_path',source/'images',
         '--image_list_path',work/'images.txt','--input_path',args.seed_model,'--output_path',mapped,
         '--Mapper.multiple_models','0','--Mapper.num_threads','4','--Mapper.filter_max_reproj_error','3',
+        '--Mapper.ba_global_frames_ratio',args.global_refine_ratio,
+        '--Mapper.ba_global_points_ratio',args.global_refine_ratio,
         '--Mapper.snapshot_path',snapshots,'--Mapper.snapshot_frames_freq','50'],[mapped/'images.bin'])
     refined=work/'refined';refined.mkdir(exist_ok=True)
     stage('refine',[exe,'bundle_adjuster','--input_path',mapped,'--output_path',refined],[refined/'images.bin'])
