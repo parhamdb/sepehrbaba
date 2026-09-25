@@ -1,7 +1,11 @@
 # Sepehr Baba
 
-A reconstruction and preservation project for the specific recording known as
-**“Sepehr Baba” / «سپهر بابا … کجایی؟»**, with an interactive 3D view on GitHub Pages.
+**The challenge: reconstruct a faithful, navigable 3D environment from the specific
+recording known as “Sepehr Baba” / «سپهر بابا … کجایی؟», for human-rights documentation.**
+
+This project brings together the preserved video, reconstruction code, experiments,
+and an interactive viewer so contributors can improve how much of the recorded
+environment can be recovered and how reliably it represents the source.
 
 The aim is to preserve and study the recorded aftermath of the January 8–9,
 2026 killings in Iran for human-rights documentation and future accountability.
@@ -16,6 +20,46 @@ The 3D scene is an experimental derived visualization. Preserve the source video
 and its audio separately from masks, inferred geometry, and rendered views. The
 project does not claim a complete chain of custody or court-certified accuracy.
 
+## The reconstruction challenge
+
+Our input is this particular 12-minute, 17-second handheld recording: one moving
+camera, 1080 × 1920 pixels, and 12,793 frames with variable timing. The goal is to
+recover the environment and spatial relationships supported by those frames, let
+people explore them in 3D, and make the result traceable to the original footage.
+The preserved file is a downloaded platform copy; it has not been authenticated
+as the camera original.
+
+The difficult parts are:
+
+- **Recovering consistent camera positions across the recording.** Continuous
+  footage can still produce disconnected models or drifting camera estimates.
+  Using every frame does not by itself establish correct geometry.
+- **Separating movement from recorded scene content.** Moving people and
+  occlusions complicate reconstruction, but stationary bodies, clothing, and
+  other visible details matter to documentation. Our current person masks also
+  exclude some static human content. That is a limitation to address; absence
+  from the model does not mean absence from the recording.
+- **Reducing ghosting without erasing evidence.** Overlapping or stretched
+  Gaussians can create false surfaces. Cleanup must be checked against source
+  frames so it does not remove real details. Attempts that have not improved
+  the scene are documented alongside the current method.
+- **Making each result auditable.** Preserve source timestamps, recovered
+  cameras, masks, parameters, and artifact hashes, and compare renders with
+  held-out frames. Distinguish visible source content from inferred geometry;
+  unseen surfaces remain unresolved.
+
+Success means more faithful, source-supported coverage, with its uncertainty
+clearly documented. Visual appeal alone is insufficient. The model does not
+establish identities, victim counts, or reliable real-world measurements, and
+synthetic completion must not be presented as recovered evidence.
+
+Contributions should help solve these challenges for **this recording**. Start
+with the [documented method](docs/method.md), the
+[ranked ghosting research and experiments](docs/ghosting-options.md), and the
+[contribution guide](CONTRIBUTING.md).
+
+## Current result
+
 **[Open the 3D scene](https://parhamdb.github.io/sepehrbaba/)**
 
 **Current scene: an 18-second pilot, approximately 03:19–03:37 of a 12:17 recording.**
@@ -25,6 +69,9 @@ held-out views, a small orbit, and a 0.27-unit sideways camera movement. Blur,
 holes and peripheral artifacts remain, especially around people. This is a limited
 pilot, not a complete reconstruction of the recording. The scene contains imagery
 of deceased people.
+
+A [03:00–04:00 expansion attempt](docs/expansion-60s.md) has a saved 452-camera
+snapshot, but has not passed acceptance or been published as a larger scene.
 
 Enter the scene, drag to orbit, and scroll/pinch to zoom. Choose **Move freely**
 to navigate with W A S D or the on-screen directional controls. **Reset view**
@@ -77,7 +124,7 @@ Requires Linux, Python 3 + Pillow, FFmpeg, a CUDA-enabled COLMAP 3.12.6 build,
 and Brush 0.3.0. Supply your own local tool paths:
 
 ```sh
-python3 scripts/full_video.py /path/to/input.mp4 \
+python3 scripts/full_video.py evidence/source/sepehr-baba.mp4 \
   --work /path/to/reconstruction \
   --colmap /path/to/colmap \
   --max-seconds 7200
