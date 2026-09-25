@@ -120,6 +120,21 @@ unchanged. The candidate PLY is 118,001,551 bytes, SHA-256
 It is stored in Git LFS; the Pages workflow explicitly fetches this asset before
 building. Local builds also require `git lfs pull --include="public/assets/recovery-71s.ply"`.
 
+All five local browser checks passed: pilot desktop/mobile navigation, missing
+manifest recovery, and expanded desktop/mobile rendering and movement. Entry and
+movement screenshots were inspected. Three additional poses translated the camera
+and target by ±0.25 on scene X and +0.25 on scene Y, relative to `frame_003348`.
+These are arbitrary reconstruction units, not meters, and synthetic viewpoints,
+not additional held-out source observations. Central surfaces remained recognizable;
+blur and distortion increased off the recorded view. This supports an experimental
+preview, not a claim that the scene is geometrically accurate throughout.
+
+The batch capture browser closed during its second pose. The first result was
+retained; the remaining poses succeeded with separate `render_evaluation.mjs
+--only IMAGE_NAME` invocations, each in a fresh browser. Use this workaround for
+reproduction; the multi-pose capture failure has not been fixed. Walking forward
+can pass through surfaces because the viewer does not supply collision geometry.
+
 The full-video campaign remains independent. As of 21:40 UTC, September 25,
 windows 0–90 s and 60–150 s finished but failed the unchanged coverage threshold
 (303/1,352 and 356/1,361 frames respectively). Their residuals were low and their
