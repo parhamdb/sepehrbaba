@@ -1,0 +1,26 @@
+{
+  "identifier": "sepehr-baba-platform-copy-sha256-9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a",
+  "path": "evidence/source/sepehr-baba.mp4",
+  "source_url": "https://video.twimg.com/amplify_video/2015558220249530368/vid/avc1/1080x1920/2LxgD15qCvFD42mt.mp4?tag=21",
+  "source_url_origin": "supplied by project owner",
+  "sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a",
+  "size_bytes": 417094424,
+  "container_duration_seconds": 737.301333,
+  "first_local_acquisition_date_recorded": "2026-09-22",
+  "exact_acquisition_time_utc": null,
+  "original_response_headers_preserved": false,
+  "filming_time_verified": null,
+  "original_post_verified": null,
+  "camera_original_acquired": false,
+  "pre_acquisition_edit_history": "unverified; public reporting describes multiple audio versions",
+  "rights": "No media license granted by this repository; ownership not established",
+  "events": [
+    {
+      "time_utc": "2026-09-25T14:56:28.183140+00:00",
+      "action": "Verified retained download checksum against prior local project record and copied unchanged bytes to a Git LFS tracked path",
+      "transcoding": false,
+      "audio_preserved": true
+    }
+  ],
+  "verification_limits": "Hash verifies file identity and subsequent fixity, not authenticity, authorship, capture time, location, complete chain of custody or legal admissibility."
+}
