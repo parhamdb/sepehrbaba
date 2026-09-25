@@ -99,11 +99,12 @@ def main():
     parser.add_argument('--colmap',required=True)
     parser.add_argument('--start',type=float,required=True)
     parser.add_argument('--end',type=float,required=True)
-    parser.add_argument('--max-seconds',type=int,default=900)
+    parser.add_argument('--max-seconds',type=int,default=900,
+                        help='Runtime limit in seconds; 0 disables the time limit but retains memory protection')
     parser.add_argument('--global-refine-ratio',type=float,default=1.5,
                         help='Trigger global refinement after this relative growth; local and final refinement remain enabled')
     args = parser.parse_args()
-    if not 0 <= args.start < args.end or args.max_seconds <= 0 or not 1 < args.global_refine_ratio <= 2:
+    if not 0 <= args.start < args.end or args.max_seconds < 0 or not 1 < args.global_refine_ratio <= 2:
         parser.error('Invalid interval or runtime budget')
     work=args.work.resolve();work.mkdir(parents=True,exist_ok=True)
     lock=(work/'.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -133,8 +134,10 @@ def main():
                 while child.poll() is None:
                     time.sleep(2)
                     available=int(next(x.split()[1] for x in Path('/proc/meminfo').read_text().splitlines() if x.startswith('MemAvailable:')))
-                    if time.monotonic()-started>args.max_seconds or available<4*1024*1024:
-                        raise RuntimeError('Runtime or memory limit; completed stages and snapshots retained')
+                    if args.max_seconds and time.monotonic()-started>args.max_seconds:
+                        raise RuntimeError('Runtime limit; completed stages and snapshots retained')
+                    if available<4*1024*1024:
+                        raise RuntimeError('Available memory below 4 GiB; completed stages and snapshots retained')
                 if child.returncode or not all(x.exists() for x in outputs):
                     raise RuntimeError(f'{name} failed: exit {child.returncode}')
             except BaseException as error:

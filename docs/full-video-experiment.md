@@ -15,14 +15,16 @@ and replacing the accepted public scene are outside this experiment.
 - Copy the database retained by the one-minute expansion into a fresh run.
 - Start from its latest complete **452-camera** snapshot, not the unsaved
   494-camera count from the interrupted mapper log.
-- Use the unchanged `scripts/repair_scene.py`: explicit keyframe-neighbor
+- Use the existing reconstruction algorithm in `scripts/repair_scene.py`: explicit keyframe-neighbor
   matching, all native frames eligible for registration, one seeded component,
   four mapper threads, global refinement growth ratio 1.5, and native-size
   undistortion. Disconnected regions are not forcibly joined.
-- Give this single geometry attempt **7,200 seconds**. Retain snapshots every
-  50 registered cameras. Existing protection stops below 4 GiB available memory.
-  A dedicated systemd user unit contains the job and its children, with a
-  7,800-second outer runtime cap. No automatic retries.
+- **No elapsed-time limit**, as explicitly requested by the project owner.
+  `--max-seconds 0` disables the script timer; the dedicated systemd user unit
+  also has `RuntimeMaxSec=infinity`. Retain snapshots every 50 registered
+  cameras. Protection below 4 GiB available memory remains enabled.
+  The initial timed launch is retained; continuation uses its latest complete
+  snapshot and already matched database. No extraction or feature recomputation.
 
 ## Reproduce with retained inputs
 
@@ -35,7 +37,7 @@ python3 scripts/repair_scene.py \
   --seed-model /path/to/expansion-180-240/snapshots/1790348186087 \
   --work /path/to/full-recording-experiment \
   --colmap /path/to/cuda-colmap \
-  --start 0 --end 737.301333 --max-seconds 7200
+  --start 0 --end 737.301333 --max-seconds 0
 ```
 
 The seed and match database are retained runtime artifacts; they are not part
@@ -67,10 +69,13 @@ findings; report both when available.
 Validation budget: one discovery run, only necessary focused failure checks,
 and one final candidate inspection if all prerequisites pass. Active supervision
 is bounded to 45 minutes per turn; a healthy detached run may continue with its
-unit, log, and deadline handed off. Do not restart completed stages to obtain
+unit and log handed off; the explicitly authorized long-running computation
+has no time deadline. Do not restart completed stages to obtain
 another progress reading.
 
 Runtime evidence: `state.json`, `logs/match.log`, `logs/map.log`, `snapshots/`,
 and, if reached, `quality.json`. Mapper messages report in-memory registration;
-only completed model files establish retained camera counts. A two-hour budget
-is a stop deadline, not an estimate that a complete 3D scene will exist then.
+only completed model files establish retained camera counts. There is no
+completion ETA yet: mapping may converge on only part of the recording despite
+all frames being eligible. Do not stop a healthy run merely because two hours
+have elapsed.
