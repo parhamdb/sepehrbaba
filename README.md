@@ -121,3 +121,29 @@ renders against their source images, then move through the candidate in the view
 Do not publish or expand to the full recording until the static environment remains
 recognizable from nearby viewpoints. The current pilot passed a bounded visual check of the central static scene.
 Larger movements, unseen surfaces, and the full recording remain unverified.
+
+### Controlled static-geometry cleanup
+
+`scripts/clean_static_geometry.py` creates a separate dataset from an existing
+undistorted, masked dataset. It removes masked feature observations, keeps the
+best-fitting observation of each point within each image, and requires support
+from at least two distinct unmasked views. It refines cameras with sufficient
+remaining observations while preserving weak-camera poses and fixed intrinsics.
+Images and masks are copied byte-for-byte; all image names and the evaluation
+ordering remain unchanged. This permits a comparison at the same training budget.
+
+```sh
+python3 scripts/clean_static_geometry.py \
+  --source-dataset /path/to/pilot/dataset \
+  --work /path/to/static-clean --colmap /path/to/colmap
+python3 scripts/video_to_splat.py --stage train \
+  --dataset /path/to/static-clean/dataset --output /path/to/static-training \
+  --brush /path/to/brush_app --steps 8000 --train-resolution 1920 \
+  --max-splats 400000 --eval-split-every 10
+```
+
+Use a fresh work directory and retain the accepted scene during the comparison.
+`quality.json` records removed points, frozen cameras, actual reprojection errors
+and camera-pose changes. Geometry must remain connected and pass the accuracy
+checks before training. Cleaner inputs do not guarantee a better splat: compare
+the same held-out images and identical viewer camera positions before publishing.
