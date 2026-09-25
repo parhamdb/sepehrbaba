@@ -60,6 +60,13 @@ masks, and use `video_to_splat.py --stage train` with 8,000 steps, maximum edge
 1920, 500,000-splat cap and every tenth image held out. The current semantic masks
 also exclude stationary human content; that limitation remains.
 
+Use `python3 scripts/inspect_masks.py work/recovery/dataset work/mask-review.jpg`
+to verify the full image/mask inventory and generate source/overlay pairs sampled
+across the interval, including the smallest and largest excluded regions. Red
+marks excluded pixels. Review the sheet before training; file validation alone
+does not establish correct segmentation. The helper was checked on all 252 masks
+of the retained pilot; that does not validate the new component's masks.
+
 ## Overlapping-window continuation
 
 ```sh
