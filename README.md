@@ -5,7 +5,7 @@ An interactive 3D Gaussian-splat viewer published on GitHub Pages.
 **[Open the 3D scene](https://parhamdb.github.io/sepehrbaba/)**
 
 **Current scene: partial preview, approximately 00:16–00:26 of a 12:17 recording.**
-It contains 4,635 Gaussians recovered from 21 camera views. It is soft and incomplete;
+It contains 4,635 Gaussians recovered from 21 camera views. Its visual quality failed inspection (smearing and ray-like artifacts);
 the rest of the recording is not represented by this preview. The page labels this
 coverage before and during viewing. The scene contains imagery of deceased people.
 
@@ -47,8 +47,9 @@ claim is made about the underlying source recording or the people it depicts.
 as high-quality JPEG (quality 1; not lossless), with exact source timestamps.
 The original MP4 remains the unchanged source reference. It extracts features
 from every frame. The sharpest frame in each group of four bootstraps mapping;
-remaining frames are then offered to camera registration. Recovered views feed
-training, with every tenth view held out for evaluation.
+adjacent selected keyframes are explicitly matched in addition to linear native-frame
+neighbors. Preparation stops at bootstrap geometry. It does not train disconnected
+fragments automatically.
 
 Requires Linux, Python 3 + Pillow, FFmpeg, a CUDA-enabled COLMAP 3.12.6 build,
 and Brush 0.3.0. Supply your own local tool paths:
@@ -56,7 +57,7 @@ and Brush 0.3.0. Supply your own local tool paths:
 ```sh
 python3 scripts/full_video.py /path/to/input.mp4 \
   --work /path/to/reconstruction \
-  --colmap /path/to/colmap --brush /path/to/brush_app \
+  --colmap /path/to/colmap \
   --max-seconds 7200
 ```
 
@@ -67,7 +68,48 @@ is preserved separately before a new mapping attempt. Feature/match databases
 can resume completed entries. An interrupted training stage starts again.
 
 Disconnected camera models remain separate. Missing registrations are listed;
-the script never treats continuity of the video as proof of one connected 3D
-model. Inspect coverage and held-out renders before publishing a larger scene.
-The full pipeline is still being exercised on the source footage; the published
-preview does not imply that the full recording has been reconstructed.
+continuity of the video is not proof of one connected 3D model. Retain existing
+runs when changing scripts: stage fingerprints intentionally reject changed code.
+
+### Bounded repair and visual acceptance
+
+Reuse saved features and a seed model whose cameras lie inside the selected
+interval. The repair command copies the database, explicitly matches selected
+keyframe neighbors, and continues mapping with every native frame in that interval.
+It triangulates new points, jointly refines poses, and measures actual reprojection
+errors instead of trusting stale stored point errors.
+
+```sh
+python3 scripts/repair_scene.py \
+  --source-run /path/to/reconstruction \
+  --database /path/to/reconstruction/database.db \
+  --seed-model /path/to/reconstruction/sparse/0 \
+  --work /path/to/pilot --colmap /path/to/colmap \
+  --start 199 --end 217 --max-seconds 900
+python3 scripts/mask_people.py /path/to/pilot/dataset
+# Inspect masks against their source frames before running training.
+python3 scripts/video_to_splat.py --stage train \
+  --dataset /path/to/pilot/dataset --output /path/to/pilot-training \
+  --brush /path/to/brush_app --steps 8000 --train-resolution 1920 \
+  --max-splats 500000 --eval-split-every 10
+```
+
+The example interval must contain the chosen seed's cameras; choose a matching seed.
+Repair requires NumPy. Masking additionally requires PyTorch, torchvision and Pillow;
+it downloads the official DeepLabV3 ResNet50 COCO/VOC weights on first use.
+The person masks exclude detected people, including static people, and dilate the
+boundary by seven pixels. This is an imperfect automatic segmentation: inspect it.
+Masks retain the exact undistorted image dimensions and are included in the training
+fingerprint so a changed mask cannot silently reuse a completed training run.
+
+Geometry acceptance requires at least 90% of the interval's frames in one model,
+1,000 points, mean reprojection error at most 1.5 pixels, 95th percentile at most
+3.5 pixels, and no associated points behind cameras. `quality.json` records both
+missing frames and measured errors. Snapshots and logs survive the runtime cap;
+interrupted mapping is not automatically claimed as resumable training.
+
+Passing geometry is only permission to evaluate a candidate. Compare held-out
+renders against their source images, then move through the candidate in the viewer.
+Do not publish or expand to the full recording until the static environment remains
+recognizable from nearby viewpoints. The original published preview has not passed
+that test, and no full-video reconstruction is currently accepted.

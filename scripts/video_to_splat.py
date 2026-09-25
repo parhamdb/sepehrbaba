@@ -282,7 +282,11 @@ class Pipeline:
         points = binary_count(sparse / "points3D.bin")
         if registered != len(images) or points < 100:
             raise RuntimeError("Provided dataset must contain exactly its registered images and at least 100 points")
-        hashes = {str(p.relative_to(dataset)): sha256(p) for p in models + images}
+        masks = sorted((dataset / "masks").glob("*")) if (dataset / "masks").exists() else []
+        if masks and ({p.stem for p in masks} != {p.stem for p in images}
+                      or any(p.suffix.lower() != ".png" for p in masks)):
+            raise RuntimeError("Masks must contain one PNG per image, with matching stems")
+        hashes = {str(p.relative_to(dataset)): sha256(p) for p in models + images + masks}
         fingerprint = hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest()
         if self.state.get("dataset_fingerprint") not in (None, fingerprint):
             raise RuntimeError("Dataset changed; use a new --output directory")
@@ -291,7 +295,7 @@ class Pipeline:
         save_json(self.out / "quality.json", {
             "accepted": True, "scope": "Explicitly supplied COLMAP component only; not whole-video coverage",
             "registered_images": registered, "input_frames": len(images), "points": points,
-            "dataset_fingerprint": fingerprint})
+            "dataset_fingerprint": fingerprint, "masked_images": len(masks)})
         print(f"Using selected component: {registered} cameras, {points} points; whole-video coverage is not asserted.", flush=True)
 
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Retain every native video frame, recover cameras, and train separate components.
+"""Retain every native video frame and recover bootstrap camera components.
 
 Requires ffmpeg, ffprobe, CUDA COLMAP 3.12.6, Brush 0.3.0, and Pillow.
+Use repair_scene.py to refine a bounded component before masking and training.
 No disconnected models are silently joined. Nothing is automatically published.
 """
 import argparse
@@ -13,7 +14,6 @@ from pathlib import Path
 import signal
 import struct
 import subprocess
-import sys
 import time
 
 
@@ -41,10 +41,10 @@ def main():
     p.add_argument('video', type=Path)
     p.add_argument('--work', type=Path, required=True)
     p.add_argument('--colmap', required=True)
-    p.add_argument('--brush', required=True)
+    p.add_argument('--brush', help='Legacy compatibility; preparation does not train')
     p.add_argument('--max-seconds', type=int, default=7200)
     p.add_argument('--steps', type=int, default=15000)
-    p.add_argument('--stop-after', choices=['extract', 'features', 'match', 'map', 'train'], default='train')
+    p.add_argument('--stop-after', choices=['extract', 'features', 'match', 'map'], default='map')
     a = p.parse_args()
     if a.max_seconds <= 0 or a.steps < 1:
         p.error('Positive time budget and steps required')
@@ -60,7 +60,7 @@ def main():
     state = json.loads(state_path.read_text()) if state_path.exists() else {'stages': {}}
     config = {'script_sha256': digest(Path(__file__)), 'video_sha256': digest(a.video), 'native_frames': True, 'jpeg_quality': 1,
               'bootstrap_group': 4, 'steps': a.steps, 'colmap': str(Path(a.colmap).resolve()),
-              'brush': str(Path(a.brush).resolve())}
+              'matching': 'linear-native-plus-explicit-keyframe-neighbors'}
     if state.get('config', config) != config:
         raise RuntimeError('Source/settings changed; preserve this run and choose another work directory')
     state['config'] = config
@@ -157,7 +157,14 @@ def main():
         return
     stage('match', [a.colmap, 'sequential_matcher', '--database_path', db,
         '--SiftMatching.use_gpu', '1', '--SiftMatching.num_threads', '2',
-        '--SequentialMatching.overlap', '10', '--SequentialMatching.quadratic_overlap', '1'], [db])
+        '--SequentialMatching.overlap', '10', '--SequentialMatching.quadratic_overlap', '0'], [db])
+    keys = keyframes.read_text().splitlines()
+    pairs = work / 'keyframe-pairs.txt'
+    pairs.write_text(''.join(f'{first} {second}\n' for i, first in enumerate(keys)
+                            for second in keys[i + 1:i + 6]))
+    stage('match-keyframes', [a.colmap, 'matches_importer', '--database_path', db,
+        '--match_list_path', pairs, '--match_type', 'pairs',
+        '--SiftMatching.use_gpu', '1', '--SiftMatching.num_threads', '2'], [db])
     if a.stop_after == 'match':
         return
     sparse = work / 'sparse'
@@ -171,41 +178,22 @@ def main():
         raise RuntimeError('No camera model recovered; inspect map.log')
     union, report = set(), []
     for model in components:
-        registered = work / f'registered-{model.name}'
-        registered.mkdir(exist_ok=True)
-        stage(f'register-{model.name}', [a.colmap, 'image_registrator', '--database_path', db,
-            '--input_path', model, '--output_path', registered], [registered / 'images.bin'])
         text_model = work / f'model-text-{model.name}'
         text_model.mkdir(exist_ok=True)
-        stage(f'inspect-{model.name}', [a.colmap, 'model_converter', '--input_path', registered,
+        stage(f'inspect-{model.name}', [a.colmap, 'model_converter', '--input_path', model,
             '--output_path', text_model, '--output_type', 'TXT'], [text_model / 'images.txt'])
         names = [line.split()[-1] for line in (text_model / 'images.txt').read_text().splitlines()
                  if line.rstrip().endswith('.jpg')]
         union.update(names)
-        npoints = count(registered / 'points3D.bin')
+        npoints = count(model / 'points3D.bin')
         report.append({'component': model.name, 'registered_frames': len(names), 'points': npoints,
-                       'names': names, 'trainable': len(names) >= 8 and npoints >= 100})
+                       'names': names, 'trainable': False, 'status': 'bootstrap-needs-refinement'})
     write(work / 'coverage.json', {'source_frames': expected, 'registered_unique': len(union),
         'fraction': len(union) / expected, 'components': report,
         'unregistered': [item for item in manifest if item['name'] not in union],
         'connected_full_scene': len(components) == 1 and len(union) == expected})
-    if a.stop_after == 'map':
-        return
-    for component in report:
-        if not component['trainable']:
-            continue
-        name = component['component']
-        dataset = work / f'dataset-{name}'
-        dataset.mkdir(exist_ok=True)
-        stage(f'undistort-{name}', [a.colmap, 'image_undistorter', '--image_path', frames,
-            '--input_path', work / f'registered-{name}', '--output_path', dataset,
-            '--output_type', 'COLMAP', '--max_image_size', '-1'], [dataset / 'sparse/images.bin'])
-        training = work / f'training-{name}'
-        stage(f'train-{name}', [sys.executable, Path(__file__).with_name('video_to_splat.py'),
-            '--stage', 'train', '--dataset', dataset, '--output', training, '--brush', a.brush,
-            '--steps', a.steps, '--train-resolution', '1920', '--max-splats', '1000000',
-            '--eval-split-every', '10'], [training / 'splats/scene.ply'])
-    print('Components trained. Inspect coverage and renders before choosing any public scene.', flush=True)
+    print('Bootstrap geometry only. Refine a bounded interval with repair_scene.py; '
+          'training requires separate geometry and visual checks.', flush=True)
 
 
 if __name__ == '__main__':
