@@ -19,7 +19,8 @@ test('desktop scene renders and orbit, free movement and reset work',async({page
   await page.getByRole('button',{name:'Enter the 3D scene'}).click();
   await expect(page.locator('body')).toHaveAttribute('data-scene-loaded','true',{timeout:60000});
   const position=()=>page.evaluate(()=>window.sceneViewer.app.root.findComponent('camera').entity.getPosition().toArray());
-  await page.waitForTimeout(2200);
+  const authored=await page.evaluate(async()=> (await (await fetch("./scene.json")).json()).camera.position);
+  await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-authored[i])),{timeout:20000}).toBeLessThan(.05);
   const first=await position();
   await visibleScene(page);
   await page.screenshot({path:'test-results/desktop-scene.png'});
@@ -36,8 +37,7 @@ test('desktop scene renders and orbit, free movement and reset work',async({page
   await page.keyboard.press('Escape');
   await expect.poll(()=>page.evaluate(()=>document.pointerLockElement===null)).toBe(true);
   await page.getByRole('button',{name:'Reset view',exact:true}).click();
-  await page.waitForTimeout(2200);
-  const reset=await position();expect(Math.hypot(...reset.map((v,i)=>v-first[i]))).toBeLessThan(.15);
+  await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-first[i])),{timeout:20000}).toBeLessThan(.15);
   await page.getByRole('button',{name:'Help',exact:true}).click();
   await expect(page.getByRole('heading',{name:'Explore the scene'})).toBeVisible();
   await page.keyboard.press('Escape');await expect(page.locator('#help')).toBeHidden();
