@@ -12,9 +12,11 @@ and replacing the accepted public scene are outside this experiment.
 - Reuse all **12,793** native 1080 × 1920 frames and timestamps, plus retained
   features. All image, keypoint and descriptor database inventories have 12,793
   entries. No extraction or feature computation is repeated.
-- Copy the database retained by the one-minute expansion into a fresh run.
-- Start from its latest complete **452-camera** snapshot, not the unsaved
-  494-camera count from the interrupted mapper log.
+- The initial full-recording attempt copied the one-minute expansion database
+  and started from its complete 452-camera snapshot.
+- The unlimited continuation reuses the completed full-recording matching and
+  starts from the new **602-camera** snapshot, `1790350962541`. Earlier runs
+  remain preserved.
 - Use the existing reconstruction algorithm in `scripts/repair_scene.py`: explicit keyframe-neighbor
   matching, all native frames eligible for registration, one seeded component,
   four mapper threads, global refinement growth ratio 1.5, and native-size
@@ -33,8 +35,8 @@ Set these paths to your local retained inputs and a fresh output directory:
 ```sh
 python3 scripts/repair_scene.py \
   --source-run /path/to/full-video-native \
-  --database /path/to/expansion-180-240/database.db \
-  --seed-model /path/to/expansion-180-240/snapshots/1790348186087 \
+  --database /path/to/initial-full-recording/database.db \
+  --seed-model /path/to/initial-full-recording/snapshots/1790350962541 \
   --work /path/to/full-recording-experiment \
   --colmap /path/to/cuda-colmap \
   --start 0 --end 737.301333 --max-seconds 0
@@ -79,3 +81,26 @@ only completed model files establish retained camera counts. There is no
 completion ETA yet: mapping may converge on only part of the recording despite
 all frames being eligible. Do not stop a healthy run merely because two hours
 have elapsed.
+
+## Running continuation
+
+Frozen code: `82eda825480acc64a3cc3fcbff85842593c3363a`.
+The original unit was stopped cleanly after preserving its completed matching
+and camera snapshots. The continuation is a separate run:
+
+- Work directory name: `full-recording-unlimited-20260925` on Thor.
+- User service: `sepehr-full-recording-unlimited-20260925.service`.
+- Script option: `--max-seconds 0`; systemd runtime: `infinity`.
+- Source interval: 0–737.301333 seconds, all 12,793 frames eligible.
+- The published pilot remains unchanged. No full-recording PLY exists yet.
+
+```sh
+systemctl --user status sepehr-full-recording-unlimited-20260925.service
+# Inside the work directory:
+tail -n 20 logs/map.log
+cat state.json
+```
+
+The process continues independently of the SSH session. The source hash and
+runtime command are retained in `launch.json`; the prior run points to this
+continuation in `continuation.json`.

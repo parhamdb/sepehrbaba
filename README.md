@@ -177,6 +177,9 @@ of deceased people.
 A [03:00–04:00 expansion attempt](docs/expansion-60s.md) has a saved 452-camera
 snapshot, but has not passed acceptance or been published as a larger scene.
 
+A [full-recording experiment](docs/full-video-experiment.md) is now attempting
+all 12,793 frames on Thor, with no elapsed-time limit. Its result is pending.
+
 Enter the scene, drag to orbit, and scroll/pinch to zoom. Choose **Move freely**
 to navigate with W A S D or the on-screen directional controls. **Reset view**
 returns to the authored camera. Press Esc to release the mouse after keyboard movement. This is a visual scene with no collision barriers.
