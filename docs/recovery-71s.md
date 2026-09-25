@@ -19,7 +19,16 @@ and removes their reciprocal image associations. It keeps camera parameters,
 image inventory and feature coordinates. In this run the first pass removes six
 points and twelve associations. It does not remove pixels from the source video.
 
-Run on a copy of the failed model's COLMAP text export:
+The complete repair, geometry assessment and conditional undistortion are available
+as one command. Use a fresh output directory:
+
+```sh
+python3 scripts/recover_component.py --source-model work/failed/model-text \
+  --source-run work/native --work work/recovery --colmap /path/to/cuda-colmap \
+  --start 186 --end 257
+```
+
+The individual numerical steps, for inspection or manual recovery, are:
 
 ```sh
 python3 scripts/sanitize_geometry.py --source-model work/failed/model-text \
@@ -73,6 +82,12 @@ models, snapshots and a measured outcome. A failed window does not stop independ
 windows; no failed geometry is automatically trained or published. Disk and memory
 resource safeguards remain. These are attempts to recover coverage, not a promise
 of a single connected final scene.
+
+The September 25 campaign was launched with the sanitized `filtered-bin` seed
+while the larger component's refinement was still running. The retained source
+models and match database remain unchanged. Its first interval is 0–90 seconds;
+all 12,793 source frames are included somewhere in the window plan. This is a
+running experiment, not an accepted reconstruction of the full recording.
 
 ## Frozen acceptance inventory
 
