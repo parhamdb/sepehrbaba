@@ -6,14 +6,13 @@ camera and feature coordinate, removing reciprocal associations for rejected
 points. Does not alter source frames, refine poses, train, or publish.
 """
 import argparse
-import hashlib
 import json
 from pathlib import Path
 import shutil
 
 import numpy as np
 
-from clean_static_geometry import rotation
+from clean_static_geometry import digest, rotation
 
 
 def sanitize(source, output, maximum=100.0):
@@ -91,7 +90,7 @@ def sanitize(source, output, maximum=100.0):
         'retained_points': len(points)-len(rejected), 'removed_point_ids': sorted(rejected),
         'removed_associations': removed_associations, 'invalid_observations': observations,
         'maximum_reprojection_px': maximum,
-        'source_model_sha256': {n: hashlib.file_digest((source/n).open('rb'), 'sha256').hexdigest()
+        'source_model_sha256': {n: digest(source/n)
             for n in ['cameras.txt','images.txt','points3D.txt']}}
     (output/'sanitization.json').write_text(json.dumps(report, indent=2, allow_nan=False)+'\n')
     return report
