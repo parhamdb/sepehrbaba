@@ -38,6 +38,8 @@ npm ci
 npx playwright install chromium
 npm run build
 npm test
+# Verify a deployed Pages subdirectory with its trailing slash preserved:
+SITE_URL=https://parhamdb.github.io/sepehrbaba/ npm test
 ```
 
 Pipeline/reference tests use synthetic inputs and do not launch GPU training.

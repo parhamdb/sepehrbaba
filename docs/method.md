@@ -85,6 +85,12 @@ its final model registered 252/271 frames. Commands, inputs and failure snapshot
 must be retained when establishing a new seed. Do not join disconnected models
 or lower thresholds merely to reach training.
 
+For work on this exact baseline, use the [archived accepted camera models and
+masks](../evidence/pilot/README.md). They include native frame timestamps,
+undistorted image hashes, and the historical training split. This lets contributors
+reuse accepted cameras without repeating bootstrap discovery. The descriptor/match
+database still needs to be prepared when extending camera coverage.
+
 Every source frame is retained as JPEG quality 1 with its timestamp; this is
 high-quality **lossy** extraction, not bit-exact image preservation. The MP4 is
 the authoritative acquired byte sequence. Adjacent frames help tracking but are
@@ -155,3 +161,8 @@ See [CONTRIBUTING](../CONTRIBUTING.md), [provenance](provenance.md),
 [static cleanup](static-cleanup-comparison.md), [post-training cleanup](post-training-cleanup.md),
 [contribution cleanup](contribution-cleanup.md), and the [ranked research](ghosting-options.md).
 Failed methods are part of the record and should not be silently erased.
+
+For this project's evidentiary purpose, a future masking experiment should
+distinguish transient occluders from stationary bodies and other scene content.
+The current semantic person mask does not make that distinction; improvements
+must be judged against the preserved video, not merely a cleaner-looking scene.

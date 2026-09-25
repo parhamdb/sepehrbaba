@@ -1,0 +1,60 @@
+{
+  "source_video": {
+    "path": "evidence/source/sepehr-baba.mp4",
+    "sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a"
+  },
+  "derived_model": {
+    "path": "public/assets/preview.ply",
+    "sha256": "75a8950883fbc87bb88b0002763be6bb94d9edabc9fa2a328542c81acb44a622",
+    "size_bytes": 53406699,
+    "coverage": {
+      "start_seconds": 199.0,
+      "end_seconds": 217.0,
+      "source_duration_seconds": 737.301333,
+      "status": "partial-pilot",
+      "registered_frames": 252,
+      "source_frames": 12793
+    },
+    "quality": {
+      "gaussians": 226293,
+      "selected_frames": 271,
+      "unregistered_frames": 19,
+      "mean_reprojection_px": 1.2298734569668617,
+      "p95_reprojection_px": 2.490395366560695,
+      "held_out_views": 26,
+      "static_region_psnr_db": 22.328621099932533,
+      "limitations": "18-second pilot only. Blur, holes and peripheral artifacts remain, especially around people. Unseen surfaces are not reconstructed."
+    },
+    "classification": "experimental Gaussian-splat visualization; not camera-original evidence",
+    "source_video_interval_seconds": [
+      199,
+      217
+    ],
+    "coordinate_units": "arbitrary reconstruction scale; not a surveyed metric scale",
+    "person_masking": "automatic semantic exclusion, including some stationary people; absence from model is not absence from source",
+    "generation_method": "COLMAP 3.12.6 + Brush 0.3.0, 8000 steps, maximum edge 1920, every tenth sorted image held out",
+    "reference_docs": [
+      "docs/method.md",
+      "docs/provenance.md",
+      "docs/contribution-cleanup.md"
+    ]
+  },
+  "larger_candidate": {
+    "interval_seconds": [
+      180,
+      240
+    ],
+    "status": "blocked before geometry acceptance; not published",
+    "reference_doc": "docs/expansion-60s.md"
+  },
+  "reproducibility_package": {
+    "path": "evidence/pilot/accepted-pilot.tar.gz",
+    "sha256": "2f11d07ed0a455829dad9fe95d249b489eb0e771fb2a6441e37562e5087c64b6",
+    "size_bytes": 69806245,
+    "camera_count": 252,
+    "mask_count": 252,
+    "sparse_points": 109642,
+    "frame_timestamp_count": 12793,
+    "training_settings": "evidence/pilot/training-state.json"
+  }
+}

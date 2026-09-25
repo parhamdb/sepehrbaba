@@ -6,6 +6,8 @@ preservation, and potential future investigations and judicial proceedings.
 It is not a generic demonstration dataset. The video contains graphic images
 of deceased people and distressed relatives.
 
+**[Download the preserved MP4 (417 MB)](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/source/sepehr-baba.mp4)**
+
 `source/sepehr-baba.mp4` is the exact downloaded platform copy used for the
 reconstruction, including its audio. It is tracked through **Git LFS**. It has
 not been transcoded, trimmed, enhanced, or replaced during archival ingestion.
@@ -37,6 +39,10 @@ The source URL, acquisition limits, metadata and archival event are in
 records the observed container and stream metadata; container timestamps are
 not treated as a verified filming date. [Context and provenance research](../docs/provenance.md)
 separates reported claims from verified file properties and open questions.
+[`reconstruction.json`](reconstruction.json) links the accepted derived PLY to
+this source hash and its limited time interval.
+The [accepted pilot package](pilot/README.md) preserves recovered cameras,
+the actual masks, frame timestamps and image hashes for reproducible analysis.
 
 ## Preserve the distinction between source and reconstruction
 

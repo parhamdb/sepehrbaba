@@ -1,0 +1,38 @@
+{
+  "training": {
+    "steps": 8000,
+    "max_splats": 400000,
+    "resolution": 1920,
+    "brush_version": "brush-cli 0.3.0",
+    "eval_split_every": 10
+  },
+  "held_out_names": [
+    "frame_003001",
+    "frame_003011",
+    "frame_003021",
+    "frame_003031",
+    "frame_003041",
+    "frame_003051",
+    "frame_003073",
+    "frame_003083",
+    "frame_003093",
+    "frame_003103",
+    "frame_003113",
+    "frame_003123",
+    "frame_003133",
+    "frame_003143",
+    "frame_003153",
+    "frame_003163",
+    "frame_003173",
+    "frame_003183",
+    "frame_003193",
+    "frame_003203",
+    "frame_003220",
+    "frame_003230",
+    "frame_003240",
+    "frame_003250",
+    "frame_003260",
+    "frame_003270"
+  ],
+  "record_type": "subset of historical training state; host paths omitted; not a resumable checkpoint"
+}
