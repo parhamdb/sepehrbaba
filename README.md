@@ -1,17 +1,69 @@
 # Sepehr Baba
 
-**Our goal is to reconstruct the environment in the “Sepehr Baba” video in 3D
-to help document the aftermath of the Iranian regime's January 8–9, 2026
-massacre, preserve evidence of human-rights violations, and support future
-investigations and court proceedings.**
+**«سپهر بابا … کجایی؟» — “Sepehr, my child … where are you?”**
 
-The recording known as **“Sepehr Baba” / «سپهر بابا … کجایی؟»** is reported to
-show a father searching among victims' bodies at Kahrizak. We want to preserve
-what this particular video records and make its environment explorable, so
-families, researchers, human-rights investigators, and the public can examine
-the scene and compare the reconstruction with the footage. The
-[provenance research](docs/provenance.md) documents the reporting and what
-remains unverified about our copy.
+A father walks through the Kahrizak forensic complex near Tehran, recording on
+his phone as he searches among bodies for his son. His repeated call gives this
+project its name. Reporting identifies the son as **Sepehr Shokri** and the
+father as **Esmail Shokri (اسماعیل شکری)**. The video records a family's search
+in the aftermath of the January 8–9, 2026 killings in Iran.
+[Video reporting](https://www.iranintl.com/202601246520) ·
+[Father's identification](https://www.hra-news.org/2026/hranews/a-08f7f295/)
+
+**[Watch / download the preserved video — 12:17, 417 MB](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/source/sepehr-baba.mp4)**
+· [Vahid Online's publication post](https://t.me/VahidOnline/70115)
+
+**Content note:** the recording contains graphic images of deceased people and
+distressed relatives. [Article and source references](#references).
+
+The video became a widely shared expression of families' grief and search for
+answers. On February 4, Iran International reported messages from parents who
+had named newborns Sepehr in remembrance.
+[Report on naming and remembrance](https://www.iranintl.com/202602044507).
+
+The recording also made the aftermath visible during a period when an internet
+shutdown obstructed documentation. Amnesty International documented mass unlawful
+killings by Iranian security forces and families searching at Kahrizak; that
+investigation provides context, rather than authentication of this particular
+file. Months later, reporting continued to connect the father's call with the
+families' campaign to keep victims' names and memories alive.
+[Amnesty International, January 14](https://www.amnesty.org/en/latest/news/2026/01/iran-massacre-of-protesters-demands-global-diplomatic-action-to-signal-an-end-to-impunity/) ·
+[IranWire, September 9](https://iranwire.com/en/news/157387-today-in-the-iranian-cybersphere-september-9-2026/)
+
+**Our goal is to reconstruct the environment in this specific video in 3D to
+help document the aftermath of the Iranian regime's January 8–9 massacre,
+preserve evidence of human-rights violations, and support future investigations
+and court proceedings.** We want families, researchers, investigators, and the
+public to explore what the recording shows and compare every reconstruction
+with its source.
+
+## The video and the father behind it
+
+- **January 23, 2026:** Vahid Online's publication post is timestamped on this
+  date. Its current text says the video was replaced two days later to restore
+  identifying audio and name Sepehr Shokri. The post links the **exact MP4 URL
+  preserved by this project**. This establishes a publication connection, not
+  the recording date. [Publisher's post](https://t.me/VahidOnline/70115)
+- **January 26–27:** reports described how a state-TV segment about another
+  family, Sepehr Ebrahimi's, was used to challenge the video. The restored audio
+  identified Shokri. The two families must not be conflated.
+  [Ayandegan](https://ayandegan.news/posts/930971) ·
+  [Iran International](https://www.iranintl.com/en/202601260391)
+- **March 21:** HRANA reported that security forces violently arrested Esmail
+  Shokri at his son's grave in Behesht-e Zahra. Its follow-up reported his release
+  that evening after about five hours.
+  [Arrest report](https://www.hra-news.org/2026/hranews/a-08f7f295/) ·
+  [Release report, March 22](https://www.hra-news.org/2026/hranews/a-1c83b463/)
+- **September 9:** IranWire reported that Sepehr's mother lit a candle at his
+  grave as part of a remembrance campaign, showing the family's continuing
+  public effort to preserve his memory.
+  [Report](https://iranwire.com/en/news/157387-today-in-the-iranian-cybersphere-september-9-2026/)
+
+The [research and provenance record](docs/provenance.md) provides the fuller
+chronology, sources, conflicting details, and verification limits. These are
+attributed public reports; we have not independently interviewed the family.
+
+## What this project is building
 
 The intended result is an openly documented 3D reconstruction of as much of
 this recording's environment as the evidence supports, accessible in a web
@@ -20,12 +72,57 @@ scripts, methods, and experiments so others can improve the reconstruction
 and scrutinize its accuracy. **The full reconstruction is still a goal; the
 published scene currently covers only an 18-second pilot.**
 
-**[Preserved source video and checksum](evidence/README.md)** ·
+**[Open the 3D pilot](https://parhamdb.github.io/sepehrbaba/)** ·
+**[Preserved source and checksum](evidence/README.md)** ·
 **[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
 
 The 3D scene is an experimental derived visualization. Preserve the source video
 and its audio separately from masks, inferred geometry, and rendered views. The
 project does not claim a complete chain of custody or court-certified accuracy.
+
+## References
+
+Sources for the opening and [provenance research](docs/provenance.md), checked
+September 25, 2026. Dates are publication dates unless stated otherwise.
+English descriptions of Persian articles are summaries, not official titles.
+
+### Video and publication trail
+
+- [Preserved MP4 used for reconstruction (12:17, 417 MB)](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/source/sepehr-baba.mp4), with [checksum and preservation record](evidence/README.md).
+- [Source MP4 on X/Twitter's media CDN](https://video.twimg.com/amplify_video/2015558220249530368/vid/avc1/1080x1920/2LxgD15qCvFD42mt.mp4?tag=21).
+- [Vahid Online's Telegram publication and updated caption](https://t.me/VahidOnline/70115), timestamped January 23; [inspectable embed](https://t.me/VahidOnline/70115?embed=1&mode=tme).
+- [Initial X post linked by the publisher](https://x.com/Vahid/status/2014549138189254811) and [updated X post](https://x.com/Vahid/status/2015559558437990439). These links were recovered from Telegram; their contents were not independently retrieved.
+
+### News and family reporting
+
+| Published | Source | Reference |
+| --- | --- | --- |
+| January 24 | Iran International, Persian analysis | [Twelve minutes in Kahrizak: “Sepehr Baba … where are you?”](https://www.iranintl.com/202601246520) |
+| January 26; updated August 20 | Ayandegan, Persian | [Restored audio and identification of Sepehr Shokri](https://ayandegan.news/posts/930971) |
+| January 27 | Iran International, English | [The father's search and disputed attribution](https://www.iranintl.com/en/202601260391) |
+| February 4 | Iran International, Persian | [Reports of families naming newborns Sepehr](https://www.iranintl.com/202602044507) |
+| February 18 | Al Jazeera, English | [Memorial coverage](https://www.aljazeera.com/news/2026/2/18/iranian-families-mark-protest-killings-as-schools-observe-strikes) |
+| March 21 | HRANA, Persian | [Esmail Shokri's arrest](https://www.hra-news.org/2026/hranews/a-08f7f295/) |
+| March 22 | HRANA, Persian | [His release on March 21 after approximately five hours](https://www.hra-news.org/2026/hranews/a-1c83b463/) |
+| September 9 | IranWire, English | [Family remembrance; see “A Candle for Sepehr”](https://iranwire.com/en/news/157387-today-in-the-iranian-cybersphere-september-9-2026/) |
+
+Additional cross-checks: [Iran International's March 21 arrest report](https://www.iranintl.com/202603216232),
+[Hengaw's March 22 report](https://hengaw.net/fa/news/2026/03/article-62), and
+[HRANA's arrest](https://t.me/hranews/112071) and
+[release](https://t.me/hranews/112090) Telegram posts. Hengaw's text has an
+inconsistent Gregorian year; the chronology above uses HRANA's dated reports.
+A [Wikimedia Commons copy](https://commons.wikimedia.org/wiki/File:VahidOnline-70115-sepehr_video.webm)
+points to the same Telegram publication, but is a different encoding; its
+uploader's authorship and licensing labels are not adopted by this repository.
+
+### Human-rights context and preservation
+
+- [Amnesty International, January 14: investigation of mass unlawful killings and Kahrizak footage](https://www.amnesty.org/en/latest/news/2026/01/iran-massacre-of-protesters-demands-global-diplomatic-action-to-signal-an-end-to-impunity/). This predates the publication trail above and does not authenticate our particular file.
+- [OHCHR / UC Berkeley: Berkeley Protocol on Digital Open Source Investigations](https://digitallibrary.un.org/record/3973652/files/OHCHR_BerkeleyProtocol.pdf?version=1), especially preservation guidance in paragraphs 167–169; [UN catalogue record](https://digitallibrary.un.org/record/3973652?ln=en).
+
+Sources disagree on Sepehr's age, and the exact filming date remains unverified.
+See the [research record](docs/provenance.md) for those limits and the direct
+check connecting the publisher's post to our source URL.
 
 ## The reconstruction challenge
 
