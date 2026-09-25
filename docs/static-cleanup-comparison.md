@@ -49,8 +49,38 @@ Published PLY SHA-256:
 ## Implication
 
 Cleaner sparse geometry alone was insufficient in this comparison. Because
-cleanup and camera refinement were combined, this experiment does not isolate
-their individual effects. The next bounded diagnostic would hold the original
-camera poses fixed while using the cleaned seed points. Improving temporal masks
-is a separate option for the persistent artifacts around occluded people.
-Neither follow-up has been run, and this experiment adds no video coverage.
+cleanup and camera refinement were combined, the first experiment did not isolate
+their individual effects. The following ablation tests point cleanup separately.
+
+## Follow-up: original camera poses and point coordinates
+
+The cleanup command now accepts `--preserve-poses`, which skips bundle adjustment.
+The second candidate used the same 91,960 retained points, with original camera
+poses **and original point coordinates**. Binary roundtrip checks verified every
+pose row, point record, camera intrinsic, reciprocal track, and observation
+assignment. Images and masks were identical to both previous runs.
+
+It trained for the same 8,000 steps with the same settings and evaluation split.
+
+| Measurement | Published baseline | Cleanup with original poses |
+| --- | ---: | ---: |
+| Static-region held-out PSNR | 22.3286 dB | 22.2404 dB |
+| Trained Gaussians | 226,293 | 208,805 |
+| PLY bytes | 53,406,699 | 49,279,531 |
+
+Eight held-out views improved and eighteen worsened. The largest regression,
+`frame_003220`, was 1.2603 dB. Inspection of that render showed persistent streaks
+and increased foreground smearing. All four fixed navigation views loaded without
+page errors, but showed mixed local detail changes, continued peripheral smearing,
+and no clear overall visual improvement.
+
+**This candidate also remains unpublished.** It failed the numeric non-regression
+threshold and the visual-improvement gate. No final deployment regression pass
+was needed because publication was blocked by candidate quality. Each configuration
+was trained once; these results do not establish statistical significance or prove
+that camera refinement alone caused the first candidate's artifacts.
+
+Both tested cleanup variants failed to improve on the published baseline. Further
+seed-filtering variations are not justified by these results alone. Better temporal
+masking remains a separate, untested approach to artifacts around occluded people.
+Neither experiment adds video coverage.

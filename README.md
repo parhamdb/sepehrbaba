@@ -151,6 +151,7 @@ and camera-pose changes. Geometry must remain connected and pass the accuracy
 checks before training. Cleaner inputs do not guarantee a better splat: compare
 the same held-out images and identical viewer camera positions before publishing.
 
-The [first controlled comparison](docs/static-cleanup-comparison.md) produced a
-smaller model but no clear visual gain. The published scene remains the accepted
-baseline; the cleanup candidate was not promoted.
+The [controlled comparisons](docs/static-cleanup-comparison.md) tested cleanup
+with refined poses and with original poses. Both produced smaller models but no
+clear visual gain. The published scene remains the accepted baseline; neither
+cleanup candidate was promoted.
