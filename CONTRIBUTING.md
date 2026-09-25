@@ -56,6 +56,17 @@ version needs its own path, checksum, provenance and documented relationship.
 Do not add credentials, machine access details, model-weight caches, decoded
 frame collections or temporary logs to Git.
 
+Before committing, inspect `git diff --cached` and `git diff --cached --stat`.
+Use `/path/to/...` placeholders instead of personal home directories, SSH
+accounts, private IP addresses, hostnames, or private service URLs. Keep access
+instructions, credentials, raw runtime state and logs in ignored local storage.
+Check archive contents as well as their filenames: normalize archive owner/group
+IDs and names, remove host paths, and verify that research payloads remain
+unchanged. Git ignore rules do not protect already tracked files or forced adds.
+Use your public GitHub identity and a GitHub noreply commit email when appropriate.
+The [publication privacy audit](docs/publication-privacy.md) records the current
+check and its limits.
+
 A permissive license for project-authored code is awaiting the owner's choice.
 Until a license is added, do not assume that publication alone grants broad reuse
 rights. Third-party licenses remain applicable. The source video and derived

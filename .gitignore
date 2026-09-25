@@ -11,3 +11,16 @@ runs/
 *.pyc
 .env
 .env.*
+# Private runtime material belongs outside the published project.
+private/
+.ssh/
+.aws/
+.secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+*.log
+*.db

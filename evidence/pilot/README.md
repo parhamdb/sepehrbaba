@@ -5,8 +5,8 @@ masks, rather than requiring contributors to recover the same cameras by chance.
 The package is tracked in Git LFS alongside the separately preserved source MP4.
 
 ```text
-SHA-256  2f11d07ed0a455829dad9fe95d249b489eb0e771fb2a6441e37562e5087c64b6
-Bytes    69806245
+SHA-256  19c3e5948ebfc24a10fd0515ed67a4df30442b0615dc030f78273fc34dc217e6
+Bytes    67381669
 ```
 
 Contents:
@@ -23,6 +23,12 @@ The package does not contain decoded JPEGs, model weights, credentials, host
 configuration, or a training optimizer checkpoint. [`training-state.json`](training-state.json)
 preserves the historical training settings and the complete held-out name list,
 with host paths omitted. The final PLY remains `public/assets/preview.ply`.
+
+The archive was repackaged on September 25, 2026 to remove build-host ownership
+and container timestamp metadata. All 268 member names, types and sizes were
+preserved, and every file's SHA-256 matched before and after repackaging. Recorded
+video frame timestamps inside `frames.json` are unchanged. The checksum above
+identifies the normalized archive; older Git revisions retain the prior package.
 
 ## Use the retained cameras
 
