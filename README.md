@@ -177,8 +177,9 @@ of deceased people.
 A [03:00–04:00 expansion attempt](docs/expansion-60s.md) has a saved 452-camera
 snapshot, but has not passed acceptance or been published as a larger scene.
 
-A [full-recording experiment](docs/full-video-experiment.md) is now attempting
-all 12,793 frames on Thor, with no elapsed-time limit. Its result is pending.
+The [full-recording experiment](docs/full-video-experiment.md) finished camera
+recovery after about 90 minutes, with no time limit. It recovered 1,041 of 12,793
+frames (8.1%) and failed geometry checks; no larger splat was trained or published.
 
 Enter the scene, drag to orbit, and scroll/pinch to zoom. Choose **Move freely**
 to navigate with W A S D or the on-screen directional controls. **Reset view**

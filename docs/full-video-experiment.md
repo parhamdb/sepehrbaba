@@ -55,11 +55,11 @@ silently promoted as the full recording.
 
 ## Acceptance and monitoring
 
-| ID | Check | Launch status |
+| ID | Check | Observed status |
 | --- | --- | --- |
 | F1 | Source hash and all-frame feature inventory match the preserved recording | Passed on Thor |
-| F2 | Geometry attempt produces a measured coverage/quality result, or a documented stop with retained snapshots | Untested |
-| F3 | Geometry passes existing thresholds; undistorted images and inspected masks match recovered cameras | Blocked by F2 |
+| F2 | Geometry attempt produces a measured coverage/quality result, or a documented stop with retained snapshots | Passed: retained refined model and measured quality report |
+| F3 | Geometry passes existing thresholds; undistorted images and inspected masks match recovered cameras | Failed: 8.1% coverage, extreme mean residual, six observations behind cameras |
 | F4 | A separate trained PLY, held-out comparisons, and browser inspection provide a usable experimental result | Blocked by F3 |
 | F5 | User can open a separately labeled candidate with accurate coverage and limitations | Blocked by F4 |
 
@@ -82,7 +82,7 @@ completion ETA yet: mapping may converge on only part of the recording despite
 all frames being eligible. Do not stop a healthy run merely because two hours
 have elapsed.
 
-## Running continuation
+## Unlimited continuation
 
 Frozen code: `82eda825480acc64a3cc3fcbff85842593c3363a`.
 The original unit was stopped cleanly after preserving its completed matching
@@ -101,6 +101,33 @@ tail -n 20 logs/map.log
 cat state.json
 ```
 
-The process continues independently of the SSH session. The source hash and
+The detached process stopped at the geometry gate. The source hash and
 runtime command are retained in `launch.json`; the prior run points to this
 continuation in `continuation.json`.
+
+## Observed result — September 25, 2026
+
+The unlimited run completed mapping and refinement after approximately 90 minutes,
+then exited at the geometry gate around 17:14 UTC. This was **not a timeout**.
+No reconstruction process remained active when checked at 18:01 UTC.
+
+- Matching, mapping, bundle adjustment and model conversion completed.
+- The retained refined model has **1,041 cameras / 12,793 source frames (8.14%)**,
+  spanning 186.2622–256.992944 seconds, approximately **03:06–04:17**.
+  This span does not imply that every frame within it registered.
+- There are **346,215 sparse points**. The measured p95 reprojection residual is
+  2.4685 px, but the reported mean is approximately **2.27 × 10^17 px**, and six
+  associated observations lie behind their cameras. The extreme mean needs
+  diagnosis; the p95 alone cannot establish acceptable geometry.
+- Undistortion, masks, Gaussian training and a new browser candidate did not run.
+  The accepted 18-second public scene remains the only published model.
+
+Acceptance inventory: **2 passed, 1 failed, 2 blocked, 0 untested**. F2 passing
+means the experiment produced its measured result, not that full reconstruction
+succeeded. No final candidate acceptance pass was possible.
+
+The earlier 12–24-hour estimate assumed continued registration. That assumption
+was not borne out: the mapper finished with limited coverage. More waiting on
+this completed run cannot recover additional cameras. Retain its matched database,
+`refined/`, snapshots and `quality.json` for diagnosis of camera connectivity and
+the extreme projection residuals before attempting another trained candidate.
