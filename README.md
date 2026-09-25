@@ -4,10 +4,13 @@ An interactive 3D Gaussian-splat viewer published on GitHub Pages.
 
 **[Open the 3D scene](https://parhamdb.github.io/sepehrbaba/)**
 
-**Current scene: partial preview, approximately 00:16–00:26 of a 12:17 recording.**
-It contains 4,635 Gaussians recovered from 21 camera views. Its visual quality failed inspection (smearing and ray-like artifacts);
-the rest of the recording is not represented by this preview. The page labels this
-coverage before and during viewing. The scene contains imagery of deceased people.
+**Current scene: an 18-second pilot, approximately 03:19–03:37 of a 12:17 recording.**
+It contains 226,293 Gaussians recovered from 252 of the interval's 271 native
+frames. The floor and stationary objects remained recognizable in inspected
+held-out views, a small orbit, and a 0.27-unit sideways camera movement. Blur,
+holes and peripheral artifacts remain, especially around people. This is a limited
+pilot, not a complete reconstruction of the recording. The scene contains imagery
+of deceased people.
 
 Enter the scene, drag to orbit, and scroll/pinch to zoom. Choose **Move freely**
 to navigate with W A S D or the on-screen directional controls. **Reset view**
@@ -35,8 +38,13 @@ Do not label this small preview as a reconstruction of the entire video.
 - [SuperSplat Viewer](https://github.com/playcanvas/supersplat-viewer), MIT license.
 - [PlayCanvas Engine](https://github.com/playcanvas/engine), MIT license.
 - Reconstruction: COLMAP camera recovery and Brush Gaussian training.
-- Current model: 3,000 training steps; 18 training views / 3 held-out views;
-  held-out PSNR 19.21 dB and SSIM 0.675. These are small-preview metrics only.
+- Current model: 8,000 training steps, 1920-pixel maximum edge; 226 training views /
+  26 held-out views. PSNR on unmasked static regions is 22.33 dB; this excludes
+  detected people and is not directly comparable to the original preview score.
+- Geometry: 109,642 points; mean reprojection error 1.23 pixels, 95th percentile
+  2.49 pixels. Nineteen interval frames could not be registered.
+- Conservative person masks were inspected before training; some static human
+  content is also excluded. The saved PLY is about 53 MB.
 
 Third-party license notices accompany the bundled viewer. No license or identity
 claim is made about the underlying source recording or the people it depicts.
@@ -111,5 +119,5 @@ interrupted mapping is not automatically claimed as resumable training.
 Passing geometry is only permission to evaluate a candidate. Compare held-out
 renders against their source images, then move through the candidate in the viewer.
 Do not publish or expand to the full recording until the static environment remains
-recognizable from nearby viewpoints. The original published preview has not passed
-that test, and no full-video reconstruction is currently accepted.
+recognizable from nearby viewpoints. The current pilot passed a bounded visual check of the central static scene.
+Larger movements, unseen surfaces, and the full recording remain unverified.

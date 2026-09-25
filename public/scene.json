@@ -1,24 +1,35 @@
 {
   "asset": "./assets/preview.ply",
   "coverage": {
-    "start_seconds": 16,
-    "end_seconds": 26.5,
+    "start_seconds": 199.0,
+    "end_seconds": 217.0,
     "source_duration_seconds": 737.301333,
-    "status": "partial-preview",
-    "registered_frames": 21,
+    "status": "partial-pilot",
+    "registered_frames": 252,
     "source_frames": 12793
   },
   "camera": {
     "position": [
-      -0.8544957210209977,
-      -2.003143252184909,
-      -0.2774863318012225
+      -0.7367625006722656,
+      0.6438814987153063,
+      1.341315361026385
     ],
     "target": [
-      -0.5252359144619743,
-      -0.8678116935772606,
-      2.4797967932721257
+      0.6424271765965341,
+      -0.30785980675900804,
+      5.187894982237158
     ],
-    "fov": 60
+    "fov": 64.2765348941362
+  },
+  "entry_reference": "frame_003139.jpg",
+  "quality": {
+    "gaussians": 226293,
+    "selected_frames": 271,
+    "unregistered_frames": 19,
+    "mean_reprojection_px": 1.2298734569668617,
+    "p95_reprojection_px": 2.490395366560695,
+    "held_out_views": 26,
+    "static_region_psnr_db": 22.328621099932533,
+    "limitations": "18-second pilot only. Blur, holes and peripheral artifacts remain, especially around people. Unseen surfaces are not reconstructed."
   }
 }
