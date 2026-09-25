@@ -1,17 +1,24 @@
 # Sepehr Baba
 
-**The challenge: reconstruct a faithful, navigable 3D environment from the specific
-recording known as “Sepehr Baba” / «سپهر بابا … کجایی؟», for human-rights documentation.**
+**Our goal is to reconstruct the environment in the “Sepehr Baba” video in 3D
+to help document the aftermath of the Iranian regime's January 8–9, 2026
+massacre, preserve evidence of human-rights violations, and support future
+investigations and court proceedings.**
 
-This project brings together the preserved video, reconstruction code, experiments,
-and an interactive viewer so contributors can improve how much of the recorded
-environment can be recovered and how reliably it represents the source.
+The recording known as **“Sepehr Baba” / «سپهر بابا … کجایی؟»** is reported to
+show a father searching among victims' bodies at Kahrizak. We want to preserve
+what this particular video records and make its environment explorable, so
+families, researchers, human-rights investigators, and the public can examine
+the scene and compare the reconstruction with the footage. The
+[provenance research](docs/provenance.md) documents the reporting and what
+remains unverified about our copy.
 
-The aim is to preserve and study the recorded aftermath of the January 8–9,
-2026 killings in Iran for human-rights documentation and future accountability.
-Reporting describes a father searching among bodies at Kahrizak; the
-[provenance research](docs/provenance.md) attributes those reports and records
-what has and has not been independently verified about our copy.
+The intended result is an openly documented 3D reconstruction of as much of
+this recording's environment as the evidence supports, accessible in a web
+browser and traceable back to the video. We publish the source recording,
+scripts, methods, and experiments so others can improve the reconstruction
+and scrutinize its accuracy. **The full reconstruction is still a goal; the
+published scene currently covers only an 18-second pilot.**
 
 **[Preserved source video and checksum](evidence/README.md)** ·
 **[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
