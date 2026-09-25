@@ -141,6 +141,33 @@ windows 0–90 s and 60–150 s finished but failed the unchanged coverage thres
 partial models were retained. Window 120–210 s was still mapping. No disconnected
 models have been forced together, and completed attempts are not accepted coverage.
 
+## Display orientation
+
+COLMAP's arbitrary coordinate axes left the expanded scene tilted relative to the
+viewer's vertical axis. `scripts/level_scene.py` estimates a floor plane from the
+two manually selected regions in `docs/floor-selection-71s.json`. The regions are
+visible floor pixels in undistorted frames 003314 and 003348. Of 79 unique sparse
+points, 51 support the plane within 0.015 scene units; the fitted RMS residual is
+0.00749. The estimated up direction differs from the previous viewer up by 27.28°.
+This is approximate display leveling, not a surveyed gravity measurement.
+
+The manifest records the selection, original camera, fitted normal and rotation.
+The viewer rotates the splat entity before measuring its bounds, and uses the
+same rotation for the camera. The opening ray is unchanged; its orbit centre is
+moved to the fitted floor intersection, about 1.21 arbitrary scene units away.
+Orbit, free movement and reset therefore share one upright coordinate system.
+The PLY, its hash, original video and reconstruction geometry are unchanged.
+Opening the raw PLY in another application still uses its original coordinates.
+
+To reproduce from the original viewer manifest and undistorted model export:
+
+```sh
+git show 2bb5e31:public/experiments/recovery-71s.json > work/unleveled-scene.json
+python3 scripts/level_scene.py --model-text work/recovery/dataset-model-text \
+  --scene work/unleveled-scene.json --selection docs/floor-selection-71s.json \
+  --output work/leveled-scene.json
+```
+
 ## Frozen acceptance inventory
 
 | ID | Required evidence |

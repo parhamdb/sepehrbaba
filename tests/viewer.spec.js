@@ -95,7 +95,28 @@ for (const mobile of [false,true]) {
     const authored=await page.evaluate(async()=> (await (await fetch('./experiments/recovery-71s.json')).json()).camera.position);
     await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-authored[i])),{timeout:20000}).toBeLessThan(.05);
     await visibleScene(page);
+    const up=await page.evaluate(async()=>{
+      const scene=await (await fetch('./experiments/recovery-71s.json')).json();
+      const n=scene.orientation.floor_normal_before;
+      const raw=[-n[0],-n[1],n[2]]; // Undo the viewer's standard COLMAP axis conversion.
+      const m=window.sceneViewer.app.root.findComponent('gsplat').entity.getWorldTransform().data;
+      return [0,1,2].map(i=>m[i]*raw[0]+m[i+4]*raw[1]+m[i+8]*raw[2]);
+    });
+    expect(Math.hypot(up[0],up[1]-1,up[2]),'fitted floor must be horizontal in the rendered world').toBeLessThan(1e-5);
     await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}.png`});
+    if(mobile){
+      const client=await context.newCDPSession(page);
+      await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:180,y:380}]});
+      await client.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:230,y:365}]});
+      await client.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+    }else{
+      await page.mouse.move(640,360);await page.mouse.down();
+      await page.mouse.move(720,335,{steps:10});await page.mouse.up();
+    }
+    await page.waitForTimeout(1200);
+    expect(Math.hypot(...(await position()).map((v,i)=>v-authored[i]))).toBeGreaterThan(.01);
+    await visibleScene(page);
+    await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}-orbit.png`});
     await page.getByRole('button',{name:'Move freely',exact:true}).click();
     const before=await position();
     const forward=page.getByRole('button',{name:'Move forward',exact:true});
@@ -110,6 +131,8 @@ for (const mobile of [false,true]) {
     }
     expect(await position()).not.toEqual(before);
     await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}-moved.png`});
+    await page.getByRole('button',{name:'Reset view',exact:true}).click();
+    await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-authored[i])),{timeout:20000}).toBeLessThan(.05);
     expect(errors).toEqual([]);
     await context.close();
   });

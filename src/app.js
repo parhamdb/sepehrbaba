@@ -1,5 +1,6 @@
 import { createViewer } from '@playcanvas/supersplat-viewer/viewer';
 import { defaultSettings } from '@playcanvas/supersplat-viewer/settings';
+import { Quat } from 'playcanvas';
 import './style.css';
 
 const $ = (id) => document.getElementById(id);
@@ -58,11 +59,27 @@ async function enter() {
     const settings = defaultSettings('object');
     settings.background.color = [0.045, 0.058, 0.05];
     settings.cameras = scene.camera ? [{ initial: scene.camera }] : [];
+    // Install the transform before the viewer measures its bounds and creates
+    // navigation controls. Defer the asset fetch until the child hook is ready.
+    let startAsset;
+    const contents = scene.orientation ? new Promise(resolve => {
+      startAsset = () => resolve(fetch(scene.asset));
+    }) : undefined;
     viewer = await createViewer({
-      container: $('viewer'), contentUrl: scene.asset, settings,
+      container: $('viewer'), contentUrl: scene.asset, contents, settings,
       renderer: new URLSearchParams(location.search).has('webgl') ? 'webgl' : 'webgpu',
       ui: false, nofx: true, aa: true
     });
+    if (scene.orientation) {
+      const root = viewer.app.root;
+      const orient = (entity) => {
+        if (!entity.gsplat) return;
+        const correction = new Quat(...scene.orientation.rotation_xyzw);
+        entity.setLocalRotation(correction.mul(entity.getLocalRotation()));
+        root.off('childinsert', orient);
+      };
+      root.on('childinsert', orient);
+    }
     viewer.events.on('progress:changed', (value) => { $('progress').textContent = `Loading scene · ${Math.round(value)}%`; });
     const loaded = () => {
       if (ready) return;
@@ -83,6 +100,7 @@ async function enter() {
     if (viewer.state.loaded) loaded();
     // Read-only visibility for browser verification; no credentials or write API.
     window.sceneViewer = viewer;
+    startAsset?.();
   } catch (error) {
     fail(`${error.message || 'Your browser could not open the scene.'} Try a current browser with WebGL or WebGPU enabled.`);
   }

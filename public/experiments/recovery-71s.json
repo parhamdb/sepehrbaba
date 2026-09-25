@@ -13,14 +13,14 @@
   },
   "camera": {
     "position": [
-      -0.6731128003283325,
-      0.04771679316998574,
-      -0.10747471989154544
+      -0.6741559525343873,
+      -0.03706779054311711,
+      -0.10511080010516263
     ],
     "target": [
-      0.7094356351758605,
-      -0.37770924360585395,
-      3.621811071076761
+      -0.1921139552352415,
+      -0.5484008193847524,
+      0.8837953825851946
     ],
     "fov": 63.60743151013946
   },
@@ -36,5 +36,117 @@
     "behind_camera_observations": 0,
     "static_region_psnr_db": 22.08736105295802,
     "limitations": "Partial 71-second experiment. Strong blur and uncertain geometry near moving people and segment ends. Masks also exclude some static human details. Unseen surfaces are not reconstructed; no metric scale or forensic accuracy is established."
+  },
+  "orientation": {
+    "rotation_xyzw": [
+      0.21572567886776356,
+      0.0,
+      0.09519558113176266,
+      0.9718025688430899
+    ],
+    "floor_normal_before": [
+      0.18502262057271546,
+      0.8888004656200571,
+      -0.4192855377782242
+    ],
+    "floor_center_before": [
+      -0.7365557108441783,
+      -0.00025747915256613276,
+      0.9823675439855989
+    ],
+    "orbit_distance_scene_units": 1.2131617335325595,
+    "degrees": 27.277101161556175,
+    "selected_points": 79,
+    "inlier_points": 51,
+    "region_counts": {
+      "frame_003314.jpg": 42,
+      "frame_003348.jpg": 37
+    },
+    "floor_rms_scene_units": 0.007492735455448582,
+    "method": "RANSAC and SVD fit to manually selected floor pixels; display alignment only",
+    "source_camera": {
+      "position": [
+        -0.6731128003283325,
+        0.04771679316998574,
+        -0.10747471989154544
+      ],
+      "target": [
+        0.7094356351758605,
+        -0.37770924360585395,
+        3.621811071076761
+      ],
+      "fov": 63.60743151013946
+    },
+    "selection": {
+      "threshold_scene_units": 0.015,
+      "regions": [
+        {
+          "image": "frame_003348.jpg",
+          "reference_size": [
+            532,
+            946
+          ],
+          "polygon_pixels": [
+            [
+              470,
+              408
+            ],
+            [
+              525,
+              377
+            ],
+            [
+              527,
+              493
+            ],
+            [
+              394,
+              492
+            ],
+            [
+              380,
+              466
+            ]
+          ]
+        },
+        {
+          "image": "frame_003314.jpg",
+          "reference_size": [
+            1065,
+            1894
+          ],
+          "polygon_pixels": [
+            [
+              30,
+              425
+            ],
+            [
+              190,
+              260
+            ],
+            [
+              450,
+              270
+            ],
+            [
+              400,
+              510
+            ],
+            [
+              300,
+              680
+            ],
+            [
+              130,
+              712
+            ],
+            [
+              45,
+              650
+            ]
+          ]
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "threshold_scene_units": 0.015,
+  "regions": [
+    {
+      "image": "frame_003348.jpg",
+      "reference_size": [532, 946],
+      "polygon_pixels": [[470, 408], [525, 377], [527, 493], [394, 492], [380, 466]]
+    },
+    {
+      "image": "frame_003314.jpg",
+      "reference_size": [1065, 1894],
+      "polygon_pixels": [[30, 425], [190, 260], [450, 270], [400, 510], [300, 680], [130, 712], [45, 650]]
+    }
+  ]
+}
