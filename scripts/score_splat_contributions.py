@@ -118,7 +118,7 @@ def sample_view(model,view,root,out,regions,full=False,fraction=.5):
     yy,xx=np.indices((h,w));sampling=((xx%8==4)&(yy%8==4)) | (target&(xx%4==2)&(yy%4==2))
     if full: sampling[:]=True
     ids,center,inv,radius,opacity,color=project(model,view,w,h)
-    score=torch.zeros((n,5),device=device)
+    score=torch.zeros((n,6),device=device)
     rendered=np.zeros_like(source)
     for y0 in range(0,h,32):
         for x0 in range(0,w,32):
@@ -137,7 +137,8 @@ def sample_view(model,view,root,out,regions,full=False,fraction=.5):
             current,weights,gain=composite_effect(alpha,color[ix],ref,fraction)
             rendered[sy,sx]=current.cpu().numpy()
             valid=torch.tensor(mask[sy,sx],device=device)
-            roi=torch.tensor(target[sy,sx],device=device)&valid
+            all_roi=torch.tensor(target[sy,sx],device=device)
+            roi=all_roi&valid
             # The mask excludes unknown/occluded pixels from both gains and protection.
             gain=gain*valid[None]
             score[ids[ix],0]+=weights[:,roi].sum(1)
@@ -145,6 +146,9 @@ def sample_view(model,view,root,out,regions,full=False,fraction=.5):
             score[ids[ix],2]+=gain.sum(1)
             score[ids[ix],3]+=(-gain).clamp_min(0).sum(1)
             score[ids[ix],4]+=(weights*valid[None]).sum(1)
+            # Localization is allowed in a masked region; its source RGB is
+            # still excluded from every loss/protection score above.
+            score[ids[ix],5]+=weights[:,all_roi].sum(1)
     values=score.cpu().numpy()
     np.save(out/f'{name}-scores.npy',values)
     if full:Image.fromarray(np.uint8(rendered.clip(0,1)*255+.5)).save(out/f'{name}.png')
@@ -173,6 +177,7 @@ def main():
     p.add_argument('input',type=Path);p.add_argument('references',type=Path);p.add_argument('regions',type=Path);p.add_argument('output',type=Path)
     p.add_argument('--device',default='cuda');p.add_argument('--full-view');p.add_argument('--fraction',type=float,default=.5)
     p.add_argument('--export',action='store_true',help='Export only after independent renderer calibration')
+    p.add_argument('--localize-masked',action='store_true',help='Use masked ROI pixels for attribution only; validate effects using static RGB elsewhere')
     a=p.parse_args()
     if not 0<a.fraction<1:p.error('fraction must be strictly between zero and one')
     if a.output.exists():p.error('Use a fresh output directory')
@@ -190,13 +195,15 @@ def main():
     if a.export:
         # Require target contribution in >=2 views, target loss improvement,
         # and total source gain exceeding accumulated pixel-level harm.
-        total=stats.sum(0);support=(stats[:,:,0]>.05).sum(0)
+        total=stats.sum(0);localization=5 if a.localize_masked else 0
+        support=(stats[:,:,localization]>.05).sum(0)
         other_support=((stats[:,:,4]-stats[:,:,0])>.05).sum(0)
-        select=(support>=2)&(other_support>=3)&(total[:,0]>.2)&(total[:,1]>1e-4)&(total[:,2]>2*total[:,3])
+        select=(support>=2)&(other_support>=3)&(total[:,localization]>.2)&(total[:,2]>2*total[:,3])
+        if not a.localize_masked:select &= total[:,1]>1e-4
         indices=np.flatnonzero(select)
         if len(indices)>.02*len(data):raise ValueError('Candidate exceeds 2% change budget; inspect evidence')
         digest=export_candidate(header,data,a.output/'candidate.ply',indices,a.fraction)
-        report={'input_sha256':hashlib.sha256(a.input.read_bytes()).hexdigest(),'output_sha256':digest,'changed_count':len(indices),'indices':indices.tolist(),'fraction':a.fraction,'training_views':[v['name'] for v in views],'held_out_used':False,'accepted_visual_quality':False,'approximate_renderer':True,'original_opacity_logits':data['opacity'][indices].tolist(),'selected_evidence':total[indices].tolist()}
+        report={'input_sha256':hashlib.sha256(a.input.read_bytes()).hexdigest(),'output_sha256':digest,'changed_count':len(indices),'indices':indices.tolist(),'fraction':a.fraction,'localize_masked':a.localize_masked,'training_views':[v['name'] for v in views],'held_out_used':False,'accepted_visual_quality':False,'approximate_renderer':True,'original_opacity_logits':data['opacity'][indices].tolist(),'selected_evidence':total[indices].tolist(),'evidence_columns':['static_roi_weight','static_roi_gain','static_gain','static_harm','static_weight','all_roi_weight']}
         (a.output/'candidate.json').write_text(json.dumps(report,indent=2)+'\n')
         print(json.dumps({'changed_count':len(indices),'output_sha256':digest}),flush=True)
 
