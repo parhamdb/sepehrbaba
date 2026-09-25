@@ -4,9 +4,10 @@ Research snapshot: **2026-09-25**. This document preserves the options discussed
 for this recording so unsuccessful experiments can lead to a different,
 evidence-based approach rather than repeated threshold tuning.
 
-**Status: research and recommendations only. No option below has been launched
-or accepted as a result of this document.** The proposed next approach is rank 1;
-it is a custom adaptation, not a proven turnkey ghost-removal system.
+**Status: ranked research, with a completed bounded rank-1 experiment.** Its two
+contribution-aware opacity candidates did not clearly improve ghosting and were
+not promoted. See the [implementation and results](contribution-cleanup.md).
+The remaining options are fallbacks, not automatic follow-on jobs.
 
 ## Goal, evidence, and ranking rules
 
@@ -25,8 +26,8 @@ The repository state before this document was `dd489b4`.
 The ranking is our engineering assessment of **expected usefulness for this
 scene, preservation of real detail, implementation readiness, reversibility,
 cost, and compatibility with a static browser viewer**. It is not a measured
-leaderboard. No new method has been benchmarked on our scene. Number 1 is the
-smallest useful next experiment; a different diagnosed cause can move a lower
+leaderboard. Rank 1 has now had a bounded scene-specific experiment. Its original
+position reflects the smallest useful first experiment; a diagnosed cause can move a lower
 option to the front. Within grouped methods, order does not assert superiority.
 
 Public code availability means source was located, not that it was installed,
@@ -44,6 +45,7 @@ does not guarantee identical appearance in a different renderer.
 | Strict needle pruning | 190 splats removed; three-training-view PSNR change -0.0065 dB | Dominant ghosts remained. |
 | Broader needle pruning | 1,978 removed; change -0.0285 dB | Dominant ghosts remained. |
 | Large, faint, isolated-splat pruning | 3,074 removed; change -0.0970 dB | Dominant ghosts remained. |
+| Contribution-aware opacity reduction, two variants | 40 or 49 splats halved using source-view evidence | Tiny changes; dominant ghosts remained; neither candidate promoted. |
 
 The pruning metric used PlayCanvas at 532 × 946 on **three training views**, not
 the native-resolution 26-view Brush held-out metric. Do not compare those scores
@@ -59,13 +61,19 @@ configuration matters. It does **not** establish that the remaining ghosts are
 primarily renderer errors. Those corrected settings were already used for the
 reported candidate comparison.
 
-These failures tested sparse-point and geometric/opacity heuristics. They did
-not test contribution attribution, reliable depth evidence, temporal tracking,
-learned artifact detection, or static/dynamic decomposition.
+The first five failures tested sparse-point and geometric/opacity heuristics.
+The latest experiment also tested approximate contribution attribution with
+static source-color verification. Reliable depth evidence, temporal tracking,
+learned artifact detection, and static/dynamic decomposition remain untested.
 
 ## Ranked options: best to worst fit for this case
 
 ### 1. Source-verified, contribution-aware cleanup of the existing model
+
+**Tested, not accepted:** a custom analytical scorer selected 40 or 49 splats
+for reversible half-opacity previews. Both retained the dominant ghosts.
+This tested coarse region localization and static RGB evidence, without depth,
+learned ghost labels or surface refinement. [Results and revisit criteria](contribution-cleanup.md).
 
 **Recommendation:** identify a particular ghost in multiple rendered views,
 trace its actual alpha-weighted Gaussian contributions, and check the implicated
@@ -510,6 +518,7 @@ renders in that experiment's own report and link them here.
 | --- | --- | --- | --- | --- |
 | 2026-09-25 | 23: heuristic PLY pruning | Needles or faint isolated density cause dominant ghosts; baseline hash above | [No clear gain](post-training-cleanup.md) | Retain baseline; investigate source/visibility evidence. |
 | 2026-09-25 | 24: sparse cleanup, two variants | Masked/weak sparse tracks cause the artifacts | [No clear gain](static-cleanup-comparison.md) | Retain baseline; do not repeat seed-filter variations without new evidence. |
+| 2026-09-25 | 1: contribution-aware opacity, two variants | Multi-view attribution plus static source-color protection isolates ghosts; 40/49 opacity changes | [No clear gain](contribution-cleanup.md) | Retain baseline; revisit with better labels/background or depth evidence; rank 2 remains a separate next option. |
 
 No other ranked option has a scene-specific pass result. The literature is a
 menu of hypotheses, not evidence that our scene has been fixed.

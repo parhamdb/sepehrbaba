@@ -168,3 +168,9 @@ The [ranked ghosting research and fallback options](docs/ghosting-options.md)
 preserve 26 approaches, ordered by suitability for this recording, with source
 links, implementation limits, prior failures, and criteria for revisiting each.
 The ranking is a research assessment; no new method is claimed as validated.
+
+`scripts/score_splat_contributions.py` implements the first option as reversible,
+source-verified opacity reduction. The [two-candidate experiment](docs/contribution-cleanup.md)
+passed its implementation checks but did not visibly resolve the dominant ghosts.
+The accepted scene is unchanged; usage, limitations and preserved evidence are
+documented for a future experiment with stronger source or depth evidence.
