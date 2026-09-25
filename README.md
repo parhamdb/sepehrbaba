@@ -70,15 +70,22 @@ this recording's environment as the evidence supports, accessible in a web
 browser and traceable back to the video. We publish the source recording,
 scripts, methods, and experiments so others can improve the reconstruction
 and scrutinize its accuracy. **The full reconstruction is still a goal; the
-published scene currently covers only an 18-second pilot.**
+default scene covers an 18-second pilot; a separate experimental preview spans
+about 71 seconds (03:06–04:17).** Both are partial reconstructions.
 
 **[Open the 3D pilot](https://parhamdb.github.io/sepehrbaba/)** ·
+**[Explore the experimental 71-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-71s)** ·
 **[Preserved source and checksum](evidence/README.md)** ·
 **[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
 
 The 3D scene is an experimental derived visualization. Preserve the source video
 and its audio separately from masks, inferred geometry, and rendered views. The
 project does not claim a complete chain of custody or court-certified accuracy.
+
+The expanded preview retains 1,041 camera views and 500,000 splats. Its central
+views show recognizable detail, but strong blur and uncertain geometry remain
+around people and the segment ends. Semantic masks also exclude some static
+human details. [Recovery method, measured results and limitations](docs/recovery-71s.md).
 
 ## References
 

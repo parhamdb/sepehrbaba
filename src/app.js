@@ -6,6 +6,16 @@ const $ = (id) => document.getElementById(id);
 let viewer;
 let loadingTimer;
 let ready = false;
+const expanded = new URLSearchParams(location.search).get('scene') === 'recovery-71s';
+const descriptionUrl = expanded ? './experiments/recovery-71s.json' : './scene.json';
+if (expanded) {
+  document.title = 'Sepehr Baba · Experimental 71-second scene';
+  document.querySelector('.coverage').textContent = 'Experimental · 03:06–04:17';
+  $('scope-title').textContent = 'Experimental expanded preview';
+  $('scope-description').textContent = 'Recovered views span about 71 seconds of the 12-minute recording. This candidate has missing frames, blur and uncertain geometry; it is not the full recording.';
+  $('alternate-scene').href = './';
+  $('alternate-scene').textContent = 'Open the accepted 18-second pilot ↗';
+}
 
 function fail(message) {
   clearTimeout(loadingTimer);
@@ -41,9 +51,10 @@ async function enter() {
   $('progress').textContent = 'Opening scene…';
   loadingTimer = setTimeout(() => fail('Loading timed out. Check your connection and try again.'), 60000);
   try {
-    const response = await fetch('./scene.json');
+    const response = await fetch(descriptionUrl);
     if (!response.ok) throw new Error('The scene description could not be downloaded.');
     const scene = await response.json();
+    document.querySelector('#error a[download]').href = scene.asset;
     const settings = defaultSettings('object');
     settings.background.color = [0.045, 0.058, 0.05];
     settings.cameras = scene.camera ? [{ initial: scene.camera }] : [];

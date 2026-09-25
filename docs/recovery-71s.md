@@ -96,6 +96,36 @@ models and match database remain unchanged. Its first interval is 0–90 seconds
 all 12,793 source frames are included somewhere in the window plan. This is a
 running experiment, not an accepted reconstruction of the full recording.
 
+## September 25 recovered component
+
+The repaired 186–257 s component passed geometry checks: **1,041 / 1,067**
+eligible frames (97.56%), 346,209 sparse points, mean residual **1.1989 px**,
+p95 **2.4683 px**, and zero behind-camera observations. All 1,041 masks passed
+inventory/dimension checks. Eight sampled source/overlay pairs were inspected;
+foreground people are largely excluded, with some missed limbs and exclusion
+of static human details. This is an experimental mask policy, not an accurate
+classification of all people or evidence.
+
+Training completed all **8,000 steps**, with **936 training views**, **105 held-out
+views**, maximum image edge 1920, and **500,000 Gaussians**. The complete held-out
+inventory was verified against Brush's actual split. Static-region PSNR is
+**22.0874 dB**, over unmasked pixels only. It does not measure masked human details
+or establish accurate novel-view geometry. Sampled source/render pairs show useful
+central detail and pronounced blur at occluded ends and around people.
+
+The separate [experimental viewer](https://parhamdb.github.io/sepehrbaba/?scene=recovery-71s)
+uses `public/experiments/recovery-71s.json`; the default pilot asset and camera are
+unchanged. The candidate PLY is 118,001,551 bytes, SHA-256
+`02b746a41c81e707917b03da4713c07b6bee0e40d0139e01c0b79748f541bb43`.
+It is stored in Git LFS; the Pages workflow explicitly fetches this asset before
+building. Local builds also require `git lfs pull --include="public/assets/recovery-71s.ply"`.
+
+The full-video campaign remains independent. As of 21:40 UTC, September 25,
+windows 0–90 s and 60–150 s finished but failed the unchanged coverage threshold
+(303/1,352 and 356/1,361 frames respectively). Their residuals were low and their
+partial models were retained. Window 120–210 s was still mapping. No disconnected
+models have been forced together, and completed attempts are not accepted coverage.
+
 ## Frozen acceptance inventory
 
 | ID | Required evidence |

@@ -79,3 +79,38 @@ test('missing scene description shows a recoverable error',async({page})=>{
   await expect(page.getByRole('heading',{name:'The scene could not load'})).toBeVisible();
   await expect(page.getByRole('button',{name:'Try again'})).toBeVisible();
 });
+
+for (const mobile of [false,true]) {
+  test(`expanded scene renders and moves on ${mobile?'mobile':'desktop'}`,async({browser})=>{
+    const context=await browser.newContext({baseURL:process.env.SITE_URL || 'http://127.0.0.1:8088',
+      viewport:mobile?{width:390,height:844}:{width:1280,height:720},isMobile:mobile,hasTouch:mobile});
+    const page=await context.newPage();
+    const errors=[];page.on('pageerror',e=>errors.push(e.message));
+    await page.goto('./?scene=recovery-71s&webgl');
+    await expect(page.getByText('Experimental expanded preview',{exact:true})).toBeVisible();
+    await expect(page.locator('#alternate-scene')).toHaveAttribute('href','./');
+    await page.getByRole('button',{name:'Enter the 3D scene'}).click();
+    await expect(page.locator('body')).toHaveAttribute('data-scene-loaded','true',{timeout:60000});
+    const position=()=>page.evaluate(()=>window.sceneViewer.app.root.findComponent('camera').entity.getPosition().toArray());
+    const authored=await page.evaluate(async()=> (await (await fetch('./experiments/recovery-71s.json')).json()).camera.position);
+    await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-authored[i])),{timeout:20000}).toBeLessThan(.05);
+    await visibleScene(page);
+    await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}.png`});
+    await page.getByRole('button',{name:'Move freely',exact:true}).click();
+    const before=await position();
+    const forward=page.getByRole('button',{name:'Move forward',exact:true});
+    await expect(forward).toBeInViewport();
+    if(mobile){
+      const box=await forward.boundingBox();const client=await context.newCDPSession(page);
+      await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:box.x+box.width/2,y:box.y+box.height/2}]});
+      await page.waitForTimeout(700);
+      await client.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+    }else{
+      await page.keyboard.down('w');await page.waitForTimeout(700);await page.keyboard.up('w');
+    }
+    expect(await position()).not.toEqual(before);
+    await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}-moved.png`});
+    expect(errors).toEqual([]);
+    await context.close();
+  });
+}

@@ -1,0 +1,40 @@
+{
+  "asset": "./assets/recovery-71s.ply",
+  "asset_sha256": "02b746a41c81e707917b03da4713c07b6bee0e40d0139e01c0b79748f541bb43",
+  "asset_bytes": 118001551,
+  "coverage": {
+    "start_seconds": 186,
+    "end_seconds": 257,
+    "source_duration_seconds": 737.301333,
+    "status": "experimental-partial",
+    "registered_frames": 1041,
+    "selected_frames": 1067,
+    "source_frames": 12793
+  },
+  "camera": {
+    "position": [
+      -0.6731128003283325,
+      0.04771679316998574,
+      -0.10747471989154544
+    ],
+    "target": [
+      0.7094356351758605,
+      -0.37770924360585395,
+      3.621811071076761
+    ],
+    "fov": 63.60743151013946
+  },
+  "entry_reference": "frame_003348.jpg",
+  "quality": {
+    "gaussians": 500000,
+    "training_steps": 8000,
+    "train_views": 936,
+    "held_out_views": 105,
+    "max_image_edge": 1920,
+    "mean_reprojection_px": 1.1988896763669785,
+    "p95_reprojection_px": 2.4682617246252865,
+    "behind_camera_observations": 0,
+    "static_region_psnr_db": 22.08736105295802,
+    "limitations": "Partial 71-second experiment. Strong blur and uncertain geometry near moving people and segment ends. Masks also exclude some static human details. Unseen surfaces are not reconstructed; no metric scale or forensic accuracy is established."
+  }
+}
