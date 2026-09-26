@@ -7,15 +7,24 @@ const $ = (id) => document.getElementById(id);
 let viewer;
 let loadingTimer;
 let ready = false;
-const expanded = new URLSearchParams(location.search).get('scene') === 'recovery-71s';
-const descriptionUrl = expanded ? './experiments/recovery-71s.json' : './scene.json';
+const experiments = {
+  'recovery-71s': { duration: 71, interval: '03:06–04:17', title: 'Experimental expanded preview' },
+  'recovery-48s': { duration: 48, interval: '02:17–03:05', title: 'Experimental earlier section' }
+};
+const requestedScene = new URLSearchParams(location.search).get('scene');
+const expanded = Object.hasOwn(experiments, requestedScene) ? experiments[requestedScene] : null;
+const descriptionUrl = expanded ? `./experiments/${requestedScene}.json` : './scene.json';
 if (expanded) {
-  document.title = 'Sepehr Baba · Experimental 71-second scene';
-  document.querySelector('.coverage').textContent = 'Experimental · 03:06–04:17';
-  $('scope-title').textContent = 'Experimental expanded preview';
-  $('scope-description').textContent = 'Recovered views span about 71 seconds of the 12-minute recording. This candidate has missing frames, blur and uncertain geometry; it is not the full recording.';
+  document.title = `Sepehr Baba · Experimental ${expanded.duration}-second scene`;
+  document.querySelector('.coverage').textContent = `Experimental · ${expanded.interval}`;
+  $('scope-title').textContent = expanded.title;
+  $('scope-description').textContent = `Recovered views span about ${expanded.duration} seconds of the 12-minute recording. This separate scene has missing frames, blur and uncertain geometry. The scenes have not been joined.`;
   $('alternate-scene').href = './';
   $('alternate-scene').textContent = 'Open the accepted 18-second pilot ↗';
+}
+if (requestedScene === 'recovery-48s') {
+  $('other-section').href = './?scene=recovery-71s';
+  $('other-section').textContent = 'Later section · 03:06–04:17 (71 seconds) ↗';
 }
 
 function fail(message) {

@@ -80,30 +80,33 @@ test('missing scene description shows a recoverable error',async({page})=>{
   await expect(page.getByRole('button',{name:'Try again'})).toBeVisible();
 });
 
-for (const mobile of [false,true]) {
-  test(`expanded scene renders and moves on ${mobile?'mobile':'desktop'}`,async({browser})=>{
+for (const section of ['71s','48s']) for (const mobile of [false,true]) {
+  test(`${section} scene renders and moves on ${mobile?'mobile':'desktop'}`,async({browser})=>{
     const context=await browser.newContext({baseURL:process.env.SITE_URL || 'http://127.0.0.1:8088',
       viewport:mobile?{width:390,height:844}:{width:1280,height:720},isMobile:mobile,hasTouch:mobile});
     const page=await context.newPage();
     const errors=[];page.on('pageerror',e=>errors.push(e.message));
-    await page.goto('./?scene=recovery-71s&webgl');
-    await expect(page.getByText('Experimental expanded preview',{exact:true})).toBeVisible();
+    await page.goto(`./?scene=recovery-${section}&webgl`);
+    await expect(page.getByText(section==='71s'?'Experimental expanded preview':'Experimental earlier section',{exact:true})).toBeVisible();
     await expect(page.locator('#alternate-scene')).toHaveAttribute('href','./');
+    await expect(page.locator('#other-section')).toHaveAttribute('href',`./?scene=recovery-${section==='71s'?'48s':'71s'}`);
+    await page.locator('#other-section').scrollIntoViewIfNeeded();
+    await expect(page.locator('#other-section')).toBeInViewport();
     await page.getByRole('button',{name:'Enter the 3D scene'}).click();
     await expect(page.locator('body')).toHaveAttribute('data-scene-loaded','true',{timeout:60000});
     const position=()=>page.evaluate(()=>window.sceneViewer.app.root.findComponent('camera').entity.getPosition().toArray());
-    const authored=await page.evaluate(async()=> (await (await fetch('./experiments/recovery-71s.json')).json()).camera.position);
+    const authored=await page.evaluate(async section=> (await (await fetch(`./experiments/recovery-${section}.json`)).json()).camera.position,section);
     await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-authored[i])),{timeout:20000}).toBeLessThan(.05);
     await visibleScene(page);
-    const up=await page.evaluate(async()=>{
-      const scene=await (await fetch('./experiments/recovery-71s.json')).json();
+    const up=await page.evaluate(async section=>{
+      const scene=await (await fetch(`./experiments/recovery-${section}.json`)).json();
       const n=scene.orientation.floor_normal_before;
       const raw=[-n[0],-n[1],n[2]]; // Undo the viewer's standard COLMAP axis conversion.
       const m=window.sceneViewer.app.root.findComponent('gsplat').entity.getWorldTransform().data;
       return [0,1,2].map(i=>m[i]*raw[0]+m[i+4]*raw[1]+m[i+8]*raw[2]);
-    });
+    },section);
     expect(Math.hypot(up[0],up[1]-1,up[2]),'fitted floor must be horizontal in the rendered world').toBeLessThan(1e-5);
-    await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}.png`});
+    await page.screenshot({path:`test-results/${section}-${mobile?'mobile':'desktop'}.png`});
     if(mobile){
       const client=await context.newCDPSession(page);
       await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:180,y:380}]});
@@ -116,7 +119,7 @@ for (const mobile of [false,true]) {
     await page.waitForTimeout(1200);
     expect(Math.hypot(...(await position()).map((v,i)=>v-authored[i]))).toBeGreaterThan(.01);
     await visibleScene(page);
-    await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}-orbit.png`});
+    await page.screenshot({path:`test-results/${section}-${mobile?'mobile':'desktop'}-orbit.png`});
     await page.getByRole('button',{name:'Move freely',exact:true}).click();
     const before=await position();
     const forward=page.getByRole('button',{name:'Move forward',exact:true});
@@ -130,7 +133,7 @@ for (const mobile of [false,true]) {
       await page.keyboard.down('w');await page.waitForTimeout(700);await page.keyboard.up('w');
     }
     expect(await position()).not.toEqual(before);
-    await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}-moved.png`});
+    await page.screenshot({path:`test-results/${section}-${mobile?'mobile':'desktop'}-moved.png`});
     if(!mobile){
       await page.keyboard.press('Escape');
       await expect.poll(()=>page.evaluate(()=>document.pointerLockElement===null)).toBe(true);

@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch expanded scene asset
-        run: git lfs pull --include="public/assets/recovery-71s.ply" --exclude=""
+      - name: Fetch reconstructed scene assets
+        run: git lfs pull --include="public/assets/recovery-71s.ply,public/assets/recovery-48s.ply" --exclude=""
       - uses: actions/setup-node@v4
         with:
           node-version: '24'

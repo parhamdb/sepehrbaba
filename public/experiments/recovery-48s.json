@@ -1,0 +1,156 @@
+{
+  "camera": {
+    "position": [
+      2.99985564743524,
+      0.22667834605743387,
+      -0.9743287848224051
+    ],
+    "target": [
+      1.901787293294433,
+      -0.6180744688735204,
+      0.5559142825390428
+    ],
+    "fov": 62.265409551845586
+  },
+  "entry_reference": "frame_002261.jpg",
+  "orientation": {
+    "rotation_xyzw": [
+      0.1442998050376822,
+      0.0,
+      0.05631258445361748,
+      0.9879303918284128
+    ],
+    "floor_normal_before": [
+      0.1112658272482658,
+      0.9520129181964821,
+      -0.28511632586328184
+    ],
+    "floor_center_before": [
+      2.2754339975919797,
+      -0.8994971561852196,
+      0.05232812379269591
+    ],
+    "orbit_distance_scene_units": 2.064220258089491,
+    "degrees": 17.821817623080847,
+    "selected_points": 2067,
+    "inlier_points": 1505,
+    "region_counts": {
+      "frame_002261.jpg": 1838,
+      "frame_002368.jpg": 229
+    },
+    "floor_rms_scene_units": 0.006950841626438317,
+    "method": "RANSAC and SVD fit to manually selected floor pixels; display alignment only",
+    "source_camera": {
+      "position": [
+        2.9902168869167154,
+        -0.3957777498265746,
+        -0.9496296651296552
+      ],
+      "target": [
+        2.4281513337569995,
+        -0.5148255242545221,
+        -0.13114940186424529
+      ],
+      "fov": 62.265409551845586
+    },
+    "selection": {
+      "threshold_scene_units": 0.015,
+      "regions": [
+        {
+          "image": "frame_002261.jpg",
+          "reference_size": [
+            1061,
+            1887
+          ],
+          "polygon_pixels": [
+            [
+              740,
+              800
+            ],
+            [
+              1040,
+              750
+            ],
+            [
+              1040,
+              1850
+            ],
+            [
+              100,
+              1850
+            ],
+            [
+              100,
+              1520
+            ],
+            [
+              700,
+              1200
+            ]
+          ]
+        },
+        {
+          "image": "frame_002368.jpg",
+          "reference_size": [
+            1061,
+            1887
+          ],
+          "polygon_pixels": [
+            [
+              460,
+              1040
+            ],
+            [
+              850,
+              1040
+            ],
+            [
+              1030,
+              1100
+            ],
+            [
+              1030,
+              1610
+            ],
+            [
+              150,
+              1610
+            ],
+            [
+              150,
+              1300
+            ],
+            [
+              380,
+              1260
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "asset": "./assets/recovery-48s.ply",
+  "asset_sha256": "93a813f158351d1e328479f3440a3097b02497176504bb4397efafa25f5a69e6",
+  "asset_bytes": 118001551,
+  "coverage": {
+    "start_seconds": 136.7,
+    "end_seconds": 184.9,
+    "source_duration_seconds": 737.301333,
+    "status": "experimental-partial",
+    "registered_frames": 689,
+    "selected_frames": 725,
+    "source_frames": 12793
+  },
+  "quality": {
+    "gaussians": 500000,
+    "training_steps": 8000,
+    "train_views": 620,
+    "held_out_views": 69,
+    "max_image_edge": 1920,
+    "mean_reprojection_px": 1.1208899113116064,
+    "p95_reprojection_px": 2.418750165755467,
+    "behind_camera_observations": 0,
+    "static_region_psnr_db": 22.61283383682558,
+    "limitations": "Separate partial 48-second experiment. Blur, holes and uncertain geometry around moving people and occluded areas. Masks miss some blurred clothing and exclude some static human details. Scenes are not joined; unseen surfaces, metric scale and forensic accuracy are not established."
+  }
+}

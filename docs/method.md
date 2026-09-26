@@ -2,8 +2,10 @@
 
 This is the reproducible method for the [preserved source recording](../evidence/README.md),
 not a claim that the entire recording or all visible people have been reconstructed.
-The current public artifact covers 199–217 seconds. The
-[180–240 second expansion](expansion-60s.md) is a separate candidate.
+The default pilot covers 199–217 seconds. Separate public experiments cover
+[136.7–184.9 seconds](recovery-48s.md) and [186–257 seconds](recovery-71s.md).
+They have independent coordinates; they are not one joined model. The earlier
+[180–240 second expansion](expansion-60s.md) retains its separate experiment record.
 
 ## Pipeline and committed tools
 
@@ -12,12 +14,15 @@ The current public artifact covers 199–217 seconds. The
 | Acquire and verify source | Git LFS, `evidence/source/SHA256SUMS` | Exact acquired MP4, retained audio, metadata and provenance |
 | Preserve all frames and recover bootstrap cameras | `scripts/full_video.py` | Native-size JPEGs, original presentation timestamps, features/matches, separate camera components |
 | Expand/refine a bounded connected component | `scripts/repair_scene.py` | Copied database, bundle-adjusted cameras, measured geometry gate, undistorted dataset |
+| Reuse a completed refined component | `scripts/prepare_component.py` | Explicit interval, source hashes, unchanged geometry gate and undistorted dataset |
+| Audit possible joins | `scripts/audit_bridge.py` | Shared camera and verified cross-model match counts; no automatic merge |
 | Exclude detected people during environment fitting | `scripts/mask_people.py` | Inspected masks; also excludes some stationary people |
 | Train and validate an export | `scripts/video_to_splat.py --stage train` | Brush Gaussian PLY, run fingerprint, held-out renders |
 | Inspect native Brush evaluation | `scripts/inspect_brush.py` | Pixel-pooled static-region PSNR and source/render contact sheet |
 | Prepare matched browser evaluation | `scripts/prepare_references.py` | Portable camera poses, explicit split, resized RGB/masks and manifest |
 | Render the PLY in the browser engine | `scripts/render_evaluation.mjs` | PNGs with a capture manifest; no publication |
 | Measure browser output | `scripts/evaluate_renders.py` | Per-view static PSNR; not a geometry/visual acceptance test |
+| Level the display from selected ground pixels | `scripts/level_scene.py` | Recorded floor fit and camera/model display rotation; unchanged raw PLY |
 | Compare cleanup hypotheses | `clean_static_geometry.py`, `prune_splat_candidates.py`, `score_splat_contributions.py` | Separate reversible candidates; see linked failed experiments |
 | Publish an accepted scene | `scripts/build.mjs`, `.github/workflows/pages.yml` | GitHub Pages viewer, model and coverage metadata |
 

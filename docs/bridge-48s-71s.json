@@ -1,0 +1,42 @@
+{
+  "model_a_cameras": 689,
+  "model_b_cameras": 1041,
+  "shared_registered_cameras": 0,
+  "model_a_seconds": [
+    136.777533,
+    184.795589
+  ],
+  "model_b_seconds": [
+    186.2622,
+    256.992944
+  ],
+  "verified_cross_pairs": 2,
+  "cross_pairs_at_least_100_inliers": 0,
+  "strongest_pairs": [
+    {
+      "images": [
+        "frame_002574.jpg",
+        "frame_002830.jpg"
+      ],
+      "seconds": [
+        170.6658,
+        187.663189
+      ],
+      "inliers": 16,
+      "configuration": 3
+    },
+    {
+      "images": [
+        "frame_002511.jpg",
+        "frame_003023.jpg"
+      ],
+      "seconds": [
+        166.4651,
+        200.533878
+      ],
+      "inliers": 15,
+      "configuration": 3
+    }
+  ],
+  "interpretation": "Diagnostic counts only. Neither pair counts nor temporal proximity prove a valid merge."
+}

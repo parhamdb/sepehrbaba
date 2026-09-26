@@ -70,10 +70,12 @@ this recording's environment as the evidence supports, accessible in a web
 browser and traceable back to the video. We publish the source recording,
 scripts, methods, and experiments so others can improve the reconstruction
 and scrutinize its accuracy. **The full reconstruction is still a goal; the
-default scene covers an 18-second pilot; a separate experimental preview spans
-about 71 seconds (03:06–04:17).** Both are partial reconstructions.
+default scene covers an 18-second pilot; separate experimental previews span
+about 48 seconds (02:17–03:05) and 71 seconds (03:06–04:17).** The scenes are
+partial reconstructions and have not been joined into a continuous environment.
 
 **[Open the 3D pilot](https://parhamdb.github.io/sepehrbaba/)** ·
+**[Explore the earlier 48-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-48s)** ·
 **[Explore the experimental 71-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-71s)** ·
 **[Preserved source and checksum](evidence/README.md)** ·
 **[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
@@ -86,6 +88,11 @@ The expanded preview retains 1,041 camera views and 500,000 splats. Its central
 views show recognizable detail, but strong blur and uncertain geometry remain
 around people and the segment ends. Semantic masks also exclude some static
 human details. [Recovery method, measured results and limitations](docs/recovery-71s.md).
+
+The earlier preview retains 689 cameras from 725 frames in its interval. Both
+expanded scenes have independently fitted ground alignment. A coat blocks most
+of the view between them, and the current camera matches do not support a merge.
+[Earlier section, reproducible commands and bridge findings](docs/recovery-48s.md).
 
 ## References
 
@@ -173,7 +180,7 @@ with the [documented method](docs/method.md), the
 
 **[Open the 3D scene](https://parhamdb.github.io/sepehrbaba/)**
 
-**Current scene: an 18-second pilot, approximately 03:19–03:37 of a 12:17 recording.**
+**Default scene: an 18-second pilot, approximately 03:19–03:37 of a 12:17 recording.**
 It contains 226,293 Gaussians recovered from 252 of the interval's 271 native
 frames. The floor and stationary objects remained recognizable in inspected
 held-out views, a small orbit, and a 0.27-unit sideways camera movement. Blur,
