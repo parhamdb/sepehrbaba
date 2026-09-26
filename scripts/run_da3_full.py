@@ -54,12 +54,18 @@ def cached_prediction(path,receipt,identity):
     return data.get('identity')==identity and data.get('sha256')==digest(path)
 
 
+def image_manifest(images,names):
+    rows=[dict(name=name,sha256=digest(images/name)) for name in sorted(names)]
+    identity=hashlib.sha256(json.dumps(rows,sort_keys=True).encode()).hexdigest()
+    return rows,identity
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for key in ('checkout','weights','salad','images','frames','video','output'):p.add_argument('--'+key,type=Path,required=True)
     p.add_argument('--resume',action='store_true');p.add_argument('--min-free-gib',type=float,default=24.)
     p.add_argument('--expected-video-sha256',required=True);p.add_argument('--expected-frame-count',type=int,default=12793)
-    a=p.parse_args();frames=json.loads(a.frames.read_text());names=[x.name for x in a.images.glob('*.jpg')]
+    a=p.parse_args();frames=json.loads(a.frames.read_text());names=[x.name for pattern in ('*.jpg','*.png') for x in a.images.glob(pattern)]
     validate_frames(frames,names)
     if len(frames)!=a.expected_frame_count:raise ValueError('Unexpected full-recording frame count')
     if a.output.exists() and not a.resume:raise FileExistsError(a.output)
@@ -76,7 +82,8 @@ def main():
                covered_source_frames=0,completed=False,started=time.time(),last_update=time.time())
     save(a.output/'progress.json',state)
     try:
-        freeze=dict(source_sha256=digest(a.video),frames_sha256=digest(a.frames),adapter_sha256=digest(__file__),
+        image_rows,image_identity=image_manifest(a.images,names)
+        freeze=dict(image_manifest_sha256=image_identity,source_sha256=digest(a.video),frames_sha256=digest(a.frames),adapter_sha256=digest(__file__),
             upstream_revision=subprocess.check_output(['git','-C',str(a.checkout),'rev-parse','HEAD'],text=True).strip(),
             upstream_diff_sha256=hashlib.sha256(subprocess.check_output(['git','-C',str(a.checkout),'diff'])).hexdigest(),
             weights_sha256=digest(a.weights/'model.safetensors'),model_config_sha256=digest(a.weights/'config.json'),
@@ -86,6 +93,7 @@ def main():
         frozen=a.output/'inputs.json'
         if frozen.exists() and json.loads(frozen.read_text())!=freeze:raise ValueError('Resume source/config changed')
         save(frozen,freeze)
+        save(a.output/'image-hashes.json',image_rows)
         (a.output/'runtime-config.yaml').write_text(yaml.safe_dump(config))
     except Exception as error:
         state.update(status='failed',failure_type=type(error).__name__,last_update=time.time())

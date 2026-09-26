@@ -37,6 +37,21 @@ class FullDA3Tests(unittest.TestCase):
         C[0,0,0]=2
         with self.assertRaises(ValueError):run.export_poses(frames,C,K,[1080,1920],[280,504])
 
+    def test_actual_image_changes_invalidate_identity(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d);(p/'a.jpg').write_bytes(b'original pixels')
+            _,first=run.image_manifest(p,['a.jpg'])
+            (p/'a.jpg').write_bytes(b'replaced pixels')
+            _,second=run.image_manifest(p,['a.jpg'])
+            self.assertNotEqual(first,second)
+        with self.assertRaises(ValueError):
+            run.validate_frames([dict(name='a.jpg',timestamp=0)],['a.jpg','extra.png'])
+
+    def test_empty_image_observations_are_unsupported_not_fatal(self):
+        a,b=pose(0),pose(1);a['dist']=[.1,0,0,0];b['dist']=[.1,0,0,0]
+        score=compare.image_metrics(a,b,np.empty((0,2)),np.empty((0,2)))
+        self.assertIsNone(score['median_px'])
+
     def test_temporal_holdout_does_not_fit_away_later_drift(self):
         fs=[dict(name=str(i),timestamp=i*.1) for i in range(30)]
         ref={f['name']:pose(i*.1) for i,f in enumerate(fs)};src={f['name']:pose(i*.1+(2 if i>=6 else 0)) for i,f in enumerate(fs)}

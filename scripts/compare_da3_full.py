@@ -54,6 +54,14 @@ def frozen_baseline(snapshot,comparison,native):
     return baseline,snap['frames']
 
 
+def image_metrics(first,second,observed_first,observed_second):
+    if not len(observed_first):return dict(median_px=None,under_4px_fraction=None)
+    error,_=epipolar(first,second,observed_first,observed_second)
+    error=error[np.isfinite(error)] if error is not None else []
+    return dict(median_px=float(np.median(error)) if len(error) else None,
+                under_4px_fraction=float(np.mean(error<4)) if len(error) else None)
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('poses','comparison','snapshot','native','output'):p.add_argument('--'+k,type=Path,required=True)
@@ -78,10 +86,7 @@ def main():
         if key in seen:continue
         seen.add(key);x,y=track(a.native/'images',first,second);metrics={}
         for name,poses in [('colmap',baseline),('da3',full)]:
-            error,_=epipolar(poses[first['name']],poses[second['name']],x,y)
-            error=error[np.isfinite(error)] if error is not None else []
-            metrics[name]=dict(median_px=float(np.median(error)) if len(error) else None,
-                under_4px_fraction=float(np.mean(error<4)) if len(error) else None)
+            metrics[name]=image_metrics(poses[first['name']],poses[second['name']],x,y)
         pairs.append(dict(first=first['name'],second=second['name'],timestamp=first['timestamp'],component=key[1],corners=len(x),metrics=metrics))
     report=dict(schema=1,source_sha256=data['source_sha256'],poses_sha256=sha(a.poses),comparison_sha256=sha(a.comparison),
         full_frames=len(frames),da3_frames=len(full),colmap_frames=len(baseline),colmap_components=components,vggt_windows=vggt,
