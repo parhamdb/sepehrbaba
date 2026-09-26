@@ -17,7 +17,7 @@ try{
    const start=range?Number(range[1]):0,end=range&&range[2]?Number(range[2]):buffer.length-1;
    try{await route.fulfill({status:range?206:200,contentType:'video/mp4',
     headers:{'accept-ranges':'bytes',...(range?{'content-range':`bytes ${start}-${end}/${buffer.length}`}:{})},body:buffer.subarray(start,end+1)});
-   }catch(error){if(!page.isClosed())throw error} 
+   }catch(error){if(!page.isClosed())throw error}
   });
   await page.goto(base+'#loss-008');await page.waitForFunction(()=>document.querySelectorAll('#clip option').length===19&&!document.getElementById('clip').disabled);
   await page.waitForFunction(()=>document.getElementById('video').readyState>=2,{},{timeout:45000});
