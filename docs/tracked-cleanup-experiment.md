@@ -31,8 +31,13 @@ alignment, generative completion or replacement of the vendor PyTorch stack.
 
 ## Selected method and fallback
 
-SAM 3.1 checkpoint requests returned HTTP 401; no configured Hugging Face token
-was present. That access prerequisite is blocked, not a model failure. We use
+The initial checkpoint probe targeted SAM 3, not SAM 3.1, and returned HTTP 401;
+no configured Hugging Face token was present. SAM 3.1 is also gated. On September
+26 the project owner reported approval for SAM 3.1. A subsequent request to
+`facebook/sam3.1/resolve/main/config.json` still returned HTTP 401 on the worker,
+where no Hugging Face credential was configured. Account approval is reported;
+worker authentication and SAM 3.1 runtime validation remain outstanding. This
+is an access prerequisite, not a model failure. This experiment used
 the available [official SAM 2.1 tracker](https://github.com/facebookresearch/sam2)
 at revision `2b90b9f5ceec907a1c18123530e92e794ad901a4` with Hiera-small weights,
 SHA-256 `6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38`.
@@ -108,7 +113,7 @@ runs also leave optimizer randomness as a limitation.
 
 ## Results ledger
 
-SAM 3.1 access is blocked; SAM 2.1 is the selected runnable alternative.
+At experiment time SAM 3.1 access was unavailable; SAM 2.1 was the runnable alternative.
 Attempt 1 tracked both objects over 368 images and passed inventory/dimension
 checks, but missed the foreground visitor at the beginning. Its
 [overlay](../evidence/tracked-cleanup/attempt1-mask-review.jpg), prompts and hash
@@ -216,7 +221,8 @@ unmasked visitor merely because it is transient. Complete that mask review
 before a separately budgeted reconstruction comparison; do not increase pruning
 thresholds to hide the symptom. This pass used its two-candidate training budget.
 
-SAM 3.1 remains access-gated. T-3DGS/DeSplat/RobustSplat, real FlashSplat labeling,
+SAM 3.1 account approval is now reported, with worker authentication still needed.
+T-3DGS/DeSplat/RobustSplat, real FlashSplat labeling,
 depth/visibility cleanup, new registration and completion tools remain **not
 run** here; their ranking and sources stay in the research document. No synthetic
 completion, fabricated scene connection or public-viewer change was made.
