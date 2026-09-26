@@ -112,6 +112,23 @@ def summarize(rows,methods):
         median_pair_under_4px_fraction=float(np.median([r['metrics'][m]['under_4px_fraction'] for r in valid])) if valid else None) for m in methods})
 
 
+def post_gap_agreement(case,alignments,component):
+    methods=case['methods'];available=[m for m in METHODS if methods[m]]
+    # Every participating solver is scored on exactly the same post-gap frames.
+    post=[f for f in case['frames'] if f['timestamp']>=case['gap_end']
+          and all(f['name'] in methods[m] for m in available)
+          and methods['colmap'][f['name']]['component']==component]
+    agreement={}
+    for m in ('vggt','da3'):
+        fit=alignments[m]
+        if fit and post:
+            errors=[np.linalg.norm(aligned_center(methods[m][f['name']],fit)-methods['colmap'][f['name']]['center'])/fit['reference_span']*100 for f in post]
+            angles=[rotation_angle(np.asarray(methods['colmap'][f['name']]['R'])@np.asarray(fit['rotation'])@np.asarray(methods[m][f['name']]['R']).T) for f in post]
+            agreement[m]=dict(post_frames=len(post),frame_names=[f['name'] for f in post],median_position_percent_pre_span=float(np.median(errors)),median_orientation_deg=float(np.median(angles)))
+        else:agreement[m]=dict(post_frames=0,reason='No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors')
+    return agreement
+
+
 def analyze(case,images):
     methods=case['methods'];rows=[];cache={}
     # Shared triplets where possible; for the failed VGGT trial evaluate the other two.
@@ -148,17 +165,11 @@ def analyze(case,images):
     components=Counter(methods['colmap'][f['name']]['component'] for f in anchors)
     component=components.most_common(1)[0][0] if components else None
     anchors=[f for f in anchors if methods['colmap'][f['name']]['component']==component]
-    alignments={};agreement={}
+    alignments={}
     for m in METHODS:
         if m=='colmap':alignments[m]=dict(rotation=np.eye(3).tolist(),scale=1.,offset=[0.,0.,0.],reference_span=1.)
         else:alignments[m]=align_cameras([methods[m][f['name']] for f in anchors],[methods['colmap'][f['name']] for f in anchors]) if methods[m] else None
-        fit=alignments[m]
-        post=[f for f in case['frames'] if f['timestamp']>=case['gap_end'] and f['name'] in methods[m] and f['name'] in methods['colmap'] and methods['colmap'][f['name']]['component']==component]
-        if m!='colmap' and fit and post:
-            errors=[np.linalg.norm(aligned_center(methods[m][f['name']],fit)-methods['colmap'][f['name']]['center'])/fit['reference_span']*100 for f in post]
-            angles=[rotation_angle(np.asarray(methods['colmap'][f['name']]['R'])@np.asarray(fit['rotation'])@np.asarray(methods[m][f['name']]['R']).T) for f in post]
-            agreement[m]=dict(post_frames=len(post),median_position_percent_pre_span=float(np.median(errors)),median_orientation_deg=float(np.median(angles)))
-        elif m!='colmap':agreement[m]=dict(post_frames=0,reason='No post-gap cameras in the same reference component, or insufficient pre-gap anchors')
+    agreement=post_gap_agreement(case,alignments,component)
     coverage={m:dict(total=len(methods[m]),before=sum(f['timestamp']<case['loss_time'] and f['name'] in methods[m] for f in case['frames']),
         after_onset=sum(f['timestamp']>=case['loss_time'] and f['name'] in methods[m] for f in case['frames']),
         during_baseline_gap=sum(case['loss_time']<=f['timestamp']<case['gap_end'] and f['name'] in methods[m] for f in case['frames']),

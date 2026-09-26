@@ -59,5 +59,14 @@ class CameraComparisonTests(unittest.TestCase):
               dict(corners=25,metrics={'colmap':dict(median_px=2),'da3':dict(median_px=None)})]
         self.assertEqual(m.summarize(rows,['colmap','da3'])['supported_pairs'],0)
 
+    def test_post_gap_methods_use_identical_frames(self):
+        poses={str(i):pose([i,0,0]) for i in range(3)}
+        case=dict(gap_end=0,frames=[dict(name=str(i),timestamp=i) for i in range(3)],
+                  methods=dict(colmap=poses,da3=poses,vggt={'1':poses['1']}))
+        fit=dict(rotation=np.eye(3),scale=1,offset=[0,0,0],reference_span=1)
+        result=m.post_gap_agreement(case,dict(vggt=fit,da3=fit),'one')
+        self.assertEqual(result['da3']['frame_names'],['1'])
+        self.assertEqual(result['vggt']['frame_names'],['1'])
+
 
 if __name__=='__main__':unittest.main()
