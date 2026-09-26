@@ -120,5 +120,12 @@ again on the frozen renderer; independent code review found no high/medium
 defect. The selected visual observations above are diagnostic findings, not
 certification of the whole camera trajectory.
 
+[Final verification ledger](../evidence/camera-review/validation.json): **5 passed,
+0 failed, 0 blocked, 0 untested**. The frozen full and preview videos were decoded
+independently and every frame timestamp checked again. Full duration is
+737.301333 seconds; the encoded audio payload hash exactly matches the original.
+The full public download at artifact commit `d3a0edf` matches the report SHA-256.
+These checks validate the diagnostic's delivery and timing, not scene geometry.
+
 Method references: [COLMAP camera and image conventions](https://colmap.github.io/format.html#text-format)
 and [PyAV timestamps and time bases](https://pyav.org/docs/stable/api/time.html).

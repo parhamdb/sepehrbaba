@@ -1,0 +1,45 @@
+{
+  "renderer_commit": "081d785",
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "checks": [
+    {
+      "id": "projection-controls",
+      "status": "passed",
+      "evidence": "3 numeric/synthetic tests passed on frozen script; wrong camera detected"
+    },
+    {
+      "id": "preview",
+      "status": "passed",
+      "evidence": "396 frames decoded; timestamps and SHA-256 matched; sampled visuals inspected"
+    },
+    {
+      "id": "full-media",
+      "status": "passed",
+      "evidence": "12793 frames decoded; timestamps, component/gap inventory and SHA-256 matched; original audio payload hash matched"
+    },
+    {
+      "id": "visual-review",
+      "status": "passed",
+      "evidence": "Tracked, no-pose, blur and component-boundary stills inspected; this does not certify camera accuracy"
+    },
+    {
+      "id": "public-download",
+      "status": "passed",
+      "evidence": "Full immutable public download matches local report SHA-256; preview download also matched",
+      "url": "https://media.githubusercontent.com/media/parhamdb/sepehrbaba/d3a0edf/evidence/camera-review/full.mp4",
+      "bytes": 439088760,
+      "sha256": "510d41e70a30aaf3e64cfb63f0dfdd59bf23f0bc0f2803d32632535d6a6ee1c5"
+    }
+  ],
+  "audio_payload_sha256": "d10545736cbe689d2d85bb2e27de33ce9e215d28c766f778d8972fd1c75877a7",
+  "full_bytes": 439088760,
+  "duration_seconds": 737.301333,
+  "artifact_commit": "d3a0edf",
+  "verification_date": "2026-09-26",
+  "source_unchanged_after_renderer_freeze": true
+}
