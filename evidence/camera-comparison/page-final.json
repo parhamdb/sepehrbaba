@@ -1,0 +1,30 @@
+{
+  "receipts": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "case_options": 19,
+      "coverage_rows_checked": 57,
+      "playback": "passed",
+      "seeking": "passed",
+      "missing_pose_semantics": "passed",
+      "layout": "passed",
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "case_options": 19,
+      "coverage_rows_checked": 57,
+      "playback": "passed",
+      "seeking": "passed",
+      "missing_pose_semantics": "passed",
+      "layout": "passed",
+      "page_errors": []
+    }
+  ]
+}

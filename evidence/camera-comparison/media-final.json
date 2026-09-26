@@ -1,0 +1,118 @@
+{
+  "videos": [
+    {
+      "id": "loss-001",
+      "status": "passed",
+      "bytes": 15772923,
+      "sha256": "3892a4acc7d0b8c37e89d360f90213b7710c1bfaf778f88ee6810e6af25ccc2f"
+    },
+    {
+      "id": "loss-002",
+      "status": "passed",
+      "bytes": 17783961,
+      "sha256": "ba845921b6d89ce04fd76982c44947d093e1e7e8e0e935c13f56ac0f66531e94"
+    },
+    {
+      "id": "loss-003",
+      "status": "passed",
+      "bytes": 19398342,
+      "sha256": "451136925a4e15d212ff27ff51d7af355925c171f4ee880f87ae59af9be46093"
+    },
+    {
+      "id": "loss-004",
+      "status": "passed",
+      "bytes": 14958516,
+      "sha256": "e46d55289cfca932a4218587e5f86d04f45716c3100ab932064107a75cb22002"
+    },
+    {
+      "id": "loss-005",
+      "status": "passed",
+      "bytes": 14640874,
+      "sha256": "5c963a7114cd36035e8c491955e2b2ea833cef8b4e45355e1021034baeca77bd"
+    },
+    {
+      "id": "loss-006",
+      "status": "passed",
+      "bytes": 14013327,
+      "sha256": "c0ddec8063c6dc77617eef48b3bf5415c608124c50c59c0a6a76fe4dd8a9b855"
+    },
+    {
+      "id": "loss-007",
+      "status": "passed",
+      "bytes": 16927057,
+      "sha256": "804eb924bc9a33bb1b04501b20d64a3d757ac707298dc3435c3b7b7603ffc3e0"
+    },
+    {
+      "id": "loss-008",
+      "status": "passed",
+      "bytes": 13582596,
+      "sha256": "75661896c699a6538355b4761229f4930d319ef263909bbef67c27f3fcbc06bf"
+    },
+    {
+      "id": "loss-009",
+      "status": "passed",
+      "bytes": 13443280,
+      "sha256": "d282ba4b7ab4f85876b88539a14392d4476dde60ee8e8418b0812c6d0da1c98a"
+    },
+    {
+      "id": "loss-010",
+      "status": "passed",
+      "bytes": 12302168,
+      "sha256": "9115355d4cc75963965679594c8abf4f0c3b5012a53895c0ae44d948734f61cb"
+    },
+    {
+      "id": "loss-011",
+      "status": "passed",
+      "bytes": 12473872,
+      "sha256": "5a26e64a8820dc68248897b56da508dd5fd1ac5085eabf7ffe9f906ade3c9601"
+    },
+    {
+      "id": "loss-012",
+      "status": "passed",
+      "bytes": 11011367,
+      "sha256": "0ac13c0bb4c3977bba07d3724d653d7ecb2d85deac08044c57123915359cedb5"
+    },
+    {
+      "id": "loss-013",
+      "status": "passed",
+      "bytes": 12443819,
+      "sha256": "c6d5e28b5bf8a3b465c5ccf6c6a3c1a3576d955f14c4a939ce74b4d1ef077cb1"
+    },
+    {
+      "id": "loss-014",
+      "status": "passed",
+      "bytes": 13079218,
+      "sha256": "22221e0b9afa40766e59d7203a3c87a95c2e4325070db91fbb183932586ec60d"
+    },
+    {
+      "id": "loss-015",
+      "status": "passed",
+      "bytes": 11989379,
+      "sha256": "1a20bc1f9e9e27ff71691a361c20d9e69a9df6498f35df4d81d7f3c4cf508240"
+    },
+    {
+      "id": "loss-016",
+      "status": "passed",
+      "bytes": 12773958,
+      "sha256": "56179fc61382e246488f17737287eb36b054d0bd82abd2b69ecf84ec34922c5b"
+    },
+    {
+      "id": "loss-017",
+      "status": "passed",
+      "bytes": 11163599,
+      "sha256": "f65adcaff2a0bd8d4d3c57bdf7034dda1580d1f1f0b9ba6abbf53a7ed6ca0943"
+    },
+    {
+      "id": "loss-018",
+      "status": "passed",
+      "bytes": 12291037,
+      "sha256": "f3842087982302c7fc64f3a96101b6c94d168a5a8607e1bc390e5274dee9914c"
+    },
+    {
+      "id": "loss-019",
+      "status": "passed",
+      "bytes": 8790862,
+      "sha256": "2d831c636ce4ae4be081a38cc2555464f1dfdb53f186409df37109c559aaad0f"
+    }
+  ]
+}

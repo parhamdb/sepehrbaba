@@ -1,13 +1,13 @@
 {
   "scope": "Three-method comparison delivery only; geometric recovery acceptance is separate",
-  "status": "awaiting live final validation",
+  "status": "complete for comparison delivery; camera recovery remains unverified",
   "budget": "one discovery pass, focused fixes, one final pass",
   "checks": [
     {
-      "id": "geometry",
+      "id": "synthetic-geometry-math",
       "variants": 7,
       "status": "passed",
-      "evidence": "tests/test_camera_comparison.py; seven focused checks passed"
+      "evidence": "Seven synthetic geometry tests passed on the frozen comparison scripts; these do not certify recovered cameras"
     },
     {
       "id": "data",
@@ -19,7 +19,7 @@
       "id": "videos",
       "variants": 19,
       "status": "passed",
-      "evidence": "render-receipts.json and artifacts.json; 6504 frame appearances"
+      "evidence": "video-final.json; all 19 frozen videos decoded, frame counts/timestamps and SHA256 checked"
     },
     {
       "id": "representative-visual-review",
@@ -31,20 +31,37 @@
       "id": "browser",
       "variants": 2,
       "status": "passed",
-      "evidence": "page-discovery.json; desktop and mobile"
+      "evidence": "page-final.json; live desktop/mobile playback, seeking, 19 selections and status labels"
     },
     {
       "id": "publication",
       "variants": 1,
-      "status": "untested",
-      "evidence": "awaiting deployment and live media check"
+      "status": "passed",
+      "evidence": "media-final.json; 19 public URLs return exact expected sizes and SHA256 ETags; GitHub Pages build/deploy successful"
     }
   ],
   "counts": {
-    "passed": 30,
+    "passed": 31,
     "failed": 0,
     "blocked": 0,
-    "untested": 1
+    "untested": 0
   },
-  "final_regression": null
+  "final_regression": {
+    "source_revision": "58ec93affa9f64f6aa49fec3c5913b978d0c8c9d",
+    "deployed_url": "https://parhamdb.github.io/sepehrbaba/camera-comparison.html",
+    "deployment_run": "https://github.com/parhamdb/sepehrbaba/actions/runs/36237362966",
+    "data_evidence": "data-check.json; frozen files unchanged",
+    "geometry_tests": 7,
+    "video_checks": 19,
+    "browser_variants": 2,
+    "script_sha256": {
+      "prepare_camera_comparison.py": "c3e84c8f6d6f696ef12bc062cd964da67c6471608aebcc2b3eb262e250f5bd6d",
+      "compare_camera_tracks.py": "91e86867273a1e31d69e4d2d3313de94faecd9824d1c57a5155fc9960fb903ce",
+      "render_camera_comparison.py": "681b5a95215a7c53097b4de5d8b097d5898db8de179daddc00a0490a7026b70d",
+      "check_camera_comparison_page.mjs": "c093d534626020e073297e20f48f022274ba05a9949bf0318f1aaa278e072536"
+    },
+    "input_sha256": "c9abb35a69abdbdb87f32db2c3ec6ab32b9c469047cc515e28894fd4873402af",
+    "report_sha256": "e67d097a222bb1c9a34ab76a7ef1255a281555c0b75ffe61ed93a289eee5875c"
+  },
+  "updated_utc": "2026-09-26T11:02:02.019488+00:00"
 }
