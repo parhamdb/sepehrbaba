@@ -4,6 +4,11 @@ Started September 26, 2026. This implements the first bounded experiment from
 the [ranked research](reconstruction-options-2026-09.md). The public scenes and
 full-recording processing controller are unchanged.
 
+**Outcome:** both 8,000-step candidates finished; neither is accepted as a
+replacement. Tracked masks recover some stationary detail but miss another
+visitor, and the additional sparse-point cleanup does not improve the average
+held-out score. Downloads, comparisons and the precise next step are below.
+
 ## Frozen scope and acceptance
 
 - Use the existing 590.629889–606.465111-second component: 368 undistorted
@@ -42,6 +47,8 @@ forward and backward from its anchor and combined into exclusion masks, with a
 7-pixel dilation. This is bidirectional coverage, not a forward/backward
 consistency algorithm or an automatic motion detector. Static pixels that were
 incorrectly excluded by the old semantic masks become available for training.
+The old masks use a 15-pixel dilation. This compares complete masking strategies,
+not solely the neural network with every other mask parameter held constant.
 
 The second candidate isolates sparse initialization cleanup under the new masks.
 Earlier sparse cleanup under the old masks was rejected; it is not an established
@@ -81,6 +88,15 @@ python scripts/inspect_brush.py "$DATASET" "$CLEAN_TRAINING/splats/eval_8000" \
 Runtime datasets contain absolute symlinks; public evidence contains only source
 frame names, hashes and relative references. Preserve originals and run manifests.
 Do not commit runtime state containing machine-specific paths.
+
+The [geometry input archive](../evidence/tracked-cleanup/geometry-inputs.tar.gz)
+preserves the original distorted text model, undistorted binary model and
+baseline evaluation masks. Recreate native source images from the preserved
+video using the [native-frame method](method.md), then undistort with the pinned
+COLMAP version and original model. Check the resulting image hashes against
+`mask-report.json` before claiming an exact replication. The 368 undistorted
+JPEGs are not duplicated in this archive. Archive ownership/timestamps are
+normalized; source-image and mask hashes retain content identity.
 
 `scripts/compare_cleanup_renders.py DATASET BASELINE_RENDERS CANDIDATE_RENDERS
 OUTPUT` also checks the exact held-out inventory, scores identical reference
@@ -126,13 +142,15 @@ not metres, and the novel views have no ground-truth images.
 | Reviewed tracked masks and complete inventory | Passed for trial | 368 binary masks, corrected first-frame anchor, retained limitations above |
 | Preserve sources, cameras and held-out split | Passed | Image/model hashes; comparator verifies exact sorted-index split |
 | Mask-only 8,000-step candidate | Passed execution; not promoted | 545.5 seconds, 37,009 Gaussians, all 37 held-out renders |
-| Additional geometry-cleanup candidate | Untested | Input geometry gate passed; separate training pending |
-| Fixed-mask comparison and visual inspection | Untested | Comparator calibration passed; candidate renders pending |
+| Additional geometry-cleanup candidate | Passed execution; not promoted | 799.3 seconds, 36,266 Gaussians, all 37 held-out renders |
+| Fixed-mask comparison and visual inspection | Passed execution | 37 held-out views per candidate; six offset views each plus baseline; visual review completed |
 | Reproducible code and documentation | Passed for setup | Commit `cd1cee6`, four prompt checks, independent review |
+| Promote mask-only candidate | Failed | Incomplete visitor coverage; mixed detail changes |
+| Promote additional cleanup candidate | Failed | Lower average reference score; no clear visual improvement |
 
-Current execution checks: **4 passed, 0 failed, 0 blocked, 2 untested**.
-Separately, **mask-only promotion failed** for missed-visitor artifacts. Successful
-execution does not turn that quality failure into an accepted reconstruction.
+Final ledger: **6 passed, 2 failed, 0 blocked, 0 untested**. All execution and
+comparison work finished, but both replacement-quality gates failed. The bounded
+experiment is complete; an improved replacement reconstruction is not accepted.
 The rejected first mask attempt is retained as resolved failure evidence. SAM
 3.1 access remains a prerequisite for a different model comparison, rather than
 a blocker for this SAM 2.1 experiment.
@@ -163,3 +181,36 @@ The [candidate PLY](../evidence/tracked-cleanup/mask-only.ply) is retained for
 inspection, in the original unlevelled component coordinates. It is not a new
 public viewer default. The implementation passed four prompt-validation checks
 and an independent read-only review; reconstruction quality remains unaccepted.
+
+## Additional cleanup result and next decision
+
+| Variant | Fixed-reference PSNR | Change from baseline | Improved views |
+|---|---:|---:|---:|
+| Retained baseline | 23.49210 dB | — | — |
+| Tracked masks | 23.52290 dB | +0.03081 dB | 17/37 |
+| Tracked masks plus sparse cleanup | 23.38183 dB | −0.11027 dB | 18/37 |
+
+Cleanup is also 0.14107 dB below the mask-only run. Its worst per-view change
+from baseline is −2.94848 dB. See the
+[complete scores](../evidence/tracked-cleanup/cleanup-comparison.json),
+[held-out contact sheet](../evidence/tracked-cleanup/cleanup-comparison.jpg), and
+[candidate PLY](../evidence/tracked-cleanup/mask-plus-cleanup.ply). Retaining fewer
+points did not reliably improve this scene. The longer training time overlapped
+another full-recording GPU job and is not a fair method-speed benchmark.
+All six [cleanup offset views](../evidence/tracked-cleanup/cleanup-novel-comparison.jpg)
+rendered successfully in fresh browser processes. Their visual comparison shows
+mixed detail changes and persistent weak boundaries/blur, rather than a clear
+overall improvement. No third training run or threshold-tuning cycle was started.
+
+The next smallest change is to enumerate **every visible visitor instance**,
+give distinct tracks separate IDs, add anchors at entrances/reappearances, and
+review edge coverage throughout the interval. Review bodies, bags, labels and
+floor details as protected content. A sparse-point filter cannot remove an
+unmasked visitor merely because it is transient. Complete that mask review
+before a separately budgeted reconstruction comparison; do not increase pruning
+thresholds to hide the symptom. This pass used its two-candidate training budget.
+
+SAM 3.1 remains access-gated. T-3DGS/DeSplat/RobustSplat, real FlashSplat labeling,
+depth/visibility cleanup, new registration and completion tools remain **not
+run** here; their ranking and sources stay in the research document. No synthetic
+completion, fabricated scene connection or public-viewer change was made.

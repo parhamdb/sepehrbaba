@@ -23,5 +23,13 @@
     "decision": "not promoted; missed edge visitor in frame_009807.jpg"
   },
   "source_images_and_original_camera_model_unchanged": true,
-  "cleanup_input_report": "geometry-cleanup.json"
+  "cleanup_input_report": "geometry-cleanup.json",
+  "mask_plus_cleanup": {
+    "training_seconds": 799.3332386016846,
+    "gaussians": 36266,
+    "sha256": "83c42e0bb8ae9b0a70b538072cb3ea826e5ae1c227382ffb9cd537a0d3f02052",
+    "decision": "not promoted; no overall benefit on fixed reference masks"
+  },
+  "geometry_inputs_sha256": "da64adab332e692d14dbbc0d0f2187f6d7683a27064ca2a2792ab0794a415a43",
+  "masks_archive_sha256": "09f693eda69fd74ef78336f419cf909e3050bb59e7a59bfc4aa415aaec8bf7d4"
 }
