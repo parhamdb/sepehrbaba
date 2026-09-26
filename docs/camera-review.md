@@ -40,7 +40,23 @@ wins overlaps, with a deterministic label tie break; this is a display selection
 not a quality ranking. Other unfinished/raw bootstrap models are outside this
 snapshot. Processing may recover more cameras after this snapshot was taken.
 
-## Reproduce
+## Observations from inspected frames
+
+- [03:06.262 component boundary](../evidence/camera-review/component-boundary-0306.jpg):
+  the unaligned-component banner and local-path reset are visible. Some fitted
+  landmarks lie on visitors' clothing, so these cannot automatically be treated
+  as static scene evidence. Camera bias from moving features remains possible.
+- [09:50.009 missing pose](../evidence/camera-review/no-pose-0950.jpg): the source
+  continues while pose and path are explicitly unavailable.
+- [09:58.483 blur](../evidence/camera-review/blur-0958.jpg): only three selected
+  fitted landmarks are visible, with median fit error 0.41 source pixels, while
+  eight image-flow comparisons have p95 disagreement 33.2 pixels. Heavy blur is
+  visible; this discrepancy alone does not establish a camera failure.
+- [10:02.049 closer agreement](../evidence/camera-review/closer-agreement-1002.jpg):
+  32 flow comparisons have p95 disagreement 3.3 pixels. This is stronger local
+  image agreement than the blurred example, not proof of correct global shape.
+
+## Reproduction commands
 
 Dependencies: Python 3, NumPy, Pillow, OpenCV, PyAV, ffmpeg/ffprobe and the DejaVu
 Sans font. Rendering is CPU-only. Use native, distorted source JPEGs with the
