@@ -1,0 +1,4290 @@
+{
+  "schema": 1,
+  "inputs_sha256": "c9abb35a69abdbdb87f32db2c3ec6ab32b9c469047cc515e28894fd4873402af",
+  "methods": [
+    "colmap",
+    "vggt",
+    "da3"
+  ],
+  "limits": "Identical image pairs and corners per comparison. Corners may move; COLMAP is not ground truth. No interpolated or cross-component poses.",
+  "cases": [
+    {
+      "id": "loss-001",
+      "start": 20.012089,
+      "end": 40.012089,
+      "loss_time": 30.012089,
+      "gap_end": 32.681022,
+      "source_frames": 300,
+      "coverage": {
+        "colmap": {
+          "total": 252,
+          "before": 148,
+          "after_onset": 104,
+          "during_baseline_gap": 0,
+          "components": 6
+        },
+        "vggt": {
+          "total": 147,
+          "before": 78,
+          "after_onset": 69,
+          "during_baseline_gap": 26,
+          "components": 1
+        },
+        "da3": {
+          "total": 300,
+          "before": 150,
+          "after_onset": 150,
+          "during_baseline_gap": 40,
+          "components": 1
+        }
+      },
+      "reference_component": "c-4ad9dc0c1773ab54",
+      "anchor_names": [
+        "frame_000302.jpg",
+        "frame_000305.jpg",
+        "frame_000310.jpg",
+        "frame_000312.jpg",
+        "frame_000313.jpg",
+        "frame_000315.jpg",
+        "frame_000317.jpg",
+        "frame_000318.jpg",
+        "frame_000319.jpg",
+        "frame_000322.jpg",
+        "frame_000324.jpg",
+        "frame_000327.jpg",
+        "frame_000328.jpg",
+        "frame_000331.jpg",
+        "frame_000335.jpg",
+        "frame_000338.jpg",
+        "frame_000339.jpg",
+        "frame_000343.jpg",
+        "frame_000345.jpg",
+        "frame_000348.jpg",
+        "frame_000351.jpg",
+        "frame_000354.jpg",
+        "frame_000357.jpg",
+        "frame_000359.jpg",
+        "frame_000362.jpg",
+        "frame_000368.jpg",
+        "frame_000371.jpg",
+        "frame_000373.jpg",
+        "frame_000375.jpg",
+        "frame_000376.jpg",
+        "frame_000378.jpg",
+        "frame_000380.jpg",
+        "frame_000385.jpg",
+        "frame_000387.jpg",
+        "frame_000389.jpg",
+        "frame_000391.jpg",
+        "frame_000393.jpg",
+        "frame_000394.jpg",
+        "frame_000395.jpg",
+        "frame_000396.jpg",
+        "frame_000397.jpg",
+        "frame_000398.jpg",
+        "frame_000399.jpg",
+        "frame_000400.jpg",
+        "frame_000402.jpg",
+        "frame_000403.jpg",
+        "frame_000404.jpg",
+        "frame_000405.jpg",
+        "frame_000406.jpg",
+        "frame_000407.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              -0.01283575739804569,
+              -0.513361097525651,
+              0.8580767022121496
+            ],
+            [
+              0.8229167983446449,
+              0.4820589711905227,
+              0.30071097634927474
+            ],
+            [
+              -0.5680168891276193,
+              0.7099855856579022,
+              0.4162658787647484
+            ]
+          ],
+          "scale": 2.3478139976443964,
+          "offset": [
+            2.718084004154756,
+            -0.7656600590949959,
+            0.3864304946666516
+          ],
+          "reference_span": 3.0622686874482294,
+          "fit_median_percent_span": 0.6937312882237138,
+          "anchor_frames": 50
+        },
+        "da3": {
+          "rotation": [
+            [
+              -0.0566938334864319,
+              -0.5119490736745381,
+              0.8571429024429901
+            ],
+            [
+              0.8107422411532855,
+              0.4774188842064047,
+              0.338774596764365
+            ],
+            [
+              -0.5826515490877542,
+              0.7141283882936551,
+              0.3879920326227679
+            ]
+          ],
+          "scale": 1.0620159661456137,
+          "offset": [
+            2.735611851738854,
+            -0.8238789357722573,
+            0.4435567729091774
+          ],
+          "reference_span": 3.0622686874482294,
+          "fit_median_percent_span": 1.9670603068618109,
+          "anchor_frames": 50
+        }
+      },
+      "shared": {
+        "pairs": 104,
+        "supported_pairs": 103,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.4366265658235995,
+            "median_pair_under_4px_fraction": 0.8677248677248677
+          },
+          "vggt": {
+            "median_pair_error_px": 4.108366448129877,
+            "median_pair_under_4px_fraction": 0.4857142857142857
+          },
+          "da3": {
+            "median_pair_error_px": 3.449065189810872,
+            "median_pair_under_4px_fraction": 0.5770750988142292
+          }
+        }
+      },
+      "gap": {
+        "pairs": 36,
+        "supported_pairs": 33,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 3.6290422187739373,
+            "median_pair_under_4px_fraction": 0.5373665480427047
+          },
+          "da3": {
+            "median_pair_error_px": 3.825900122477165,
+            "median_pair_under_4px_fraction": 0.5196078431372549
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-002",
+      "start": 30.884943999999997,
+      "end": 50.884944,
+      "loss_time": 40.884944,
+      "gap_end": 48.017978,
+      "source_frames": 300,
+      "coverage": {
+        "colmap": {
+          "total": 158,
+          "before": 117,
+          "after_onset": 41,
+          "during_baseline_gap": 0,
+          "components": 6
+        },
+        "vggt": {
+          "total": 146,
+          "before": 66,
+          "after_onset": 80,
+          "during_baseline_gap": 71,
+          "components": 1
+        },
+        "da3": {
+          "total": 300,
+          "before": 149,
+          "after_onset": 151,
+          "during_baseline_gap": 107,
+          "components": 1
+        }
+      },
+      "reference_component": "native-model-text-13",
+      "anchor_names": [
+        "frame_000492.jpg",
+        "frame_000494.jpg",
+        "frame_000495.jpg",
+        "frame_000497.jpg",
+        "frame_000498.jpg",
+        "frame_000506.jpg",
+        "frame_000508.jpg",
+        "frame_000514.jpg",
+        "frame_000519.jpg",
+        "frame_000522.jpg",
+        "frame_000525.jpg",
+        "frame_000527.jpg",
+        "frame_000530.jpg",
+        "frame_000532.jpg",
+        "frame_000534.jpg",
+        "frame_000535.jpg",
+        "frame_000536.jpg",
+        "frame_000543.jpg",
+        "frame_000545.jpg",
+        "frame_000546.jpg",
+        "frame_000547.jpg",
+        "frame_000548.jpg",
+        "frame_000549.jpg",
+        "frame_000551.jpg",
+        "frame_000562.jpg",
+        "frame_000566.jpg",
+        "frame_000569.jpg",
+        "frame_000576.jpg",
+        "frame_000587.jpg",
+        "frame_000589.jpg",
+        "frame_000591.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.6217150419907875,
+              -0.42530343924754943,
+              0.6577137607854965
+            ],
+            [
+              0.23399256783152506,
+              0.9022373238503865,
+              0.3622365106541654
+            ],
+            [
+              -0.7474743371929263,
+              -0.07130775564762375,
+              0.6604523595404107
+            ]
+          ],
+          "scale": 9.167535163666436,
+          "offset": [
+            -12.28216354800642,
+            0.7626308641348538,
+            5.478510069862797
+          ],
+          "reference_span": 19.002265688694536,
+          "fit_median_percent_span": 2.561722275738303,
+          "anchor_frames": 31
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.8276935725356737,
+              -0.33661065146895075,
+              0.449017393093835
+            ],
+            [
+              0.17481302428601944,
+              0.9149741168031894,
+              0.3636794909260085
+            ],
+            [
+              -0.5332576830418017,
+              -0.2225210886587448,
+              0.8161621215046782
+            ]
+          ],
+          "scale": 7.791049715571363,
+          "offset": [
+            -4.871719322058804,
+            0.7935160765551172,
+            1.7571560616856103
+          ],
+          "reference_span": 19.002265688694536,
+          "fit_median_percent_span": 3.089739290189109,
+          "anchor_frames": 31
+        }
+      },
+      "shared": {
+        "pairs": 35,
+        "supported_pairs": 35,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 2.77318944448733,
+            "median_pair_under_4px_fraction": 0.592391304347826
+          },
+          "vggt": {
+            "median_pair_error_px": 4.461517031426958,
+            "median_pair_under_4px_fraction": 0.4405594405594406
+          },
+          "da3": {
+            "median_pair_error_px": 3.5243401781112462,
+            "median_pair_under_4px_fraction": 0.5594405594405595
+          }
+        }
+      },
+      "gap": {
+        "pairs": 98,
+        "supported_pairs": 98,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 4.724197508067391,
+            "median_pair_under_4px_fraction": 0.4143498101775511
+          },
+          "da3": {
+            "median_pair_error_px": 4.833948038719271,
+            "median_pair_under_4px_fraction": 0.4183944865074743
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-003",
+      "start": 42.551356,
+      "end": 62.551356,
+      "loss_time": 52.551356,
+      "gap_end": 69.733633,
+      "source_frames": 301,
+      "coverage": {
+        "colmap": {
+          "total": 65,
+          "before": 65,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 2
+        },
+        "vggt": {
+          "total": 143,
+          "before": 65,
+          "after_onset": 78,
+          "during_baseline_gap": 78,
+          "components": 1
+        },
+        "da3": {
+          "total": 301,
+          "before": 150,
+          "after_onset": 151,
+          "during_baseline_gap": 151,
+          "components": 1
+        }
+      },
+      "reference_component": "native-model-text-16",
+      "anchor_names": [
+        "frame_000730.jpg",
+        "frame_000732.jpg",
+        "frame_000739.jpg",
+        "frame_000741.jpg",
+        "frame_000761.jpg",
+        "frame_000768.jpg",
+        "frame_000781.jpg",
+        "frame_000782.jpg",
+        "frame_000784.jpg",
+        "frame_000786.jpg",
+        "frame_000787.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.2802015416488871,
+              -0.4312183808557306,
+              0.8576350063224731
+            ],
+            [
+              0.38444620039957894,
+              0.8690558645805971,
+              0.31135674593044654
+            ],
+            [
+              -0.8795954837627977,
+              0.2424718792978519,
+              0.40929106109693375
+            ]
+          ],
+          "scale": 10.001641797022431,
+          "offset": [
+            -19.76125642531667,
+            -2.389932267476039,
+            9.780069818901021
+          ],
+          "reference_span": 11.35848567230179,
+          "fit_median_percent_span": 1.7752815011231442,
+          "anchor_frames": 11
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.46512034136395375,
+              -0.2889383400120658,
+              0.8367662180803853
+            ],
+            [
+              0.35147596562192374,
+              0.9278134044740616,
+              0.12500772803466106
+            ],
+            [
+              -0.8124824389730619,
+              0.23595957736299483,
+              0.5330997694719639
+            ]
+          ],
+          "scale": 3.3481902467055082,
+          "offset": [
+            -16.30424583477763,
+            -1.43538169718196,
+            7.507968563238991
+          ],
+          "reference_span": 11.35848567230179,
+          "fit_median_percent_span": 11.329766750921518,
+          "anchor_frames": 11
+        }
+      },
+      "shared": {
+        "pairs": 7,
+        "supported_pairs": 7,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 2.293297016684492,
+            "median_pair_under_4px_fraction": 0.7717842323651453
+          },
+          "vggt": {
+            "median_pair_error_px": 3.1748142046041945,
+            "median_pair_under_4px_fraction": 0.6079136690647482
+          },
+          "da3": {
+            "median_pair_error_px": 7.812549100256753,
+            "median_pair_under_4px_fraction": 0.2123076923076923
+          }
+        }
+      },
+      "gap": {
+        "pairs": 129,
+        "supported_pairs": 127,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 5.199249560699958,
+            "median_pair_under_4px_fraction": 0.3951890034364261
+          },
+          "da3": {
+            "median_pair_error_px": 5.250704928928239,
+            "median_pair_under_4px_fraction": 0.3888888888888889
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-004",
+      "start": 83.609022,
+      "end": 103.609022,
+      "loss_time": 93.609022,
+      "gap_end": 120.7308,
+      "source_frames": 306,
+      "coverage": {
+        "colmap": {
+          "total": 149,
+          "before": 149,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 2
+        },
+        "vggt": {
+          "total": 171,
+          "before": 62,
+          "after_onset": 109,
+          "during_baseline_gap": 109,
+          "components": 1
+        },
+        "da3": {
+          "total": 306,
+          "before": 150,
+          "after_onset": 156,
+          "during_baseline_gap": 156,
+          "components": 1
+        }
+      },
+      "reference_component": "c-e8cbf0be6e420c6c",
+      "anchor_names": [
+        "frame_001257.jpg",
+        "frame_001260.jpg",
+        "frame_001262.jpg",
+        "frame_001265.jpg",
+        "frame_001272.jpg",
+        "frame_001275.jpg",
+        "frame_001276.jpg",
+        "frame_001279.jpg",
+        "frame_001282.jpg",
+        "frame_001284.jpg",
+        "frame_001286.jpg",
+        "frame_001288.jpg",
+        "frame_001291.jpg",
+        "frame_001294.jpg",
+        "frame_001298.jpg",
+        "frame_001300.jpg",
+        "frame_001301.jpg",
+        "frame_001304.jpg",
+        "frame_001307.jpg",
+        "frame_001308.jpg",
+        "frame_001312.jpg",
+        "frame_001314.jpg",
+        "frame_001318.jpg",
+        "frame_001320.jpg",
+        "frame_001322.jpg",
+        "frame_001325.jpg",
+        "frame_001328.jpg",
+        "frame_001329.jpg",
+        "frame_001331.jpg",
+        "frame_001333.jpg",
+        "frame_001335.jpg",
+        "frame_001337.jpg",
+        "frame_001338.jpg",
+        "frame_001341.jpg",
+        "frame_001343.jpg",
+        "frame_001345.jpg",
+        "frame_001346.jpg",
+        "frame_001348.jpg",
+        "frame_001354.jpg",
+        "frame_001357.jpg",
+        "frame_001360.jpg",
+        "frame_001363.jpg",
+        "frame_001365.jpg",
+        "frame_001368.jpg",
+        "frame_001375.jpg",
+        "frame_001378.jpg",
+        "frame_001380.jpg",
+        "frame_001382.jpg",
+        "frame_001384.jpg",
+        "frame_001388.jpg",
+        "frame_001393.jpg",
+        "frame_001395.jpg",
+        "frame_001397.jpg",
+        "frame_001399.jpg",
+        "frame_001401.jpg",
+        "frame_001402.jpg",
+        "frame_001403.jpg",
+        "frame_001404.jpg",
+        "frame_001405.jpg",
+        "frame_001406.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.8965754257168675,
+              0.004672968589656805,
+              0.4428664238403929
+            ],
+            [
+              0.07590160006124683,
+              0.9835293820887465,
+              -0.16403932966295712
+            ],
+            [
+              -0.43633869082257754,
+              0.18068790200976365,
+              0.8814535886582744
+            ]
+          ],
+          "scale": 5.263154502826767,
+          "offset": [
+            1.0689948570367593,
+            -1.1232027295788192,
+            1.5631265322910781
+          ],
+          "reference_span": 3.3763555610655436,
+          "fit_median_percent_span": 6.3367455459478705,
+          "anchor_frames": 60
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.88331388169355,
+              0.08067528900780795,
+              0.46178792118350354
+            ],
+            [
+              0.09981464671877212,
+              0.9301238832996259,
+              -0.3534212755565694
+            ],
+            [
+              -0.45803233805909516,
+              0.35827511699688636,
+              0.8135387623420206
+            ]
+          ],
+          "scale": 0.4605948396379634,
+          "offset": [
+            1.3788423004531063,
+            -1.5587262303536442,
+            2.1801339088108582
+          ],
+          "reference_span": 3.3763555610655436,
+          "fit_median_percent_span": 8.035699326211136,
+          "anchor_frames": 60
+        }
+      },
+      "shared": {
+        "pairs": 58,
+        "supported_pairs": 58,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 3.145992876735596,
+            "median_pair_under_4px_fraction": 0.5442992011619463
+          },
+          "vggt": {
+            "median_pair_error_px": 6.715693739652457,
+            "median_pair_under_4px_fraction": 0.2550125702225395
+          },
+          "da3": {
+            "median_pair_error_px": 6.092208726584911,
+            "median_pair_under_4px_fraction": 0.305996192893401
+          }
+        }
+      },
+      "gap": {
+        "pairs": 111,
+        "supported_pairs": 76,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 7.118617445496806,
+            "median_pair_under_4px_fraction": 0.2501256913021619
+          },
+          "da3": {
+            "median_pair_error_px": 5.711392777623883,
+            "median_pair_under_4px_fraction": 0.3301282051282051
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-005",
+      "start": 115.6017,
+      "end": 135.6017,
+      "loss_time": 125.6017,
+      "gap_end": 128.136211,
+      "source_frames": 302,
+      "coverage": {
+        "colmap": {
+          "total": 127,
+          "before": 73,
+          "after_onset": 54,
+          "during_baseline_gap": 0,
+          "components": 4
+        },
+        "vggt": {
+          "total": 177,
+          "before": 81,
+          "after_onset": 96,
+          "during_baseline_gap": 29,
+          "components": 1
+        },
+        "da3": {
+          "total": 302,
+          "before": 150,
+          "after_onset": 152,
+          "during_baseline_gap": 38,
+          "components": 1
+        }
+      },
+      "reference_component": "native-model-text-19",
+      "anchor_names": [
+        "frame_001821.jpg",
+        "frame_001822.jpg",
+        "frame_001823.jpg",
+        "frame_001825.jpg",
+        "frame_001828.jpg",
+        "frame_001830.jpg",
+        "frame_001831.jpg",
+        "frame_001833.jpg",
+        "frame_001835.jpg",
+        "frame_001837.jpg",
+        "frame_001839.jpg",
+        "frame_001842.jpg",
+        "frame_001847.jpg",
+        "frame_001851.jpg",
+        "frame_001852.jpg",
+        "frame_001853.jpg",
+        "frame_001855.jpg",
+        "frame_001857.jpg",
+        "frame_001859.jpg",
+        "frame_001863.jpg",
+        "frame_001865.jpg",
+        "frame_001867.jpg",
+        "frame_001870.jpg",
+        "frame_001871.jpg",
+        "frame_001873.jpg",
+        "frame_001875.jpg",
+        "frame_001884.jpg",
+        "frame_001889.jpg",
+        "frame_001891.jpg",
+        "frame_001892.jpg",
+        "frame_001893.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.5022926530631028,
+              -0.5175437536180469,
+              0.6927124611047298
+            ],
+            [
+              0.6224404006674357,
+              0.7724894223473736,
+              0.12580953850318188
+            ],
+            [
+              -0.6002249897295107,
+              0.3679790149619459,
+              0.7101559027789917
+            ]
+          ],
+          "scale": 12.969507520562416,
+          "offset": [
+            -16.701579137014935,
+            7.944724988736958,
+            -11.194362660472647
+          ],
+          "reference_span": 17.162763892495516,
+          "fit_median_percent_span": 2.292640204264441,
+          "anchor_frames": 31
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.6297392496413855,
+              -0.5509113843629604,
+              0.5476542011528728
+            ],
+            [
+              0.6215810630030486,
+              0.7802069502645613,
+              0.07010061964685213
+            ],
+            [
+              -0.4659028434954062,
+              0.2962663688948835,
+              0.8337630233374088
+            ]
+          ],
+          "scale": 7.93134551022946,
+          "offset": [
+            -14.145077852404391,
+            7.303047652506762,
+            -12.752247298456789
+          ],
+          "reference_span": 17.162763892495516,
+          "fit_median_percent_span": 2.224892552157819,
+          "anchor_frames": 31
+        }
+      },
+      "shared": {
+        "pairs": 34,
+        "supported_pairs": 33,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.8291886428128612,
+            "median_pair_under_4px_fraction": 0.8246753246753247
+          },
+          "vggt": {
+            "median_pair_error_px": 3.6991131539299698,
+            "median_pair_under_4px_fraction": 0.5333333333333333
+          },
+          "da3": {
+            "median_pair_error_px": 2.8344041689475814,
+            "median_pair_under_4px_fraction": 0.6678321678321678
+          }
+        }
+      },
+      "gap": {
+        "pairs": 121,
+        "supported_pairs": 96,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 5.703993927293071,
+            "median_pair_under_4px_fraction": 0.33114035087719296
+          },
+          "da3": {
+            "median_pair_error_px": 5.0100230519433975,
+            "median_pair_under_4px_fraction": 0.4077037037037037
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-006",
+      "start": 123.03461100000001,
+      "end": 143.034611,
+      "loss_time": 133.034611,
+      "gap_end": 136.777533,
+      "source_frames": 302,
+      "coverage": {
+        "colmap": {
+          "total": 186,
+          "before": 92,
+          "after_onset": 94,
+          "during_baseline_gap": 0,
+          "components": 5
+        },
+        "vggt": {
+          "total": 161,
+          "before": 88,
+          "after_onset": 73,
+          "during_baseline_gap": 38,
+          "components": 1
+        },
+        "da3": {
+          "total": 302,
+          "before": 151,
+          "after_onset": 151,
+          "during_baseline_gap": 57,
+          "components": 1
+        }
+      },
+      "reference_component": "native-model-text-17",
+      "anchor_names": [
+        "frame_001932.jpg",
+        "frame_001944.jpg",
+        "frame_001945.jpg",
+        "frame_001946.jpg",
+        "frame_001951.jpg",
+        "frame_001953.jpg",
+        "frame_001958.jpg",
+        "frame_001964.jpg",
+        "frame_001966.jpg",
+        "frame_001973.jpg",
+        "frame_001974.jpg",
+        "frame_001982.jpg",
+        "frame_001985.jpg",
+        "frame_001993.jpg",
+        "frame_001995.jpg",
+        "frame_001997.jpg",
+        "frame_001999.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9672769747621756,
+              -0.10189192934894885,
+              0.23236456018180024
+            ],
+            [
+              0.07889104355911422,
+              0.9912059708672295,
+              0.10623994805771945
+            ],
+            [
+              -0.24114613275167116,
+              -0.08443197291726477,
+              0.9668090735032493
+            ]
+          ],
+          "scale": 14.969846326658708,
+          "offset": [
+            -26.134496080405228,
+            8.54363443992832,
+            -6.2114729144249266
+          ],
+          "reference_span": 17.876525659957338,
+          "fit_median_percent_span": 5.935023221847339,
+          "anchor_frames": 17
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.8552491348865178,
+              -0.28413505564290786,
+              0.433377649897484
+            ],
+            [
+              0.2986668659281109,
+              0.9536835217703573,
+              0.03585866004704372
+            ],
+            [
+              -0.42349382577853933,
+              0.09876745647474792,
+              0.9004987335188022
+            ]
+          ],
+          "scale": 9.066527595521045,
+          "offset": [
+            -35.51299406978499,
+            9.229852922279504,
+            -3.624381166890624
+          ],
+          "reference_span": 17.876525659957338,
+          "fit_median_percent_span": 3.0591382088957033,
+          "anchor_frames": 17
+        }
+      },
+      "shared": {
+        "pairs": 48,
+        "supported_pairs": 45,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.3951644819713431,
+            "median_pair_under_4px_fraction": 0.851528384279476
+          },
+          "vggt": {
+            "median_pair_error_px": 3.380172799906095,
+            "median_pair_under_4px_fraction": 0.5655737704918032
+          },
+          "da3": {
+            "median_pair_error_px": 2.8344884003756596,
+            "median_pair_under_4px_fraction": 0.639344262295082
+          }
+        }
+      },
+      "gap": {
+        "pairs": 90,
+        "supported_pairs": 61,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 4.539264312397336,
+            "median_pair_under_4px_fraction": 0.3987730061349693
+          },
+          "da3": {
+            "median_pair_error_px": 4.486800211537412,
+            "median_pair_under_4px_fraction": 0.4489795918367347
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-007",
+      "start": 151.196111,
+      "end": 171.196111,
+      "loss_time": 161.196111,
+      "gap_end": 162.819156,
+      "source_frames": 301,
+      "coverage": {
+        "colmap": {
+          "total": 267,
+          "before": 141,
+          "after_onset": 126,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 0,
+          "before": 0,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 0
+        },
+        "da3": {
+          "total": 301,
+          "before": 150,
+          "after_onset": 151,
+          "during_baseline_gap": 25,
+          "components": 1
+        }
+      },
+      "reference_component": "published-48s",
+      "anchor_names": [
+        "frame_002281.jpg",
+        "frame_002282.jpg",
+        "frame_002283.jpg",
+        "frame_002284.jpg",
+        "frame_002285.jpg",
+        "frame_002286.jpg",
+        "frame_002287.jpg",
+        "frame_002288.jpg",
+        "frame_002289.jpg",
+        "frame_002290.jpg",
+        "frame_002291.jpg",
+        "frame_002292.jpg",
+        "frame_002293.jpg",
+        "frame_002294.jpg",
+        "frame_002295.jpg",
+        "frame_002296.jpg",
+        "frame_002300.jpg",
+        "frame_002301.jpg",
+        "frame_002302.jpg",
+        "frame_002303.jpg",
+        "frame_002304.jpg",
+        "frame_002305.jpg",
+        "frame_002306.jpg",
+        "frame_002307.jpg",
+        "frame_002308.jpg",
+        "frame_002309.jpg",
+        "frame_002310.jpg",
+        "frame_002311.jpg",
+        "frame_002312.jpg",
+        "frame_002313.jpg",
+        "frame_002314.jpg",
+        "frame_002315.jpg",
+        "frame_002316.jpg",
+        "frame_002317.jpg",
+        "frame_002318.jpg",
+        "frame_002319.jpg",
+        "frame_002320.jpg",
+        "frame_002321.jpg",
+        "frame_002322.jpg",
+        "frame_002323.jpg",
+        "frame_002324.jpg",
+        "frame_002325.jpg",
+        "frame_002326.jpg",
+        "frame_002327.jpg",
+        "frame_002328.jpg",
+        "frame_002329.jpg",
+        "frame_002330.jpg",
+        "frame_002331.jpg",
+        "frame_002332.jpg",
+        "frame_002333.jpg",
+        "frame_002334.jpg",
+        "frame_002335.jpg",
+        "frame_002336.jpg",
+        "frame_002337.jpg",
+        "frame_002338.jpg",
+        "frame_002339.jpg",
+        "frame_002340.jpg",
+        "frame_002341.jpg",
+        "frame_002342.jpg",
+        "frame_002343.jpg",
+        "frame_002344.jpg",
+        "frame_002345.jpg",
+        "frame_002346.jpg",
+        "frame_002347.jpg",
+        "frame_002348.jpg",
+        "frame_002349.jpg",
+        "frame_002350.jpg",
+        "frame_002351.jpg",
+        "frame_002352.jpg",
+        "frame_002353.jpg",
+        "frame_002354.jpg",
+        "frame_002355.jpg",
+        "frame_002362.jpg",
+        "frame_002363.jpg",
+        "frame_002364.jpg",
+        "frame_002365.jpg",
+        "frame_002366.jpg",
+        "frame_002367.jpg",
+        "frame_002368.jpg",
+        "frame_002369.jpg",
+        "frame_002370.jpg",
+        "frame_002371.jpg",
+        "frame_002372.jpg",
+        "frame_002373.jpg",
+        "frame_002374.jpg",
+        "frame_002375.jpg",
+        "frame_002376.jpg",
+        "frame_002377.jpg",
+        "frame_002378.jpg",
+        "frame_002379.jpg",
+        "frame_002380.jpg",
+        "frame_002381.jpg",
+        "frame_002382.jpg",
+        "frame_002383.jpg",
+        "frame_002384.jpg",
+        "frame_002385.jpg",
+        "frame_002386.jpg",
+        "frame_002387.jpg",
+        "frame_002388.jpg",
+        "frame_002389.jpg",
+        "frame_002390.jpg",
+        "frame_002391.jpg",
+        "frame_002392.jpg",
+        "frame_002393.jpg",
+        "frame_002394.jpg",
+        "frame_002395.jpg",
+        "frame_002396.jpg",
+        "frame_002397.jpg",
+        "frame_002398.jpg",
+        "frame_002399.jpg",
+        "frame_002400.jpg",
+        "frame_002401.jpg",
+        "frame_002402.jpg",
+        "frame_002403.jpg",
+        "frame_002404.jpg",
+        "frame_002405.jpg",
+        "frame_002406.jpg",
+        "frame_002407.jpg",
+        "frame_002408.jpg",
+        "frame_002409.jpg",
+        "frame_002410.jpg",
+        "frame_002411.jpg",
+        "frame_002412.jpg",
+        "frame_002413.jpg",
+        "frame_002414.jpg",
+        "frame_002415.jpg",
+        "frame_002416.jpg",
+        "frame_002417.jpg",
+        "frame_002418.jpg",
+        "frame_002419.jpg",
+        "frame_002420.jpg",
+        "frame_002421.jpg",
+        "frame_002422.jpg",
+        "frame_002423.jpg",
+        "frame_002424.jpg",
+        "frame_002425.jpg",
+        "frame_002426.jpg",
+        "frame_002427.jpg",
+        "frame_002428.jpg",
+        "frame_002429.jpg",
+        "frame_002430.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": null,
+        "da3": {
+          "rotation": [
+            [
+              0.8881781627363026,
+              -0.19906024780219256,
+              0.4141431744980177
+            ],
+            [
+              0.21966183710525794,
+              0.9755736492371869,
+              -0.002175369757275842
+            ],
+            [
+              -0.40359413840875885,
+              0.0929035664491274,
+              0.9102091511202924
+            ]
+          ],
+          "scale": 0.7200061862853377,
+          "offset": [
+            -1.9755022105658584,
+            0.2755376441185402,
+            -0.8896296231627755
+          ],
+          "reference_span": 4.258922507597165,
+          "fit_median_percent_span": 2.201749657793667,
+          "anchor_frames": 141
+        }
+      },
+      "shared": {
+        "pairs": 265,
+        "supported_pairs": 261,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 2.317309916347497,
+            "median_pair_under_4px_fraction": 0.6840277777777778
+          },
+          "da3": {
+            "median_pair_error_px": 4.040336013782061,
+            "median_pair_under_4px_fraction": 0.4924924924924925
+          }
+        }
+      },
+      "gap": {
+        "pairs": 0,
+        "supported_pairs": 0,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": null,
+            "median_pair_under_4px_fraction": null
+          },
+          "da3": {
+            "median_pair_error_px": null,
+            "median_pair_under_4px_fraction": null
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 126,
+          "frame_names": [
+            "frame_002456.jpg",
+            "frame_002457.jpg",
+            "frame_002458.jpg",
+            "frame_002459.jpg",
+            "frame_002460.jpg",
+            "frame_002461.jpg",
+            "frame_002462.jpg",
+            "frame_002463.jpg",
+            "frame_002464.jpg",
+            "frame_002465.jpg",
+            "frame_002466.jpg",
+            "frame_002467.jpg",
+            "frame_002468.jpg",
+            "frame_002469.jpg",
+            "frame_002470.jpg",
+            "frame_002471.jpg",
+            "frame_002472.jpg",
+            "frame_002473.jpg",
+            "frame_002474.jpg",
+            "frame_002475.jpg",
+            "frame_002476.jpg",
+            "frame_002477.jpg",
+            "frame_002478.jpg",
+            "frame_002479.jpg",
+            "frame_002480.jpg",
+            "frame_002481.jpg",
+            "frame_002482.jpg",
+            "frame_002483.jpg",
+            "frame_002484.jpg",
+            "frame_002485.jpg",
+            "frame_002486.jpg",
+            "frame_002487.jpg",
+            "frame_002488.jpg",
+            "frame_002489.jpg",
+            "frame_002490.jpg",
+            "frame_002491.jpg",
+            "frame_002492.jpg",
+            "frame_002493.jpg",
+            "frame_002494.jpg",
+            "frame_002495.jpg",
+            "frame_002496.jpg",
+            "frame_002497.jpg",
+            "frame_002498.jpg",
+            "frame_002499.jpg",
+            "frame_002500.jpg",
+            "frame_002501.jpg",
+            "frame_002502.jpg",
+            "frame_002503.jpg",
+            "frame_002504.jpg",
+            "frame_002505.jpg",
+            "frame_002506.jpg",
+            "frame_002507.jpg",
+            "frame_002508.jpg",
+            "frame_002509.jpg",
+            "frame_002510.jpg",
+            "frame_002511.jpg",
+            "frame_002512.jpg",
+            "frame_002513.jpg",
+            "frame_002514.jpg",
+            "frame_002515.jpg",
+            "frame_002516.jpg",
+            "frame_002517.jpg",
+            "frame_002518.jpg",
+            "frame_002519.jpg",
+            "frame_002520.jpg",
+            "frame_002521.jpg",
+            "frame_002522.jpg",
+            "frame_002523.jpg",
+            "frame_002524.jpg",
+            "frame_002525.jpg",
+            "frame_002526.jpg",
+            "frame_002527.jpg",
+            "frame_002528.jpg",
+            "frame_002529.jpg",
+            "frame_002530.jpg",
+            "frame_002531.jpg",
+            "frame_002532.jpg",
+            "frame_002533.jpg",
+            "frame_002534.jpg",
+            "frame_002535.jpg",
+            "frame_002536.jpg",
+            "frame_002537.jpg",
+            "frame_002538.jpg",
+            "frame_002539.jpg",
+            "frame_002540.jpg",
+            "frame_002541.jpg",
+            "frame_002542.jpg",
+            "frame_002543.jpg",
+            "frame_002544.jpg",
+            "frame_002545.jpg",
+            "frame_002546.jpg",
+            "frame_002547.jpg",
+            "frame_002548.jpg",
+            "frame_002549.jpg",
+            "frame_002550.jpg",
+            "frame_002551.jpg",
+            "frame_002552.jpg",
+            "frame_002553.jpg",
+            "frame_002554.jpg",
+            "frame_002555.jpg",
+            "frame_002556.jpg",
+            "frame_002557.jpg",
+            "frame_002558.jpg",
+            "frame_002559.jpg",
+            "frame_002560.jpg",
+            "frame_002561.jpg",
+            "frame_002562.jpg",
+            "frame_002563.jpg",
+            "frame_002564.jpg",
+            "frame_002565.jpg",
+            "frame_002566.jpg",
+            "frame_002567.jpg",
+            "frame_002568.jpg",
+            "frame_002569.jpg",
+            "frame_002570.jpg",
+            "frame_002571.jpg",
+            "frame_002572.jpg",
+            "frame_002573.jpg",
+            "frame_002574.jpg",
+            "frame_002575.jpg",
+            "frame_002576.jpg",
+            "frame_002577.jpg",
+            "frame_002578.jpg",
+            "frame_002579.jpg",
+            "frame_002580.jpg",
+            "frame_002581.jpg"
+          ],
+          "median_position_percent_pre_span": 8.582839548124209,
+          "median_orientation_deg": 20.571731397646754
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-008",
+      "start": 174.862244,
+      "end": 194.862244,
+      "loss_time": 184.862244,
+      "gap_end": 186.2622,
+      "source_frames": 301,
+      "coverage": {
+        "colmap": {
+          "total": 279,
+          "before": 150,
+          "after_onset": 129,
+          "during_baseline_gap": 0,
+          "components": 2
+        },
+        "vggt": {
+          "total": 140,
+          "before": 60,
+          "after_onset": 80,
+          "during_baseline_gap": 21,
+          "components": 1
+        },
+        "da3": {
+          "total": 301,
+          "before": 150,
+          "after_onset": 151,
+          "during_baseline_gap": 22,
+          "components": 1
+        }
+      },
+      "reference_component": "published-48s",
+      "anchor_names": [
+        "frame_002637.jpg",
+        "frame_002638.jpg",
+        "frame_002640.jpg",
+        "frame_002642.jpg",
+        "frame_002643.jpg",
+        "frame_002645.jpg",
+        "frame_002652.jpg",
+        "frame_002654.jpg",
+        "frame_002659.jpg",
+        "frame_002662.jpg",
+        "frame_002664.jpg",
+        "frame_002665.jpg",
+        "frame_002666.jpg",
+        "frame_002667.jpg",
+        "frame_002668.jpg",
+        "frame_002669.jpg",
+        "frame_002670.jpg",
+        "frame_002672.jpg",
+        "frame_002673.jpg",
+        "frame_002675.jpg",
+        "frame_002676.jpg",
+        "frame_002677.jpg",
+        "frame_002678.jpg",
+        "frame_002680.jpg",
+        "frame_002682.jpg",
+        "frame_002683.jpg",
+        "frame_002684.jpg",
+        "frame_002685.jpg",
+        "frame_002686.jpg",
+        "frame_002688.jpg",
+        "frame_002691.jpg",
+        "frame_002693.jpg",
+        "frame_002694.jpg",
+        "frame_002697.jpg",
+        "frame_002701.jpg",
+        "frame_002707.jpg",
+        "frame_002710.jpg",
+        "frame_002714.jpg",
+        "frame_002716.jpg",
+        "frame_002719.jpg",
+        "frame_002723.jpg",
+        "frame_002726.jpg",
+        "frame_002729.jpg",
+        "frame_002736.jpg",
+        "frame_002740.jpg",
+        "frame_002742.jpg",
+        "frame_002747.jpg",
+        "frame_002752.jpg",
+        "frame_002755.jpg",
+        "frame_002757.jpg",
+        "frame_002759.jpg",
+        "frame_002762.jpg",
+        "frame_002766.jpg",
+        "frame_002769.jpg",
+        "frame_002771.jpg",
+        "frame_002773.jpg",
+        "frame_002777.jpg",
+        "frame_002779.jpg",
+        "frame_002782.jpg",
+        "frame_002785.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.910930138530693,
+              -0.301663550947302,
+              0.28143451235823386
+            ],
+            [
+              0.26971124612953884,
+              0.9516450958374731,
+              0.1470627596631363
+            ],
+            [
+              -0.3121892477772156,
+              -0.05805784700064835,
+              0.9482442512211424
+            ]
+          ],
+          "scale": 0.9690259777695361,
+          "offset": [
+            2.550004438685763,
+            -0.6017525010918022,
+            1.4431986612349323
+          ],
+          "reference_span": 1.4586592236632168,
+          "fit_median_percent_span": 2.9326489423486017,
+          "anchor_frames": 60
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9071652098591024,
+              -0.33919651164798537,
+              0.24899198482507237
+            ],
+            [
+              0.32138367338765444,
+              0.9405018583503791,
+              0.11031223377006487
+            ],
+            [
+              -0.27159494932923256,
+              -0.020049461970881977,
+              0.9622027866170054
+            ]
+          ],
+          "scale": 0.5908103389447464,
+          "offset": [
+            2.62228818062851,
+            -0.5716364811394422,
+            1.4193334635443389
+          ],
+          "reference_span": 1.4586592236632168,
+          "fit_median_percent_span": 4.42312141193305,
+          "anchor_frames": 60
+        }
+      },
+      "shared": {
+        "pairs": 117,
+        "supported_pairs": 117,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.5326976779236157,
+            "median_pair_under_4px_fraction": 0.8257575757575758
+          },
+          "vggt": {
+            "median_pair_error_px": 3.8686235615321545,
+            "median_pair_under_4px_fraction": 0.52
+          },
+          "da3": {
+            "median_pair_error_px": 3.6484006279634444,
+            "median_pair_under_4px_fraction": 0.5523012552301255
+          }
+        }
+      },
+      "gap": {
+        "pairs": 22,
+        "supported_pairs": 14,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 7.317205694305721,
+            "median_pair_under_4px_fraction": 0.34768009768009767
+          },
+          "da3": {
+            "median_pair_error_px": 5.807032888805187,
+            "median_pair_under_4px_fraction": 0.2919732441471572
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-009",
+      "start": 247.05961100000002,
+      "end": 267.059611,
+      "loss_time": 257.059611,
+      "gap_end": 264.886967,
+      "source_frames": 305,
+      "coverage": {
+        "colmap": {
+          "total": 183,
+          "before": 149,
+          "after_onset": 34,
+          "during_baseline_gap": 0,
+          "components": 2
+        },
+        "vggt": {
+          "total": 194,
+          "before": 70,
+          "after_onset": 124,
+          "during_baseline_gap": 105,
+          "components": 1
+        },
+        "da3": {
+          "total": 305,
+          "before": 150,
+          "after_onset": 155,
+          "during_baseline_gap": 121,
+          "components": 1
+        }
+      },
+      "reference_component": "published-71s",
+      "anchor_names": [
+        "frame_003722.jpg",
+        "frame_003727.jpg",
+        "frame_003729.jpg",
+        "frame_003731.jpg",
+        "frame_003735.jpg",
+        "frame_003737.jpg",
+        "frame_003739.jpg",
+        "frame_003740.jpg",
+        "frame_003742.jpg",
+        "frame_003743.jpg",
+        "frame_003744.jpg",
+        "frame_003746.jpg",
+        "frame_003748.jpg",
+        "frame_003751.jpg",
+        "frame_003753.jpg",
+        "frame_003759.jpg",
+        "frame_003761.jpg",
+        "frame_003762.jpg",
+        "frame_003763.jpg",
+        "frame_003765.jpg",
+        "frame_003766.jpg",
+        "frame_003767.jpg",
+        "frame_003768.jpg",
+        "frame_003769.jpg",
+        "frame_003771.jpg",
+        "frame_003772.jpg",
+        "frame_003774.jpg",
+        "frame_003776.jpg",
+        "frame_003780.jpg",
+        "frame_003782.jpg",
+        "frame_003784.jpg",
+        "frame_003793.jpg",
+        "frame_003795.jpg",
+        "frame_003797.jpg",
+        "frame_003799.jpg",
+        "frame_003800.jpg",
+        "frame_003801.jpg",
+        "frame_003803.jpg",
+        "frame_003806.jpg",
+        "frame_003809.jpg",
+        "frame_003811.jpg",
+        "frame_003813.jpg",
+        "frame_003816.jpg",
+        "frame_003818.jpg",
+        "frame_003821.jpg",
+        "frame_003824.jpg",
+        "frame_003826.jpg",
+        "frame_003828.jpg",
+        "frame_003829.jpg",
+        "frame_003830.jpg",
+        "frame_003831.jpg",
+        "frame_003833.jpg",
+        "frame_003835.jpg",
+        "frame_003837.jpg",
+        "frame_003840.jpg",
+        "frame_003843.jpg",
+        "frame_003845.jpg",
+        "frame_003848.jpg",
+        "frame_003851.jpg",
+        "frame_003853.jpg",
+        "frame_003855.jpg",
+        "frame_003857.jpg",
+        "frame_003859.jpg",
+        "frame_003862.jpg",
+        "frame_003865.jpg",
+        "frame_003867.jpg",
+        "frame_003868.jpg",
+        "frame_003869.jpg",
+        "frame_003870.jpg",
+        "frame_003871.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.913000186213255,
+              -0.035699612268792986,
+              0.4063941407776682
+            ],
+            [
+              0.22244037483389073,
+              0.8786193767877535,
+              -0.42254972533047214
+            ],
+            [
+              -0.34198090534168674,
+              0.47618644291596246,
+              0.810120689752288
+            ]
+          ],
+          "scale": 0.18830063708468794,
+          "offset": [
+            2.277888429384863,
+            -2.2921660175171783,
+            2.4933159328174392
+          ],
+          "reference_span": 0.2344923669652991,
+          "fit_median_percent_span": 13.099229026149303,
+          "anchor_frames": 70
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.7573474858431892,
+              -0.21950204080372232,
+              0.6150151540978495
+            ],
+            [
+              0.4684607491573481,
+              0.8387665639674777,
+              -0.2775160854241198
+            ],
+            [
+              -0.45493880048412766,
+              0.49828656940880134,
+              0.7380658389065782
+            ]
+          ],
+          "scale": 0.14420145148124705,
+          "offset": [
+            2.333127322124138,
+            -2.3050916553482597,
+            2.4931729432345624
+          ],
+          "reference_span": 0.2344923669652991,
+          "fit_median_percent_span": 12.438120920202344,
+          "anchor_frames": 70
+        }
+      },
+      "shared": {
+        "pairs": 87,
+        "supported_pairs": 87,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 3.161622271575328,
+            "median_pair_under_4px_fraction": 0.581081081081081
+          },
+          "vggt": {
+            "median_pair_error_px": 4.2043658944038125,
+            "median_pair_under_4px_fraction": 0.4864864864864865
+          },
+          "da3": {
+            "median_pair_error_px": 4.117310291233016,
+            "median_pair_under_4px_fraction": 0.4861111111111111
+          }
+        }
+      },
+      "gap": {
+        "pairs": 106,
+        "supported_pairs": 92,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 5.984534986931159,
+            "median_pair_under_4px_fraction": 0.350296442687747
+          },
+          "da3": {
+            "median_pair_error_px": 4.3582319512582846,
+            "median_pair_under_4px_fraction": 0.4671915550256015
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-010",
+      "start": 261.874156,
+      "end": 281.874156,
+      "loss_time": 271.874156,
+      "gap_end": 334.207844,
+      "source_frames": 327,
+      "coverage": {
+        "colmap": {
+          "total": 99,
+          "before": 99,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 236,
+          "before": 108,
+          "after_onset": 128,
+          "during_baseline_gap": 128,
+          "components": 1
+        },
+        "da3": {
+          "total": 327,
+          "before": 154,
+          "after_onset": 173,
+          "during_baseline_gap": 173,
+          "components": 1
+        }
+      },
+      "reference_component": "c-9bd1ff3652321fd9",
+      "anchor_names": [
+        "frame_003993.jpg",
+        "frame_003995.jpg",
+        "frame_003997.jpg",
+        "frame_003999.jpg",
+        "frame_004000.jpg",
+        "frame_004001.jpg",
+        "frame_004002.jpg",
+        "frame_004003.jpg",
+        "frame_004004.jpg",
+        "frame_004005.jpg",
+        "frame_004006.jpg",
+        "frame_004008.jpg",
+        "frame_004011.jpg",
+        "frame_004013.jpg",
+        "frame_004015.jpg",
+        "frame_004018.jpg",
+        "frame_004021.jpg",
+        "frame_004023.jpg",
+        "frame_004025.jpg",
+        "frame_004030.jpg",
+        "frame_004032.jpg",
+        "frame_004034.jpg",
+        "frame_004036.jpg",
+        "frame_004038.jpg",
+        "frame_004040.jpg",
+        "frame_004042.jpg",
+        "frame_004044.jpg",
+        "frame_004046.jpg",
+        "frame_004048.jpg",
+        "frame_004050.jpg",
+        "frame_004052.jpg",
+        "frame_004054.jpg",
+        "frame_004056.jpg",
+        "frame_004059.jpg",
+        "frame_004062.jpg",
+        "frame_004064.jpg",
+        "frame_004065.jpg",
+        "frame_004067.jpg",
+        "frame_004069.jpg",
+        "frame_004077.jpg",
+        "frame_004079.jpg",
+        "frame_004080.jpg",
+        "frame_004081.jpg",
+        "frame_004082.jpg",
+        "frame_004083.jpg",
+        "frame_004084.jpg",
+        "frame_004085.jpg",
+        "frame_004086.jpg",
+        "frame_004088.jpg",
+        "frame_004090.jpg",
+        "frame_004092.jpg",
+        "frame_004093.jpg",
+        "frame_004095.jpg",
+        "frame_004096.jpg",
+        "frame_004098.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": null,
+        "da3": null
+      },
+      "shared": {
+        "pairs": 54,
+        "supported_pairs": 51,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.6925853387569583,
+            "median_pair_under_4px_fraction": 0.7640449438202247
+          },
+          "vggt": {
+            "median_pair_error_px": 4.277705471113241,
+            "median_pair_under_4px_fraction": 0.46308724832214765
+          },
+          "da3": {
+            "median_pair_error_px": 3.161534009101086,
+            "median_pair_under_4px_fraction": 0.6075949367088608
+          }
+        }
+      },
+      "gap": {
+        "pairs": 182,
+        "supported_pairs": 133,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 7.278231879339369,
+            "median_pair_under_4px_fraction": 0.2553191489361702
+          },
+          "da3": {
+            "median_pair_error_px": 6.972314829715091,
+            "median_pair_under_4px_fraction": 0.3141025641025641
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-011",
+      "start": 331.518867,
+      "end": 351.518867,
+      "loss_time": 341.518867,
+      "gap_end": 414.562967,
+      "source_frames": 402,
+      "coverage": {
+        "colmap": {
+          "total": 150,
+          "before": 150,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 215,
+          "before": 93,
+          "after_onset": 122,
+          "during_baseline_gap": 122,
+          "components": 1
+        },
+        "da3": {
+          "total": 402,
+          "before": 198,
+          "after_onset": 204,
+          "during_baseline_gap": 204,
+          "components": 1
+        }
+      },
+      "reference_component": "c-3fc22e6a2b338a47",
+      "anchor_names": [
+        "frame_005162.jpg",
+        "frame_005164.jpg",
+        "frame_005166.jpg",
+        "frame_005169.jpg",
+        "frame_005172.jpg",
+        "frame_005174.jpg",
+        "frame_005177.jpg",
+        "frame_005179.jpg",
+        "frame_005182.jpg",
+        "frame_005183.jpg",
+        "frame_005185.jpg",
+        "frame_005187.jpg",
+        "frame_005190.jpg",
+        "frame_005193.jpg",
+        "frame_005196.jpg",
+        "frame_005199.jpg",
+        "frame_005201.jpg",
+        "frame_005203.jpg",
+        "frame_005207.jpg",
+        "frame_005209.jpg",
+        "frame_005212.jpg",
+        "frame_005215.jpg",
+        "frame_005218.jpg",
+        "frame_005223.jpg",
+        "frame_005226.jpg",
+        "frame_005228.jpg",
+        "frame_005234.jpg",
+        "frame_005237.jpg",
+        "frame_005239.jpg",
+        "frame_005242.jpg",
+        "frame_005245.jpg",
+        "frame_005248.jpg",
+        "frame_005250.jpg",
+        "frame_005252.jpg",
+        "frame_005254.jpg",
+        "frame_005256.jpg",
+        "frame_005258.jpg",
+        "frame_005260.jpg",
+        "frame_005262.jpg",
+        "frame_005265.jpg",
+        "frame_005268.jpg",
+        "frame_005275.jpg",
+        "frame_005281.jpg",
+        "frame_005284.jpg",
+        "frame_005288.jpg",
+        "frame_005289.jpg",
+        "frame_005290.jpg",
+        "frame_005291.jpg",
+        "frame_005293.jpg",
+        "frame_005295.jpg",
+        "frame_005297.jpg",
+        "frame_005300.jpg",
+        "frame_005303.jpg",
+        "frame_005306.jpg",
+        "frame_005308.jpg",
+        "frame_005315.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              -0.08892320459789914,
+              -0.4224562475658519,
+              0.9020107441580832
+            ],
+            [
+              0.6303116910457139,
+              0.6773377023138222,
+              0.37936896177115514
+            ],
+            [
+              -0.7712326729432128,
+              0.6022826212973534,
+              0.20604807271133588
+            ]
+          ],
+          "scale": 17.793393698184488,
+          "offset": [
+            -3.303293479045511,
+            4.897902563732758,
+            -6.1598183902079215
+          ],
+          "reference_span": 11.965741073629943,
+          "fit_median_percent_span": 5.836448020278695,
+          "anchor_frames": 56
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.02911187276415963,
+              -0.646538372851081,
+              0.762325803902269
+            ],
+            [
+              0.7180015095497876,
+              0.5441214496056295,
+              0.43405723166800747
+            ],
+            [
+              -0.6954324777779574,
+              0.534714859069902,
+              0.4800559220981086
+            ]
+          ],
+          "scale": 8.552450181294825,
+          "offset": [
+            -3.437973640322288,
+            5.248261801426574,
+            -6.218772858460558
+          ],
+          "reference_span": 11.965741073629943,
+          "fit_median_percent_span": 3.505130068610359,
+          "anchor_frames": 56
+        }
+      },
+      "shared": {
+        "pairs": 55,
+        "supported_pairs": 55,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 3.1168038962049147,
+            "median_pair_under_4px_fraction": 0.6
+          },
+          "vggt": {
+            "median_pair_error_px": 4.153064896949467,
+            "median_pair_under_4px_fraction": 0.4797297297297297
+          },
+          "da3": {
+            "median_pair_error_px": 4.77244135822877,
+            "median_pair_under_4px_fraction": 0.4351851851851852
+          }
+        }
+      },
+      "gap": {
+        "pairs": 162,
+        "supported_pairs": 123,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 8.356411409867002,
+            "median_pair_under_4px_fraction": 0.23636363636363636
+          },
+          "da3": {
+            "median_pair_error_px": 6.110647723165553,
+            "median_pair_under_4px_fraction": 0.35
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-012",
+      "start": 417.840378,
+      "end": 437.840378,
+      "loss_time": 427.840378,
+      "gap_end": 455.816511,
+      "source_frames": 366,
+      "coverage": {
+        "colmap": {
+          "total": 171,
+          "before": 171,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 167,
+          "before": 72,
+          "after_onset": 95,
+          "during_baseline_gap": 95,
+          "components": 1
+        },
+        "da3": {
+          "total": 366,
+          "before": 182,
+          "after_onset": 184,
+          "during_baseline_gap": 184,
+          "components": 1
+        }
+      },
+      "reference_component": "c-0bc7a95fc61b9c4c",
+      "anchor_names": [
+        "frame_006595.jpg",
+        "frame_006602.jpg",
+        "frame_006605.jpg",
+        "frame_006607.jpg",
+        "frame_006608.jpg",
+        "frame_006610.jpg",
+        "frame_006612.jpg",
+        "frame_006614.jpg",
+        "frame_006617.jpg",
+        "frame_006621.jpg",
+        "frame_006625.jpg",
+        "frame_006629.jpg",
+        "frame_006631.jpg",
+        "frame_006633.jpg",
+        "frame_006635.jpg",
+        "frame_006638.jpg",
+        "frame_006644.jpg",
+        "frame_006649.jpg",
+        "frame_006653.jpg",
+        "frame_006656.jpg",
+        "frame_006658.jpg",
+        "frame_006662.jpg",
+        "frame_006666.jpg",
+        "frame_006668.jpg",
+        "frame_006670.jpg",
+        "frame_006672.jpg",
+        "frame_006673.jpg",
+        "frame_006676.jpg",
+        "frame_006677.jpg",
+        "frame_006678.jpg",
+        "frame_006680.jpg",
+        "frame_006682.jpg",
+        "frame_006684.jpg",
+        "frame_006686.jpg",
+        "frame_006693.jpg",
+        "frame_006696.jpg",
+        "frame_006699.jpg",
+        "frame_006702.jpg",
+        "frame_006704.jpg",
+        "frame_006706.jpg",
+        "frame_006708.jpg",
+        "frame_006710.jpg",
+        "frame_006712.jpg",
+        "frame_006715.jpg",
+        "frame_006719.jpg",
+        "frame_006725.jpg",
+        "frame_006727.jpg",
+        "frame_006728.jpg",
+        "frame_006729.jpg",
+        "frame_006730.jpg",
+        "frame_006731.jpg",
+        "frame_006733.jpg",
+        "frame_006737.jpg",
+        "frame_006740.jpg",
+        "frame_006743.jpg",
+        "frame_006746.jpg",
+        "frame_006750.jpg",
+        "frame_006753.jpg",
+        "frame_006756.jpg",
+        "frame_006761.jpg",
+        "frame_006763.jpg",
+        "frame_006765.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9970323335255405,
+              0.048041272445978486,
+              0.06015448484017438
+            ],
+            [
+              -0.048814780021399856,
+              0.998742158983919,
+              0.011455004129318663
+            ],
+            [
+              -0.059528507087594884,
+              -0.014357437442373278,
+              0.9981233495084715
+            ]
+          ],
+          "scale": 8.423977070330935,
+          "offset": [
+            1.1901397262305777,
+            1.5395822536727772,
+            -2.06948613676893
+          ],
+          "reference_span": 6.993991497875528,
+          "fit_median_percent_span": 2.1720854359082504,
+          "anchor_frames": 62
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9989454661996516,
+              0.044973709988532916,
+              0.00923693504508733
+            ],
+            [
+              -0.044857491725297245,
+              0.998916115861779,
+              -0.012425735701849811
+            ],
+            [
+              -0.00978575471155514,
+              0.011998286606206023,
+              0.9998801328775571
+            ]
+          ],
+          "scale": 5.562087715338145,
+          "offset": [
+            1.3808039116386879,
+            1.549659621615108,
+            -1.2282813901145822
+          ],
+          "reference_span": 6.993991497875528,
+          "fit_median_percent_span": 5.397138604005853,
+          "anchor_frames": 62
+        }
+      },
+      "shared": {
+        "pairs": 61,
+        "supported_pairs": 61,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 2.9515827465382296,
+            "median_pair_under_4px_fraction": 0.6060606060606061
+          },
+          "vggt": {
+            "median_pair_error_px": 4.88452561956547,
+            "median_pair_under_4px_fraction": 0.4067796610169492
+          },
+          "da3": {
+            "median_pair_error_px": 4.422213733079355,
+            "median_pair_under_4px_fraction": 0.4634146341463415
+          }
+        }
+      },
+      "gap": {
+        "pairs": 106,
+        "supported_pairs": 102,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 5.8311605367017165,
+            "median_pair_under_4px_fraction": 0.3563689217758985
+          },
+          "da3": {
+            "median_pair_error_px": 4.846909486273068,
+            "median_pair_under_4px_fraction": 0.4211428963435549
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-013",
+      "start": 458.842956,
+      "end": 478.842956,
+      "loss_time": 468.842956,
+      "gap_end": 521.172911,
+      "source_frames": 350,
+      "coverage": {
+        "colmap": {
+          "total": 175,
+          "before": 175,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 187,
+          "before": 66,
+          "after_onset": 121,
+          "during_baseline_gap": 121,
+          "components": 1
+        },
+        "da3": {
+          "total": 350,
+          "before": 179,
+          "after_onset": 171,
+          "during_baseline_gap": 171,
+          "components": 1
+        }
+      },
+      "reference_component": "c-786b2cf81c4b0f7f",
+      "anchor_names": [
+        "frame_007335.jpg",
+        "frame_007341.jpg",
+        "frame_007344.jpg",
+        "frame_007346.jpg",
+        "frame_007349.jpg",
+        "frame_007354.jpg",
+        "frame_007358.jpg",
+        "frame_007361.jpg",
+        "frame_007365.jpg",
+        "frame_007368.jpg",
+        "frame_007370.jpg",
+        "frame_007372.jpg",
+        "frame_007374.jpg",
+        "frame_007376.jpg",
+        "frame_007378.jpg",
+        "frame_007380.jpg",
+        "frame_007385.jpg",
+        "frame_007395.jpg",
+        "frame_007396.jpg",
+        "frame_007398.jpg",
+        "frame_007401.jpg",
+        "frame_007404.jpg",
+        "frame_007407.jpg",
+        "frame_007409.jpg",
+        "frame_007411.jpg",
+        "frame_007412.jpg",
+        "frame_007414.jpg",
+        "frame_007416.jpg",
+        "frame_007423.jpg",
+        "frame_007425.jpg",
+        "frame_007427.jpg",
+        "frame_007430.jpg",
+        "frame_007434.jpg",
+        "frame_007437.jpg",
+        "frame_007440.jpg",
+        "frame_007446.jpg",
+        "frame_007449.jpg",
+        "frame_007450.jpg",
+        "frame_007451.jpg",
+        "frame_007453.jpg",
+        "frame_007458.jpg",
+        "frame_007460.jpg",
+        "frame_007463.jpg",
+        "frame_007468.jpg",
+        "frame_007472.jpg",
+        "frame_007475.jpg",
+        "frame_007477.jpg",
+        "frame_007479.jpg",
+        "frame_007481.jpg",
+        "frame_007484.jpg",
+        "frame_007488.jpg",
+        "frame_007492.jpg",
+        "frame_007494.jpg",
+        "frame_007496.jpg",
+        "frame_007498.jpg",
+        "frame_007500.jpg",
+        "frame_007502.jpg",
+        "frame_007504.jpg",
+        "frame_007506.jpg",
+        "frame_007508.jpg",
+        "frame_007512.jpg",
+        "frame_007513.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9807707114725239,
+              -0.02820380432071612,
+              -0.19311488016079525
+            ],
+            [
+              0.04976457043502787,
+              0.9929345568604417,
+              0.10772396818617298
+            ],
+            [
+              0.18871221223624257,
+              -0.11526279197641039,
+              0.9752446819843247
+            ]
+          ],
+          "scale": 9.504811175935354,
+          "offset": [
+            1.4290467309305912,
+            1.7518541946498598,
+            -1.6929490846458581
+          ],
+          "reference_span": 11.792952491310905,
+          "fit_median_percent_span": 2.4273409883857853,
+          "anchor_frames": 62
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9301303803105458,
+              0.18403071671088403,
+              -0.3177895072689428
+            ],
+            [
+              -0.183845441885163,
+              0.9824708544582224,
+              0.030852449468058242
+            ],
+            [
+              0.31789672713226896,
+              0.02972735183308962,
+              0.9476591979354092
+            ]
+          ],
+          "scale": 7.713455900677494,
+          "offset": [
+            0.3578951407349289,
+            1.6839053100915093,
+            -1.6417624126656294
+          ],
+          "reference_span": 11.792952491310905,
+          "fit_median_percent_span": 1.9482479011928375,
+          "anchor_frames": 62
+        }
+      },
+      "shared": {
+        "pairs": 61,
+        "supported_pairs": 60,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 3.2721992519071477,
+            "median_pair_under_4px_fraction": 0.5681717410582323
+          },
+          "vggt": {
+            "median_pair_error_px": 4.356538966538652,
+            "median_pair_under_4px_fraction": 0.4735191637630662
+          },
+          "da3": {
+            "median_pair_error_px": 4.103474432286879,
+            "median_pair_under_4px_fraction": 0.4814024390243902
+          }
+        }
+      },
+      "gap": {
+        "pairs": 129,
+        "supported_pairs": 91,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 11.054158957211598,
+            "median_pair_under_4px_fraction": 0.16666666666666666
+          },
+          "da3": {
+            "median_pair_error_px": 13.270193622907156,
+            "median_pair_under_4px_fraction": 0.15789473684210525
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-014",
+      "start": 520.059789,
+      "end": 540.059789,
+      "loss_time": 530.059789,
+      "gap_end": 533.546944,
+      "source_frames": 311,
+      "coverage": {
+        "colmap": {
+          "total": 220,
+          "before": 133,
+          "after_onset": 87,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 192,
+          "before": 97,
+          "after_onset": 95,
+          "during_baseline_gap": 36,
+          "components": 1
+        },
+        "da3": {
+          "total": 311,
+          "before": 159,
+          "after_onset": 152,
+          "during_baseline_gap": 53,
+          "components": 1
+        }
+      },
+      "reference_component": "c-c8c211093a341530",
+      "anchor_names": [
+        "frame_008422.jpg",
+        "frame_008423.jpg",
+        "frame_008425.jpg",
+        "frame_008428.jpg",
+        "frame_008431.jpg",
+        "frame_008434.jpg",
+        "frame_008435.jpg",
+        "frame_008436.jpg",
+        "frame_008439.jpg",
+        "frame_008441.jpg",
+        "frame_008444.jpg",
+        "frame_008447.jpg",
+        "frame_008449.jpg",
+        "frame_008451.jpg",
+        "frame_008452.jpg",
+        "frame_008454.jpg",
+        "frame_008456.jpg",
+        "frame_008459.jpg",
+        "frame_008461.jpg",
+        "frame_008462.jpg",
+        "frame_008464.jpg",
+        "frame_008466.jpg",
+        "frame_008469.jpg",
+        "frame_008472.jpg",
+        "frame_008474.jpg",
+        "frame_008476.jpg",
+        "frame_008481.jpg",
+        "frame_008482.jpg",
+        "frame_008484.jpg",
+        "frame_008486.jpg",
+        "frame_008488.jpg",
+        "frame_008489.jpg",
+        "frame_008490.jpg",
+        "frame_008491.jpg",
+        "frame_008493.jpg",
+        "frame_008495.jpg",
+        "frame_008496.jpg",
+        "frame_008497.jpg",
+        "frame_008498.jpg",
+        "frame_008499.jpg",
+        "frame_008500.jpg",
+        "frame_008501.jpg",
+        "frame_008503.jpg",
+        "frame_008505.jpg",
+        "frame_008507.jpg",
+        "frame_008509.jpg",
+        "frame_008512.jpg",
+        "frame_008517.jpg",
+        "frame_008519.jpg",
+        "frame_008524.jpg",
+        "frame_008525.jpg",
+        "frame_008526.jpg",
+        "frame_008528.jpg",
+        "frame_008530.jpg",
+        "frame_008532.jpg",
+        "frame_008534.jpg",
+        "frame_008535.jpg",
+        "frame_008536.jpg",
+        "frame_008537.jpg",
+        "frame_008538.jpg",
+        "frame_008539.jpg",
+        "frame_008540.jpg",
+        "frame_008541.jpg",
+        "frame_008542.jpg",
+        "frame_008543.jpg",
+        "frame_008544.jpg",
+        "frame_008546.jpg",
+        "frame_008547.jpg",
+        "frame_008548.jpg",
+        "frame_008549.jpg",
+        "frame_008550.jpg",
+        "frame_008551.jpg",
+        "frame_008552.jpg",
+        "frame_008553.jpg",
+        "frame_008554.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9443612859435253,
+              -0.27526734604825553,
+              -0.18002680303399893
+            ],
+            [
+              0.29213376767097887,
+              0.9534672572774546,
+              0.07455233789872621
+            ],
+            [
+              0.1511278379301803,
+              -0.122996249940221,
+              0.9808324521054514
+            ]
+          ],
+          "scale": 3.407891789518776,
+          "offset": [
+            9.275062979684739,
+            1.2575887629353057,
+            -3.294200968402841
+          ],
+          "reference_span": 9.633375404552288,
+          "fit_median_percent_span": 1.8560255512215955,
+          "anchor_frames": 75
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.5740991472870207,
+              0.2175429252997265,
+              -0.7893574885540465
+            ],
+            [
+              0.10381639001126722,
+              0.9369378376999159,
+              0.3337209095205642
+            ],
+            [
+              0.8121775213888538,
+              -0.2735371344776472,
+              0.5153106925073583
+            ]
+          ],
+          "scale": 3.6342669753050574,
+          "offset": [
+            7.934693212942273,
+            0.9268237199844371,
+            -2.624016757922451
+          ],
+          "reference_span": 9.633375404552288,
+          "fit_median_percent_span": 1.8094748797949232,
+          "anchor_frames": 75
+        }
+      },
+      "shared": {
+        "pairs": 126,
+        "supported_pairs": 125,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.758332256974371,
+            "median_pair_under_4px_fraction": 0.7469879518072289
+          },
+          "vggt": {
+            "median_pair_error_px": 4.253696209278712,
+            "median_pair_under_4px_fraction": 0.4851063829787234
+          },
+          "da3": {
+            "median_pair_error_px": 3.3353706099124976,
+            "median_pair_under_4px_fraction": 0.5833333333333334
+          }
+        }
+      },
+      "gap": {
+        "pairs": 65,
+        "supported_pairs": 47,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 11.70288287478714,
+            "median_pair_under_4px_fraction": 0.11864406779661017
+          },
+          "da3": {
+            "median_pair_error_px": 5.052302661378159,
+            "median_pair_under_4px_fraction": 0.45
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 53,
+          "frame_names": [
+            "frame_008608.jpg",
+            "frame_008609.jpg",
+            "frame_008610.jpg",
+            "frame_008611.jpg",
+            "frame_008613.jpg",
+            "frame_008615.jpg",
+            "frame_008619.jpg",
+            "frame_008621.jpg",
+            "frame_008623.jpg",
+            "frame_008625.jpg",
+            "frame_008629.jpg",
+            "frame_008631.jpg",
+            "frame_008633.jpg",
+            "frame_008635.jpg",
+            "frame_008637.jpg",
+            "frame_008638.jpg",
+            "frame_008639.jpg",
+            "frame_008640.jpg",
+            "frame_008641.jpg",
+            "frame_008642.jpg",
+            "frame_008644.jpg",
+            "frame_008646.jpg",
+            "frame_008648.jpg",
+            "frame_008651.jpg",
+            "frame_008653.jpg",
+            "frame_008654.jpg",
+            "frame_008656.jpg",
+            "frame_008659.jpg",
+            "frame_008661.jpg",
+            "frame_008664.jpg",
+            "frame_008666.jpg",
+            "frame_008670.jpg",
+            "frame_008674.jpg",
+            "frame_008675.jpg",
+            "frame_008676.jpg",
+            "frame_008677.jpg",
+            "frame_008678.jpg",
+            "frame_008679.jpg",
+            "frame_008680.jpg",
+            "frame_008681.jpg",
+            "frame_008682.jpg",
+            "frame_008683.jpg",
+            "frame_008684.jpg",
+            "frame_008685.jpg",
+            "frame_008686.jpg",
+            "frame_008687.jpg",
+            "frame_008688.jpg",
+            "frame_008689.jpg",
+            "frame_008690.jpg",
+            "frame_008691.jpg",
+            "frame_008692.jpg",
+            "frame_008693.jpg",
+            "frame_008694.jpg"
+          ],
+          "median_position_percent_pre_span": 18.61736513353231,
+          "median_orientation_deg": 20.342419081953636
+        },
+        "da3": {
+          "post_frames": 53,
+          "frame_names": [
+            "frame_008608.jpg",
+            "frame_008609.jpg",
+            "frame_008610.jpg",
+            "frame_008611.jpg",
+            "frame_008613.jpg",
+            "frame_008615.jpg",
+            "frame_008619.jpg",
+            "frame_008621.jpg",
+            "frame_008623.jpg",
+            "frame_008625.jpg",
+            "frame_008629.jpg",
+            "frame_008631.jpg",
+            "frame_008633.jpg",
+            "frame_008635.jpg",
+            "frame_008637.jpg",
+            "frame_008638.jpg",
+            "frame_008639.jpg",
+            "frame_008640.jpg",
+            "frame_008641.jpg",
+            "frame_008642.jpg",
+            "frame_008644.jpg",
+            "frame_008646.jpg",
+            "frame_008648.jpg",
+            "frame_008651.jpg",
+            "frame_008653.jpg",
+            "frame_008654.jpg",
+            "frame_008656.jpg",
+            "frame_008659.jpg",
+            "frame_008661.jpg",
+            "frame_008664.jpg",
+            "frame_008666.jpg",
+            "frame_008670.jpg",
+            "frame_008674.jpg",
+            "frame_008675.jpg",
+            "frame_008676.jpg",
+            "frame_008677.jpg",
+            "frame_008678.jpg",
+            "frame_008679.jpg",
+            "frame_008680.jpg",
+            "frame_008681.jpg",
+            "frame_008682.jpg",
+            "frame_008683.jpg",
+            "frame_008684.jpg",
+            "frame_008685.jpg",
+            "frame_008686.jpg",
+            "frame_008687.jpg",
+            "frame_008688.jpg",
+            "frame_008689.jpg",
+            "frame_008690.jpg",
+            "frame_008691.jpg",
+            "frame_008692.jpg",
+            "frame_008693.jpg",
+            "frame_008694.jpg"
+          ],
+          "median_position_percent_pre_span": 8.655373696050392,
+          "median_orientation_deg": 6.586260019875883
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-015",
+      "start": 529.280133,
+      "end": 549.280133,
+      "loss_time": 539.280133,
+      "gap_end": 544.642856,
+      "source_frames": 382,
+      "coverage": {
+        "colmap": {
+          "total": 206,
+          "before": 98,
+          "after_onset": 108,
+          "during_baseline_gap": 0,
+          "components": 3
+        },
+        "vggt": {
+          "total": 192,
+          "before": 99,
+          "after_onset": 93,
+          "during_baseline_gap": 63,
+          "components": 1
+        },
+        "da3": {
+          "total": 382,
+          "before": 151,
+          "after_onset": 231,
+          "during_baseline_gap": 115,
+          "components": 1
+        }
+      },
+      "reference_component": "c-c8c211093a341530",
+      "anchor_names": [
+        "frame_008544.jpg",
+        "frame_008546.jpg",
+        "frame_008547.jpg",
+        "frame_008548.jpg",
+        "frame_008549.jpg",
+        "frame_008550.jpg",
+        "frame_008551.jpg",
+        "frame_008552.jpg",
+        "frame_008553.jpg",
+        "frame_008554.jpg",
+        "frame_008608.jpg",
+        "frame_008609.jpg",
+        "frame_008610.jpg",
+        "frame_008611.jpg",
+        "frame_008613.jpg",
+        "frame_008615.jpg",
+        "frame_008619.jpg",
+        "frame_008621.jpg",
+        "frame_008623.jpg",
+        "frame_008625.jpg",
+        "frame_008629.jpg",
+        "frame_008631.jpg",
+        "frame_008633.jpg",
+        "frame_008635.jpg",
+        "frame_008637.jpg",
+        "frame_008638.jpg",
+        "frame_008639.jpg",
+        "frame_008640.jpg",
+        "frame_008641.jpg",
+        "frame_008642.jpg",
+        "frame_008644.jpg",
+        "frame_008646.jpg",
+        "frame_008648.jpg",
+        "frame_008651.jpg",
+        "frame_008653.jpg",
+        "frame_008654.jpg",
+        "frame_008656.jpg",
+        "frame_008659.jpg",
+        "frame_008661.jpg",
+        "frame_008664.jpg",
+        "frame_008666.jpg",
+        "frame_008670.jpg",
+        "frame_008674.jpg",
+        "frame_008675.jpg",
+        "frame_008676.jpg",
+        "frame_008677.jpg",
+        "frame_008678.jpg",
+        "frame_008679.jpg",
+        "frame_008680.jpg",
+        "frame_008681.jpg",
+        "frame_008682.jpg",
+        "frame_008683.jpg",
+        "frame_008684.jpg",
+        "frame_008685.jpg",
+        "frame_008686.jpg",
+        "frame_008687.jpg",
+        "frame_008688.jpg",
+        "frame_008689.jpg",
+        "frame_008690.jpg",
+        "frame_008691.jpg",
+        "frame_008692.jpg",
+        "frame_008693.jpg",
+        "frame_008694.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9880067781115559,
+              -0.11962669454128942,
+              0.09763227109283787
+            ],
+            [
+              0.11998149542707437,
+              0.9927735781206128,
+              0.0022501868094417492
+            ],
+            [
+              -0.09719592152299196,
+              0.00949086606791374,
+              0.9952200140172908
+            ]
+          ],
+          "scale": 3.9968045813965167,
+          "offset": [
+            -1.2369705712870587,
+            -0.09988511660639787,
+            0.16392131963849232
+          ],
+          "reference_span": 6.162672180949692,
+          "fit_median_percent_span": 2.866321373068804,
+          "anchor_frames": 63
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.03168766118663405,
+              -0.35261030461658804,
+              0.9352335885791951
+            ],
+            [
+              0.4553710228569806,
+              0.8380420805455543,
+              0.3005373567080589
+            ],
+            [
+              -0.889737671266486,
+              0.41635494990822164,
+              0.18712410859163606
+            ]
+          ],
+          "scale": 2.4027369621322845,
+          "offset": [
+            -0.8799404193745943,
+            -0.20842853453922472,
+            0.3442774585433881
+          ],
+          "reference_span": 6.162672180949692,
+          "fit_median_percent_span": 3.2084455406581727,
+          "anchor_frames": 63
+        }
+      },
+      "shared": {
+        "pairs": 82,
+        "supported_pairs": 81,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.6964729856026706,
+            "median_pair_under_4px_fraction": 0.7951807228915663
+          },
+          "vggt": {
+            "median_pair_error_px": 3.824948543460556,
+            "median_pair_under_4px_fraction": 0.5104602510460251
+          },
+          "da3": {
+            "median_pair_error_px": 3.1616192715049865,
+            "median_pair_under_4px_fraction": 0.6149068322981367
+          }
+        }
+      },
+      "gap": {
+        "pairs": 107,
+        "supported_pairs": 84,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 6.0813130084708344,
+            "median_pair_under_4px_fraction": 0.34293233082706764
+          },
+          "da3": {
+            "median_pair_error_px": 4.95874052159286,
+            "median_pair_under_4px_fraction": 0.4183292968900165
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-016",
+      "start": 539.250522,
+      "end": 559.250522,
+      "loss_time": 549.250522,
+      "gap_end": 590.629889,
+      "source_frames": 459,
+      "coverage": {
+        "colmap": {
+          "total": 108,
+          "before": 108,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 2
+        },
+        "vggt": {
+          "total": 212,
+          "before": 93,
+          "after_onset": 119,
+          "during_baseline_gap": 119,
+          "components": 1
+        },
+        "da3": {
+          "total": 459,
+          "before": 230,
+          "after_onset": 229,
+          "during_baseline_gap": 229,
+          "components": 1
+        }
+      },
+      "reference_component": "native-model-text-29",
+      "anchor_names": [
+        "frame_008822.jpg",
+        "frame_008826.jpg",
+        "frame_008836.jpg",
+        "frame_008839.jpg",
+        "frame_008843.jpg",
+        "frame_008846.jpg",
+        "frame_008857.jpg",
+        "frame_008860.jpg",
+        "frame_008863.jpg",
+        "frame_008870.jpg",
+        "frame_008874.jpg",
+        "frame_008877.jpg",
+        "frame_008880.jpg",
+        "frame_008885.jpg",
+        "frame_008892.jpg",
+        "frame_008899.jpg",
+        "frame_008908.jpg",
+        "frame_008911.jpg",
+        "frame_008914.jpg",
+        "frame_008916.jpg",
+        "frame_008918.jpg",
+        "frame_008920.jpg",
+        "frame_008924.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.8989658621094503,
+              -0.3477189413710733,
+              0.266368009666312
+            ],
+            [
+              0.39485517432411266,
+              0.9065513260942768,
+              -0.14917802943524489
+            ],
+            [
+              -0.18960424592104264,
+              0.23928274273020259,
+              0.9522573176196781
+            ]
+          ],
+          "scale": 33.02798992310345,
+          "offset": [
+            -15.773307199077486,
+            34.76414149404473,
+            -37.64371554521028
+          ],
+          "reference_span": 13.13178189549947,
+          "fit_median_percent_span": 2.9235434741137962,
+          "anchor_frames": 23
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9636061173299276,
+              -0.19168274719482464,
+              0.18633565164022128
+            ],
+            [
+              0.24199981588028155,
+              0.9216219405750421,
+              -0.30339592575478525
+            ],
+            [
+              -0.11357526032658143,
+              0.3374473634191531,
+              0.934467729332164
+            ]
+          ],
+          "scale": 10.265744545738471,
+          "offset": [
+            -9.541853288417403,
+            21.478867856988742,
+            -17.176557523513623
+          ],
+          "reference_span": 13.13178189549947,
+          "fit_median_percent_span": 6.021761874181506,
+          "anchor_frames": 23
+        }
+      },
+      "shared": {
+        "pairs": 21,
+        "supported_pairs": 21,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 2.3439367311655004,
+            "median_pair_under_4px_fraction": 0.7244094488188977
+          },
+          "vggt": {
+            "median_pair_error_px": 3.6982864821325383,
+            "median_pair_under_4px_fraction": 0.5486725663716814
+          },
+          "da3": {
+            "median_pair_error_px": 2.899600285460736,
+            "median_pair_under_4px_fraction": 0.628099173553719
+          }
+        }
+      },
+      "gap": {
+        "pairs": 188,
+        "supported_pairs": 166,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 5.863395449187921,
+            "median_pair_under_4px_fraction": 0.3530587764894042
+          },
+          "da3": {
+            "median_pair_error_px": 5.4806569648536305,
+            "median_pair_under_4px_fraction": 0.38095238095238093
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-017",
+      "start": 596.535178,
+      "end": 616.535178,
+      "loss_time": 606.535178,
+      "gap_end": 655.789011,
+      "source_frames": 373,
+      "coverage": {
+        "colmap": {
+          "total": 220,
+          "before": 220,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 189,
+          "before": 85,
+          "after_onset": 104,
+          "during_baseline_gap": 104,
+          "components": 1
+        },
+        "da3": {
+          "total": 373,
+          "before": 226,
+          "after_onset": 147,
+          "during_baseline_gap": 147,
+          "components": 1
+        }
+      },
+      "reference_component": "c-3d512b50d5aab54d",
+      "anchor_names": [
+        "frame_009945.jpg",
+        "frame_009951.jpg",
+        "frame_009955.jpg",
+        "frame_009961.jpg",
+        "frame_009974.jpg",
+        "frame_009976.jpg",
+        "frame_009978.jpg",
+        "frame_009979.jpg",
+        "frame_009980.jpg",
+        "frame_009986.jpg",
+        "frame_009988.jpg",
+        "frame_009991.jpg",
+        "frame_009993.jpg",
+        "frame_009994.jpg",
+        "frame_009995.jpg",
+        "frame_009996.jpg",
+        "frame_009997.jpg",
+        "frame_009999.jpg",
+        "frame_010000.jpg",
+        "frame_010002.jpg",
+        "frame_010004.jpg",
+        "frame_010014.jpg",
+        "frame_010018.jpg",
+        "frame_010021.jpg",
+        "frame_010024.jpg",
+        "frame_010027.jpg",
+        "frame_010031.jpg",
+        "frame_010034.jpg",
+        "frame_010037.jpg",
+        "frame_010042.jpg",
+        "frame_010045.jpg",
+        "frame_010049.jpg",
+        "frame_010051.jpg",
+        "frame_010052.jpg",
+        "frame_010054.jpg",
+        "frame_010058.jpg",
+        "frame_010060.jpg",
+        "frame_010063.jpg",
+        "frame_010073.jpg",
+        "frame_010076.jpg",
+        "frame_010080.jpg",
+        "frame_010083.jpg",
+        "frame_010088.jpg",
+        "frame_010090.jpg",
+        "frame_010091.jpg",
+        "frame_010094.jpg",
+        "frame_010096.jpg",
+        "frame_010098.jpg",
+        "frame_010100.jpg",
+        "frame_010102.jpg",
+        "frame_010106.jpg",
+        "frame_010108.jpg",
+        "frame_010110.jpg",
+        "frame_010112.jpg",
+        "frame_010114.jpg",
+        "frame_010116.jpg",
+        "frame_010119.jpg",
+        "frame_010122.jpg",
+        "frame_010124.jpg",
+        "frame_010126.jpg",
+        "frame_010128.jpg",
+        "frame_010130.jpg",
+        "frame_010131.jpg",
+        "frame_010132.jpg",
+        "frame_010134.jpg",
+        "frame_010135.jpg",
+        "frame_010136.jpg",
+        "frame_010138.jpg",
+        "frame_010141.jpg",
+        "frame_010143.jpg",
+        "frame_010145.jpg",
+        "frame_010148.jpg",
+        "frame_010150.jpg",
+        "frame_010153.jpg",
+        "frame_010158.jpg",
+        "frame_010161.jpg",
+        "frame_010163.jpg",
+        "frame_010166.jpg",
+        "frame_010169.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9977385417493273,
+              0.06700394116981331,
+              -0.0053173466727332854
+            ],
+            [
+              -0.06696201206631304,
+              0.9840219470744365,
+              -0.16497544246300994
+            ],
+            [
+              -0.0058216190150826574,
+              0.1649584176195539,
+              0.9862833412404857
+            ]
+          ],
+          "scale": 8.814307426024454,
+          "offset": [
+            -0.4733747150083993,
+            0.7899779943038814,
+            -0.7540421431218254
+          ],
+          "reference_span": 12.840416218195147,
+          "fit_median_percent_span": 2.617728809675983,
+          "anchor_frames": 79
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9987569485518005,
+              -0.004820833039940178,
+              -0.04961166484101936
+            ],
+            [
+              0.0001403997836165052,
+              0.9955801693056308,
+              -0.09391542351111318
+            ],
+            [
+              0.04984514025857866,
+              0.0937917163409008,
+              0.9943432887782923
+            ]
+          ],
+          "scale": 7.654517986079213,
+          "offset": [
+            -0.04659119739900357,
+            0.739461550182495,
+            -0.4177965510387487
+          ],
+          "reference_span": 12.840416218195147,
+          "fit_median_percent_span": 4.873611404770344,
+          "anchor_frames": 79
+        }
+      },
+      "shared": {
+        "pairs": 78,
+        "supported_pairs": 77,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 3.2013718138892506,
+            "median_pair_under_4px_fraction": 0.5824175824175825
+          },
+          "vggt": {
+            "median_pair_error_px": 4.026791780462798,
+            "median_pair_under_4px_fraction": 0.5
+          },
+          "da3": {
+            "median_pair_error_px": 3.7912501983140987,
+            "median_pair_under_4px_fraction": 0.5222929936305732
+          }
+        }
+      },
+      "gap": {
+        "pairs": 112,
+        "supported_pairs": 102,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 6.944715273851541,
+            "median_pair_under_4px_fraction": 0.290994623655914
+          },
+          "da3": {
+            "median_pair_error_px": 5.902436757178702,
+            "median_pair_under_4px_fraction": 0.3301282051282051
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-018",
+      "start": 667.746078,
+      "end": 687.746078,
+      "loss_time": 677.746078,
+      "gap_end": 695.998033,
+      "source_frames": 410,
+      "coverage": {
+        "colmap": {
+          "total": 212,
+          "before": 212,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 192,
+          "before": 77,
+          "after_onset": 115,
+          "during_baseline_gap": 115,
+          "components": 1
+        },
+        "da3": {
+          "total": 410,
+          "before": 220,
+          "after_onset": 190,
+          "during_baseline_gap": 190,
+          "components": 1
+        }
+      },
+      "reference_component": "c-dbc4cf81ec0f67cd",
+      "anchor_names": [
+        "frame_011373.jpg",
+        "frame_011377.jpg",
+        "frame_011379.jpg",
+        "frame_011381.jpg",
+        "frame_011383.jpg",
+        "frame_011385.jpg",
+        "frame_011387.jpg",
+        "frame_011389.jpg",
+        "frame_011392.jpg",
+        "frame_011396.jpg",
+        "frame_011400.jpg",
+        "frame_011401.jpg",
+        "frame_011403.jpg",
+        "frame_011407.jpg",
+        "frame_011415.jpg",
+        "frame_011420.jpg",
+        "frame_011427.jpg",
+        "frame_011432.jpg",
+        "frame_011451.jpg",
+        "frame_011456.jpg",
+        "frame_011460.jpg",
+        "frame_011464.jpg",
+        "frame_011468.jpg",
+        "frame_011470.jpg",
+        "frame_011472.jpg",
+        "frame_011474.jpg",
+        "frame_011476.jpg",
+        "frame_011482.jpg",
+        "frame_011493.jpg",
+        "frame_011494.jpg",
+        "frame_011497.jpg",
+        "frame_011501.jpg",
+        "frame_011507.jpg",
+        "frame_011510.jpg",
+        "frame_011512.jpg",
+        "frame_011514.jpg",
+        "frame_011516.jpg",
+        "frame_011517.jpg",
+        "frame_011525.jpg",
+        "frame_011527.jpg",
+        "frame_011529.jpg",
+        "frame_011531.jpg",
+        "frame_011536.jpg",
+        "frame_011538.jpg",
+        "frame_011540.jpg",
+        "frame_011542.jpg",
+        "frame_011543.jpg",
+        "frame_011545.jpg",
+        "frame_011546.jpg",
+        "frame_011548.jpg",
+        "frame_011550.jpg",
+        "frame_011553.jpg",
+        "frame_011555.jpg",
+        "frame_011557.jpg",
+        "frame_011559.jpg",
+        "frame_011561.jpg",
+        "frame_011562.jpg",
+        "frame_011564.jpg",
+        "frame_011568.jpg",
+        "frame_011570.jpg",
+        "frame_011572.jpg",
+        "frame_011574.jpg",
+        "frame_011581.jpg",
+        "frame_011583.jpg",
+        "frame_011585.jpg",
+        "frame_011587.jpg",
+        "frame_011589.jpg",
+        "frame_011591.jpg",
+        "frame_011592.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.9782856630657065,
+              -0.02364263252503083,
+              0.20590820131160129
+            ],
+            [
+              0.0172383639126081,
+              0.9993119028961425,
+              0.03284143023237878
+            ],
+            [
+              -0.20654297434119984,
+              -0.028578779844109725,
+              0.9780200678375233
+            ]
+          ],
+          "scale": 4.964138044107593,
+          "offset": [
+            1.376737783590488,
+            0.19043323906436627,
+            -1.3557616662369023
+          ],
+          "reference_span": 8.117016317852729,
+          "fit_median_percent_span": 1.23753359700233,
+          "anchor_frames": 69
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9909159923356803,
+              0.04228343676667997,
+              -0.12766208171807475
+            ],
+            [
+              -0.04155313276681253,
+              0.9991011551428725,
+              0.008379674781432325
+            ],
+            [
+              0.12790165476121884,
+              -0.002998794320573696,
+              0.9917823218539266
+            ]
+          ],
+          "scale": 3.592766032640946,
+          "offset": [
+            0.3077439380211082,
+            0.33047244106351803,
+            -0.47691561774604674
+          ],
+          "reference_span": 8.117016317852729,
+          "fit_median_percent_span": 3.2512192664620785,
+          "anchor_frames": 69
+        }
+      },
+      "shared": {
+        "pairs": 67,
+        "supported_pairs": 66,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 2.210735022345624,
+            "median_pair_under_4px_fraction": 0.7439063028050017
+          },
+          "vggt": {
+            "median_pair_error_px": 4.308725760763759,
+            "median_pair_under_4px_fraction": 0.4699404761904762
+          },
+          "da3": {
+            "median_pair_error_px": 3.5882385181291743,
+            "median_pair_under_4px_fraction": 0.56544901065449
+          }
+        }
+      },
+      "gap": {
+        "pairs": 125,
+        "supported_pairs": 116,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 5.552996248715809,
+            "median_pair_under_4px_fraction": 0.3663446054750402
+          },
+          "da3": {
+            "median_pair_error_px": 5.068700658928453,
+            "median_pair_under_4px_fraction": 0.3936613239068326
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    },
+    {
+      "id": "loss-019",
+      "start": 697.074911,
+      "end": 717.074911,
+      "loss_time": 707.074911,
+      "gap_end": 737.301333,
+      "source_frames": 406,
+      "coverage": {
+        "colmap": {
+          "total": 209,
+          "before": 209,
+          "after_onset": 0,
+          "during_baseline_gap": 0,
+          "components": 1
+        },
+        "vggt": {
+          "total": 149,
+          "before": 49,
+          "after_onset": 100,
+          "during_baseline_gap": 100,
+          "components": 1
+        },
+        "da3": {
+          "total": 406,
+          "before": 210,
+          "after_onset": 196,
+          "during_baseline_gap": 196,
+          "components": 1
+        }
+      },
+      "reference_component": "c-71ccb149bc997e2d",
+      "anchor_names": [
+        "frame_011980.jpg",
+        "frame_011983.jpg",
+        "frame_011989.jpg",
+        "frame_011993.jpg",
+        "frame_011995.jpg",
+        "frame_011997.jpg",
+        "frame_012000.jpg",
+        "frame_012002.jpg",
+        "frame_012005.jpg",
+        "frame_012009.jpg",
+        "frame_012014.jpg",
+        "frame_012021.jpg",
+        "frame_012025.jpg",
+        "frame_012028.jpg",
+        "frame_012031.jpg",
+        "frame_012034.jpg",
+        "frame_012037.jpg",
+        "frame_012040.jpg",
+        "frame_012043.jpg",
+        "frame_012046.jpg",
+        "frame_012061.jpg",
+        "frame_012067.jpg",
+        "frame_012075.jpg",
+        "frame_012079.jpg",
+        "frame_012083.jpg",
+        "frame_012086.jpg",
+        "frame_012110.jpg",
+        "frame_012137.jpg",
+        "frame_012139.jpg",
+        "frame_012142.jpg",
+        "frame_012146.jpg",
+        "frame_012155.jpg",
+        "frame_012157.jpg",
+        "frame_012158.jpg",
+        "frame_012159.jpg",
+        "frame_012160.jpg",
+        "frame_012162.jpg",
+        "frame_012164.jpg",
+        "frame_012169.jpg",
+        "frame_012173.jpg",
+        "frame_012176.jpg",
+        "frame_012179.jpg",
+        "frame_012180.jpg",
+        "frame_012182.jpg",
+        "frame_012183.jpg",
+        "frame_012184.jpg",
+        "frame_012185.jpg",
+        "frame_012188.jpg"
+      ],
+      "alignments": {
+        "colmap": {
+          "rotation": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "scale": 1.0,
+          "offset": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_span": 1.0
+        },
+        "vggt": {
+          "rotation": [
+            [
+              0.976039969073907,
+              -0.2173390695798434,
+              0.010474139791627755
+            ],
+            [
+              0.2071113021555722,
+              0.9131942138214976,
+              -0.3509718455408651
+            ],
+            [
+              0.06671497050610006,
+              0.3447318619987217,
+              0.936327429926767
+            ]
+          ],
+          "scale": 26.38147274625214,
+          "offset": [
+            0.9314494678202349,
+            1.702463354615981,
+            -3.0258997185325285
+          ],
+          "reference_span": 18.476325650330136,
+          "fit_median_percent_span": 2.2392956012207286,
+          "anchor_frames": 48
+        },
+        "da3": {
+          "rotation": [
+            [
+              0.9813103414622133,
+              -0.18833557024682943,
+              -0.0394933756358482
+            ],
+            [
+              0.1648931773608157,
+              0.9287737451656946,
+              -0.3319481440688337
+            ],
+            [
+              0.09919805340412284,
+              0.31923195841063556,
+              0.9424705315977475
+            ]
+          ],
+          "scale": 28.87463413967445,
+          "offset": [
+            1.2795900621777667,
+            0.5961853911455448,
+            -2.764938306715808
+          ],
+          "reference_span": 18.476325650330136,
+          "fit_median_percent_span": 7.2146256786973675,
+          "anchor_frames": 48
+        }
+      },
+      "shared": {
+        "pairs": 44,
+        "supported_pairs": 44,
+        "methods": {
+          "colmap": {
+            "median_pair_error_px": 1.857522700000804,
+            "median_pair_under_4px_fraction": 0.8516483516483516
+          },
+          "vggt": {
+            "median_pair_error_px": 4.309716049657881,
+            "median_pair_under_4px_fraction": 0.4554642231505188
+          },
+          "da3": {
+            "median_pair_error_px": 4.942532209782847,
+            "median_pair_under_4px_fraction": 0.4034202410989627
+          }
+        }
+      },
+      "gap": {
+        "pairs": 101,
+        "supported_pairs": 86,
+        "methods": {
+          "vggt": {
+            "median_pair_error_px": 7.0282365324568055,
+            "median_pair_under_4px_fraction": 0.29344484073299715
+          },
+          "da3": {
+            "median_pair_error_px": 6.024920345165356,
+            "median_pair_under_4px_fraction": 0.34752415458937197
+          }
+        }
+      },
+      "post_gap_agreement": {
+        "vggt": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        },
+        "da3": {
+          "post_frames": 0,
+          "reason": "No shared post-gap cameras in the same reference component, or insufficient pre-gap anchors"
+        }
+      },
+      "verdict": "comparison only; independent static-landmark recovery verdict not established"
+    }
+  ]
+}

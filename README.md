@@ -81,7 +81,7 @@ camera-path panel. All original frames are included; 35.2% have a pose in this
 snapshot and missing poses are labeled. [How to read and reproduce it](docs/camera-review.md).
 This is a diagnostic aid, not certification of camera accuracy or global alignment.
 
-**Tracking-loss comparison:** [19 clips, four camera methods, and current results](docs/camera-loss-benchmark.md). Each clip includes ten seconds before and after a loss onset. The first candidate-path video is available; no method has yet passed cross-gap recovery validation.
+**Compare camera tracking:** [Watch COLMAP, VGGT and DA3 side by side across all 19 loss windows](https://parhamdb.github.io/sepehrbaba/camera-comparison.html). Each window includes ten seconds before and after loss onset. [Findings, limitations and reproducible method](docs/three-camera-comparison.md). No cross-gap recovery is certified by these comparisons.
 
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
 reuses retained components, trains additional scenes and searches the remaining

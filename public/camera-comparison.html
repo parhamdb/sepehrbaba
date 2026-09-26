@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Camera comparison — Sepehr Baba reconstruction</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101820;color:#eef4f7}body{margin:0}main{max-width:1200px;margin:auto;padding:24px}a{color:#9ed9ff}h1{font-size:clamp(1.5rem,4vw,2.3rem);margin-bottom:.4rem}p{line-height:1.55;max-width:90ch}.muted{color:#b9c6ce}.notice{border-left:3px solid #ffca64;padding:10px 16px;background:#1e2529}nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:20px 0}select,button{font:inherit;padding:10px 14px;background:#20303a;color:white;border:1px solid #5f7888;border-radius:4px}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}video{display:block;width:100%;max-height:82vh;background:black;border:1px solid #314551}table{width:100%;border-collapse:collapse;margin:18px 0}th,td{text-align:left;padding:12px;border-bottom:1px solid #344751}th{color:#bacbd6;font-size:.9rem}td:first-child{font-weight:600}.table-wrap{overflow-x:auto}.small{font-size:.88rem}#status{min-height:1.5em}footer{margin-top:36px;border-top:1px solid #344751;padding-top:16px}.legend{display:flex;gap:20px;flex-wrap:wrap}.colmap{color:#90d6ff}.vggt{color:#ffca64}.da3{color:#87e3a4}
+</style>
+</head>
+<body><main>
+<a href="./">← 3D reconstruction</a>
+<h1>Compare the three camera estimates</h1>
+<p>The same source frames, from ten seconds before to ten seconds after each tracking loss. This footage contains victims and bodies. The comparison supports the reconstruction of the Sepehr Baba recording for human rights documentation.</p>
+<p class="notice"><strong>These are camera estimates, not verified recovery.</strong> COLMAP has gaps and disconnected components. The new methods can predict a camera through a gap even when the scene is obscured. More poses or a lower image error alone does not prove the connection is correct.</p>
+<nav aria-label="Choose comparison"><button id="previous" disabled>Previous</button><label for="clip">Loss window</label><select id="clip" disabled><option>Loading…</option></select><button id="next" disabled>Next</button><a id="download" href="#">Open video</a></nav>
+<p id="status" role="status">Loading comparison results…</p>
+<video id="video" controls playsinline preload="metadata" aria-label="Synchronized COLMAP, VGGT and DA3 camera comparison"></video>
+<p class="legend"><span class="colmap">Left: original COLMAP</span><span class="vggt">Middle: VGGT-SLAM</span><span class="da3">Right: DA3-Streaming</span></p>
+<p class="small muted">All source frames are included at their original timing. Videos are silent. Cyan dots are observed image points; short lines show disagreement with each camera's epipolar constraint. Moving people can cause disagreement. The lower plots share a coordinate view and scale fitted before the loss; disconnected COLMAP models are not joined. Lines connect estimated samples; missing poses are not interpolated.</p>
+<div class="table-wrap"><table><thead><tr><th>Method</th><th>Poses / source frames</th><th>Before loss</th><th>After onset</th><th>Shared-pair image error ↓</th><th>Error where COLMAP has no pose ↓</th></tr></thead><tbody id="results"></tbody></table></div>
+<p id="support" class="small muted"></p><p id="connection" class="notice"></p>
+<p class="small">Errors are median pairwise symmetric epipolar distances, in native 1080×1920 pixels, using identical frame pairs and tracked points for the participating methods. Only pairs with at least 20 usable tracked corners and finite constraints for every participating method contribute. This test includes moving objects and does not establish metric camera accuracy. It also cannot validate translation scale.</p>
+<footer><a href="https://github.com/parhamdb/sepehrbaba/blob/main/docs/three-camera-comparison.md">Method, findings and reproduction</a> · <a href="https://github.com/parhamdb/sepehrbaba/tree/main/evidence/camera-comparison">Evidence and camera data</a></footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),names={colmap:'Original COLMAP',vggt:'VGGT-SLAM',da3:'DA3-Streaming'};
+const base='https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-comparison/';
+let cases=[],index=0;
+const time=s=>`${Math.floor(s/60).toString().padStart(2,'0')}:${(s%60).toFixed(1).padStart(4,'0')}`;
+const error=x=>x==null?'Not available':`${x.toFixed(2)} px`;
+function show(i){
+ index=Math.max(0,Math.min(cases.length-1,i));const c=cases[index];$('clip').value=c.id;
+ $('previous').disabled=index===0;$('next').disabled=index===cases.length-1;
+ const url=base+c.id+'.mp4';$('video').src=url;$('download').href=url;
+ $('status').textContent=`${c.id} · source ${time(c.start)}–${time(c.end)} · loss at ${time(c.loss_time)} · ${c.source_frames} frames`;
+ $('results').replaceChildren();
+ for(const m of ['colmap','vggt','da3']){
+  const r=document.createElement('tr'),v=c.coverage[m];
+  const values=[names[m],`${v.total} / ${c.source_frames}`,v.before,v.after_onset,error(c.shared.methods[m]?.median_pair_error_px),error(c.gap.methods[m]?.median_pair_error_px)];
+  for(const value of values){const td=document.createElement('td');td.textContent=value;r.append(td)}$('results').append(r);
+ }
+ $('support').textContent=`Shared comparison: ${c.shared.supported_pairs}/${c.shared.pairs} supported pairs. COLMAP-absent comparison: ${c.gap.supported_pairs}/${c.gap.pairs} supported pairs. ${c.coverage.vggt.total===0?'VGGT failed camera validation; the shared comparison uses COLMAP and DA3 only.':''}`;
+ const post=Object.entries(c.post_gap_agreement).filter(([m,v])=>v.post_frames>0);
+ $('connection').textContent=post.length?`A same-component COLMAP reference exists after the gap. After pre-loss alignment: ${post.map(([m,v])=>`${names[m]} position disagreement ${v.median_position_percent_pre_span.toFixed(1)}% of the pre-loss reference span, orientation disagreement ${v.median_orientation_deg.toFixed(1)}° (${v.post_frames} poses)`).join('; ')}. COLMAP is a reference, not ground truth.`:'No usable same-component COLMAP reference spans this gap in this window. The comparison cannot establish a correct cross-gap connection.';
+ history.replaceState(null,'','#'+c.id);
+}
+$('clip').addEventListener('change',()=>show(cases.findIndex(c=>c.id===$('clip').value)));
+$('previous').addEventListener('click',()=>show(index-1));$('next').addEventListener('click',()=>show(index+1));
+fetch('./camera-comparison/report.json').then(r=>{if(!r.ok)throw Error('Report unavailable');return r.json()}).then(d=>{
+ cases=d.cases;$('clip').replaceChildren();for(const c of cases){const option=document.createElement('option');option.value=c.id;option.textContent=`${c.id} — ${time(c.start)}–${time(c.end)}`;$('clip').append(option)}
+ $('clip').disabled=false;const wanted=location.hash.slice(1)||'loss-008';show(Math.max(0,cases.findIndex(c=>c.id===wanted)));
+}).catch(e=>{$('status').textContent='Comparison could not load. Please use the evidence link below.';console.error(e)});
+</script></main></body></html>
