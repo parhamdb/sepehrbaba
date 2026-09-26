@@ -85,6 +85,8 @@ This is a diagnostic aid, not certification of camera accuracy or global alignme
 
 [Cross-gap connection checks](https://parhamdb.github.io/sepehrbaba/camera-connections.html): four local candidates, five camera-agreement failures, ten windows needing longer clips; **zero verified joins**.
 
+**Full-video DA3 camera run:** [Method and status](docs/da3-full-recording.md). All 12,793 frames are queued for one streaming reconstruction, followed automatically by COLMAP/VGGT cross-reference. Inference is running; no continuous trajectory is certified.
+
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
 reuses retained components, trains additional scenes and searches the remaining
 gaps in 37 overlapping windows. Its scope is all 12,793 native frames across
