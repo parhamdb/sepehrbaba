@@ -47,7 +47,9 @@ python3 scripts/process_recording.py \
 ```
 
 Run under a persistent supervisor with no runtime cutoff and an appropriate
-memory limit. There is one sequential writer and one campaign lock. SQLite's
+memory limit. For a systemd user service, ensure the user manager persists after
+logout (lingering or an equivalent established service arrangement). There is
+one sequential writer and one campaign lock. SQLite's
 backup API creates a private database including committed WAL content. The source
 video, native frames and existing reconstructions are not modified. The batch
 checks for at least 20 GiB disk and 8 GiB available memory before each subprocess.

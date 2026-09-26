@@ -1,0 +1,142 @@
+{
+  "attempts": [
+    {
+      "selection": {
+        "threshold_scene_units": 0.015,
+        "regions": [
+          {
+            "image": "frame_010163.jpg",
+            "reference_size": [
+              532,
+              946
+            ],
+            "polygon_pixels": [
+              [
+                265,
+                600
+              ],
+              [
+                390,
+                500
+              ],
+              [
+                455,
+                510
+              ],
+              [
+                420,
+                595
+              ],
+              [
+                380,
+                670
+              ],
+              [
+                375,
+                800
+              ],
+              [
+                260,
+                790
+              ],
+              [
+                190,
+                665
+              ]
+            ]
+          },
+          {
+            "image": "frame_010143.jpg",
+            "reference_size": [
+              532,
+              946
+            ],
+            "polygon_pixels": [
+              [
+                335,
+                525
+              ],
+              [
+                430,
+                505
+              ],
+              [
+                405,
+                595
+              ],
+              [
+                380,
+                670
+              ],
+              [
+                400,
+                715
+              ],
+              [
+                345,
+                700
+              ],
+              [
+                290,
+                565
+              ]
+            ]
+          }
+        ]
+      },
+      "status": "rejected",
+      "reason": "Each floor region needs at least ten reconstructed points; no orientation was fitted."
+    },
+    {
+      "selection": {
+        "threshold_scene_units": 0.015,
+        "regions": [
+          {
+            "image": "frame_010163.jpg",
+            "reference_size": [
+              532,
+              946
+            ],
+            "polygon_pixels": [
+              [
+                285,
+                310
+              ],
+              [
+                390,
+                270
+              ],
+              [
+                460,
+                255
+              ],
+              [
+                530,
+                277
+              ],
+              [
+                530,
+                344
+              ],
+              [
+                438,
+                384
+              ],
+              [
+                320,
+                410
+              ],
+              [
+                215,
+                350
+              ]
+            ]
+          }
+        ]
+      },
+      "status": "rejected",
+      "reason": "Each floor region needs at least ten reconstructed points; no orientation was fitted."
+    }
+  ],
+  "accepted_orientation": null
+}

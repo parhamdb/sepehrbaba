@@ -1,0 +1,541 @@
+{
+  "duration_seconds": 737.301333,
+  "source_frames": 12793,
+  "started": 1790395234.4289305,
+  "updated": 1790396116.7470894,
+  "finished": null,
+  "status": "running",
+  "window_count": 37,
+  "windows": [],
+  "components": [
+    {
+      "id": "6deb698bd2335e70",
+      "origin": "previously published",
+      "registered_frames": 689,
+      "start": 136.777533,
+      "end": 184.795589,
+      "status": "published-existing"
+    },
+    {
+      "id": "ad2074d6e6e51c50",
+      "origin": "previously published",
+      "registered_frames": 1041,
+      "start": 186.2622,
+      "end": 256.992944,
+      "status": "published-existing"
+    },
+    {
+      "id": "35730ed6893f800a",
+      "origin": "retained camera reconstruction",
+      "registered_frames": 1041,
+      "start": 186.2622,
+      "end": 256.992944,
+      "status": "reused-covered",
+      "covered_by": "ad2074d6e6e51c50",
+      "novel_frames": 0
+    },
+    {
+      "id": "3d512b50d5aab54d",
+      "origin": "retained camera reconstruction",
+      "registered_frames": 368,
+      "start": 590.629889,
+      "end": 606.465111,
+      "status": "trained-awaiting-review",
+      "quality": {
+        "selected_frames": 374,
+        "registered_frames": 368,
+        "fraction": 0.983957219251337,
+        "points": 15481,
+        "mean_reprojection_px": 1.2767399375605606,
+        "p95_reprojection_px": 2.5657457875116174,
+        "behind_camera_observations": 0,
+        "scope_seconds": [
+          590.629889,
+          606.465112
+        ],
+        "whole_recording_frames": 12793,
+        "whole_recording_fraction": 0.02876573125928242,
+        "visual_acceptance": "pending",
+        "accepted_geometry": true
+      },
+      "mask_visual_review": "pending; automated batch training is provisional",
+      "static_region_psnr_db": 23.49209767676905,
+      "held_out_views": 37,
+      "ply_bytes": 7906842,
+      "ply_sha256": "d2352a2cfc2fdf7cef17f9cbbd636f7be38a2f782c6e074b8fa996d57da8d76c"
+    },
+    {
+      "id": "e8cbf0be6e420c6c",
+      "origin": "retained camera reconstruction",
+      "registered_frames": 356,
+      "start": 69.733633,
+      "end": 93.542356,
+      "status": "pending",
+      "quality": {
+        "selected_frames": 358,
+        "registered_frames": 356,
+        "fraction": 0.994413407821229,
+        "points": 121861,
+        "mean_reprojection_px": 1.0817106796300227,
+        "p95_reprojection_px": 2.3364816239296644,
+        "behind_camera_observations": 0,
+        "scope_seconds": [
+          69.733633,
+          93.542357
+        ],
+        "whole_recording_frames": 12793,
+        "whole_recording_fraction": 0.027827718283436255,
+        "visual_acceptance": "pending",
+        "accepted_geometry": true
+      }
+    }
+  ],
+  "frames_in_trained_models": 2098,
+  "coverage_bins": [
+    {
+      "start": 0,
+      "end": 10,
+      "source_frames": 151,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 10,
+      "end": 20,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 20,
+      "end": 30,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 30,
+      "end": 40,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 40,
+      "end": 50,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 50,
+      "end": 60,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 60,
+      "end": 70,
+      "source_frames": 151,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 70,
+      "end": 80,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 80,
+      "end": 90,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 90,
+      "end": 100,
+      "source_frames": 154,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 100,
+      "end": 110,
+      "source_frames": 151,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 110,
+      "end": 120,
+      "source_frames": 153,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 120,
+      "end": 130,
+      "source_frames": 150,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 130,
+      "end": 140,
+      "source_frames": 152,
+      "frames_in_trained_models": 49
+    },
+    {
+      "start": 140,
+      "end": 150,
+      "source_frames": 150,
+      "frames_in_trained_models": 150
+    },
+    {
+      "start": 150,
+      "end": 160,
+      "source_frames": 150,
+      "frames_in_trained_models": 141
+    },
+    {
+      "start": 160,
+      "end": 170,
+      "source_frames": 152,
+      "frames_in_trained_models": 127
+    },
+    {
+      "start": 170,
+      "end": 180,
+      "source_frames": 149,
+      "frames_in_trained_models": 149
+    },
+    {
+      "start": 180,
+      "end": 190,
+      "source_frames": 152,
+      "frames_in_trained_models": 130
+    },
+    {
+      "start": 190,
+      "end": 200,
+      "source_frames": 149,
+      "frames_in_trained_models": 149
+    },
+    {
+      "start": 200,
+      "end": 210,
+      "source_frames": 151,
+      "frames_in_trained_models": 139
+    },
+    {
+      "start": 210,
+      "end": 220,
+      "source_frames": 151,
+      "frames_in_trained_models": 144
+    },
+    {
+      "start": 220,
+      "end": 230,
+      "source_frames": 150,
+      "frames_in_trained_models": 148
+    },
+    {
+      "start": 230,
+      "end": 240,
+      "source_frames": 150,
+      "frames_in_trained_models": 150
+    },
+    {
+      "start": 240,
+      "end": 250,
+      "source_frames": 150,
+      "frames_in_trained_models": 150
+    },
+    {
+      "start": 250,
+      "end": 260,
+      "source_frames": 150,
+      "frames_in_trained_models": 104
+    },
+    {
+      "start": 260,
+      "end": 270,
+      "source_frames": 154,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 270,
+      "end": 280,
+      "source_frames": 168,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 280,
+      "end": 290,
+      "source_frames": 149,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 290,
+      "end": 300,
+      "source_frames": 158,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 300,
+      "end": 310,
+      "source_frames": 154,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 310,
+      "end": 320,
+      "source_frames": 190,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 320,
+      "end": 330,
+      "source_frames": 197,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 330,
+      "end": 340,
+      "source_frames": 192,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 340,
+      "end": 350,
+      "source_frames": 205,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 350,
+      "end": 360,
+      "source_frames": 197,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 360,
+      "end": 370,
+      "source_frames": 168,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 370,
+      "end": 380,
+      "source_frames": 142,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 380,
+      "end": 390,
+      "source_frames": 143,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 390,
+      "end": 400,
+      "source_frames": 145,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 400,
+      "end": 410,
+      "source_frames": 171,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 410,
+      "end": 420,
+      "source_frames": 184,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 420,
+      "end": 430,
+      "source_frames": 185,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 430,
+      "end": 440,
+      "source_frames": 185,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 440,
+      "end": 450,
+      "source_frames": 173,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 450,
+      "end": 460,
+      "source_frames": 181,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 460,
+      "end": 470,
+      "source_frames": 176,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 470,
+      "end": 480,
+      "source_frames": 167,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 480,
+      "end": 490,
+      "source_frames": 145,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 490,
+      "end": 500,
+      "source_frames": 162,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 500,
+      "end": 510,
+      "source_frames": 172,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 510,
+      "end": 520,
+      "source_frames": 215,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 520,
+      "end": 530,
+      "source_frames": 160,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 530,
+      "end": 540,
+      "source_frames": 151,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 540,
+      "end": 550,
+      "source_frames": 238,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 550,
+      "end": 560,
+      "source_frames": 225,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 560,
+      "end": 570,
+      "source_frames": 153,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 570,
+      "end": 580,
+      "source_frames": 223,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 580,
+      "end": 590,
+      "source_frames": 237,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 590,
+      "end": 600,
+      "source_frames": 249,
+      "frames_in_trained_models": 229
+    },
+    {
+      "start": 600,
+      "end": 610,
+      "source_frames": 190,
+      "frames_in_trained_models": 139
+    },
+    {
+      "start": 610,
+      "end": 620,
+      "source_frames": 158,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 620,
+      "end": 630,
+      "source_frames": 189,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 630,
+      "end": 640,
+      "source_frames": 184,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 640,
+      "end": 650,
+      "source_frames": 218,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 650,
+      "end": 660,
+      "source_frames": 226,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 660,
+      "end": 670,
+      "source_frames": 233,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 670,
+      "end": 680,
+      "source_frames": 199,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 680,
+      "end": 690,
+      "source_frames": 206,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 690,
+      "end": 700,
+      "source_frames": 215,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 700,
+      "end": 710,
+      "source_frames": 204,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 710,
+      "end": 720,
+      "source_frames": 177,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 720,
+      "end": 730,
+      "source_frames": 224,
+      "frames_in_trained_models": 0
+    },
+    {
+      "start": 730,
+      "end": 737.301333,
+      "source_frames": 140,
+      "frames_in_trained_models": 0
+    }
+  ],
+  "warning": "Registered frames and temporal spans do not prove complete surfaces. New candidates require visual review; scenes are not joined."
+}

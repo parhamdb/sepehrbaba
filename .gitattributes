@@ -2,3 +2,4 @@ evidence/source/*.mp4 filter=lfs diff=lfs merge=lfs -text
 evidence/pilot/*.tar.gz filter=lfs diff=lfs merge=lfs -text
 public/assets/recovery-71s.ply filter=lfs diff=lfs merge=lfs -text
 public/assets/recovery-48s.ply filter=lfs diff=lfs merge=lfs -text
+evidence/full-recording/*.ply filter=lfs diff=lfs merge=lfs -text
