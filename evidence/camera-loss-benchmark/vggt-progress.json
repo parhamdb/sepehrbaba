@@ -38,7 +38,26 @@
       "finished": 1790411926.046529,
       "estimated_frames": 177,
       "input_frames": 302
+    },
+    "loss-006": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790412219.5466635,
+      "estimated_frames": 161,
+      "input_frames": 302
+    },
+    "loss-007": {
+      "execution": "execution-failed",
+      "recovery": "not_assessed",
+      "finished": 1790412323.3372123
+    },
+    "loss-008": {
+      "execution": "reused-completed",
+      "recovery": "not_assessed",
+      "finished": 1790412323.3717456,
+      "estimated_frames": 140,
+      "input_frames": 301
     }
   },
-  "active_case": "loss-006"
+  "active_case": "loss-009"
 }

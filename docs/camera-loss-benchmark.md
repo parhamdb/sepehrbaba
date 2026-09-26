@@ -113,8 +113,8 @@ reconstruction continues independently.
   [CUDA/PyTorch compatibility patch](../patches/camera-loss/mast3r-cuda13-torch210.patch)
   selects the actual GPU architecture and updates two removed C++ API usages.
   Its native extension built successfully on the third attempt. Complete runtime
-  setup and inference are still outstanding, including `lietorch` and retrieval
-  dependencies. A successful extension build is not a solver result.
+  setup and inference are still outstanding, including retrieval
+  dependencies (the later checkpoint below records `lietorch` completion). A successful extension build is not a solver result.
 - SAM: `facebookresearch/sam3` revision
   `2345a4ad109ac29c569da749c91d84f10dc08c40`, gated SAM 3.1 weights.
   `sam31_clip_masks.py` is an **experimental, currently blocked adapter**.
@@ -152,3 +152,31 @@ Validation so far: two inventory unit tests passed; independent read-only review
 reproduced all 19 inventories and verified camera/padding conventions; exported
 VGGT projections agree to numerical precision. The candidate video decodes to
 301 frames at 900×864. Recovery acceptance remains incomplete.
+
+## DA3 first clip completed; comparison still in progress
+
+[Watch the DA3 candidate for the same clip](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-loss-benchmark/da3-loss008/preview.mp4).
+DA3 exported **301/301 camera estimates** after processing 18 overlapping chunks.
+The [poses](../evidence/camera-loss-benchmark/da3-loss008/poses.json) passed finite
+matrix, proper-rotation and source-frame-count checks. Its diagnostic video
+contains 301 frames with verified original relative timing. A one-second contact
+sheet spanning the clip was inspected; complete playback and independent
+stationary-landmark validation remain outstanding. More estimated frames do not
+by themselves establish better camera accuracy.
+
+Both full clip inventories are now queued in independent sequential workers:
+`sepehr-vggt-loss-batch-20260926` and `sepehr-da3-loss-batch-20260926`.
+The first DA3 result is reused rather than rerun. The new
+`batch_da3_losses.py` stops before starting another clip if less than 24 GiB is
+free, retains failures and never treats completed inference as recovery acceptance.
+Estimated remaining time at launch: VGGT roughly 35–50 minutes; DA3 roughly
+2–3 hours, subject to shared GPU load. These jobs continue independently of the
+interactive session. Clean viewing-clip exports also continue locally; completed
+exports are recorded in their `exports.json` manifest.
+
+MASt3R's `lietorch` dependency now builds successfully as well. The next actual
+import blocker is the missing `asmk` retrieval package after GPU FAISS fallback;
+remaining dependencies and weights still need setup. SAM and masked COLMAP
+remain blocked as described above. Recovery acceptance ledger: **0 passed,
+0 failed, 38 blocked, 38 untested**, where untested includes candidates awaiting
+geometric review. This is an incomplete comparison, not a winner announcement.
