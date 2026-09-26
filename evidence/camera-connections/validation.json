@@ -50,20 +50,20 @@
     },
     {
       "id": "live-desktop",
-      "status": "untested",
-      "evidence": "Local discovery passed; live deployment pending"
+      "status": "passed",
+      "evidence": "page-final.json: actual published page; 19 rows and comparison links, zero accepted label, floor summary, expandable explanation and layout passed; no JS errors"
     },
     {
       "id": "live-mobile",
-      "status": "untested",
-      "evidence": "Local discovery passed; live deployment pending"
+      "status": "passed",
+      "evidence": "page-final.json: actual published page; 19 rows and comparison links, zero accepted label, floor summary, expandable explanation and layout passed; no JS errors"
     }
   ],
   "software_counts": {
-    "passed": 9,
+    "passed": 11,
     "failed": 0,
     "blocked": 0,
-    "untested": 2
+    "untested": 0
   },
   "reconstruction_counts": {
     "passed": 0,
@@ -79,11 +79,13 @@
   },
   "review": {
     "independent": "No high/medium findings remaining; full-K projection fix verified at 0891fab",
-    "visual": "Native floor anchor regions and representative loss-014 source contact sheet inspected; mobile result-page screenshot inspected; no continuous video review or certified cross-gap landmarks"
+    "visual": "Native floor anchor regions and representative loss-014 source contact sheet inspected; desktop/mobile discovery-page screenshots inspected; no continuous video review or certified cross-gap landmarks"
   },
   "source_hashes": {
     "scripts/check_camera_connections.py": "100672042d6793a3eea7c627354642a24905b63b56da1ff850130b281e2a5463",
     "scripts/check_static_floor_bridge.py": "99d0658f7cfb30d7eaa0e28dbb2ba1fa508dfdee581a4556d74e9034524c8d95",
     "scripts/check_camera_connections_page.mjs": "4448830f1cdaa409070c7d7649a7ae5c41d5d7521817c5320b4aaa8a480e27e7"
-  }
+  },
+  "deployed_commit": "3a5ee1ec058ac770a3a3c1ebd4c00d3e1124776c",
+  "deployment": "https://github.com/parhamdb/sepehrbaba/actions/runs/36256731332"
 }

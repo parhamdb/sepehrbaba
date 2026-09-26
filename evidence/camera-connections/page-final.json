@@ -1,0 +1,30 @@
+{
+  "receipts": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "passed",
+      "rows": 19,
+      "comparison_links": 19,
+      "zero_joins_label": true,
+      "floor_result": true,
+      "explanation": true,
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "passed",
+      "rows": 19,
+      "comparison_links": 19,
+      "zero_joins_label": true,
+      "floor_result": true,
+      "explanation": true,
+      "page_errors": []
+    }
+  ]
+}
