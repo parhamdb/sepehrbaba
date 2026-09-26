@@ -1,0 +1,9 @@
+{
+  "case": "loss-014",
+  "selection_basis": "Visual review of native RGB before fitting. Bare floor only; exclude people, bags, gloves and the wheeled trolley, which can move. Coordinates in native 1080x1920 pixels.",
+  "anchors": [
+    {"name": "frame_008485.jpg", "polygon": [[400,1250],[980,1260],[990,1610],[350,1610]]},
+    {"name": "frame_008494.jpg", "polygon": [[40,1500],[720,1500],[900,1860],[40,1860]]}
+  ],
+  "controls": ["frame_008488.jpg", "frame_008491.jpg"]
+}
