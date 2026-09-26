@@ -1,0 +1,1 @@
+{"torch": "2.10.0", "torchvision": "0.25.0", "numpy": "1.26.4", "open3d": "0.20.0", "einops": "0.8.2", "faiss-cpu": "1.13.2", "pypose": "0.9.5", "e3nn": "0.6.0", "av": "16.1.0", "huggingface-hub": "1.23.0"}

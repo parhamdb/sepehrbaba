@@ -77,9 +77,11 @@ moving visitors obscure much of the scene near the loss. The additional
 [image-motion diagnostic](../evidence/camera-loss-benchmark/vggt-loss008/epipolar.json)
 tracks corners independently with forward/backward Lucas–Kanade flow and compares
 them with epipolar lines from the supplied cameras, without fitting new cameras.
-The median of pairwise median residuals is about 3.5 native pixels before the
-loss, 8.1 during it, and 5.1 afterward; one pair during the loss reaches about
-184 pixels. These corners include moving people. This flags an interval for
+For pairs retaining at least 20 corners, the median of pairwise median residuals
+is about 3.5 native pixels before the loss, 7.3 during it, and 5.0 afterward.
+Only 14 of 22 pairs during the loss meet that minimum, compared with every pair
+before and afterward. One sparse pair reaches 184 pixels but retains only one
+corner, so its median is not robust. These corners include moving people. This flags an interval for
 inspection; it does not distinguish camera error from object motion and does
 not establish a valid cross-gap connection. Full moving-video inspection and
 stationary-landmark checks remain outstanding.
