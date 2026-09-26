@@ -51,7 +51,9 @@ def main():
     p.add_argument('--range-b',type=float,nargs=2,default=[186.2,225])
     p.add_argument('--stride',type=float,default=2)
     p.add_argument('--max-keypoints',type=int,default=2048)
-    p.add_argument('--features',choices=['sift','aliked'],default='sift')
+    p.add_argument('--features',choices=['sift','aliked','aliked-sift'],default='sift')
+    p.add_argument('--extractor-device',choices=['cpu','cuda'],default='cuda',
+                   help='CPU fallback when torchvision lacks CUDA deform_conv2d')
     a=p.parse_args()
     if a.stride<=0 or a.max_keypoints<100:raise ValueError('Invalid sampling')
     a.output.mkdir(parents=True,exist_ok=False)
@@ -61,14 +63,14 @@ def main():
     spec=importlib.util.spec_from_file_location('bridge_lightglue',a.lightglue/'lightglue/lightglue.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
     torch.set_num_threads(4)
-    matcher=module.LightGlue(features=a.features,depth_confidence=-1,width_confidence=-1).eval().cuda()
+    matcher=module.LightGlue(features='sift' if a.features=='sift' else 'aliked',depth_confidence=-1,width_confidence=-1).eval().cuda()
     extractor=None
-    if a.features=='aliked':
+    if a.features!='sift':
         sys.path.insert(0,str(a.lightglue))
         from lightglue import ALIKED
         from lightglue.utils import load_image
         from scipy.spatial import cKDTree
-        extractor=ALIKED(max_num_keypoints=8192).eval().cuda()
+        extractor=ALIKED(max_num_keypoints=8192).eval().to(a.extractor_device)
     frames=json.loads(a.frames.read_text());times={r['name']:r['timestamp'] for r in frames}
     db=sqlite3.connect(a.database.resolve().as_uri()+'?mode=ro',uri=True)
     features=[];metadata=[];skipped=[]
@@ -100,9 +102,28 @@ def main():
             if not len(keep):
                 skipped.append({'component':label,'image':name,'static_keypoints':0})
                 continue
+            if kp.shape[1]==6:
+                scales=(np.hypot(kp[:,2],kp[:,4])+np.hypot(kp[:,3],kp[:,5]))/2
+                angles=np.arctan2(kp[:,4],kp[:,2])
+            elif kp.shape[1]==4:scales,angles=kp[:,2],kp[:,3]
+            else:raise ValueError('Unsupported COLMAP keypoint format')
+            if a.features=='aliked-sift':
+                keep=keep[np.argsort(scales[keep],kind='stable')[-a.max_keypoints:]]
+                if len(keep)<30:
+                    skipped.append({'component':label,'image':name,'static_keypoints':len(keep)})
+                    continue
+                with torch.inference_mode():
+                    keypoints=torch.tensor(xy[keep],dtype=torch.float32,device=a.extractor_device)[None]
+                    descriptors=extractor.describe(keypoints,load_image(dataset/'images'/name).to(a.extractor_device),resize=1920)
+                feat={'keypoints':keypoints.cuda(),'descriptors':descriptors.cuda(),
+                      'image_size':torch.tensor(camera['size'],dtype=torch.float32,device='cuda')[None]}
+                cache[name]={'feat':feat,'indices':keep,'ids':ids[keep],'xyz':np.array([points[ids[i]][0] for i in keep]),'xy':xy[keep]}
+                meta[name]={'seconds':times[name],'R':rotation(row).tolist(),'t':list(map(float,row[5:8])),**camera,'static_keypoints':len(keep),'association':'exact reconstructed feature locations'}
+                print(f'Prepared {label} {name}: {len(keep)} exact static features',flush=True)
+                continue
             if extractor is not None:
                 with torch.inference_mode():
-                    learned=extractor.extract(load_image(dataset/'images'/name).cuda(),resize=1920)
+                    learned=extractor.extract(load_image(dataset/'images'/name).to(a.extractor_device),resize=1920)
                 lxy=learned['keypoints'][0].cpu().numpy()
                 distance,nearest=cKDTree(xy[keep]).query(lxy)
                 chosen=np.flatnonzero(distance<=2.)
@@ -114,16 +135,12 @@ def main():
                 if len(keep)<30:
                     skipped.append({'component':label,'image':name,'static_keypoints':len(keep)})
                     continue
-                feat={k:v[:,chosen] for k,v in learned.items() if k in ('keypoints','descriptors')}
-                feat['image_size']=learned['image_size']
+                feat={k:v[:,chosen].cuda() for k,v in learned.items() if k in ('keypoints','descriptors')}
+                feat['image_size']=learned['image_size'].cuda()
                 cache[name]={'feat':feat,'indices':keep,'ids':ids[keep],'xyz':np.array([points[ids[i]][0] for i in keep]),'xy':lxy[chosen]}
                 meta[name]={'seconds':times[name],'R':rotation(row).tolist(),'t':list(map(float,row[5:8])),**camera,'static_keypoints':len(keep),'association_max_px':2.0}
+                print(f'Prepared {label} {name}: {len(keep)} associated static features',flush=True)
                 continue
-            if kp.shape[1]==6:
-                scales=(np.hypot(kp[:,2],kp[:,4])+np.hypot(kp[:,3],kp[:,5]))/2
-                angles=np.arctan2(kp[:,4],kp[:,2])
-            elif kp.shape[1]==4:scales,angles=kp[:,2],kp[:,3]
-            else:raise ValueError('Unsupported COLMAP keypoint format')
             keep=keep[np.argsort(scales[keep],kind='stable')[-a.max_keypoints:]]
             if len(keep)<30:
                 skipped.append({'component':label,'image':name,'static_keypoints':len(keep)})
@@ -140,7 +157,10 @@ def main():
         if len(cache)<2:raise ValueError('Need at least two usable static views per component')
         features.append(cache);metadata.append(meta)
     db.close()
-    report={'lightglue_revision':revision,'features':a.features,'normalization':'COLMAP L1_ROOT, L2 renormalized after byte quantization' if a.features=='sift' else 'ALIKED descriptors; nearest reconstructed point within 2px', 'max_keypoints':a.max_keypoints,'cameras_a':metadata[0],'cameras_b':metadata[1], 'skipped_views':skipped,'pairs':[]}
+    normalization={'sift':'COLMAP L1_ROOT, L2 renormalized after byte quantization',
+                   'aliked':'ALIKED descriptors; nearest reconstructed point within 2px',
+                   'aliked-sift':'ALIKED describe at exact reconstructed feature locations'}
+    report={'lightglue_revision':revision,'features':a.features,'normalization':normalization[a.features], 'max_keypoints':a.max_keypoints,'cameras_a':metadata[0],'cameras_b':metadata[1], 'skipped_views':skipped,'pairs':[]}
     left,right=features
     with torch.inference_mode():
         aa=list(left)
