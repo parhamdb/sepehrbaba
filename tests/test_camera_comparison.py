@@ -40,6 +40,17 @@ class CameraComparisonTests(unittest.TestCase):
         case=dict(frames=fs,methods=dict(colmap=ps,da3=ps))
         self.assertEqual([(a['name'],b['name']) for a,b in m.pair_schedule(case,['colmap','da3'])],[('0','1')])
 
+    def test_zero_distortion_skew_camera_preserves_observations(self):
+        a,b=pose([0,0,0]),pose([.2,.1,0])
+        X=np.array([[.1,.2,3],[.5,-.3,4],[-.2,.1,2],[.7,.4,5]],float)
+        pixels=[]
+        for p in [a,b]:
+            p['K']=[[800.,200.,540],[0,900.,960],[0,0,1.]];p['dist']=[0.,0.,0.,0.]
+            h=(X+np.array(p['t']))@np.array(p['K']).T;pixels.append(h[:,:2]/h[:,2:])
+        error,foot=m.epipolar(a,b,*pixels)
+        self.assertLess(max(error),1e-9)
+        np.testing.assert_allclose(foot,pixels[1],atol=1e-9)
+
     def test_zero_translation_cannot_score_epipolar_constraint(self):
         p=pose([0,0,0]);self.assertIsNone(m.essential(p,p))
 

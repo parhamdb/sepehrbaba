@@ -56,8 +56,13 @@ def epipolar(first,second,x,y):
     E=essential(first,second)
     if E is None:return None,None
     K1=np.asarray(first['K']);K2=np.asarray(second['K'])
-    ux=cv2.undistortPoints(np.asarray(x,np.float64).reshape(-1,1,2),K1,np.asarray(first['dist']),P=K1).reshape(-1,2)
-    uy=cv2.undistortPoints(np.asarray(y,np.float64).reshape(-1,1,2),K2,np.asarray(second['dist']),P=K2).reshape(-1,2)
+    def undistort(points,K,dist):
+        # OpenCV assumes zero input skew. VGGT's general projective cameras
+        # have skew but no distortion, so preserve their pixel coordinates.
+        if not np.any(dist):return np.asarray(points,np.float64)
+        if abs(K[0,1])>1e-10:raise ValueError('Distorted skew camera requires a general calibration model')
+        return cv2.undistortPoints(np.asarray(points,np.float64).reshape(-1,1,2),K,np.asarray(dist),P=K).reshape(-1,2)
+    ux=undistort(x,K1,first['dist']);uy=undistort(y,K2,second['dist'])
     F=np.linalg.inv(K2).T@E@np.linalg.inv(K1)
     xh=np.c_[ux,np.ones(len(ux))];yh=np.c_[uy,np.ones(len(uy))]
     l2=xh@F.T;l1=yh@F;v=np.sum(yh*l2,axis=1)
@@ -65,7 +70,8 @@ def epipolar(first,second,x,y):
     valid=(n1>1e-12)&(n2>1e-12)
     error=np.full(len(x),np.nan);error[valid]=abs(v[valid])*.5*(1/n1[valid]+1/n2[valid])
     foot=uy.copy();foot[valid]-=(v[valid]/n2[valid]**2)[:,None]*l2[valid,:2]
-    normfoot=np.c_[(foot[:,0]-K2[0,2])/K2[0,0],(foot[:,1]-K2[1,2])/K2[1,1],np.ones(len(foot))]
+    if not np.any(second['dist']):return error,foot
+    normfoot=np.c_[foot,np.ones(len(foot))]@np.linalg.inv(K2).T
     rawfoot,_=cv2.projectPoints(normfoot,np.zeros(3),np.zeros(3),K2,np.asarray(second['dist']))
     return error,rawfoot.reshape(-1,2)
 
