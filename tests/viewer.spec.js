@@ -131,6 +131,10 @@ for (const mobile of [false,true]) {
     }
     expect(await position()).not.toEqual(before);
     await page.screenshot({path:`test-results/expanded-${mobile?'mobile':'desktop'}-moved.png`});
+    if(!mobile){
+      await page.keyboard.press('Escape');
+      await expect.poll(()=>page.evaluate(()=>document.pointerLockElement===null)).toBe(true);
+    }
     await page.getByRole('button',{name:'Reset view',exact:true}).click();
     await expect.poll(async()=>Math.hypot(...(await position()).map((v,i)=>v-authored[i])),{timeout:20000}).toBeLessThan(.05);
     expect(errors).toEqual([]);
