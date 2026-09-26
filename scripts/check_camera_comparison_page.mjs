@@ -12,13 +12,20 @@ try{
   const page=await browser.newPage({viewport});const errors=[];page.on('pageerror',e=>errors.push(e.message));
   if(process.env.COMPARISON_MEDIA_ROOT)await page.route('https://media.githubusercontent.com/**/camera-comparison/*.mp4',async route=>{
    const name=new URL(route.request().url()).pathname.split('/').pop();
-   await route.fulfill({status:200,contentType:'video/mp4',path:join(process.env.COMPARISON_MEDIA_ROOT,name)});
+   const buffer=await readFile(join(process.env.COMPARISON_MEDIA_ROOT,name));
+   const range=route.request().headers().range?.match(/^bytes=(\d+)-(\d*)$/);
+   const start=range?Number(range[1]):0,end=range&&range[2]?Number(range[2]):buffer.length-1;
+   try{await route.fulfill({status:range?206:200,contentType:'video/mp4',
+    headers:{'accept-ranges':'bytes',...(range?{'content-range':`bytes ${start}-${end}/${buffer.length}`}:{})},body:buffer.subarray(start,end+1)});
+   }catch(error){if(!page.isClosed())throw error} 
   });
   await page.goto(base+'#loss-008');await page.waitForFunction(()=>document.querySelectorAll('#clip option').length===19&&!document.getElementById('clip').disabled);
   await page.waitForFunction(()=>document.getElementById('video').readyState>=2,{},{timeout:45000});
   await page.locator('video').evaluate(v=>v.play());
   await page.waitForFunction(()=>document.getElementById('video').currentTime>.3);
-  await page.locator('video').evaluate(v=>v.pause());
+  await page.locator('video').evaluate(v=>{v.pause();v.currentTime=10.5});
+  await page.waitForFunction(()=>{const v=document.getElementById('video');return !v.seeking&&Math.abs(v.currentTime-10.5)<.1});
+  await page.locator('video').evaluate(v=>{v.preload='none'});
   for(const c of report.cases){
    await page.selectOption('#clip',c.id);
    const values=await page.locator('#results tr').evaluateAll(rows=>rows.map(r=>[...r.children].map(x=>x.textContent)));
@@ -32,9 +39,11 @@ try{
   const fits=await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1);
   if(!fits)throw Error('Horizontal page overflow');
   await page.selectOption('#clip','loss-008');
+  await page.locator('video').evaluate(v=>{v.preload='metadata';v.load()});
+  await page.waitForFunction(()=>document.getElementById('video').readyState>=2,{},{timeout:45000});
   if(process.env.COMPARISON_SCREENSHOT_PREFIX)await page.screenshot({path:process.env.COMPARISON_SCREENSHOT_PREFIX+'-'+viewport.width+'.png',fullPage:true});
   if(errors.length)throw Error(errors.join('\n'));
-  receipts.push({viewport,case_options:19,coverage_rows_checked:57,playback:'passed',missing_pose_semantics:'passed',layout:'passed',page_errors:errors});await page.close();
+  receipts.push({viewport,case_options:19,coverage_rows_checked:57,playback:'passed',seeking:'passed',missing_pose_semantics:'passed',layout:'passed',page_errors:errors});await page.close();
  }
  console.log(JSON.stringify({page:base,receipts}));
  if(process.env.COMPARISON_RECEIPT)await writeFile(process.env.COMPARISON_RECEIPT,JSON.stringify({receipts},null,2)+'\n');

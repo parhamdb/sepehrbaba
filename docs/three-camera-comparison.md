@@ -150,3 +150,7 @@ published artifacts. The acceptance inventory is seven focused geometry checks,
 19 video frame/timing checks, artifact/privacy checks, and desktop/mobile viewer
 selection and playback. One discovery pass, focused fixes and one final pass
 are the validation budget; unrelated 3D viewer tests are outside this change.
+
+## Delivery evidence
+
+All 19 comparison videos contain **6,504 frame appearances** in total (overlapping windows can repeat source frames). Each passed frame-count and relative-timestamp verification. [Artifact hashes](../evidence/camera-comparison/artifacts.json), [representative inspection](../evidence/camera-comparison/inspection.json), and the [validation ledger](../evidence/camera-comparison/validation.json) record the checked scope. Browser checks exercise every clip selector on desktop and mobile, playback, seeking, failed-method labels and missing-reference warnings.

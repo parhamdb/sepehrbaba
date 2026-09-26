@@ -1,0 +1,50 @@
+{
+  "scope": "Three-method comparison delivery only; geometric recovery acceptance is separate",
+  "status": "awaiting live final validation",
+  "budget": "one discovery pass, focused fixes, one final pass",
+  "checks": [
+    {
+      "id": "geometry",
+      "variants": 7,
+      "status": "passed",
+      "evidence": "tests/test_camera_comparison.py; seven focused checks passed"
+    },
+    {
+      "id": "data",
+      "variants": 1,
+      "status": "passed",
+      "evidence": "data-check.json; 3394 paired observations"
+    },
+    {
+      "id": "videos",
+      "variants": 19,
+      "status": "passed",
+      "evidence": "render-receipts.json and artifacts.json; 6504 frame appearances"
+    },
+    {
+      "id": "representative-visual-review",
+      "variants": 1,
+      "status": "passed",
+      "evidence": "inspection.json"
+    },
+    {
+      "id": "browser",
+      "variants": 2,
+      "status": "passed",
+      "evidence": "page-discovery.json; desktop and mobile"
+    },
+    {
+      "id": "publication",
+      "variants": 1,
+      "status": "untested",
+      "evidence": "awaiting deployment and live media check"
+    }
+  ],
+  "counts": {
+    "passed": 30,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 1
+  },
+  "final_regression": null
+}

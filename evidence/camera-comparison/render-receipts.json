@@ -1,0 +1,135 @@
+[
+  {
+    "id": "loss-001",
+    "frames": 300,
+    "max_timing_error_seconds": 5.329070518200751e-15,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-002",
+    "frames": 300,
+    "max_timing_error_seconds": 5.329070518200751e-15,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-003",
+    "frames": 301,
+    "max_timing_error_seconds": 5.329070518200751e-15,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-004",
+    "frames": 306,
+    "max_timing_error_seconds": 1.2434497875801753e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-005",
+    "frames": 302,
+    "max_timing_error_seconds": 2.1316282072803006e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-006",
+    "frames": 302,
+    "max_timing_error_seconds": 2.1316282072803006e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-007",
+    "frames": 301,
+    "max_timing_error_seconds": 2.4868995751603507e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-008",
+    "frames": 301,
+    "max_timing_error_seconds": 1.7763568394002505e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-009",
+    "frames": 305,
+    "max_timing_error_seconds": 3.907985046680551e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-010",
+    "frames": 327,
+    "max_timing_error_seconds": 5.684341886080802e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-011",
+    "frames": 402,
+    "max_timing_error_seconds": 4.618527782440651e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-012",
+    "frames": 366,
+    "max_timing_error_seconds": 3.552713678800501e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-013",
+    "frames": 350,
+    "max_timing_error_seconds": 5.684341886080802e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-014",
+    "frames": 311,
+    "max_timing_error_seconds": 1.0347278589506459e-13,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-015",
+    "frames": 382,
+    "max_timing_error_seconds": 6.483702463810914e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-016",
+    "frames": 459,
+    "max_timing_error_seconds": 7.827072323607354e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-017",
+    "frames": 373,
+    "max_timing_error_seconds": 6.394884621840902e-14,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-018",
+    "frames": 410,
+    "max_timing_error_seconds": 1.0302869668521453e-13,
+    "width": 1440,
+    "height": 1120
+  },
+  {
+    "id": "loss-019",
+    "frames": 406,
+    "max_timing_error_seconds": 9.281464485866309e-14,
+    "width": 1440,
+    "height": 1120
+  }
+]

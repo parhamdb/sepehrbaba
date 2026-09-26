@@ -1,0 +1,142 @@
+{
+  "config": {
+    "inventory": "306ca7b35b1a4b5ac5f8064f763ec1ddcb03925247e88399b0a1222fabcb4009",
+    "adapter": "b7d437e3faa933d291ee13749a03fd0dd9025d14fbaf7d2270c49dccb227967f"
+  },
+  "trials": {
+    "loss-001": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790412874.1193726,
+      "input_frames": 300,
+      "estimated_frames": 300
+    },
+    "loss-002": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790413351.8371465,
+      "input_frames": 300,
+      "estimated_frames": 300
+    },
+    "loss-003": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790413896.213044,
+      "input_frames": 301,
+      "estimated_frames": 301
+    },
+    "loss-004": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414102.6820617,
+      "input_frames": 306,
+      "estimated_frames": 306
+    },
+    "loss-005": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414312.3132024,
+      "input_frames": 302,
+      "estimated_frames": 302
+    },
+    "loss-006": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414523.1476068,
+      "input_frames": 302,
+      "estimated_frames": 302
+    },
+    "loss-007": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414726.687636,
+      "input_frames": 301,
+      "estimated_frames": 301
+    },
+    "loss-008": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414726.695905,
+      "input_frames": 301,
+      "estimated_frames": 301
+    },
+    "loss-009": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414937.4445543,
+      "input_frames": 305,
+      "estimated_frames": 305
+    },
+    "loss-010": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790415099.6335974,
+      "input_frames": 327,
+      "estimated_frames": 327
+    },
+    "loss-011": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790415300.8956482,
+      "input_frames": 402,
+      "estimated_frames": 402
+    },
+    "loss-012": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790415881.0521386,
+      "input_frames": 366,
+      "estimated_frames": 366
+    },
+    "loss-013": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790416103.0690255,
+      "input_frames": 350,
+      "estimated_frames": 350
+    },
+    "loss-014": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790416258.894571,
+      "input_frames": 311,
+      "estimated_frames": 311
+    },
+    "loss-015": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790416442.8822334,
+      "input_frames": 382,
+      "estimated_frames": 382
+    },
+    "loss-016": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790416660.5510938,
+      "input_frames": 459,
+      "estimated_frames": 459
+    },
+    "loss-017": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790416848.0770466,
+      "input_frames": 373,
+      "estimated_frames": 373
+    },
+    "loss-018": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790417060.6279452,
+      "input_frames": 410,
+      "estimated_frames": 410
+    },
+    "loss-019": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790417272.391773,
+      "input_frames": 406,
+      "estimated_frames": 406
+    }
+  },
+  "finished": 1790417272.39772
+}

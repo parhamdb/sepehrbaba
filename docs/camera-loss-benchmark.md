@@ -1,5 +1,7 @@
 # Camera recovery at tracking losses
 
+**Current checkpoint:** VGGT and DA3 finished all 19 attempts (18 and 19 camera exports respectively). [The synchronized three-camera comparison and findings are published here](three-camera-comparison.md). The setup notes and run estimates below describe earlier checkpoints. The recovery ledger now has 0 passed, 1 failed, 38 blocked and 37 untested entries; producing and comparing estimates does not certify recovery.
+
 The requested comparison cuts ten seconds before and ten seconds after each
 loss onset and gives the same native images and timestamps to each method.
 The frozen [inventory](../evidence/camera-loss-benchmark/inventory.json) contains

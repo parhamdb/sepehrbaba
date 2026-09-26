@@ -57,7 +57,84 @@
       "finished": 1790412323.3717456,
       "estimated_frames": 140,
       "input_frames": 301
+    },
+    "loss-009": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790412686.6050975,
+      "estimated_frames": 194,
+      "input_frames": 305
+    },
+    "loss-010": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790413228.625139,
+      "estimated_frames": 236,
+      "input_frames": 327
+    },
+    "loss-011": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790413782.611424,
+      "estimated_frames": 215,
+      "input_frames": 402
+    },
+    "loss-012": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790413941.1454885,
+      "estimated_frames": 167,
+      "input_frames": 366
+    },
+    "loss-013": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414083.3075461,
+      "estimated_frames": 187,
+      "input_frames": 350
+    },
+    "loss-014": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414229.769411,
+      "estimated_frames": 192,
+      "input_frames": 311
+    },
+    "loss-015": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414346.373135,
+      "estimated_frames": 192,
+      "input_frames": 382
+    },
+    "loss-016": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414505.5747452,
+      "estimated_frames": 212,
+      "input_frames": 459
+    },
+    "loss-017": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414650.287521,
+      "estimated_frames": 189,
+      "input_frames": 373
+    },
+    "loss-018": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414774.3813412,
+      "estimated_frames": 192,
+      "input_frames": 410
+    },
+    "loss-019": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790414901.535237,
+      "estimated_frames": 149,
+      "input_frames": 406
     }
   },
-  "active_case": "loss-009"
+  "finished": 1790414901.5395055
 }

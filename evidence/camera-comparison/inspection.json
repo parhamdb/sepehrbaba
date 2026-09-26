@@ -1,0 +1,27 @@
+{
+  "scope": "Representative rendered-artifact and desktop/mobile layout inspection; not continuous playback or static-landmark certification",
+  "examples": [
+    {
+      "case": "loss-001",
+      "video_time_seconds": 10.5,
+      "observation": "COLMAP gap explicit; same source image and shared VGGT/DA3 point observations"
+    },
+    {
+      "case": "loss-007",
+      "video_time_seconds": 10.5,
+      "observation": "VGGT failure explicit; blur/occlusion in source; no invented original pose"
+    },
+    {
+      "case": "loss-008",
+      "video_time_seconds": 10.5,
+      "observation": "Coat occlusion; 19-corner sparse comparison explicitly flagged"
+    },
+    {
+      "case": "loss-014",
+      "video_time_seconds": 18.5,
+      "observation": "Wall and floor visible; DA3 path closer to reference at this post-gap sample"
+    }
+  ],
+  "desktop": "1440x1000 layout inspected",
+  "mobile": "390x844 layout inspected; table scrolls horizontally within viewport"
+}

@@ -2,9 +2,9 @@
   "inventory": "inventory.json",
   "counts": {
     "passed": 0,
-    "failed": 0,
+    "failed": 1,
     "blocked": 38,
-    "untested": 38
+    "untested": 37
   },
   "results": [
     {
@@ -19,18 +19,23 @@
       "case": "loss-001",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 147,
       "input_frames": 300,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-001",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "running"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 300,
+      "estimated_frames": 300,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-001",
@@ -52,18 +57,23 @@
       "case": "loss-002",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 146,
       "input_frames": 300,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-002",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 300,
+      "estimated_frames": 300,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-002",
@@ -85,18 +95,23 @@
       "case": "loss-003",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 143,
       "input_frames": 301,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-003",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 301,
+      "estimated_frames": 301,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-003",
@@ -118,18 +133,23 @@
       "case": "loss-004",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 171,
       "input_frames": 306,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-004",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 306,
+      "estimated_frames": 306,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-004",
@@ -151,18 +171,23 @@
       "case": "loss-005",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 177,
       "input_frames": 302,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-005",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 302,
+      "estimated_frames": 302,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-005",
@@ -184,18 +209,23 @@
       "case": "loss-006",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 161,
       "input_frames": 302,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-006",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 302,
+      "estimated_frames": 302,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-006",
@@ -216,17 +246,23 @@
     {
       "case": "loss-007",
       "method": "vggt-slam-2",
-      "status": "untested",
-      "recovery": "not_assessed",
+      "status": "failed",
+      "recovery": "not_validated",
       "execution": "execution-failed",
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json",
+      "failure": "Invalid recovered camera decomposition"
     },
     {
       "case": "loss-007",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 301,
+      "estimated_frames": 301,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-007",
@@ -248,21 +284,23 @@
       "case": "loss-008",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "reused-completed",
       "input_frames": 301,
       "estimated_frames": 140,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-008",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
+      "recovery": "not_validated",
       "execution": "completed",
       "estimated_frames": 301,
       "input_frames": 301,
-      "remaining": "Stationary-landmark and complete video validation"
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-008",
@@ -284,15 +322,23 @@
       "case": "loss-009",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "running"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 194,
+      "input_frames": 305,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-009",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 305,
+      "estimated_frames": 305,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-009",
@@ -314,15 +360,23 @@
       "case": "loss-010",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 236,
+      "input_frames": 327,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-010",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 327,
+      "estimated_frames": 327,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-010",
@@ -344,15 +398,23 @@
       "case": "loss-011",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 215,
+      "input_frames": 402,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-011",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 402,
+      "estimated_frames": 402,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-011",
@@ -374,15 +436,23 @@
       "case": "loss-012",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 167,
+      "input_frames": 366,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-012",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 366,
+      "estimated_frames": 366,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-012",
@@ -404,15 +474,23 @@
       "case": "loss-013",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 187,
+      "input_frames": 350,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-013",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 350,
+      "estimated_frames": 350,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-013",
@@ -434,15 +512,23 @@
       "case": "loss-014",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 192,
+      "input_frames": 311,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-014",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 311,
+      "estimated_frames": 311,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-014",
@@ -464,15 +550,23 @@
       "case": "loss-015",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 192,
+      "input_frames": 382,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-015",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 382,
+      "estimated_frames": 382,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-015",
@@ -494,15 +588,23 @@
       "case": "loss-016",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 212,
+      "input_frames": 459,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-016",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 459,
+      "estimated_frames": 459,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-016",
@@ -524,15 +626,23 @@
       "case": "loss-017",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 189,
+      "input_frames": 373,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-017",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 373,
+      "estimated_frames": 373,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-017",
@@ -554,15 +664,23 @@
       "case": "loss-018",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 192,
+      "input_frames": 410,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-018",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 410,
+      "estimated_frames": 410,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-018",
@@ -584,15 +702,23 @@
       "case": "loss-019",
       "method": "vggt-slam-2",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "estimated_frames": 149,
+      "input_frames": 406,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-019",
       "method": "da3-streaming",
       "status": "untested",
-      "recovery": "not_assessed",
-      "execution": "queued"
+      "recovery": "not_validated",
+      "execution": "completed",
+      "input_frames": 406,
+      "estimated_frames": 406,
+      "remaining": "Stationary-landmark cross-gap validation; three-method comparison is published",
+      "comparison": "../camera-comparison/report.json"
     },
     {
       "case": "loss-019",
@@ -604,5 +730,5 @@
     }
   ],
   "status_semantics": "Status measures complete recovery acceptance; execution completion alone is not a pass.",
-  "updated_utc": "2026-09-26T08:46:00Z"
+  "updated_utc": "2026-09-26T10:55:00Z"
 }
