@@ -144,13 +144,19 @@ not metres, and the novel views have no ground-truth images.
 | Mask-only 8,000-step candidate | Passed execution; not promoted | 545.5 seconds, 37,009 Gaussians, all 37 held-out renders |
 | Additional geometry-cleanup candidate | Passed execution; not promoted | 799.3 seconds, 36,266 Gaussians, all 37 held-out renders |
 | Fixed-mask comparison and visual inspection | Passed execution | 37 held-out views per candidate; six offset views each plus baseline; visual review completed |
-| Reproducible code and documentation | Passed for setup | Commit `cd1cee6`, four prompt checks, independent review |
+| Reproducible code and documentation | Passed | Frozen code, four prompt checks, independent review and final artifact checks |
 | Promote mask-only candidate | Failed | Incomplete visitor coverage; mixed detail changes |
 | Promote additional cleanup candidate | Failed | Lower average reference score; no clear visual improvement |
 
 Final ledger: **6 passed, 2 failed, 0 blocked, 0 untested**. All execution and
 comparison work finished, but both replacement-quality gates failed. The bounded
 experiment is complete; an improved replacement reconstruction is not accepted.
+The final artifact gate on commit `44572d4` passed: both PLYs are structurally
+valid with finite values; 74 held-out records and 18 successful offset captures
+match the fixed inventories; all 368 archived masks match their hashes; input
+archives, documentation links and public-report privacy checks pass. The four
+prompt checks passed again on the frozen code. Both training services exited
+successfully, and the separate full-video service remained active.
 The rejected first mask attempt is retained as resolved failure evidence. SAM
 3.1 access remains a prerequisite for a different model comparison, rather than
 a blocker for this SAM 2.1 experiment.
