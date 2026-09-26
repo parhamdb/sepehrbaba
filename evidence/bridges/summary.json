@@ -1,0 +1,42 @@
+{
+  "sift": {
+    "archive": "sift-candidates.tar.gz",
+    "bytes": 337404,
+    "sha256": "7bb00c432667ea39acc5eaec8f2a33d93f766eabc73e91b45df1063d4cefda2b",
+    "features": "sift",
+    "positive_control": {
+      "images": [
+        "frame_002534.jpg",
+        "frame_002564.jpg"
+      ],
+      "known_shared_points": 522,
+      "matches": 812,
+      "correct_shared_point_matches": 496
+    },
+    "image_pairs": 247,
+    "candidate_matches": 2599,
+    "fit_inliers": 10,
+    "withheld_unique_landmarks": 0,
+    "accepted_geometry": false
+  },
+  "learned-at-sift": {
+    "archive": "learned-at-sift-candidates.tar.gz",
+    "bytes": 275617,
+    "sha256": "de70a3dfcf4f5532df3df7b20ef02356b74349377c2f11f1e48a35afc259b115",
+    "features": "aliked-sift",
+    "positive_control": {
+      "images": [
+        "frame_002560.jpg",
+        "frame_002605.jpg"
+      ],
+      "known_shared_points": 141,
+      "matches": 378,
+      "correct_shared_point_matches": 112
+    },
+    "image_pairs": 300,
+    "candidate_matches": 1944,
+    "fit_inliers": 11,
+    "withheld_unique_landmarks": 0,
+    "accepted_geometry": false
+  }
+}

@@ -93,11 +93,11 @@ python3 scripts/audit_bridge.py --model-a "$COMPONENT/model-text" \
   --frames "$NATIVE/frames.json" --output "$BRIDGE_REPORT"
 ```
 
-The next bridge experiment should match visible static areas in a wider interval
-on both sides of the occlusion, then require shared registered cameras and a
-fresh geometry check before merging. SIFT-compatible LightGlue can reuse feature
-identities; ALIKED with LightGlue requires separate feature extraction and a
-separate database. Keep that experiment isolated from both published models.
+The subsequent [connection experiments](connecting-scenes.md) tested static
+RootSIFT matching, fresh ALIKED detections and learned descriptors at existing
+3D features. None passed independent alignment checks. Candidate data and
+rejected fits are preserved; the public models remain separate. Manual review
+of unmistakable shared static landmarks is the next proposed step.
 [COLMAP guidance on disconnected models](https://colmap.github.io/faq.html#merge-disconnected-models)
 requires common registered images for its model-merger workflow.
 [LightGlue's official implementation](https://github.com/cvg/LightGlue)

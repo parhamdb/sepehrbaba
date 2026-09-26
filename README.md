@@ -93,6 +93,9 @@ The earlier preview retains 689 cameras from 725 frames in its interval. Both
 expanded scenes have independently fitted ground alignment. A coat blocks most
 of the view between them, and the current camera matches do not support a merge.
 [Earlier section, reproducible commands and bridge findings](docs/recovery-48s.md).
+The [connection experiments](docs/connecting-scenes.md) tested learned matching
+and withheld-landmark validation. No reliable spatial join passed; candidate
+data and rejected results are published so contributors can investigate them.
 
 ## References
 
