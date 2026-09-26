@@ -1,0 +1,467 @@
+{
+  "inventory": "inventory.json",
+  "counts": {
+    "passed": 0,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 76
+  },
+  "results": [
+    {
+      "case": "loss-001",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-001",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-001",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-001",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-002",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-002",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-002",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-002",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-003",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-003",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-003",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-003",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-004",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-004",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-004",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-004",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-005",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-005",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-005",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-005",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-006",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-006",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-006",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-006",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-007",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-007",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-007",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-007",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-008",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-008",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-008",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-008",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-009",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-009",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-009",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-009",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-010",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-010",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-010",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-010",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-011",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-011",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-011",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-011",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-012",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-012",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-012",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-012",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-013",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-013",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-013",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-013",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-014",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-014",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-014",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-014",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-015",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-015",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-015",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-015",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-016",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-016",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-016",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-016",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-017",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-017",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-017",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-017",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-018",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-018",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-018",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-018",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-019",
+      "method": "colmap-motion-masked",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-019",
+      "method": "vggt-slam-2",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-019",
+      "method": "da3-streaming",
+      "status": "untested",
+      "recovery": "not_assessed"
+    },
+    {
+      "case": "loss-019",
+      "method": "mast3r-slam",
+      "status": "untested",
+      "recovery": "not_assessed"
+    }
+  ]
+}
