@@ -1,0 +1,38 @@
+{
+  "status": "resumed using verified checkpoints; full export and comparison pending",
+  "fix_commit": "9a69bcd3e81f1d3e8139c544a4923ad04747b094",
+  "original_failure": "TypeError: Object of type int64 is not JSON serializable",
+  "failed_stage": "loop receipt serialization",
+  "completed_initial_chunks": 799,
+  "completed_initial_frames": 12793,
+  "loop_candidate_pairs": 40,
+  "migration": {
+    "status": "migrated",
+    "timestamp": 1790459384.0058827,
+    "previous_adapter_sha256": "b53c4e000c44fa9e14f694b1ad4c518cad90f1f8691fe3e41e25ea0c22cd5e03",
+    "adapter_sha256": "aa1da7dc215190fd178a3ce38216f3c8e6e1b73193aa0a635edcf26fb8414731",
+    "old_identity": "8b2adeeffb66418a5db0cc91900d89250417a7da35333b722f1db11b8e332aca",
+    "new_identity": "bd7603890ac55d0b0f1cc2d961ca5c9fff45fb2c8db8619a65ea5f48e1bc3a62",
+    "sequential_receipts": 799,
+    "loop_receipts": 2,
+    "predictions_hash_verified": 801,
+    "inference_settings_changed": false
+  },
+  "regression": {
+    "original_failure_reproduced": true,
+    "final_tests_passed": 10,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "review": "Read-only review found no high or medium issues in the bounded fix and migration.",
+  "accepted_connections": 0,
+  "resume_check": {
+    "status": "sequential-inference",
+    "sequential_chunks_done": 45,
+    "total_chunks": 799,
+    "last_chunk_reused": true,
+    "last_update": 1790459520.8620598,
+    "meaning": "Replay of already completed predictions to reconstruct alignment, not fresh neural inference."
+  }
+}

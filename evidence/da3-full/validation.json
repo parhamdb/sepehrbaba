@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "source_commit": "1ddb035fe5a73be033de727ee4d55e7a301b76a7",
-  "status": "running",
+  "source_commit": "9a69bcd3e81f1d3e8139c544a4923ad04747b094",
+  "status": "resumed",
   "counts": {
-    "passed": 8,
+    "passed": 14,
     "failed": 0,
     "blocked": 0,
     "untested": 2
@@ -12,32 +12,32 @@
     {
       "id": "unit-1",
       "status": "passed",
-      "evidence": "Six-test final pass in the actual DA3 environment on 1ddb035fe5a73be033de727ee4d55e7a301b76a7"
+      "evidence": "Final 10-test pass on Thor after the serialization fix, commit 9a69bcd3e81f1d3e8139c544a4923ad04747b094"
     },
     {
       "id": "unit-2",
       "status": "passed",
-      "evidence": "Six-test final pass in the actual DA3 environment on 1ddb035fe5a73be033de727ee4d55e7a301b76a7"
+      "evidence": "Final 10-test pass on Thor after the serialization fix, commit 9a69bcd3e81f1d3e8139c544a4923ad04747b094"
     },
     {
       "id": "unit-3",
       "status": "passed",
-      "evidence": "Six-test final pass in the actual DA3 environment on 1ddb035fe5a73be033de727ee4d55e7a301b76a7"
+      "evidence": "Final 10-test pass on Thor after the serialization fix, commit 9a69bcd3e81f1d3e8139c544a4923ad04747b094"
     },
     {
       "id": "unit-4",
       "status": "passed",
-      "evidence": "Six-test final pass in the actual DA3 environment on 1ddb035fe5a73be033de727ee4d55e7a301b76a7"
+      "evidence": "Final 10-test pass on Thor after the serialization fix, commit 9a69bcd3e81f1d3e8139c544a4923ad04747b094"
     },
     {
       "id": "unit-5",
       "status": "passed",
-      "evidence": "Six-test final pass in the actual DA3 environment on 1ddb035fe5a73be033de727ee4d55e7a301b76a7"
+      "evidence": "Final 10-test pass on Thor after the serialization fix, commit 9a69bcd3e81f1d3e8139c544a4923ad04747b094"
     },
     {
       "id": "unit-6",
       "status": "passed",
-      "evidence": "Six-test final pass in the actual DA3 environment on 1ddb035fe5a73be033de727ee4d55e7a301b76a7"
+      "evidence": "Final 10-test pass on Thor after the serialization fix, commit 9a69bcd3e81f1d3e8139c544a4923ad04747b094"
     },
     {
       "id": "frozen-reference-preflight",
@@ -58,15 +58,47 @@
       "id": "completed-cross-reference",
       "status": "untested",
       "evidence": "Automatically follows complete camera export"
+    },
+    {
+      "id": "loop-receipt-regression",
+      "status": "passed",
+      "evidence": "Production wrapper with NumPy loop indices reproduces old failure and now saves a valid receipt."
+    },
+    {
+      "id": "migration-rejects-other-adapter",
+      "status": "passed",
+      "evidence": "Adapter changes beyond the exact integer conversion are rejected."
+    },
+    {
+      "id": "migration-rejects-corruption",
+      "status": "passed",
+      "evidence": "Corrupt prediction rejected without modifying input manifest or receipts."
+    },
+    {
+      "id": "migration-preserves-predictions",
+      "status": "passed",
+      "evidence": "Valid migration preserves prediction data and original metadata backups."
+    },
+    {
+      "id": "live-checkpoint-migration",
+      "status": "passed",
+      "evidence": "Verified 801 saved prediction hashes; migrated 799 sequential and two loop receipts without changing inference settings."
+    },
+    {
+      "id": "live-checkpoint-resume",
+      "status": "passed",
+      "evidence": "Input/model validation passed and resumed run explicitly reuses saved predictions; see loop-recovery.json."
     }
   ],
   "accepted_connections": 0,
-  "review": "Independent read-only review verified actual-image cache identity and empty-track fixes; no remaining high/medium findings.",
+  "review": "Read-only review of recovery commit found no high or medium issues; original review and passed evidence retained. Complete export and comparison remain pending.",
   "source_hashes": {
-    "scripts/run_da3_full.py": "b53c4e000c44fa9e14f694b1ad4c518cad90f1f8691fe3e41e25ea0c22cd5e03",
+    "scripts/run_da3_full.py": "aa1da7dc215190fd178a3ce38216f3c8e6e1b73193aa0a635edcf26fb8414731",
     "scripts/compare_da3_full.py": "793162465728a2b872603253b18e8d98cd95bef159e84d9ee71b0f07d75677df",
-    "scripts/da3_full_pipeline.py": "3fabeb7fb7e5b3ee8856b20aee845590a6b72b7c08bcc4ef3a632157498ed2c6"
+    "scripts/da3_full_pipeline.py": "3fabeb7fb7e5b3ee8856b20aee845590a6b72b7c08bcc4ef3a632157498ed2c6",
+    "scripts/migrate_da3_loop_receipts.py": "a8ebbced523c4f1cbd882934cd58aa6bdd8bca8d4513cdfa688fb53bcaf0f598"
   },
-  "source_publish_commit": "42216ebdf67a1cf142da7b759c42b0504d37ec55",
-  "pages_build": "https://github.com/parhamdb/sepehrbaba/actions/runs/36261233517"
+  "source_publish_commit": "9a69bcd3e81f1d3e8139c544a4923ad04747b094",
+  "pages_build": "https://github.com/parhamdb/sepehrbaba/actions/runs/36261233517",
+  "previous_source_commit": "1ddb035fe5a73be033de727ee4d55e7a301b76a7"
 }
