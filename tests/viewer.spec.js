@@ -82,6 +82,9 @@ test('missing scene description shows a recoverable error',async({page})=>{
 
 for (const section of ['71s','48s']) for (const mobile of [false,true]) {
   test(`${section} scene renders and moves on ${mobile?'mobile':'desktop'}`,async({browser})=>{
+    // Software rendering of this 500k-splat view needs about 40 seconds for
+    // each moved desktop capture. Preserve time for the subsequent reset check.
+    if (section==='48s' && !mobile) test.setTimeout(150000);
     const context=await browser.newContext({baseURL:process.env.SITE_URL || 'http://127.0.0.1:8088',
       viewport:mobile?{width:390,height:844}:{width:1280,height:720},isMobile:mobile,hasTouch:mobile});
     const page=await context.newPage();
