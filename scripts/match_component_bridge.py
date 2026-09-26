@@ -62,7 +62,7 @@ def main():
     matcher=module.LightGlue(features='sift',depth_confidence=-1,width_confidence=-1).eval().cuda()
     frames=json.loads(a.frames.read_text());times={r['name']:r['timestamp'] for r in frames}
     db=sqlite3.connect(a.database.resolve().as_uri()+'?mode=ro',uri=True)
-    features=[];metadata=[]
+    features=[];metadata=[];skipped=[]
     for label,model,dataset,interval in [('a',a.model_a,a.dataset_a,a.range_a),('b',a.model_b,a.dataset_b,a.range_b)]:
         available=[]
         with (model/'images.txt').open() as f:
@@ -94,7 +94,9 @@ def main():
             elif kp.shape[1]==4:scales,angles=kp[:,2],kp[:,3]
             else:raise ValueError('Unsupported COLMAP keypoint format')
             keep=keep[np.argsort(scales[keep],kind='stable')[-a.max_keypoints:]]
-            if len(keep)<30:raise ValueError(f'Too few static points: {name}')
+            if len(keep)<30:
+                skipped.append({'component':label,'image':name,'static_keypoints':len(keep)})
+                continue
             d=desc[keep];d/=np.maximum(np.linalg.norm(d,axis=1,keepdims=True),1e-8)
             # COLMAP extraction used its default L1_ROOT normalization. Do not
             # square-root the stored descriptors a second time.
@@ -104,16 +106,22 @@ def main():
             feat={k:torch.tensor(v,dtype=torch.float32,device='cuda')[None] for k,v in feat.items()}
             cache[name]={'feat':feat,'indices':keep,'ids':ids[keep],'xyz':np.array([points[ids[i]][0] for i in keep]),'xy':xy[keep]}
             meta[name]={'seconds':times[name],'R':rotation(row).tolist(),'t':list(map(float,row[5:8])),**camera,'static_keypoints':len(keep)}
+        if len(cache)<2:raise ValueError('Need at least two usable static views per component')
         features.append(cache);metadata.append(meta)
     db.close()
-    report={'lightglue_revision':revision,'normalization':'COLMAP L1_ROOT, L2 renormalized after byte quantization', 'max_keypoints':a.max_keypoints,'cameras_a':metadata[0],'cameras_b':metadata[1], 'pairs':[]}
+    report={'lightglue_revision':revision,'normalization':'COLMAP L1_ROOT, L2 renormalized after byte quantization', 'max_keypoints':a.max_keypoints,'cameras_a':metadata[0],'cameras_b':metadata[1], 'skipped_views':skipped,'pairs':[]}
     left,right=features
     with torch.inference_mode():
         aa=list(left)
-        control=matcher({'image0':left[aa[0]]['feat'],'image1':left[aa[1]]['feat']})['matches'][0]
-        report['positive_control']={'images':aa[:2],'matches':len(control)}
+        n0,n1=max(((x,y) for i,x in enumerate(aa) for y in aa[i+1:]),
+                  key=lambda pair:len(set(left[pair[0]]['ids']) & set(left[pair[1]]['ids'])))
+        shared=len(set(left[n0]['ids']) & set(left[n1]['ids']))
+        control=matcher({'image0':left[n0]['feat'],'image1':left[n1]['feat']})['matches'][0].cpu().numpy()
+        correct=int((left[n0]['ids'][control[:,0]]==left[n1]['ids'][control[:,1]]).sum())
+        report['positive_control']={'images':[n0,n1],'known_shared_points':shared,'matches':len(control),'correct_shared_point_matches':correct}
         print('positive control',report['positive_control'],flush=True)
-        if len(control)<30:raise ValueError('Positive control failed; inspect descriptor conventions')
+        (a.output/'matches.json').write_text(json.dumps(report,indent=2)+'\n')
+        if correct<30:raise ValueError('Positive control failed; inspect descriptor conventions')
         for i,(na,fa) in enumerate(left.items()):
             for j,(nb,fb) in enumerate(right.items()):
                 start=time.monotonic()
