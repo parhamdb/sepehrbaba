@@ -1,0 +1,27 @@
+{
+  "source_revision": "cd1cee618ef1fbdf6f5d2321eecd9df9c1edbfe9",
+  "source_component": "3d512b50d5aab54d",
+  "source_video_sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a",
+  "interval_seconds": [
+    590.629889,
+    606.465111
+  ],
+  "camera_images": 368,
+  "held_out_images": 37,
+  "mask_method": "SAM 2.1 small, two manually prompted occluder tracks",
+  "training": {
+    "steps": 8000,
+    "max_resolution": 1920,
+    "max_splats": 500000,
+    "eval_split_every": 10,
+    "brush": "0.3.0"
+  },
+  "mask_only": {
+    "training_seconds": 545.5036063194275,
+    "gaussians": 37009,
+    "sha256": "c8dd3802db6cf2b59c0772794eb3dfc4d41a09bb11d9b945f3e6602511e34ffe",
+    "decision": "not promoted; missed edge visitor in frame_009807.jpg"
+  },
+  "source_images_and_original_camera_model_unchanged": true,
+  "cleanup_input_report": "geometry-cleanup.json"
+}

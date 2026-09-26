@@ -167,7 +167,10 @@ See [CONTRIBUTING](../CONTRIBUTING.md), [provenance](provenance.md),
 [contribution cleanup](contribution-cleanup.md), and the [ranked research](ghosting-options.md).
 Failed methods are part of the record and should not be silently erased.
 
-For this project's evidentiary purpose, a future masking experiment should
-distinguish transient occluders from stationary bodies and other scene content.
-The current semantic person mask does not make that distinction; improvements
-must be judged against the preserved video, not merely a cleaner-looking scene.
+For this project's evidentiary purpose, masks must distinguish transient
+occluders from stationary bodies and other scene content. The default semantic
+person mask does not make that distinction. The separate
+[tracked-occluder trial](tracked-cleanup-experiment.md) tests manually selected
+visitor tracks and geometry cleanup without changing the full-video controller.
+Improvements must be judged against the preserved video, not merely a
+cleaner-looking scene; missed visitors remain a documented failure mode.

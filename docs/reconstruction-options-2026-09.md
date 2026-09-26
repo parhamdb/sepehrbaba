@@ -216,6 +216,8 @@ evidence. A visually seamless result can still contain invented information.
 5. Test completion by artificially hiding an observed background patch, then
    compare against the withheld original before considering unverifiable holes.
 
-No installations or new GPU jobs were started. Weight access, licenses and
-Thor-specific dependency/kernel compatibility remain implementation prerequisites.
-Do not replace the working vendor PyTorch environment to try a research package.
+The initial research pass started no installations or GPU jobs. Subsequent
+[tracked-mask and cleanup trials](tracked-cleanup-experiment.md) record what
+actually ran, including the SAM 3.1 access prerequisite and SAM 2.1 fallback.
+Weight access, licenses and hardware compatibility must still be checked for
+each remaining tool. Do not replace working vendor PyTorch to try a package.

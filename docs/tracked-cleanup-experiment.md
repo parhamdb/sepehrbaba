@@ -125,15 +125,41 @@ not metres, and the novel views have no ground-truth images.
 |---|---|---|
 | Reviewed tracked masks and complete inventory | Passed for trial | 368 binary masks, corrected first-frame anchor, retained limitations above |
 | Preserve sources, cameras and held-out split | Passed | Image/model hashes; comparator verifies exact sorted-index split |
-| Mask-only 8,000-step candidate | Untested; running | Separate supervised training process |
+| Mask-only 8,000-step candidate | Passed execution; not promoted | 545.5 seconds, 37,009 Gaussians, all 37 held-out renders |
 | Additional geometry-cleanup candidate | Untested | Input geometry gate passed; separate training pending |
 | Fixed-mask comparison and visual inspection | Untested | Comparator calibration passed; candidate renders pending |
 | Reproducible code and documentation | Passed for setup | Commit `cd1cee6`, four prompt checks, independent review |
 
-Current experiment acceptance: **3 passed, 0 failed, 0 blocked, 3 untested**.
+Current execution checks: **4 passed, 0 failed, 0 blocked, 2 untested**.
+Separately, **mask-only promotion failed** for missed-visitor artifacts. Successful
+execution does not turn that quality failure into an accepted reconstruction.
 The rejected first mask attempt is retained as resolved failure evidence. SAM
 3.1 access remains a prerequisite for a different model comparison, rather than
 a blocker for this SAM 2.1 experiment.
 
-The implementation passed four prompt-validation checks and an independent
-read-only review. No reconstruction quality improvement is claimed yet.
+## Mask-only result
+
+The [comparison](../evidence/tracked-cleanup/mask-only-comparison.json) scores
+23.52290 dB versus 23.49210 dB: only **+0.03081 dB**, with 17/37 improved views
+and a worst-view change of **−4.18676 dB**. See the
+[held-out comparison](../evidence/tracked-cleanup/mask-only-comparison.jpg) and
+[six offset-view comparison](../evidence/tracked-cleanup/mask-only-novel-comparison.jpg).
+
+The [worst-view review](../evidence/tracked-cleanup/worst-view-review.jpg) at
+frame 009807 explains why average scores are insufficient. The old semantic mask
+excludes large stationary body/bag regions; tracking preserves those details.
+However, another visitor's legs at the upper-right edge are **not covered by the
+two prompted tracks**, and appear in the candidate. The mask review was sufficient
+to run a trial, but did not establish complete occluder coverage. Broader reviewed
+instance coverage is needed before a replacement scene can be accepted. The
+six small novel-view offsets show mixed detail changes, not a clear overall win.
+
+One multi-view browser process closed after its first successful capture. That
+capture was retained; all five missing views passed in fresh individual browser
+processes. The combined capture manifest records this recovery. No training
+was rerun for the renderer failure.
+
+The [candidate PLY](../evidence/tracked-cleanup/mask-only.ply) is retained for
+inspection, in the original unlevelled component coordinates. It is not a new
+public viewer default. The implementation passed four prompt-validation checks
+and an independent read-only review; reconstruction quality remains unaccepted.

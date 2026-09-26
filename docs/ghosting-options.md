@@ -3,6 +3,9 @@
 For the September 26 update covering stitching, newer models and missing-region
 completion, see [current reconstruction options](reconstruction-options-2026-09.md).
 The experiments and original ranking below remain preserved.
+The [tracked-occluder and geometry-cleanup trial](tracked-cleanup-experiment.md)
+records the newer SAM 2.1 fallback experiment, including missed instances and
+unchanged evaluation masks; it does not establish that every new option works.
 
 Research snapshot: **2026-09-25**. This document preserves the options discussed
 for this recording so unsuccessful experiments can lead to a different,
