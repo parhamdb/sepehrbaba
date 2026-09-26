@@ -1,0 +1,194 @@
+{
+  "source_sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a",
+  "duration_seconds": 737.301333,
+  "source_frames": 12793,
+  "database_images": 12793,
+  "frames_with_keypoints": 12780,
+  "windows": [
+    {
+      "id": "window-0000.0",
+      "start_seconds": 0,
+      "end_seconds": 30
+    },
+    {
+      "id": "window-0020.0",
+      "start_seconds": 20,
+      "end_seconds": 50
+    },
+    {
+      "id": "window-0040.0",
+      "start_seconds": 40,
+      "end_seconds": 70
+    },
+    {
+      "id": "window-0060.0",
+      "start_seconds": 60,
+      "end_seconds": 90
+    },
+    {
+      "id": "window-0080.0",
+      "start_seconds": 80,
+      "end_seconds": 110
+    },
+    {
+      "id": "window-0100.0",
+      "start_seconds": 100,
+      "end_seconds": 130
+    },
+    {
+      "id": "window-0120.0",
+      "start_seconds": 120,
+      "end_seconds": 150
+    },
+    {
+      "id": "window-0140.0",
+      "start_seconds": 140,
+      "end_seconds": 170
+    },
+    {
+      "id": "window-0160.0",
+      "start_seconds": 160,
+      "end_seconds": 190
+    },
+    {
+      "id": "window-0180.0",
+      "start_seconds": 180,
+      "end_seconds": 210
+    },
+    {
+      "id": "window-0200.0",
+      "start_seconds": 200,
+      "end_seconds": 230
+    },
+    {
+      "id": "window-0220.0",
+      "start_seconds": 220,
+      "end_seconds": 250
+    },
+    {
+      "id": "window-0240.0",
+      "start_seconds": 240,
+      "end_seconds": 270
+    },
+    {
+      "id": "window-0260.0",
+      "start_seconds": 260,
+      "end_seconds": 290
+    },
+    {
+      "id": "window-0280.0",
+      "start_seconds": 280,
+      "end_seconds": 310
+    },
+    {
+      "id": "window-0300.0",
+      "start_seconds": 300,
+      "end_seconds": 330
+    },
+    {
+      "id": "window-0320.0",
+      "start_seconds": 320,
+      "end_seconds": 350
+    },
+    {
+      "id": "window-0340.0",
+      "start_seconds": 340,
+      "end_seconds": 370
+    },
+    {
+      "id": "window-0360.0",
+      "start_seconds": 360,
+      "end_seconds": 390
+    },
+    {
+      "id": "window-0380.0",
+      "start_seconds": 380,
+      "end_seconds": 410
+    },
+    {
+      "id": "window-0400.0",
+      "start_seconds": 400,
+      "end_seconds": 430
+    },
+    {
+      "id": "window-0420.0",
+      "start_seconds": 420,
+      "end_seconds": 450
+    },
+    {
+      "id": "window-0440.0",
+      "start_seconds": 440,
+      "end_seconds": 470
+    },
+    {
+      "id": "window-0460.0",
+      "start_seconds": 460,
+      "end_seconds": 490
+    },
+    {
+      "id": "window-0480.0",
+      "start_seconds": 480,
+      "end_seconds": 510
+    },
+    {
+      "id": "window-0500.0",
+      "start_seconds": 500,
+      "end_seconds": 530
+    },
+    {
+      "id": "window-0520.0",
+      "start_seconds": 520,
+      "end_seconds": 550
+    },
+    {
+      "id": "window-0540.0",
+      "start_seconds": 540,
+      "end_seconds": 570
+    },
+    {
+      "id": "window-0560.0",
+      "start_seconds": 560,
+      "end_seconds": 590
+    },
+    {
+      "id": "window-0580.0",
+      "start_seconds": 580,
+      "end_seconds": 610
+    },
+    {
+      "id": "window-0600.0",
+      "start_seconds": 600,
+      "end_seconds": 630
+    },
+    {
+      "id": "window-0620.0",
+      "start_seconds": 620,
+      "end_seconds": 650
+    },
+    {
+      "id": "window-0640.0",
+      "start_seconds": 640,
+      "end_seconds": 670
+    },
+    {
+      "id": "window-0660.0",
+      "start_seconds": 660,
+      "end_seconds": 690
+    },
+    {
+      "id": "window-0680.0",
+      "start_seconds": 680,
+      "end_seconds": 710
+    },
+    {
+      "id": "window-0700.0",
+      "start_seconds": 700,
+      "end_seconds": 730
+    },
+    {
+      "id": "window-0720.0",
+      "start_seconds": 720,
+      "end_seconds": 737.301333
+    }
+  ]
+}
