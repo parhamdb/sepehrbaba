@@ -81,6 +81,8 @@ camera-path panel. All original frames are included; 35.2% have a pose in this
 snapshot and missing poses are labeled. [How to read and reproduce it](docs/camera-review.md).
 This is a diagnostic aid, not certification of camera accuracy or global alignment.
 
+**Tracking-loss comparison:** [19 clips, four camera methods, and current results](docs/camera-loss-benchmark.md). Each clip includes ten seconds before and after a loss onset. The first candidate-path video is available; no method has yet passed cross-gap recovery validation.
+
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
 reuses retained components, trains additional scenes and searches the remaining
 gaps in 37 overlapping windows. Its scope is all 12,793 native frames across

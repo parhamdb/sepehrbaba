@@ -1,0 +1,44 @@
+{
+  "config": {
+    "inventory_sha256": "306ca7b35b1a4b5ac5f8064f763ec1ddcb03925247e88399b0a1222fabcb4009",
+    "adapter_sha256": "97374c509de0ade887caca68af26a94b0d02d0c38c7b2e6e5f951233d8c6c1fe"
+  },
+  "trials": {
+    "loss-001": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790411223.0879378,
+      "estimated_frames": 147,
+      "input_frames": 300
+    },
+    "loss-002": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790411306.6044393,
+      "estimated_frames": 146,
+      "input_frames": 300
+    },
+    "loss-003": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790411388.4464571,
+      "estimated_frames": 143,
+      "input_frames": 301
+    },
+    "loss-004": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790411596.0292346,
+      "estimated_frames": 171,
+      "input_frames": 306
+    },
+    "loss-005": {
+      "execution": "completed",
+      "recovery": "not_assessed",
+      "finished": 1790411926.046529,
+      "estimated_frames": 177,
+      "input_frames": 302
+    }
+  },
+  "active_case": "loss-006"
+}

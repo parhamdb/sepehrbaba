@@ -1,0 +1,1257 @@
+{
+  "status": "diagnostic only; corners include moving people; no static-landmark review",
+  "evaluation": "forward-backward LK corners versus supplied-camera epipolar lines; no camera refitting",
+  "rows": [
+    {
+      "first": "frame_002637.jpg",
+      "second": "frame_002638.jpg",
+      "timestamp": 174.931811,
+      "tracked_corners": 367,
+      "valid_epipolar_constraints": 366,
+      "median_source_pixels": 3.3853977265161443,
+      "p90_source_pixels": 5.533473161832363
+    },
+    {
+      "first": "frame_002638.jpg",
+      "second": "frame_002640.jpg",
+      "timestamp": 175.065144,
+      "tracked_corners": 402,
+      "valid_epipolar_constraints": 401,
+      "median_source_pixels": 1.8240192082630964,
+      "p90_source_pixels": 3.93495821744721
+    },
+    {
+      "first": "frame_002640.jpg",
+      "second": "frame_002642.jpg",
+      "timestamp": 175.199456,
+      "tracked_corners": 403,
+      "valid_epipolar_constraints": 403,
+      "median_source_pixels": 2.0853632559110715,
+      "p90_source_pixels": 5.827365035772596
+    },
+    {
+      "first": "frame_002642.jpg",
+      "second": "frame_002643.jpg",
+      "timestamp": 175.266122,
+      "tracked_corners": 414,
+      "valid_epipolar_constraints": 413,
+      "median_source_pixels": 2.429153638336139,
+      "p90_source_pixels": 6.743440718677196
+    },
+    {
+      "first": "frame_002643.jpg",
+      "second": "frame_002645.jpg",
+      "timestamp": 175.399456,
+      "tracked_corners": 378,
+      "valid_epipolar_constraints": 377,
+      "median_source_pixels": 3.4871010760272116,
+      "p90_source_pixels": 7.228190059802835
+    },
+    {
+      "first": "frame_002645.jpg",
+      "second": "frame_002652.jpg",
+      "timestamp": 175.8661,
+      "tracked_corners": 375,
+      "valid_epipolar_constraints": 374,
+      "median_source_pixels": 1.8145831797056287,
+      "p90_source_pixels": 4.386853556528388
+    },
+    {
+      "first": "frame_002652.jpg",
+      "second": "frame_002654.jpg",
+      "timestamp": 175.999433,
+      "tracked_corners": 391,
+      "valid_epipolar_constraints": 391,
+      "median_source_pixels": 2.682610496336501,
+      "p90_source_pixels": 5.5076502651477774
+    },
+    {
+      "first": "frame_002654.jpg",
+      "second": "frame_002659.jpg",
+      "timestamp": 176.332756,
+      "tracked_corners": 359,
+      "valid_epipolar_constraints": 358,
+      "median_source_pixels": 1.789933509792216,
+      "p90_source_pixels": 6.744055010815415
+    },
+    {
+      "first": "frame_002659.jpg",
+      "second": "frame_002662.jpg",
+      "timestamp": 176.532744,
+      "tracked_corners": 427,
+      "valid_epipolar_constraints": 424,
+      "median_source_pixels": 2.532480475254307,
+      "p90_source_pixels": 6.595576700819849
+    },
+    {
+      "first": "frame_002662.jpg",
+      "second": "frame_002664.jpg",
+      "timestamp": 176.666078,
+      "tracked_corners": 357,
+      "valid_epipolar_constraints": 355,
+      "median_source_pixels": 3.472774645600194,
+      "p90_source_pixels": 8.554711040215652
+    },
+    {
+      "first": "frame_002664.jpg",
+      "second": "frame_002665.jpg",
+      "timestamp": 176.732744,
+      "tracked_corners": 394,
+      "valid_epipolar_constraints": 394,
+      "median_source_pixels": 7.191542563333652,
+      "p90_source_pixels": 11.868106336209092
+    },
+    {
+      "first": "frame_002665.jpg",
+      "second": "frame_002666.jpg",
+      "timestamp": 176.7994,
+      "tracked_corners": 406,
+      "valid_epipolar_constraints": 404,
+      "median_source_pixels": 7.055990845223819,
+      "p90_source_pixels": 10.036889363422485
+    },
+    {
+      "first": "frame_002666.jpg",
+      "second": "frame_002667.jpg",
+      "timestamp": 176.866067,
+      "tracked_corners": 420,
+      "valid_epipolar_constraints": 420,
+      "median_source_pixels": 1.8362167787422916,
+      "p90_source_pixels": 2.78738676086109
+    },
+    {
+      "first": "frame_002667.jpg",
+      "second": "frame_002668.jpg",
+      "timestamp": 176.932733,
+      "tracked_corners": 436,
+      "valid_epipolar_constraints": 433,
+      "median_source_pixels": 3.8767632260365392,
+      "p90_source_pixels": 6.801233770956018
+    },
+    {
+      "first": "frame_002668.jpg",
+      "second": "frame_002669.jpg",
+      "timestamp": 176.9994,
+      "tracked_corners": 401,
+      "valid_epipolar_constraints": 401,
+      "median_source_pixels": 2.85465495190984,
+      "p90_source_pixels": 4.718834733773498
+    },
+    {
+      "first": "frame_002669.jpg",
+      "second": "frame_002670.jpg",
+      "timestamp": 177.066067,
+      "tracked_corners": 412,
+      "valid_epipolar_constraints": 411,
+      "median_source_pixels": 3.3783353010428367,
+      "p90_source_pixels": 4.586307829701834
+    },
+    {
+      "first": "frame_002670.jpg",
+      "second": "frame_002672.jpg",
+      "timestamp": 177.199389,
+      "tracked_corners": 205,
+      "valid_epipolar_constraints": 205,
+      "median_source_pixels": 2.8630428060808164,
+      "p90_source_pixels": 5.958156745456507
+    },
+    {
+      "first": "frame_002672.jpg",
+      "second": "frame_002673.jpg",
+      "timestamp": 177.266056,
+      "tracked_corners": 419,
+      "valid_epipolar_constraints": 419,
+      "median_source_pixels": 1.1449633824056564,
+      "p90_source_pixels": 2.839087615574775
+    },
+    {
+      "first": "frame_002673.jpg",
+      "second": "frame_002675.jpg",
+      "timestamp": 177.399389,
+      "tracked_corners": 172,
+      "valid_epipolar_constraints": 170,
+      "median_source_pixels": 2.7076869922360407,
+      "p90_source_pixels": 5.341813350800985
+    },
+    {
+      "first": "frame_002675.jpg",
+      "second": "frame_002676.jpg",
+      "timestamp": 177.466044,
+      "tracked_corners": 388,
+      "valid_epipolar_constraints": 388,
+      "median_source_pixels": 2.764371869318752,
+      "p90_source_pixels": 4.909620250545741
+    },
+    {
+      "first": "frame_002676.jpg",
+      "second": "frame_002677.jpg",
+      "timestamp": 177.532711,
+      "tracked_corners": 328,
+      "valid_epipolar_constraints": 327,
+      "median_source_pixels": 2.507626527434648,
+      "p90_source_pixels": 5.491062099078623
+    },
+    {
+      "first": "frame_002677.jpg",
+      "second": "frame_002678.jpg",
+      "timestamp": 177.599378,
+      "tracked_corners": 305,
+      "valid_epipolar_constraints": 302,
+      "median_source_pixels": 2.68654562824572,
+      "p90_source_pixels": 8.150798966485237
+    },
+    {
+      "first": "frame_002678.jpg",
+      "second": "frame_002680.jpg",
+      "timestamp": 177.733133,
+      "tracked_corners": 289,
+      "valid_epipolar_constraints": 289,
+      "median_source_pixels": 4.135008448996246,
+      "p90_source_pixels": 5.521839619557833
+    },
+    {
+      "first": "frame_002680.jpg",
+      "second": "frame_002682.jpg",
+      "timestamp": 177.866467,
+      "tracked_corners": 380,
+      "valid_epipolar_constraints": 379,
+      "median_source_pixels": 3.7172141946200052,
+      "p90_source_pixels": 7.386805239820441
+    },
+    {
+      "first": "frame_002682.jpg",
+      "second": "frame_002683.jpg",
+      "timestamp": 177.933133,
+      "tracked_corners": 417,
+      "valid_epipolar_constraints": 417,
+      "median_source_pixels": 5.243060560672689,
+      "p90_source_pixels": 10.566867497691296
+    },
+    {
+      "first": "frame_002683.jpg",
+      "second": "frame_002684.jpg",
+      "timestamp": 177.999789,
+      "tracked_corners": 394,
+      "valid_epipolar_constraints": 394,
+      "median_source_pixels": 4.674300514275,
+      "p90_source_pixels": 11.953756083142876
+    },
+    {
+      "first": "frame_002684.jpg",
+      "second": "frame_002685.jpg",
+      "timestamp": 178.066844,
+      "tracked_corners": 251,
+      "valid_epipolar_constraints": 251,
+      "median_source_pixels": 4.467094988611508,
+      "p90_source_pixels": 19.495670460468876
+    },
+    {
+      "first": "frame_002685.jpg",
+      "second": "frame_002686.jpg",
+      "timestamp": 178.133889,
+      "tracked_corners": 370,
+      "valid_epipolar_constraints": 369,
+      "median_source_pixels": 3.617003041472959,
+      "p90_source_pixels": 7.474992401989383
+    },
+    {
+      "first": "frame_002686.jpg",
+      "second": "frame_002688.jpg",
+      "timestamp": 178.267567,
+      "tracked_corners": 323,
+      "valid_epipolar_constraints": 320,
+      "median_source_pixels": 3.8717201393875547,
+      "p90_source_pixels": 10.321317056797024
+    },
+    {
+      "first": "frame_002688.jpg",
+      "second": "frame_002691.jpg",
+      "timestamp": 178.468744,
+      "tracked_corners": 250,
+      "valid_epipolar_constraints": 250,
+      "median_source_pixels": 3.666816218400685,
+      "p90_source_pixels": 21.576317062782927
+    },
+    {
+      "first": "frame_002691.jpg",
+      "second": "frame_002693.jpg",
+      "timestamp": 178.602311,
+      "tracked_corners": 239,
+      "valid_epipolar_constraints": 239,
+      "median_source_pixels": 4.331298410308823,
+      "p90_source_pixels": 9.659296726743348
+    },
+    {
+      "first": "frame_002693.jpg",
+      "second": "frame_002694.jpg",
+      "timestamp": 178.669211,
+      "tracked_corners": 175,
+      "valid_epipolar_constraints": 175,
+      "median_source_pixels": 3.3589020432740684,
+      "p90_source_pixels": 7.356948698512486
+    },
+    {
+      "first": "frame_002694.jpg",
+      "second": "frame_002697.jpg",
+      "timestamp": 178.869411,
+      "tracked_corners": 209,
+      "valid_epipolar_constraints": 207,
+      "median_source_pixels": 2.327556641033512,
+      "p90_source_pixels": 4.332197808116035
+    },
+    {
+      "first": "frame_002697.jpg",
+      "second": "frame_002701.jpg",
+      "timestamp": 179.135856,
+      "tracked_corners": 277,
+      "valid_epipolar_constraints": 276,
+      "median_source_pixels": 1.5711053792888419,
+      "p90_source_pixels": 3.487326303203395
+    },
+    {
+      "first": "frame_002701.jpg",
+      "second": "frame_002707.jpg",
+      "timestamp": 179.535622,
+      "tracked_corners": 265,
+      "valid_epipolar_constraints": 264,
+      "median_source_pixels": 5.12219167928966,
+      "p90_source_pixels": 7.958328882106065
+    },
+    {
+      "first": "frame_002707.jpg",
+      "second": "frame_002710.jpg",
+      "timestamp": 179.735367,
+      "tracked_corners": 312,
+      "valid_epipolar_constraints": 310,
+      "median_source_pixels": 2.904112691930633,
+      "p90_source_pixels": 5.047000045831927
+    },
+    {
+      "first": "frame_002710.jpg",
+      "second": "frame_002714.jpg",
+      "timestamp": 180.001156,
+      "tracked_corners": 319,
+      "valid_epipolar_constraints": 318,
+      "median_source_pixels": 3.9136821275667018,
+      "p90_source_pixels": 5.531787183179138
+    },
+    {
+      "first": "frame_002714.jpg",
+      "second": "frame_002716.jpg",
+      "timestamp": 180.134189,
+      "tracked_corners": 277,
+      "valid_epipolar_constraints": 276,
+      "median_source_pixels": 1.7874970092407914,
+      "p90_source_pixels": 5.265017934458799
+    },
+    {
+      "first": "frame_002716.jpg",
+      "second": "frame_002719.jpg",
+      "timestamp": 180.333833,
+      "tracked_corners": 305,
+      "valid_epipolar_constraints": 305,
+      "median_source_pixels": 3.8286273807218922,
+      "p90_source_pixels": 8.925893482822739
+    },
+    {
+      "first": "frame_002719.jpg",
+      "second": "frame_002723.jpg",
+      "timestamp": 180.5993,
+      "tracked_corners": 370,
+      "valid_epipolar_constraints": 367,
+      "median_source_pixels": 2.5341389315015177,
+      "p90_source_pixels": 5.831432159406319
+    },
+    {
+      "first": "frame_002723.jpg",
+      "second": "frame_002726.jpg",
+      "timestamp": 180.798833,
+      "tracked_corners": 273,
+      "valid_epipolar_constraints": 269,
+      "median_source_pixels": 5.782882248148346,
+      "p90_source_pixels": 9.718031574548194
+    },
+    {
+      "first": "frame_002726.jpg",
+      "second": "frame_002729.jpg",
+      "timestamp": 180.997767,
+      "tracked_corners": 190,
+      "valid_epipolar_constraints": 189,
+      "median_source_pixels": 2.185804790365174,
+      "p90_source_pixels": 7.842018026590055
+    },
+    {
+      "first": "frame_002729.jpg",
+      "second": "frame_002736.jpg",
+      "timestamp": 181.462367,
+      "tracked_corners": 177,
+      "valid_epipolar_constraints": 177,
+      "median_source_pixels": 2.1296701626128423,
+      "p90_source_pixels": 13.542408716757548
+    },
+    {
+      "first": "frame_002736.jpg",
+      "second": "frame_002740.jpg",
+      "timestamp": 181.729022,
+      "tracked_corners": 238,
+      "valid_epipolar_constraints": 238,
+      "median_source_pixels": 4.19789150142911,
+      "p90_source_pixels": 7.917810367480898
+    },
+    {
+      "first": "frame_002740.jpg",
+      "second": "frame_002742.jpg",
+      "timestamp": 181.862356,
+      "tracked_corners": 249,
+      "valid_epipolar_constraints": 247,
+      "median_source_pixels": 6.441293185617757,
+      "p90_source_pixels": 16.32288270243303
+    },
+    {
+      "first": "frame_002742.jpg",
+      "second": "frame_002747.jpg",
+      "timestamp": 182.195678,
+      "tracked_corners": 165,
+      "valid_epipolar_constraints": 164,
+      "median_source_pixels": 5.275273217823953,
+      "p90_source_pixels": 10.683366001210151
+    },
+    {
+      "first": "frame_002747.jpg",
+      "second": "frame_002752.jpg",
+      "timestamp": 182.528989,
+      "tracked_corners": 227,
+      "valid_epipolar_constraints": 227,
+      "median_source_pixels": 3.8297013711458914,
+      "p90_source_pixels": 9.54377708279329
+    },
+    {
+      "first": "frame_002752.jpg",
+      "second": "frame_002755.jpg",
+      "timestamp": 182.728989,
+      "tracked_corners": 162,
+      "valid_epipolar_constraints": 161,
+      "median_source_pixels": 3.071404326929082,
+      "p90_source_pixels": 7.790338045963172
+    },
+    {
+      "first": "frame_002755.jpg",
+      "second": "frame_002757.jpg",
+      "timestamp": 182.862311,
+      "tracked_corners": 238,
+      "valid_epipolar_constraints": 238,
+      "median_source_pixels": 3.334733182114712,
+      "p90_source_pixels": 6.219339529083521
+    },
+    {
+      "first": "frame_002757.jpg",
+      "second": "frame_002759.jpg",
+      "timestamp": 182.995644,
+      "tracked_corners": 222,
+      "valid_epipolar_constraints": 222,
+      "median_source_pixels": 2.816635321230745,
+      "p90_source_pixels": 5.184001474319203
+    },
+    {
+      "first": "frame_002759.jpg",
+      "second": "frame_002762.jpg",
+      "timestamp": 183.195633,
+      "tracked_corners": 125,
+      "valid_epipolar_constraints": 123,
+      "median_source_pixels": 5.414137194218152,
+      "p90_source_pixels": 19.26906150175747
+    },
+    {
+      "first": "frame_002762.jpg",
+      "second": "frame_002766.jpg",
+      "timestamp": 183.4623,
+      "tracked_corners": 146,
+      "valid_epipolar_constraints": 146,
+      "median_source_pixels": 1.4282934988041305,
+      "p90_source_pixels": 7.439992649973146
+    },
+    {
+      "first": "frame_002766.jpg",
+      "second": "frame_002769.jpg",
+      "timestamp": 183.662289,
+      "tracked_corners": 115,
+      "valid_epipolar_constraints": 115,
+      "median_source_pixels": 4.0658031726611,
+      "p90_source_pixels": 10.107135684984144
+    },
+    {
+      "first": "frame_002769.jpg",
+      "second": "frame_002771.jpg",
+      "timestamp": 183.795622,
+      "tracked_corners": 117,
+      "valid_epipolar_constraints": 117,
+      "median_source_pixels": 4.93299070133544,
+      "p90_source_pixels": 21.169075404520175
+    },
+    {
+      "first": "frame_002771.jpg",
+      "second": "frame_002773.jpg",
+      "timestamp": 183.928944,
+      "tracked_corners": 190,
+      "valid_epipolar_constraints": 190,
+      "median_source_pixels": 9.562041679862531,
+      "p90_source_pixels": 18.400825105688437
+    },
+    {
+      "first": "frame_002773.jpg",
+      "second": "frame_002777.jpg",
+      "timestamp": 184.1956,
+      "tracked_corners": 120,
+      "valid_epipolar_constraints": 120,
+      "median_source_pixels": 15.926354446249588,
+      "p90_source_pixels": 33.092803710458135
+    },
+    {
+      "first": "frame_002777.jpg",
+      "second": "frame_002779.jpg",
+      "timestamp": 184.328933,
+      "tracked_corners": 80,
+      "valid_epipolar_constraints": 80,
+      "median_source_pixels": 5.615335964985589,
+      "p90_source_pixels": 19.744938471193684
+    },
+    {
+      "first": "frame_002779.jpg",
+      "second": "frame_002782.jpg",
+      "timestamp": 184.528922,
+      "tracked_corners": 94,
+      "valid_epipolar_constraints": 94,
+      "median_source_pixels": 11.451469197585475,
+      "p90_source_pixels": 17.1453921736564
+    },
+    {
+      "first": "frame_002782.jpg",
+      "second": "frame_002785.jpg",
+      "timestamp": 184.728922,
+      "tracked_corners": 137,
+      "valid_epipolar_constraints": 137,
+      "median_source_pixels": 7.773388523634916,
+      "p90_source_pixels": 24.781257922779382
+    },
+    {
+      "first": "frame_002785.jpg",
+      "second": "frame_002787.jpg",
+      "timestamp": 184.862244,
+      "tracked_corners": 176,
+      "valid_epipolar_constraints": 176,
+      "median_source_pixels": 24.153478869045706,
+      "p90_source_pixels": 37.275874945792864
+    },
+    {
+      "first": "frame_002787.jpg",
+      "second": "frame_002788.jpg",
+      "timestamp": 184.928911,
+      "tracked_corners": 65,
+      "valid_epipolar_constraints": 65,
+      "median_source_pixels": 3.4800442212054437,
+      "p90_source_pixels": 11.665408281366458
+    },
+    {
+      "first": "frame_002788.jpg",
+      "second": "frame_002789.jpg",
+      "timestamp": 184.995578,
+      "tracked_corners": 106,
+      "valid_epipolar_constraints": 105,
+      "median_source_pixels": 8.066484649981915,
+      "p90_source_pixels": 19.01999532415514
+    },
+    {
+      "first": "frame_002789.jpg",
+      "second": "frame_002790.jpg",
+      "timestamp": 185.062244,
+      "tracked_corners": 167,
+      "valid_epipolar_constraints": 167,
+      "median_source_pixels": 3.8881863425967684,
+      "p90_source_pixels": 11.45777190820026
+    },
+    {
+      "first": "frame_002790.jpg",
+      "second": "frame_002791.jpg",
+      "timestamp": 185.128911,
+      "tracked_corners": 115,
+      "valid_epipolar_constraints": 115,
+      "median_source_pixels": 2.999601156480128,
+      "p90_source_pixels": 16.32763324443866
+    },
+    {
+      "first": "frame_002791.jpg",
+      "second": "frame_002792.jpg",
+      "timestamp": 185.195567,
+      "tracked_corners": 72,
+      "valid_epipolar_constraints": 72,
+      "median_source_pixels": 7.908870275679621,
+      "p90_source_pixels": 19.999044044951457
+    },
+    {
+      "first": "frame_002792.jpg",
+      "second": "frame_002793.jpg",
+      "timestamp": 185.262233,
+      "tracked_corners": 44,
+      "valid_epipolar_constraints": 44,
+      "median_source_pixels": 4.922098675466971,
+      "p90_source_pixels": 15.545784763150941
+    },
+    {
+      "first": "frame_002793.jpg",
+      "second": "frame_002794.jpg",
+      "timestamp": 185.3289,
+      "tracked_corners": 31,
+      "valid_epipolar_constraints": 31,
+      "median_source_pixels": 10.257921824086106,
+      "p90_source_pixels": 31.55983185705969
+    },
+    {
+      "first": "frame_002794.jpg",
+      "second": "frame_002795.jpg",
+      "timestamp": 185.385556,
+      "tracked_corners": 19,
+      "valid_epipolar_constraints": 19,
+      "median_source_pixels": 7.866309719580935,
+      "p90_source_pixels": 13.67159696705276
+    },
+    {
+      "first": "frame_002795.jpg",
+      "second": "frame_002796.jpg",
+      "timestamp": 185.452222,
+      "tracked_corners": 26,
+      "valid_epipolar_constraints": 26,
+      "median_source_pixels": 8.309217284133268,
+      "p90_source_pixels": 16.116355270780126
+    },
+    {
+      "first": "frame_002796.jpg",
+      "second": "frame_002797.jpg",
+      "timestamp": 185.518889,
+      "tracked_corners": 6,
+      "valid_epipolar_constraints": 6,
+      "median_source_pixels": 9.909407401478141,
+      "p90_source_pixels": 34.88250319957804
+    },
+    {
+      "first": "frame_002797.jpg",
+      "second": "frame_002798.jpg",
+      "timestamp": 185.585544,
+      "tracked_corners": 0,
+      "valid_epipolar_constraints": 0,
+      "median_source_pixels": null,
+      "p90_source_pixels": null
+    },
+    {
+      "first": "frame_002798.jpg",
+      "second": "frame_002799.jpg",
+      "timestamp": 185.652211,
+      "tracked_corners": 0,
+      "valid_epipolar_constraints": 0,
+      "median_source_pixels": null,
+      "p90_source_pixels": null
+    },
+    {
+      "first": "frame_002799.jpg",
+      "second": "frame_002800.jpg",
+      "timestamp": 185.718878,
+      "tracked_corners": 1,
+      "valid_epipolar_constraints": 1,
+      "median_source_pixels": 183.99451049278503,
+      "p90_source_pixels": 183.99451049278503
+    },
+    {
+      "first": "frame_002800.jpg",
+      "second": "frame_002801.jpg",
+      "timestamp": 185.775544,
+      "tracked_corners": 2,
+      "valid_epipolar_constraints": 2,
+      "median_source_pixels": 110.185934260834,
+      "p90_source_pixels": 192.89930217272706
+    },
+    {
+      "first": "frame_002801.jpg",
+      "second": "frame_002802.jpg",
+      "timestamp": 185.842211,
+      "tracked_corners": 20,
+      "valid_epipolar_constraints": 20,
+      "median_source_pixels": 21.788605564285227,
+      "p90_source_pixels": 44.57053818330492
+    },
+    {
+      "first": "frame_002802.jpg",
+      "second": "frame_002804.jpg",
+      "timestamp": 185.975533,
+      "tracked_corners": 8,
+      "valid_epipolar_constraints": 8,
+      "median_source_pixels": 53.08093532791861,
+      "p90_source_pixels": 103.9551262147698
+    },
+    {
+      "first": "frame_002804.jpg",
+      "second": "frame_002805.jpg",
+      "timestamp": 186.018867,
+      "tracked_corners": 55,
+      "valid_epipolar_constraints": 55,
+      "median_source_pixels": 6.7811783565388115,
+      "p90_source_pixels": 14.65017486298315
+    },
+    {
+      "first": "frame_002805.jpg",
+      "second": "frame_002806.jpg",
+      "timestamp": 186.085533,
+      "tracked_corners": 63,
+      "valid_epipolar_constraints": 63,
+      "median_source_pixels": 7.832841246705001,
+      "p90_source_pixels": 15.652859537890276
+    },
+    {
+      "first": "frame_002806.jpg",
+      "second": "frame_002807.jpg",
+      "timestamp": 186.1522,
+      "tracked_corners": 78,
+      "valid_epipolar_constraints": 78,
+      "median_source_pixels": 6.549786741594895,
+      "p90_source_pixels": 15.885559920565314
+    },
+    {
+      "first": "frame_002807.jpg",
+      "second": "frame_002808.jpg",
+      "timestamp": 186.195533,
+      "tracked_corners": 17,
+      "valid_epipolar_constraints": 17,
+      "median_source_pixels": 16.495800771700754,
+      "p90_source_pixels": 34.679285632991444
+    },
+    {
+      "first": "frame_002808.jpg",
+      "second": "frame_002809.jpg",
+      "timestamp": 186.2622,
+      "tracked_corners": 138,
+      "valid_epipolar_constraints": 138,
+      "median_source_pixels": 4.6172431595868115,
+      "p90_source_pixels": 9.259331326530502
+    },
+    {
+      "first": "frame_002809.jpg",
+      "second": "frame_002811.jpg",
+      "timestamp": 186.397578,
+      "tracked_corners": 136,
+      "valid_epipolar_constraints": 134,
+      "median_source_pixels": 2.9054001413861394,
+      "p90_source_pixels": 12.929462497173267
+    },
+    {
+      "first": "frame_002811.jpg",
+      "second": "frame_002812.jpg",
+      "timestamp": 186.464778,
+      "tracked_corners": 104,
+      "valid_epipolar_constraints": 104,
+      "median_source_pixels": 4.929676768541251,
+      "p90_source_pixels": 11.013803123262754
+    },
+    {
+      "first": "frame_002812.jpg",
+      "second": "frame_002813.jpg",
+      "timestamp": 186.530344,
+      "tracked_corners": 97,
+      "valid_epipolar_constraints": 97,
+      "median_source_pixels": 4.895594612523825,
+      "p90_source_pixels": 9.254919413496635
+    },
+    {
+      "first": "frame_002813.jpg",
+      "second": "frame_002814.jpg",
+      "timestamp": 186.595522,
+      "tracked_corners": 70,
+      "valid_epipolar_constraints": 70,
+      "median_source_pixels": 7.390861926724922,
+      "p90_source_pixels": 52.411003891715325
+    },
+    {
+      "first": "frame_002814.jpg",
+      "second": "frame_002816.jpg",
+      "timestamp": 186.728856,
+      "tracked_corners": 28,
+      "valid_epipolar_constraints": 28,
+      "median_source_pixels": 7.912732578660903,
+      "p90_source_pixels": 20.264786795081978
+    },
+    {
+      "first": "frame_002816.jpg",
+      "second": "frame_002818.jpg",
+      "timestamp": 186.862178,
+      "tracked_corners": 35,
+      "valid_epipolar_constraints": 35,
+      "median_source_pixels": 23.379708944030806,
+      "p90_source_pixels": 35.705819884166665
+    },
+    {
+      "first": "frame_002818.jpg",
+      "second": "frame_002819.jpg",
+      "timestamp": 186.928844,
+      "tracked_corners": 104,
+      "valid_epipolar_constraints": 104,
+      "median_source_pixels": 11.012396137349725,
+      "p90_source_pixels": 34.00374196278484
+    },
+    {
+      "first": "frame_002819.jpg",
+      "second": "frame_002821.jpg",
+      "timestamp": 187.062178,
+      "tracked_corners": 81,
+      "valid_epipolar_constraints": 81,
+      "median_source_pixels": 15.261414475020684,
+      "p90_source_pixels": 110.46644349159897
+    },
+    {
+      "first": "frame_002821.jpg",
+      "second": "frame_002823.jpg",
+      "timestamp": 187.1955,
+      "tracked_corners": 86,
+      "valid_epipolar_constraints": 86,
+      "median_source_pixels": 14.112131975154604,
+      "p90_source_pixels": 83.88350001994807
+    },
+    {
+      "first": "frame_002823.jpg",
+      "second": "frame_002824.jpg",
+      "timestamp": 187.262167,
+      "tracked_corners": 157,
+      "valid_epipolar_constraints": 157,
+      "median_source_pixels": 7.466381370861199,
+      "p90_source_pixels": 61.7079105609265
+    },
+    {
+      "first": "frame_002824.jpg",
+      "second": "frame_002825.jpg",
+      "timestamp": 187.328833,
+      "tracked_corners": 146,
+      "valid_epipolar_constraints": 146,
+      "median_source_pixels": 6.156272444553615,
+      "p90_source_pixels": 66.4374537768467
+    },
+    {
+      "first": "frame_002825.jpg",
+      "second": "frame_002826.jpg",
+      "timestamp": 187.3955,
+      "tracked_corners": 136,
+      "valid_epipolar_constraints": 136,
+      "median_source_pixels": 6.302852808991631,
+      "p90_source_pixels": 18.179884141972337
+    },
+    {
+      "first": "frame_002826.jpg",
+      "second": "frame_002827.jpg",
+      "timestamp": 187.462156,
+      "tracked_corners": 178,
+      "valid_epipolar_constraints": 178,
+      "median_source_pixels": 6.665934703854756,
+      "p90_source_pixels": 18.171359986978143
+    },
+    {
+      "first": "frame_002827.jpg",
+      "second": "frame_002829.jpg",
+      "timestamp": 187.596533,
+      "tracked_corners": 143,
+      "valid_epipolar_constraints": 143,
+      "median_source_pixels": 6.414675019391327,
+      "p90_source_pixels": 15.238047459843916
+    },
+    {
+      "first": "frame_002829.jpg",
+      "second": "frame_002831.jpg",
+      "timestamp": 187.730867,
+      "tracked_corners": 142,
+      "valid_epipolar_constraints": 142,
+      "median_source_pixels": 3.4499943222512814,
+      "p90_source_pixels": 6.573352726117796
+    },
+    {
+      "first": "frame_002831.jpg",
+      "second": "frame_002834.jpg",
+      "timestamp": 187.932156,
+      "tracked_corners": 133,
+      "valid_epipolar_constraints": 133,
+      "median_source_pixels": 4.636702391735697,
+      "p90_source_pixels": 19.32447432934357
+    },
+    {
+      "first": "frame_002834.jpg",
+      "second": "frame_002837.jpg",
+      "timestamp": 188.131389,
+      "tracked_corners": 142,
+      "valid_epipolar_constraints": 142,
+      "median_source_pixels": 5.1274716031603855,
+      "p90_source_pixels": 21.894062652437174
+    },
+    {
+      "first": "frame_002837.jpg",
+      "second": "frame_002840.jpg",
+      "timestamp": 188.331378,
+      "tracked_corners": 194,
+      "valid_epipolar_constraints": 194,
+      "median_source_pixels": 3.578230199155609,
+      "p90_source_pixels": 8.031044043902357
+    },
+    {
+      "first": "frame_002840.jpg",
+      "second": "frame_002842.jpg",
+      "timestamp": 188.463611,
+      "tracked_corners": 228,
+      "valid_epipolar_constraints": 228,
+      "median_source_pixels": 3.08709116048482,
+      "p90_source_pixels": 6.569069386448602
+    },
+    {
+      "first": "frame_002842.jpg",
+      "second": "frame_002845.jpg",
+      "timestamp": 188.6636,
+      "tracked_corners": 173,
+      "valid_epipolar_constraints": 173,
+      "median_source_pixels": 8.785274692697735,
+      "p90_source_pixels": 38.70798507646898
+    },
+    {
+      "first": "frame_002845.jpg",
+      "second": "frame_002849.jpg",
+      "timestamp": 188.929011,
+      "tracked_corners": 154,
+      "valid_epipolar_constraints": 154,
+      "median_source_pixels": 6.829376757032872,
+      "p90_source_pixels": 13.665717002657972
+    },
+    {
+      "first": "frame_002849.jpg",
+      "second": "frame_002855.jpg",
+      "timestamp": 189.328778,
+      "tracked_corners": 194,
+      "valid_epipolar_constraints": 193,
+      "median_source_pixels": 2.335325024831324,
+      "p90_source_pixels": 5.839034880431636
+    },
+    {
+      "first": "frame_002855.jpg",
+      "second": "frame_002860.jpg",
+      "timestamp": 189.6621,
+      "tracked_corners": 302,
+      "valid_epipolar_constraints": 302,
+      "median_source_pixels": 3.2198228201275407,
+      "p90_source_pixels": 6.77501572230687
+    },
+    {
+      "first": "frame_002860.jpg",
+      "second": "frame_002871.jpg",
+      "timestamp": 190.395411,
+      "tracked_corners": 165,
+      "valid_epipolar_constraints": 165,
+      "median_source_pixels": 5.215341904646209,
+      "p90_source_pixels": 37.87571633283226
+    },
+    {
+      "first": "frame_002871.jpg",
+      "second": "frame_002874.jpg",
+      "timestamp": 190.5954,
+      "tracked_corners": 328,
+      "valid_epipolar_constraints": 328,
+      "median_source_pixels": 3.656255787877756,
+      "p90_source_pixels": 12.239361878218597
+    },
+    {
+      "first": "frame_002874.jpg",
+      "second": "frame_002877.jpg",
+      "timestamp": 190.795389,
+      "tracked_corners": 305,
+      "valid_epipolar_constraints": 305,
+      "median_source_pixels": 17.014129004242854,
+      "p90_source_pixels": 90.05974264889954
+    },
+    {
+      "first": "frame_002877.jpg",
+      "second": "frame_002885.jpg",
+      "timestamp": 191.328711,
+      "tracked_corners": 168,
+      "valid_epipolar_constraints": 168,
+      "median_source_pixels": 6.137442476266511,
+      "p90_source_pixels": 14.359462137093379
+    },
+    {
+      "first": "frame_002885.jpg",
+      "second": "frame_002887.jpg",
+      "timestamp": 191.462033,
+      "tracked_corners": 218,
+      "valid_epipolar_constraints": 212,
+      "median_source_pixels": 9.886293255701922,
+      "p90_source_pixels": 31.510274749450765
+    },
+    {
+      "first": "frame_002887.jpg",
+      "second": "frame_002888.jpg",
+      "timestamp": 191.5287,
+      "tracked_corners": 134,
+      "valid_epipolar_constraints": 134,
+      "median_source_pixels": 13.87965388335553,
+      "p90_source_pixels": 21.27892330496986
+    },
+    {
+      "first": "frame_002888.jpg",
+      "second": "frame_002889.jpg",
+      "timestamp": 191.595367,
+      "tracked_corners": 137,
+      "valid_epipolar_constraints": 137,
+      "median_source_pixels": 1.1915893122573624,
+      "p90_source_pixels": 3.3688244415467543
+    },
+    {
+      "first": "frame_002889.jpg",
+      "second": "frame_002890.jpg",
+      "timestamp": 191.662033,
+      "tracked_corners": 107,
+      "valid_epipolar_constraints": 107,
+      "median_source_pixels": 3.821204806067967,
+      "p90_source_pixels": 9.534315975489701
+    },
+    {
+      "first": "frame_002890.jpg",
+      "second": "frame_002892.jpg",
+      "timestamp": 191.795356,
+      "tracked_corners": 102,
+      "valid_epipolar_constraints": 101,
+      "median_source_pixels": 2.5031396634632817,
+      "p90_source_pixels": 7.885898949446519
+    },
+    {
+      "first": "frame_002892.jpg",
+      "second": "frame_002893.jpg",
+      "timestamp": 191.862022,
+      "tracked_corners": 269,
+      "valid_epipolar_constraints": 268,
+      "median_source_pixels": 7.499260450467016,
+      "p90_source_pixels": 14.328295767445109
+    },
+    {
+      "first": "frame_002893.jpg",
+      "second": "frame_002894.jpg",
+      "timestamp": 191.928689,
+      "tracked_corners": 99,
+      "valid_epipolar_constraints": 99,
+      "median_source_pixels": 11.035024685584489,
+      "p90_source_pixels": 17.083410046609337
+    },
+    {
+      "first": "frame_002894.jpg",
+      "second": "frame_002895.jpg",
+      "timestamp": 191.995356,
+      "tracked_corners": 106,
+      "valid_epipolar_constraints": 106,
+      "median_source_pixels": 12.79135071423794,
+      "p90_source_pixels": 24.616704533403848
+    },
+    {
+      "first": "frame_002895.jpg",
+      "second": "frame_002896.jpg",
+      "timestamp": 192.062022,
+      "tracked_corners": 168,
+      "valid_epipolar_constraints": 168,
+      "median_source_pixels": 5.337550337002941,
+      "p90_source_pixels": 13.000150368915957
+    },
+    {
+      "first": "frame_002896.jpg",
+      "second": "frame_002897.jpg",
+      "timestamp": 192.128689,
+      "tracked_corners": 316,
+      "valid_epipolar_constraints": 315,
+      "median_source_pixels": 1.797540770241598,
+      "p90_source_pixels": 8.15801489509889
+    },
+    {
+      "first": "frame_002897.jpg",
+      "second": "frame_002899.jpg",
+      "timestamp": 192.262022,
+      "tracked_corners": 193,
+      "valid_epipolar_constraints": 193,
+      "median_source_pixels": 12.030282464998518,
+      "p90_source_pixels": 17.067665506085277
+    },
+    {
+      "first": "frame_002899.jpg",
+      "second": "frame_002901.jpg",
+      "timestamp": 192.395344,
+      "tracked_corners": 262,
+      "valid_epipolar_constraints": 261,
+      "median_source_pixels": 5.062632113946722,
+      "p90_source_pixels": 13.067797780378365
+    },
+    {
+      "first": "frame_002901.jpg",
+      "second": "frame_002902.jpg",
+      "timestamp": 192.462011,
+      "tracked_corners": 354,
+      "valid_epipolar_constraints": 354,
+      "median_source_pixels": 3.6124453322805374,
+      "p90_source_pixels": 9.43996008481507
+    },
+    {
+      "first": "frame_002902.jpg",
+      "second": "frame_002903.jpg",
+      "timestamp": 192.528678,
+      "tracked_corners": 274,
+      "valid_epipolar_constraints": 274,
+      "median_source_pixels": 4.6117090345029474,
+      "p90_source_pixels": 10.675037346153003
+    },
+    {
+      "first": "frame_002903.jpg",
+      "second": "frame_002904.jpg",
+      "timestamp": 192.595344,
+      "tracked_corners": 236,
+      "valid_epipolar_constraints": 236,
+      "median_source_pixels": 6.328100987219545,
+      "p90_source_pixels": 15.909358975453316
+    },
+    {
+      "first": "frame_002904.jpg",
+      "second": "frame_002905.jpg",
+      "timestamp": 192.662233,
+      "tracked_corners": 212,
+      "valid_epipolar_constraints": 212,
+      "median_source_pixels": 2.461837880306821,
+      "p90_source_pixels": 6.427895934941241
+    },
+    {
+      "first": "frame_002905.jpg",
+      "second": "frame_002908.jpg",
+      "timestamp": 192.862233,
+      "tracked_corners": 295,
+      "valid_epipolar_constraints": 295,
+      "median_source_pixels": 3.1074687971261232,
+      "p90_source_pixels": 7.229186838109692
+    },
+    {
+      "first": "frame_002908.jpg",
+      "second": "frame_002911.jpg",
+      "timestamp": 193.062222,
+      "tracked_corners": 343,
+      "valid_epipolar_constraints": 341,
+      "median_source_pixels": 4.054483728616244,
+      "p90_source_pixels": 7.502593282990662
+    },
+    {
+      "first": "frame_002911.jpg",
+      "second": "frame_002913.jpg",
+      "timestamp": 193.195322,
+      "tracked_corners": 379,
+      "valid_epipolar_constraints": 379,
+      "median_source_pixels": 11.133007088241376,
+      "p90_source_pixels": 20.116077540526256
+    },
+    {
+      "first": "frame_002913.jpg",
+      "second": "frame_002915.jpg",
+      "timestamp": 193.328878,
+      "tracked_corners": 352,
+      "valid_epipolar_constraints": 352,
+      "median_source_pixels": 7.3067708948608185,
+      "p90_source_pixels": 10.915050255071106
+    },
+    {
+      "first": "frame_002915.jpg",
+      "second": "frame_002916.jpg",
+      "timestamp": 193.395544,
+      "tracked_corners": 378,
+      "valid_epipolar_constraints": 378,
+      "median_source_pixels": 2.5637279635188035,
+      "p90_source_pixels": 4.738321680436061
+    },
+    {
+      "first": "frame_002916.jpg",
+      "second": "frame_002918.jpg",
+      "timestamp": 193.528878,
+      "tracked_corners": 387,
+      "valid_epipolar_constraints": 386,
+      "median_source_pixels": 1.6675956747706406,
+      "p90_source_pixels": 4.343844090987025
+    },
+    {
+      "first": "frame_002918.jpg",
+      "second": "frame_002920.jpg",
+      "timestamp": 193.6622,
+      "tracked_corners": 424,
+      "valid_epipolar_constraints": 423,
+      "median_source_pixels": 3.558693305640905,
+      "p90_source_pixels": 10.675197941275156
+    },
+    {
+      "first": "frame_002920.jpg",
+      "second": "frame_002923.jpg",
+      "timestamp": 193.862844,
+      "tracked_corners": 321,
+      "valid_epipolar_constraints": 320,
+      "median_source_pixels": 1.9127786052760847,
+      "p90_source_pixels": 4.558953293016546
+    },
+    {
+      "first": "frame_002923.jpg",
+      "second": "frame_002925.jpg",
+      "timestamp": 193.996778,
+      "tracked_corners": 329,
+      "valid_epipolar_constraints": 328,
+      "median_source_pixels": 2.888176389018899,
+      "p90_source_pixels": 5.7904800482800605
+    },
+    {
+      "first": "frame_002925.jpg",
+      "second": "frame_002926.jpg",
+      "timestamp": 194.063444,
+      "tracked_corners": 382,
+      "valid_epipolar_constraints": 380,
+      "median_source_pixels": 1.7561690107664965,
+      "p90_source_pixels": 5.054645282945024
+    },
+    {
+      "first": "frame_002926.jpg",
+      "second": "frame_002928.jpg",
+      "timestamp": 194.196767,
+      "tracked_corners": 275,
+      "valid_epipolar_constraints": 275,
+      "median_source_pixels": 1.8999532552519665,
+      "p90_source_pixels": 6.025563988921248
+    },
+    {
+      "first": "frame_002928.jpg",
+      "second": "frame_002930.jpg",
+      "timestamp": 194.330667,
+      "tracked_corners": 307,
+      "valid_epipolar_constraints": 307,
+      "median_source_pixels": 2.2165487817507086,
+      "p90_source_pixels": 4.360877277097018
+    },
+    {
+      "first": "frame_002930.jpg",
+      "second": "frame_002932.jpg",
+      "timestamp": 194.465056,
+      "tracked_corners": 357,
+      "valid_epipolar_constraints": 357,
+      "median_source_pixels": 1.8418295381198262,
+      "p90_source_pixels": 4.227424275712207
+    },
+    {
+      "first": "frame_002932.jpg",
+      "second": "frame_002934.jpg",
+      "timestamp": 194.598389,
+      "tracked_corners": 322,
+      "valid_epipolar_constraints": 321,
+      "median_source_pixels": 1.252009687305064,
+      "p90_source_pixels": 4.791017337886123
+    },
+    {
+      "first": "frame_002934.jpg",
+      "second": "frame_002936.jpg",
+      "timestamp": 194.731711,
+      "tracked_corners": 306,
+      "valid_epipolar_constraints": 306,
+      "median_source_pixels": 7.468372820065204,
+      "p90_source_pixels": 10.314984522234067
+    }
+  ]
+}

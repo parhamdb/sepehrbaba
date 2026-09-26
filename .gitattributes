@@ -7,3 +7,4 @@ evidence/tracked-cleanup/*.ply filter=lfs diff=lfs merge=lfs -text
 evidence/tracked-cleanup/*.tar.gz filter=lfs diff=lfs merge=lfs -text
 evidence/camera-review/*.mp4 filter=lfs diff=lfs merge=lfs -text
 evidence/camera-review/*.json.gz filter=lfs diff=lfs merge=lfs -text
+evidence/camera-loss-benchmark/**/*.mp4 filter=lfs diff=lfs merge=lfs -text

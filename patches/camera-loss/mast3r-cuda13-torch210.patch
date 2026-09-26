@@ -1,0 +1,67 @@
+diff --git a/mast3r_slam/backend/src/gn_kernels.cu b/mast3r_slam/backend/src/gn_kernels.cu
+index bf2d588..ffc668e 100644
+--- a/mast3r_slam/backend/src/gn_kernels.cu
++++ b/mast3r_slam/backend/src/gn_kernels.cu
+@@ -799,7 +799,7 @@ std::vector<torch::Tensor> gauss_newton_points_cuda(
+ 
+     // Termination criteria
+     // Need to specify this second argument otherwise ambiguous function call...
+-    delta_norm = torch::linalg::linalg_norm(dx, std::optional<c10::Scalar>(), {}, false, {});
++    delta_norm = at::linalg_norm(dx, std::optional<c10::Scalar>(), {}, false, {});
+     if (delta_norm.item<float>() < delta_thresh) {
+       break;
+     }
+@@ -1216,7 +1216,7 @@ std::vector<torch::Tensor> gauss_newton_rays_cuda(
+ 
+     // Termination criteria
+     // Need to specify this second argument otherwise ambiguous function call...
+-    delta_norm = torch::linalg::linalg_norm(dx, std::optional<c10::Scalar>(), {}, false, {});
++    delta_norm = at::linalg_norm(dx, std::optional<c10::Scalar>(), {}, false, {});
+     if (delta_norm.item<float>() < delta_thresh) {
+       break;
+     }
+@@ -1626,7 +1626,7 @@ std::vector<torch::Tensor> gauss_newton_calib_cuda(
+ 
+     // Termination criteria
+     // Need to specify this second argument otherwise ambiguous function call...
+-    delta_norm = torch::linalg::linalg_norm(dx, std::optional<c10::Scalar>(), {}, false, {});
++    delta_norm = at::linalg_norm(dx, std::optional<c10::Scalar>(), {}, false, {});
+     if (delta_norm.item<float>() < delta_thresh) {
+       break;
+     }
+diff --git a/mast3r_slam/backend/src/matching_kernels.cu b/mast3r_slam/backend/src/matching_kernels.cu
+index 288fa4c..044e9b4 100644
+--- a/mast3r_slam/backend/src/matching_kernels.cu
++++ b/mast3r_slam/backend/src/matching_kernels.cu
+@@ -100,7 +100,7 @@ std::vector<torch::Tensor> refine_matches_cuda(
+   torch::Tensor p1_new = torch::zeros(
+     {batch_size, n, 2}, opts);
+ 
+-  AT_DISPATCH_FLOATING_TYPES_AND_HALF(D11.type(), "refine_matches_kernel", ([&] {
++  AT_DISPATCH_FLOATING_TYPES_AND_HALF(D11.scalar_type(), "refine_matches_kernel", ([&] {
+     refine_matches_kernel<scalar_t><<<blocks, threads>>>(
+       D11.packed_accessor32<scalar_t,4,torch::RestrictPtrTraits>(),
+       D21.packed_accessor32<scalar_t,3,torch::RestrictPtrTraits>(),
+diff --git a/setup.py b/setup.py
+index ee79545..41a28df 100644
+--- a/setup.py
++++ b/setup.py
+@@ -26,15 +26,9 @@ if has_cuda:
+ 
+     sources.append("mast3r_slam/backend/src/gn_kernels.cu")
+     sources.append("mast3r_slam/backend/src/matching_kernels.cu")
+-    extra_compile_args["nvcc"] = [
+-        "-O3",
+-        "-gencode=arch=compute_60,code=sm_60",
+-        "-gencode=arch=compute_61,code=sm_61",
+-        "-gencode=arch=compute_70,code=sm_70",
+-        "-gencode=arch=compute_75,code=sm_75",
+-        "-gencode=arch=compute_80,code=sm_80",
+-        "-gencode=arch=compute_86,code=sm_86",
+-    ]
++    major, minor = torch.cuda.get_device_capability()
++    arch = f"{major}{minor}"
++    extra_compile_args["nvcc"] = ["-O3", f"-gencode=arch=compute_{arch},code=sm_{arch}"]
+     ext_modules = [
+         CUDAExtension(
+             "mast3r_slam_backends",
