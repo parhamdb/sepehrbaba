@@ -6,6 +6,11 @@ The full review includes all 12,793 native video frames, including frames with
 **no pose in the supplied snapshot**. It is a scaled, JPEG-derived and re-encoded
 review aid; the preserved source remains the evidence reference.
 
+[Watch the silent 17-second sample (09:50–10:07)](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/preview.mp4)
+· [Preview report](../evidence/camera-review/preview-report.json)
+· [Portable camera snapshot](../evidence/camera-review/snapshot.json.gz).
+The content note for the original graphic recording applies to these derivatives.
+
 ## Reading the overlay
 
 - Left: source image. Middle: the same image with projected 3D landmarks.
