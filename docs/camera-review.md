@@ -6,9 +6,12 @@ The full review includes all 12,793 native video frames, including frames with
 **no pose in the supplied snapshot**. It is a scaled, JPEG-derived and re-encoded
 review aid; the preserved source remains the evidence reference.
 
-[Watch the silent 17-second sample (09:50–10:07)](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/preview.mp4)
+[Watch/download the full 12:17 review](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/full.mp4)
+· [Silent 17-second sample (09:50–10:07)](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/preview.mp4)
+· [Full report](../evidence/camera-review/full-report.json)
 · [Preview report](../evidence/camera-review/preview-report.json)
-· [Portable camera snapshot](../evidence/camera-review/snapshot.json.gz).
+· [Portable camera snapshot](../evidence/camera-review/snapshot.json.gz)
+· [Per-frame diagnostics](../evidence/camera-review/frame-diagnostics.json.gz).
 The content note for the original graphic recording applies to these derivatives.
 
 ## Reading the overlay
@@ -107,7 +110,15 @@ frame/timestamp/audio checks, (4) representative tracked/gap/component-boundary
 stills, and (5) portable artifacts and public download. One discovery pass,
 focused remedies and one final check of the frozen output. The reconstruction
 batch, splat quality, global registration and public 3D viewer are outside scope.
-Results and artifact links are recorded here after rendering.
+Renderer source was frozen at `081d785`. Full rendering retained 12,793 frames,
+with zero timestamp error against the native manifest. There are 4,502 posed
+frames, 8,291 no-pose frames and 4,361 frames with image-flow comparisons.
+The report's 120 `component_changes` count includes resumptions after missing
+poses, not just changes to a different model. Twenty-two of the 27 supplied
+models contribute selected frames. The three synthetic/numeric controls passed
+again on the frozen renderer; independent code review found no high/medium
+defect. The selected visual observations above are diagnostic findings, not
+certification of the whole camera trajectory.
 
 Method references: [COLMAP camera and image conventions](https://colmap.github.io/format.html#text-format)
 and [PyAV timestamps and time bases](https://pyav.org/docs/stable/api/time.html).

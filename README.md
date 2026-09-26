@@ -74,9 +74,11 @@ default scene covers an 18-second pilot; separate experimental previews span
 about 48 seconds (02:17–03:05) and 71 seconds (03:06–04:17).** The scenes are
 partial reconstructions and have not been joined into a continuous environment.
 
-**Camera tracking review:** [watch the 17-second overlay sample](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/preview.mp4)
-from 09:50–10:07, with source footage, projected landmarks, image-flow comparisons
-and a local camera-path panel. [How to read and reproduce it](docs/camera-review.md).
+**Camera tracking review:** [full 12:17 overlay video](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/full.mp4)
+· [17-second sample from 09:50–10:07](https://media.githubusercontent.com/media/parhamdb/sepehrbaba/main/evidence/camera-review/preview.mp4).
+Compare source footage, projected landmarks, image-flow measurements and a local
+camera-path panel. All original frames are included; 35.2% have a pose in this
+snapshot and missing poses are labeled. [How to read and reproduce it](docs/camera-review.md).
 This is a diagnostic aid, not certification of camera accuracy or global alignment.
 
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)

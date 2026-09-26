@@ -1,0 +1,26 @@
+{
+  "source_sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a",
+  "snapshot_sha256": "b5f639b261d5ba58dffdcf212d49db1fe05e61c0b9c6a730e8268d3c0a821841",
+  "script_sha256": "eda3927882ebcff3f59fe18da2ba7da58a6d72350cd22c0ca2257bc216e9a465",
+  "video_sha256": "510d41e70a30aaf3e64cfb63f0dfdd59bf23f0bc0f2803d32632535d6a6ee1c5",
+  "source_interval": [
+    0.0,
+    737.247122
+  ],
+  "frames": 12793,
+  "posed_frames": 4502,
+  "frames_with_flow": 4361,
+  "component_changes": 120,
+  "timestamp_max_error_seconds": 0.0,
+  "dimensions": [
+    1152,
+    864
+  ],
+  "original_audio_copied": true,
+  "versions": {
+    "av": "16.1.0",
+    "cv2": "4.11.0",
+    "numpy": "2.4.2"
+  },
+  "status": "rendered; visual review required; not camera-accuracy certification"
+}
