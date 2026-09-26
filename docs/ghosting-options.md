@@ -1,5 +1,9 @@
 # Ghosting research and ranked fallback options
 
+For the September 26 update covering stitching, newer models and missing-region
+completion, see [current reconstruction options](reconstruction-options-2026-09.md).
+The experiments and original ranking below remain preserved.
+
 Research snapshot: **2026-09-25**. This document preserves the options discussed
 for this recording so unsuccessful experiments can lead to a different,
 evidence-based approach rather than repeated threshold tuning.

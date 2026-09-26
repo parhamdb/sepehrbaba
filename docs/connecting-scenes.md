@@ -1,5 +1,9 @@
 # Connecting the 48-second and 71-second scenes
 
+[September 26 research update](reconstruction-options-2026-09.md) compares new
+dense matchers, direct-splat registration and long-video trajectory alternatives.
+It does not change the rejected alignment results documented here.
+
 **Status: no defensible spatial alignment was recovered. The public scenes
 remain separate.** Three approaches were investigated on September 26, 2026.
 The failed candidates are preserved for contributors; their transforms must not

@@ -86,6 +86,9 @@ require visual review before publication.
 **[Preserved source and checksum](evidence/README.md)** ·
 **[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
 
+[Current tools and ranked options for stitching, motion removal, cleanup and missing regions](docs/reconstruction-options-2026-09.md)
+(research checked September 26, 2026; new methods have not been run on this video).
+
 The 3D scene is an experimental derived visualization. Preserve the source video
 and its audio separately from masks, inferred geometry, and rendered views. The
 project does not claim a complete chain of custody or court-certified accuracy.
