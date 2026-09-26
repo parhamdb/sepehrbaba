@@ -1,0 +1,4157 @@
+{
+  "schema": 1,
+  "inputs_sha256": "c9abb35a69abdbdb87f32db2c3ec6ab32b9c469047cc515e28894fd4873402af",
+  "limits": {
+    "min_fit_frames": 5,
+    "min_test_frames": 5,
+    "max_position_percent_span": 5.0,
+    "max_orientation_deg": 5.0,
+    "min_side_duration_seconds": 0.5
+  },
+  "threshold_scope": "Conservative experimental screening, not calibrated accuracy or evidentiary certification",
+  "split_scope": "Withheld cameras are excluded from gauge fitting; the neural solver saw the complete clip",
+  "transform_scope": "Rejected/unverified hypotheses only. Never apply automatically to source scenes.",
+  "accepted_connections": 0,
+  "counts": {
+    "unverified": 4,
+    "rejected": 5,
+    "blocked": 10
+  },
+  "cases": [
+    {
+      "id": "loss-001",
+      "loss_time": 30.012089,
+      "gap_end": 32.681022,
+      "window_end": 40.012089,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.1495354204519752,
+                  0.6999054314665294,
+                  -0.698406432554786
+                ],
+                [
+                  -0.35537521326444704,
+                  0.6971927607358432,
+                  0.6225999615923385
+                ],
+                [
+                  0.9226850035778733,
+                  0.1550955878843241,
+                  0.3529840545850703
+                ]
+              ],
+              "scale": 8.69109978664652,
+              "offset": [
+                10.67154218031722,
+                -7.051765043696253,
+                5.284327898831915
+              ],
+              "reference_span": 11.971500853190674,
+              "fit_median_percent_span": 1.8912942946912998,
+              "anchor_frames": 21
+            },
+            "fit_names": [
+              "frame_000409.jpg",
+              "frame_000412.jpg",
+              "frame_000414.jpg",
+              "frame_000416.jpg",
+              "frame_000418.jpg",
+              "frame_000420.jpg",
+              "frame_000422.jpg",
+              "frame_000424.jpg",
+              "frame_000426.jpg",
+              "frame_000428.jpg",
+              "frame_000430.jpg",
+              "frame_000432.jpg",
+              "frame_000434.jpg",
+              "frame_000436.jpg",
+              "frame_000438.jpg",
+              "frame_000440.jpg",
+              "frame_000442.jpg",
+              "frame_000444.jpg",
+              "frame_000446.jpg",
+              "frame_000448.jpg",
+              "frame_000450.jpg"
+            ],
+            "withheld_names": [
+              "frame_000411.jpg",
+              "frame_000413.jpg",
+              "frame_000415.jpg",
+              "frame_000417.jpg",
+              "frame_000419.jpg",
+              "frame_000421.jpg",
+              "frame_000423.jpg",
+              "frame_000425.jpg",
+              "frame_000427.jpg",
+              "frame_000429.jpg",
+              "frame_000431.jpg",
+              "frame_000433.jpg",
+              "frame_000435.jpg",
+              "frame_000437.jpg",
+              "frame_000439.jpg",
+              "frame_000441.jpg",
+              "frame_000443.jpg",
+              "frame_000445.jpg",
+              "frame_000447.jpg",
+              "frame_000449.jpg",
+              "frame_000451.jpg"
+            ],
+            "withheld": {
+              "frames": 21,
+              "position_percent_span": 1.8414393633471846,
+              "orientation_deg": 1.4885471030620245,
+              "p90_position_percent_span": 3.2452437276823067,
+              "p90_orientation_deg": 1.8422468521089637
+            },
+            "duration_seconds": 2.7967890000000004,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8774528730746037,
+                  0.3582275637423059,
+                  -0.3189819244226491
+                ],
+                [
+                  -0.2479274008714109,
+                  0.9080055880531039,
+                  0.33772452673959585
+                ],
+                [
+                  0.4106196042936472,
+                  -0.21725299684835045,
+                  0.8855465408041183
+                ]
+              ],
+              "scale": 7.911261571284471,
+              "offset": [
+                -10.188218748400722,
+                0.44465194015995024,
+                3.4257052783951547
+              ],
+              "reference_span": 18.72960560757731,
+              "fit_median_percent_span": 1.8840222928020882,
+              "anchor_frames": 39
+            },
+            "fit_names": [
+              "frame_000492.jpg",
+              "frame_000495.jpg",
+              "frame_000498.jpg",
+              "frame_000501.jpg",
+              "frame_000503.jpg",
+              "frame_000506.jpg",
+              "frame_000508.jpg",
+              "frame_000510.jpg",
+              "frame_000513.jpg",
+              "frame_000515.jpg",
+              "frame_000519.jpg",
+              "frame_000521.jpg",
+              "frame_000523.jpg",
+              "frame_000526.jpg",
+              "frame_000530.jpg",
+              "frame_000532.jpg",
+              "frame_000535.jpg",
+              "frame_000537.jpg",
+              "frame_000544.jpg",
+              "frame_000546.jpg",
+              "frame_000548.jpg",
+              "frame_000550.jpg",
+              "frame_000554.jpg",
+              "frame_000556.jpg",
+              "frame_000558.jpg",
+              "frame_000560.jpg",
+              "frame_000562.jpg",
+              "frame_000565.jpg",
+              "frame_000567.jpg",
+              "frame_000570.jpg",
+              "frame_000572.jpg",
+              "frame_000574.jpg",
+              "frame_000576.jpg",
+              "frame_000578.jpg",
+              "frame_000581.jpg",
+              "frame_000583.jpg",
+              "frame_000586.jpg",
+              "frame_000588.jpg",
+              "frame_000590.jpg"
+            ],
+            "withheld_names": [
+              "frame_000494.jpg",
+              "frame_000497.jpg",
+              "frame_000499.jpg",
+              "frame_000502.jpg",
+              "frame_000505.jpg",
+              "frame_000507.jpg",
+              "frame_000509.jpg",
+              "frame_000511.jpg",
+              "frame_000514.jpg",
+              "frame_000518.jpg",
+              "frame_000520.jpg",
+              "frame_000522.jpg",
+              "frame_000525.jpg",
+              "frame_000527.jpg",
+              "frame_000531.jpg",
+              "frame_000534.jpg",
+              "frame_000536.jpg",
+              "frame_000543.jpg",
+              "frame_000545.jpg",
+              "frame_000547.jpg",
+              "frame_000549.jpg",
+              "frame_000551.jpg",
+              "frame_000555.jpg",
+              "frame_000557.jpg",
+              "frame_000559.jpg",
+              "frame_000561.jpg",
+              "frame_000563.jpg",
+              "frame_000566.jpg",
+              "frame_000569.jpg",
+              "frame_000571.jpg",
+              "frame_000573.jpg",
+              "frame_000575.jpg",
+              "frame_000577.jpg",
+              "frame_000579.jpg",
+              "frame_000582.jpg",
+              "frame_000585.jpg",
+              "frame_000587.jpg",
+              "frame_000589.jpg",
+              "frame_000591.jpg"
+            ],
+            "withheld": {
+              "frames": 39,
+              "position_percent_span": 1.8258390494430041,
+              "orientation_deg": 1.8258314549050978,
+              "p90_position_percent_span": 5.263457032494951,
+              "p90_orientation_deg": 2.6294603635048084
+            },
+            "duration_seconds": 6.603211000000002,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 1.0985731805648584,
+            "rotation": [
+              [
+                0.6047147297517494,
+                0.362575132843001,
+                -0.7091257777469024
+              ],
+              [
+                -0.2606694716554071,
+                0.9314294530339572,
+                0.25394999619561764
+              ],
+              [
+                0.7525765889051829,
+                0.03128013850262351,
+                0.6577613782878238
+              ]
+            ],
+            "offset": [
+              19.9314178600196,
+              -11.380008639608603,
+              11.216853239126849
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.12961338972596026,
+                  0.6899326755193969,
+                  -0.7121750293673549
+                ],
+                [
+                  -0.3488122599781909,
+                  0.7040514953201471,
+                  0.6185802286093308
+                ],
+                [
+                  0.9281866065035915,
+                  0.16823910124614688,
+                  0.3319114766307958
+                ]
+              ],
+              "scale": 20.594555517756977,
+              "offset": [
+                11.991831804569708,
+                -6.63713116119887,
+                7.1988679242061435
+              ],
+              "reference_span": 11.610861501974806,
+              "fit_median_percent_span": 2.0852759876956517,
+              "anchor_frames": 13
+            },
+            "fit_names": [
+              "frame_000409.jpg",
+              "frame_000412.jpg",
+              "frame_000417.jpg",
+              "frame_000421.jpg",
+              "frame_000425.jpg",
+              "frame_000429.jpg",
+              "frame_000433.jpg",
+              "frame_000436.jpg",
+              "frame_000439.jpg",
+              "frame_000441.jpg",
+              "frame_000445.jpg",
+              "frame_000447.jpg",
+              "frame_000449.jpg"
+            ],
+            "withheld_names": [
+              "frame_000411.jpg",
+              "frame_000414.jpg",
+              "frame_000418.jpg",
+              "frame_000423.jpg",
+              "frame_000427.jpg",
+              "frame_000431.jpg",
+              "frame_000435.jpg",
+              "frame_000438.jpg",
+              "frame_000440.jpg",
+              "frame_000443.jpg",
+              "frame_000446.jpg",
+              "frame_000448.jpg",
+              "frame_000450.jpg"
+            ],
+            "withheld": {
+              "frames": 13,
+              "position_percent_span": 1.5631992837305602,
+              "orientation_deg": 1.0691736908112264,
+              "p90_position_percent_span": 3.5878103830063264,
+              "p90_orientation_deg": 1.948620646182669
+            },
+            "duration_seconds": 2.730122999999999,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8698497057098221,
+                  0.30598424111888917,
+                  -0.3869562425694057
+                ],
+                [
+                  -0.2093936536122147,
+                  0.9392396436036247,
+                  0.2719985104927292
+                ],
+                [
+                  0.4466719011796722,
+                  -0.15557164288594805,
+                  0.8810684857752564
+                ]
+              ],
+              "scale": 20.897833961762267,
+              "offset": [
+                -8.18550075751932,
+                0.8105539705522045,
+                3.967507362396756
+              ],
+              "reference_span": 18.974513746789444,
+              "fit_median_percent_span": 3.4113357963753357,
+              "anchor_frames": 16
+            },
+            "fit_names": [
+              "frame_000492.jpg",
+              "frame_000495.jpg",
+              "frame_000498.jpg",
+              "frame_000508.jpg",
+              "frame_000519.jpg",
+              "frame_000525.jpg",
+              "frame_000530.jpg",
+              "frame_000534.jpg",
+              "frame_000536.jpg",
+              "frame_000545.jpg",
+              "frame_000547.jpg",
+              "frame_000549.jpg",
+              "frame_000562.jpg",
+              "frame_000569.jpg",
+              "frame_000587.jpg",
+              "frame_000591.jpg"
+            ],
+            "withheld_names": [
+              "frame_000494.jpg",
+              "frame_000497.jpg",
+              "frame_000506.jpg",
+              "frame_000514.jpg",
+              "frame_000522.jpg",
+              "frame_000527.jpg",
+              "frame_000532.jpg",
+              "frame_000535.jpg",
+              "frame_000543.jpg",
+              "frame_000546.jpg",
+              "frame_000548.jpg",
+              "frame_000551.jpg",
+              "frame_000566.jpg",
+              "frame_000576.jpg",
+              "frame_000589.jpg"
+            ],
+            "withheld": {
+              "frames": 15,
+              "position_percent_span": 3.4118896917611137,
+              "orientation_deg": 1.5034755171316285,
+              "p90_position_percent_span": 7.054834201882055,
+              "p90_orientation_deg": 2.58203919043928
+            },
+            "duration_seconds": 6.603211000000002,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 0.985487565622341,
+            "rotation": [
+              [
+                0.5994332684668543,
+                0.42716135183551457,
+                -0.676914275335658
+              ],
+              [
+                -0.3273490601762436,
+                0.9025650498866511,
+                0.27967646222883474
+              ],
+              [
+                0.7304261423695579,
+                0.05393987598393381,
+                0.6808583849244738
+              ]
+            ],
+            "offset": [
+              19.132759963960932,
+              -11.092236711578135,
+              10.385808476473894
+            ]
+          }
+        }
+      },
+      "pre_component": "c-9065166282f53f33",
+      "post_component": "native-model-text-13",
+      "same_component": false,
+      "status": "unverified",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-002",
+      "loss_time": 40.884944,
+      "gap_end": 48.017978,
+      "window_end": 50.884944,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.860430040909639,
+                  -0.3443502463900428,
+                  0.37561024015773825
+                ],
+                [
+                  0.2001398903223349,
+                  0.9062521465123967,
+                  0.3723587936969358
+                ],
+                [
+                  -0.46861942875002616,
+                  -0.2452140998246029,
+                  0.8486847920430816
+                ]
+              ],
+              "scale": 0.006748383793895143,
+              "offset": [
+                -2.5627828690079353,
+                3.490634141958231,
+                2.789784382599907
+              ],
+              "reference_span": 8.122044477737525,
+              "fit_median_percent_span": 31.867950060135254,
+              "anchor_frames": 9
+            },
+            "fit_names": [
+              "frame_000594.jpg",
+              "frame_000596.jpg",
+              "frame_000599.jpg",
+              "frame_000602.jpg",
+              "frame_000604.jpg",
+              "frame_000607.jpg",
+              "frame_000609.jpg",
+              "frame_000611.jpg",
+              "frame_000613.jpg"
+            ],
+            "withheld_names": [
+              "frame_000595.jpg",
+              "frame_000598.jpg",
+              "frame_000600.jpg",
+              "frame_000603.jpg",
+              "frame_000606.jpg",
+              "frame_000608.jpg",
+              "frame_000610.jpg",
+              "frame_000612.jpg",
+              "frame_000614.jpg"
+            ],
+            "withheld": {
+              "frames": 9,
+              "position_percent_span": 34.581214813427096,
+              "orientation_deg": 24.87994504642842,
+              "p90_position_percent_span": 46.66423606559516,
+              "p90_orientation_deg": 39.31279334039874
+            },
+            "duration_seconds": 1.333756000000001,
+            "passed": false
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.976707819033364,
+                  -0.04056572618756077,
+                  -0.21070419572937968
+                ],
+                [
+                  0.14787013144354133,
+                  0.8388141006708338,
+                  0.5239516473326996
+                ],
+                [
+                  0.15548717138709156,
+                  -0.5429045278634684,
+                  0.8252747501041006
+                ]
+              ],
+              "scale": 6.3657313203219,
+              "offset": [
+                -27.41920103380342,
+                1.710020330658879,
+                -9.278604715751047
+              ],
+              "reference_span": 7.144674245828996,
+              "fit_median_percent_span": 5.7491863685048745,
+              "anchor_frames": 17
+            },
+            "fit_names": [
+              "frame_000722.jpg",
+              "frame_000728.jpg",
+              "frame_000731.jpg",
+              "frame_000733.jpg",
+              "frame_000735.jpg",
+              "frame_000737.jpg",
+              "frame_000739.jpg",
+              "frame_000741.jpg",
+              "frame_000743.jpg",
+              "frame_000745.jpg",
+              "frame_000747.jpg",
+              "frame_000750.jpg",
+              "frame_000752.jpg",
+              "frame_000754.jpg",
+              "frame_000758.jpg",
+              "frame_000760.jpg",
+              "frame_000762.jpg"
+            ],
+            "withheld_names": [
+              "frame_000723.jpg",
+              "frame_000730.jpg",
+              "frame_000732.jpg",
+              "frame_000734.jpg",
+              "frame_000736.jpg",
+              "frame_000738.jpg",
+              "frame_000740.jpg",
+              "frame_000742.jpg",
+              "frame_000744.jpg",
+              "frame_000746.jpg",
+              "frame_000748.jpg",
+              "frame_000751.jpg",
+              "frame_000753.jpg",
+              "frame_000755.jpg",
+              "frame_000759.jpg",
+              "frame_000761.jpg",
+              "frame_000764.jpg"
+            ],
+            "withheld": {
+              "frames": 17,
+              "position_percent_span": 5.482557060532912,
+              "orientation_deg": 1.4303336496318346,
+              "p90_position_percent_span": 9.005476735557044,
+              "p90_orientation_deg": 2.8126108153926466
+            },
+            "duration_seconds": 2.7999110000000016,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Withheld camera agreement or anchor duration failed",
+          "candidate_post_to_pre": {
+            "scale": 0.0010601113138959646,
+            "rotation": [
+              [
+                0.7752149129351639,
+                0.03518766509151408,
+                0.6307167882562932
+              ],
+              [
+                0.08025785919731841,
+                0.9848697945031947,
+                -0.1535908978823219
+              ],
+              [
+                -0.6265784187154783,
+                0.16968593371473617,
+                0.7606616653278699
+              ]
+            ],
+            "offset": [
+              -2.5341092181084566,
+              3.489670871574159,
+              2.7787459024023553
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": null,
+            "fit_names": [
+              "frame_000594.jpg",
+              "frame_000598.jpg",
+              "frame_000603.jpg",
+              "frame_000613.jpg"
+            ],
+            "withheld_names": [
+              "frame_000596.jpg",
+              "frame_000600.jpg",
+              "frame_000608.jpg"
+            ],
+            "withheld": null,
+            "duration_seconds": 1.2670889999999986,
+            "passed": false
+          },
+          "after": {
+            "fit": null,
+            "fit_names": [
+              "frame_000730.jpg",
+              "frame_000739.jpg",
+              "frame_000761.jpg"
+            ],
+            "withheld_names": [
+              "frame_000732.jpg",
+              "frame_000741.jpg"
+            ],
+            "withheld": null,
+            "duration_seconds": 2.0668000000000006,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "blocked",
+          "reason": "No positive-scale fit with five anchors on both sides"
+        }
+      },
+      "pre_component": "native-model-text-15",
+      "post_component": "native-model-text-16",
+      "same_component": false,
+      "status": "rejected",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-003",
+      "loss_time": 52.551356,
+      "gap_end": 69.733633,
+      "window_end": 62.551356,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-004",
+      "loss_time": 93.609022,
+      "gap_end": 120.7308,
+      "window_end": 103.609022,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-005",
+      "loss_time": 125.6017,
+      "gap_end": 128.136211,
+      "window_end": 135.6017,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.6299237127592769,
+                  -0.5501900818289425,
+                  0.5481669362161768
+                ],
+                [
+                  0.6209890091498727,
+                  0.7806904416084923,
+                  0.06996488330724909
+                ],
+                [
+                  -0.466442672381749,
+                  0.2963331035139336,
+                  0.8334374152527433
+                ]
+              ],
+              "scale": 7.956969112832683,
+              "offset": [
+                -14.185749342015146,
+                7.325195894649344,
+                -12.824415012643467
+              ],
+              "reference_span": 16.671996431173724,
+              "fit_median_percent_span": 2.005768451127838,
+              "anchor_frames": 30
+            },
+            "fit_names": [
+              "frame_001821.jpg",
+              "frame_001823.jpg",
+              "frame_001825.jpg",
+              "frame_001827.jpg",
+              "frame_001830.jpg",
+              "frame_001832.jpg",
+              "frame_001834.jpg",
+              "frame_001836.jpg",
+              "frame_001838.jpg",
+              "frame_001840.jpg",
+              "frame_001843.jpg",
+              "frame_001846.jpg",
+              "frame_001848.jpg",
+              "frame_001851.jpg",
+              "frame_001853.jpg",
+              "frame_001855.jpg",
+              "frame_001858.jpg",
+              "frame_001862.jpg",
+              "frame_001864.jpg",
+              "frame_001866.jpg",
+              "frame_001870.jpg",
+              "frame_001872.jpg",
+              "frame_001874.jpg",
+              "frame_001877.jpg",
+              "frame_001880.jpg",
+              "frame_001883.jpg",
+              "frame_001885.jpg",
+              "frame_001888.jpg",
+              "frame_001890.jpg",
+              "frame_001892.jpg"
+            ],
+            "withheld_names": [
+              "frame_001822.jpg",
+              "frame_001824.jpg",
+              "frame_001826.jpg",
+              "frame_001828.jpg",
+              "frame_001831.jpg",
+              "frame_001833.jpg",
+              "frame_001835.jpg",
+              "frame_001837.jpg",
+              "frame_001839.jpg",
+              "frame_001842.jpg",
+              "frame_001844.jpg",
+              "frame_001847.jpg",
+              "frame_001850.jpg",
+              "frame_001852.jpg",
+              "frame_001854.jpg",
+              "frame_001857.jpg",
+              "frame_001859.jpg",
+              "frame_001863.jpg",
+              "frame_001865.jpg",
+              "frame_001867.jpg",
+              "frame_001871.jpg",
+              "frame_001873.jpg",
+              "frame_001875.jpg",
+              "frame_001879.jpg",
+              "frame_001881.jpg",
+              "frame_001884.jpg",
+              "frame_001887.jpg",
+              "frame_001889.jpg",
+              "frame_001891.jpg",
+              "frame_001893.jpg"
+            ],
+            "withheld": {
+              "frames": 30,
+              "position_percent_span": 2.2091973089591415,
+              "orientation_deg": 1.6686460761115767,
+              "p90_position_percent_span": 2.857749899818681,
+              "p90_orientation_deg": 2.3778485442505866
+            },
+            "duration_seconds": 4.804956000000004,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.1975001814815171,
+                  -0.4558923601269601,
+                  0.8678455129184215
+                ],
+                [
+                  0.7255047794533662,
+                  0.6633423646777858,
+                  0.18335681665541367
+                ],
+                [
+                  -0.6592696666047142,
+                  0.5934130628841556,
+                  0.4617623235966264
+                ]
+              ],
+              "scale": 13.007879342741019,
+              "offset": [
+                -70.58696436325563,
+                16.403672432176243,
+                -10.979202438952035
+              ],
+              "reference_span": 18.208052498952704,
+              "fit_median_percent_span": 2.941920396191655,
+              "anchor_frames": 21
+            },
+            "fit_names": [
+              "frame_001932.jpg",
+              "frame_001945.jpg",
+              "frame_001947.jpg",
+              "frame_001951.jpg",
+              "frame_001953.jpg",
+              "frame_001955.jpg",
+              "frame_001959.jpg",
+              "frame_001962.jpg",
+              "frame_001964.jpg",
+              "frame_001973.jpg",
+              "frame_001976.jpg",
+              "frame_001978.jpg",
+              "frame_001982.jpg",
+              "frame_001984.jpg",
+              "frame_001986.jpg",
+              "frame_001989.jpg",
+              "frame_001992.jpg",
+              "frame_001994.jpg",
+              "frame_001996.jpg",
+              "frame_001998.jpg",
+              "frame_002000.jpg"
+            ],
+            "withheld_names": [
+              "frame_001944.jpg",
+              "frame_001946.jpg",
+              "frame_001949.jpg",
+              "frame_001952.jpg",
+              "frame_001954.jpg",
+              "frame_001958.jpg",
+              "frame_001960.jpg",
+              "frame_001963.jpg",
+              "frame_001966.jpg",
+              "frame_001974.jpg",
+              "frame_001977.jpg",
+              "frame_001980.jpg",
+              "frame_001983.jpg",
+              "frame_001985.jpg",
+              "frame_001987.jpg",
+              "frame_001991.jpg",
+              "frame_001993.jpg",
+              "frame_001995.jpg",
+              "frame_001997.jpg",
+              "frame_001999.jpg",
+              "frame_002006.jpg"
+            ],
+            "withheld": {
+              "frames": 21,
+              "position_percent_span": 2.751195608007837,
+              "orientation_deg": 1.2768395886091655,
+              "p90_position_percent_span": 4.822565137411019,
+              "p90_orientation_deg": 2.198568777787287
+            },
+            "duration_seconds": 4.831732999999986,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 0.6117037914618288,
+            "rotation": [
+              [
+                0.8509617184383578,
+                0.19255841881553903,
+                -0.4886567395377837
+              ],
+              [
+                -0.1725466559082699,
+                0.9812240760250497,
+                0.08617983617797327
+              ],
+              [
+                0.49607641073458725,
+                0.01098034480553936,
+                0.8682094371409717
+              ]
+            ],
+            "offset": [
+              17.343346894840927,
+              -9.392079722368624,
+              14.316060767510521
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.5019137157192038,
+                  -0.5186906000809467,
+                  0.6921290944329748
+                ],
+                [
+                  0.6228212596263165,
+                  0.7720044659527576,
+                  0.126896741906509
+                ],
+                [
+                  -0.6001468991258986,
+                  0.36738149917581053,
+                  0.7105311629569131
+                ]
+              ],
+              "scale": 12.943110279347469,
+              "offset": [
+                -16.65762316895391,
+                7.903548002665576,
+                -11.162573033014414
+              ],
+              "reference_span": 17.069008484898255,
+              "fit_median_percent_span": 2.3484260441781735,
+              "anchor_frames": 16
+            },
+            "fit_names": [
+              "frame_001821.jpg",
+              "frame_001823.jpg",
+              "frame_001828.jpg",
+              "frame_001831.jpg",
+              "frame_001835.jpg",
+              "frame_001839.jpg",
+              "frame_001847.jpg",
+              "frame_001852.jpg",
+              "frame_001855.jpg",
+              "frame_001859.jpg",
+              "frame_001865.jpg",
+              "frame_001870.jpg",
+              "frame_001873.jpg",
+              "frame_001884.jpg",
+              "frame_001891.jpg",
+              "frame_001893.jpg"
+            ],
+            "withheld_names": [
+              "frame_001822.jpg",
+              "frame_001825.jpg",
+              "frame_001830.jpg",
+              "frame_001833.jpg",
+              "frame_001837.jpg",
+              "frame_001842.jpg",
+              "frame_001851.jpg",
+              "frame_001853.jpg",
+              "frame_001857.jpg",
+              "frame_001863.jpg",
+              "frame_001867.jpg",
+              "frame_001871.jpg",
+              "frame_001875.jpg",
+              "frame_001889.jpg",
+              "frame_001892.jpg"
+            ],
+            "withheld": {
+              "frames": 15,
+              "position_percent_span": 2.2860842027660087,
+              "orientation_deg": 0.9766937816760601,
+              "p90_position_percent_span": 3.6334841437166276,
+              "p90_orientation_deg": 1.370805758472317
+            },
+            "duration_seconds": 4.804956000000004,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.021532496556366743,
+                  -0.3946544827353217,
+                  0.9185772644960063
+                ],
+                [
+                  0.6529364410809957,
+                  0.7013346391311869,
+                  0.28601350993128255
+                ],
+                [
+                  -0.7571065681266632,
+                  0.5936139850202691,
+                  0.2727857791158151
+                ]
+              ],
+              "scale": 25.115272239624332,
+              "offset": [
+                -82.35605004243712,
+                16.98265367257951,
+                -4.291424196747481
+              ],
+              "reference_span": 17.803436783258174,
+              "fit_median_percent_span": 3.4577481066903886,
+              "anchor_frames": 9
+            },
+            "fit_names": [
+              "frame_001932.jpg",
+              "frame_001945.jpg",
+              "frame_001951.jpg",
+              "frame_001958.jpg",
+              "frame_001966.jpg",
+              "frame_001974.jpg",
+              "frame_001985.jpg",
+              "frame_001995.jpg",
+              "frame_001999.jpg"
+            ],
+            "withheld_names": [
+              "frame_001944.jpg",
+              "frame_001946.jpg",
+              "frame_001953.jpg",
+              "frame_001964.jpg",
+              "frame_001973.jpg",
+              "frame_001982.jpg",
+              "frame_001993.jpg",
+              "frame_001997.jpg"
+            ],
+            "withheld": {
+              "frames": 8,
+              "position_percent_span": 3.019107724030229,
+              "orientation_deg": 1.916294059974518,
+              "p90_position_percent_span": 5.564584670700412,
+              "p90_orientation_deg": 3.2233681072098124
+            },
+            "duration_seconds": 4.366821999999985,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 0.5153481975372395,
+            "rotation": [
+              [
+                0.8512850760722767,
+                0.16190034206726123,
+                -0.499101190636851
+              ],
+              [
+                -0.17469966449787142,
+                0.9843903527781567,
+                0.021346207663880644
+              ],
+              [
+                0.49476635544562814,
+                0.06902110253974475,
+                0.8662807517908091
+              ]
+            ],
+            "offset": [
+              16.951904112633613,
+              -8.0792183283714,
+              11.148097285857396
+            ]
+          }
+        }
+      },
+      "pre_component": "native-model-text-19",
+      "post_component": "native-model-text-17",
+      "same_component": false,
+      "status": "unverified",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-006",
+      "loss_time": 133.034611,
+      "gap_end": 136.777533,
+      "window_end": 143.034611,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8578506060236989,
+                  -0.28914850159221406,
+                  0.42483582919964374
+                ],
+                [
+                  0.3010683529766886,
+                  0.9527415192932309,
+                  0.040514741153410416
+                ],
+                [
+                  -0.41647351005877337,
+                  0.0931490281312754,
+                  0.9043633528496834
+                ]
+              ],
+              "scale": 9.070397932754823,
+              "offset": [
+                -35.46439075857564,
+                8.98461892706243,
+                -4.143236106165852
+              ],
+              "reference_span": 18.208052498952704,
+              "fit_median_percent_span": 2.9417701150348843,
+              "anchor_frames": 21
+            },
+            "fit_names": [
+              "frame_001932.jpg",
+              "frame_001945.jpg",
+              "frame_001947.jpg",
+              "frame_001951.jpg",
+              "frame_001953.jpg",
+              "frame_001955.jpg",
+              "frame_001959.jpg",
+              "frame_001962.jpg",
+              "frame_001964.jpg",
+              "frame_001973.jpg",
+              "frame_001976.jpg",
+              "frame_001978.jpg",
+              "frame_001982.jpg",
+              "frame_001984.jpg",
+              "frame_001986.jpg",
+              "frame_001989.jpg",
+              "frame_001992.jpg",
+              "frame_001994.jpg",
+              "frame_001996.jpg",
+              "frame_001998.jpg",
+              "frame_002000.jpg"
+            ],
+            "withheld_names": [
+              "frame_001944.jpg",
+              "frame_001946.jpg",
+              "frame_001949.jpg",
+              "frame_001952.jpg",
+              "frame_001954.jpg",
+              "frame_001958.jpg",
+              "frame_001960.jpg",
+              "frame_001963.jpg",
+              "frame_001966.jpg",
+              "frame_001974.jpg",
+              "frame_001977.jpg",
+              "frame_001980.jpg",
+              "frame_001983.jpg",
+              "frame_001985.jpg",
+              "frame_001987.jpg",
+              "frame_001991.jpg",
+              "frame_001993.jpg",
+              "frame_001995.jpg",
+              "frame_001997.jpg",
+              "frame_001999.jpg",
+              "frame_002006.jpg"
+            ],
+            "withheld": {
+              "frames": 21,
+              "position_percent_span": 2.751086809408547,
+              "orientation_deg": 1.2768327794318473,
+              "p90_position_percent_span": 4.822431284020647,
+              "p90_orientation_deg": 2.198544804525397
+            },
+            "duration_seconds": 4.831732999999986,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8778125188989665,
+                  -0.2763840525259429,
+                  0.39122504671044245
+                ],
+                [
+                  0.2346079847933267,
+                  0.9601483606505996,
+                  0.15190200463186893
+                ],
+                [
+                  -0.4176173788714561,
+                  -0.04155696150229127,
+                  0.9076721565715408
+                ]
+              ],
+              "scale": 0.7794083033297879,
+              "offset": [
+                -12.105086511486487,
+                2.6807226179956958,
+                -2.877807563556172
+              ],
+              "reference_span": 1.8093787834597694,
+              "fit_median_percent_span": 1.661462058015895,
+              "anchor_frames": 47
+            },
+            "fit_names": [
+              "frame_002064.jpg",
+              "frame_002066.jpg",
+              "frame_002068.jpg",
+              "frame_002070.jpg",
+              "frame_002072.jpg",
+              "frame_002074.jpg",
+              "frame_002076.jpg",
+              "frame_002078.jpg",
+              "frame_002080.jpg",
+              "frame_002082.jpg",
+              "frame_002084.jpg",
+              "frame_002086.jpg",
+              "frame_002088.jpg",
+              "frame_002090.jpg",
+              "frame_002092.jpg",
+              "frame_002094.jpg",
+              "frame_002096.jpg",
+              "frame_002098.jpg",
+              "frame_002100.jpg",
+              "frame_002102.jpg",
+              "frame_002104.jpg",
+              "frame_002106.jpg",
+              "frame_002108.jpg",
+              "frame_002110.jpg",
+              "frame_002112.jpg",
+              "frame_002114.jpg",
+              "frame_002116.jpg",
+              "frame_002118.jpg",
+              "frame_002120.jpg",
+              "frame_002122.jpg",
+              "frame_002124.jpg",
+              "frame_002126.jpg",
+              "frame_002128.jpg",
+              "frame_002130.jpg",
+              "frame_002132.jpg",
+              "frame_002134.jpg",
+              "frame_002136.jpg",
+              "frame_002138.jpg",
+              "frame_002140.jpg",
+              "frame_002142.jpg",
+              "frame_002144.jpg",
+              "frame_002146.jpg",
+              "frame_002148.jpg",
+              "frame_002150.jpg",
+              "frame_002152.jpg",
+              "frame_002154.jpg",
+              "frame_002156.jpg"
+            ],
+            "withheld_names": [
+              "frame_002065.jpg",
+              "frame_002067.jpg",
+              "frame_002069.jpg",
+              "frame_002071.jpg",
+              "frame_002073.jpg",
+              "frame_002075.jpg",
+              "frame_002077.jpg",
+              "frame_002079.jpg",
+              "frame_002081.jpg",
+              "frame_002083.jpg",
+              "frame_002085.jpg",
+              "frame_002087.jpg",
+              "frame_002089.jpg",
+              "frame_002091.jpg",
+              "frame_002093.jpg",
+              "frame_002095.jpg",
+              "frame_002097.jpg",
+              "frame_002099.jpg",
+              "frame_002101.jpg",
+              "frame_002103.jpg",
+              "frame_002105.jpg",
+              "frame_002107.jpg",
+              "frame_002109.jpg",
+              "frame_002111.jpg",
+              "frame_002113.jpg",
+              "frame_002115.jpg",
+              "frame_002117.jpg",
+              "frame_002119.jpg",
+              "frame_002121.jpg",
+              "frame_002123.jpg",
+              "frame_002125.jpg",
+              "frame_002127.jpg",
+              "frame_002129.jpg",
+              "frame_002131.jpg",
+              "frame_002133.jpg",
+              "frame_002135.jpg",
+              "frame_002137.jpg",
+              "frame_002139.jpg",
+              "frame_002141.jpg",
+              "frame_002143.jpg",
+              "frame_002145.jpg",
+              "frame_002147.jpg",
+              "frame_002149.jpg",
+              "frame_002151.jpg",
+              "frame_002153.jpg",
+              "frame_002155.jpg",
+              "frame_002157.jpg"
+            ],
+            "withheld": {
+              "frames": 47,
+              "position_percent_span": 1.6427939374073983,
+              "orientation_deg": 1.6031609694671773,
+              "p90_position_percent_span": 2.6932425765019707,
+              "p90_orientation_deg": 2.1959145577524186
+            },
+            "duration_seconds": 6.1906999999999925,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 11.637543369764309,
+            "rotation": [
+              [
+                0.9991544530874283,
+                -0.01183344376051941,
+                0.039374464876704984
+              ],
+              [
+                0.016809388675447696,
+                0.9915605178484086,
+                -0.12855031659452054
+              ],
+              [
+                -0.03752097184133113,
+                0.12910348195521368,
+                0.990921019869454
+              ]
+            ],
+            "offset": [
+              106.97780649621967,
+              -23.88635172224918,
+              19.72995951676019
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.963446206450618,
+                  -0.10888058505668999,
+                  0.24477831904322406
+                ],
+                [
+                  0.08585319550185233,
+                  0.9909814183223875,
+                  0.10288370795160194
+                ],
+                [
+                  -0.25377280409459596,
+                  -0.07810791725211144,
+                  0.964105034300985
+                ]
+              ],
+              "scale": 15.833232932490986,
+              "offset": [
+                -28.050379063253672,
+                8.95172301487752,
+                -6.197420070898442
+              ],
+              "reference_span": 17.803436783258174,
+              "fit_median_percent_span": 6.88593640531631,
+              "anchor_frames": 9
+            },
+            "fit_names": [
+              "frame_001932.jpg",
+              "frame_001945.jpg",
+              "frame_001951.jpg",
+              "frame_001958.jpg",
+              "frame_001966.jpg",
+              "frame_001974.jpg",
+              "frame_001985.jpg",
+              "frame_001995.jpg",
+              "frame_001999.jpg"
+            ],
+            "withheld_names": [
+              "frame_001944.jpg",
+              "frame_001946.jpg",
+              "frame_001953.jpg",
+              "frame_001964.jpg",
+              "frame_001973.jpg",
+              "frame_001982.jpg",
+              "frame_001993.jpg",
+              "frame_001997.jpg"
+            ],
+            "withheld": {
+              "frames": 8,
+              "position_percent_span": 4.856955348075012,
+              "orientation_deg": 3.4640704751527016,
+              "p90_position_percent_span": 14.600734379442475,
+              "p90_orientation_deg": 13.553655447883383
+            },
+            "duration_seconds": 4.366821999999985,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8601526177101607,
+                  -0.19783168763915937,
+                  0.47010647476098455
+                ],
+                [
+                  0.11361097196446901,
+                  0.9728705467346725,
+                  0.20153274261386883
+                ],
+                [
+                  -0.49722230571007847,
+                  -0.11993966258924194,
+                  0.8592929977849997
+                ]
+              ],
+              "scale": 3.726037208620777,
+              "offset": [
+                -18.149087768827098,
+                4.1963266651719096,
+                -2.5093013982873504
+              ],
+              "reference_span": 1.8212804525157296,
+              "fit_median_percent_span": 2.2099370003922147,
+              "anchor_frames": 18
+            },
+            "fit_names": [
+              "frame_002064.jpg",
+              "frame_002066.jpg",
+              "frame_002069.jpg",
+              "frame_002072.jpg",
+              "frame_002083.jpg",
+              "frame_002095.jpg",
+              "frame_002106.jpg",
+              "frame_002111.jpg",
+              "frame_002115.jpg",
+              "frame_002119.jpg",
+              "frame_002121.jpg",
+              "frame_002124.jpg",
+              "frame_002129.jpg",
+              "frame_002137.jpg",
+              "frame_002141.jpg",
+              "frame_002145.jpg",
+              "frame_002149.jpg",
+              "frame_002157.jpg"
+            ],
+            "withheld_names": [
+              "frame_002065.jpg",
+              "frame_002067.jpg",
+              "frame_002070.jpg",
+              "frame_002074.jpg",
+              "frame_002085.jpg",
+              "frame_002101.jpg",
+              "frame_002109.jpg",
+              "frame_002113.jpg",
+              "frame_002117.jpg",
+              "frame_002120.jpg",
+              "frame_002122.jpg",
+              "frame_002126.jpg",
+              "frame_002133.jpg",
+              "frame_002139.jpg",
+              "frame_002143.jpg",
+              "frame_002147.jpg",
+              "frame_002152.jpg"
+            ],
+            "withheld": {
+              "frames": 17,
+              "position_percent_span": 2.2914589488922643,
+              "orientation_deg": 1.136548246461931,
+              "p90_position_percent_span": 2.808108032394448,
+              "p90_orientation_deg": 1.58938918748356
+            },
+            "duration_seconds": 6.1906999999999925,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 4.2493491197184765,
+            "rotation": [
+              [
+                0.9653226790576567,
+                0.05286219160663572,
+                -0.2556515480013608
+              ],
+              [
+                -0.07383437830059895,
+                0.994584935068194,
+                -0.07313885093683628
+              ],
+              [
+                0.2504008983169047,
+                0.08947846463781153,
+                0.9639984411232971
+              ]
+            ],
+            "offset": [
+              42.72844653903934,
+              -15.257487414437135,
+              21.79741792337321
+            ]
+          }
+        }
+      },
+      "pre_component": "native-model-text-17",
+      "post_component": "published-48s",
+      "same_component": false,
+      "status": "unverified",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-007",
+      "loss_time": 161.196111,
+      "gap_end": 162.819156,
+      "window_end": 171.196111,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8879428130124745,
+                  -0.19788435812619454,
+                  0.41520999702376926
+                ],
+                [
+                  0.21858087605454135,
+                  0.9758159311744059,
+                  -0.002380984976094923
+                ],
+                [
+                  -0.40469737019496915,
+                  0.09287114339347337,
+                  0.9097224792661033
+                ]
+              ],
+              "scale": 0.7200965663536676,
+              "offset": [
+                -1.9786558599053785,
+                0.2775610844245192,
+                -0.8861765324602555
+              ],
+              "reference_span": 4.228635574946529,
+              "fit_median_percent_span": 2.1915396830120537,
+              "anchor_frames": 71
+            },
+            "fit_names": [
+              "frame_002281.jpg",
+              "frame_002283.jpg",
+              "frame_002285.jpg",
+              "frame_002287.jpg",
+              "frame_002289.jpg",
+              "frame_002291.jpg",
+              "frame_002293.jpg",
+              "frame_002295.jpg",
+              "frame_002300.jpg",
+              "frame_002302.jpg",
+              "frame_002304.jpg",
+              "frame_002306.jpg",
+              "frame_002308.jpg",
+              "frame_002310.jpg",
+              "frame_002312.jpg",
+              "frame_002314.jpg",
+              "frame_002316.jpg",
+              "frame_002318.jpg",
+              "frame_002320.jpg",
+              "frame_002322.jpg",
+              "frame_002324.jpg",
+              "frame_002326.jpg",
+              "frame_002328.jpg",
+              "frame_002330.jpg",
+              "frame_002332.jpg",
+              "frame_002334.jpg",
+              "frame_002336.jpg",
+              "frame_002338.jpg",
+              "frame_002340.jpg",
+              "frame_002342.jpg",
+              "frame_002344.jpg",
+              "frame_002346.jpg",
+              "frame_002348.jpg",
+              "frame_002350.jpg",
+              "frame_002352.jpg",
+              "frame_002354.jpg",
+              "frame_002362.jpg",
+              "frame_002364.jpg",
+              "frame_002366.jpg",
+              "frame_002368.jpg",
+              "frame_002370.jpg",
+              "frame_002372.jpg",
+              "frame_002374.jpg",
+              "frame_002376.jpg",
+              "frame_002378.jpg",
+              "frame_002380.jpg",
+              "frame_002382.jpg",
+              "frame_002384.jpg",
+              "frame_002386.jpg",
+              "frame_002388.jpg",
+              "frame_002390.jpg",
+              "frame_002392.jpg",
+              "frame_002394.jpg",
+              "frame_002396.jpg",
+              "frame_002398.jpg",
+              "frame_002400.jpg",
+              "frame_002402.jpg",
+              "frame_002404.jpg",
+              "frame_002406.jpg",
+              "frame_002408.jpg",
+              "frame_002410.jpg",
+              "frame_002412.jpg",
+              "frame_002414.jpg",
+              "frame_002416.jpg",
+              "frame_002418.jpg",
+              "frame_002420.jpg",
+              "frame_002422.jpg",
+              "frame_002424.jpg",
+              "frame_002426.jpg",
+              "frame_002428.jpg",
+              "frame_002430.jpg"
+            ],
+            "withheld_names": [
+              "frame_002282.jpg",
+              "frame_002284.jpg",
+              "frame_002286.jpg",
+              "frame_002288.jpg",
+              "frame_002290.jpg",
+              "frame_002292.jpg",
+              "frame_002294.jpg",
+              "frame_002296.jpg",
+              "frame_002301.jpg",
+              "frame_002303.jpg",
+              "frame_002305.jpg",
+              "frame_002307.jpg",
+              "frame_002309.jpg",
+              "frame_002311.jpg",
+              "frame_002313.jpg",
+              "frame_002315.jpg",
+              "frame_002317.jpg",
+              "frame_002319.jpg",
+              "frame_002321.jpg",
+              "frame_002323.jpg",
+              "frame_002325.jpg",
+              "frame_002327.jpg",
+              "frame_002329.jpg",
+              "frame_002331.jpg",
+              "frame_002333.jpg",
+              "frame_002335.jpg",
+              "frame_002337.jpg",
+              "frame_002339.jpg",
+              "frame_002341.jpg",
+              "frame_002343.jpg",
+              "frame_002345.jpg",
+              "frame_002347.jpg",
+              "frame_002349.jpg",
+              "frame_002351.jpg",
+              "frame_002353.jpg",
+              "frame_002355.jpg",
+              "frame_002363.jpg",
+              "frame_002365.jpg",
+              "frame_002367.jpg",
+              "frame_002369.jpg",
+              "frame_002371.jpg",
+              "frame_002373.jpg",
+              "frame_002375.jpg",
+              "frame_002377.jpg",
+              "frame_002379.jpg",
+              "frame_002381.jpg",
+              "frame_002383.jpg",
+              "frame_002385.jpg",
+              "frame_002387.jpg",
+              "frame_002389.jpg",
+              "frame_002391.jpg",
+              "frame_002393.jpg",
+              "frame_002395.jpg",
+              "frame_002397.jpg",
+              "frame_002399.jpg",
+              "frame_002401.jpg",
+              "frame_002403.jpg",
+              "frame_002405.jpg",
+              "frame_002407.jpg",
+              "frame_002409.jpg",
+              "frame_002411.jpg",
+              "frame_002413.jpg",
+              "frame_002415.jpg",
+              "frame_002417.jpg",
+              "frame_002419.jpg",
+              "frame_002421.jpg",
+              "frame_002423.jpg",
+              "frame_002425.jpg",
+              "frame_002427.jpg",
+              "frame_002429.jpg"
+            ],
+            "withheld": {
+              "frames": 70,
+              "position_percent_span": 2.336437985846401,
+              "orientation_deg": 3.5059449622506262,
+              "p90_position_percent_span": 4.691904888082918,
+              "p90_orientation_deg": 7.1884055161430895
+            },
+            "duration_seconds": 9.895177999999987,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.7182971538945306,
+                  -0.3565182007881216,
+                  0.5974478815878566
+                ],
+                [
+                  0.4697237491509363,
+                  0.8819765618846269,
+                  -0.038431026134634866
+                ],
+                [
+                  -0.5132336682161501,
+                  0.308240355555486,
+                  0.8009863201181538
+                ]
+              ],
+              "scale": 0.7898383806105417,
+              "offset": [
+                -2.3069252463633934,
+                -0.4555739602025176,
+                -0.1449648726607869
+              ],
+              "reference_span": 1.2843414538747135,
+              "fit_median_percent_span": 6.367373796121216,
+              "anchor_frames": 63
+            },
+            "fit_names": [
+              "frame_002456.jpg",
+              "frame_002458.jpg",
+              "frame_002460.jpg",
+              "frame_002462.jpg",
+              "frame_002464.jpg",
+              "frame_002466.jpg",
+              "frame_002468.jpg",
+              "frame_002470.jpg",
+              "frame_002472.jpg",
+              "frame_002474.jpg",
+              "frame_002476.jpg",
+              "frame_002478.jpg",
+              "frame_002480.jpg",
+              "frame_002482.jpg",
+              "frame_002484.jpg",
+              "frame_002486.jpg",
+              "frame_002488.jpg",
+              "frame_002490.jpg",
+              "frame_002492.jpg",
+              "frame_002494.jpg",
+              "frame_002496.jpg",
+              "frame_002498.jpg",
+              "frame_002500.jpg",
+              "frame_002502.jpg",
+              "frame_002504.jpg",
+              "frame_002506.jpg",
+              "frame_002508.jpg",
+              "frame_002510.jpg",
+              "frame_002512.jpg",
+              "frame_002514.jpg",
+              "frame_002516.jpg",
+              "frame_002518.jpg",
+              "frame_002520.jpg",
+              "frame_002522.jpg",
+              "frame_002524.jpg",
+              "frame_002526.jpg",
+              "frame_002528.jpg",
+              "frame_002530.jpg",
+              "frame_002532.jpg",
+              "frame_002534.jpg",
+              "frame_002536.jpg",
+              "frame_002538.jpg",
+              "frame_002540.jpg",
+              "frame_002542.jpg",
+              "frame_002544.jpg",
+              "frame_002546.jpg",
+              "frame_002548.jpg",
+              "frame_002550.jpg",
+              "frame_002552.jpg",
+              "frame_002554.jpg",
+              "frame_002556.jpg",
+              "frame_002558.jpg",
+              "frame_002560.jpg",
+              "frame_002562.jpg",
+              "frame_002564.jpg",
+              "frame_002566.jpg",
+              "frame_002568.jpg",
+              "frame_002570.jpg",
+              "frame_002572.jpg",
+              "frame_002574.jpg",
+              "frame_002576.jpg",
+              "frame_002578.jpg",
+              "frame_002580.jpg"
+            ],
+            "withheld_names": [
+              "frame_002457.jpg",
+              "frame_002459.jpg",
+              "frame_002461.jpg",
+              "frame_002463.jpg",
+              "frame_002465.jpg",
+              "frame_002467.jpg",
+              "frame_002469.jpg",
+              "frame_002471.jpg",
+              "frame_002473.jpg",
+              "frame_002475.jpg",
+              "frame_002477.jpg",
+              "frame_002479.jpg",
+              "frame_002481.jpg",
+              "frame_002483.jpg",
+              "frame_002485.jpg",
+              "frame_002487.jpg",
+              "frame_002489.jpg",
+              "frame_002491.jpg",
+              "frame_002493.jpg",
+              "frame_002495.jpg",
+              "frame_002497.jpg",
+              "frame_002499.jpg",
+              "frame_002501.jpg",
+              "frame_002503.jpg",
+              "frame_002505.jpg",
+              "frame_002507.jpg",
+              "frame_002509.jpg",
+              "frame_002511.jpg",
+              "frame_002513.jpg",
+              "frame_002515.jpg",
+              "frame_002517.jpg",
+              "frame_002519.jpg",
+              "frame_002521.jpg",
+              "frame_002523.jpg",
+              "frame_002525.jpg",
+              "frame_002527.jpg",
+              "frame_002529.jpg",
+              "frame_002531.jpg",
+              "frame_002533.jpg",
+              "frame_002535.jpg",
+              "frame_002537.jpg",
+              "frame_002539.jpg",
+              "frame_002541.jpg",
+              "frame_002543.jpg",
+              "frame_002545.jpg",
+              "frame_002547.jpg",
+              "frame_002549.jpg",
+              "frame_002551.jpg",
+              "frame_002553.jpg",
+              "frame_002555.jpg",
+              "frame_002557.jpg",
+              "frame_002559.jpg",
+              "frame_002561.jpg",
+              "frame_002563.jpg",
+              "frame_002565.jpg",
+              "frame_002567.jpg",
+              "frame_002569.jpg",
+              "frame_002571.jpg",
+              "frame_002573.jpg",
+              "frame_002575.jpg",
+              "frame_002577.jpg",
+              "frame_002579.jpg",
+              "frame_002581.jpg"
+            ],
+            "withheld": {
+              "frames": 63,
+              "position_percent_span": 5.92465469533826,
+              "orientation_deg": 3.316406777084354,
+              "p90_position_percent_span": 12.941181109336089,
+              "p90_orientation_deg": 9.876840488411158
+            },
+            "duration_seconds": 8.313299999999998,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Pre-gap fit disagrees with same-component post-gap cameras",
+          "candidate_post_to_pre": {
+            "scale": 0.9117011581496407,
+            "rotation": [
+              [
+                0.9564225038671782,
+                0.22660151508197884,
+                -0.18414056440390808
+              ],
+              [
+                -0.19231263334699486,
+                0.963410912298326,
+                0.18669564836827574
+              ],
+              [
+                0.2197085459229618,
+                -0.14314736262697592,
+                0.9650062110791616
+              ]
+            ],
+            "offset": [
+              0.10269867509025654,
+              0.2979087649625215,
+              -0.3559958851133317
+            ]
+          },
+          "pre_fit_predicts_post": {
+            "frames": 126,
+            "position_percent_span": 8.677191325530027,
+            "orientation_deg": 20.564676891236676,
+            "p90_position_percent_span": 10.645119047399016,
+            "p90_orientation_deg": 23.710350744360753
+          },
+          "post_to_pre_fit_scale_ratio": 1.096850641310545
+        },
+        "vggt": {
+          "before": {
+            "fit": null,
+            "fit_names": [],
+            "withheld_names": [],
+            "withheld": null,
+            "duration_seconds": 0.0,
+            "passed": false
+          },
+          "after": {
+            "fit": null,
+            "fit_names": [],
+            "withheld_names": [],
+            "withheld": null,
+            "duration_seconds": 0.0,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "blocked",
+          "reason": "No positive-scale fit with five anchors on both sides"
+        }
+      },
+      "pre_component": "published-48s",
+      "post_component": "published-48s",
+      "same_component": true,
+      "status": "rejected",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-008",
+      "loss_time": 184.862244,
+      "gap_end": 186.2622,
+      "window_end": 194.862244,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.9105241450474016,
+                  -0.33459516807077805,
+                  0.24288238880039478
+                ],
+                [
+                  0.322135527414911,
+                  0.9423525508566226,
+                  0.09055590467293134
+                ],
+                [
+                  -0.2591804067880429,
+                  -0.004212291265306534,
+                  0.9658197416389258
+                ]
+              ],
+              "scale": 0.5871965176769129,
+              "offset": [
+                2.614408533292083,
+                -0.5737524488144797,
+                1.4037573117185733
+              ],
+              "reference_span": 1.4586592236632168,
+              "fit_median_percent_span": 4.9206616283469975,
+              "anchor_frames": 75
+            },
+            "fit_names": [
+              "frame_002637.jpg",
+              "frame_002639.jpg",
+              "frame_002641.jpg",
+              "frame_002643.jpg",
+              "frame_002645.jpg",
+              "frame_002647.jpg",
+              "frame_002649.jpg",
+              "frame_002651.jpg",
+              "frame_002653.jpg",
+              "frame_002655.jpg",
+              "frame_002657.jpg",
+              "frame_002659.jpg",
+              "frame_002661.jpg",
+              "frame_002663.jpg",
+              "frame_002665.jpg",
+              "frame_002667.jpg",
+              "frame_002669.jpg",
+              "frame_002671.jpg",
+              "frame_002673.jpg",
+              "frame_002675.jpg",
+              "frame_002677.jpg",
+              "frame_002679.jpg",
+              "frame_002681.jpg",
+              "frame_002683.jpg",
+              "frame_002685.jpg",
+              "frame_002687.jpg",
+              "frame_002689.jpg",
+              "frame_002691.jpg",
+              "frame_002693.jpg",
+              "frame_002695.jpg",
+              "frame_002697.jpg",
+              "frame_002699.jpg",
+              "frame_002701.jpg",
+              "frame_002703.jpg",
+              "frame_002705.jpg",
+              "frame_002707.jpg",
+              "frame_002709.jpg",
+              "frame_002711.jpg",
+              "frame_002713.jpg",
+              "frame_002715.jpg",
+              "frame_002717.jpg",
+              "frame_002719.jpg",
+              "frame_002721.jpg",
+              "frame_002723.jpg",
+              "frame_002725.jpg",
+              "frame_002727.jpg",
+              "frame_002729.jpg",
+              "frame_002731.jpg",
+              "frame_002733.jpg",
+              "frame_002735.jpg",
+              "frame_002737.jpg",
+              "frame_002739.jpg",
+              "frame_002741.jpg",
+              "frame_002743.jpg",
+              "frame_002745.jpg",
+              "frame_002747.jpg",
+              "frame_002749.jpg",
+              "frame_002751.jpg",
+              "frame_002753.jpg",
+              "frame_002755.jpg",
+              "frame_002757.jpg",
+              "frame_002759.jpg",
+              "frame_002761.jpg",
+              "frame_002763.jpg",
+              "frame_002765.jpg",
+              "frame_002767.jpg",
+              "frame_002769.jpg",
+              "frame_002771.jpg",
+              "frame_002773.jpg",
+              "frame_002775.jpg",
+              "frame_002777.jpg",
+              "frame_002779.jpg",
+              "frame_002781.jpg",
+              "frame_002783.jpg",
+              "frame_002785.jpg"
+            ],
+            "withheld_names": [
+              "frame_002638.jpg",
+              "frame_002640.jpg",
+              "frame_002642.jpg",
+              "frame_002644.jpg",
+              "frame_002646.jpg",
+              "frame_002648.jpg",
+              "frame_002650.jpg",
+              "frame_002652.jpg",
+              "frame_002654.jpg",
+              "frame_002656.jpg",
+              "frame_002658.jpg",
+              "frame_002660.jpg",
+              "frame_002662.jpg",
+              "frame_002664.jpg",
+              "frame_002666.jpg",
+              "frame_002668.jpg",
+              "frame_002670.jpg",
+              "frame_002672.jpg",
+              "frame_002674.jpg",
+              "frame_002676.jpg",
+              "frame_002678.jpg",
+              "frame_002680.jpg",
+              "frame_002682.jpg",
+              "frame_002684.jpg",
+              "frame_002686.jpg",
+              "frame_002688.jpg",
+              "frame_002690.jpg",
+              "frame_002692.jpg",
+              "frame_002694.jpg",
+              "frame_002696.jpg",
+              "frame_002698.jpg",
+              "frame_002700.jpg",
+              "frame_002702.jpg",
+              "frame_002704.jpg",
+              "frame_002706.jpg",
+              "frame_002708.jpg",
+              "frame_002710.jpg",
+              "frame_002712.jpg",
+              "frame_002714.jpg",
+              "frame_002716.jpg",
+              "frame_002718.jpg",
+              "frame_002720.jpg",
+              "frame_002722.jpg",
+              "frame_002724.jpg",
+              "frame_002726.jpg",
+              "frame_002728.jpg",
+              "frame_002730.jpg",
+              "frame_002732.jpg",
+              "frame_002734.jpg",
+              "frame_002736.jpg",
+              "frame_002738.jpg",
+              "frame_002740.jpg",
+              "frame_002742.jpg",
+              "frame_002744.jpg",
+              "frame_002746.jpg",
+              "frame_002748.jpg",
+              "frame_002750.jpg",
+              "frame_002752.jpg",
+              "frame_002754.jpg",
+              "frame_002756.jpg",
+              "frame_002758.jpg",
+              "frame_002760.jpg",
+              "frame_002762.jpg",
+              "frame_002764.jpg",
+              "frame_002766.jpg",
+              "frame_002768.jpg",
+              "frame_002770.jpg",
+              "frame_002772.jpg",
+              "frame_002774.jpg",
+              "frame_002776.jpg",
+              "frame_002778.jpg",
+              "frame_002780.jpg",
+              "frame_002782.jpg",
+              "frame_002784.jpg",
+              "frame_002786.jpg"
+            ],
+            "withheld": {
+              "frames": 75,
+              "position_percent_span": 4.93686194365206,
+              "orientation_deg": 5.853653004944258,
+              "p90_position_percent_span": 6.0401652945713575,
+              "p90_orientation_deg": 9.29065915888941
+            },
+            "duration_seconds": 9.93097800000001,
+            "passed": false
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.42835629762823174,
+                  -0.17289886897674853,
+                  0.8869142367719657
+                ],
+                [
+                  0.6636202195887679,
+                  0.7263600444342327,
+                  -0.17891140266192074
+                ],
+                [
+                  -0.6132854852637477,
+                  0.6652120466107495,
+                  0.42588008477592443
+                ]
+              ],
+              "scale": 0.5833943523040893,
+              "offset": [
+                -6.43773385523482,
+                1.4193265339200078,
+                -0.1790774177649872
+              ],
+              "reference_span": 2.6015291256977435,
+              "fit_median_percent_span": 2.4543055068978203,
+              "anchor_frames": 65
+            },
+            "fit_names": [
+              "frame_002809.jpg",
+              "frame_002811.jpg",
+              "frame_002813.jpg",
+              "frame_002815.jpg",
+              "frame_002817.jpg",
+              "frame_002819.jpg",
+              "frame_002821.jpg",
+              "frame_002823.jpg",
+              "frame_002825.jpg",
+              "frame_002827.jpg",
+              "frame_002829.jpg",
+              "frame_002831.jpg",
+              "frame_002833.jpg",
+              "frame_002835.jpg",
+              "frame_002837.jpg",
+              "frame_002839.jpg",
+              "frame_002841.jpg",
+              "frame_002843.jpg",
+              "frame_002845.jpg",
+              "frame_002847.jpg",
+              "frame_002849.jpg",
+              "frame_002851.jpg",
+              "frame_002853.jpg",
+              "frame_002855.jpg",
+              "frame_002857.jpg",
+              "frame_002859.jpg",
+              "frame_002861.jpg",
+              "frame_002863.jpg",
+              "frame_002865.jpg",
+              "frame_002867.jpg",
+              "frame_002869.jpg",
+              "frame_002871.jpg",
+              "frame_002873.jpg",
+              "frame_002875.jpg",
+              "frame_002877.jpg",
+              "frame_002879.jpg",
+              "frame_002881.jpg",
+              "frame_002883.jpg",
+              "frame_002885.jpg",
+              "frame_002887.jpg",
+              "frame_002889.jpg",
+              "frame_002891.jpg",
+              "frame_002893.jpg",
+              "frame_002895.jpg",
+              "frame_002897.jpg",
+              "frame_002899.jpg",
+              "frame_002901.jpg",
+              "frame_002903.jpg",
+              "frame_002905.jpg",
+              "frame_002907.jpg",
+              "frame_002909.jpg",
+              "frame_002911.jpg",
+              "frame_002913.jpg",
+              "frame_002915.jpg",
+              "frame_002917.jpg",
+              "frame_002919.jpg",
+              "frame_002921.jpg",
+              "frame_002923.jpg",
+              "frame_002925.jpg",
+              "frame_002927.jpg",
+              "frame_002929.jpg",
+              "frame_002931.jpg",
+              "frame_002933.jpg",
+              "frame_002935.jpg",
+              "frame_002937.jpg"
+            ],
+            "withheld_names": [
+              "frame_002810.jpg",
+              "frame_002812.jpg",
+              "frame_002814.jpg",
+              "frame_002816.jpg",
+              "frame_002818.jpg",
+              "frame_002820.jpg",
+              "frame_002822.jpg",
+              "frame_002824.jpg",
+              "frame_002826.jpg",
+              "frame_002828.jpg",
+              "frame_002830.jpg",
+              "frame_002832.jpg",
+              "frame_002834.jpg",
+              "frame_002836.jpg",
+              "frame_002838.jpg",
+              "frame_002840.jpg",
+              "frame_002842.jpg",
+              "frame_002844.jpg",
+              "frame_002846.jpg",
+              "frame_002848.jpg",
+              "frame_002850.jpg",
+              "frame_002852.jpg",
+              "frame_002854.jpg",
+              "frame_002856.jpg",
+              "frame_002858.jpg",
+              "frame_002860.jpg",
+              "frame_002862.jpg",
+              "frame_002864.jpg",
+              "frame_002866.jpg",
+              "frame_002868.jpg",
+              "frame_002870.jpg",
+              "frame_002872.jpg",
+              "frame_002874.jpg",
+              "frame_002876.jpg",
+              "frame_002878.jpg",
+              "frame_002880.jpg",
+              "frame_002882.jpg",
+              "frame_002884.jpg",
+              "frame_002886.jpg",
+              "frame_002888.jpg",
+              "frame_002890.jpg",
+              "frame_002892.jpg",
+              "frame_002894.jpg",
+              "frame_002896.jpg",
+              "frame_002898.jpg",
+              "frame_002900.jpg",
+              "frame_002902.jpg",
+              "frame_002904.jpg",
+              "frame_002906.jpg",
+              "frame_002908.jpg",
+              "frame_002910.jpg",
+              "frame_002912.jpg",
+              "frame_002914.jpg",
+              "frame_002916.jpg",
+              "frame_002918.jpg",
+              "frame_002920.jpg",
+              "frame_002922.jpg",
+              "frame_002924.jpg",
+              "frame_002926.jpg",
+              "frame_002928.jpg",
+              "frame_002930.jpg",
+              "frame_002932.jpg",
+              "frame_002934.jpg",
+              "frame_002936.jpg"
+            ],
+            "withheld": {
+              "frames": 64,
+              "position_percent_span": 2.260612359156013,
+              "orientation_deg": 3.1761043915189324,
+              "p90_position_percent_span": 6.116435759712936,
+              "p90_orientation_deg": 7.617432824820193
+            },
+            "duration_seconds": 8.536178000000007,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Withheld camera agreement or anchor duration failed",
+          "candidate_post_to_pre": {
+            "scale": 1.0065173160449825,
+            "rotation": [
+              [
+                0.6632957262863926,
+                0.31775124306770536,
+                -0.6775492063452935
+              ],
+              [
+                0.055372412715692876,
+                0.8820614062290025,
+                0.4678691820919158
+              ],
+              [
+                0.7463060199410521,
+                -0.3478531632316193,
+                0.5674729081017924
+              ]
+            ],
+            "offset": [
+              6.336303051199471,
+              -1.3907178919982008,
+              6.838808233565598
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.9112980682790683,
+                  -0.3014588670814921,
+                  0.2804610172711733
+                ],
+                [
+                  0.2698853575175226,
+                  0.9517485719557874,
+                  0.1460703583132374
+                ],
+                [
+                  -0.3109625774084033,
+                  -0.057421313447726,
+                  0.9486859692297864
+                ]
+              ],
+              "scale": 0.9768216520699952,
+              "offset": [
+                2.54818467954619,
+                -0.6038320914573914,
+                1.4462174133948456
+              ],
+              "reference_span": 1.446273975871057,
+              "fit_median_percent_span": 2.8999079412414157,
+              "anchor_frames": 30
+            },
+            "fit_names": [
+              "frame_002637.jpg",
+              "frame_002640.jpg",
+              "frame_002643.jpg",
+              "frame_002652.jpg",
+              "frame_002659.jpg",
+              "frame_002664.jpg",
+              "frame_002666.jpg",
+              "frame_002668.jpg",
+              "frame_002670.jpg",
+              "frame_002673.jpg",
+              "frame_002676.jpg",
+              "frame_002678.jpg",
+              "frame_002682.jpg",
+              "frame_002684.jpg",
+              "frame_002686.jpg",
+              "frame_002691.jpg",
+              "frame_002694.jpg",
+              "frame_002701.jpg",
+              "frame_002710.jpg",
+              "frame_002716.jpg",
+              "frame_002723.jpg",
+              "frame_002729.jpg",
+              "frame_002740.jpg",
+              "frame_002747.jpg",
+              "frame_002755.jpg",
+              "frame_002759.jpg",
+              "frame_002766.jpg",
+              "frame_002771.jpg",
+              "frame_002777.jpg",
+              "frame_002782.jpg"
+            ],
+            "withheld_names": [
+              "frame_002638.jpg",
+              "frame_002642.jpg",
+              "frame_002645.jpg",
+              "frame_002654.jpg",
+              "frame_002662.jpg",
+              "frame_002665.jpg",
+              "frame_002667.jpg",
+              "frame_002669.jpg",
+              "frame_002672.jpg",
+              "frame_002675.jpg",
+              "frame_002677.jpg",
+              "frame_002680.jpg",
+              "frame_002683.jpg",
+              "frame_002685.jpg",
+              "frame_002688.jpg",
+              "frame_002693.jpg",
+              "frame_002697.jpg",
+              "frame_002707.jpg",
+              "frame_002714.jpg",
+              "frame_002719.jpg",
+              "frame_002726.jpg",
+              "frame_002736.jpg",
+              "frame_002742.jpg",
+              "frame_002752.jpg",
+              "frame_002757.jpg",
+              "frame_002762.jpg",
+              "frame_002769.jpg",
+              "frame_002773.jpg",
+              "frame_002779.jpg",
+              "frame_002785.jpg"
+            ],
+            "withheld": {
+              "frames": 30,
+              "position_percent_span": 3.0135533694657326,
+              "orientation_deg": 1.1162108491119431,
+              "p90_position_percent_span": 4.005243845686359,
+              "p90_orientation_deg": 1.804728780670987
+            },
+            "duration_seconds": 9.864311000000015,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  -0.0012155373855459173,
+                  -0.322506795139004,
+                  0.9465663682796006
+                ],
+                [
+                  0.688803293025142,
+                  0.6859416951481826,
+                  0.23459329567350876
+                ],
+                [
+                  -0.7249472711767281,
+                  0.6522831884591285,
+                  0.2213099547399729
+                ]
+              ],
+              "scale": 1.670219949721832,
+              "offset": [
+                -5.016369237934117,
+                0.7032673867173376,
+                0.6837868011360437
+              ],
+              "reference_span": 2.564379719401023,
+              "fit_median_percent_span": 1.7899619641192923,
+              "anchor_frames": 30
+            },
+            "fit_names": [
+              "frame_002809.jpg",
+              "frame_002812.jpg",
+              "frame_002814.jpg",
+              "frame_002818.jpg",
+              "frame_002821.jpg",
+              "frame_002824.jpg",
+              "frame_002826.jpg",
+              "frame_002829.jpg",
+              "frame_002834.jpg",
+              "frame_002840.jpg",
+              "frame_002845.jpg",
+              "frame_002855.jpg",
+              "frame_002871.jpg",
+              "frame_002877.jpg",
+              "frame_002887.jpg",
+              "frame_002889.jpg",
+              "frame_002892.jpg",
+              "frame_002894.jpg",
+              "frame_002896.jpg",
+              "frame_002899.jpg",
+              "frame_002902.jpg",
+              "frame_002904.jpg",
+              "frame_002908.jpg",
+              "frame_002913.jpg",
+              "frame_002916.jpg",
+              "frame_002920.jpg",
+              "frame_002925.jpg",
+              "frame_002928.jpg",
+              "frame_002932.jpg",
+              "frame_002936.jpg"
+            ],
+            "withheld_names": [
+              "frame_002811.jpg",
+              "frame_002813.jpg",
+              "frame_002816.jpg",
+              "frame_002819.jpg",
+              "frame_002823.jpg",
+              "frame_002825.jpg",
+              "frame_002827.jpg",
+              "frame_002831.jpg",
+              "frame_002837.jpg",
+              "frame_002842.jpg",
+              "frame_002849.jpg",
+              "frame_002860.jpg",
+              "frame_002874.jpg",
+              "frame_002885.jpg",
+              "frame_002888.jpg",
+              "frame_002890.jpg",
+              "frame_002893.jpg",
+              "frame_002895.jpg",
+              "frame_002897.jpg",
+              "frame_002901.jpg",
+              "frame_002903.jpg",
+              "frame_002905.jpg",
+              "frame_002911.jpg",
+              "frame_002915.jpg",
+              "frame_002918.jpg",
+              "frame_002923.jpg",
+              "frame_002926.jpg",
+              "frame_002930.jpg",
+              "frame_002934.jpg"
+            ],
+            "withheld": {
+              "frames": 29,
+              "position_percent_span": 1.714024455383982,
+              "orientation_deg": 1.3594933514113072,
+              "p90_position_percent_span": 2.4110670133419276,
+              "p90_orientation_deg": 3.7451811908913837
+            },
+            "duration_seconds": 8.469510999999983,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "unverified",
+          "reason": "Independent stationary cross-gap landmarks still required",
+          "candidate_post_to_pre": {
+            "scale": 0.5848461169636254,
+            "rotation": [
+              [
+                0.3615897827796949,
+                0.486716178404333,
+                -0.7952107837981164
+              ],
+              [
+                -0.16900814887959767,
+                0.8730090785564649,
+                0.4574837640510139
+              ],
+              [
+                0.9168909829426958,
+                -0.031024352329629606,
+                0.39793016342180165
+              ]
+            ],
+            "offset": [
+              3.7268431228014998,
+              -1.6416926718835592,
+              3.9898200526262
+            ]
+          }
+        }
+      },
+      "pre_component": "published-48s",
+      "post_component": "published-71s",
+      "same_component": false,
+      "status": "unverified",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-009",
+      "loss_time": 257.059611,
+      "gap_end": 264.886967,
+      "window_end": 267.059611,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.7654771736891566,
+                  -0.22100555337017777,
+                  0.6043188247443584
+                ],
+                [
+                  0.46521050897610994,
+                  0.8389220484614259,
+                  -0.28246943010434455
+                ],
+                [
+                  -0.44454907366796936,
+                  0.4973593690530279,
+                  0.7449897845716573
+                ]
+              ],
+              "scale": 0.1515342663343815,
+              "offset": [
+                2.333575216131947,
+                -2.3019902572453512,
+                2.489485270387015
+              ],
+              "reference_span": 0.23341814875934228,
+              "fit_median_percent_span": 12.66365656500411,
+              "anchor_frames": 75
+            },
+            "fit_names": [
+              "frame_003722.jpg",
+              "frame_003724.jpg",
+              "frame_003726.jpg",
+              "frame_003728.jpg",
+              "frame_003730.jpg",
+              "frame_003732.jpg",
+              "frame_003734.jpg",
+              "frame_003736.jpg",
+              "frame_003738.jpg",
+              "frame_003740.jpg",
+              "frame_003742.jpg",
+              "frame_003744.jpg",
+              "frame_003746.jpg",
+              "frame_003748.jpg",
+              "frame_003750.jpg",
+              "frame_003752.jpg",
+              "frame_003754.jpg",
+              "frame_003756.jpg",
+              "frame_003758.jpg",
+              "frame_003760.jpg",
+              "frame_003762.jpg",
+              "frame_003764.jpg",
+              "frame_003766.jpg",
+              "frame_003768.jpg",
+              "frame_003770.jpg",
+              "frame_003772.jpg",
+              "frame_003774.jpg",
+              "frame_003776.jpg",
+              "frame_003778.jpg",
+              "frame_003780.jpg",
+              "frame_003782.jpg",
+              "frame_003784.jpg",
+              "frame_003786.jpg",
+              "frame_003788.jpg",
+              "frame_003790.jpg",
+              "frame_003792.jpg",
+              "frame_003794.jpg",
+              "frame_003796.jpg",
+              "frame_003798.jpg",
+              "frame_003800.jpg",
+              "frame_003802.jpg",
+              "frame_003804.jpg",
+              "frame_003806.jpg",
+              "frame_003808.jpg",
+              "frame_003810.jpg",
+              "frame_003812.jpg",
+              "frame_003814.jpg",
+              "frame_003816.jpg",
+              "frame_003818.jpg",
+              "frame_003820.jpg",
+              "frame_003822.jpg",
+              "frame_003824.jpg",
+              "frame_003826.jpg",
+              "frame_003828.jpg",
+              "frame_003830.jpg",
+              "frame_003832.jpg",
+              "frame_003834.jpg",
+              "frame_003836.jpg",
+              "frame_003838.jpg",
+              "frame_003840.jpg",
+              "frame_003842.jpg",
+              "frame_003844.jpg",
+              "frame_003846.jpg",
+              "frame_003848.jpg",
+              "frame_003851.jpg",
+              "frame_003853.jpg",
+              "frame_003855.jpg",
+              "frame_003857.jpg",
+              "frame_003859.jpg",
+              "frame_003861.jpg",
+              "frame_003863.jpg",
+              "frame_003865.jpg",
+              "frame_003867.jpg",
+              "frame_003869.jpg",
+              "frame_003871.jpg"
+            ],
+            "withheld_names": [
+              "frame_003723.jpg",
+              "frame_003725.jpg",
+              "frame_003727.jpg",
+              "frame_003729.jpg",
+              "frame_003731.jpg",
+              "frame_003733.jpg",
+              "frame_003735.jpg",
+              "frame_003737.jpg",
+              "frame_003739.jpg",
+              "frame_003741.jpg",
+              "frame_003743.jpg",
+              "frame_003745.jpg",
+              "frame_003747.jpg",
+              "frame_003749.jpg",
+              "frame_003751.jpg",
+              "frame_003753.jpg",
+              "frame_003755.jpg",
+              "frame_003757.jpg",
+              "frame_003759.jpg",
+              "frame_003761.jpg",
+              "frame_003763.jpg",
+              "frame_003765.jpg",
+              "frame_003767.jpg",
+              "frame_003769.jpg",
+              "frame_003771.jpg",
+              "frame_003773.jpg",
+              "frame_003775.jpg",
+              "frame_003777.jpg",
+              "frame_003779.jpg",
+              "frame_003781.jpg",
+              "frame_003783.jpg",
+              "frame_003785.jpg",
+              "frame_003787.jpg",
+              "frame_003789.jpg",
+              "frame_003791.jpg",
+              "frame_003793.jpg",
+              "frame_003795.jpg",
+              "frame_003797.jpg",
+              "frame_003799.jpg",
+              "frame_003801.jpg",
+              "frame_003803.jpg",
+              "frame_003805.jpg",
+              "frame_003807.jpg",
+              "frame_003809.jpg",
+              "frame_003811.jpg",
+              "frame_003813.jpg",
+              "frame_003815.jpg",
+              "frame_003817.jpg",
+              "frame_003819.jpg",
+              "frame_003821.jpg",
+              "frame_003823.jpg",
+              "frame_003825.jpg",
+              "frame_003827.jpg",
+              "frame_003829.jpg",
+              "frame_003831.jpg",
+              "frame_003833.jpg",
+              "frame_003835.jpg",
+              "frame_003837.jpg",
+              "frame_003839.jpg",
+              "frame_003841.jpg",
+              "frame_003843.jpg",
+              "frame_003845.jpg",
+              "frame_003847.jpg",
+              "frame_003850.jpg",
+              "frame_003852.jpg",
+              "frame_003854.jpg",
+              "frame_003856.jpg",
+              "frame_003858.jpg",
+              "frame_003860.jpg",
+              "frame_003862.jpg",
+              "frame_003864.jpg",
+              "frame_003866.jpg",
+              "frame_003868.jpg",
+              "frame_003870.jpg"
+            ],
+            "withheld": {
+              "frames": 74,
+              "position_percent_span": 12.43670078708161,
+              "orientation_deg": 14.825803542035127,
+              "p90_position_percent_span": 21.101210187119026,
+              "p90_orientation_deg": 17.86614185152537
+            },
+            "duration_seconds": 9.928988000000032,
+            "passed": false
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  -0.6592516973604037,
+                  0.16215791615751268,
+                  0.7342288538016459
+                ],
+                [
+                  0.7181920395603333,
+                  0.42497698446485893,
+                  0.5509943348051074
+                ],
+                [
+                  -0.2226822710491223,
+                  0.890561268472084,
+                  -0.3966273228835823
+                ]
+              ],
+              "scale": 2.530234003927251,
+              "offset": [
+                -5.001362344911138,
+                -1.3464364673234717,
+                1.113890480625237
+              ],
+              "reference_span": 12.589488875065298,
+              "fit_median_percent_span": 33.59572850500645,
+              "anchor_frames": 17
+            },
+            "fit_names": [
+              "frame_003993.jpg",
+              "frame_003995.jpg",
+              "frame_003997.jpg",
+              "frame_003999.jpg",
+              "frame_004001.jpg",
+              "frame_004003.jpg",
+              "frame_004005.jpg",
+              "frame_004007.jpg",
+              "frame_004009.jpg",
+              "frame_004011.jpg",
+              "frame_004013.jpg",
+              "frame_004015.jpg",
+              "frame_004017.jpg",
+              "frame_004019.jpg",
+              "frame_004021.jpg",
+              "frame_004023.jpg",
+              "frame_004025.jpg"
+            ],
+            "withheld_names": [
+              "frame_003994.jpg",
+              "frame_003996.jpg",
+              "frame_003998.jpg",
+              "frame_004000.jpg",
+              "frame_004002.jpg",
+              "frame_004004.jpg",
+              "frame_004006.jpg",
+              "frame_004008.jpg",
+              "frame_004010.jpg",
+              "frame_004012.jpg",
+              "frame_004014.jpg",
+              "frame_004016.jpg",
+              "frame_004018.jpg",
+              "frame_004020.jpg",
+              "frame_004022.jpg",
+              "frame_004024.jpg",
+              "frame_004026.jpg"
+            ],
+            "withheld": {
+              "frames": 17,
+              "position_percent_span": 36.1347704140451,
+              "orientation_deg": 8.728241049255583,
+              "p90_position_percent_span": 48.52552530708518,
+              "p90_orientation_deg": 15.771064257521989
+            },
+            "duration_seconds": 2.15638899999999,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Withheld camera agreement or anchor duration failed",
+          "candidate_post_to_pre": {
+            "scale": 0.059889427657355276,
+            "rotation": [
+              [
+                -0.09677160801615897,
+                0.7888135878376713,
+                -0.6069665390485929
+              ],
+              [
+                -0.3780501723748182,
+                0.5349939908795511,
+                0.7555524448310257
+              ],
+              [
+                0.9207134858626413,
+                0.3025798297399055,
+                0.24643888407723374
+              ]
+            ],
+            "offset": [
+              2.4086880424576105,
+              -2.4224897712297317,
+              2.773224630468514
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.9151514146960417,
+                  -0.035162598809009626,
+                  0.4015737539043493
+                ],
+                [
+                  0.21963428179713074,
+                  0.8788315897061496,
+                  -0.4235750455279692
+                ],
+                [
+                  -0.338021701136617,
+                  0.4758346651722205,
+                  0.8119868847346909
+                ]
+              ],
+              "scale": 0.19412396038931762,
+              "offset": [
+                2.2756156187664573,
+                -2.290274870211233,
+                2.49074942618227
+              ],
+              "reference_span": 0.23448933266123842,
+              "fit_median_percent_span": 13.531980652371681,
+              "anchor_frames": 35
+            },
+            "fit_names": [
+              "frame_003722.jpg",
+              "frame_003729.jpg",
+              "frame_003735.jpg",
+              "frame_003739.jpg",
+              "frame_003742.jpg",
+              "frame_003744.jpg",
+              "frame_003748.jpg",
+              "frame_003753.jpg",
+              "frame_003761.jpg",
+              "frame_003763.jpg",
+              "frame_003766.jpg",
+              "frame_003768.jpg",
+              "frame_003771.jpg",
+              "frame_003774.jpg",
+              "frame_003780.jpg",
+              "frame_003784.jpg",
+              "frame_003795.jpg",
+              "frame_003799.jpg",
+              "frame_003801.jpg",
+              "frame_003806.jpg",
+              "frame_003811.jpg",
+              "frame_003816.jpg",
+              "frame_003821.jpg",
+              "frame_003826.jpg",
+              "frame_003829.jpg",
+              "frame_003831.jpg",
+              "frame_003835.jpg",
+              "frame_003840.jpg",
+              "frame_003845.jpg",
+              "frame_003851.jpg",
+              "frame_003855.jpg",
+              "frame_003859.jpg",
+              "frame_003865.jpg",
+              "frame_003868.jpg",
+              "frame_003870.jpg"
+            ],
+            "withheld_names": [
+              "frame_003727.jpg",
+              "frame_003731.jpg",
+              "frame_003737.jpg",
+              "frame_003740.jpg",
+              "frame_003743.jpg",
+              "frame_003746.jpg",
+              "frame_003751.jpg",
+              "frame_003759.jpg",
+              "frame_003762.jpg",
+              "frame_003765.jpg",
+              "frame_003767.jpg",
+              "frame_003769.jpg",
+              "frame_003772.jpg",
+              "frame_003776.jpg",
+              "frame_003782.jpg",
+              "frame_003793.jpg",
+              "frame_003797.jpg",
+              "frame_003800.jpg",
+              "frame_003803.jpg",
+              "frame_003809.jpg",
+              "frame_003813.jpg",
+              "frame_003818.jpg",
+              "frame_003824.jpg",
+              "frame_003828.jpg",
+              "frame_003830.jpg",
+              "frame_003833.jpg",
+              "frame_003837.jpg",
+              "frame_003843.jpg",
+              "frame_003848.jpg",
+              "frame_003853.jpg",
+              "frame_003857.jpg",
+              "frame_003862.jpg",
+              "frame_003867.jpg",
+              "frame_003869.jpg",
+              "frame_003871.jpg"
+            ],
+            "withheld": {
+              "frames": 35,
+              "position_percent_span": 12.907075210161235,
+              "orientation_deg": 16.844741643320795,
+              "p90_position_percent_span": 20.371203267291747,
+              "p90_orientation_deg": 19.066061847320505
+            },
+            "duration_seconds": 9.928988000000032,
+            "passed": false
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  -0.8136875672801072,
+                  0.08300146790497964,
+                  0.5753462428654607
+                ],
+                [
+                  0.4582102174387088,
+                  0.7006338399238643,
+                  0.5469512034800843
+                ],
+                [
+                  -0.35770929466335394,
+                  0.7086769212265639,
+                  -0.6081291654182409
+                ]
+              ],
+              "scale": 4.15765112182425,
+              "offset": [
+                -5.058794209409336,
+                -3.4757572030716126,
+                3.029218684783193
+              ],
+              "reference_span": 12.87694731892033,
+              "fit_median_percent_span": 34.66949377454653,
+              "anchor_frames": 10
+            },
+            "fit_names": [
+              "frame_003993.jpg",
+              "frame_003997.jpg",
+              "frame_004000.jpg",
+              "frame_004002.jpg",
+              "frame_004004.jpg",
+              "frame_004006.jpg",
+              "frame_004011.jpg",
+              "frame_004015.jpg",
+              "frame_004021.jpg",
+              "frame_004025.jpg"
+            ],
+            "withheld_names": [
+              "frame_003995.jpg",
+              "frame_003999.jpg",
+              "frame_004001.jpg",
+              "frame_004003.jpg",
+              "frame_004005.jpg",
+              "frame_004008.jpg",
+              "frame_004013.jpg",
+              "frame_004018.jpg",
+              "frame_004023.jpg"
+            ],
+            "withheld": {
+              "frames": 9,
+              "position_percent_span": 25.800749881163394,
+              "orientation_deg": 5.4347414416825455,
+              "p90_position_percent_span": 43.86700070091739,
+              "p90_orientation_deg": 12.793884248834841
+            },
+            "duration_seconds": 2.0897219999999948,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Withheld camera agreement or anchor duration failed",
+          "candidate_post_to_pre": {
+            "scale": 0.046690776763429344,
+            "rotation": [
+              [
+                -0.5165219250912259,
+                0.6143368700759556,
+                -0.5964858011431073
+              ],
+              [
+                -0.34947168347602714,
+                0.48470294244581724,
+                0.8018307801729742
+              ],
+              [
+                0.7817126347632404,
+                0.6226180752673713,
+                -0.03566635672265661
+              ]
+            ],
+            "offset": [
+              2.337676700962221,
+              -2.4075675346832073,
+              2.7814757951235674
+            ]
+          }
+        }
+      },
+      "pre_component": "published-71s",
+      "post_component": "c-9bd1ff3652321fd9",
+      "same_component": false,
+      "status": "rejected",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-010",
+      "loss_time": 271.874156,
+      "gap_end": 334.207844,
+      "window_end": 281.874156,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-011",
+      "loss_time": 341.518867,
+      "gap_end": 414.562967,
+      "window_end": 351.518867,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-012",
+      "loss_time": 427.840378,
+      "gap_end": 455.816511,
+      "window_end": 437.840378,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-013",
+      "loss_time": 468.842956,
+      "gap_end": 521.172911,
+      "window_end": 478.842956,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-014",
+      "loss_time": 530.059789,
+      "gap_end": 533.546944,
+      "window_end": 540.059789,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.5787594575378859,
+                  0.2211796603312995,
+                  -0.7849312378585678
+                ],
+                [
+                  0.10508394634875257,
+                  0.9342656896344221,
+                  0.34074181632387146
+                ],
+                [
+                  0.8086994834487189,
+                  -0.27969122086266696,
+                  0.5174726721693876
+                ]
+              ],
+              "scale": 3.635537725639102,
+              "offset": [
+                7.931295204658938,
+                0.8805187246547339,
+                -2.6661599909030076
+              ],
+              "reference_span": 9.602336541928524,
+              "fit_median_percent_span": 1.5670821444459693,
+              "anchor_frames": 67
+            },
+            "fit_names": [
+              "frame_008422.jpg",
+              "frame_008424.jpg",
+              "frame_008426.jpg",
+              "frame_008428.jpg",
+              "frame_008430.jpg",
+              "frame_008432.jpg",
+              "frame_008434.jpg",
+              "frame_008436.jpg",
+              "frame_008438.jpg",
+              "frame_008440.jpg",
+              "frame_008442.jpg",
+              "frame_008444.jpg",
+              "frame_008446.jpg",
+              "frame_008448.jpg",
+              "frame_008450.jpg",
+              "frame_008452.jpg",
+              "frame_008454.jpg",
+              "frame_008456.jpg",
+              "frame_008458.jpg",
+              "frame_008460.jpg",
+              "frame_008462.jpg",
+              "frame_008464.jpg",
+              "frame_008466.jpg",
+              "frame_008468.jpg",
+              "frame_008470.jpg",
+              "frame_008472.jpg",
+              "frame_008474.jpg",
+              "frame_008476.jpg",
+              "frame_008478.jpg",
+              "frame_008480.jpg",
+              "frame_008482.jpg",
+              "frame_008484.jpg",
+              "frame_008486.jpg",
+              "frame_008488.jpg",
+              "frame_008490.jpg",
+              "frame_008492.jpg",
+              "frame_008494.jpg",
+              "frame_008496.jpg",
+              "frame_008498.jpg",
+              "frame_008500.jpg",
+              "frame_008502.jpg",
+              "frame_008504.jpg",
+              "frame_008506.jpg",
+              "frame_008508.jpg",
+              "frame_008510.jpg",
+              "frame_008512.jpg",
+              "frame_008514.jpg",
+              "frame_008516.jpg",
+              "frame_008518.jpg",
+              "frame_008520.jpg",
+              "frame_008522.jpg",
+              "frame_008524.jpg",
+              "frame_008526.jpg",
+              "frame_008528.jpg",
+              "frame_008530.jpg",
+              "frame_008532.jpg",
+              "frame_008534.jpg",
+              "frame_008536.jpg",
+              "frame_008538.jpg",
+              "frame_008540.jpg",
+              "frame_008542.jpg",
+              "frame_008544.jpg",
+              "frame_008546.jpg",
+              "frame_008548.jpg",
+              "frame_008550.jpg",
+              "frame_008552.jpg",
+              "frame_008554.jpg"
+            ],
+            "withheld_names": [
+              "frame_008423.jpg",
+              "frame_008425.jpg",
+              "frame_008427.jpg",
+              "frame_008429.jpg",
+              "frame_008431.jpg",
+              "frame_008433.jpg",
+              "frame_008435.jpg",
+              "frame_008437.jpg",
+              "frame_008439.jpg",
+              "frame_008441.jpg",
+              "frame_008443.jpg",
+              "frame_008445.jpg",
+              "frame_008447.jpg",
+              "frame_008449.jpg",
+              "frame_008451.jpg",
+              "frame_008453.jpg",
+              "frame_008455.jpg",
+              "frame_008457.jpg",
+              "frame_008459.jpg",
+              "frame_008461.jpg",
+              "frame_008463.jpg",
+              "frame_008465.jpg",
+              "frame_008467.jpg",
+              "frame_008469.jpg",
+              "frame_008471.jpg",
+              "frame_008473.jpg",
+              "frame_008475.jpg",
+              "frame_008477.jpg",
+              "frame_008479.jpg",
+              "frame_008481.jpg",
+              "frame_008483.jpg",
+              "frame_008485.jpg",
+              "frame_008487.jpg",
+              "frame_008489.jpg",
+              "frame_008491.jpg",
+              "frame_008493.jpg",
+              "frame_008495.jpg",
+              "frame_008497.jpg",
+              "frame_008499.jpg",
+              "frame_008501.jpg",
+              "frame_008503.jpg",
+              "frame_008505.jpg",
+              "frame_008507.jpg",
+              "frame_008509.jpg",
+              "frame_008511.jpg",
+              "frame_008513.jpg",
+              "frame_008515.jpg",
+              "frame_008517.jpg",
+              "frame_008519.jpg",
+              "frame_008521.jpg",
+              "frame_008523.jpg",
+              "frame_008525.jpg",
+              "frame_008527.jpg",
+              "frame_008529.jpg",
+              "frame_008531.jpg",
+              "frame_008533.jpg",
+              "frame_008535.jpg",
+              "frame_008537.jpg",
+              "frame_008539.jpg",
+              "frame_008541.jpg",
+              "frame_008543.jpg",
+              "frame_008545.jpg",
+              "frame_008547.jpg",
+              "frame_008549.jpg",
+              "frame_008551.jpg",
+              "frame_008553.jpg"
+            ],
+            "withheld": {
+              "frames": 66,
+              "position_percent_span": 1.6742282865546025,
+              "orientation_deg": 2.7649200628364894,
+              "p90_position_percent_span": 2.8743382748752753,
+              "p90_orientation_deg": 3.794323299149596
+            },
+            "duration_seconds": 8.820210999999972,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.5579788259975439,
+                  0.13393338764348764,
+                  -0.8189758710809139
+                ],
+                [
+                  0.12248513450657028,
+                  0.9627892502726461,
+                  0.24090299164672796
+                ],
+                [
+                  0.8207661186740773,
+                  -0.23473113818531882,
+                  0.5208111665497529
+                ]
+              ],
+              "scale": 5.1794385497997535,
+              "offset": [
+                11.708998317969657,
+                2.7652037601000172,
+                -3.7997139112249396
+              ],
+              "reference_span": 6.092602661064988,
+              "fit_median_percent_span": 2.951806147923371,
+              "anchor_frames": 44
+            },
+            "fit_names": [
+              "frame_008608.jpg",
+              "frame_008610.jpg",
+              "frame_008612.jpg",
+              "frame_008614.jpg",
+              "frame_008616.jpg",
+              "frame_008618.jpg",
+              "frame_008620.jpg",
+              "frame_008622.jpg",
+              "frame_008624.jpg",
+              "frame_008626.jpg",
+              "frame_008628.jpg",
+              "frame_008630.jpg",
+              "frame_008632.jpg",
+              "frame_008634.jpg",
+              "frame_008636.jpg",
+              "frame_008638.jpg",
+              "frame_008640.jpg",
+              "frame_008642.jpg",
+              "frame_008644.jpg",
+              "frame_008646.jpg",
+              "frame_008648.jpg",
+              "frame_008650.jpg",
+              "frame_008652.jpg",
+              "frame_008654.jpg",
+              "frame_008656.jpg",
+              "frame_008658.jpg",
+              "frame_008660.jpg",
+              "frame_008662.jpg",
+              "frame_008664.jpg",
+              "frame_008666.jpg",
+              "frame_008668.jpg",
+              "frame_008670.jpg",
+              "frame_008672.jpg",
+              "frame_008674.jpg",
+              "frame_008676.jpg",
+              "frame_008678.jpg",
+              "frame_008680.jpg",
+              "frame_008682.jpg",
+              "frame_008684.jpg",
+              "frame_008686.jpg",
+              "frame_008688.jpg",
+              "frame_008690.jpg",
+              "frame_008692.jpg",
+              "frame_008694.jpg"
+            ],
+            "withheld_names": [
+              "frame_008609.jpg",
+              "frame_008611.jpg",
+              "frame_008613.jpg",
+              "frame_008615.jpg",
+              "frame_008617.jpg",
+              "frame_008619.jpg",
+              "frame_008621.jpg",
+              "frame_008623.jpg",
+              "frame_008625.jpg",
+              "frame_008627.jpg",
+              "frame_008629.jpg",
+              "frame_008631.jpg",
+              "frame_008633.jpg",
+              "frame_008635.jpg",
+              "frame_008637.jpg",
+              "frame_008639.jpg",
+              "frame_008641.jpg",
+              "frame_008643.jpg",
+              "frame_008645.jpg",
+              "frame_008647.jpg",
+              "frame_008649.jpg",
+              "frame_008651.jpg",
+              "frame_008653.jpg",
+              "frame_008655.jpg",
+              "frame_008657.jpg",
+              "frame_008659.jpg",
+              "frame_008661.jpg",
+              "frame_008663.jpg",
+              "frame_008665.jpg",
+              "frame_008667.jpg",
+              "frame_008669.jpg",
+              "frame_008671.jpg",
+              "frame_008673.jpg",
+              "frame_008675.jpg",
+              "frame_008677.jpg",
+              "frame_008679.jpg",
+              "frame_008681.jpg",
+              "frame_008683.jpg",
+              "frame_008685.jpg",
+              "frame_008687.jpg",
+              "frame_008689.jpg",
+              "frame_008691.jpg",
+              "frame_008693.jpg"
+            ],
+            "withheld": {
+              "frames": 43,
+              "position_percent_span": 2.996589321681506,
+              "orientation_deg": 1.615632234585534,
+              "p90_position_percent_span": 4.946643455023747,
+              "p90_orientation_deg": 5.6820840781389785
+            },
+            "duration_seconds": 5.666522999999984,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Pre-gap fit disagrees with same-component post-gap cameras",
+          "candidate_post_to_pre": {
+            "scale": 0.7019173392412694,
+            "rotation": [
+              [
+                0.9953986081018122,
+                0.09474654591230958,
+                0.014307446545814728
+              ],
+              [
+                -0.09529534005085216,
+                0.9944579071131507,
+                0.04441023693615803
+              ],
+              [
+                -0.010020436795235954,
+                -0.045569321015565975,
+                0.9989109208676281
+              ]
+            ],
+            "offset": [
+              -0.3953746618085967,
+              -0.14801449085304252,
+              0.16882339660653534
+            ]
+          },
+          "pre_fit_predicts_post": {
+            "frames": 87,
+            "position_percent_span": 7.304546408532099,
+            "orientation_deg": 6.835799249430061,
+            "p90_position_percent_span": 17.086940912181305,
+            "p90_orientation_deg": 8.20879033928924
+          },
+          "post_to_pre_fit_scale_ratio": 1.4246691798224276
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.9444278540397084,
+                  -0.276522910403571,
+                  -0.1777388773900916
+                ],
+                [
+                  0.2929631530699215,
+                  0.9532890450166663,
+                  0.07357029016214645
+                ],
+                [
+                  0.14909265393466276,
+                  -0.1215527732022243,
+                  0.9813237507925547
+                ]
+              ],
+              "scale": 3.401282953000117,
+              "offset": [
+                9.251779697328153,
+                1.2690059877656736,
+                -3.3072481656227124
+              ],
+              "reference_span": 9.603638036431352,
+              "fit_median_percent_span": 1.8653903371716307,
+              "anchor_frames": 38
+            },
+            "fit_names": [
+              "frame_008422.jpg",
+              "frame_008425.jpg",
+              "frame_008431.jpg",
+              "frame_008435.jpg",
+              "frame_008439.jpg",
+              "frame_008444.jpg",
+              "frame_008449.jpg",
+              "frame_008452.jpg",
+              "frame_008456.jpg",
+              "frame_008461.jpg",
+              "frame_008464.jpg",
+              "frame_008469.jpg",
+              "frame_008474.jpg",
+              "frame_008481.jpg",
+              "frame_008484.jpg",
+              "frame_008488.jpg",
+              "frame_008490.jpg",
+              "frame_008493.jpg",
+              "frame_008496.jpg",
+              "frame_008498.jpg",
+              "frame_008500.jpg",
+              "frame_008503.jpg",
+              "frame_008507.jpg",
+              "frame_008512.jpg",
+              "frame_008519.jpg",
+              "frame_008525.jpg",
+              "frame_008528.jpg",
+              "frame_008532.jpg",
+              "frame_008535.jpg",
+              "frame_008537.jpg",
+              "frame_008539.jpg",
+              "frame_008541.jpg",
+              "frame_008543.jpg",
+              "frame_008546.jpg",
+              "frame_008548.jpg",
+              "frame_008550.jpg",
+              "frame_008552.jpg",
+              "frame_008554.jpg"
+            ],
+            "withheld_names": [
+              "frame_008423.jpg",
+              "frame_008428.jpg",
+              "frame_008434.jpg",
+              "frame_008436.jpg",
+              "frame_008441.jpg",
+              "frame_008447.jpg",
+              "frame_008451.jpg",
+              "frame_008454.jpg",
+              "frame_008459.jpg",
+              "frame_008462.jpg",
+              "frame_008466.jpg",
+              "frame_008472.jpg",
+              "frame_008476.jpg",
+              "frame_008482.jpg",
+              "frame_008486.jpg",
+              "frame_008489.jpg",
+              "frame_008491.jpg",
+              "frame_008495.jpg",
+              "frame_008497.jpg",
+              "frame_008499.jpg",
+              "frame_008501.jpg",
+              "frame_008505.jpg",
+              "frame_008509.jpg",
+              "frame_008517.jpg",
+              "frame_008524.jpg",
+              "frame_008526.jpg",
+              "frame_008530.jpg",
+              "frame_008534.jpg",
+              "frame_008536.jpg",
+              "frame_008538.jpg",
+              "frame_008540.jpg",
+              "frame_008542.jpg",
+              "frame_008544.jpg",
+              "frame_008547.jpg",
+              "frame_008549.jpg",
+              "frame_008551.jpg",
+              "frame_008553.jpg"
+            ],
+            "withheld": {
+              "frames": 37,
+              "position_percent_span": 1.9199680647482584,
+              "orientation_deg": 2.6925527379894456,
+              "p90_position_percent_span": 2.5201022574141128,
+              "p90_orientation_deg": 5.544900830673211
+            },
+            "duration_seconds": 8.820210999999972,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.8870012129039015,
+                  -0.06200041150774327,
+                  -0.45758583596947033
+                ],
+                [
+                  0.15995044372336686,
+                  0.9708503752545599,
+                  0.17850883569386455
+                ],
+                [
+                  0.43317975929134384,
+                  -0.23152861127936558,
+                  0.871062453730697
+                ]
+              ],
+              "scale": 5.625842555102532,
+              "offset": [
+                17.11171461702164,
+                -1.389712958125425,
+                0.18387945374041115
+              ],
+              "reference_span": 6.089863607673603,
+              "fit_median_percent_span": 3.359043889763836,
+              "anchor_frames": 27
+            },
+            "fit_names": [
+              "frame_008608.jpg",
+              "frame_008610.jpg",
+              "frame_008613.jpg",
+              "frame_008619.jpg",
+              "frame_008623.jpg",
+              "frame_008629.jpg",
+              "frame_008633.jpg",
+              "frame_008637.jpg",
+              "frame_008639.jpg",
+              "frame_008641.jpg",
+              "frame_008644.jpg",
+              "frame_008648.jpg",
+              "frame_008653.jpg",
+              "frame_008656.jpg",
+              "frame_008661.jpg",
+              "frame_008666.jpg",
+              "frame_008674.jpg",
+              "frame_008676.jpg",
+              "frame_008678.jpg",
+              "frame_008680.jpg",
+              "frame_008682.jpg",
+              "frame_008684.jpg",
+              "frame_008686.jpg",
+              "frame_008688.jpg",
+              "frame_008690.jpg",
+              "frame_008692.jpg",
+              "frame_008694.jpg"
+            ],
+            "withheld_names": [
+              "frame_008609.jpg",
+              "frame_008611.jpg",
+              "frame_008615.jpg",
+              "frame_008621.jpg",
+              "frame_008625.jpg",
+              "frame_008631.jpg",
+              "frame_008635.jpg",
+              "frame_008638.jpg",
+              "frame_008640.jpg",
+              "frame_008642.jpg",
+              "frame_008646.jpg",
+              "frame_008651.jpg",
+              "frame_008654.jpg",
+              "frame_008659.jpg",
+              "frame_008664.jpg",
+              "frame_008670.jpg",
+              "frame_008675.jpg",
+              "frame_008677.jpg",
+              "frame_008679.jpg",
+              "frame_008681.jpg",
+              "frame_008683.jpg",
+              "frame_008685.jpg",
+              "frame_008687.jpg",
+              "frame_008689.jpg",
+              "frame_008691.jpg",
+              "frame_008693.jpg"
+            ],
+            "withheld": {
+              "frames": 26,
+              "position_percent_span": 3.2529323019114385,
+              "orientation_deg": 4.1463942256183195,
+              "p90_position_percent_span": 9.379005560971564,
+              "p90_orientation_deg": 8.05481315076428
+            },
+            "duration_seconds": 5.666522999999984,
+            "passed": true
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Pre-gap fit disagrees with same-component post-gap cameras",
+          "candidate_post_to_pre": {
+            "scale": 0.6045819661119414,
+            "rotation": [
+              [
+                0.9361839790646107,
+                -0.14912867707387123,
+                0.3183083332508758
+              ],
+              [
+                0.16708963630595255,
+                0.9854935602471266,
+                -0.029723663142161016
+              ],
+              [
+                -0.3092581620295545,
+                0.08101284086884686,
+                0.9475211389897653
+              ]
+            ],
+            "offset": [
+              -0.5941335613666503,
+              0.3717027064705176,
+              -0.14510774122774084
+            ]
+          },
+          "pre_fit_predicts_post": {
+            "frames": 53,
+            "position_percent_span": 18.752440348397172,
+            "orientation_deg": 20.49341645288248,
+            "p90_position_percent_span": 29.104277220759812,
+            "p90_orientation_deg": 26.181137968151113
+          },
+          "post_to_pre_fit_scale_ratio": 1.6540354427555732
+        }
+      },
+      "pre_component": "c-c8c211093a341530",
+      "post_component": "c-c8c211093a341530",
+      "same_component": true,
+      "status": "rejected",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-015",
+      "loss_time": 539.280133,
+      "gap_end": 544.642856,
+      "window_end": 549.280133,
+      "accepted_connection": false,
+      "methods": {
+        "da3": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.028915344755186187,
+                  -0.3487663762030085,
+                  0.9367635334853237
+                ],
+                [
+                  0.45826980621126817,
+                  0.8374887477620376,
+                  0.2976598429198337
+                ],
+                [
+                  -0.8883426633640731,
+                  0.4206835059782999,
+                  0.18404537550568806
+                ]
+              ],
+              "scale": 2.3534201237903702,
+              "offset": [
+                -0.9017613638129445,
+                -0.22356200690908123,
+                0.3781340723205804
+              ],
+              "reference_span": 6.064299891214438,
+              "fit_median_percent_span": 3.0886237061036135,
+              "anchor_frames": 49
+            },
+            "fit_names": [
+              "frame_008544.jpg",
+              "frame_008546.jpg",
+              "frame_008548.jpg",
+              "frame_008550.jpg",
+              "frame_008552.jpg",
+              "frame_008554.jpg",
+              "frame_008609.jpg",
+              "frame_008611.jpg",
+              "frame_008613.jpg",
+              "frame_008615.jpg",
+              "frame_008617.jpg",
+              "frame_008619.jpg",
+              "frame_008621.jpg",
+              "frame_008623.jpg",
+              "frame_008625.jpg",
+              "frame_008627.jpg",
+              "frame_008629.jpg",
+              "frame_008631.jpg",
+              "frame_008633.jpg",
+              "frame_008635.jpg",
+              "frame_008637.jpg",
+              "frame_008639.jpg",
+              "frame_008641.jpg",
+              "frame_008643.jpg",
+              "frame_008645.jpg",
+              "frame_008647.jpg",
+              "frame_008649.jpg",
+              "frame_008651.jpg",
+              "frame_008653.jpg",
+              "frame_008655.jpg",
+              "frame_008657.jpg",
+              "frame_008659.jpg",
+              "frame_008661.jpg",
+              "frame_008663.jpg",
+              "frame_008665.jpg",
+              "frame_008667.jpg",
+              "frame_008669.jpg",
+              "frame_008671.jpg",
+              "frame_008673.jpg",
+              "frame_008675.jpg",
+              "frame_008677.jpg",
+              "frame_008679.jpg",
+              "frame_008681.jpg",
+              "frame_008683.jpg",
+              "frame_008685.jpg",
+              "frame_008687.jpg",
+              "frame_008689.jpg",
+              "frame_008691.jpg",
+              "frame_008693.jpg"
+            ],
+            "withheld_names": [
+              "frame_008545.jpg",
+              "frame_008547.jpg",
+              "frame_008549.jpg",
+              "frame_008551.jpg",
+              "frame_008553.jpg",
+              "frame_008608.jpg",
+              "frame_008610.jpg",
+              "frame_008612.jpg",
+              "frame_008614.jpg",
+              "frame_008616.jpg",
+              "frame_008618.jpg",
+              "frame_008620.jpg",
+              "frame_008622.jpg",
+              "frame_008624.jpg",
+              "frame_008626.jpg",
+              "frame_008628.jpg",
+              "frame_008630.jpg",
+              "frame_008632.jpg",
+              "frame_008634.jpg",
+              "frame_008636.jpg",
+              "frame_008638.jpg",
+              "frame_008640.jpg",
+              "frame_008642.jpg",
+              "frame_008644.jpg",
+              "frame_008646.jpg",
+              "frame_008648.jpg",
+              "frame_008650.jpg",
+              "frame_008652.jpg",
+              "frame_008654.jpg",
+              "frame_008656.jpg",
+              "frame_008658.jpg",
+              "frame_008660.jpg",
+              "frame_008662.jpg",
+              "frame_008664.jpg",
+              "frame_008666.jpg",
+              "frame_008668.jpg",
+              "frame_008670.jpg",
+              "frame_008672.jpg",
+              "frame_008674.jpg",
+              "frame_008676.jpg",
+              "frame_008678.jpg",
+              "frame_008680.jpg",
+              "frame_008682.jpg",
+              "frame_008684.jpg",
+              "frame_008686.jpg",
+              "frame_008688.jpg",
+              "frame_008690.jpg",
+              "frame_008692.jpg",
+              "frame_008694.jpg"
+            ],
+            "withheld": {
+              "frames": 49,
+              "position_percent_span": 3.0250467845669857,
+              "orientation_deg": 1.7326876026698559,
+              "p90_position_percent_span": 5.043867938426939,
+              "p90_orientation_deg": 8.107846510001165
+            },
+            "duration_seconds": 9.886111000000028,
+            "passed": true
+          },
+          "after": {
+            "fit": {
+              "rotation": [
+                [
+                  0.07372588772046781,
+                  -0.3193772863159945,
+                  0.9447553347111941
+                ],
+                [
+                  0.7544401743760638,
+                  0.6374126718946743,
+                  0.15660494562914257
+                ],
+                [
+                  -0.6522150847437089,
+                  0.7012155408243058,
+                  0.2879448706597032
+                ]
+              ],
+              "scale": 10.85420047913255,
+              "offset": [
+                -13.878098643453978,
+                46.03964738045651,
+                -43.027951358784364
+              ],
+              "reference_span": 13.551295002159772,
+              "fit_median_percent_span": 5.5021064584240325,
+              "anchor_frames": 7
+            },
+            "fit_names": [
+              "frame_008810.jpg",
+              "frame_008834.jpg",
+              "frame_008848.jpg",
+              "frame_008854.jpg",
+              "frame_008862.jpg",
+              "frame_008884.jpg",
+              "frame_008900.jpg"
+            ],
+            "withheld_names": [
+              "frame_008830.jpg",
+              "frame_008842.jpg",
+              "frame_008852.jpg",
+              "frame_008858.jpg",
+              "frame_008866.jpg",
+              "frame_008896.jpg"
+            ],
+            "withheld": {
+              "frames": 6,
+              "position_percent_span": 5.001580410131842,
+              "orientation_deg": 1.9976218223656006,
+              "p90_position_percent_span": 6.220011058802257,
+              "p90_orientation_deg": 3.8437842513465457
+            },
+            "duration_seconds": 3.6059999999999945,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "rejected",
+          "reason": "Withheld camera agreement or anchor duration failed",
+          "candidate_post_to_pre": {
+            "scale": 0.21682114019497564,
+            "rotation": [
+              [
+                0.9985322138739674,
+                -0.053791407754503556,
+                0.006316827347734866
+              ],
+              [
+                0.047527189225801486,
+                0.9261780964184791,
+                0.3740792696728016
+              ],
+              [
+                -0.025972757655805145,
+                -0.37322998026207754,
+                0.9273752194733914
+              ]
+            ],
+            "offset": [
+              2.698784832503046,
+              -5.836077247055961,
+              12.677525740047562
+            ]
+          }
+        },
+        "vggt": {
+          "before": {
+            "fit": {
+              "rotation": [
+                [
+                  0.9878556765452118,
+                  -0.12107219072599179,
+                  0.09737908887543226
+                ],
+                [
+                  0.1214452853541178,
+                  0.992595887566957,
+                  0.002108708234957707
+                ],
+                [
+                  -0.09691338907837888,
+                  0.009743131835920044,
+                  0.9952451287996189
+                ]
+              ],
+              "scale": 4.001092550152346,
+              "offset": [
+                -1.2368780917212288,
+                -0.09644007043924518,
+                0.16875028830248606
+              ],
+              "reference_span": 6.159778526927821,
+              "fit_median_percent_span": 2.9163234320186455,
+              "anchor_frames": 32
+            },
+            "fit_names": [
+              "frame_008544.jpg",
+              "frame_008547.jpg",
+              "frame_008549.jpg",
+              "frame_008551.jpg",
+              "frame_008553.jpg",
+              "frame_008608.jpg",
+              "frame_008610.jpg",
+              "frame_008613.jpg",
+              "frame_008619.jpg",
+              "frame_008623.jpg",
+              "frame_008629.jpg",
+              "frame_008633.jpg",
+              "frame_008637.jpg",
+              "frame_008639.jpg",
+              "frame_008641.jpg",
+              "frame_008644.jpg",
+              "frame_008648.jpg",
+              "frame_008653.jpg",
+              "frame_008656.jpg",
+              "frame_008661.jpg",
+              "frame_008666.jpg",
+              "frame_008674.jpg",
+              "frame_008676.jpg",
+              "frame_008678.jpg",
+              "frame_008680.jpg",
+              "frame_008682.jpg",
+              "frame_008684.jpg",
+              "frame_008686.jpg",
+              "frame_008688.jpg",
+              "frame_008690.jpg",
+              "frame_008692.jpg",
+              "frame_008694.jpg"
+            ],
+            "withheld_names": [
+              "frame_008546.jpg",
+              "frame_008548.jpg",
+              "frame_008550.jpg",
+              "frame_008552.jpg",
+              "frame_008554.jpg",
+              "frame_008609.jpg",
+              "frame_008611.jpg",
+              "frame_008615.jpg",
+              "frame_008621.jpg",
+              "frame_008625.jpg",
+              "frame_008631.jpg",
+              "frame_008635.jpg",
+              "frame_008638.jpg",
+              "frame_008640.jpg",
+              "frame_008642.jpg",
+              "frame_008646.jpg",
+              "frame_008651.jpg",
+              "frame_008654.jpg",
+              "frame_008659.jpg",
+              "frame_008664.jpg",
+              "frame_008670.jpg",
+              "frame_008675.jpg",
+              "frame_008677.jpg",
+              "frame_008679.jpg",
+              "frame_008681.jpg",
+              "frame_008683.jpg",
+              "frame_008685.jpg",
+              "frame_008687.jpg",
+              "frame_008689.jpg",
+              "frame_008691.jpg",
+              "frame_008693.jpg"
+            ],
+            "withheld": {
+              "frames": 31,
+              "position_percent_span": 2.8600837272003288,
+              "orientation_deg": 3.060947865418265,
+              "p90_position_percent_span": 5.256393964881642,
+              "p90_orientation_deg": 7.404840798148235
+            },
+            "duration_seconds": 9.886111000000028,
+            "passed": true
+          },
+          "after": {
+            "fit": null,
+            "fit_names": [
+              "frame_008830.jpg",
+              "frame_008852.jpg"
+            ],
+            "withheld_names": [
+              "frame_008848.jpg"
+            ],
+            "withheld": null,
+            "duration_seconds": 0.8814669999999296,
+            "passed": false
+          },
+          "accepted_connection": false,
+          "status": "blocked",
+          "reason": "No positive-scale fit with five anchors on both sides"
+        }
+      },
+      "pre_component": "c-c8c211093a341530",
+      "post_component": "c-466304babe3a0bd5",
+      "same_component": false,
+      "status": "rejected",
+      "reason": "See method-specific tests; no source camera or scene modified"
+    },
+    {
+      "id": "loss-016",
+      "loss_time": 549.250522,
+      "gap_end": 590.629889,
+      "window_end": 559.250522,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-017",
+      "loss_time": 606.535178,
+      "gap_end": 655.789011,
+      "window_end": 616.535178,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-018",
+      "loss_time": 677.746078,
+      "gap_end": 695.998033,
+      "window_end": 687.746078,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    },
+    {
+      "id": "loss-019",
+      "loss_time": 707.074911,
+      "gap_end": 737.301333,
+      "window_end": 717.074911,
+      "accepted_connection": false,
+      "methods": {},
+      "status": "blocked",
+      "reason": "Missing pre-gap or returning COLMAP anchor in this window"
+    }
+  ]
+}

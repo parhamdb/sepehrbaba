@@ -83,6 +83,8 @@ This is a diagnostic aid, not certification of camera accuracy or global alignme
 
 **Compare camera tracking:** [Watch COLMAP, VGGT and DA3 side by side across all 19 loss windows](https://parhamdb.github.io/sepehrbaba/camera-comparison.html). Each window includes ten seconds before and after loss onset. [Findings, limitations and reproducible method](docs/three-camera-comparison.md). No cross-gap recovery is certified by these comparisons.
 
+[Cross-gap connection checks](https://parhamdb.github.io/sepehrbaba/camera-connections.html): four local candidates, five camera-agreement failures, ten windows needing longer clips; **zero verified joins**.
+
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
 reuses retained components, trains additional scenes and searches the remaining
 gaps in 37 overlapping windows. Its scope is all 12,793 native frames across

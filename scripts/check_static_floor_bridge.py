@@ -81,7 +81,7 @@ def main():
     case=next(c for c in data['cases'] if c['id']==selection['case']);ref=case['methods']['colmap']
     a.output.mkdir(parents=True)
     sift=cv2.SIFT_create(nfeatures=5000)
-    cache={};image_hashes={}
+    image_hashes={}
     def features(name,polygon=None):
         im=cv2.imread(str(a.images/name),cv2.IMREAD_GRAYSCALE)
         if im is None or im.shape!=(1920,1080):raise ValueError('Missing native source image')
@@ -104,7 +104,7 @@ def main():
     xyz,keep,angles=triangulate(x[ia],y[ib],pa,pb) if pairs else (np.empty((0,3)),np.zeros(0,bool),np.empty(0))
     xyz=xyz[keep];mapdesc=d[ia[keep]] if len(ia) else None
     ids=ia[keep] # Stable seed feature IDs, chosen before PnP or camera residuals.
-    maps=dict(anchor_matches=len(pairs),landmarks=len(xyz),xyz=xyz.tolist(),ids=ids.tolist(),
+    maps=dict(first_features=len(x),second_features=len(y),anchor_matches=len(pairs),landmarks=len(xyz),xyz=xyz.tolist(),ids=ids.tolist(),
               anchor_xy=x[ia[keep]].tolist(),second_xy=y[ib[keep]].tolist(),parallax_degrees=angles[keep].tolist())
     before=[f for f in case['frames'] if f['timestamp']<case['loss_time'] and f['name'] in ref and ref[f['name']]['component']==pa['component']]
     fits={m:align_cameras([case['methods'][m][f['name']] for f in before if f['name'] in case['methods'][m]],
@@ -113,9 +113,14 @@ def main():
     # All gap frames plus one registered positive control after each map anchor.
     wanted=[f for f in case['frames'] if case['loss_time']<=f['timestamp']<case['gap_end'] or f['name'] in selection['controls']]
     for frame in wanted:
-        xy,desc=features(frame['name']);pairs=matches(mapdesc,desc);ii=np.array([i for i,j in pairs],int);jj=np.array([j for i,j in pairs],int)
+        if len(xyz):
+            xy,desc=features(frame['name'])
+        else:
+            image_hashes[frame['name']]=hashlib.sha256((a.images/frame['name']).read_bytes()).hexdigest()
+            xy,desc=np.empty((0,2)),None
+        pairs=matches(mapdesc,desc);ii=np.array([i for i,j in pairs],int);jj=np.array([j for i,j in pairs],int)
         observations=xy[jj];world=xyz[ii];landmark_ids=ids[ii]
-        row=dict(**frame,matches=len(pairs),landmark_ids=landmark_ids.tolist(),observations=observations.tolist(),
+        row=dict(**frame,status='evaluated' if len(xyz) else 'blocked-no-floor-map',matches=len(pairs),landmark_ids=landmark_ids.tolist(),observations=observations.tolist(),
                  localization=localize(world,observations,landmark_ids,pa),learned_reprojection={})
         for m in ('da3','vggt'):
             pose=case['methods'][m].get(frame['name']);fit=fits[m]

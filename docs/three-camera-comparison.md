@@ -6,6 +6,8 @@ each ten seconds before and ten seconds after the loss onset. Every selected
 source frame and its original relative timestamp is retained in the videos.
 The original recording and published 3D scenes are unchanged.
 
+The follow-up [connection checks](camera-connections.md) test both sides of the gaps; no join is verified.
+
 ## Findings
 
 **Retain COLMAP where it tracks; prioritize DA3 for further gap-recovery trials.**

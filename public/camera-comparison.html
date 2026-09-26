@@ -12,6 +12,7 @@
 <h1>Compare the three camera estimates</h1>
 <p>The same source frames, from ten seconds before to ten seconds after each tracking loss. This footage contains victims and bodies. The comparison supports the reconstruction of the Sepehr Baba recording for human rights documentation.</p>
 <p class="notice"><strong>These are camera estimates, not verified recovery.</strong> COLMAP has gaps and disconnected components. The new methods can predict a camera through a gap even when the scene is obscured. More poses or a lower image error alone does not prove the connection is correct.</p>
+<p><a href="camera-connections.html">See the cross-gap connection checks</a></p>
 <nav aria-label="Choose comparison"><button id="previous" disabled>Previous</button><label for="clip">Loss window</label><select id="clip" disabled><option>Loading…</option></select><button id="next" disabled>Next</button><a id="download" href="#">Open video</a></nav>
 <p id="status" role="status">Loading comparison results…</p>
 <video id="video" controls playsinline preload="metadata" aria-label="Synchronized COLMAP, VGGT and DA3 camera comparison"></video>

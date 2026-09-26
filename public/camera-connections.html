@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Camera connection checks — Sepehr Baba reconstruction</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101820;color:#eef4f7}body{margin:0}main{max-width:1100px;margin:auto;padding:24px}a{color:#9ed9ff}h1{font-size:clamp(1.5rem,4vw,2.3rem)}p{line-height:1.55;max-width:90ch}.notice{border-left:3px solid #ffca64;padding:12px 16px;background:#1e2529}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:12px;border-bottom:1px solid #344751}th{color:#bacbd6}small{color:#bacbd6}nav,footer{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0}details{margin:20px 0}summary{cursor:pointer}#counts{font-size:1.2rem}td:nth-child(2){white-space:nowrap}
+</style></head><body><main>
+<nav><a href="./">3D reconstruction</a><a href="camera-comparison.html">Three-way video comparison</a></nav>
+<h1>Can the camera tracks be connected?</h1>
+<p class="notice"><strong>No connection has passed independent geometric verification.</strong> We still have local camera tracks and gaps. A learned path through an occlusion is a hypothesis. These checks help decide which connections deserve further work.</p>
+<p id="counts" role="status">Loading the 19 connection checks…</p>
+<p>Each test uses the nearest COLMAP component before and after the loss. Alternating cameras are withheld from the coordinate fit. Separate components are fitted independently; a good fit on each side does not establish their relative placement. The screen requires at least five withheld cameras per side, median disagreement at most 5% of that side's fitted reference span and 5° rotation, and at least half a second of anchors. These are experimental screening limits.</p>
+<div class="table-wrap"><table><thead><tr><th>Window</th><th>Source loss time</th><th>DA3</th><th>VGGT</th><th>Connection</th></tr></thead><tbody id="connections"></tbody></table></div>
+<details><summary>Why the promising 08:50 result is not yet a connection</summary><p>Both sides have cameras in the same COLMAP component. A single alignment fitted before the gap disagrees with cameras afterward. Fitting the sides separately also changes the DA3 scale factor by about 42%, and VGGT's by about 65%. This suggests drift or inconsistent reconstruction; COLMAP itself is not ground truth. The source briefly becomes almost fully occluded, then badly overexposed. These results do not establish a continuous path.</p><p>Unlike the earlier ranking, this test evaluates each method against all its available reference cameras and fits only alternating pre-gap cameras. Its numbers must not be treated as a new like-for-like method ranking.</p></details>
+<h2>Independent floor-feature trial</h2>
+<p id="floor-status">Loading the floor-only result…</p>
+<p>The floor trial uses manually reviewed bare-floor regions before the gap. It excludes people, bags and the wheeled trolley. Triangulated floor landmarks and withheld image observations test whether the gap can be recovered without trusting a learned trajectory. A failed positive control leaves localization blocked; it is not evidence that every possible floor matcher would fail.</p>
+<footer><a href="https://github.com/parhamdb/sepehrbaba/blob/main/docs/camera-connections.md">Method and next steps</a><a href="https://github.com/parhamdb/sepehrbaba/tree/main/evidence/camera-connections">Scripts' results and selected floor regions</a></footer>
+<script>
+const labels={unverified:'Needs independent landmarks',rejected:'Camera agreement failed',blocked:'Insufficient anchors'};
+const time=s=>`${Math.floor(s/60).toString().padStart(2,'0')}:${(s%60).toFixed(1).padStart(4,'0')}`;
+fetch('camera-connections/report.json').then(r=>{if(!r.ok)throw Error('Report unavailable');return r.json()}).then(d=>{
+ document.getElementById('counts').textContent=`${d.accepted_connections} verified joins · ${d.counts.unverified||0} locally consistent candidates · ${d.counts.rejected||0} camera-agreement failures · ${d.counts.blocked||0} windows missing a reference return`;
+ for(const c of d.cases){const tr=document.createElement('tr');const link=document.createElement('a');link.href=`camera-comparison.html#${c.id}`;link.textContent=c.id;const first=document.createElement('td');first.append(link);tr.append(first);
+  for(const value of [time(c.loss_time),...['da3','vggt'].map(m=>c.methods[m]?labels[c.methods[m].status]:'No reference return'),c.accepted_connection?'Verified':'Unresolved']){const td=document.createElement('td');td.textContent=value;tr.append(td)}document.getElementById('connections').append(tr);
+ }
+}).catch(()=>{document.getElementById('counts').textContent='Results could not load; use the evidence link below.'});
+fetch('camera-connections/floor-summary.json').then(r=>{if(!r.ok)throw Error('Floor result unavailable');return r.json()}).then(d=>{document.getElementById('floor-status').textContent=d.summary}).catch(()=>{document.getElementById('floor-status').textContent='Floor results could not load; use the evidence link below.'});
+</script></main></body></html>

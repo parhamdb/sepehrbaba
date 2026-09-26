@@ -1,0 +1,3 @@
+{
+  "summary": "Two floor-only attempts found zero usable 3D landmarks. The wider pair had zero mutual descriptor matches; the closer pair had two, neither passing the parallax and reprojection checks. Both trials lack a usable map, so their controls and all 53 missing-camera frames remain blocked. No recovered poses were exported."
+}
