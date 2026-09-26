@@ -1,0 +1,95 @@
+{
+  "split": "train",
+  "requested_views": [
+    "frame_009867_left",
+    "frame_009867_right",
+    "frame_009947_left",
+    "frame_009947_right",
+    "frame_010091_left",
+    "frame_010091_right"
+  ],
+  "ply_sha256": "d2352a2cfc2fdf7cef17f9cbbd636f7be38a2f782c6e074b8fa996d57da8d76c",
+  "views_sha256": "24a8288ae70fdddcf06c2512fe92ce600131ca0181035659aa38a3ee84647e24",
+  "renderer": "PlayCanvas 2.22.3 WebGL2 radial CPU sort, AA, black background",
+  "records": [
+    {
+      "name": "frame_009867_left",
+      "actual": {
+        "position": [
+          0.8869732022285461,
+          -1.09281587600708,
+          -0.5481183528900146
+        ],
+        "fov": 64.73660495701483
+      },
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "name": "frame_009867_right",
+      "actual": {
+        "position": [
+          0.748664140701294,
+          -1.069310188293457,
+          -0.5404262542724609
+        ],
+        "fov": 64.73660495701483
+      },
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "name": "frame_009947_left",
+      "actual": {
+        "position": [
+          0.659351110458374,
+          -0.9694986343383789,
+          -0.5917616486549377
+        ],
+        "fov": 64.73660495701483
+      },
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "name": "frame_009947_right",
+      "actual": {
+        "position": [
+          0.5190204381942749,
+          -0.9633313417434692,
+          -0.5949797034263611
+        ],
+        "fov": 64.73660495701483
+      },
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "name": "frame_010091_left",
+      "actual": {
+        "position": [
+          -0.3168363571166992,
+          1.2455511093139648,
+          0.6039759516716003
+        ],
+        "fov": 64.73660495701483
+      },
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "name": "frame_010091_right",
+      "actual": {
+        "position": [
+          -0.45458105206489563,
+          1.2725211381912231,
+          0.5976434350013733
+        ],
+        "fov": 64.73660495701483
+      },
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "status": "passed"
+}

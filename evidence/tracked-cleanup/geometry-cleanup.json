@@ -1,0 +1,44 @@
+{
+  "source_script_sha256": "a6c367214869593ed190e6af0529f6ac0d6666f53a98515e7e7ba8b6132ef9be",
+  "original_points": 15481,
+  "retained_points": 15220,
+  "removed_points": 261,
+  "frames": 368,
+  "duplicate_observations_removed": 2058,
+  "preserve_poses": true,
+  "refined_cameras": 0,
+  "frozen_camera_names": [
+    "frame_009978.jpg",
+    "frame_009979.jpg",
+    "frame_009980.jpg",
+    "frame_009986.jpg",
+    "frame_009992.jpg",
+    "frame_009993.jpg",
+    "frame_009994.jpg",
+    "frame_009995.jpg",
+    "frame_009996.jpg",
+    "frame_010000.jpg",
+    "frame_010002.jpg",
+    "frame_010090.jpg",
+    "frame_010131.jpg",
+    "frame_010135.jpg",
+    "frame_010162.jpg",
+    "frame_010170.jpg"
+  ],
+  "before_static_refinement": {
+    "mean_reprojection_px": 1.2717182350505853,
+    "p95_reprojection_px": 2.5576727995730897,
+    "median_depth": 7.02514730160897,
+    "behind_camera_observations": 0
+  },
+  "after_static_refinement": {
+    "mean_reprojection_px": 1.2717182350505853,
+    "p95_reprojection_px": 2.5576727995730897,
+    "median_depth": 7.02514730160897,
+    "behind_camera_observations": 0
+  },
+  "maximum_camera_translation": 0.0,
+  "maximum_camera_rotation_degrees": 3.4150945850063763e-06,
+  "accepted_geometry": true,
+  "images_and_masks_byte_identical": true
+}

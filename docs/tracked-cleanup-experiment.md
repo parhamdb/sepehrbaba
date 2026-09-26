@@ -97,7 +97,43 @@ Attempt 1 tracked both objects over 368 images and passed inventory/dimension
 checks, but missed the foreground visitor at the beginning. Its
 [overlay](../evidence/tracked-cleanup/attempt1-mask-review.jpg), prompts and hash
 report are retained. Attempt 2 adds a first-frame anchor to address that specific
-failure. Mask review and candidate training results remain pending.
+failure. Its [review sheet](../evidence/tracked-cleanup/mask-review.jpg) fixes the
+missed beginning and preserves stationary details in the reviewed views. Small
+boundary errors remain, including overlap onto a stationary bag/cloth near the
+moving arm; this is accepted for a bounded training comparison, not certified
+segmentation. The final [368 binary masks](../evidence/tracked-cleanup/masks.tar.gz)
+and their [hash report](../evidence/tracked-cleanup/mask-report.json) are retained.
+
+All source image hashes and copied sparse-model binaries match the baseline.
+Median excluded area changes from 33.9284% to 0%; maximum tracked exclusion is
+26.5986%. This is coverage, not an accuracy score: many frames show stationary
+details without either tracked visitor. Cleanup retains 15,220 of 15,481 sparse
+points and removes 2,058 duplicate observations. Camera translations remain
+unchanged; measured rotation difference is numerical roundoff. Reprojection
+mean/p95 are 1.2717/2.5577 pixels, with no behind-camera observations.
+[Geometry report](../evidence/tracked-cleanup/geometry-cleanup.json).
+
+The [self-comparison](../evidence/tracked-cleanup/calibration.json) reproduced
+23.49210 dB over all 37 held-out images, with exactly zero baseline/candidate
+delta. Six [fixed offset cameras](../evidence/tracked-cleanup/novel-views.json)
+also probe small novel views: three reference cameras shifted left/right by
+0.07025147 scene units (1% of median retained sparse depth), with target shifted
+equally and orientation/intrinsics preserved. These are unmeasured scene units,
+not metres, and the novel views have no ground-truth images.
+
+| Acceptance item | Status | Evidence |
+|---|---|---|
+| Reviewed tracked masks and complete inventory | Passed for trial | 368 binary masks, corrected first-frame anchor, retained limitations above |
+| Preserve sources, cameras and held-out split | Passed | Image/model hashes; comparator verifies exact sorted-index split |
+| Mask-only 8,000-step candidate | Untested; running | Separate supervised training process |
+| Additional geometry-cleanup candidate | Untested | Input geometry gate passed; separate training pending |
+| Fixed-mask comparison and visual inspection | Untested | Comparator calibration passed; candidate renders pending |
+| Reproducible code and documentation | Passed for setup | Commit `cd1cee6`, four prompt checks, independent review |
+
+Current experiment acceptance: **3 passed, 0 failed, 0 blocked, 3 untested**.
+The rejected first mask attempt is retained as resolved failure evidence. SAM
+3.1 access remains a prerequisite for a different model comparison, rather than
+a blocker for this SAM 2.1 experiment.
 
 The implementation passed four prompt-validation checks and an independent
-read-only review. No quality improvement is claimed yet.
+read-only review. No reconstruction quality improvement is claimed yet.
