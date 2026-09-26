@@ -1,0 +1,12 @@
+{
+  "status": "sequential-inference",
+  "total_frames": 12793,
+  "sequential_chunks_done": 18,
+  "total_chunks": 799,
+  "covered_source_frames": 304,
+  "completed": false,
+  "started": 1790445759.7037928,
+  "last_update": 1790446021.7789154,
+  "free_gib": 172.7905044555664,
+  "last_chunk_reused": false
+}

@@ -1,0 +1,25 @@
+{
+  "identity": "8b2adeeffb66418a5db0cc91900d89250417a7da35333b722f1db11b8e332aca",
+  "sha256": "a738337860ae08123e71ceaa58bea5ef8db1b8a7955c0c12fc02efcf0555ad37",
+  "frames": 32,
+  "processed_size": [
+    280,
+    504
+  ],
+  "independent_content_hash_verified": true,
+  "extrinsics_shape": [
+    32,
+    3,
+    4
+  ],
+  "intrinsics_shape": [
+    32,
+    3,
+    3
+  ],
+  "finite_extrinsics": true,
+  "checkpoint_count_at_inspection": 12,
+  "observed_seconds_per_chunk": 8.85534609447826,
+  "scope": "First real inference checkpoint, not complete camera recovery",
+  "checked_at": "2026-09-26T18:05:00Z"
+}

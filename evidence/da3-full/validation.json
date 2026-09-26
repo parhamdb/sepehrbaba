@@ -3,10 +3,10 @@
   "source_commit": "1ddb035fe5a73be033de727ee4d55e7a301b76a7",
   "status": "running",
   "counts": {
-    "passed": 7,
+    "passed": 8,
     "failed": 0,
     "blocked": 0,
-    "untested": 3
+    "untested": 2
   },
   "checks": [
     {
@@ -46,8 +46,8 @@
     },
     {
       "id": "live-checkpoint",
-      "status": "untested",
-      "evidence": "Service started; waiting for first verified chunk"
+      "status": "passed",
+      "evidence": "launch-check.json: first actual chunk hash, shape and finite cameras independently checked; subsequent chunk receipts advancing"
     },
     {
       "id": "complete-export",
@@ -66,5 +66,7 @@
     "scripts/run_da3_full.py": "b53c4e000c44fa9e14f694b1ad4c518cad90f1f8691fe3e41e25ea0c22cd5e03",
     "scripts/compare_da3_full.py": "793162465728a2b872603253b18e8d98cd95bef159e84d9ee71b0f07d75677df",
     "scripts/da3_full_pipeline.py": "3fabeb7fb7e5b3ee8856b20aee845590a6b72b7c08bcc4ef3a632157498ed2c6"
-  }
+  },
+  "source_publish_commit": "42216ebdf67a1cf142da7b759c42b0504d37ec55",
+  "pages_build": "https://github.com/parhamdb/sepehrbaba/actions/runs/36261233517"
 }
