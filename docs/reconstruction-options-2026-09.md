@@ -2,8 +2,10 @@
 
 **Research checked September 26, 2026.** Sources below are original repositories,
 author project pages and papers. This is a ranked shortlist for this recording,
-not an exhaustive survey or a benchmark on our footage. New tools were not run.
-The full-recording batch and published scenes were not changed.
+not an exhaustive survey or a benchmark on our footage. This research pass did
+not run new tools. A subsequent [tracked-mask and cleanup experiment](tracked-cleanup-experiment.md)
+records implementation, actual results and remaining prerequisites separately.
+The full-recording batch and published scenes were not changed by this research.
 
 Research acceptance: cover the four requested problems, distinguish available
 code from papers, rank options against our observed failures, and preserve

@@ -1,0 +1,20 @@
+{
+  "scope": "590.629889 to 606.465111 seconds, retained component 3d512b50d5aab54d",
+  "coordinates": "normalized x,y in undistorted dataset images",
+  "objects": [
+    {
+      "id": 1,
+      "motion_review": "Foreground visitor at left changes posture and moves an arm over bags in the source sequence. The stationary bodies are negative prompts, not occluders.",
+      "prompts": [
+        {"image": "frame_009944.jpg", "points": [[0.085,0.19],[0.065,0.47],[0.34,0.75],[0.72,0.335],[0.55,0.50],[0.64,0.72],[0.53,0.25]], "labels": [1,1,1,0,0,0,0]}
+      ]
+    },
+    {
+      "id": 2,
+      "motion_review": "Standing visitor near the wall in the first source view; mask this visible occluder separately from the foreground visitor and stationary bags. Tracking must be reviewed when the visitor leaves the view.",
+      "prompts": [
+        {"image": "frame_009797.jpg", "points": [[0.47,0.075],[0.48,0.24],[0.58,0.25],[0.75,0.47],[0.12,0.60]], "labels": [1,1,1,0,0]}
+      ]
+    }
+  ]
+}
