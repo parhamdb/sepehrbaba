@@ -123,3 +123,32 @@ The separate viewer URL is
 Its manifest records coverage, export hash, training counts, limitations, original
 camera, floor selection and display rotation. The pilot and 71-second PLY files
 are preserved unchanged.
+
+## Browser and release validation — September 26, 2026
+
+The public release is `6688f4b88b8324a8748af87a37bda0423ca75a5d`.
+[GitHub Pages build and deployment](https://github.com/parhamdb/sepehrbaba/actions/runs/36210240452)
+succeeded. The live HTML, JavaScript, CSS and 48-second manifest matched the local
+build byte for byte. Downloading and hashing the entire public PLY confirmed the
+118,001,551-byte export and SHA-256 above.
+
+The frozen browser inventory comprised seven cases: pilot desktop and mobile,
+missing-manifest recovery, 71-second desktop and mobile, and 48-second desktop
+and mobile. Local discovery passed six cases; the new desktop case exhausted
+its 90-second overall budget just before Reset after rendering, orbit and free
+movement. The same product passed that single focused case with a 150-second
+budget; no viewer or reconstruction change was made for this test issue.
+
+The final pass against the **public Pages site passed all seven cases in 6.9
+minutes: 7 passed, 0 failed, 0 blocked, 0 untested**. It used Chromium software
+WebGL, a 1280×720 desktop viewport and 390×844 mobile emulation. This is not a
+physical-device or hardware WebGPU test. Checks cover scene loading, entry pose,
+visible surfaces, orbit, free movement, reset, scene links, error recovery and
+rendered ground alignment. Entry and orbit screenshots were visually inspected;
+blur and ghosting around people, trolley parts and peripheral surfaces remain.
+
+The pilot and 71-second assets and manifests were unchanged. Changed text files
+and the PLY header were checked for personal paths, private IPs and credential
+markers; none were found. Both reconstruction jobs had exited successfully,
+and the GPU was idle after completion. This validation record is a documentation
+update; it does not change the tested release artifact.
