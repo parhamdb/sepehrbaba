@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "source_commit": "5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd",
+  "budget": "One discovery pass, focused fixes, one final pass. No reconstruction retraining or whole-viewer gate.",
+  "software_checks": [
+    {
+      "id": "geometry-1",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "geometry-2",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "geometry-3",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "geometry-4",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "geometry-5",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "geometry-6",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "geometry-7",
+      "status": "passed",
+      "evidence": "tests/test_camera_connections.py; seven-test final run passed on 5ead1b9c72468bd3accce78e6fbe5c4e2c6550fd"
+    },
+    {
+      "id": "report-reproduction",
+      "status": "passed",
+      "evidence": "All 19 case report bytes reproduced; both floor attempts reproduced zero map points and 55 blocked observations each; disjoint gauge-fit splits verified"
+    },
+    {
+      "id": "artifacts-privacy",
+      "status": "passed",
+      "evidence": "Source-frame and frozen input hashes verified; public outputs contain no credential or private runtime path patterns"
+    },
+    {
+      "id": "live-desktop",
+      "status": "untested",
+      "evidence": "Local discovery passed; live deployment pending"
+    },
+    {
+      "id": "live-mobile",
+      "status": "untested",
+      "evidence": "Local discovery passed; live deployment pending"
+    }
+  ],
+  "software_counts": {
+    "passed": 9,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 2
+  },
+  "reconstruction_counts": {
+    "passed": 0,
+    "failed": 5,
+    "blocked": 10,
+    "untested": 4
+  },
+  "reconstruction_scope": "19 connection cases: four independent cross-gap landmark checks unverified; five camera screens failed; ten lack reference return.",
+  "floor_trials": {
+    "attempts": 2,
+    "accepted_poses": 0,
+    "controls": "blocked in both trials because no floor map was established"
+  },
+  "review": {
+    "independent": "No high/medium findings remaining; full-K projection fix verified at 0891fab",
+    "visual": "Native floor anchor regions and representative loss-014 source contact sheet inspected; mobile result-page screenshot inspected; no continuous video review or certified cross-gap landmarks"
+  },
+  "source_hashes": {
+    "scripts/check_camera_connections.py": "100672042d6793a3eea7c627354642a24905b63b56da1ff850130b281e2a5463",
+    "scripts/check_static_floor_bridge.py": "99d0658f7cfb30d7eaa0e28dbb2ba1fa508dfdee581a4556d74e9034524c8d95",
+    "scripts/check_camera_connections_page.mjs": "4448830f1cdaa409070c7d7649a7ae5c41d5d7521817c5320b4aaa8a480e27e7"
+  }
+}

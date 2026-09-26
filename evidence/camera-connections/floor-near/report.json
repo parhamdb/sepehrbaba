@@ -1,0 +1,918 @@
+{
+  "schema": 1,
+  "case": "loss-014",
+  "accepted_connection": false,
+  "inputs_sha256": "c9abb35a69abdbdb87f32db2c3ec6ab32b9c469047cc515e28894fd4873402af",
+  "selection_sha256": "f8802d1a30af4bfc496227fe06415c22bb89c26c9dd7b74c36afc9fc32994c5d",
+  "image_sha256": {
+    "frame_008491.jpg": "71d74583f40363dd4e74ede1ef5f9f5e7142c9515ff50f607930578a44c20463",
+    "frame_008494.jpg": "4ff65315c38ad135ffafe6c70c76b4da792ec54bbe8611de12a1dbe8be3cb13a",
+    "frame_008492.jpg": "6ba0617c2d587955a39a6a4daefce98945e41c81744ec13d6e4db645b00437d4",
+    "frame_008493.jpg": "1278258eed5678b8223c288512eda74177fdfa965261301c148dea9fda0f0d2c",
+    "frame_008555.jpg": "48d4a2a885b3d8d6bef1462ec27fcdd7c64363428fa349f81cede82199352911",
+    "frame_008556.jpg": "b14dcc58fc43fb0a54a4ee319bf65596e46c7085af6004ea5917a18863b044dd",
+    "frame_008557.jpg": "877272dede04bd5e6271a777eed9baa3adc03cfe3d6901d2184fe4deb495b740",
+    "frame_008558.jpg": "2c36206c6026b4f278e51a917fb03692c3976e554cd298f00bb83f2da61f18f2",
+    "frame_008559.jpg": "a5633423e6940dab368a9eee773e4b7607f79d626e318898a054fd699e327228",
+    "frame_008560.jpg": "8edb2e09ce1d96354c22593aee95cccaac66f5840bc51211a572158d7ee849bb",
+    "frame_008561.jpg": "ae4bde3ef06fc9cd707cc12f87c39e12589fb7cf418acbdbbd2e0163a9590e97",
+    "frame_008562.jpg": "2dc093fd2ff9d5078b47eafb7d387174dc3e83cf176d12daa528f7e2d6516def",
+    "frame_008563.jpg": "8330cdb32da9aba870cb08677ea95313cc676f5e48f62bad93cdb87c6d475340",
+    "frame_008564.jpg": "75be3e5dacc31ae68fa355f2da77e3383513cace6e762d680b4a95e6862b15bf",
+    "frame_008565.jpg": "10055392c5724bd3492e6b4d0552c543dd8c8e77c6f410bf6a0951d803472fec",
+    "frame_008566.jpg": "1d2d3f65bbc0b332f9d364eb0ccfc6903ca833f8b8975b677b8fc2b73336ef00",
+    "frame_008567.jpg": "f406e5bbc253ab2c74bf93b630ee5cd694b53704c82b15c1f9ca6c44d91e429e",
+    "frame_008568.jpg": "0f8336410a9979f5d7973321041b9c8b812430dd9a9154515f2df8ab490fa20c",
+    "frame_008569.jpg": "1ae3b2edcdf7762c4f343d282680e4b6481973bb4e1dc9c7fe2b5bb3f4f43898",
+    "frame_008570.jpg": "d983b7b36b659a971bbcee9c879600d1d504ee7732e94bed5ba6c53959664e14",
+    "frame_008571.jpg": "2b11ab9944203ac9482341b35699e35b63ea7eca69c4b4d4f144287545b4fd33",
+    "frame_008572.jpg": "14440904212adf0bb5d60f326c00c74b145f6198066c5552629c245d1f1b8e8c",
+    "frame_008573.jpg": "978ef562b13fcc3190f18ba7403350eac0ffaa9f817f3306e25690d5d72020e4",
+    "frame_008574.jpg": "68c3bb26c783c2d8ff84b99b875f5d98c5144fbc5264f279dea4b68e1575c4dd",
+    "frame_008575.jpg": "1e0993805fc47069ce8a89d6115c17bfc5131f406df2a37a40e47fbd29af4296",
+    "frame_008576.jpg": "9a455806724de07d50e9bdb9d78a16f70864c48c4c3da08c82d41fcf88b3a12b",
+    "frame_008577.jpg": "4b4c0b6ac23dbf98bc7707303251165975a965ec46163efd0cc8ada20a3b4f94",
+    "frame_008578.jpg": "d9a34bcb46c9a272372bc2f0b3cf0fc8b5cf3caf6a37aa770f42a45ca64f016b",
+    "frame_008579.jpg": "97aa8372e195e3f369fcf6aa7ec3f66d9276ee7369d17276ead8122596ea3a72",
+    "frame_008580.jpg": "ed2cce9008fd0b94d56727647ec19161fcf5450e2f992f1daaa83df995d34ac5",
+    "frame_008581.jpg": "a353364198cecbe94a28b3214ed5c15ab47be54b9d98416962663972d0f02431",
+    "frame_008582.jpg": "10b8631ecdb5720ceaf5e91ab7788b6287b95c2954e7153210420c59810b6ce5",
+    "frame_008583.jpg": "bdfdbe98e7f3847d7f450ae8ebdb033a1ad1395dd7ce7bf62e07a08c6522a342",
+    "frame_008584.jpg": "929e3fbc6071914b3c3c984f746d3012ef39ff99afbcb9608faf7f90073b786c",
+    "frame_008585.jpg": "620c45e9ba3c61a1c2e351fe280dfd0cb93f5507738c99bab449bbd0d37d3b66",
+    "frame_008586.jpg": "fa8bc8a666a8ced5da8df88308eb7f586c58d738443785868e57f2af493cde59",
+    "frame_008587.jpg": "871e3925ba212be35d76ba9e0b742399cf3ec149acead2616441bbc09690b821",
+    "frame_008588.jpg": "6c8db121013c23145fef6562cc7192e156ca88fbb2c278206a321ee815fdc281",
+    "frame_008589.jpg": "161c082c3f65152140fc109e4469dfc25d74a9b75a6ddf139a2bc151117a6729",
+    "frame_008590.jpg": "fa1e3865c5bf597fecc8235fe54499f56c11dc9fbf1bf526a9fc9228cbcc4b38",
+    "frame_008591.jpg": "8fac68037a2836b00b67aa4cb007e49e255ee18c1e485bcc9bc1fd813c65377e",
+    "frame_008592.jpg": "eda7d4eb49662577d273f7ec384dd528ead7884566956bed5d0f0dca4c14f22a",
+    "frame_008593.jpg": "faea61bee7e7215eab339752d14bddb8c4c5740bb8d11ea4f3de629d8933a31e",
+    "frame_008594.jpg": "ae801b85345d003302709fa079344df428caa77ffafe7060444c6d45096939a6",
+    "frame_008595.jpg": "f427e869f80f6055e9e18796453e30a13f07581374e5fa9ab16dd14eab54a6f8",
+    "frame_008596.jpg": "6702345ef19ceefd6c3548b36f1f480bcbe9348cba2720f352afde307b1ad697",
+    "frame_008597.jpg": "6702345ef19ceefd6c3548b36f1f480bcbe9348cba2720f352afde307b1ad697",
+    "frame_008598.jpg": "f7c2ea73fbcd6233ac0343c2d5f33a8c2613f85e8585a9ab1612acab89a79e78",
+    "frame_008599.jpg": "4d3863656ee4e6726c2c65f1a5f1002704f10aa7b11fae80ee43a97f247ad28e",
+    "frame_008600.jpg": "a44240a9624f29465ff7045ee49faa765affcaee7d01cf41a0b02e73cc0df159",
+    "frame_008601.jpg": "37c36c5f4f341bb01e9bee4f90b6c9df60aeb27c93d14657a37ff5dfe6e6d555",
+    "frame_008602.jpg": "be28fbb88139c60e87a7090a1fa3014ee6668467f9a7c302638f9a7c3bba42ba",
+    "frame_008603.jpg": "4a386ba4eeb9a33a05f420c566b07098d77a231a238e9465f5bbd06a458858d0",
+    "frame_008604.jpg": "0e892e28535859d5cc5badc2971d326c545fa984b2c75fcdbbc94371d7c5d357",
+    "frame_008605.jpg": "b4d3b8c802b0a62b8d85db80276677cf7253745a31a6e3140bb1834aca52a3b3",
+    "frame_008606.jpg": "d627a8ed654fd648492717ecd61c24c39705cb8957e33bc6c31e358dc713942b",
+    "frame_008607.jpg": "4226e2411d877b81eb4ca291c478fa84f7fa4979f857ec3d6c3b1be47a910198"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "opencv": "5.0.0"
+  },
+  "map": {
+    "first_features": 253,
+    "second_features": 36,
+    "anchor_matches": 2,
+    "landmarks": 0,
+    "xyz": [],
+    "ids": [],
+    "anchor_xy": [],
+    "second_xy": [],
+    "parallax_degrees": []
+  },
+  "frames": [
+    {
+      "name": "frame_008492.jpg",
+      "timestamp": 525.862511,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008493.jpg",
+      "timestamp": 525.929178,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008555.jpg",
+      "timestamp": 530.059789,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008556.jpg",
+      "timestamp": 530.127378,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008557.jpg",
+      "timestamp": 530.195211,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008558.jpg",
+      "timestamp": 530.262356,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008559.jpg",
+      "timestamp": 530.329022,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008560.jpg",
+      "timestamp": 530.395689,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008561.jpg",
+      "timestamp": 530.462356,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008562.jpg",
+      "timestamp": 530.529022,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008563.jpg",
+      "timestamp": 530.595678,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008564.jpg",
+      "timestamp": 530.662344,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008565.jpg",
+      "timestamp": 530.729544,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008566.jpg",
+      "timestamp": 530.796211,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008567.jpg",
+      "timestamp": 530.862867,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008568.jpg",
+      "timestamp": 530.93,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008569.jpg",
+      "timestamp": 530.996656,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008570.jpg",
+      "timestamp": 531.063756,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008571.jpg",
+      "timestamp": 531.130422,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008572.jpg",
+      "timestamp": 531.197078,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008573.jpg",
+      "timestamp": 531.264133,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008574.jpg",
+      "timestamp": 531.3308,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008575.jpg",
+      "timestamp": 531.397467,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008576.jpg",
+      "timestamp": 531.464133,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008577.jpg",
+      "timestamp": 531.5308,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008578.jpg",
+      "timestamp": 531.597456,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008579.jpg",
+      "timestamp": 531.664122,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008580.jpg",
+      "timestamp": 531.730789,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008581.jpg",
+      "timestamp": 531.797456,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008582.jpg",
+      "timestamp": 531.864122,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008583.jpg",
+      "timestamp": 531.930778,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008584.jpg",
+      "timestamp": 531.997444,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008585.jpg",
+      "timestamp": 532.064111,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008586.jpg",
+      "timestamp": 532.130778,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008587.jpg",
+      "timestamp": 532.197433,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008588.jpg",
+      "timestamp": 532.2641,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008589.jpg",
+      "timestamp": 532.330767,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008590.jpg",
+      "timestamp": 532.397433,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008591.jpg",
+      "timestamp": 532.4641,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008592.jpg",
+      "timestamp": 532.530367,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008593.jpg",
+      "timestamp": 532.5966,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008594.jpg",
+      "timestamp": 532.661178,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008595.jpg",
+      "timestamp": 532.726367,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008596.jpg",
+      "timestamp": 532.793022,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008597.jpg",
+      "timestamp": 532.839689,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008598.jpg",
+      "timestamp": 532.906344,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008599.jpg",
+      "timestamp": 532.973011,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008600.jpg",
+      "timestamp": 533.073156,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008601.jpg",
+      "timestamp": 533.143222,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008602.jpg",
+      "timestamp": 533.213289,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008603.jpg",
+      "timestamp": 533.283356,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008604.jpg",
+      "timestamp": 533.353422,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008605.jpg",
+      "timestamp": 533.423489,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008606.jpg",
+      "timestamp": 533.463556,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    },
+    {
+      "name": "frame_008607.jpg",
+      "timestamp": 533.503622,
+      "status": "blocked-no-floor-map",
+      "matches": 0,
+      "landmark_ids": [],
+      "observations": [],
+      "localization": {
+        "fit_matches": 0,
+        "withheld_matches": 0,
+        "passed": false,
+        "reason": "Need 12 fitting and six withheld floor landmarks"
+      },
+      "learned_reprojection": {}
+    }
+  ],
+  "thresholds": {
+    "ratio": 0.7,
+    "min_parallax_deg": 1.0,
+    "max_anchor_reprojection_px": 2.0,
+    "min_fit": 12,
+    "min_withheld": 6,
+    "withheld_median_px": 3.5,
+    "withheld_p90_px": 8.0
+  },
+  "limits": "Floor geometry uses fixed pre-gap COLMAP cameras. Descriptor correspondences may be wrong. PnP screening alone cannot certify continuity, planar pose ambiguity or absolute scale."
+}
