@@ -113,7 +113,7 @@ def main():
             filename=f'loop_{range_1[0]}_{range_1[1]}_{range_2[0]}_{range_2[1]}.npy' if is_loop else f'chunk_{chunk_idx}.npy'
             path=Path(self.result_loop_dir if is_loop else self.result_unaligned_dir)/filename
             receipt=path.with_suffix('.receipt.json')
-            count=range_1[1]-range_1[0]+(range_2[1]-range_2[0] if range_2 else 0)
+            count=int(range_1[1]-range_1[0]+(range_2[1]-range_2[0] if range_2 else 0))
             reused=cached_prediction(path,receipt,identity)
             if reused:
                 prediction=np.load(path,allow_pickle=True).item()

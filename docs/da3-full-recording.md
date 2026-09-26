@@ -1,6 +1,7 @@
 # Full-recording DA3 camera experiment
 
-**Status: launched September 26, 2026; inference and cross-reference are pending.**
+**Status: all 799 initial chunks completed September 26, 2026; loop processing,
+camera export and cross-reference are not yet complete.**
 This run uses all **12,793 native source frames across 737.301333 seconds**.
 It does not yet establish a correct continuous camera path or replace the
 published 3D scenes. The earlier [connection checks](camera-connections.md)
@@ -47,6 +48,35 @@ The enclosing pipeline has separate inference and comparison states. Source
 verification or export failure must never be reported as completed recovery.
 
 ## Automatic cross-reference after inference
+
+### September 26 loop-receipt recovery
+
+The first full run processed every source frame and retrieved 40 candidate
+revisit pairs. It stopped after two saved loop receipts because a later loop
+range used a NumPy integer: JSON could not serialize the receipt's frame count.
+The adapter now converts that count to a Python integer. Camera estimation,
+model settings and prediction arrays are unchanged.
+
+An explicit, narrowly restricted migration is available for this exact fix:
+
+```sh
+python3 scripts/migrate_da3_loop_receipts.py \
+  --output FULL_RUN/inference --previous-adapter ORIGINAL_RUNNER.py \
+  --adapter scripts/run_da3_full.py
+```
+
+The run must be stopped. The migration requires the known original adapter hash
+and exactly the one-line integer conversion; it rejects other source changes.
+It verifies all 799 sequential prediction hashes and each saved loop receipt,
+backs up original metadata, and changes only the adapter identity in the input
+manifest and receipts. Missing loop receipts remain missing and are recomputed.
+The resumed runner still checks actual image, video, weight and configuration
+hashes. Resume reuses neural predictions but repeats alignment and loop retrieval.
+If migration is interrupted, retain its backup and inspect metadata before any
+retry; do not bypass identity checks. Completion is tracked in the validation
+ledger, separately from this serialization fix.
+
+### Comparison procedure
 
 1. Recreate the frozen **4,946-camera COLMAP union**, verifying the reviewed
    snapshot and all 31 raw model hashes. Keep independent components separate.
