@@ -74,6 +74,12 @@ default scene covers an 18-second pilot; separate experimental previews span
 about 48 seconds (02:17–03:05) and 71 seconds (03:06–04:17).** The scenes are
 partial reconstructions and have not been joined into a continuous environment.
 
+**Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
+reuses retained components, trains additional scenes and searches the remaining
+gaps in 37 overlapping windows. Its scope is all 12,793 native frames across
+12:17. Processing scope is not completed reconstruction coverage; new results
+require visual review before publication.
+
 **[Open the 3D pilot](https://parhamdb.github.io/sepehrbaba/)** ·
 **[Explore the earlier 48-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-48s)** ·
 **[Explore the experimental 71-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-71s)** ·
