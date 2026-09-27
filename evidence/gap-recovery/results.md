@@ -3,20 +3,22 @@
 Completed 47 gaps; 912 PnP screens and 1248 image-pair/matcher trials.
 **0 new-pose screens passed; 16 / 208 in-map control screens passed.** No new poses or component joins were accepted.
 
+The low control pass rate limits this experiment: it diagnoses this sparse-anchor configuration and does not establish that relocalization or a matcher generally cannot recover these gaps.
+
 A screen is a method/window/direction/query combination, not a distinct recovered frame. Related screens share features and are not independent evidence. Unsupported anchor directions are recorded separately in report.json.
 
 [Full report](report.json) · [All missing-frame runs and component transitions](inventory.json) · [Method list and limitations](../../docs/gap-recovery.md)
 
 | Matcher | Search | Direction | New-pose screens | New-pose passes | Control passes / screens |
 |---|---:|---|---:|---:|---:|
-| sift | 10 s | lookback | 92 | 0 | 2 / 23 |
-| sift | 10 s | lookahead | 84 | 0 | 4 / 29 |
-| sift | 30 s | lookback | 92 | 0 | 2 / 23 |
-| sift | 30 s | lookahead | 84 | 0 | 4 / 29 |
 | lightglue | 10 s | lookback | 92 | 0 | 0 / 23 |
 | lightglue | 10 s | lookahead | 84 | 0 | 3 / 29 |
 | lightglue | 30 s | lookback | 92 | 0 | 0 / 23 |
 | lightglue | 30 s | lookahead | 84 | 0 | 1 / 29 |
+| sift | 10 s | lookback | 92 | 0 | 2 / 23 |
+| sift | 10 s | lookahead | 84 | 0 | 4 / 29 |
+| sift | 30 s | lookback | 92 | 0 | 2 / 23 |
+| sift | 30 s | lookahead | 84 | 0 | 4 / 29 |
 
 ## Per-gap next attempt
 

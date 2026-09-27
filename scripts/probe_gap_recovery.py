@@ -105,9 +105,13 @@ def verify_models(report, components):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('state','frames','database','reader','lightglue','output'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--descriptor',choices=['sift','aliked-at-sift'],default='sift')
+    p.add_argument('--images',type=Path,help='Native images; required for ALIKED descriptors at existing SIFT locations')
     p.add_argument('--reference-policy',choices=['support','nearest'],default='support')
     p.add_argument('--gap-ids',nargs='*');p.add_argument('--max-keypoints',type=int,default=2048)
-    a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
+    a=p.parse_args()
+    if a.descriptor!='sift' and a.images is None:p.error('--images required for ALIKED')
+    a.output.mkdir(parents=True,exist_ok=True)
     import fcntl
     lock=(a.output/'.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     import torch
@@ -120,7 +124,14 @@ def main():
     if subprocess.check_output(['git','-C',str(a.lightglue),'rev-parse','HEAD'],text=True).strip()!=pin:
         raise ValueError('Unexpected LightGlue revision')
     lg=module('gap_lightglue',a.lightglue/'lightglue/lightglue.py')
-    matcher=lg.LightGlue(features='sift',depth_confidence=-1,width_confidence=-1).eval().cuda()
+    matcher=lg.LightGlue(features='sift' if a.descriptor=='sift' else 'aliked',depth_confidence=-1,width_confidence=-1).eval().cuda()
+    extractor=None
+    if a.descriptor!='sift':
+        import sys
+        sys.path.insert(0,str(a.lightglue))
+        from lightglue import ALIKED
+        from lightglue.utils import load_image
+        extractor=ALIKED(max_num_keypoints=a.max_keypoints).eval().cpu()
     state=json.loads(a.state.read_text());frames=json.loads(a.frames.read_text());times={f['name']:f['timestamp'] for f in frames}
     inv=inventory(state,frames);wanted=a.gap_ids or inv['experiment_gap_ids']
     if not set(wanted)<=set(inv['experiment_gap_ids']):raise ValueError('Unknown experiment gap')
@@ -131,7 +142,7 @@ def main():
         raise ValueError('Use a checkpointed read-only database snapshot, not a nonempty WAL')
     identity={k:digest(getattr(a,k)) for k in ('state','frames','database','reader')}
     identity.update(script=digest(Path(__file__)),inventory_script=digest(Path(__file__).with_name('inventory_camera_gaps.py')),
-                    lightglue=pin,max_keypoints=a.max_keypoints,gap_ids=wanted,reference_policy=a.reference_policy)
+                    lightglue=pin,max_keypoints=a.max_keypoints,gap_ids=wanted,reference_policy=a.reference_policy,descriptor=a.descriptor)
     path=a.output/'report.json'
     report=json.loads(path.read_text()) if path.exists() else dict(identity=identity,status='running',gaps=[],
         limitations=['Existing map landmarks may include moving people. No automatic joins.',
@@ -139,6 +150,8 @@ def main():
         'Only midpoint and first returning tracked frame sampled; not dense recovery.'],started=time.time())
     if report['identity']!=identity:raise ValueError('Changed campaign inputs; use another output')
     verify_models(report,state['components'])
+    for name,expected in report.get('image_sha256',{}).items():
+        if digest(a.images/name)!=expected:raise ValueError('Source image changed')
     image_ids=dict(db.execute('select name,image_id from images'))
     @lru_cache(maxsize=32)
     def features(name):
@@ -156,8 +169,18 @@ def main():
         else:raise ValueError('Unsupported feature convention')
         d=d.astype(np.float32);d/=np.maximum(np.linalg.norm(d,axis=1,keepdims=True),1e-8)
         return dict(kp=kp,d=d,scales=scales,oris=oris)
-    def feature_tensor(f,idx):
-        values=dict(keypoints=f['kp'][idx,:2],descriptors=f['d'][idx],scales=f['scales'][idx],oris=f['oris'][idx],image_size=np.array([1080,1920]))
+    @lru_cache(maxsize=32)
+    def learned_descriptors(name,indices):
+        f=features(name);idx=np.asarray(indices,dtype=int)
+        report.setdefault('image_sha256',{})[name]=digest(a.images/name)
+        with torch.inference_mode():
+            xy=torch.tensor(f['kp'][idx,:2].copy(),dtype=torch.float32)[None]
+            image=load_image(a.images/name)
+            if tuple(image.shape[-2:])!=(1920,1080):raise ValueError('Expected native portrait image')
+            return extractor.describe(xy,image,resize=1920)[0].cpu().numpy()
+    def feature_tensor(f,idx,name):
+        desc=f['d'][idx] if extractor is None else learned_descriptors(name,tuple(idx.tolist()))
+        values=dict(keypoints=f['kp'][idx,:2],descriptors=desc,scales=f['scales'][idx],oris=f['oris'][idx],image_size=np.array([1080,1920]))
         return {k:torch.tensor(v,dtype=torch.float32,device='cuda')[None] for k,v in values.items()}
     @lru_cache(maxsize=2)
     def model(cid):
@@ -188,7 +211,8 @@ def main():
                 if qf is None:
                     row['trials'].append(dict(query=qname,direction=label,status='unsupported',reason='missing cached features'));continue
                 qi=np.argsort(qf['scales'],kind='stable')[-a.max_keypoints:]
-                qt=feature_tensor(qf,qi);collected={m:[] for m in ('sift','lightglue')}
+                qt=feature_tensor(qf,qi,qname);ratio_method='sift' if extractor is None else 'aliked-ratio'
+                collected={m:[] for m in (ratio_method,'lightglue')}
                 for anchor in anchors:
                     if anchor==qname:continue
                     af=features(anchor);im=ims[image_ids[anchor]]
@@ -198,12 +222,14 @@ def main():
                     ai=np.array([i for i,pid in enumerate(im.point3D_ids) if pid>=0 and pid in points and points[pid].error<=2.5 and len(points[pid].image_ids)>=3 and len(set(points[pid].image_ids)-{image_ids[qname]})>=3],int)
                     ai=ai[np.argsort(af['scales'][ai],kind='stable')[-a.max_keypoints:]]
                     if len(ai)<2 or len(qi)<2:continue
-                    bf=cv2.BFMatcher();forward=bf.knnMatch(af['d'][ai],qf['d'][qi],k=2);back=bf.knnMatch(qf['d'][qi],af['d'][ai],k=2)
+                    at=feature_tensor(af,ai,anchor)
+                    ad=at['descriptors'][0].cpu().numpy();qd=qt['descriptors'][0].cpu().numpy()
+                    bf=cv2.BFMatcher();forward=bf.knnMatch(ad,qd,k=2);back=bf.knnMatch(qd,ad,k=2)
                     reverse={p[0].queryIdx:p[0].trainIdx for p in back if len(p)==2 and p[0].distance<.7*p[1].distance}
                     sift=[(p[0].queryIdx,p[0].trainIdx,1.-p[0].distance) for p in forward if len(p)==2 and p[0].distance<.7*p[1].distance and reverse.get(p[0].trainIdx)==p[0].queryIdx]
-                    with torch.inference_mode():out=matcher(dict(image0=feature_tensor(af,ai),image1=qt))
+                    with torch.inference_mode():out=matcher(dict(image0=at,image1=qt))
                     pairs=out['matches'][0].cpu().numpy();scores=out['scores'][0].cpu().numpy()
-                    for method,matched in (('sift',sift),('lightglue',[(int(i),int(j),float(s)) for (i,j),s in zip(pairs,scores)])):
+                    for method,matched in ((ratio_method,sift),('lightglue',[(int(i),int(j),float(s)) for (i,j),s in zip(pairs,scores)])):
                         row['pair_counts'].append(dict(query=qname,anchor=anchor,method=method,matches=len(matched),direction=label))
                         for i,j,score in matched:
                             pid=int(im.point3D_ids[ai[i]])
@@ -220,6 +246,8 @@ def main():
         write(path,report)
         print(f"{len(report['gaps'])}/{len(gaps)} {gap['id']} new_candidates={sum(t.get('passed',False) and t.get('evidence_role')=='recovery-candidate' for t in row['trials'])}",flush=True)
     verify_models(report,state['components'])
+    for name,expected in report.get('image_sha256',{}).items():
+        if digest(a.images/name)!=expected:raise ValueError('Source image changed during experiment')
     report.update(status='complete-candidates-not-certified',finished=time.time());write(path,report);db.close()
 
 

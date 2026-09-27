@@ -14,10 +14,11 @@ def main():
     passing=[t for t in recovery if t['passed']]
     lines=['# Gap recovery experiment results','',f"Completed {len(report['gaps'])} gaps; {len(trials)} PnP screens and {sum(len(g['pair_counts']) for g in report['gaps'])} image-pair/matcher trials.",
         f"**{len(passing)} new-pose screens passed; {sum(t['passed'] for t in controls)} / {len(controls)} in-map control screens passed.** No new poses or component joins were accepted.",
+        '','The low control pass rate limits this experiment: it diagnoses this sparse-anchor configuration and does not establish that relocalization or a matcher generally cannot recover these gaps.',
         '','A screen is a method/window/direction/query combination, not a distinct recovered frame. Related screens share features and are not independent evidence. Unsupported anchor directions are recorded separately in report.json.',
         '','[Full report](report.json) · [All missing-frame runs and component transitions](inventory.json) · [Method list and limitations](../../docs/gap-recovery.md)',
         '','| Matcher | Search | Direction | New-pose screens | New-pose passes | Control passes / screens |','|---|---:|---|---:|---:|---:|']
-    for method in ('sift','lightglue'):
+    for method in sorted({t['method'] for t in trials}):
         for window in (10,30):
             for direction in ('lookback','lookahead'):
                 chosen=[t for t in trials if (t['method'],t['window_seconds'],t['direction'])==(method,window,direction)]

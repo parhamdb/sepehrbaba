@@ -50,8 +50,17 @@ earlier side. No source databases or scenes are modified.
 selected gaps completed, 912 PnP screens, 1,248 image-pair/matcher trials. No new
 pose passed; 16 in-map control screens passed. Six source triptychs were visually
 inspected. This rejects this sparse-anchor configuration on these query frames,
-not relocalization in general. All other methods retain explicit tested/untested
+not relocalization in general. The low control pass rate is an additional reason
+not to treat this as a definitive ranking of algorithms. All other methods retain explicit tested/untested
 status below.
+
+## Targeted follow-ups
+
+[Nearest-map and ALIKED results](../evidence/gap-recovery/followups.md): both
+completed on gaps 007, 034 and 135. Neither recovered a new pose. Across the full
+pass and two follow-ups, 1,056 PnP screens were evaluated; none was promoted to an
+accepted new camera. These three focused hypotheses are closed, with all outputs
+retained for revisiting the failure cases.
 
 ## Ranked recovery methods for this video
 
@@ -64,7 +73,7 @@ ranking. Combine methods at individual gaps; preserve failed attempts too.
 | 2 | Offline reverse recovery and actual-return windows | Later clear frames can recover earlier gap views. Extend through the actual return, rather than stopping at an arbitrary 20-second clip. | Lookahead PnP included; long-window remapping still untested. |
 | 3 | Fixed/shared lens calibration plus local bundle adjustment | Prevent focal changes from absorbing motion/scale error. One physical lens is strong evidence, but phone stabilization/cropping may still change effective intrinsics. | Per-component fixed calibration included; whole-video shared calibration and BA remain untested. |
 | 4 | Static architectural/floor masks with SAM 3.1 plus geometric motion rejection | Remove moving-person matches; retain floor, walls, pillars and other rigid landmarks. SAM proposals need review, and a stationary-looking person is not an architectural anchor. | Existing floor diagnostic reused; targeted gap masks and masked ablation not yet run. |
-| 5 | Stronger descriptors/matchers: ALIKED + LightGlue, DSP-SIFT, guided matching | Illumination, viewpoint and low texture changes; avoid mixing descriptor families in one database. | Cached SIFT + LightGlue included; ALIKED and DSP-SIFT variants queued as options, not running. |
+| 5 | Stronger descriptors/matchers: ALIKED + LightGlue, DSP-SIFT, guided matching | Illumination, viewpoint and low texture changes; avoid mixing descriptor families in one database. | Cached SIFT + LightGlue included; Targeted ALIKED-descriptor follow-up recorded below; DSP-SIFT remains untested. |
 | 6 | Adaptive wider local SfM, triangulation and bidirectional registration | More overlap and parallax than a short clip; extend only where new anchors exist. | Existing batch is baseline; gap-specific remapping untested. |
 | 7 | Retrieve revisits anywhere in the recording and geometric loop closure | Reappearing walls/floor may connect distant components. Appearance retrieval only proposes pairs; repeated tiles can cause false matches. | Full DA3 had loop proposals; independent full-history landmark retrieval untested. |
 | 8 | Local DA3 and VGGT-SLAM proposals, cross-checked against static geometry | Seed difficult local views when feature methods fail. Full DA3 showed severe scale drift; learned pose agreement alone is insufficient. | Existing loss-window and full-DA3 results retained; new extended-window trials not yet run. |
@@ -97,6 +106,12 @@ with no nonempty WAL. All recorded reference-model hashes are checked on resume 
 The output is checkpointed after each gap and can resume
 only with identical identities/options. `--gap-ids gap-007 gap-034 gap-135`
 restricts a pilot; keep it in a separate output directory from the full campaign.
+`--reference-policy nearest` tests a closer, smaller map instead of the largest
+local reference. `--descriptor aliked-at-sift --images "$NATIVE/images"` replaces
+the descriptor at existing SIFT locations, comparing mutual-ratio matching and
+ALIKED LightGlue. It does not run a fresh ALIKED keypoint detector or retriangulate
+the map. Extraction uses CPU to support the available torchvision build, with
+LightGlue on CUDA; source image hashes are retained and checked.
 
 ## Frozen validation inventory
 
