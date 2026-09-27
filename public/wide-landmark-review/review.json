@@ -1,0 +1,138 @@
+{
+  "model_requested": "gpt-6-luna",
+  "status": "408 frames screened in contact sheets \u00b7 19 originals inspected by Luna \u00b7 no clearly better landmark match established",
+  "assessment": "The floor-color candidate remains weak and unresolved. Earlier views reveal a white bag tag, but no later counterpart was established. This result does not negate the previously identified patch/cord region.",
+  "frames": [
+    {
+      "name": "frame_006324.jpg",
+      "timestamp": 402.758267,
+      "side": "before",
+      "sha256": "ccfbb28aedb8da7e895fb6fe76d220cb05c32bb1305777b558dabfabc6c483bb"
+    },
+    {
+      "name": "frame_006332.jpg",
+      "timestamp": 403.248822,
+      "side": "before",
+      "sha256": "7702f90950b92cd4289f2c586f612b9115b516c45fbe0f5714ff1d434b6f5d3b"
+    },
+    {
+      "name": "frame_006350.jpg",
+      "timestamp": 404.510022,
+      "side": "before",
+      "sha256": "1f38a489c97d72cab21c64509c7ce056c8f11b03953673d695cced7e66801dfa"
+    },
+    {
+      "name": "frame_006380.jpg",
+      "timestamp": 406.442089,
+      "side": "before",
+      "sha256": "12381d6233492e648b13f6eb1d47decbfb1bb764b9369847ef2f20ae548bf5ff"
+    },
+    {
+      "name": "frame_006462.jpg",
+      "timestamp": 410.638056,
+      "side": "before",
+      "sha256": "494ad581a616146a42225668b171ef4080b4577181bb74d726ff683efdba27fb"
+    },
+    {
+      "name": "frame_006480.jpg",
+      "timestamp": 411.539389,
+      "side": "before",
+      "sha256": "e0205fd6030cde418627087fbb57749504b88aa6e5876ada1b1c1a4cb4233379"
+    },
+    {
+      "name": "frame_006487.jpg",
+      "timestamp": 411.929889,
+      "side": "before",
+      "sha256": "6561ed3b45b5affb746ad6514e5998c5dd9fee6521b53005d5314d8ed9f1b478"
+    },
+    {
+      "name": "frame_006489.jpg",
+      "timestamp": 412.050033,
+      "side": "before",
+      "sha256": "59e157ade720c45187c85e59d7c52bdc573c77557d1b8510ef51fec4c8484208"
+    },
+    {
+      "name": "frame_006491.jpg",
+      "timestamp": 412.170167,
+      "side": "before",
+      "sha256": "d6ea0530b7d50d7a37550e82b7223c5f200af29ab79a7531db32ea166968e4cf"
+    },
+    {
+      "name": "frame_006520.jpg",
+      "timestamp": 414.012167,
+      "side": "gap",
+      "sha256": "d54b09b00d6988db0aa29e27e7ea640409af6e91c4041becaf266245d59b01a3"
+    },
+    {
+      "name": "frame_006524.jpg",
+      "timestamp": 414.212456,
+      "side": "gap",
+      "sha256": "2bff52682b4cea3f01d14e6d30d84b7f7ff6a15877fb464f31fc139ef97adba1"
+    },
+    {
+      "name": "frame_006529.jpg",
+      "timestamp": 414.462822,
+      "side": "gap",
+      "sha256": "7b9ab92df4c6ae9a16f62b5e6756736cb6141ca20bf7ded171ef5b3274dd11ce"
+    },
+    {
+      "name": "frame_006530.jpg",
+      "timestamp": 414.512889,
+      "side": "gap",
+      "sha256": "bca4baadec1e60f626ff764762072eed6d31ba33444eb85e0947856e16dd6267"
+    },
+    {
+      "name": "frame_006551.jpg",
+      "timestamp": 415.6444,
+      "side": "after",
+      "sha256": "150ff56f23a9e62577dbf52a69dc74b1644c5bb057ad34334a8704dad7505110"
+    },
+    {
+      "name": "frame_006557.jpg",
+      "timestamp": 415.944844,
+      "side": "after",
+      "sha256": "8e6295b453c3baca3188e6381682d9a81cbc2a5308aecc6ba0b8f6fe04a8ea87"
+    },
+    {
+      "name": "frame_006580.jpg",
+      "timestamp": 417.096544,
+      "side": "after",
+      "sha256": "a96d6638374fa334d85552cbab08a3bad3174faa949265e80f9e937c00a5d0e1"
+    },
+    {
+      "name": "frame_006605.jpg",
+      "timestamp": 418.458344,
+      "side": "after",
+      "sha256": "7463e71a93fbfacb3a25ab1e6b0a62554bca9636c02fce3baef027be62787098"
+    },
+    {
+      "name": "frame_006704.jpg",
+      "timestamp": 423.695311,
+      "side": "after",
+      "sha256": "39152603f975dc73b837b7c8fe1a2a19992721ddc9e22070a742fe846ed24828"
+    },
+    {
+      "name": "frame_006712.jpg",
+      "timestamp": 424.015844,
+      "side": "after",
+      "sha256": "9e5bb8863b09313d28d17c9500a36961535aabcb95f8625a556a4329432b2ccc"
+    }
+  ],
+  "cases": [
+    {
+      "title": "Weak floor-color candidate \u2014 unresolved",
+      "before": "frame_006491.jpg",
+      "after": "frame_006704.jpg",
+      "reason": "Luna proposed comparing the floor color and tile seams across these views, 11.525144 seconds apart.",
+      "limitations": "No unique matching stain contour or grout intersection established. Color can be lighting, reflection or shadow; tile patterns repeat. Do not use this as a fixed landmark."
+    },
+    {
+      "title": "Earlier scene context \u2014 no correspondence established",
+      "before": "frame_006350.jpg",
+      "after": "frame_006605.jpg",
+      "reason": "Follow-up example: the earlier frame shows a white rectangular bag tag and surrounding objects.",
+      "limitations": "The later frame does not establish the tagged bag or its surrounding arrangement. This is a context comparison, not a proposed point match."
+    }
+  ],
+  "accepted_connection": false
+}

@@ -390,3 +390,5 @@ The accepted scene is unchanged; usage, limitations and preserved evidence are
 documented for a future experiment with stronger source or depth evidence.
 
 **Visual correspondence review:** [GPT-6 Astra’s marked before/after comparison](https://parhamdb.github.io/sepehrbaba/landmark-review.html) identifies a shared bag region. A01 remains unresolved; A02/A03 are approximate visual hypotheses. [The nearby-frame search and CoTracker control](https://parhamdb.github.io/sepehrbaba/landmark-local-tracking.html) searched 159 frames and tracked two visible corners over 0.351 seconds before the gap. [Results and reproducibility](evidence/landmark-local-tracking/results.md); no cross-gap camera alignment accepted.
+
+**Wider search with Luna:** [Compare selected originals from two ten-second windows](https://parhamdb.github.io/sepehrbaba/wide-landmark-review.html). The 408-frame scout found no clearly better landmark match. [Research: using visual models to select frames and regions](docs/llm-assisted-landmark-search.md).

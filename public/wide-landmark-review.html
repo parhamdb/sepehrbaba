@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wider frame search — Sepehr Baba</title>
+<style>body{background:#11151a;color:#eee;font:17px/1.5 system-ui;max-width:1250px;margin:auto;padding:20px}a{color:#8bd6ff}.note{padding:12px;background:#242322;border-left:4px solid #f7c85c}.views{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0;min-width:0}img{display:block;width:100%;max-height:85vh;object-fit:contain;background:#05070a}select{font:inherit;padding:7px;max-width:100%;background:#25303a;color:white}figcaption{padding:8px;background:#202830}.controls{display:flex;gap:20px;flex-wrap:wrap}@media(max-width:650px){.views{grid-template-columns:1fr}body{padding:10px}}</style>
+<nav><a href="./">3D reconstruction</a> · <a href="https://github.com/parhamdb/sepehrbaba/blob/main/docs/llm-assisted-landmark-search.md">Research and ranked methods</a> · <a href="https://github.com/parhamdb/sepehrbaba/blob/main/evidence/luna-wide-landmarks/results.md">Luna findings and evidence</a></nav>
+<h1>Search farther apart in time for better overlap</h1>
+<p>GPT-6 Luna screened 408 original frames in 21 contact sheets: ten seconds before the tracking loss, ten seconds after it, and the intervening frames. It then inspected selected original images. This review compares scene context; it does not establish camera alignment or identify people.</p>
+<p class="note"><strong>Graphic source imagery:</strong> original frames depict deceased people. No faces or biometric features were used for matching. Images below are unchanged source JPEGs; no generated detail, marked point or inferred geometry is presented.</p>
+<p id="status" role="status">Loading review…</p><p id="assessment"></p>
+<label>Review case <select id="case"></select></label><p id="reason"></p><p id="limits"></p>
+<div class="controls"><label>Before frame <select id="before"></select></label><label>After frame <select id="after"></select></label></div>
+<p>Changing a frame explores other views; it does not make the selected pair a proposed or verified match. Open either original to inspect its native resolution.</p>
+<div class="views"><figure><a id="before-link" target="_blank" rel="noopener"><img id="before-image" alt="Original before-gap frame"></a><figcaption id="before-caption"></figcaption></figure><figure><a id="after-link" target="_blank" rel="noopener"><img id="after-image" alt="Original after-gap frame"></a><figcaption id="after-caption"></figcaption></figure></div>
+<p id="separation"></p><p><a href="wide-landmark-review/review.json">Review data and source hashes</a></p>
+<script>
+const $=id=>document.getElementById(id);let data;
+function draw(){for(const side of ['before','after']){const row=data.frames.find(f=>f.name===$(side).value);const src='wide-landmark-review/images/'+row.name;$(side+'-image').src=src;$(side+'-link').href=src;$(side+'-caption').textContent=`${row.name} · ${row.timestamp.toFixed(6)} s · ${row.side} · original 1080×1920`; }const b=data.frames.find(f=>f.name===$('before').value),a=data.frames.find(f=>f.name===$('after').value);$('separation').textContent=`Selected views are ${(a.timestamp-b.timestamp).toFixed(6)} seconds apart. No accepted correspondence or connection.`;}
+function choose(){const c=data.cases[Number($('case').value)];$('before').value=c.before;$('after').value=c.after;$('reason').textContent=c.reason;$('limits').textContent=c.limitations;draw();}
+for(const side of ['before','after'])$(side).onchange=draw;$('case').onchange=choose;
+fetch('wide-landmark-review/review.json').then(r=>{if(!r.ok)throw Error('Review unavailable');return r.json();}).then(r=>{data=r;$('status').textContent=r.status;$('assessment').textContent=r.assessment;for(const side of ['before','after']){const opts=r.frames.filter(f=>f.side===side).map(f=>{const o=document.createElement('option');o.value=f.name;o.textContent=`${f.name} (${f.timestamp.toFixed(3)} s)`;return o;});$(side).replaceChildren(...opts);}$('case').replaceChildren(...r.cases.map((c,i)=>{const o=document.createElement('option');o.value=i;o.textContent=c.title;return o;}));choose();}).catch(e=>{$('status').textContent=e.message;});
+</script></html>

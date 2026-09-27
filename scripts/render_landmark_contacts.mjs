@@ -18,7 +18,8 @@ try {
       if (!/^frame_\d+\.jpg$/.test(f.name)) throw Error('Invalid frame name');
       const bytes = await fs.readFile(path.join(input, 'images', f.name));
       if (createHash('sha256').update(bytes).digest('hex') !== selection.image_sha256[f.name]) throw Error('Source hash mismatch');
-      return `<figure><figcaption>${f.name}<br>${f.timestamp.toFixed(3)} s</figcaption><img src="data:image/jpeg;base64,${bytes.toString('base64')}"></figure>`;
+      const side = ['before', 'gap', 'after'].includes(f.side) ? ` ${f.side}` : '';
+      return `<figure><figcaption>${f.name}<br>${f.timestamp.toFixed(3)} s${side}</figcaption><img src="data:image/jpeg;base64,${bytes.toString('base64')}"></figure>`;
     }));
     await page.setContent(`<style>body{margin:0;background:#111;color:white;font:14px monospace;display:grid;grid-template-columns:repeat(5,216px)}figure{margin:0}figcaption{height:38px}img{width:216px;height:384px;display:block}</style>${cards.join('')}`);
     await page.evaluate(() => Promise.all([...document.images].map(im => im.decode())));

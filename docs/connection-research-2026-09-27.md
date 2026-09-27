@@ -5,6 +5,14 @@ papers and tool documentation. This is a ranked experimental plan for this
 recording, not a benchmark claim. No models were installed and no reconstruction
 or GPU experiment was started during this research pass.
 
+## Follow-up: broader visual scouting
+
+The [Luna-assisted wider-window search](../evidence/luna-wide-landmarks/results.md)
+screened 408 frames around the loss and found no clearly better new landmark.
+[LLM-assisted frame and region selection](llm-assisted-landmark-search.md) records
+more focused ways to use visual models, including numbered alternatives and
+indirect overlap searches. These remain separate from geometric acceptance.
+
 ## What the failures actually establish
 
 The [direct section-joining experiment](../evidence/skipped-gap-bridge/results.md)

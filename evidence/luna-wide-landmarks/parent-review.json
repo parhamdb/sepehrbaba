@@ -1,0 +1,18 @@
+{
+  "inspected_originals": [
+    "frame_006491.jpg",
+    "frame_006704.jpg",
+    "frame_006324.jpg",
+    "frame_006580.jpg",
+    "frame_006350.jpg",
+    "frame_006605.jpg"
+  ],
+  "floor_candidate": "unresolved: no uniquely shared scuff contour or indexed seam intersection is visible; teal color is not accepted as a fixed landmark",
+  "early_context": "A white tag is visible in the earlier scene; its counterpart was not established in the later comparison. Generic arrangement is insufficient.",
+  "corrections": {
+    "pair_separation_seconds": 11.525144,
+    "sampling": "All 408 entries of the native frame manifest in this interval were supplied, including 38 gap frames. Sparse refers only to the 19 full-resolution inspections, not missing source frames.",
+    "prior_evidence": "This scout does not overturn the previous plausible shared patch/cord region. It found no clearly better additional correspondence."
+  },
+  "accepted_connection": false
+}

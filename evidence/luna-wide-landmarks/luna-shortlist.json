@@ -1,0 +1,60 @@
+{
+  "task": "Independent wide-window visual landmark scout for tracking-loss span",
+  "source": {
+    "selection": "selection.json",
+    "originals_directory": "images/",
+    "original_count": 408,
+    "original_dimensions_px": [1080, 1920],
+    "original_names": {"first": "frame_006315.jpg", "last": "frame_006722.jpg"},
+    "side_counts": {"before": 178, "gap": 38, "after": 192},
+    "windows_seconds": {
+      "before": [402.290311, 412.290311],
+      "gap": [412.290311, 414.512889],
+      "after": [414.512889, 424.512889]
+    },
+    "contact_sheets": {
+      "directory": "contacts/",
+      "count": 21,
+      "files": ["contact-000.png", "contact-020.png", "contact-040.png", "contact-060.png", "contact-080.png", "contact-100.png", "contact-120.png", "contact-140.png", "contact-160.png", "contact-180.png", "contact-200.png", "contact-220.png", "contact-240.png", "contact-260.png", "contact-280.png", "contact-300.png", "contact-320.png", "contact-340.png", "contact-360.png", "contact-380.png", "contact-400.png"]
+    }
+  },
+  "inspection": {
+    "all_contact_sheets_visually_inspected": true,
+    "full_resolution_originals_opened": [
+      "frame_006462.jpg", "frame_006480.jpg", "frame_006487.jpg", "frame_006489.jpg", "frame_006491.jpg", "frame_006520.jpg", "frame_006524.jpg", "frame_006529.jpg", "frame_006530.jpg", "frame_006551.jpg", "frame_006557.jpg", "frame_006704.jpg", "frame_006712.jpg"
+    ],
+    "limits": "Contact sheets served for broad temporal/context screening. Candidate frames above were then viewed as 1080x1920 originals. Blur, camera movement, occlusion, lighting, and the long unsampled interval limit correspondence claims. No registration or geometric acceptance was performed."
+  },
+  "pairs": [
+    {
+      "id": "weak-floor-patch-seam-01",
+      "status": "weak_unresolved_candidate",
+      "before": {"image": "frame_006491.jpg", "timestamp_seconds": 412.170167, "side": "before"},
+      "after": {"image": "frame_006704.jpg", "timestamp_seconds": 423.695311, "side": "after"},
+      "feature_description": "A broad, irregular teal/green-to-tan floor-color boundary crosses beige tiles near visible grout seams. A small brownish/gray scuff-like patch lies nearby in the before view; the after view shows a similarly colored floor area and seam with a brown-toned patch. Only the floor field and seam arrangement are plausible common content; I cannot point to a unique matching stain contour.",
+      "reason": "This is the only plausible cross-gap static-surface candidate found in the wide scan. The separated camera views both expose substantial tiled floor, and the transition frames 006520-006530 briefly show a mostly floor-facing view that could lie along the sweep.",
+      "limitations": "Low confidence and not an improved landmark match. Both frames are blurred and differently oriented. Teal coloring can be cast light, reflection, or shadow; tan tile patterns and seams repeat. Pedestrian shadows/feet and nearby bags obscure parts of the floor. The 9.18-second separation leaves ample opportunity for camera motion and view dissimilarity.",
+      "lookalike_or_falsification_check": "Compare the small brown/gray scuff contour and the exact grout-seam intersection against intervening floor views, especially gap frames 006520-006530. If the purported stain changes shape with shadows or cannot be followed on the same tile relative to seam intersections, reject correspondence. Similar teal patches on separate tiles are not sufficient.",
+      "confidence": "low; unresolved",
+      "proposed_regions": {
+        "coordinate_space": "original image pixels, xyxy",
+        "before": [250, 360, 1060, 1370],
+        "after": [0, 820, 990, 1900],
+        "region_note": "Coarse floor-field search regions only; individual common-feature bounds are not defensible from these blurred views."
+      }
+    }
+  ],
+  "excluded_or_rejected": [
+    {
+      "candidate": "Repeated black body bags, white coverings, purple cloth, and adjacent bodies across early and late views",
+      "disposition": "excluded_as_non-distinctive",
+      "reason": "The scene contains many similar bags and coverings. Apparent similarity does not establish the same object; using faces or body features for matching is inappropriate. No uniquely configured bag/object constellation was evident across the gap."
+    },
+    {
+      "candidate": "Teal/green floor color patch and nearby tan/brown tile marks",
+      "disposition": "retained_only_as_weak_unresolved_pair_above",
+      "reason": "No specific stain contour or seam junction was visually established as shared; changing illumination/reflection is a strong alternative."
+    }
+  ],
+  "observations": []
+}

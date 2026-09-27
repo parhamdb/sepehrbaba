@@ -1,0 +1,41 @@
+{
+  "task": "Bounded visual coverage follow-up for early before frames",
+  "source": {
+    "selection": "selection.json",
+    "images_directory": "images/",
+    "all_selected_source_frames_supplied": 408,
+    "source_dimensions_px": [1080, 1920]
+  },
+  "inspection": {
+    "opened_at_full_resolution": [
+      {"image": "frame_006324.jpg", "timestamp_seconds": 402.758267, "side": "before"},
+      {"image": "frame_006332.jpg", "timestamp_seconds": 403.248822, "side": "before"},
+      {"image": "frame_006350.jpg", "timestamp_seconds": 404.510022, "side": "before"},
+      {"image": "frame_006380.jpg", "timestamp_seconds": 406.442089, "side": "before"},
+      {"image": "frame_006580.jpg", "timestamp_seconds": 417.096544, "side": "after"},
+      {"image": "frame_006605.jpg", "timestamp_seconds": 418.458344, "side": "after"}
+    ],
+    "exactly_these_six_images": true
+  },
+  "pairs": [],
+  "observations": [
+    {
+      "id": "broad-scene-context-only",
+      "before_images": ["frame_006324.jpg", "frame_006332.jpg", "frame_006350.jpg", "frame_006380.jpg"],
+      "after_images": ["frame_006580.jpg", "frame_006605.jpg"],
+      "shared_context_hypothesis": "Indoor tiled floor with repeated rows of people on dark coverings and standing visitors is broadly visible in both periods.",
+      "candidate_distinctive_before_detail": "frame_006350.jpg has a dark green/black foreground bag bearing a small white rectangular tag, with purple and brown coverings adjacent.",
+      "after_comparison": "The after frames show a different-looking local grouping: white sheet, dark covering, and a garment with a conspicuous white stripe and cord. The tagged bag detail is not clearly present, and the relative arrangement does not establish a match.",
+      "assessment": "No better overlap pair. Broad scene context only; no defensible shared localized landmark.",
+      "confidence": "low for scene-level common setting; no object correspondence asserted",
+      "limitations": "Strong motion blur, viewpoint change, repeated coverings, transient people, and a 10+ second separation. No face or body-feature matching used."
+    }
+  ],
+  "corrections_to_initial_shortlist": {
+    "weak_candidate_elapsed_seconds": 11.525144,
+    "calculation": "423.695311 - 412.170167",
+    "all_408_selected_source_frames_were_supplied": true,
+    "wording_correction": "Do not describe the middle window as an unsampled interval; 38 selected gap frames are present. Samples remain sparse across the overall time windows."
+  },
+  "geometry_accepted": false
+}
