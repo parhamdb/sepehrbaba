@@ -1,38 +1,61 @@
 {
-  "source_revision": "38453ef",
+  "source_revision": "bd2c593",
   "tests": [
     {
       "id": "math-and-inventory",
       "status": "passed",
-      "evidence": "6 unittest cases on frozen source 38453ef; system Python lacks OpenCV, runtime venv used"
+      "evidence": "7 unittest cases passed on frozen current source; earlier 6-case result retained in campaign history",
+      "source_revision": "bd2c593"
     },
     {
       "id": "thor-native-compatibility",
       "status": "passed",
-      "evidence": "COLMAP observation indices verified against native database; SIFT and CUDA LightGlue executed"
+      "evidence": "COLMAP observation indices verified against native database; SIFT and CUDA LightGlue executed",
+      "source_revision": "38453ef"
     },
     {
       "id": "47-gap-execution",
       "status": "passed",
-      "evidence": "report.json complete; 47/47; no candidate recoveries; source 38453ef"
+      "evidence": "report.json complete; 47/47; no candidate recoveries; source 38453ef",
+      "source_revision": "38453ef"
     },
     {
       "id": "source-visual-review",
       "status": "passed",
-      "evidence": "Six triptychs in review/ inspected"
+      "evidence": "Six triptychs in review/ inspected",
+      "source_revision": "38453ef"
     },
     {
       "id": "public-privacy",
       "status": "passed",
-      "evidence": "Scoped text scan: no runtime host paths, private addresses or credential patterns; image files are source-video derivatives"
+      "evidence": "Scoped scan of all 20 changed files: no runtime host paths, private addresses or credential patterns; report roles and zero-new-pass claims checked",
+      "source_revision": "bd2c593"
+    },
+    {
+      "id": "nearest-reference-followup",
+      "status": "passed",
+      "source_revision": "d3d559e",
+      "evidence": "3/3 gaps completed; 72 screens; 0 new-pose passes"
+    },
+    {
+      "id": "aliked-followup-and-resume",
+      "status": "passed",
+      "source_revision": "bd2c593",
+      "evidence": "3/3 gaps completed on byte-identical script; 72 screens; 0 new-pose passes. Final resume verified input, model and source-image identities and reused completed inference."
     }
   ],
   "counts": {
-    "passed": 5,
+    "passed": 7,
     "failed": 0,
     "blocked": 0,
     "untested": 0
   },
   "science_outcome": "0 new-pose screens passed; 0 accepted joins",
-  "report_sha256": "c47675eddde065838537f68968936368e12a39c012373efeec10e26841490288"
+  "report_sha256": "c47675eddde065838537f68968936368e12a39c012373efeec10e26841490288",
+  "scope": "First 47-gap campaign plus nearest-reference and ALIKED descriptor follow-ups on three failed pilot gaps; not complete reconstruction.",
+  "reports_sha256": {
+    "report.json": "c47675eddde065838537f68968936368e12a39c012373efeec10e26841490288",
+    "nearest-report.json": "162531161f8d1dfec2585d2e8536f7ccb43ef14e7b5f5238960645676a2a9aea",
+    "aliked-report.json": "545108a7d84c9e50e16cb00a22e02dbe2dfde6cda6760bf66012bdc23bc1ed1e"
+  }
 }

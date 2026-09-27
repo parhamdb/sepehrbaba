@@ -118,7 +118,7 @@ LightGlue on CUDA; source image hashes are retained and checked.
 One discovery pass, failure-only corrections, then one final pass of these checks:
 
 1. Synthetic inventory, time-window selection, duplicate rejection and PnP
-   positive/negative/scale controls (six unit tests).
+   positive/negative/scale controls (seven unit tests, including follow-up reference selection).
 2. Actual native feature/model compatibility and GPU matching on Thor.
 3. Complete all 47 gap experiments, or explicitly retain a running checkpoint.
 4. Inspect representative recovered candidates and failure source frames.
