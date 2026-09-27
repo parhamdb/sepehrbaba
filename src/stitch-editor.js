@@ -1,5 +1,6 @@
 import * as pc from 'playcanvas';
 import {validateFilters,measureSplats,filterSummary,filterModifier} from './stitch-filters.js';
+import {installTrace} from './stitch-trace.js';
 const $ = id => document.getElementById(id);
 const clone = value => JSON.parse(JSON.stringify(value));
 let project, initial, manifest, revision, selected = 0, dirty = false, soloMode = false;
@@ -168,4 +169,5 @@ try {
   selected=Math.min(1,project.scenes.length-1);controls();
   if(manifest.camera){target.set(...manifest.camera.target);const d=new pc.Vec3(...manifest.camera.position).sub(target);distance=d.length();pitch=Math.asin(d.y/distance)*180/Math.PI;yaw=Math.atan2(d.x,d.z)*180/Math.PI;cameraUpdate();}else focusSelected();
   status(`${project.scenes.length} Gaussian scenes loaded. Select a section to place it.`);
+  installTrace({pc,app,camera,canvas,entities,selectedScene,originals,applyFilter,status});
 }catch(e){status(`Could not open editor: ${e.message}`);console.error(e);}

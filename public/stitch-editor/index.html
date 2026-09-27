@@ -23,6 +23,15 @@
 <nav class="panel-tabs" aria-label="Placement controls"><button data-panel="position" aria-pressed="true">Move</button><button data-panel="rotation" aria-pressed="false">Rotate</button><button data-panel="scale" aria-pressed="false">Scale</button><button data-panel="inspect" aria-pressed="false">Filters</button><button data-panel="more" aria-pressed="false">More</button></nav>
 <div id="panel-content" class="panel-content">
 <section id="inspection" aria-label="Section visibility and filters">
+<div id="trace-controls" hidden>
+<h2>Trace a ray to the video</h2>
+<button id="trace-start">Select a ray</button>
+<p class="muted">Tap an artifact in the scene, then inspect source / footprint / mask images. Footprints are approximate correspondences, not proof of an object's origin. Changes are never approved automatically.</p>
+<div id="trace-candidates"></div>
+<div class="row"><button id="trace-again" disabled>Trace checked splats</button><button id="trace-only" disabled>Show traced only</button></div>
+<button id="trace-restore">Restore scene</button>
+<div id="trace-results"></div>
+</div>
 <h2 id="filter-heading">Filters for selected section</h2>
 <label class="filter-control" for="filter-opacity">Minimum opacity <input id="filter-opacity" type="number" min="0" max="1" step="0.01" value="0" inputmode="decimal" disabled></label>
 <div class="filter-slider"><span>0 · off</span><input id="slider-opacity" aria-label="Minimum opacity slider" type="range" min="0" max="1" step="0.01" value="0" disabled><span id="slider-opacity-max">1</span></div>

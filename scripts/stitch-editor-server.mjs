@@ -5,6 +5,7 @@ import { createReadStream } from 'node:fs';
 import path from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import {traceApi} from './stitch-trace-api.mjs';
 
 export function validateProject(input, manifest) {
   if (input?.version !== 1 || !Array.isArray(input.scenes) || input.scenes.length !== manifest.scenes.length) throw Error('Project must contain each manifest scene exactly once.');
@@ -21,7 +22,7 @@ export function validateProject(input, manifest) {
   return { version: 1, scenes };
 }
 
-export async function createStitchServer({ manifestPath, assetsRoot, stateRoot, webRoot }) {
+export async function createStitchServer({ manifestPath, assetsRoot, stateRoot, webRoot, traceConfig }) {
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
   if (manifest.version !== 1 || !Array.isArray(manifest.scenes) || !manifest.scenes.length) throw Error('Manifest needs version 1 and scenes.');
   const assets = new Map();
@@ -33,6 +34,7 @@ export async function createStitchServer({ manifestPath, assetsRoot, stateRoot, 
     if (!(await stat(filename)).isFile()) throw Error('Asset is not a file.');
     assets.set(scene.id, filename);
   }
+  const tracer=await traceApi(traceConfig,assets);
   const initial = validateProject({ version: 1, scenes: manifest.scenes.map((s, i) => ({...s, transform: s.transform ?? {position:[0,0,0],rotation:[0,0,0],scale:1}, visible: true, locked: s.locked ?? i === 0})) }, manifest);
   await mkdir(stateRoot, {recursive:true});
   const savePath = path.join(stateRoot, 'project.json');
@@ -49,6 +51,14 @@ export async function createStitchServer({ manifestPath, assetsRoot, stateRoot, 
     try {
       const url = new URL(req.url, 'http://localhost');
       if (url.pathname.startsWith('/api/')) {
+        if(req.method==='GET'&&url.pathname==='/api/trace')return json(res,200,{scenes:tracer?.scenes??[]});
+        if(req.method==='POST'&&url.pathname==='/api/trace'){
+          if(!tracer)return json(res,404,{error:'Source tracing is not configured.'});
+          if(req.headers.origin&&req.headers.origin!==`http://${req.headers.host}`)return json(res,403,{error:'Cross-origin writes are not allowed.'});
+          if(!(req.headers['content-type']??'').startsWith('application/json'))return json(res,415,{error:'Expected JSON.'});
+          let body='';for await(const chunk of req){body+=chunk;if(body.length>16000)return json(res,413,{error:'Selection too large.'});}
+          return json(res,200,await tracer.run(JSON.parse(body)));
+        }
         if (req.method === 'GET' && url.pathname === '/api/project') return json(res,200,{manifest, project, initial, revision});
         if (req.method === 'PUT' && url.pathname === '/api/project') {
           if (req.headers.origin && req.headers.origin !== `http://${req.headers.host}`) return json(res,403,{error:'Cross-origin writes are not allowed.'});
@@ -65,7 +75,9 @@ export async function createStitchServer({ manifestPath, assetsRoot, stateRoot, 
       }
       if (req.method !== 'GET' && req.method !== 'HEAD') return json(res,405,{error:'Read only.'});
       let filename, contentType;
-      if (url.pathname.startsWith('/assets/')) {
+      if(url.pathname.startsWith('/trace-result/')){
+        filename=tracer?.file(url.pathname);contentType=url.pathname.endsWith('.jpg')?'image/jpeg':url.pathname.endsWith('.json')?'application/json':'application/octet-stream';
+      } else if (url.pathname.startsWith('/assets/')) {
         const id = url.pathname.slice('/assets/'.length).replace(/\.ply$/,''); filename = assets.get(id); contentType = 'application/octet-stream';
       } else {
         const names = {'/':'index.html','/editor.js':'editor.js'};
@@ -86,7 +98,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const args = process.argv.slice(2), options = {};
   for(let i=0;i<args.length;i+=2) {if(!args[i]?.startsWith('--') || !args[i+1]) throw Error('Use --manifest FILE --assets DIR --state DIR [--host HOST --port PORT --web DIR]'); options[args[i].slice(2)] = args[i+1];}
   for(const key of ['manifest','assets','state']) if(!options[key]) throw Error(`Missing --${key}`);
-  const {server} = await createStitchServer({manifestPath:options.manifest,assetsRoot:options.assets,stateRoot:options.state,webRoot:options.web ?? 'dist/stitch-editor'});
+  const {server} = await createStitchServer({manifestPath:options.manifest,assetsRoot:options.assets,stateRoot:options.state,webRoot:options.web ?? 'dist/stitch-editor',traceConfig:options['trace-config']});
   const host = options.host ?? '127.0.0.1', port = Number(options.port ?? 8092);
   server.listen(port,host, () => console.log(`Stitch editor listening on http://${host}:${server.address().port}`));
 }
