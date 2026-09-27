@@ -1,0 +1,33 @@
+import sys,unittest
+from pathlib import Path
+import numpy as np
+sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
+from check_floor_drift import world_points,plane_fit,plane_difference
+from check_static_floor_bridge import project
+
+
+class FloorTests(unittest.TestCase):
+    def test_world_projection_roundtrip_with_rotated_camera(self):
+        t=.4;R=np.array([[np.cos(t),0,np.sin(t)],[0,1,0],[-np.sin(t),0,np.cos(t)]])
+        C=np.array([2,3,4]);K=np.array([[100,0,50],[0,100,80],[0,0,1.]])
+        xy=np.array([[10.,20.],[50,80],[60,100]]);depth=np.array([2.,3.,4.])
+        xyz=world_points(xy,depth,K,C,R)
+        uv,z=project(xyz,dict(R=R.T,t=-R.T@C,K=K,dist=[0,0,0,0]))
+        np.testing.assert_allclose(uv,xy);np.testing.assert_allclose(z,depth)
+
+    def test_plane_finds_height_change_but_not_sideways_translation(self):
+        rng=np.random.default_rng(0);pts=np.c_[rng.uniform(-2,2,1000),np.zeros(1000),rng.uniform(-2,2,1000)]
+        ref=plane_fit(pts,np.array([0,2,0]),.02)
+        moved=plane_fit(pts+[5,0,7],np.array([5,2,7]),.02)
+        same=plane_difference(ref,moved)
+        self.assertAlmostEqual(same['tilt_deg'],0,delta=1e-5);self.assertAlmostEqual(same['signed_offset_camera_heights'],0)
+        lifted=plane_fit(pts+[0,1,0],np.array([0,3,0]),.02)
+        self.assertAlmostEqual(plane_difference(ref,lifted)['signed_offset_camera_heights'],.5)
+
+    def test_nonplanar_and_sparse_samples_remain_unsupported(self):
+        rng=np.random.default_rng(2)
+        self.assertIsNone(plane_fit(rng.normal(size=(100,3)),np.array([0,2,0]),.01))
+        self.assertIsNone(plane_fit(rng.normal(size=(1000,3)),np.array([0,2,0]),.01))
+
+
+if __name__=='__main__':unittest.main()
