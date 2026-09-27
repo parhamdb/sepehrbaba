@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "source_commit": "c709a41",
+  "scope": "Sampled floor drift diagnosis and review page; no camera corrections or joins.",
+  "checks": [
+    {
+      "id": "sam-native-detector-smoke",
+      "status": "passed"
+    },
+    {
+      "id": "100-sample-mask-and-artifact-inventory",
+      "status": "passed"
+    },
+    {
+      "id": "visual-review-all-contact-sheets-and-supported-pair",
+      "status": "passed"
+    },
+    {
+      "id": "five-math-regressions-final",
+      "status": "untested"
+    },
+    {
+      "id": "local-desktop",
+      "status": "untested"
+    },
+    {
+      "id": "local-mobile",
+      "status": "untested"
+    },
+    {
+      "id": "published-desktop",
+      "status": "untested"
+    },
+    {
+      "id": "published-mobile",
+      "status": "untested"
+    }
+  ],
+  "history": [
+    "CUDA ROI Align fallback handles tuple boxes.",
+    "SIFT orientation duplicates removed before holdout.",
+    "Tiny-scale plane degeneracy fixed with local normalization; only affected plane outputs rerun, feature results retained."
+  ],
+  "report_sha256": "f32bd8cb1a92270469101c0a535aadec7f74f14e4404aa2af99de3fc4ec606fe",
+  "counts": {
+    "passed": 3,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 5
+  }
+}
