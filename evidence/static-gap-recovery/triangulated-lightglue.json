@@ -1,0 +1,1696 @@
+{
+  "identity": {
+    "state": "4b638c6b0d404724a439f81990026620427b55bbdd86ec330d5d446336f12a7d",
+    "selection": "557ac1e14bfb2de793aa7a06d80b8fe9a5a801b4e6b86c31bd162aca9d363e98",
+    "database": "7278f49e9a0be002e321a02fac9d24f1d30259409c1ad2ede4b6f6cef367fbce",
+    "reader": "3775d7856891af92348d06311727b69498fe94823d40a1e1ca445c6eb72f8b16",
+    "script": "1e5fa70d03efb0a1c82e1f896b9e219fd3eca7a2bf5ce5e0d53d37f175157070",
+    "pnp_script": "9761fc7c0ba837b6f6c1c82895681d29ea9d86007e31ee84a2da7aa4b26ce76e",
+    "geometry_script": "99d0658f7cfb30d7eaa0e28dbb2ba1fa508dfdee581a4556d74e9034524c8d95",
+    "mask_manifest": "66ff175cc7444e204852d7a387959642d65574429ee811b60bcf72f5d94e136a",
+    "matching": "lightglue",
+    "lightglue": "eb42fee2d71449efb0aa5c10549752b5d75384d8"
+  },
+  "mask_sha256": {
+    "frame_006415.jpg": "7f0c6c3852d799fbab27adb7c6ceb9d253fed9a36bebae61b150a702d92e643c",
+    "frame_006453.jpg": "c80f4397041b88a8a3c8f965149c88f01e26bc59d87c2334cdb7c180fabf3c0e",
+    "frame_006454.jpg": "c713192b0e6b577033ecb7f377ee53c1ffb0948e4f84f2676b6c7f1a8a90182b",
+    "frame_006466.jpg": "d613ad1938eb0e6a4f8753729e51902b9f74215ff7e9d182d754bdd510ea5f64",
+    "frame_006477.jpg": "22c5cef289deec2cf7e916f0261f581d3b1b142523d2b81dbd2ca7cd31345ad8",
+    "frame_006493.jpg": "8f673af2e4aee780a3916e1b3e1d0c423221754ee1ef0c35e87c7f5dc6b44a5e",
+    "frame_006511.jpg": "a3677b95a1d97bc82e8271b62dade16ea61ba9a079c7c5bb4ef044ad5fdc9fdc",
+    "frame_006530.jpg": "118e7dc18afa01ff26bc01aaca293754bb6faa530fe77bc04ebaddcdd76b0132",
+    "frame_006531.jpg": "7288ded4c21d4716ffc5507d84f17a1a74155caa0ee31a5692c72c4c9edf721b",
+    "frame_006548.jpg": "56152a303ec3ca791cd7f26d96732729b140ba3a69ae871b7015bd7c4fe41ceb",
+    "frame_006568.jpg": "3bf14eb4d625deea89cc91a3cc2322e29cb3b2b6c554f6b92f3520aed0a0ed7f",
+    "frame_006580.jpg": "37258f973dcff18692aaffd087b56b43f936fc7be6b0124c5e82ddf762ea1d43",
+    "frame_006600.jpg": "8d8083fae78c9f2277ad0e482938f85ba8fea6980cea70609a20af8fcfe98f62",
+    "frame_006627.jpg": "5b17b71cddc887197994bed9b36ce3165e87ab56d05458d0cf2b46aa1fb0ed84",
+    "frame_006646.jpg": "bd69ddec454071c6ce8289be123a9c3e3b4d1de22de6dea1ba3017d4f4c46d20",
+    "frame_006688.jpg": "18632bf5640905aafdaa98a4379587226c9d32d36696126e041384baa58fce0d",
+    "frame_006931.jpg": "567743670535ea18dca03c17e0bf71ad69a8db673d587b8da61a6edbdeacb89d",
+    "frame_006946.jpg": "62611f64f6d0266d1cc74eabe63aea89385f50af926c1f572acd63966b680c1f",
+    "frame_006963.jpg": "df317cf9a9e64e0f8e4ba14c5e07152c14b9ceceaee4002652ba042b5c236595",
+    "frame_006966.jpg": "172e0e35d020c2f69c5556034f5a04ed7087393474cd625e63bbf3616332f624",
+    "frame_006976.jpg": "258dfeb2fa74954a4e48df0a5920212d01691bd8f1f7cde5e6ffa9ce4793a483",
+    "frame_007043.jpg": "fee5c99cb98d408fcf6109dce185dc7a3c353c32c33e3fc8004918ab05255346",
+    "frame_007111.jpg": "68559661e533cc0e33225fb6493782d1b7f98b32419112f90d6e93b3736a1ebe",
+    "frame_007112.jpg": "d912d7fe39af5c4680618bb720e049aa0fd20791eb4aa1a688fbf5d8d85b5936",
+    "frame_007122.jpg": "6e066d53b583e047b2d643760603216295ee1c37fe0c9b8d7140946b1ffc5acc",
+    "frame_007132.jpg": "ec0b44663db030b7517f4c44b2998869b4e3403daeabe70787ecadf0ec3bb927",
+    "frame_007154.jpg": "f8efa5bca61a1637841daad54ea5a84faa2bb087b548020818b406d188f50e7a",
+    "frame_007156.jpg": "18632bf5640905aafdaa98a4379587226c9d32d36696126e041384baa58fce0d",
+    "frame_008988.jpg": "edb78e14589a5453e77a30a46063493b981777534754f52d5ee767f041968f31",
+    "frame_009000.jpg": "fb400e64c2595afe9216432285bf954e8f160ae2dc6d4c9812ed8aa0a86ed63c",
+    "frame_009002.jpg": "2bcb13a3fbc557211373d409bcc33c5bc913180946f90bdfcca5718e171ba56a",
+    "frame_009018.jpg": "5ac350affb1eb019a9156664f2932d36a7c2a8c78ee433dfed177d185cda08ba",
+    "frame_009036.jpg": "a4e3c68f8a7a10bb540cb0685baba49a07278b3cb95b08f86f6b08d6f223a88e",
+    "frame_009055.jpg": "ed24c44c1d483495d1956ca94df4e13bc3dbd22864ea8bb33bbf45c42d7938bf",
+    "frame_009056.jpg": "54b5f1fec809017f8a4cdac8795ca7f2bad00275f2e826143cdc0f34b94fcc89",
+    "frame_009066.jpg": "133e0dcd8f9b5e72c1d3fedfe38ebf75f784eeeb120fe3923af3ea476ede06ed",
+    "frame_009079.jpg": "c082192683d10818d2250332fff9db88f0fa8fe528dcdf4a00f4fafeca937840",
+    "frame_009089.jpg": "e3b255621646f13a469c7b0e67f081140f55f9e725e5761b3f4baa86e9a0b63a",
+    "frame_009099.jpg": "bdfb770839fb8a63b628375f5b29ab45a42dd0a3b73d2c62f8423ae511e57823"
+  },
+  "status": "complete-candidates-not-certified",
+  "maps": [
+    {
+      "gap": "gap-098",
+      "direction": "lookback",
+      "component": "cbc3a19f69fce48a",
+      "model_sha256": {
+        "cameras.bin": "8a888c55e00e1eb9b65f61a3b46cb0a0a4de501a06a31d93aee4090c91103537",
+        "images.bin": "cbc3a19f69fce48a23d362435a3d6667b9b1dcbc320ee7d53f8513d527dd9d2f"
+      },
+      "pairs": [
+        {
+          "a": "frame_006477.jpg",
+          "b": "frame_006466.jpg",
+          "matches": 25,
+          "triangulated": 13,
+          "positive_both": 25,
+          "parallax_ge_one_degree": 25,
+          "reprojection_both_under_two_px": 13
+        },
+        {
+          "a": "frame_006477.jpg",
+          "b": "frame_006454.jpg",
+          "matches": 6,
+          "triangulated": 0,
+          "positive_both": 6,
+          "parallax_ge_one_degree": 6,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006477.jpg",
+          "b": "frame_006415.jpg",
+          "matches": 2,
+          "triangulated": 0,
+          "positive_both": 2,
+          "parallax_ge_one_degree": 2,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006466.jpg",
+          "b": "frame_006454.jpg",
+          "matches": 4,
+          "triangulated": 0,
+          "positive_both": 4,
+          "parallax_ge_one_degree": 4,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006466.jpg",
+          "b": "frame_006415.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006454.jpg",
+          "b": "frame_006415.jpg",
+          "matches": 1,
+          "triangulated": 0,
+          "positive_both": 1,
+          "parallax_ge_one_degree": 1,
+          "reprojection_both_under_two_px": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "id": 182825673973882,
+          "xyz": [
+            -2.185268445589353,
+            -0.501941079305852,
+            10.385025499367732
+          ],
+          "parallax_degrees": 4.620512722314957,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 1408,
+              "xy": [
+                428.8642578125,
+                1109.01416015625
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 1029,
+              "xy": [
+                506.0309143066406,
+                1030.04345703125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 98783702092823,
+          "xyz": [
+            -2.3702075991610476,
+            -0.6262220692753895,
+            10.493417967605035
+          ],
+          "parallax_degrees": 4.444343721120942,
+          "original_point_ids": [
+            398
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 1257,
+              "xy": [
+                398.4798583984375,
+                1085.7625732421875
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 896,
+              "xy": [
+                469.8044128417969,
+                1002.1032104492188
+              ]
+            }
+          ]
+        },
+        {
+          "id": 81395999697609,
+          "xyz": [
+            -0.687532016708189,
+            -1.3899404511176792,
+            10.91576701980697
+          ],
+          "parallax_degrees": 3.7263808873496074,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 79,
+              "xy": [
+                682.790771484375,
+                954.3688354492188
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 887,
+              "xy": [
+                795.7421875,
+                846.0953979492188
+              ]
+            }
+          ]
+        },
+        {
+          "id": 131504083063366,
+          "xyz": [
+            -0.6512921328591611,
+            -1.324936937182829,
+            11.301388958594684
+          ],
+          "parallax_degrees": 3.60956149195033,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 533,
+              "xy": [
+                681.3123168945312,
+                965.5850830078125
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 508,
+              "xy": [
+                793.749267578125,
+                854.204345703125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 269740136661575,
+          "xyz": [
+            -0.5146288870421423,
+            -1.5088180577754902,
+            11.28820053000556
+          ],
+          "parallax_degrees": 3.5079307152978463,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 800,
+              "xy": [
+                701.707275390625,
+                937.0313110351562
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 883,
+              "xy": [
+                821.7177124023438,
+                819.7807006835938
+              ]
+            }
+          ]
+        },
+        {
+          "id": 59060187740750,
+          "xyz": [
+            -0.6354174672449092,
+            -1.5096950292524907,
+            11.53728014111045
+          ],
+          "parallax_degrees": 3.3796593929091476,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 518,
+              "xy": [
+                679.6190185546875,
+                937.2079467773438
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 505,
+              "xy": [
+                792.0882568359375,
+                818.7935791015625
+              ]
+            }
+          ]
+        },
+        {
+          "id": 105163643052089,
+          "xyz": [
+            -0.8861714464796557,
+            -1.4862358085708556,
+            11.462537630816652
+          ],
+          "parallax_degrees": 3.3768026342491626,
+          "original_point_ids": [
+            322
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 1528,
+              "xy": [
+                642.0958862304688,
+                940.396484375
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 1217,
+              "xy": [
+                748.0000610351562,
+                823.7783203125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 239501724771584,
+          "xyz": [
+            -0.5575992448942545,
+            -1.5250979837973138,
+            11.567691678589725
+          ],
+          "parallax_degrees": 3.3732631327419216,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 798,
+              "xy": [
+                691.3224487304688,
+                934.8975219726562
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 504,
+              "xy": [
+                805.1629028320312,
+                815.880126953125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 68864959407637,
+          "xyz": [
+            -1.0564853480866678,
+            -1.4634547258830952,
+            11.506275942287823
+          ],
+          "parallax_degrees": 3.3480988047959697,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 524,
+              "xy": [
+                615.4306030273438,
+                943.9310913085938
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 332,
+              "xy": [
+                716.2330322265625,
+                827.7803344726562
+              ]
+            }
+          ]
+        },
+        {
+          "id": 88459443501426,
+          "xyz": [
+            -0.5637926368045832,
+            -1.4920616701905844,
+            11.778755946727987
+          ],
+          "parallax_degrees": 3.3143604639418536,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 522,
+              "xy": [
+                685.9988403320312,
+                940.9235229492188
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 708,
+              "xy": [
+                799.8623046875,
+                820.21142578125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 222147955330614,
+          "xyz": [
+            -0.6345236092361698,
+            -1.4925232794315988,
+            11.872448687820679
+          ],
+          "parallax_degrees": 3.2656970824598486,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 521,
+              "xy": [
+                674.3069458007812,
+                940.9384765625
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 707,
+              "xy": [
+                784.9970092773438,
+                819.828369140625
+              ]
+            }
+          ]
+        },
+        {
+          "id": 198929427383326,
+          "xyz": [
+            -0.5997187889404098,
+            -1.4893838625430238,
+            12.42508239526216
+          ],
+          "parallax_degrees": 3.084373782766381,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 64,
+              "xy": [
+                670.9606323242188,
+                943.0343017578125
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 45,
+              "xy": [
+                779.93408203125,
+                817.2459106445312
+              ]
+            }
+          ]
+        },
+        {
+          "id": 270856780415088,
+          "xyz": [
+            -0.6894020652060232,
+            -2.004489088558744,
+            12.181327560351361
+          ],
+          "parallax_degrees": 2.815490953848682,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006466.jpg",
+              "feature": 785,
+              "xy": [
+                661.2598876953125,
+                867.5421142578125
+              ]
+            },
+            {
+              "name": "frame_006477.jpg",
+              "feature": 703,
+              "xy": [
+                771.557373046875,
+                731.9446411132812
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "query": "frame_006493.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 1,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006511.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 3,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006530.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006531.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006453.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-098",
+      "direction": "lookahead",
+      "component": "0bc7a95fc61b9c4c",
+      "model_sha256": {
+        "cameras.bin": "f243a09d80738774d0bcf78885c5bc26e049afb397297b8eaf287d7d322dd048",
+        "images.bin": "0bc7a95fc61b9c4cbadf353b0a7299229d378943e67adc2d8cadf5efc752d4eb"
+      },
+      "pairs": [
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006568.jpg",
+          "matches": 16,
+          "triangulated": 9,
+          "positive_both": 16,
+          "parallax_ge_one_degree": 16,
+          "reprojection_both_under_two_px": 9
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006580.jpg",
+          "matches": 7,
+          "triangulated": 3,
+          "positive_both": 7,
+          "parallax_ge_one_degree": 7,
+          "reprojection_both_under_two_px": 3
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006627.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 2,
+          "triangulated": 0,
+          "positive_both": 2,
+          "parallax_ge_one_degree": 2,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006580.jpg",
+          "matches": 13,
+          "triangulated": 10,
+          "positive_both": 13,
+          "parallax_ge_one_degree": 13,
+          "reprojection_both_under_two_px": 10
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006627.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 6,
+          "triangulated": 0,
+          "positive_both": 4,
+          "parallax_ge_one_degree": 4,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006580.jpg",
+          "b": "frame_006627.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006580.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 3,
+          "triangulated": 0,
+          "positive_both": 2,
+          "parallax_ge_one_degree": 3,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006580.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006627.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006627.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006646.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "id": 20011925629104,
+          "xyz": [
+            3.4724796276283163,
+            5.623801668089315,
+            2.8949847042646555
+          ],
+          "parallax_degrees": 19.09524384138505,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 850,
+              "xy": [
+                617.9771728515625,
+                1359.2962646484375
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1806,
+              "xy": [
+                808.85498046875,
+                1688.328857421875
+              ]
+            }
+          ]
+        },
+        {
+          "id": 258413806998653,
+          "xyz": [
+            3.3981647568265765,
+            5.592292600856632,
+            3.006008545946227
+          ],
+          "parallax_degrees": 18.76943363203561,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 641,
+              "xy": [
+                605.567138671875,
+                1345.836669921875
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1119,
+              "xy": [
+                783.9205932617188,
+                1667.697998046875
+              ]
+            }
+          ]
+        },
+        {
+          "id": 122779984233224,
+          "xyz": [
+            3.244434748800361,
+            5.513057075565743,
+            3.0570221929651686
+          ],
+          "parallax_degrees": 18.5712523698924,
+          "original_point_ids": [
+            570
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 1400,
+              "xy": [
+                579.2694702148438,
+                1322.0882568359375
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1969,
+              "xy": [
+                746.2830200195312,
+                1641.1248779296875
+              ]
+            }
+          ]
+        },
+        {
+          "id": 182001134047881,
+          "xyz": [
+            2.875278528821083,
+            5.334245739291573,
+            3.189312916077443
+          ],
+          "parallax_degrees": 18.0083643607975,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 1046,
+              "xy": [
+                519.29345703125,
+                1267.9888916015625
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1609,
+              "xy": [
+                655.2978515625,
+                1581.779052734375
+              ]
+            }
+          ]
+        },
+        {
+          "id": 258959105311104,
+          "xyz": [
+            2.6522450080887188,
+            5.237435773572424,
+            3.3991688706778844
+          ],
+          "parallax_degrees": 25.67892550649066,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 639,
+              "xy": [
+                485.9737243652344,
+                1236.0748291015625
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1099,
+              "xy": [
+                598.736328125,
+                1539.921142578125
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1800,
+              "xy": [
+                615.1304321289062,
+                1820.4488525390625
+              ]
+            }
+          ]
+        },
+        {
+          "id": 175837591332492,
+          "xyz": [
+            3.5042305685656636,
+            4.640759108795766,
+            3.6038318073131856
+          ],
+          "parallax_degrees": 16.809392982554993,
+          "original_point_ids": [
+            530
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 437,
+              "xy": [
+                660.4806518554688,
+                1165.4100341796875
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1782,
+              "xy": [
+                790.7137451171875,
+                1393.669189453125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 208428499729318,
+          "xyz": [
+            4.004864179960561,
+            4.521136080837493,
+            3.652484546111241
+          ],
+          "parallax_degrees": 16.770053456207073,
+          "original_point_ids": [
+            138
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 1222,
+              "xy": [
+                752.8467407226562,
+                1165.3612060546875
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 2080,
+              "xy": [
+                897.6259765625,
+                1369.200439453125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 101516443301708,
+          "xyz": [
+            2.6857910594561987,
+            5.2286649860901955,
+            3.2796902078439545
+          ],
+          "parallax_degrees": 9.363908698398227,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1102,
+              "xy": [
+                608.7939453125,
+                1547.2703857421875
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1207,
+              "xy": [
+                631.75,
+                1832.5833740234375
+              ]
+            }
+          ]
+        },
+        {
+          "id": 158081072516247,
+          "xyz": [
+            2.8618047190730196,
+            5.288881376904896,
+            3.366058482606243
+          ],
+          "parallax_degrees": 9.204687460110026,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 570,
+              "xy": [
+                646.0747680664062,
+                1555.5626220703125
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1208,
+              "xy": [
+                669.0106811523438,
+                1836.085205078125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 259169484059058,
+          "xyz": [
+            3.073382185347468,
+            5.077520515661261,
+            3.4427709121505554
+          ],
+          "parallax_degrees": 9.164485273889001,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1088,
+              "xy": [
+                695.2916870117188,
+                1500.7177734375
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1516,
+              "xy": [
+                717.2498168945312,
+                1772.04736328125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 227934672620359,
+          "xyz": [
+            4.315824003444159,
+            4.350846412102193,
+            3.876384825968302
+          ],
+          "parallax_degrees": 8.52817088189063,
+          "original_point_ids": [
+            64
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1587,
+              "xy": [
+                950.3552856445312,
+                1323.441650390625
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 2050,
+              "xy": [
+                964.3825073242188,
+                1556.2501220703125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 123457259919761,
+          "xyz": [
+            2.830954533784787,
+            5.506520711059085,
+            3.896445111794011
+          ],
+          "parallax_degrees": 8.515437302163539,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1378,
+              "xy": [
+                622.787353515625,
+                1556.9658203125
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1526,
+              "xy": [
+                624.3280029296875,
+                1827.558349609375
+              ]
+            }
+          ]
+        },
+        {
+          "id": 28195926792351,
+          "xyz": [
+            4.422360125949372,
+            4.279527596013064,
+            3.876842940453486
+          ],
+          "parallax_degrees": 8.501188635488889,
+          "original_point_ids": [
+            800
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1774,
+              "xy": [
+                972.916748046875,
+                1310.058837890625
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1766,
+              "xy": [
+                987.6386108398438,
+                1539.5335693359375
+              ]
+            }
+          ]
+        },
+        {
+          "id": 216888275260582,
+          "xyz": [
+            3.2652697402982533,
+            5.869485529020466,
+            4.334268223156453
+          ],
+          "parallax_degrees": 7.902219964064195,
+          "original_point_ids": [
+            19,
+            427
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1109,
+              "xy": [
+                695.1577758789062,
+                1599.660888671875
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 1809,
+              "xy": [
+                688.2827758789062,
+                1859.9971923828125
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "query": "frame_006493.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 2,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006511.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 4,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006530.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006531.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "control",
+          "matches": 2,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006600.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 3,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-103",
+      "direction": "lookback",
+      "component": "47d258b755c6eae6",
+      "model_sha256": {
+        "cameras.bin": "4dd9a39eb2bb744894628c725b936ef2c5c557d7c1602f328b6aa7761d1e511b",
+        "images.bin": "47d258b755c6eae6aa4038c7ba5043993fe566dff16d7ca99e2ffe5f82fb7842"
+      },
+      "pairs": [
+        {
+          "a": "frame_006966.jpg",
+          "b": "frame_006946.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006966.jpg",
+          "b": "frame_006931.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006946.jpg",
+          "b": "frame_006931.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [],
+      "trials": [
+        {
+          "query": "frame_006976.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007043.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007111.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007112.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006963.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-103",
+      "direction": "lookahead",
+      "component": "6dfc8125cc1aa344",
+      "model_sha256": {
+        "cameras.bin": "654fac5771d3194451629602ac5710711e101f01832c3d62c10a7a6057bf5673",
+        "images.bin": "6dfc8125cc1aa34480cfd609b455829e3293a56c0bcd93647c720cd0d7bc9794"
+      },
+      "pairs": [
+        {
+          "a": "frame_007122.jpg",
+          "b": "frame_007132.jpg",
+          "matches": 3,
+          "triangulated": 0,
+          "positive_both": 2,
+          "parallax_ge_one_degree": 3,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_007122.jpg",
+          "b": "frame_007154.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_007132.jpg",
+          "b": "frame_007154.jpg",
+          "matches": 2,
+          "triangulated": 0,
+          "positive_both": 0,
+          "parallax_ge_one_degree": 2,
+          "reprojection_both_under_two_px": 0
+        }
+      ],
+      "landmarks": [],
+      "trials": [
+        {
+          "query": "frame_006976.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007043.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007111.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007112.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007156.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-144",
+      "direction": "lookback",
+      "component": "1aa286769465401b",
+      "model_sha256": {
+        "cameras.bin": "911174e113ec891600afb4ebb97db6c5dd1b378d29d5e5c4598c30023c27009b",
+        "images.bin": "1aa286769465401bff60ddae092912640bd99d2fc75272370697216fa65d336f"
+      },
+      "pairs": [
+        {
+          "a": "frame_009000.jpg",
+          "b": "frame_008988.jpg",
+          "matches": 39,
+          "triangulated": 7,
+          "positive_both": 39,
+          "parallax_ge_one_degree": 39,
+          "reprojection_both_under_two_px": 7
+        }
+      ],
+      "landmarks": [
+        {
+          "id": 239585144996935,
+          "xyz": [
+            7.628669677021584,
+            9.232114885457921,
+            11.102145998631999
+          ],
+          "parallax_degrees": 12.485801461546393,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 596,
+              "xy": [
+                662.5158081054688,
+                812.3355102539062
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 1346,
+              "xy": [
+                731.8175048828125,
+                976.3762817382812
+              ]
+            }
+          ]
+        },
+        {
+          "id": 38566829200100,
+          "xyz": [
+            7.9742497167026185,
+            9.358015741645824,
+            11.80184838084828
+          ],
+          "parallax_degrees": 12.121833920997826,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 89,
+              "xy": [
+                640.9298706054688,
+                779.1187133789062
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 379,
+              "xy": [
+                717.1534423828125,
+                950.873291015625
+              ]
+            }
+          ]
+        },
+        {
+          "id": 200113199964746,
+          "xyz": [
+            4.171452425363996,
+            7.330714582261003,
+            14.827143672835849
+          ],
+          "parallax_degrees": 12.097575929997449,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 518,
+              "xy": [
+                217.6787567138672,
+                787.924072265625
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 365,
+              "xy": [
+                265.63232421875,
+                845.90478515625
+              ]
+            }
+          ]
+        },
+        {
+          "id": 94799271306960,
+          "xyz": [
+            5.43534502324468,
+            8.731334453971089,
+            13.561719226919934
+          ],
+          "parallax_degrees": 11.898396218267653,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 530,
+              "xy": [
+                396.468994140625,
+                830.1709594726562
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 877,
+              "xy": [
+                439.8716735839844,
+                942.2525634765625
+              ]
+            }
+          ]
+        },
+        {
+          "id": 39931366106042,
+          "xyz": [
+            5.14676886894434,
+            9.22833438950605,
+            14.22418901719037
+          ],
+          "parallax_degrees": 11.377346768127437,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 256,
+              "xy": [
+                364.9552307128906,
+                850.6109619140625
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 883,
+              "xy": [
+                396.77362060546875,
+                967.3907470703125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 271797067603261,
+          "xyz": [
+            3.140655403396162,
+            7.695427957159591,
+            16.288269904623835
+          ],
+          "parallax_degrees": 11.250553744781918,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 527,
+              "xy": [
+                114.84818267822266,
+                820.1396484375
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 144,
+              "xy": [
+                142.43592834472656,
+                868.8798828125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 203948072187265,
+          "xyz": [
+            5.091114623132245,
+            9.410090432192645,
+            14.47730801077794
+          ],
+          "parallax_degrees": 11.193327175495527,
+          "original_point_ids": [
+            847
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_008988.jpg",
+              "feature": 824,
+              "xy": [
+                356.5478820800781,
+                854.9014282226562
+              ]
+            },
+            {
+              "name": "frame_009000.jpg",
+              "feature": 885,
+              "xy": [
+                384.381103515625,
+                973.8733520507812
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "query": "frame_009018.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009036.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 2,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009055.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009056.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009002.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 1,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-144",
+      "direction": "lookahead",
+      "component": "7196a1c2cc7c240f",
+      "model_sha256": {
+        "cameras.bin": "1acb26048fffbab2b3d909f5bfc57319759fdd4113a90a8029f43f212e77d86e",
+        "images.bin": "7196a1c2cc7c240f9b8abe33c5c8c2823fb9d4861950f75c95299b8f3b0c2218"
+      },
+      "pairs": [
+        {
+          "a": "frame_009066.jpg",
+          "b": "frame_009079.jpg",
+          "matches": 2,
+          "triangulated": 2,
+          "positive_both": 2,
+          "parallax_ge_one_degree": 2,
+          "reprojection_both_under_two_px": 2
+        },
+        {
+          "a": "frame_009066.jpg",
+          "b": "frame_009099.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_009079.jpg",
+          "b": "frame_009099.jpg",
+          "matches": 3,
+          "triangulated": 0,
+          "positive_both": 3,
+          "parallax_ge_one_degree": 3,
+          "reprojection_both_under_two_px": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "id": 230068538541697,
+          "xyz": [
+            0.434696258868632,
+            1.523103074461292,
+            13.441017835405194
+          ],
+          "parallax_degrees": 2.7307247894247397,
+          "original_point_ids": [
+            9054
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_009066.jpg",
+              "feature": 1343,
+              "xy": [
+                442.8697814941406,
+                1233.817138671875
+              ]
+            },
+            {
+              "name": "frame_009079.jpg",
+              "feature": 1468,
+              "xy": [
+                660.5343017578125,
+                1087.674560546875
+              ]
+            }
+          ]
+        },
+        {
+          "id": 89522792232069,
+          "xyz": [
+            0.5195182291890498,
+            1.5035193783791698,
+            13.518165162497475
+          ],
+          "parallax_degrees": 2.7203143984972833,
+          "original_point_ids": [],
+          "origin": "previously-unmapped-observations",
+          "observations": [
+            {
+              "name": "frame_009066.jpg",
+              "feature": 1339,
+              "xy": [
+                458.7558898925781,
+                1224.8692626953125
+              ]
+            },
+            {
+              "name": "frame_009079.jpg",
+              "feature": 1943,
+              "xy": [
+                676.8040771484375,
+                1078.8104248046875
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "query": "frame_009018.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009036.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009055.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009056.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "control",
+          "matches": 2,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009089.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 2,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    }
+  ],
+  "accepted_poses": 0,
+  "accepted_joins": 0,
+  "limitation": "Static masks and existing anchor cameras are provisional. Added points use two or more distinct anchor views; pose screens require independent review, not automatic acceptance."
+}

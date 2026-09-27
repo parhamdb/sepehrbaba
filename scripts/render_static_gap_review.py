@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Make contact sheets and fitted-correspondence overlays from authentic gap frames."""
+"""Make mask-review contact sheets from authentic gap frames."""
 import argparse,json
 from pathlib import Path
 import cv2

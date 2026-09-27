@@ -1,0 +1,81 @@
+{
+  "selection": "Largest number of shared candidate landmarks per map; ties by filenames",
+  "green": "Only previously unmapped observations",
+  "orange": "Includes existing map observations",
+  "pairs": [
+    {
+      "gap": "gap-098",
+      "direction": "lookback",
+      "pair": [
+        "frame_006466.jpg",
+        "frame_006477.jpg"
+      ],
+      "landmark_ids": [
+        182825673973882,
+        98783702092823,
+        81395999697609,
+        131504083063366,
+        269740136661575,
+        59060187740750,
+        105163643052089,
+        239501724771584,
+        68864959407637,
+        88459443501426,
+        222147955330614,
+        198929427383326,
+        270856780415088
+      ],
+      "image": "gap-098-lookback.jpg"
+    },
+    {
+      "gap": "gap-098",
+      "direction": "lookahead",
+      "pair": [
+        "frame_006568.jpg",
+        "frame_006580.jpg"
+      ],
+      "landmark_ids": [
+        258959105311104,
+        101516443301708,
+        158081072516247,
+        259169484059058,
+        227934672620359,
+        123457259919761,
+        28195926792351,
+        216888275260582
+      ],
+      "image": "gap-098-lookahead.jpg"
+    },
+    {
+      "gap": "gap-144",
+      "direction": "lookback",
+      "pair": [
+        "frame_008988.jpg",
+        "frame_009000.jpg"
+      ],
+      "landmark_ids": [
+        239585144996935,
+        38566829200100,
+        200113199964746,
+        94799271306960,
+        39931366106042,
+        271797067603261,
+        203948072187265
+      ],
+      "image": "gap-144-lookback.jpg"
+    },
+    {
+      "gap": "gap-144",
+      "direction": "lookahead",
+      "pair": [
+        "frame_009066.jpg",
+        "frame_009079.jpg"
+      ],
+      "landmark_ids": [
+        230068538541697,
+        89522792232069
+      ],
+      "image": "gap-144-lookahead.jpg"
+    }
+  ]
+}

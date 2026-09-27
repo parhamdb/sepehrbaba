@@ -37,7 +37,7 @@ and court proceedings.** We want families, researchers, investigators, and the
 public to explore what the recording shows and compare every reconstruction
 with its source.
 
-**Recovery experiments:** [gap inventory and ranked recovery methods](docs/gap-recovery.md) — test different methods at each missing interval, retaining evidence for successful and failed attempts.
+**Recovery experiments:** [gap inventory and ranked recovery methods](docs/gap-recovery.md) — test different methods at each missing interval, retaining evidence for successful and failed attempts. [Latest static-anchor experiment](evidence/static-gap-recovery/results.md).
 
 ## The video and the father behind it
 

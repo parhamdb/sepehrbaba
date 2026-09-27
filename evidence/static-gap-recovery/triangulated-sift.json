@@ -1,0 +1,748 @@
+{
+  "identity": {
+    "state": "4b638c6b0d404724a439f81990026620427b55bbdd86ec330d5d446336f12a7d",
+    "selection": "557ac1e14bfb2de793aa7a06d80b8fe9a5a801b4e6b86c31bd162aca9d363e98",
+    "database": "7278f49e9a0be002e321a02fac9d24f1d30259409c1ad2ede4b6f6cef367fbce",
+    "reader": "3775d7856891af92348d06311727b69498fe94823d40a1e1ca445c6eb72f8b16",
+    "script": "1e5fa70d03efb0a1c82e1f896b9e219fd3eca7a2bf5ce5e0d53d37f175157070",
+    "pnp_script": "9761fc7c0ba837b6f6c1c82895681d29ea9d86007e31ee84a2da7aa4b26ce76e",
+    "geometry_script": "99d0658f7cfb30d7eaa0e28dbb2ba1fa508dfdee581a4556d74e9034524c8d95",
+    "mask_manifest": "66ff175cc7444e204852d7a387959642d65574429ee811b60bcf72f5d94e136a",
+    "matching": "sift"
+  },
+  "mask_sha256": {
+    "frame_006415.jpg": "7f0c6c3852d799fbab27adb7c6ceb9d253fed9a36bebae61b150a702d92e643c",
+    "frame_006453.jpg": "c80f4397041b88a8a3c8f965149c88f01e26bc59d87c2334cdb7c180fabf3c0e",
+    "frame_006454.jpg": "c713192b0e6b577033ecb7f377ee53c1ffb0948e4f84f2676b6c7f1a8a90182b",
+    "frame_006466.jpg": "d613ad1938eb0e6a4f8753729e51902b9f74215ff7e9d182d754bdd510ea5f64",
+    "frame_006477.jpg": "22c5cef289deec2cf7e916f0261f581d3b1b142523d2b81dbd2ca7cd31345ad8",
+    "frame_006493.jpg": "8f673af2e4aee780a3916e1b3e1d0c423221754ee1ef0c35e87c7f5dc6b44a5e",
+    "frame_006511.jpg": "a3677b95a1d97bc82e8271b62dade16ea61ba9a079c7c5bb4ef044ad5fdc9fdc",
+    "frame_006530.jpg": "118e7dc18afa01ff26bc01aaca293754bb6faa530fe77bc04ebaddcdd76b0132",
+    "frame_006531.jpg": "7288ded4c21d4716ffc5507d84f17a1a74155caa0ee31a5692c72c4c9edf721b",
+    "frame_006548.jpg": "56152a303ec3ca791cd7f26d96732729b140ba3a69ae871b7015bd7c4fe41ceb",
+    "frame_006568.jpg": "3bf14eb4d625deea89cc91a3cc2322e29cb3b2b6c554f6b92f3520aed0a0ed7f",
+    "frame_006580.jpg": "37258f973dcff18692aaffd087b56b43f936fc7be6b0124c5e82ddf762ea1d43",
+    "frame_006600.jpg": "8d8083fae78c9f2277ad0e482938f85ba8fea6980cea70609a20af8fcfe98f62",
+    "frame_006627.jpg": "5b17b71cddc887197994bed9b36ce3165e87ab56d05458d0cf2b46aa1fb0ed84",
+    "frame_006646.jpg": "bd69ddec454071c6ce8289be123a9c3e3b4d1de22de6dea1ba3017d4f4c46d20",
+    "frame_006688.jpg": "18632bf5640905aafdaa98a4379587226c9d32d36696126e041384baa58fce0d",
+    "frame_006931.jpg": "567743670535ea18dca03c17e0bf71ad69a8db673d587b8da61a6edbdeacb89d",
+    "frame_006946.jpg": "62611f64f6d0266d1cc74eabe63aea89385f50af926c1f572acd63966b680c1f",
+    "frame_006963.jpg": "df317cf9a9e64e0f8e4ba14c5e07152c14b9ceceaee4002652ba042b5c236595",
+    "frame_006966.jpg": "172e0e35d020c2f69c5556034f5a04ed7087393474cd625e63bbf3616332f624",
+    "frame_006976.jpg": "258dfeb2fa74954a4e48df0a5920212d01691bd8f1f7cde5e6ffa9ce4793a483",
+    "frame_007043.jpg": "fee5c99cb98d408fcf6109dce185dc7a3c353c32c33e3fc8004918ab05255346",
+    "frame_007111.jpg": "68559661e533cc0e33225fb6493782d1b7f98b32419112f90d6e93b3736a1ebe",
+    "frame_007112.jpg": "d912d7fe39af5c4680618bb720e049aa0fd20791eb4aa1a688fbf5d8d85b5936",
+    "frame_007122.jpg": "6e066d53b583e047b2d643760603216295ee1c37fe0c9b8d7140946b1ffc5acc",
+    "frame_007132.jpg": "ec0b44663db030b7517f4c44b2998869b4e3403daeabe70787ecadf0ec3bb927",
+    "frame_007154.jpg": "f8efa5bca61a1637841daad54ea5a84faa2bb087b548020818b406d188f50e7a",
+    "frame_007156.jpg": "18632bf5640905aafdaa98a4379587226c9d32d36696126e041384baa58fce0d",
+    "frame_008988.jpg": "edb78e14589a5453e77a30a46063493b981777534754f52d5ee767f041968f31",
+    "frame_009000.jpg": "fb400e64c2595afe9216432285bf954e8f160ae2dc6d4c9812ed8aa0a86ed63c",
+    "frame_009002.jpg": "2bcb13a3fbc557211373d409bcc33c5bc913180946f90bdfcca5718e171ba56a",
+    "frame_009018.jpg": "5ac350affb1eb019a9156664f2932d36a7c2a8c78ee433dfed177d185cda08ba",
+    "frame_009036.jpg": "a4e3c68f8a7a10bb540cb0685baba49a07278b3cb95b08f86f6b08d6f223a88e",
+    "frame_009055.jpg": "ed24c44c1d483495d1956ca94df4e13bc3dbd22864ea8bb33bbf45c42d7938bf",
+    "frame_009056.jpg": "54b5f1fec809017f8a4cdac8795ca7f2bad00275f2e826143cdc0f34b94fcc89",
+    "frame_009066.jpg": "133e0dcd8f9b5e72c1d3fedfe38ebf75f784eeeb120fe3923af3ea476ede06ed",
+    "frame_009079.jpg": "c082192683d10818d2250332fff9db88f0fa8fe528dcdf4a00f4fafeca937840",
+    "frame_009089.jpg": "e3b255621646f13a469c7b0e67f081140f55f9e725e5761b3f4baa86e9a0b63a",
+    "frame_009099.jpg": "bdfb770839fb8a63b628375f5b29ab45a42dd0a3b73d2c62f8423ae511e57823"
+  },
+  "status": "complete-candidates-not-certified",
+  "maps": [
+    {
+      "gap": "gap-098",
+      "direction": "lookback",
+      "component": "cbc3a19f69fce48a",
+      "model_sha256": {
+        "cameras.bin": "8a888c55e00e1eb9b65f61a3b46cb0a0a4de501a06a31d93aee4090c91103537",
+        "images.bin": "cbc3a19f69fce48a23d362435a3d6667b9b1dcbc320ee7d53f8513d527dd9d2f"
+      },
+      "pairs": [
+        {
+          "a": "frame_006477.jpg",
+          "b": "frame_006466.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006477.jpg",
+          "b": "frame_006454.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006477.jpg",
+          "b": "frame_006415.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006466.jpg",
+          "b": "frame_006454.jpg",
+          "matches": 1,
+          "triangulated": 0,
+          "positive_both": 1,
+          "parallax_ge_one_degree": 1,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006466.jpg",
+          "b": "frame_006415.jpg",
+          "matches": 1,
+          "triangulated": 0,
+          "positive_both": 1,
+          "parallax_ge_one_degree": 1,
+          "reprojection_both_under_two_px": 0
+        },
+        {
+          "a": "frame_006454.jpg",
+          "b": "frame_006415.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [],
+      "trials": [
+        {
+          "query": "frame_006493.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006511.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006530.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006531.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006453.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-098",
+      "direction": "lookahead",
+      "component": "0bc7a95fc61b9c4c",
+      "model_sha256": {
+        "cameras.bin": "f243a09d80738774d0bcf78885c5bc26e049afb397297b8eaf287d7d322dd048",
+        "images.bin": "0bc7a95fc61b9c4cbadf353b0a7299229d378943e67adc2d8cadf5efc752d4eb"
+      },
+      "pairs": [
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006568.jpg",
+          "matches": 3,
+          "triangulated": 2,
+          "positive_both": 3,
+          "parallax_ge_one_degree": 3,
+          "reprojection_both_under_two_px": 2
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006580.jpg",
+          "matches": 1,
+          "triangulated": 1,
+          "positive_both": 1,
+          "parallax_ge_one_degree": 1,
+          "reprojection_both_under_two_px": 1
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006627.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006548.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006580.jpg",
+          "matches": 4,
+          "triangulated": 3,
+          "positive_both": 3,
+          "parallax_ge_one_degree": 4,
+          "reprojection_both_under_two_px": 3
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006627.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006568.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006580.jpg",
+          "b": "frame_006627.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006580.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006580.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006627.jpg",
+          "b": "frame_006646.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006627.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006646.jpg",
+          "b": "frame_006688.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "id": 122779984233224,
+          "xyz": [
+            3.244434748800361,
+            5.513057075565743,
+            3.0570221929651686
+          ],
+          "parallax_degrees": 18.5712523698924,
+          "original_point_ids": [
+            570
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 1400,
+              "xy": [
+                579.2694702148438,
+                1322.0882568359375
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1969,
+              "xy": [
+                746.2830200195312,
+                1641.1248779296875
+              ]
+            }
+          ]
+        },
+        {
+          "id": 208428499729318,
+          "xyz": [
+            4.004864179960561,
+            4.521136080837493,
+            3.652484546111241
+          ],
+          "parallax_degrees": 16.770053456207073,
+          "original_point_ids": [
+            138
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006548.jpg",
+              "feature": 1222,
+              "xy": [
+                752.8467407226562,
+                1165.3612060546875
+              ]
+            },
+            {
+              "name": "frame_006568.jpg",
+              "feature": 2080,
+              "xy": [
+                897.6259765625,
+                1369.200439453125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 230510435970563,
+          "xyz": [
+            2.8491784986527575,
+            5.3846107784697965,
+            3.283917581284053
+          ],
+          "parallax_degrees": 9.262325270489585,
+          "original_point_ids": [
+            42
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1386,
+              "xy": [
+                644.5701904296875,
+                1585.2674560546875
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 2083,
+              "xy": [
+                669.7628173828125,
+                1872.8203125
+              ]
+            }
+          ]
+        },
+        {
+          "id": 227934672620359,
+          "xyz": [
+            4.315824003444159,
+            4.350846412102193,
+            3.876384825968302
+          ],
+          "parallax_degrees": 8.52817088189063,
+          "original_point_ids": [
+            64
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_006568.jpg",
+              "feature": 1587,
+              "xy": [
+                950.3552856445312,
+                1323.441650390625
+              ]
+            },
+            {
+              "name": "frame_006580.jpg",
+              "feature": 2050,
+              "xy": [
+                964.3825073242188,
+                1556.2501220703125
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "query": "frame_006493.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006511.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006530.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006531.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006600.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-103",
+      "direction": "lookback",
+      "component": "47d258b755c6eae6",
+      "model_sha256": {
+        "cameras.bin": "4dd9a39eb2bb744894628c725b936ef2c5c557d7c1602f328b6aa7761d1e511b",
+        "images.bin": "47d258b755c6eae6aa4038c7ba5043993fe566dff16d7ca99e2ffe5f82fb7842"
+      },
+      "pairs": [
+        {
+          "a": "frame_006966.jpg",
+          "b": "frame_006946.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006966.jpg",
+          "b": "frame_006931.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_006946.jpg",
+          "b": "frame_006931.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [],
+      "trials": [
+        {
+          "query": "frame_006976.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007043.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007111.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007112.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_006963.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-103",
+      "direction": "lookahead",
+      "component": "6dfc8125cc1aa344",
+      "model_sha256": {
+        "cameras.bin": "654fac5771d3194451629602ac5710711e101f01832c3d62c10a7a6057bf5673",
+        "images.bin": "6dfc8125cc1aa34480cfd609b455829e3293a56c0bcd93647c720cd0d7bc9794"
+      },
+      "pairs": [
+        {
+          "a": "frame_007122.jpg",
+          "b": "frame_007132.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_007122.jpg",
+          "b": "frame_007154.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_007132.jpg",
+          "b": "frame_007154.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [],
+      "trials": [
+        {
+          "query": "frame_006976.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007043.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007111.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007112.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_007156.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-144",
+      "direction": "lookback",
+      "component": "1aa286769465401b",
+      "model_sha256": {
+        "cameras.bin": "911174e113ec891600afb4ebb97db6c5dd1b378d29d5e5c4598c30023c27009b",
+        "images.bin": "1aa286769465401bff60ddae092912640bd99d2fc75272370697216fa65d336f"
+      },
+      "pairs": [
+        {
+          "a": "frame_009000.jpg",
+          "b": "frame_008988.jpg",
+          "matches": 1,
+          "triangulated": 0,
+          "positive_both": 1,
+          "parallax_ge_one_degree": 1,
+          "reprojection_both_under_two_px": 0
+        }
+      ],
+      "landmarks": [],
+      "trials": [
+        {
+          "query": "frame_009018.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009036.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009055.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009056.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009002.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    },
+    {
+      "gap": "gap-144",
+      "direction": "lookahead",
+      "component": "7196a1c2cc7c240f",
+      "model_sha256": {
+        "cameras.bin": "1acb26048fffbab2b3d909f5bfc57319759fdd4113a90a8029f43f212e77d86e",
+        "images.bin": "7196a1c2cc7c240f9b8abe33c5c8c2823fb9d4861950f75c95299b8f3b0c2218"
+      },
+      "pairs": [
+        {
+          "a": "frame_009066.jpg",
+          "b": "frame_009079.jpg",
+          "matches": 1,
+          "triangulated": 1,
+          "positive_both": 1,
+          "parallax_ge_one_degree": 1,
+          "reprojection_both_under_two_px": 1
+        },
+        {
+          "a": "frame_009066.jpg",
+          "b": "frame_009099.jpg",
+          "matches": 0,
+          "triangulated": 0
+        },
+        {
+          "a": "frame_009079.jpg",
+          "b": "frame_009099.jpg",
+          "matches": 0,
+          "triangulated": 0
+        }
+      ],
+      "landmarks": [
+        {
+          "id": 230068538541697,
+          "xyz": [
+            0.434696258868632,
+            1.523103074461292,
+            13.441017835405194
+          ],
+          "parallax_degrees": 2.7307247894247397,
+          "original_point_ids": [
+            9054
+          ],
+          "origin": "includes-existing-map-observations",
+          "observations": [
+            {
+              "name": "frame_009066.jpg",
+              "feature": 1343,
+              "xy": [
+                442.8697814941406,
+                1233.817138671875
+              ]
+            },
+            {
+              "name": "frame_009079.jpg",
+              "feature": 1468,
+              "xy": [
+                660.5343017578125,
+                1087.674560546875
+              ]
+            }
+          ]
+        }
+      ],
+      "trials": [
+        {
+          "query": "frame_009018.jpg",
+          "query_kind": "missing-first",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009036.jpg",
+          "query_kind": "missing-midpoint",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009055.jpg",
+          "query_kind": "missing-last",
+          "evidence_role": "recovery-candidate",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009056.jpg",
+          "query_kind": "registered-return",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        },
+        {
+          "query": "frame_009089.jpg",
+          "query_kind": "positive-control",
+          "evidence_role": "control",
+          "matches": 0,
+          "passed": false,
+          "reason": "insufficient distinct correspondences"
+        }
+      ]
+    }
+  ],
+  "accepted_poses": 0,
+  "accepted_joins": 0,
+  "limitation": "Static masks and existing anchor cameras are provisional. Added points use two or more distinct anchor views; pose screens require independent review, not automatic acceptance."
+}

@@ -143,3 +143,17 @@ Do not infer which is responsible from a reprojection rejection alone. Three
 focused geometry tests cover track conflicts, duplicate feature orientations,
 known 3D triangulation and zero-parallax rejection, in addition to the nine tests
 above. No image, source camera or original model is modified.
+
+
+Final results: [comparison, per-gap next methods and evidence](../evidence/static-gap-recovery/results.md).
+SIFT constructed five candidate points; LightGlue constructed 36 across six
+independent maps, 26 using only previously unmapped anchor observations. No map
+reached sufficient supported query matches for a new passing camera. Four
+[largest-support correspondence overlays](../evidence/static-gap-recovery/landmarks)
+were inspected: many points lie on small floor marks or cracks and are spatially
+clustered. They remain provisional rather than certified evidence geometry.
+
+All final checks passed as execution/measurement checks; **camera recovery did not
+pass**. The original maps and scene remain separate. Both source code and negative
+results are preserved so a future method can target these exact frames without
+repeating full-video inference.

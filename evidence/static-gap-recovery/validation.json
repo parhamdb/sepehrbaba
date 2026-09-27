@@ -1,0 +1,81 @@
+{
+  "source_revision": "0c314a3",
+  "scope": "Three-gap static-anchor/masking ablation and targeted fixed-camera triangulation; not complete camera recovery",
+  "checks": [
+    {
+      "id": "geometry-selection",
+      "status": "passed",
+      "evidence": "12 focused unit tests passed on final source"
+    },
+    {
+      "id": "mask-identities-and-visual-review",
+      "status": "passed",
+      "evidence": "39 masks byte-identity checked; all four contact sheets inspected; source and model hashes retained"
+    },
+    {
+      "id": "paired-camera-experiment",
+      "status": "passed",
+      "evidence": "Both variants complete on 3 gaps; identical selection/settings/reference models except mask identity; 120 unmasked and 88 masked screens; zero new-pose passes"
+    },
+    {
+      "id": "fixed-camera-triangulation",
+      "status": "passed",
+      "evidence": "Six maps per matcher; SIFT 5 points, LightGlue 36, including 26 with previously unmapped observations; 30 PnP screens per matcher; no recovered pose"
+    },
+    {
+      "id": "landmark-visual-review",
+      "status": "passed",
+      "evidence": "Four largest-support anchor-pair overlays inspected. Points occur on small floor marks/cracks and are spatially clustered; not certified landmarks."
+    },
+    {
+      "id": "public-privacy",
+      "status": "passed",
+      "evidence": "Scoped changed-file scan and normalized mask archive inspected; no host paths, private addresses, credentials or archive ownership metadata"
+    }
+  ],
+  "counts": {
+    "passed": 6,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "runtime": [
+    {
+      "check": "unit",
+      "exit_code": 0,
+      "seconds": 0.25653529167175293
+    },
+    {
+      "check": "mask-identity",
+      "exit_code": 0,
+      "seconds": 5.91372013092041
+    },
+    {
+      "check": "unmasked",
+      "exit_code": 0,
+      "seconds": 14.544945478439331
+    },
+    {
+      "check": "masked",
+      "exit_code": 0,
+      "seconds": 8.705167531967163
+    },
+    {
+      "check": "triangulated-sift",
+      "exit_code": 0,
+      "seconds": 6.637568473815918
+    },
+    {
+      "check": "triangulated-lightglue",
+      "exit_code": 0,
+      "seconds": 9.580881357192993
+    }
+  ],
+  "science_outcome": "0 accepted new camera poses; 0 accepted scene joins",
+  "report_sha256": {
+    "unmasked": "f300bf768db6dbbca3c191ecf08c0c7662dc677889f8e59ec8c90eac350b3afc",
+    "masked": "7fa9e1f294d0c6b2368a1a2a7640ed04e4942663c2620d39fc32f84d7bf5143f",
+    "triangulated-sift": "e5c44f83ffc605ff37350d88ac24e016faac261d7ec8dacdceee1c8afd2bed62",
+    "triangulated-lightglue": "b799bcfed017109b43ea185f179a83abbe88cf98e56c6c2ac32bf77ed069c104"
+  }
+}
