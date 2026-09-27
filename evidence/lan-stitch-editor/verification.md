@@ -21,3 +21,12 @@ Discovery found continuous software-WebGL rendering could prevent screenshot com
 A test assertion initially queried `isDisabled()` on a fieldset. A narrow Chromium reproducer showed Playwright reports false for a disabled fieldset while correctly reporting true for its disabled input. The check was corrected to inspect the actual transform input. This was a verifier issue; the lock implementation did not need changing. The final complete focused pass ran after product commit `28af641` and passed.
 
 Screenshot: ignored build output `dist/stitch-editor/test-render.png`. Test uses the same real pilot PLY twice to verify independent placement without claiming that two different reconstructions match. Cleaning/masking quality, final full-section assets and the eventual manual alignment are separate reconstruction acceptance checks owned by the surrounding workflow. This result proves editor operation, not an evidentiary scene connection.
+
+Independent review found one save race: a newer edit made while a prior save was
+awaiting acknowledgment could lose its dirty warning. The save handler now captures
+the submitted project and only clears dirty state when the current project still
+matches it. Concurrent save clicks are disabled during the request. Focused browser
+regression `node tests/stitch-save-race-check.mjs` delayed the acknowledgment,
+confirmed the newer edit stayed unsaved, then saved it separately and checked server
+state. Passed on the corrected source. Existing unchanged editor checks retained;
+final actual-cleaned-scene LAN verification belongs to the cleanup campaign.
