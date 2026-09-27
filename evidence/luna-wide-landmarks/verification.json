@@ -1,0 +1,38 @@
+{
+  "tested_source_revision": "2925c24405043453b3ff16d7d7de874624e25f30",
+  "deployment_run": 36297908966,
+  "checks": [
+    {
+      "id": "selection_and_source_provenance",
+      "status": "passed",
+      "evidence": "Reusable selector exactly reproduced408frames/timestamps/hashes; boundary and overwrite checks passed; all21contacts rendered with sourcehashchecks."
+    },
+    {
+      "id": "visual_review",
+      "status": "passed",
+      "evidence": "Luna screened21contacts and inspected19originals in two bounded passes; parent inspected6 originals and documented timing/sampling corrections; no new correspondence accepted."
+    },
+    {
+      "id": "research_and_publication_privacy",
+      "status": "passed",
+      "evidence": "Primary sources linked in ranked research; scripts/reports preserve hypotheses versus evidence; no private runtime paths or token patterns found in new published reports."
+    },
+    {
+      "id": "local_browser",
+      "status": "passed",
+      "evidence": "Both cases, all15selectable sourceframes, image loading/captions/links, time difference, mobile layout and no page/asseterrors."
+    },
+    {
+      "id": "live_publication",
+      "status": "passed",
+      "evidence": "Successful Pages run; live HTML/JSON equal committed version, all19original hashes and interactivechecks passed; see live-validation.json."
+    }
+  ],
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "scientific_outcome": "No clearly better new landmark match established; weak floor candidate unresolved; no geometry solve or accepted connection."
+}

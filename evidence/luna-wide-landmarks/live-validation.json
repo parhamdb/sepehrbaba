@@ -1,0 +1,17 @@
+{
+  "revision": "2925c24405043453b3ff16d7d7de874624e25f30",
+  "status": "passed",
+  "original_image_hashes_verified": 19,
+  "frame_selectors_checked": 15,
+  "cases_checked": 2,
+  "checks": [
+    "Deployed HTML and JSON equal committed source",
+    "19 original image hashes",
+    "Both review cases",
+    "All15 frame selections, image loading, captions and original links",
+    "Correct timestamp difference",
+    "Mobile layout",
+    "No JavaScript errors"
+  ],
+  "accepted_connection": false
+}
