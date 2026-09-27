@@ -119,3 +119,60 @@ controls, panel collapse and browser errors. Screenshots are written under
 phone performance or Safari compatibility claim. `STITCH_TEST_WEB` selects a
 staged web build for all three editor checks; `STITCH_MOBILE_ONLY` selects one
 named mobile check when diagnosing an observed failure.
+
+## Independent section inspection
+
+Open **Inspect** on a phone (the inspection panel is always present on desktop).
+Each section has a Show checkbox and an **Only** button. Only also selects that
+section for editing. Switching sections while soloing follows the selection;
+manually changing a Show checkbox exits solo mode. **Show all sections** restores
+the comparison without changing placement.
+
+Select a section in the top selector to adjust its three independent filters:
+
+- **Minimum opacity:** hide splats below this opacity. Start near 0.05 and compare
+  the original; opacity measures transparency, not geometric confidence.
+- **Max size × median:** hide splats whose largest axis exceeds this multiple of
+  that section's median largest axis. Zero disables the limit.
+- **Max ray axis ratio:** hide splats with a largest-to-middle-axis ratio above
+  the limit, but only if larger than the section's median. Zero disables it.
+  Using the middle axis avoids treating every flat surface as a needle.
+
+**Try ray filter** sets the ratio limit to 10 and leaves the other thresholds
+unchanged. **Reset filters** disables all three for the selected section.
+**Preview original** temporarily bypasses that section's filters without losing
+its settings. Original preview is not saved; the underlying settings are.
+The hidden-count estimate and viewport indicator make filtering visible.
+
+Settings belong to each section. **Save**, **Reload saved**, and JSON export/import
+include them. Legacy projects/imports without filter settings use all filters off.
+Placement locks protect alignment, while still allowing visibility and filter
+adjustments. Thresholds use original local Gaussian dimensions, so moving,
+rotating or scaling a section does not change which splats match the filters.
+Sources are read-only: these are renderer exclusions, not a modified PLY export.
+
+This first interactive filter set does **not** include SplatTransform's GPU
+voxel-floater/connected-cluster processing, identify moving people, or establish
+that excluded splats are errors. Real bodies, coverings, belongings and floor
+surfaces can be hidden by these heuristics. Compare each section alone from
+multiple viewpoints before using filtered views for alignment. Strong thresholds
+can hide everything; Reset filters and Show all recover the scene.
+
+Implementation uses per-component work-buffer modifiers in the pinned PlayCanvas
+version; see [the official modifier documentation](https://developer.playcanvas.com/user-manual/gaussian-splatting/rendering-architecture/work-buffer-format/).
+Counts are estimated from the original CPU values; GPU half-float rounding can
+change classifications very near a threshold. All three conditions are combined
+with OR. No source opacity, scale, position, or other Gaussian property is edited.
+
+```sh
+node scripts/build-stitch-editor.mjs
+node tests/stitch-filters-check.mjs
+```
+
+The filter check uses both actual cleaned sections in isolated temporary state.
+It compares rendered image hashes (excluding status overlays), checks independent
+visibility/filtering, each filter's rendered effect, Original/reset restoration,
+locked alignment, save/reload and export/import, server restart, invalid settings,
+phone control access and unchanged source hashes. Run browser checks sequentially
+on constrained hosts. `STITCH_FILTER_ONLY` selects a named check for failure-only
+reruns. Images are retained under `dist/stitch-editor/filter-check/`.
