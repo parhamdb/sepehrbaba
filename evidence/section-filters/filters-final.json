@@ -1,0 +1,22 @@
+[
+  {
+    "name": "independent visibility and Only controls without moving alignment",
+    "status": "passed"
+  },
+  {
+    "name": "three filters change rendering; Original restores pixels; other section unchanged",
+    "status": "passed"
+  },
+  {
+    "name": "independent filter settings persist through save, reload, export/import and restart",
+    "status": "passed"
+  },
+  {
+    "name": "invalid filters rejected; legacy projects default to original",
+    "status": "passed"
+  },
+  {
+    "name": "phone inspection controls and source integrity",
+    "status": "passed"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "coloredPixels": 52500,
+  "checks": [
+    "two real Gaussian scenes render",
+    "XYZ rotation translation uniform scale",
+    "locked reference unchanged",
+    "orbit independent of scene placement",
+    "solo/show all/previous/next/reset",
+    "save reload browser and server restart plus append section",
+    "stale and cross-origin save rejection",
+    "source PLY SHA256 unchanged",
+    "no browser exceptions"
+  ]
+}

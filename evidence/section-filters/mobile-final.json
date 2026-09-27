@@ -1,0 +1,18 @@
+[
+  {
+    "name": "portrait controls, locked reference and isolated save/reload",
+    "status": "passed"
+  },
+  {
+    "name": "real one-finger orbit, two-finger pan/pinch and finger-release transition",
+    "status": "passed"
+  },
+  {
+    "name": "phone portrait/landscape, narrow phone, tablet and desktop layout",
+    "status": "passed"
+  },
+  {
+    "name": "no browser exceptions",
+    "status": "passed"
+  }
+]

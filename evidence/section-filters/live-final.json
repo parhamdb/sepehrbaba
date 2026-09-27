@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "source": "c164acd",
+  "checks": [
+    "deployed real cleaned scenes load",
+    "independent section visibility and filter controls",
+    "original bypass and mobile landscape",
+    "transforms unchanged",
+    "all live writes blocked; project revision and saved-file hash unchanged",
+    "served build matches tested stage",
+    "no browser or shader errors"
+  ],
+  "hashes": {
+    "index.html": "08902e8c76863731f30525360af8289865b79c87094e2edeb486d9c3472d70cf",
+    "editor.js": "b0566a957058e53150402acd3d79cd29aa18cfbc7bf82551e622fc9d8a62e2f5"
+  }
+}
