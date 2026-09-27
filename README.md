@@ -43,6 +43,8 @@ with its source.
 
 **Depth-aware camera test:** [watch the projection overlays](https://parhamdb.github.io/sepehrbaba/depth-landmark-review.html). Your six selections were tested using cached depth and neighboring-frame tracking. Both camera hypotheses failed validation; no join was applied. [Measurements and reproduction](evidence/depth-landmarks/results.md).
 
+**[Explore the provisional 3D alignment](https://parhamdb.github.io/sepehrbaba/provisional-alignment.html):** compare the two local depth clouds in cyan/orange, switch to photo colors, and inspect landmark-only versus floor-direction placement. Approximate preview only; the floor/depth mismatch remains visible. [Method and limitations](evidence/provisional-alignment/results.md).
+
 ## The video and the father behind it
 
 - **January 23, 2026:** Vahid Online's publication post is timestamped on this

@@ -1,0 +1,741 @@
+{
+  "schema": 1,
+  "coincident_floor_blocked": "Nonpositive floor-constrained scale: anchor heights conflict",
+  "status": "provisional human-anchored local alignment; no verified join",
+  "sides": {
+    "before": {
+      "asset": "before.bin",
+      "sha256": "40d07364b833217303061c9c2ec8810b62532ad2b99950a515a2b85d5dd3beec",
+      "count": 331632,
+      "seed_slot": 10,
+      "frames": [
+        {
+          "name": "frame_006444.jpg",
+          "timestamp": 409.736733,
+          "slot": 0,
+          "points": 15792,
+          "depth_sha256": "1bb02df28f7170e350c784539b8809baa4cfd1d787f84f2267dfbf15addb2dfa",
+          "image_sha256": "29c2fe87cb576fb52517e70fc6a83523d4f617a45569f6790d92b0e95c6c24c7"
+        },
+        {
+          "name": "frame_006445.jpg",
+          "timestamp": 409.786811,
+          "slot": 1,
+          "points": 15792,
+          "depth_sha256": "923d261008a9378d9b3fc72bc92ba2566aae63b12f0d40d54025cff9df2e4bb3",
+          "image_sha256": "1618527bf57f7e38607a342afa324548cff98e48279f024facaa1bbff6ca9145"
+        },
+        {
+          "name": "frame_006446.jpg",
+          "timestamp": 409.836889,
+          "slot": 2,
+          "points": 15792,
+          "depth_sha256": "c79b8aa6c35b80b8d5c0cb1ff172b55432367ac67b4ba18ca10df3ee8cd17cfe",
+          "image_sha256": "8e5726def60973d241ab6a36bc88c594ae380058e21c90a462472af70ae16dd5"
+        },
+        {
+          "name": "frame_006447.jpg",
+          "timestamp": 409.886956,
+          "slot": 3,
+          "points": 15792,
+          "depth_sha256": "7cdece93ce4a2aaae743748fe87b126a34e3791938bc17aad62132f748abf94e",
+          "image_sha256": "02c389924ea058adcabc493ea44c5590d56fdcd07bf87a830155c034b86b951c"
+        },
+        {
+          "name": "frame_006448.jpg",
+          "timestamp": 409.937033,
+          "slot": 4,
+          "points": 15792,
+          "depth_sha256": "b08f0a87097fe5df7ca7cc1b2a9b60a3ddc5488b70a41cefbb12b1cdc848781f",
+          "image_sha256": "b29346f9b250e3ae0c660c1e4870fb38f911159886600ac06dab092355d7a4a5"
+        },
+        {
+          "name": "frame_006449.jpg",
+          "timestamp": 409.9871,
+          "slot": 5,
+          "points": 15792,
+          "depth_sha256": "39f933e898a46265c55f3c0b545886173a2de4e40c631ab3273ae6103f65fd9f",
+          "image_sha256": "f1ecedf8b209f148ce28c98f2d7292948e5067fabc20c82a339b4261fd269b1d"
+        },
+        {
+          "name": "frame_006450.jpg",
+          "timestamp": 410.037178,
+          "slot": 6,
+          "points": 15792,
+          "depth_sha256": "7b9fd6dc83d4ed46a285de825e325ac107ff5fa4672a94ee2375d68f66f7ed6b",
+          "image_sha256": "c71d7029a234911e94f3d1676fdfe1e94eb5cdf29f34cb8e436f18d139ba4e82"
+        },
+        {
+          "name": "frame_006451.jpg",
+          "timestamp": 410.087256,
+          "slot": 7,
+          "points": 15792,
+          "depth_sha256": "5f647cabc49defa3a58fa7724c97e5b251c134d3acf44e4aaf73c2188c2fb7ce",
+          "image_sha256": "fed2ee304372a96853458e085b3b591e4250b774b5fa8be7596c060ad9169211"
+        },
+        {
+          "name": "frame_006452.jpg",
+          "timestamp": 410.137322,
+          "slot": 8,
+          "points": 15792,
+          "depth_sha256": "04a15f5c96fb9256d381c464dbb6b8a0ae42ac79e1e8c06ee4f1e22d31b37e79",
+          "image_sha256": "adbcedd32ecc7048791e00e60baef2040fbdf408750331fc396fa9bc3862158e"
+        },
+        {
+          "name": "frame_006453.jpg",
+          "timestamp": 410.1874,
+          "slot": 9,
+          "points": 15792,
+          "depth_sha256": "f50ba33e0e654c2f83372019559e004b47ecc1a834c40e74677bd7af5bb6e232",
+          "image_sha256": "c9d8b2db47539f6ff7b159c4f6376de17f35b01fd9c4f22954335c398b3925ca"
+        },
+        {
+          "name": "frame_006454.jpg",
+          "timestamp": 410.237478,
+          "slot": 10,
+          "points": 15792,
+          "depth_sha256": "bad5980d524564508a84d227d7efcba5451b707c81c89a3fcdc2583dc4a39431",
+          "image_sha256": "55ef265cfa4ac5895392810a30dc976e3df7c2ee2c4752dc60f1409c8cafa22b"
+        },
+        {
+          "name": "frame_006455.jpg",
+          "timestamp": 410.287544,
+          "slot": 11,
+          "points": 15792,
+          "depth_sha256": "96da4e66a112eea8d862f598214b4b899ff8a717a0762ef0fe64e31602a2b851",
+          "image_sha256": "e8176dd939bb8763350d92ed2b6634f5a0b82514109fd165c1643825f3f6a2e2"
+        },
+        {
+          "name": "frame_006456.jpg",
+          "timestamp": 410.337622,
+          "slot": 12,
+          "points": 15792,
+          "depth_sha256": "058c7939da572ca6833bb42b1480c8668007bab4e5ffa4b060b200bcae6a3f28",
+          "image_sha256": "ff5d587acaa829cc1e8d363b22a91688e5c7c9f2dedf799eae539d145adc4124"
+        },
+        {
+          "name": "frame_006457.jpg",
+          "timestamp": 410.387689,
+          "slot": 13,
+          "points": 15792,
+          "depth_sha256": "5dff4211066b621381b46fbe1d20127e23737caa62568544263dc59801403ecb",
+          "image_sha256": "40dac985719d47f4912cabc3614766bacdf2db3ecc17cbe3b61408a4f7d5d0d4"
+        },
+        {
+          "name": "frame_006458.jpg",
+          "timestamp": 410.437767,
+          "slot": 14,
+          "points": 15792,
+          "depth_sha256": "aff786a8b7e0807531f7eed48932cbe775906488cb9f5f91f508a18d28cfe6d7",
+          "image_sha256": "23b3a7f2a5bb9c90af318f80cf2006389747f1f52b6f2c9ef448918f7c79e380"
+        },
+        {
+          "name": "frame_006459.jpg",
+          "timestamp": 410.487844,
+          "slot": 15,
+          "points": 15792,
+          "depth_sha256": "c21afb94fa651b6185dafd1dc6e50a7389b61ad03a01c56e4b83a0b73278270d",
+          "image_sha256": "ae13c630791cc8359b95fb4a19f1b24bd8a4e849d09bd5e0dc44e42a6719e160"
+        },
+        {
+          "name": "frame_006460.jpg",
+          "timestamp": 410.537911,
+          "slot": 16,
+          "points": 15792,
+          "depth_sha256": "9ae19007a78265901121039a8e4e0bebc36580082cdd0587f29e0c9872dc8366",
+          "image_sha256": "223d4b6382d045e9f333e6e610a97acb76efcf8c47915daf1e71eb46c2f31921"
+        },
+        {
+          "name": "frame_006461.jpg",
+          "timestamp": 410.587989,
+          "slot": 17,
+          "points": 15792,
+          "depth_sha256": "647fda903c32e1adf388ea0eb61ff5345887ced8bcfbb2ba68e9794999841bca",
+          "image_sha256": "adb31e38a7a5351e048f50ee3ca7af989b197183ad4620191407169777e69e22"
+        },
+        {
+          "name": "frame_006462.jpg",
+          "timestamp": 410.638056,
+          "slot": 18,
+          "points": 15792,
+          "depth_sha256": "af1011b09c12ea98562e4a4ff26a0111082178022a8e05647dccacb936530356",
+          "image_sha256": "494ad581a616146a42225668b171ef4080b4577181bb74d726ff683efdba27fb"
+        },
+        {
+          "name": "frame_006463.jpg",
+          "timestamp": 410.688133,
+          "slot": 19,
+          "points": 15792,
+          "depth_sha256": "c5da855f7c73e7216f5d83831bf97fcf0d271192123b7496d4761151b4c8b536",
+          "image_sha256": "8c9d39b73d4aacfd0a6004635d96d32c530d69fbbf2d427f0ecdd29879b901b8"
+        },
+        {
+          "name": "frame_006464.jpg",
+          "timestamp": 410.7382,
+          "slot": 20,
+          "points": 15792,
+          "depth_sha256": "7ffd76058045897bd959ae09f1cf64abfa147e64fef87c86e0eb7a1087f2541f",
+          "image_sha256": "155005fb5380a411d25f0d27d1a066942c6fca4f2deed084088d76a2898ab146"
+        }
+      ],
+      "median_depth_unit": 0.0031302012503147125
+    },
+    "after": {
+      "asset": "after.bin",
+      "sha256": "bf4a3227aa59e4d1eb3a79a875cd427116149067136c9205376b41372253e0ce",
+      "count": 331632,
+      "seed_slot": 10,
+      "frames": [
+        {
+          "name": "frame_006538.jpg",
+          "timestamp": 414.913478,
+          "slot": 0,
+          "points": 15792,
+          "depth_sha256": "dd3478ee38a3ad138b59ea3f0baf826fecffd7096bbf1121a50d0061eef08bbe",
+          "image_sha256": "3d8c349ed5c7a7c22149fe058903a99a9de6a18f90671e647aa0b03d641d1d87"
+        },
+        {
+          "name": "frame_006539.jpg",
+          "timestamp": 414.963556,
+          "slot": 1,
+          "points": 15792,
+          "depth_sha256": "43e378008b276dc41def0a94e7b029cc720ed5c4c0c2a0fa8d761af26fd1dee3",
+          "image_sha256": "0eb153c4a9f3413839b7708b58d7c28d34788eeaa05628c037ab9fc7c756f344"
+        },
+        {
+          "name": "frame_006540.jpg",
+          "timestamp": 415.023622,
+          "slot": 2,
+          "points": 15792,
+          "depth_sha256": "f2b66cd5c686bcc6074e6e0eca66d79790c1d919d10714dba92701570d4d5e6a",
+          "image_sha256": "bab2db6a13f19360766f2ec2a1a2b31d2b023fc6bf69608bdc000357f5786d2c"
+        },
+        {
+          "name": "frame_006541.jpg",
+          "timestamp": 415.083689,
+          "slot": 3,
+          "points": 15792,
+          "depth_sha256": "5dc0e6567ac47c4a6e0aa7582f71b5a6e3b47e4167e8538cee881cce7927bf35",
+          "image_sha256": "1856fe41b5848127847a6b8fdb0e3b0490a9280ce828ed952d7f178b3586dccb"
+        },
+        {
+          "name": "frame_006542.jpg",
+          "timestamp": 415.143756,
+          "slot": 4,
+          "points": 15792,
+          "depth_sha256": "34b0918113b4fbb3140593538fbc180972dd0d35f0986023a9a313bbef9e1c77",
+          "image_sha256": "7961733737e8e4dba4b901bb4197b3e17e78680bc5a8ea388c7bfb17ca97818f"
+        },
+        {
+          "name": "frame_006543.jpg",
+          "timestamp": 415.203833,
+          "slot": 5,
+          "points": 15792,
+          "depth_sha256": "6f60625600cd886d11c674e70835372f25bb745bdcf49a31f4bd4be7be314eaa",
+          "image_sha256": "ae6904b178baf17a497ff5397fe3ac63d17e5b6aaa501ded17aebf32ee26439d"
+        },
+        {
+          "name": "frame_006544.jpg",
+          "timestamp": 415.2639,
+          "slot": 6,
+          "points": 15792,
+          "depth_sha256": "13d4fd143b265187002e71cce31620af170256f7bb3461e52adb59b6ea385833",
+          "image_sha256": "e635f936b5d4ccef94593cd6a25284683865b36fee2eac0470e9807d8053e23c"
+        },
+        {
+          "name": "frame_006545.jpg",
+          "timestamp": 415.323967,
+          "slot": 7,
+          "points": 15792,
+          "depth_sha256": "9e3f97f6a3031640808ac527fa8d5752ac4146958936f392eed8ca21fb46e2e2",
+          "image_sha256": "16a8f19f1725a6ed76ac40317353212ab02eee6c6e90634f768fb4ecb8ca47d2"
+        },
+        {
+          "name": "frame_006546.jpg",
+          "timestamp": 415.384044,
+          "slot": 8,
+          "points": 15792,
+          "depth_sha256": "fbbe8a80de35bbc5c753b19b106a864a2dc5db3b84db779960562a6147e5155b",
+          "image_sha256": "cd7a88f3e96ec2cda9cddb261ee777b8c291832e35c74bdecf70f21d47ba50ec"
+        },
+        {
+          "name": "frame_006547.jpg",
+          "timestamp": 415.444111,
+          "slot": 9,
+          "points": 15792,
+          "depth_sha256": "d84afb3636b149eab91be14a4934f07c40f1bafdbcfb33c35472f42afc6172ff",
+          "image_sha256": "175510ea6c95b2abc73bc6aa9ae3acdce3101d0caacd3b8ed5a6e4480ea5f856"
+        },
+        {
+          "name": "frame_006548.jpg",
+          "timestamp": 415.494189,
+          "slot": 10,
+          "points": 15792,
+          "depth_sha256": "067e4906429ae6d9f02650e36a2c1e4a9aa99b2716947185364958a283fba05d",
+          "image_sha256": "dd471a1706eb281811de4c2f16db273806cc105cb21d0865edc5d5bcecb3ce4d"
+        },
+        {
+          "name": "frame_006549.jpg",
+          "timestamp": 415.544256,
+          "slot": 11,
+          "points": 15792,
+          "depth_sha256": "115d47778fd4b8c5f71aed0183fae56d74bfaa5cceb6bee5a1efb89947042638",
+          "image_sha256": "5351c605981f845ef1f42ced28136bc8f111f932de3e974044edc69c81e6130d"
+        },
+        {
+          "name": "frame_006550.jpg",
+          "timestamp": 415.594333,
+          "slot": 12,
+          "points": 15792,
+          "depth_sha256": "e6947f355b9a55a86bd58c8abdc00b2330ca018ee410d2e42a6f2a0d74ed3bd9",
+          "image_sha256": "dcc3a76d7ffd85e739e89a264d8ea06d5fca29f8a8b8f3b3abda94500d83ef50"
+        },
+        {
+          "name": "frame_006551.jpg",
+          "timestamp": 415.6444,
+          "slot": 13,
+          "points": 15792,
+          "depth_sha256": "86e3cc44de05fd1ff02d541b169c50538a55cb8650b0e544663cd66169ca590a",
+          "image_sha256": "150ff56f23a9e62577dbf52a69dc74b1644c5bb057ad34334a8704dad7505110"
+        },
+        {
+          "name": "frame_006552.jpg",
+          "timestamp": 415.694478,
+          "slot": 14,
+          "points": 15792,
+          "depth_sha256": "8b4d7da8288015b573a02497c4763f538a39c7d183d6156b82358d1f3efe7c8d",
+          "image_sha256": "cf1328f6516c30ffefbd92a1773ae37496699849fb2b9eb27f4bedfedb3bb4c1"
+        },
+        {
+          "name": "frame_006553.jpg",
+          "timestamp": 415.744556,
+          "slot": 15,
+          "points": 15792,
+          "depth_sha256": "d0c46ee14b5ddbd1e2060851c40e047c3ab71bcafb5d3e91adc742c2ff03a5fc",
+          "image_sha256": "03e1b03b8fe5ff0df038d694ac0791f71eaea8fea9e885e1cf632d82f6f991a6"
+        },
+        {
+          "name": "frame_006554.jpg",
+          "timestamp": 415.794622,
+          "slot": 16,
+          "points": 15792,
+          "depth_sha256": "5c2227db27a1ddbe3faf6808bead51cf810bc9dfd9c1474608adcd09c14d1eef",
+          "image_sha256": "93e2d1906a8e9f9d49d045431bcad3c32b8ca7754a6a2746809e40374252736c"
+        },
+        {
+          "name": "frame_006555.jpg",
+          "timestamp": 415.8447,
+          "slot": 17,
+          "points": 15792,
+          "depth_sha256": "0d6a44259d04a29277fe01366c59060c99410287becaa063b89c5d7cac240a95",
+          "image_sha256": "0efdde9bdf6d1d4d0c8af8fac6cb02056d6a7be142f4e28fbc03aa5a1ebb848e"
+        },
+        {
+          "name": "frame_006556.jpg",
+          "timestamp": 415.894767,
+          "slot": 18,
+          "points": 15792,
+          "depth_sha256": "695546b2f2cd98568f47f9e8c3225c66882b001b520a2c87bc631f0e65ec0d93",
+          "image_sha256": "cb050fd9b372a787f8187c371d44f3cb181004edcfee1adbc319352690dd6628"
+        },
+        {
+          "name": "frame_006557.jpg",
+          "timestamp": 415.944844,
+          "slot": 19,
+          "points": 15792,
+          "depth_sha256": "770e05b3e973aa4e1ed38b946e5d214f10cafabc5ac1f596364735e96ecc68ab",
+          "image_sha256": "8e6295b453c3baca3188e6381682d9a81cbc2a5308aecc6ba0b8f6fe04a8ea87"
+        },
+        {
+          "name": "frame_006558.jpg",
+          "timestamp": 415.994922,
+          "slot": 20,
+          "points": 15792,
+          "depth_sha256": "607f009b83b2f60fdd208ef5e99eb4843254797fb0d0512b2bdcde6da1abb30b",
+          "image_sha256": "b41527a87877309275b0eb3e114ad174643a5194c8365a3beb36b95afaf4fd72"
+        }
+      ],
+      "median_depth_unit": 0.001689695636741817
+    }
+  },
+  "landmarks": {
+    "before": [
+      [
+        -0.2354951391003159,
+        -0.2512925294613878,
+        1.0056629251526616
+      ],
+      [
+        -0.21854563491279008,
+        -0.24185989373706288,
+        0.997524046214432
+      ],
+      [
+        -0.23443340656752035,
+        -0.22049838454677148,
+        1.002475953785568
+      ],
+      [
+        -0.22201956475192186,
+        -0.16960334876043795,
+        0.9006773374098639
+      ],
+      [
+        -0.1735134790711773,
+        -0.24003635842927232,
+        0.9814870628867121
+      ],
+      [
+        -0.22970858701094674,
+        -0.20108284172601318,
+        1.0081607472475682
+      ]
+    ],
+    "after": [
+      [
+        0.1923524229583482,
+        -0.03187636384762808,
+        0.9752970417258752
+      ],
+      [
+        0.22655724826442247,
+        -0.021033883496563953,
+        0.9804713602893683
+      ],
+      [
+        0.20598538249612594,
+        0.012752081317977284,
+        0.9922463075399388
+      ],
+      [
+        0.1941787269327457,
+        0.05483367504951716,
+        1.1191853593420316
+      ],
+      [
+        0.313020903973298,
+        -0.015306141011134795,
+        1.0077536924600612
+      ],
+      [
+        0.1904120053772451,
+        0.040886778580895525,
+        1.0209249795461397
+      ]
+    ]
+  },
+  "floor_planes": {
+    "before": {
+      "normal": [
+        -0.10807711709588769,
+        -0.6037771349991979,
+        -0.7897926993916837
+      ],
+      "offset": 0.603891657588686,
+      "basis": [
+        [
+          0.9941425133049294,
+          1.3877787807814457e-17,
+          -0.10807711709588769
+        ],
+        [
+          -0.06563897152149316,
+          -0.7944461571873587,
+          -0.6037771349991979
+        ],
+        [
+          -0.08586145035671616,
+          0.6073345892753343,
+          -0.7897926993916837
+        ]
+      ],
+      "origin": [
+        0.06526686939044213,
+        0.3646159748688135,
+        0.4769492223870867
+      ],
+      "points": 771,
+      "inlier_fraction": 1.0,
+      "median_error": 0.0009042721610876825,
+      "threshold": 0.01,
+      "camera_unit": 0.0031302012503147125
+    },
+    "after": {
+      "normal": [
+        -0.02154410027991948,
+        -0.6355828237065964,
+        -0.7717320298862025
+      ],
+      "offset": 0.952965969011914,
+      "basis": [
+        [
+          0.9997678989361125,
+          0.0,
+          -0.02154410027991948
+        ],
+        [
+          -0.013696239001772867,
+          -0.7719111912949288,
+          -0.6355828237065964
+        ],
+        [
+          -0.016630132112450055,
+          0.6357303774035373,
+          -0.7717320298862025
+        ]
+      ],
+      "origin": [
+        0.020530794399743316,
+        0.6056888014808851,
+        0.7354343616780363
+      ],
+      "points": 2860,
+      "inlier_fraction": 1.0,
+      "median_error": 0.0006165688136019476,
+      "threshold": 0.01,
+      "camera_unit": 0.001689695636741817
+    }
+  },
+  "candidates": {
+    "six_point_similarity": {
+      "scale_source": "six-point similarity; fixed during floor-direction refinement",
+      "scale": 0.6072087136109741,
+      "rotation": [
+        [
+          0.7660621701170801,
+          -0.534866413161217,
+          0.3564641238435703
+        ],
+        [
+          -0.556892012960396,
+          -0.27536838561904003,
+          0.7836093019499458
+        ],
+        [
+          -0.32096734633982316,
+          -0.7988054658511158,
+          -0.5088121365592159
+        ]
+      ],
+      "translation": [
+        -0.539209970189843,
+        -0.6284906548003751,
+        1.342769338748431
+      ],
+      "transformed_after_landmarks": [
+        [
+          -0.22828151263092428,
+          -0.2241442706310091,
+          1.0194192803932578
+        ],
+        [
+          -0.21477220987038692,
+          -0.23506153486742032,
+          1.0058952724941732
+        ],
+        [
+          -0.23276560120689993,
+          -0.2281516944104225,
+          0.9898790786812361
+        ],
+        [
+          -0.22444893390723286,
+          -0.1707961477505593,
+          0.9325503263727042
+        ],
+        [
+          -0.17050782934906472,
+          -0.25227557959751773,
+          0.9778367991391703
+        ],
+        [
+          -0.2429397244501631,
+          -0.21394412940401575,
+          0.9704073156162633
+        ]
+      ],
+      "landmark_residuals": [
+        0.03127781440360913,
+        0.011425141106249512,
+        0.014833610112986987,
+        0.03198768558912868,
+        0.013120857078860342,
+        0.04202139120271235
+      ],
+      "floor_normal_angle_degrees": 118.00745512028112,
+      "floor_plane_offset": 0.25285262234935424,
+      "floor_used_in_fit": false,
+      "accepted_connection": false
+    },
+    "floor_direction_similarity": {
+      "scale_source": "six-point similarity; fixed during floor-direction refinement",
+      "scale": 0.6072087136109741,
+      "rotation": [
+        [
+          0.8518611948232575,
+          0.45537668923992153,
+          -0.25877514496408177
+        ],
+        [
+          -0.45535426062647094,
+          0.8880273947261154,
+          0.06371690156677508
+        ],
+        [
+          0.2588146094864301,
+          0.06355640890451704,
+          0.9638337931425469
+        ]
+      ],
+      "translation": [
+        -0.17517915489671515,
+        -0.202709975281087,
+        0.35316568567742634
+      ],
+      "transformed_after_landmarks": [
+        [
+          -0.23774643959413258,
+          -0.2353490673567949,
+          0.9529554729389045
+        ],
+        [
+          -0.21786873909380583,
+          -0.23875988124314976,
+          0.9617776087681663
+        ],
+        [
+          -0.22101778240297648,
+          -0.21439829592347737,
+          0.9667397835064157
+        ],
+        [
+          -0.23543493709249835,
+          -0.18353145908699567,
+          1.0407991891430162
+        ],
+        [
+          -0.1758478777450899,
+          -0.2585226158713233,
+          0.9915537431285564
+        ],
+        [
+          -0.22580003548616912,
+          -0.19381203717920742,
+          0.9821622752117495
+        ]
+      ],
+      "landmark_residuals": [
+        0.055112048198733686,
+        0.03588699005923962,
+        0.038655710045954576,
+        0.1414499834055578,
+        0.021178507560120685,
+        0.02727749845526421
+      ],
+      "floor_normal_angle_degrees": 0.0,
+      "floor_plane_offset": -0.11236075664625955,
+      "floor_used_in_fit": true,
+      "accepted_connection": false
+    }
+  },
+  "cached_camera_relationship": {
+    "scale": 0.5398041536696511,
+    "rotation": [
+      [
+        0.9652448929415713,
+        -0.05082755970336041,
+        0.2563569045159175
+      ],
+      [
+        0.0046425524710985095,
+        0.9840858444005408,
+        0.17763307028325195
+      ],
+      [
+        -0.26130586546866663,
+        -0.1702692681023761,
+        0.950119795428064
+      ]
+    ],
+    "translation": [
+      -0.47015298162443053,
+      -0.3026856716461859,
+      0.5319420099684358
+    ]
+  },
+  "display_transform": {
+    "rotation": [
+      [
+        0.9941425133049294,
+        -0.06563897152149316,
+        -0.08586145035671616
+      ],
+      [
+        -0.10807711709588769,
+        -0.6037771349991979,
+        -0.7897926993916837
+      ],
+      [
+        -1.3877787807814457e-17,
+        0.7944461571873587,
+        -0.6073345892753343
+      ]
+    ],
+    "translation": [
+      3.649497838820673e-17,
+      0.6038916575886862,
+      -1.1847618751921512e-17
+    ]
+  },
+  "identity": {
+    "script_sha256": "8d6db3a42c33cb0baada6748250391f5010779494da5ed233440a19589881f1b",
+    "depth_experiment_sha256": "9ac448f1b17b42793b2de35d2783f2c59fc766b5962277919d68a38455919d30",
+    "depth_evaluation_sha256": "ea07046d7d73c2462d4cf826e2cb4ed904b6072386abacdbbc38c4dea28cecd0"
+  },
+  "plan": {
+    "source": "Retained user-selected six pairs and the 42 cached depth frames",
+    "floor_regions_native_xyxy": {
+      "before": [
+        [
+          5,
+          1430,
+          150,
+          1830
+        ],
+        [
+          750,
+          1770,
+          1060,
+          1910
+        ]
+      ],
+      "after": [
+        [
+          250,
+          1350,
+          1000,
+          1860
+        ]
+      ]
+    },
+    "cloud_stride": 3,
+    "methods": [
+      "six_point_similarity",
+      "floor_constrained_similarity"
+    ],
+    "floor_plane_ransac_threshold": 0.01,
+    "minimum_floor_inlier_fraction": 0.7,
+    "units": "Earlier seed median depth is one display unit; not metres",
+    "default": "six_point_similarity",
+    "independent_static_correspondences": false,
+    "accepted_connection": false
+  },
+  "accepted_connection": false,
+  "limitations": [
+    "Only two approximately one-second windows; no full-recording scene merge.",
+    "Depth clouds are model estimates. No surfaces have been generated to fill holes.",
+    "People, flexible material and occlusion can produce ghosting in the multi-frame display.",
+    "Floor regions are manually selected surface hypotheses; a shared plane cannot establish horizontal position or yaw.",
+    "Anchor residuals and constrained floor coincidence are fitting results, not independent accuracy estimates."
+  ]
+}

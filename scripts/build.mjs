@@ -6,3 +6,5 @@ await mkdir('dist', { recursive: true });
 await build({entryPoints:['src/app.js'],bundle:true,minify:true,format:'esm',target:'es2022',outfile:'dist/app.js',legalComments:'eof',external:['node:worker_threads']});
 await copyFile('index.html','dist/index.html');
 await cp('public','dist',{recursive:true});
+
+await build({entryPoints:['src/provisional-alignment.js'],bundle:true,minify:true,format:'esm',target:'es2022',outfile:'dist/provisional-alignment.js',legalComments:'eof',external:['node:worker_threads']});

@@ -1,0 +1,77 @@
+{
+  "planes": {
+    "before": {
+      "normal": [
+        -0.10807711709588769,
+        -0.6037771349991979,
+        -0.7897926993916837
+      ],
+      "offset": 0.603891657588686,
+      "basis": [
+        [
+          0.9941425133049294,
+          1.3877787807814457e-17,
+          -0.10807711709588769
+        ],
+        [
+          -0.06563897152149316,
+          -0.7944461571873587,
+          -0.6037771349991979
+        ],
+        [
+          -0.08586145035671616,
+          0.6073345892753343,
+          -0.7897926993916837
+        ]
+      ],
+      "origin": [
+        0.06526686939044213,
+        0.3646159748688135,
+        0.4769492223870867
+      ],
+      "points": 771,
+      "inlier_fraction": 1.0,
+      "median_error": 0.0009042721610876825,
+      "threshold": 0.01,
+      "camera_unit": 0.0031302012503147125
+    },
+    "after": {
+      "normal": [
+        -0.02154410027991948,
+        -0.6355828237065964,
+        -0.7717320298862025
+      ],
+      "offset": 0.952965969011914,
+      "basis": [
+        [
+          0.9997678989361125,
+          0.0,
+          -0.02154410027991948
+        ],
+        [
+          -0.013696239001772867,
+          -0.7719111912949288,
+          -0.6355828237065964
+        ],
+        [
+          -0.016630132112450055,
+          0.6357303774035373,
+          -0.7717320298862025
+        ]
+      ],
+      "origin": [
+        0.020530794399743316,
+        0.6056888014808851,
+        0.7354343616780363
+      ],
+      "points": 2860,
+      "inlier_fraction": 1.0,
+      "median_error": 0.0006165688136019476,
+      "threshold": 0.01,
+      "camera_unit": 0.001689695636741817
+    }
+  },
+  "coincident_floor_blocked": "Nonpositive floor-constrained scale: anchor heights conflict",
+  "followup": "Parallel floor directions with scale fixed to six-point similarity; normal offset remains free and visible",
+  "reason": "Free-scale parallel-floor fit collapsed to 0.01648 because vertical anchor covariance is negative; retain landmark-derived scale instead of shrinking the scene"
+}
