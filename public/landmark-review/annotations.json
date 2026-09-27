@@ -1,0 +1,257 @@
+{
+  "model": "gpt-6-astra",
+  "coordinate_system": "native pixels, top-left origin, width1080 height1920",
+  "inspected_frames": [
+    "frame_006427.jpg",
+    "frame_006429.jpg",
+    "frame_006432.jpg",
+    "frame_006434.jpg",
+    "frame_006454.jpg",
+    "frame_006466.jpg",
+    "frame_006476.jpg",
+    "frame_006477.jpg",
+    "frame_006489.jpg",
+    "frame_006491.jpg",
+    "frame_006535.jpg",
+    "frame_006536.jpg",
+    "frame_006548.jpg",
+    "frame_006549.jpg",
+    "frame_006569.jpg",
+    "frame_006578.jpg",
+    "frame_006580.jpg",
+    "frame_006582.jpg",
+    "frame_006600.jpg",
+    "frame_006603.jpg",
+    "frame_006622.jpg",
+    "frame_006627.jpg",
+    "frame_006644.jpg",
+    "frame_006646.jpg",
+    "frame_006652.jpg",
+    "frame_006664.jpg",
+    "frame_006681.jpg",
+    "frame_006686.jpg",
+    "frame_006688.jpg",
+    "frame_006690.jpg",
+    "frame_006721.jpg",
+    "frame_006723.jpg",
+    "frame_006734.jpg",
+    "frame_006737.jpg",
+    "frame_006751.jpg",
+    "frame_006758.jpg",
+    "frame_006762.jpg",
+    "frame_006763.jpg"
+  ],
+  "candidates": [
+    {
+      "id": "A01",
+      "feature_description": "Lower-left corner of the rectangular reflective tape patch on the near black bag wall, at its junction with the bright green strip.",
+      "observations": [
+        {
+          "frame": "frame_006454.jpg",
+          "x": 211,
+          "y": 621,
+          "uncertainty_px": 15,
+          "description": "BEFORE: small patch visible between occluding trouser legs; native estimate from crop (100,400)-(380,700)."
+        },
+        {
+          "frame": "frame_006548.jpg",
+          "x": 944,
+          "y": 1008,
+          "uncertainty_px": 12,
+          "description": "AFTER: same patch right of hanging white cord; native estimate from crop (650,570)-(1080,1050)."
+        },
+        {
+          "frame": "frame_006549.jpg",
+          "x": 946,
+          "y": 1020,
+          "uncertainty_px": 12,
+          "description": "AFTER adjacent original frame; visual repeatability check, not an independent baseline."
+        }
+      ],
+      "confidence": "medium",
+      "stationarity_reason": "The reflective strip appears attached to the near wall of the same floor-resting black bag, corroborated by the green strip immediately below/left and the thin white cord to its left. No handling of this patch is visible in the inspected views. Absolute stationarity across the missing interval is unverified; flexible bag material can deform.",
+      "ambiguity": "Physical patch boundary, not a specular highlight, is intended. Blur, oblique view and dark edge contrast make the exact corner approximate. All patch candidates are tightly clustered and share the same deformable support; they are not independent scene-wide constraints.",
+      "usable_for_geometric_test": true
+    },
+    {
+      "id": "A02",
+      "feature_description": "Lower-right corner of that same reflective tape patch, where its lower edge meets the black bag wall.",
+      "observations": [
+        {
+          "frame": "frame_006454.jpg",
+          "x": 276,
+          "y": 626,
+          "uncertainty_px": 16,
+          "description": "BEFORE: small patch visible between occluding trouser legs; native estimate from crop (100,400)-(380,700)."
+        },
+        {
+          "frame": "frame_006548.jpg",
+          "x": 1008,
+          "y": 990,
+          "uncertainty_px": 12,
+          "description": "AFTER: same patch right of hanging white cord; native estimate from crop (650,570)-(1080,1050)."
+        },
+        {
+          "frame": "frame_006549.jpg",
+          "x": 1014,
+          "y": 1003,
+          "uncertainty_px": 12,
+          "description": "AFTER adjacent original frame; visual repeatability check, not an independent baseline."
+        }
+      ],
+      "confidence": "medium",
+      "stationarity_reason": "The reflective strip appears attached to the near wall of the same floor-resting black bag, corroborated by the green strip immediately below/left and the thin white cord to its left. No handling of this patch is visible in the inspected views. Absolute stationarity across the missing interval is unverified; flexible bag material can deform.",
+      "ambiguity": "Physical patch boundary, not a specular highlight, is intended. Blur, oblique view and dark edge contrast make the exact corner approximate. All patch candidates are tightly clustered and share the same deformable support; they are not independent scene-wide constraints.",
+      "usable_for_geometric_test": true
+    },
+    {
+      "id": "A03",
+      "feature_description": "Upper-left corner of that reflective tape patch where it meets the upper rim of the black bag.",
+      "observations": [
+        {
+          "frame": "frame_006454.jpg",
+          "x": 205,
+          "y": 562,
+          "uncertainty_px": 14,
+          "description": "BEFORE: small patch visible between occluding trouser legs; native estimate from crop (100,400)-(380,700)."
+        },
+        {
+          "frame": "frame_006548.jpg",
+          "x": 914,
+          "y": 894,
+          "uncertainty_px": 12,
+          "description": "AFTER: same patch right of hanging white cord; native estimate from crop (650,570)-(1080,1050)."
+        },
+        {
+          "frame": "frame_006549.jpg",
+          "x": 917,
+          "y": 907,
+          "uncertainty_px": 12,
+          "description": "AFTER adjacent original frame; visual repeatability check, not an independent baseline."
+        }
+      ],
+      "confidence": "medium",
+      "stationarity_reason": "The reflective strip appears attached to the near wall of the same floor-resting black bag, corroborated by the green strip immediately below/left and the thin white cord to its left. No handling of this patch is visible in the inspected views. Absolute stationarity across the missing interval is unverified; flexible bag material can deform.",
+      "ambiguity": "Physical patch boundary, not a specular highlight, is intended. Blur, oblique view and dark edge contrast make the exact corner approximate. All patch candidates are tightly clustered and share the same deformable support; they are not independent scene-wide constraints.",
+      "usable_for_geometric_test": true
+    }
+  ],
+  "overlap_assessment": {
+    "conclusion": "Strong visual evidence for a shared local bag region across the gap, but insufficient distributed stationary point correspondences to certify a reconstruction bridge.",
+    "regional_confidence": "high",
+    "geometric_bridge_established": false,
+    "region_description": "A black bag with purple cloth toward its far/right section, a thin white cord draped down its near wall, and one rectangular reflective patch over/adjacent to a green strip. The cord-patch-green configuration is the discriminating evidence; repeating black bags or floor tiles alone are not.",
+    "before_region_frames": [
+      "frame_006454.jpg",
+      "frame_006489.jpg",
+      "frame_006491.jpg"
+    ],
+    "after_region_frames": [
+      "frame_006535.jpg",
+      "frame_006536.jpg",
+      "frame_006548.jpg",
+      "frame_006549.jpg"
+    ],
+    "best_pairs": [
+      {
+        "before": "frame_006454.jpg",
+        "after": "frame_006548.jpg",
+        "reason": "Most usable physical patch boundaries on both sides; before view remains small and partially occluded."
+      },
+      {
+        "before": "frame_006454.jpg",
+        "after": "frame_006549.jpg",
+        "reason": "Adjacent after verification view with similarly visible patch."
+      },
+      {
+        "before": "frame_006489.jpg",
+        "after": "frame_006548.jpg",
+        "reason": "Larger before patch and cord region, but much more motion blur; good regional corroboration, poor precise localization."
+      }
+    ],
+    "floor_assessment": "No distinctive floor point was confidently cross-identified. A floor smear/cracked-seam region in before 006466/006476/006477 is useful within that side, but no unique after counterpart is established. Repeating seam intersections must not be filled in by grid indexing alone."
+  },
+  "rejected_hypotheses": [
+    {
+      "hypothesis": "Treat hanging cord bottom as a fixed point.",
+      "reason": "Before views show a bend/disappearance against the bag, not an unambiguously exposed material endpoint. Flexibility and occlusion can change the visible lowest point."
+    },
+    {
+      "hypothesis": "Match arbitrary regular tile intersections across sides.",
+      "reason": "Many visually indistinguishable intersections and a large camera change; no independently anchored tile index."
+    },
+    {
+      "hypothesis": "Use the foreground white-covered bag in the before sequence as the white-covered bag in the after sequence.",
+      "reason": "White coverings and black bag outlines repeat. No uniquely matching fabric feature is established; do not conflate them."
+    },
+    {
+      "hypothesis": "Use moving people, shoes, or shadow edges as fixed scene points.",
+      "reason": "Frame progression shows occlusion and walking, and shadow shapes change. No such point is proposed."
+    },
+    {
+      "hypothesis": "Add bag wrinkles, purple cloth folds, or trolley wheels as extra distributed matches.",
+      "reason": "Not enough common-view detail to disambiguate the same physical wrinkle/fold/wheel point on both sides. Object-level plausibility is insufficient."
+    }
+  ],
+  "limitations": [
+    "All 38 supplied original images were inspected through view_image; five unenhanced analytical crops were also inspected. No prior matching overlays were viewed.",
+    "Manual coordinates are proposals with approximate uncertainty, not subpixel measurements or certified matches.",
+    "usable_for_geometric_test means a hypothesis worth testing/refining, not an accepted landmark.",
+    "The three points occupy one patch about 70 pixels wide in the best before frame. They do not provide sufficient independent spatial coverage for relative pose or component alignment.",
+    "The bag is flexible; no cross-gap stationarity proof exists. Adjacent after frames do not solve this.",
+    "No facial identities, facial landmarks, bodily markings, or biometric features were used.",
+    "No inference run, GPU work, reconstruction solve, or geometric verification was performed."
+  ],
+  "analytical_crops": [
+    {
+      "file": "analytical-crop-0.png",
+      "frame": "frame_006454.jpg",
+      "native_bounds_xyxy": [
+        100,
+        400,
+        380,
+        700
+      ]
+    },
+    {
+      "file": "analytical-crop-1.png",
+      "frame": "frame_006489.jpg",
+      "native_bounds_xyxy": [
+        100,
+        0,
+        440,
+        360
+      ]
+    },
+    {
+      "file": "analytical-crop-2.png",
+      "frame": "frame_006491.jpg",
+      "native_bounds_xyxy": [
+        150,
+        0,
+        460,
+        350
+      ]
+    },
+    {
+      "file": "analytical-crop-3.png",
+      "frame": "frame_006548.jpg",
+      "native_bounds_xyxy": [
+        650,
+        570,
+        1080,
+        1050
+      ]
+    },
+    {
+      "file": "analytical-crop-4.png",
+      "frame": "frame_006477.jpg",
+      "native_bounds_xyxy": [
+        0,
+        0,
+        1080,
+        500
+      ]
+    }
+  ]
+}

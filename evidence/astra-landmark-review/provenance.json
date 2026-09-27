@@ -1,0 +1,30 @@
+{
+  "model_requested": "gpt-6-astra",
+  "role": "independent visual scene-correspondence subagent",
+  "source_selection_sha256": "a6492f30f98f5f34a6d1bdb9afe104bec63d9fdeebb2fb23566571e52b83dbb5",
+  "annotations_sha256": "6f61e883d6aebc0bcdeff7a76a699047a92d1d7736954e79d39eb63ee67b25f3",
+  "raw_review_sha256": "ae45e5ec8295c038af4c3d70c01292ac3d31ca23af9c5ef6cba4a0ab7074d722",
+  "previous_masks_archive_sha256": "75b8903dc90658cf6de7324357131930abff57f008b11f186f10b9cf1fc88c1e",
+  "image_sha256": {
+    "frame_006454.jpg": "55ef265cfa4ac5895392810a30dc976e3df7c2ee2c4752dc60f1409c8cafa22b",
+    "frame_006549.jpg": "5351c605981f845ef1f42ced28136bc8f111f932de3e974044edc69c81e6130d",
+    "frame_006548.jpg": "dd471a1706eb281811de4c2f16db273806cc105cb21d0865edc5d5bcecb3ce4d"
+  },
+  "crop_sha256": {
+    "analytical-crop-1.png": "e6f2a1f84db800c2a6e785c9ad0cb4af232d916bd50e1115fedc7939c27b4666",
+    "analytical-crop-0.png": "2483a752f578b779f740306dc856e79540bf8e916c99c7f4c6dcde02961739c0",
+    "analytical-crop-3.png": "a81a46c8262a73014b62a3e62bfa18c4a391f88a3448c07c655957edbb2577af",
+    "analytical-crop-4.png": "d4e102ca317e803ff226456355cf3d1433aeb8c57e78114f27b1d878211d0a7a",
+    "analytical-crop-2.png": "a5b5e0ee7d05e681c3fe5e091ccecd0ac78ccf269d88d0045455c1009ec4cdea"
+  },
+  "checks": {
+    "source_images": "passed byte-identical original JPEG hashes",
+    "crop_pixels": "passed all five match exact native crops",
+    "annotation_inventory": "passed three candidates, nine bounded observations, before and after support",
+    "prior_mask_centers": "all nine excluded; not a full descriptor-support audit",
+    "browser": "passed local candidate/frame controls, source assets, marker/full-view toggles, mobile layout, no page errors",
+    "visual_review": "parent inspected two native patch crops and full page screenshot"
+  },
+  "accepted_connection": false,
+  "geometric_validation": "not performed"
+}

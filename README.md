@@ -388,3 +388,5 @@ source-verified opacity reduction. The [two-candidate experiment](docs/contribut
 passed its implementation checks but did not visibly resolve the dominant ghosts.
 The accepted scene is unchanged; usage, limitations and preserved evidence are
 documented for a future experiment with stronger source or depth evidence.
+
+**Visual correspondence review:** [GPT-6 Astra’s marked before/after comparison](https://parhamdb.github.io/sepehrbaba/landmark-review.html) identifies a shared bag region and three tentative patch corners. [Findings and limitations](evidence/astra-landmark-review/results.md); no camera alignment accepted.

@@ -146,3 +146,5 @@ first experiment. They follow the resulting per-gap evidence.
 **Skip the missing interval:** [direct section alignment across gap 098](../evidence/skipped-gap-bridge/results.md) tested 280 cross-section pairs with existing static landmarks, augmented SIFT triangulation and fresh ALIKED detections. No alignment accepted; manual common-landmark review is the next distinct option.
 
 **Research after these failures:** [ranked connection options and proposed experiment, September 27](connection-research-2026-09-27.md). Priorities: preserve verified stationary detail, dense RoMa v2 matching, point re-detection, wider overlap retrieval and joint camera refinement. Research only; no new solver run.
+
+**Independent visual review:** [GPT-6 Astra found a shared patch/cord/green-strip region](../evidence/astra-landmark-review/results.md). Three uncertain patch-corner hypotheses were outside the previous masks; they remain clustered on flexible material and do not certify a connection.

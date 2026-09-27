@@ -1,0 +1,68 @@
+{
+  "scope": "Point center only; does not test full descriptor support or prove stationarity.",
+  "observations": [
+    {
+      "candidate": "A01",
+      "frame": "frame_006454.jpg",
+      "x": 211,
+      "y": 621,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A01",
+      "frame": "frame_006548.jpg",
+      "x": 944,
+      "y": 1008,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A01",
+      "frame": "frame_006549.jpg",
+      "x": 946,
+      "y": 1020,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A02",
+      "frame": "frame_006454.jpg",
+      "x": 276,
+      "y": 626,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A02",
+      "frame": "frame_006548.jpg",
+      "x": 1008,
+      "y": 990,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A02",
+      "frame": "frame_006549.jpg",
+      "x": 1014,
+      "y": 1003,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A03",
+      "frame": "frame_006454.jpg",
+      "x": 205,
+      "y": 562,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A03",
+      "frame": "frame_006548.jpg",
+      "x": 914,
+      "y": 894,
+      "retained_by_previous_mask": false
+    },
+    {
+      "candidate": "A03",
+      "frame": "frame_006549.jpg",
+      "x": 917,
+      "y": 907,
+      "retained_by_previous_mask": false
+    }
+  ]
+}
