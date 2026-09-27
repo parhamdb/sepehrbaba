@@ -44,6 +44,15 @@ scale, rotation and translation. Any query already present in the selected refer
 a control and excluded from recovery counts, including returns reached from the
 earlier side. No source databases or scenes are modified.
 
+## First completed result
+
+[Per-gap results and comparison table](../evidence/gap-recovery/results.md): all 47
+selected gaps completed, 912 PnP screens, 1,248 image-pair/matcher trials. No new
+pose passed; 16 in-map control screens passed. Six source triptychs were visually
+inspected. This rejects this sparse-anchor configuration on these query frames,
+not relocalization in general. All other methods retain explicit tested/untested
+status below.
+
 ## Ranked recovery methods for this video
 
 Priority means expected usefulness given our observed gaps, not a universal

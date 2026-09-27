@@ -1,0 +1,38 @@
+{
+  "source_revision": "38453ef",
+  "tests": [
+    {
+      "id": "math-and-inventory",
+      "status": "passed",
+      "evidence": "6 unittest cases on frozen source 38453ef; system Python lacks OpenCV, runtime venv used"
+    },
+    {
+      "id": "thor-native-compatibility",
+      "status": "passed",
+      "evidence": "COLMAP observation indices verified against native database; SIFT and CUDA LightGlue executed"
+    },
+    {
+      "id": "47-gap-execution",
+      "status": "passed",
+      "evidence": "report.json complete; 47/47; no candidate recoveries; source 38453ef"
+    },
+    {
+      "id": "source-visual-review",
+      "status": "passed",
+      "evidence": "Six triptychs in review/ inspected"
+    },
+    {
+      "id": "public-privacy",
+      "status": "passed",
+      "evidence": "Scoped text scan: no runtime host paths, private addresses or credential patterns; image files are source-video derivatives"
+    }
+  ],
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "science_outcome": "0 new-pose screens passed; 0 accepted joins",
+  "report_sha256": "c47675eddde065838537f68968936368e12a39c012373efeec10e26841490288"
+}
