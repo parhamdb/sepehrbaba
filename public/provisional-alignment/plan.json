@@ -1,0 +1,38 @@
+{
+  "source": "Retained user-selected six pairs and the 42 cached depth frames",
+  "floor_regions_native_xyxy": {
+    "before": [
+      [
+        5,
+        1430,
+        150,
+        1830
+      ],
+      [
+        750,
+        1770,
+        1060,
+        1910
+      ]
+    ],
+    "after": [
+      [
+        250,
+        1350,
+        1000,
+        1860
+      ]
+    ]
+  },
+  "cloud_stride": 3,
+  "methods": [
+    "six_point_similarity",
+    "floor_constrained_similarity"
+  ],
+  "floor_plane_ransac_threshold": 0.01,
+  "minimum_floor_inlier_fraction": 0.7,
+  "units": "Earlier seed median depth is one display unit; not metres",
+  "default": "six_point_similarity",
+  "independent_static_correspondences": false,
+  "accepted_connection": false
+}
