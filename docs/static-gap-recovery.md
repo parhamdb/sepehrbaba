@@ -112,3 +112,34 @@ Evidence: [frozen selection](../evidence/static-gap-recovery/selection.json),
 [feature/map support audit](../evidence/static-gap-recovery/support.json),
 [reproducible mask archive](../evidence/static-gap-recovery/masks.tar.gz), and
 [review contact sheets](../evidence/static-gap-recovery/review).
+
+## Fixed-camera retriangulation follow-up
+
+The support audit justified a second local test: build separate floor/wall
+landmarks from **all usable masked SIFT features**, without requiring that they
+were already mapped. Match anchor pairs with mutual-ratio SIFT or LightGlue,
+triangulate with their fixed reference cameras, and require positive depth,
+at least one degree of parallax and under two native pixels of reprojection error.
+Merge compatible feature tracks, forbid two different observations in one image,
+and check every merged observation. Distinct feature orientations within three
+pixels do not become separate landmarks. All query and control frames are excluded
+from map construction. Keep landmark-origin labels: some points retriangulate
+existing tracks, so a constructed point is not automatically a newly discovered
+landmark.
+
+`triangulate_static_gap.py` accepts the same selection, database, reader and masks:
+
+```sh
+python scripts/triangulate_static_gap.py --state "$BATCH/state.json" \
+  --selection selection.json --database "$DATABASE" \
+  --reader "$COLMAP_SOURCE/scripts/python/read_write_model.py" \
+  --masks masks --output triangulated-sift
+# Add --matching lightglue --lightglue "$LIGHTGLUE_SOURCE" with a new output.
+```
+
+This is a diagnostic candidate map, not a replacement reconstruction. A source
+camera can still be wrong, and repeated floor patterns can produce wrong matches.
+Do not infer which is responsible from a reprojection rejection alone. Three
+focused geometry tests cover track conflicts, duplicate feature orientations,
+known 3D triangulation and zero-parallax rejection, in addition to the nine tests
+above. No image, source camera or original model is modified.

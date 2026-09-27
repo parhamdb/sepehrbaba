@@ -115,7 +115,10 @@ def main():
                     if z[0]<=0 or np.linalg.norm(uv[0]-features[name]['xy'][index])>=2:valid=False;break
                 if not valid:continue
                 key='|'.join(f'{n}:{int(features[n]["indices"][i])}' for n,i in sorted(nodes));lid=int(hashlib.sha256(key.encode()).hexdigest()[:12],16)
-                landmark=dict(id=lid,xyz=point.tolist(),parallax_degrees=best['angle'],observations=[dict(name=n,feature=int(features[n]['indices'][i]),xy=features[n]['xy'][i].tolist()) for n,i in sorted(nodes)])
+                existing_ids=sorted({int(images[ids[n]].point3D_ids[features[n]['indices'][i]]) for n,i in nodes if images[ids[n]].point3D_ids[features[n]['indices'][i]]>=0})
+                landmark=dict(id=lid,xyz=point.tolist(),parallax_degrees=best['angle'],original_point_ids=existing_ids,
+                    origin='previously-unmapped-observations' if not existing_ids else 'includes-existing-map-observations',
+                    observations=[dict(name=n,feature=int(features[n]['indices'][i]),xy=features[n]['xy'][i].tolist()) for n,i in sorted(nodes)])
                 landmarks.append(landmark)
                 for node in nodes:node_landmark[node]=landmark
             row=dict(gap=gid,direction=direction,component=cid,model_sha256={n:digest(root/n) for n in ('cameras.bin','images.bin')},pairs=pair_rows,landmarks=landmarks,trials=[])
@@ -128,7 +131,7 @@ def main():
                 result=localize(correspondences,K,dist)
                 row['trials'].append(dict(query=name,query_kind=query['kind'],evidence_role='control' if ids[name] in images else 'recovery-candidate',**result))
             report['maps'].append(row);write(a.output/'report.json',report)
-            print(gid,direction,'new_static_points',len(landmarks),'new_pnp_passes',sum(t['passed'] and t['evidence_role']=='recovery-candidate' for t in row['trials']),flush=True)
+            print(gid,direction,'static_points',len(landmarks),'new_pnp_passes',sum(t['passed'] and t['evidence_role']=='recovery-candidate' for t in row['trials']),flush=True)
     for name,h in mask_hashes.items():
         if digest(a.masks/(name+'.png'))!=h:raise ValueError('Mask changed during run')
     for m in report['maps']:
