@@ -1,9 +1,9 @@
-import sys,unittest
+import sys,unittest,tempfile
 from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
 from inventory_camera_gaps import inventory
-from probe_gap_recovery import localize,select_anchors,unique_correspondences
+from probe_gap_recovery import localize,select_anchors,unique_correspondences,verify_models,digest
 
 
 class RecoveryTests(unittest.TestCase):
@@ -34,6 +34,15 @@ class RecoveryTests(unittest.TestCase):
         for row in rows:
             if row['id']%5==0:row['xy']=[1000-row['xy'][0],1800-row['xy'][1]]
         self.assertFalse(localize(rows,K,np.zeros(4))['passed'])
+
+    def test_resume_rejects_changed_model(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'images.bin';path.write_bytes(b'baseline')
+            report=dict(gaps=[dict(model_sha256={'a':{'images.bin':digest(path)}})])
+            components=[dict(id='a',path=temp)]
+            verify_models(report,components)
+            path.write_bytes(b'changed')
+            with self.assertRaises(ValueError):verify_models(report,components)
 
     def test_tiny_world_scale_does_not_change_pnp(self):
         rng=np.random.default_rng(3);xyz=rng.uniform([-3,-4,5],[3,4,9],(150,3));K=np.array([[900.,0,540],[0,900,960],[0,0,1]])

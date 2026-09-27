@@ -40,8 +40,9 @@ pixels cannot inflate the count. World coordinates are locally normalized.
 **Passing is only a camera candidate.** Existing sparse maps can contain people.
 Static-region review, more query frames and independent validation are required
 before promoting a pose; a component join additionally needs consistency of its
-scale, rotation and translation. A returning frame localized from its own side
-is a control, not a cross-gap bridge. No source databases or scenes are modified.
+scale, rotation and translation. Any query already present in the selected reference map is explicitly labelled
+a control and excluded from recovery counts, including returns reached from the
+earlier side. No source databases or scenes are modified.
 
 ## Ranked recovery methods for this video
 
@@ -83,7 +84,8 @@ python scripts/probe_gap_recovery.py --state "$BATCH/state.json" \
 Needs NumPy, OpenCV, CUDA PyTorch and the cached SIFT LightGlue weights. LightGlue
 is pinned to `eb42fee2d71449efb0aa5c10549752b5d75384d8`. The reader and database
 are hashed along with model binaries, inputs and scripts. Use a quiescent database
-with no nonempty WAL. The output is checkpointed after each gap and can resume
+with no nonempty WAL. All recorded reference-model hashes are checked on resume and at completion.
+The output is checkpointed after each gap and can resume
 only with identical identities/options. `--gap-ids gap-007 gap-034 gap-135`
 restricts a pilot; keep it in a separate output directory from the full campaign.
 
@@ -92,7 +94,7 @@ restricts a pilot; keep it in a separate output directory from the full campaign
 One discovery pass, failure-only corrections, then one final pass of these checks:
 
 1. Synthetic inventory, time-window selection, duplicate rejection and PnP
-   positive/negative/scale controls (five unit tests).
+   positive/negative/scale controls (six unit tests).
 2. Actual native feature/model compatibility and GPU matching on Thor.
 3. Complete all 47 gap experiments, or explicitly retain a running checkpoint.
 4. Inspect representative recovered candidates and failure source frames.

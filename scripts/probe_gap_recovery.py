@@ -83,6 +83,15 @@ def localize(rows, K, dist):
     return result
 
 
+def verify_models(report, components):
+    paths={c['id']:Path(c['path']) for c in components}
+    checked={}
+    for gap in report['gaps']:
+        for cid,expected in gap.get('model_sha256',{}).items():
+            if cid not in checked:checked[cid]={name:digest(paths[cid]/name) for name in expected}
+            if checked[cid]!=expected:raise ValueError('Reference model changed; preserve this campaign and start a new output')
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('state','frames','database','reader','lightglue','output'):p.add_argument('--'+name,type=Path,required=True)
@@ -118,6 +127,7 @@ def main():
         'One shared calibration within each reference component; cross-component calibration is untested.',
         'Only midpoint and first returning tracked frame sampled; not dense recovery.'],started=time.time())
     if report['identity']!=identity:raise ValueError('Changed campaign inputs; use another output')
+    verify_models(report,state['components'])
     image_ids=dict(db.execute('select name,image_id from images'))
     @lru_cache(maxsize=32)
     def features(name):
@@ -193,10 +203,13 @@ def main():
                     for window in (10,30):
                         result=localize([r for r in rows if r['seconds_from_boundary']<=window],K,dist)
                         row['trials'].append(dict(query=qname,query_kind=query_kind,
-                            direction=label,method=method,window_seconds=window,component=cid,**result))
+                            direction=label,method=method,window_seconds=window,component=cid,
+                            query_in_reference_model=qname in component['names'],
+                            evidence_role='control' if qname in component['names'] else 'recovery-candidate',**result))
         report['gaps'].append(row);report.update(updated=time.time(),status='running',completed_gaps=len(report['gaps']),total_gaps=len(gaps))
         write(path,report)
-        print(f"{len(report['gaps'])}/{len(gaps)} {gap['id']} candidates={sum(t.get('passed',False) for t in row['trials'])}",flush=True)
+        print(f"{len(report['gaps'])}/{len(gaps)} {gap['id']} new_candidates={sum(t.get('passed',False) and t.get('evidence_role')=='recovery-candidate' for t in row['trials'])}",flush=True)
+    verify_models(report,state['components'])
     report.update(status='complete-candidates-not-certified',finished=time.time());write(path,report);db.close()
 
 
