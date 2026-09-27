@@ -1,0 +1,5 @@
+{
+  "selection_sha256": "9494a83b7ff5cf4feea1bc58f609e0f23249de165da18e83823ac25ce3e14974",
+  "samples": 61,
+  "legend": "Cyan: proposed static surface after person subtraction. Red: dilated detected person. Black/no tint: excluded region."
+}

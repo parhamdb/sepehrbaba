@@ -140,3 +140,5 @@ first experiment. They follow the resulting per-gap evidence.
 - [VGGT-SLAM official implementation](https://github.com/MIT-SPARK/VGGT-SLAM)
 - [Depth Anything 3 official implementation](https://github.com/ByteDance-Seed/Depth-Anything-3)
 - [SAM 3 official implementation](https://github.com/facebookresearch/sam3)
+
+**Local camera follow-up:** [gap 098 independent geometry and VGGT context ablation](../evidence/local-camera-gap-098/results.md). All 1,830 pairs were tested; the supported image graph stops before the registered return. Zero new poses accepted.

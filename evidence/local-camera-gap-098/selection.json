@@ -1,0 +1,368 @@
+{
+  "schema": 1,
+  "cases": {
+    "gap-098": {
+      "queries": [
+        {
+          "name": "frame_006493.jpg",
+          "timestamp": 412.290311,
+          "kind": "missing-first"
+        },
+        {
+          "name": "frame_006511.jpg",
+          "timestamp": 413.471533,
+          "kind": "missing-midpoint"
+        },
+        {
+          "name": "frame_006530.jpg",
+          "timestamp": 414.512889,
+          "kind": "missing-last"
+        },
+        {
+          "name": "frame_006531.jpg",
+          "timestamp": 414.562967,
+          "kind": "registered-return"
+        }
+      ],
+      "directions": {
+        "lookback": {
+          "component": "cbc3a19f69fce48a",
+          "anchors": [
+            "frame_006477.jpg",
+            "frame_006466.jpg",
+            "frame_006454.jpg",
+            "frame_006415.jpg"
+          ],
+          "control": "frame_006453.jpg"
+        },
+        "lookahead": {
+          "component": "0bc7a95fc61b9c4c",
+          "anchors": [
+            "frame_006548.jpg",
+            "frame_006568.jpg",
+            "frame_006580.jpg",
+            "frame_006627.jpg",
+            "frame_006646.jpg",
+            "frame_006688.jpg"
+          ],
+          "control": "frame_006600.jpg"
+        }
+      }
+    }
+  },
+  "samples": [
+    {
+      "name": "frame_006415.jpg",
+      "timestamp": 408.284611
+    },
+    {
+      "name": "frame_006453.jpg",
+      "timestamp": 410.1874
+    },
+    {
+      "name": "frame_006454.jpg",
+      "timestamp": 410.237478
+    },
+    {
+      "name": "frame_006466.jpg",
+      "timestamp": 410.838356
+    },
+    {
+      "name": "frame_006477.jpg",
+      "timestamp": 411.389167
+    },
+    {
+      "name": "frame_006489.jpg",
+      "timestamp": 412.050033
+    },
+    {
+      "name": "frame_006490.jpg",
+      "timestamp": 412.1101
+    },
+    {
+      "name": "frame_006491.jpg",
+      "timestamp": 412.170167
+    },
+    {
+      "name": "frame_006492.jpg",
+      "timestamp": 412.230244
+    },
+    {
+      "name": "frame_006493.jpg",
+      "timestamp": 412.290311
+    },
+    {
+      "name": "frame_006494.jpg",
+      "timestamp": 412.350378
+    },
+    {
+      "name": "frame_006495.jpg",
+      "timestamp": 412.410456
+    },
+    {
+      "name": "frame_006496.jpg",
+      "timestamp": 412.470522
+    },
+    {
+      "name": "frame_006497.jpg",
+      "timestamp": 412.530589
+    },
+    {
+      "name": "frame_006498.jpg",
+      "timestamp": 412.590656
+    },
+    {
+      "name": "frame_006499.jpg",
+      "timestamp": 412.650733
+    },
+    {
+      "name": "frame_006500.jpg",
+      "timestamp": 412.7108
+    },
+    {
+      "name": "frame_006501.jpg",
+      "timestamp": 412.770867
+    },
+    {
+      "name": "frame_006502.jpg",
+      "timestamp": 412.840933
+    },
+    {
+      "name": "frame_006503.jpg",
+      "timestamp": 412.911
+    },
+    {
+      "name": "frame_006504.jpg",
+      "timestamp": 412.981067
+    },
+    {
+      "name": "frame_006505.jpg",
+      "timestamp": 413.051133
+    },
+    {
+      "name": "frame_006506.jpg",
+      "timestamp": 413.1212
+    },
+    {
+      "name": "frame_006507.jpg",
+      "timestamp": 413.191267
+    },
+    {
+      "name": "frame_006508.jpg",
+      "timestamp": 413.261333
+    },
+    {
+      "name": "frame_006509.jpg",
+      "timestamp": 413.3314
+    },
+    {
+      "name": "frame_006510.jpg",
+      "timestamp": 413.401467
+    },
+    {
+      "name": "frame_006511.jpg",
+      "timestamp": 413.471533
+    },
+    {
+      "name": "frame_006512.jpg",
+      "timestamp": 413.5416
+    },
+    {
+      "name": "frame_006513.jpg",
+      "timestamp": 413.611667
+    },
+    {
+      "name": "frame_006514.jpg",
+      "timestamp": 413.681733
+    },
+    {
+      "name": "frame_006515.jpg",
+      "timestamp": 413.741811
+    },
+    {
+      "name": "frame_006516.jpg",
+      "timestamp": 413.801878
+    },
+    {
+      "name": "frame_006517.jpg",
+      "timestamp": 413.861944
+    },
+    {
+      "name": "frame_006518.jpg",
+      "timestamp": 413.912022
+    },
+    {
+      "name": "frame_006519.jpg",
+      "timestamp": 413.9621
+    },
+    {
+      "name": "frame_006520.jpg",
+      "timestamp": 414.012167
+    },
+    {
+      "name": "frame_006521.jpg",
+      "timestamp": 414.062233
+    },
+    {
+      "name": "frame_006522.jpg",
+      "timestamp": 414.1123
+    },
+    {
+      "name": "frame_006523.jpg",
+      "timestamp": 414.162378
+    },
+    {
+      "name": "frame_006524.jpg",
+      "timestamp": 414.212456
+    },
+    {
+      "name": "frame_006525.jpg",
+      "timestamp": 414.262522
+    },
+    {
+      "name": "frame_006526.jpg",
+      "timestamp": 414.3126
+    },
+    {
+      "name": "frame_006527.jpg",
+      "timestamp": 414.362667
+    },
+    {
+      "name": "frame_006528.jpg",
+      "timestamp": 414.412744
+    },
+    {
+      "name": "frame_006529.jpg",
+      "timestamp": 414.462822
+    },
+    {
+      "name": "frame_006530.jpg",
+      "timestamp": 414.512889
+    },
+    {
+      "name": "frame_006531.jpg",
+      "timestamp": 414.562967
+    },
+    {
+      "name": "frame_006532.jpg",
+      "timestamp": 414.613033
+    },
+    {
+      "name": "frame_006533.jpg",
+      "timestamp": 414.663111
+    },
+    {
+      "name": "frame_006534.jpg",
+      "timestamp": 414.713189
+    },
+    {
+      "name": "frame_006535.jpg",
+      "timestamp": 414.763256
+    },
+    {
+      "name": "frame_006536.jpg",
+      "timestamp": 414.813333
+    },
+    {
+      "name": "frame_006537.jpg",
+      "timestamp": 414.8634
+    },
+    {
+      "name": "frame_006548.jpg",
+      "timestamp": 415.494189
+    },
+    {
+      "name": "frame_006568.jpg",
+      "timestamp": 416.495656
+    },
+    {
+      "name": "frame_006580.jpg",
+      "timestamp": 417.096544
+    },
+    {
+      "name": "frame_006600.jpg",
+      "timestamp": 418.157989
+    },
+    {
+      "name": "frame_006627.jpg",
+      "timestamp": 419.689911
+    },
+    {
+      "name": "frame_006646.jpg",
+      "timestamp": 420.741278
+    },
+    {
+      "name": "frame_006688.jpg",
+      "timestamp": 423.054244
+    }
+  ],
+  "identity": {
+    "state": "4b638c6b0d404724a439f81990026620427b55bbdd86ec330d5d446336f12a7d",
+    "frames": "c9278f4dd2285b5152da93cbbf645db3d672e4190ae2f9720bd3224178b86b28",
+    "script": "83ca5b2ab177da5b48cdfa319ff9e0f92a1b8af8dbe872b74fc51e168aa0abf7"
+  },
+  "image_sha256": {
+    "frame_006415.jpg": "d98b629ebd0dd2030921fd54cbe7dc68341eb91d3fc719eb6cc94e131c719359",
+    "frame_006453.jpg": "c9d8b2db47539f6ff7b159c4f6376de17f35b01fd9c4f22954335c398b3925ca",
+    "frame_006454.jpg": "55ef265cfa4ac5895392810a30dc976e3df7c2ee2c4752dc60f1409c8cafa22b",
+    "frame_006466.jpg": "0b58cc65103edb592ef6da338da98a99b09ce9472eb911fe26a6f1d1fe8eaaf9",
+    "frame_006477.jpg": "36395159e5112501b2c3e9170e2d43645da7fa3f7e09ff05d2c3ba81d50e5c2e",
+    "frame_006489.jpg": "59e157ade720c45187c85e59d7c52bdc573c77557d1b8510ef51fec4c8484208",
+    "frame_006490.jpg": "2789b5dad3e03edd4c5abc573ad9fc853a9c70b844b3d8b9301ee12f2ca40d2a",
+    "frame_006491.jpg": "d6ea0530b7d50d7a37550e82b7223c5f200af29ab79a7531db32ea166968e4cf",
+    "frame_006492.jpg": "966c1758394b8fc83bce4c954efacec91bea08a318ab2f0f458f41cf890d1e3b",
+    "frame_006493.jpg": "63d9ced7374ffac80fb666ff96afbbcf4b60d9dc4c385b99b98f044a61934e75",
+    "frame_006494.jpg": "a39e8e2a672901703ddcaa2c9833a79e5cf62c0249420db4828a72a38d843d55",
+    "frame_006495.jpg": "9baade21bb64e3ba703902c1e586e86ee9d490e6b7a89df6bbce9f77b13279b1",
+    "frame_006496.jpg": "84078417dceb6248da87ea5bce614e1725677279a7c3be8f26462d1017710800",
+    "frame_006497.jpg": "d2aaee39727b96354b505ab00436cadd46e7ca9ea66fe16d13628ad94b1d1664",
+    "frame_006498.jpg": "2067cb73d62e2a877313c875835b99ff8d3956545b8d46a25ed8ab54000954ca",
+    "frame_006499.jpg": "46515aa5871d29cd46677cb488b67798abb0c6ccda3ba7a8387f66816a6ba2fb",
+    "frame_006500.jpg": "817ea2dd34a854414325dc980526f298429233f8acd435cdfe0c0719721ae550",
+    "frame_006501.jpg": "4c7393345a3346da6f63c7560c4e5004e2923d7140ef8de2cd39d49aaa53f77c",
+    "frame_006502.jpg": "93e34de029cbc9b7b07f8b5bcaeeb23faea1424087886b0cc6b5f96afe98d7ef",
+    "frame_006503.jpg": "9c396b2d2f79bc976c71ca0a8e602c7fe880ca0f1d1448a122a99de9b1fda01b",
+    "frame_006504.jpg": "6c8b153de924c4c3a5d31a584b031fd445cc1e828364662824effad406577f00",
+    "frame_006505.jpg": "cf54703fc07de91aec9aec5cdafdb1757d95610a9593344a3ddf2169229d954d",
+    "frame_006506.jpg": "743c210c17ef38bd080691bc1367898a20461a3d59830974cf20d0c84c3480a0",
+    "frame_006507.jpg": "480a59297e00e38968f19d5c82c1263bd63a4632458d0b5cb7d72e016cf77c2f",
+    "frame_006508.jpg": "aa5e97e73f3ca960bf243e75996af195c12d26b9220678ff2db1e24331835887",
+    "frame_006509.jpg": "2a1f4462d7169e72827c70a8d472ad53488f3f154d83869f14e7541cbcb2622a",
+    "frame_006510.jpg": "040dae3ec7bbf924619b3f6ed005c8155e1b316dda42795e989d6057c44e674b",
+    "frame_006511.jpg": "01d4f37d72ea1dc02f5c8c6ba916dbdaa48b7c56c4a4701c05f244e1f09148e8",
+    "frame_006512.jpg": "c585301ae7d711afc53d8b0aad48f0ad26f2890ad4e37e3457396157314f40b1",
+    "frame_006513.jpg": "3c4ee98a665e7c20e87c5b4a8eb8cfce3a4915aea39e94baafde22c8f2a947db",
+    "frame_006514.jpg": "dd4ac819519edf9e802bb4ff3699061d76241b6d2c47bfcfa87f87b0eb13f3c1",
+    "frame_006515.jpg": "f3e3dfd63a3967ce86597f8584c7d72b97bb31e1c8e8447ff47f485369a29ee3",
+    "frame_006516.jpg": "88cb68a0c8599f6aebc6eb2769ba8c7ff238e285098facadcb73091a063632aa",
+    "frame_006517.jpg": "00b5bca1e804082a58f478529c2676e8acddb26274863e567c9b91f0a301765d",
+    "frame_006518.jpg": "9a8f7c6db9b0436a60322179182d1c3ca9f64bd472056f19e66c30c27f1c2a9b",
+    "frame_006519.jpg": "7bed821651b2dbd29cea1fcf416eace2dddcc56d1259a5019961306e6bcc9092",
+    "frame_006520.jpg": "d54b09b00d6988db0aa29e27e7ea640409af6e91c4041becaf266245d59b01a3",
+    "frame_006521.jpg": "abc05faef9ce32fb98bec9b7b33d35d8b396cafd33e185ad386c43a0c5820ae2",
+    "frame_006522.jpg": "96619750621c8028bf69b6c8b71a47c530aead640311e993fc2bd7bfe42d2e93",
+    "frame_006523.jpg": "b77bdcab265978bf63178f76373ab6071a78dc6e447d0d5b9022008d37f872a1",
+    "frame_006524.jpg": "2bff52682b4cea3f01d14e6d30d84b7f7ff6a15877fb464f31fc139ef97adba1",
+    "frame_006525.jpg": "bba35875481004831f697f4104eabb5754a2d1093038463f487116c45b1599cd",
+    "frame_006526.jpg": "069866bca5db535c16b6acbe459c810f1ea82602714eb5472cebe0a2bb680840",
+    "frame_006527.jpg": "4c67022a766ca5ff437b9ce7105e8a6f6b9a25d72050d2fc6f319259e7e3db91",
+    "frame_006528.jpg": "61e513a1cd2369053a414f5e2a17d64ca0b882261d973ab882a693a0168e15d5",
+    "frame_006529.jpg": "7b9ab92df4c6ae9a16f62b5e6756736cb6141ca20bf7ded171ef5b3274dd11ce",
+    "frame_006530.jpg": "bca4baadec1e60f626ff764762072eed6d31ba33444eb85e0947856e16dd6267",
+    "frame_006531.jpg": "95fd0b2f8ead01e237c0ae2419fadc8e3bb125d8932df3b33b32ce0408ea6f8b",
+    "frame_006532.jpg": "845af7080c4d37f1cfb2c82c2c26031b2ab3947573e85bf5364f2966170721fe",
+    "frame_006533.jpg": "7686fd817d86680963cd14dca293a3e0ff05febc47c7fdf1bfa799d7c60c7f3f",
+    "frame_006534.jpg": "e641710b14932abda2c27b39f2658bddc677ca93a7b867a06b8eff4d7555c88f",
+    "frame_006535.jpg": "862272b0c561eef868772364de751d987b7fd78ca8df16397a3d218585512627",
+    "frame_006536.jpg": "7045eee86c8cd23034225b25c5aa5a246312007ea18f889a20d1bda7ca2cd4ac",
+    "frame_006537.jpg": "678e73c3f45a132b19ca02d3263b1152abe26edf100ef9ac26e5f7fd9e34e8dc",
+    "frame_006548.jpg": "dd471a1706eb281811de4c2f16db273806cc105cb21d0865edc5d5bcecb3ce4d",
+    "frame_006568.jpg": "c4535750a9a15ea050885cc3ebbc9ee4f74dd6ce7a365a469bdbc15dfb793e93",
+    "frame_006580.jpg": "a96d6638374fa334d85552cbab08a3bad3174faa949265e80f9e937c00a5d0e1",
+    "frame_006600.jpg": "0d2ec83820878503893fc019568cc4a18dee57f1dd83287fea4796d97300f4f9",
+    "frame_006627.jpg": "b98cfdaa36ea158bf257297a1ccb4251967c57fe0e758fad2612069f39b44146",
+    "frame_006646.jpg": "67aedd59eaabaef75673922c72794be610716dcf3e05a9bffa825695b6a53e8d",
+    "frame_006688.jpg": "1b0c0e0b14263074c647cbdcf4a3f7569875f4e7a5708007889d84f1d7c83546"
+  },
+  "selection": "All native frames 412.0-414.9 seconds plus frozen gap-098 anchors/controls; frozen before camera estimation."
+}

@@ -1,0 +1,56 @@
+{
+  "tested_source": "bc45cbff070a09ab8639984e148c20112ea94ab5",
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "checks": [
+    {
+      "id": "unit-controls",
+      "status": "passed",
+      "evidence": "Four tests in tests/test_local_camera_pairs.py passed in discovery and final regression on Thor; 0 failures. Final runtime 0.053 seconds."
+    },
+    {
+      "id": "masks-and-all-pairs",
+      "status": "passed",
+      "evidence": "61 archived mask hashes and source hashes match the frozen manifest; exactly all 1830 unique image pairs present."
+    },
+    {
+      "id": "camera-identity-and-comparison",
+      "status": "passed",
+      "evidence": "Both VGGT runs contain all 61 native IDs, every_frame=true; DA3 covers 61 and COLMAP covers 23; pose and evaluator hashes verified."
+    },
+    {
+      "id": "geometry-and-visual-review",
+      "status": "passed",
+      "evidence": "Six mask contact sheets and three named correspondence examples inspected. Summary reproduces byte-identically. Supported component has eight frames; 658 cross-return pairs lack fit/holdout counts. All pose_accepted flags false."
+    },
+    {
+      "id": "documentation-and-public-privacy",
+      "status": "passed",
+      "evidence": "Scripts committed at tested_source. Results and limitations documented; public JSON, Markdown, new scripts and archived metadata scanned for private paths, LAN addresses, tokens and private keys; archive owners normalized."
+    }
+  ],
+  "recovery": {
+    "status": "blocked-under-current-evidence",
+    "accepted_poses": 0,
+    "reason": "Static image-link graph does not reach the post-gap return, and planar pair fits do not certify a multi-view camera trajectory."
+  },
+  "verification_budget": "One discovery pass, focused checks of new artifacts, one final regression; unchanged neural inference reused.",
+  "independent_review": "Core fitting/holdout and camera-coordinate logic reviewed independently; no medium/high findings. New summary and rendering artifacts inspected by primary author.",
+  "units": {
+    "passed": 4,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "source_sha256": {
+    "scripts/evaluate_local_camera_pairs.py": "2c783b07889717fefa2b303d14dd96da094136210dff4e24999143d847436550",
+    "scripts/match_static_clip.py": "33125bd33477964688cacbf2547693c63a252fa2e5e5b98c59e067a20993d8b9",
+    "scripts/run_vggt_loss.py": "079b37bd867e0808173f428dd91ebcf0a029b7dd93bf05f248b01ab48a97cca9",
+    "scripts/render_local_pair_review.py": "aca3396066b4e60d316739aa7a84105cd57fd47c324774a4c3b76eabcffec17c",
+    "scripts/summarize_local_camera_pairs.py": "20731271aa3bcdeb02a635f5278f646f9f58202c0337f47d1f720d59ab27dc2e"
+  }
+}

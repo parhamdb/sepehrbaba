@@ -37,7 +37,7 @@ and court proceedings.** We want families, researchers, investigators, and the
 public to explore what the recording shows and compare every reconstruction
 with its source.
 
-**Recovery experiments:** [gap inventory and ranked recovery methods](docs/gap-recovery.md) — test different methods at each missing interval, retaining evidence for successful and failed attempts. [Latest static-anchor experiment](evidence/static-gap-recovery/results.md).
+**Recovery experiments:** [gap inventory and ranked recovery methods](docs/gap-recovery.md) — test different methods at each missing interval, retaining evidence for successful and failed attempts. [Static-anchor experiment](evidence/static-gap-recovery/results.md). [Latest local-camera comparison](evidence/local-camera-gap-098/results.md): partial static links found; the gap remains unjoined.
 
 ## The video and the father behind it
 

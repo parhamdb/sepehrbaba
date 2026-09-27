@@ -1,0 +1,51 @@
+{
+  "vggt_checkpoint_sha256": "d15bf50a8615c8225ed48b51ea5cac673d82442ec0309036df555a053253afe0",
+  "vggt_revision": "35327ac",
+  "selection_sha256": "9494a83b7ff5cf4feea1bc58f609e0f23249de165da18e83823ac25ce3e14974",
+  "vggt_runner_sha256": "079b37bd867e0808173f428dd91ebcf0a029b7dd93bf05f248b01ab48a97cca9",
+  "mask_reuse": {
+    "manifest_sha256": "66ff175cc7444e204852d7a387959642d65574429ee811b60bcf72f5d94e136a",
+    "names": [
+      "frame_006415.jpg",
+      "frame_006453.jpg",
+      "frame_006454.jpg",
+      "frame_006466.jpg",
+      "frame_006477.jpg",
+      "frame_006493.jpg",
+      "frame_006511.jpg",
+      "frame_006530.jpg",
+      "frame_006531.jpg",
+      "frame_006548.jpg",
+      "frame_006568.jpg",
+      "frame_006580.jpg",
+      "frame_006600.jpg",
+      "frame_006627.jpg",
+      "frame_006646.jpg",
+      "frame_006688.jpg"
+    ]
+  },
+  "runs": [
+    {
+      "output": "vggt",
+      "poses_sha256": "61de7ffc34e36925bb53e4d25989bec29fdcdfd88a3d99256e8b50075fe972b3",
+      "result": {
+        "submap_size": 16,
+        "max_loops": 1,
+        "min_disparity": 50,
+        "every_frame": true,
+        "portrait_mode": "pad"
+      }
+    },
+    {
+      "output": "vggt-single",
+      "poses_sha256": "09ac1bad5916b8d541f651e48d2d9c7a2e09c9ebb41e17c0285deb376df887c1",
+      "result": {
+        "submap_size": 64,
+        "max_loops": 0,
+        "min_disparity": 50,
+        "every_frame": true,
+        "portrait_mode": "pad"
+      }
+    }
+  ]
+}

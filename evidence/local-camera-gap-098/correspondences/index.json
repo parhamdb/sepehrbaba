@@ -1,0 +1,119 @@
+{
+  "pairs_sha256": "24ca8d48569d5a7d298400757aa5ae2776f7835f60cdbfebca20fa69ca895daa",
+  "evaluation_sha256": "24ac76dc2d1b92911b53df899e33f9cd30f24c4505587f7833fbb3b79ee0e8e9",
+  "script_sha256": "aca3396066b4e60d316739aa7a84105cd57fd47c324774a4c3b76eabcffec17c",
+  "pairs": [
+    {
+      "file": "frame_006490--frame_006513.jpg",
+      "a": "frame_006490.jpg",
+      "b": "frame_006513.jpg",
+      "matches": 40,
+      "withheld": 10
+    },
+    {
+      "file": "frame_006501--frame_006511.jpg",
+      "a": "frame_006501.jpg",
+      "b": "frame_006511.jpg",
+      "matches": 36,
+      "withheld": 10
+    },
+    {
+      "file": "frame_006501--frame_006512.jpg",
+      "a": "frame_006501.jpg",
+      "b": "frame_006512.jpg",
+      "matches": 40,
+      "withheld": 10
+    },
+    {
+      "file": "frame_006501--frame_006514.jpg",
+      "a": "frame_006501.jpg",
+      "b": "frame_006514.jpg",
+      "matches": 47,
+      "withheld": 12
+    },
+    {
+      "file": "frame_006501--frame_006515.jpg",
+      "a": "frame_006501.jpg",
+      "b": "frame_006515.jpg",
+      "matches": 44,
+      "withheld": 9
+    },
+    {
+      "file": "frame_006505--frame_006513.jpg",
+      "a": "frame_006505.jpg",
+      "b": "frame_006513.jpg",
+      "matches": 31,
+      "withheld": 7
+    },
+    {
+      "file": "frame_006511--frame_006512.jpg",
+      "a": "frame_006511.jpg",
+      "b": "frame_006512.jpg",
+      "matches": 65,
+      "withheld": 12
+    },
+    {
+      "file": "frame_006511--frame_006513.jpg",
+      "a": "frame_006511.jpg",
+      "b": "frame_006513.jpg",
+      "matches": 84,
+      "withheld": 17
+    },
+    {
+      "file": "frame_006511--frame_006514.jpg",
+      "a": "frame_006511.jpg",
+      "b": "frame_006514.jpg",
+      "matches": 93,
+      "withheld": 21
+    },
+    {
+      "file": "frame_006511--frame_006515.jpg",
+      "a": "frame_006511.jpg",
+      "b": "frame_006515.jpg",
+      "matches": 89,
+      "withheld": 19
+    },
+    {
+      "file": "frame_006512--frame_006513.jpg",
+      "a": "frame_006512.jpg",
+      "b": "frame_006513.jpg",
+      "matches": 66,
+      "withheld": 10
+    },
+    {
+      "file": "frame_006512--frame_006514.jpg",
+      "a": "frame_006512.jpg",
+      "b": "frame_006514.jpg",
+      "matches": 75,
+      "withheld": 12
+    },
+    {
+      "file": "frame_006512--frame_006515.jpg",
+      "a": "frame_006512.jpg",
+      "b": "frame_006515.jpg",
+      "matches": 74,
+      "withheld": 15
+    },
+    {
+      "file": "frame_006513--frame_006514.jpg",
+      "a": "frame_006513.jpg",
+      "b": "frame_006514.jpg",
+      "matches": 202,
+      "withheld": 41
+    },
+    {
+      "file": "frame_006513--frame_006515.jpg",
+      "a": "frame_006513.jpg",
+      "b": "frame_006515.jpg",
+      "matches": 184,
+      "withheld": 37
+    },
+    {
+      "file": "frame_006514--frame_006515.jpg",
+      "a": "frame_006514.jpg",
+      "b": "frame_006515.jpg",
+      "matches": 229,
+      "withheld": 55
+    }
+  ]
+}

@@ -41,6 +41,10 @@ ambiguous on a plane. Neither a passing homography nor low epipolar error alone
 certifies a recovered 3D camera or scene connection. Inspect correspondences,
 then require multi-view evidence before accepting a recovered pose.
 
+## Results
+
+[Completed experiment, comparison table and visual evidence](../evidence/local-camera-gap-098/results.md). No accepted recovered trajectory.
+
 ## Reproduce
 
 - `match_static_clip.py`: cache masked native SIFT/LightGlue pairs from a frozen selection.
@@ -64,3 +68,33 @@ Full-video inference, scene stitching and splat retraining are excluded.
 4. Inspect independent geometry, candidate correspondences and recovery connectivity;
    do not turn planar ambiguity or unavailable estimates into passes.
 5. Commit scripts, observations, limitations and privacy-checked results.
+
+## Executed commands
+
+Use the committed `evidence/local-camera-gap-098/selection.json` as `selection.json`.
+Create `frames.json` from its `samples` array for VGGT. Variables below denote
+local runtime paths; matching requires the existing native SIFT database and
+cached LightGlue weights. SAM masks were produced with `mask_gap_anchors.py`,
+reusing 16 byte-identical previous masks and inferring 45 new ones.
+
+```sh
+python scripts/match_static_clip.py --selection selection.json --database "$DB" --masks "$MASKS" --lightglue "$LIGHTGLUE" --output matches
+python scripts/run_vggt_loss.py --images "$IMAGES" --frames frames.json --checkpoint "$VGGT_WEIGHTS" --every-frame --submap-size 16 --max-loops 1 --output vggt
+python scripts/run_vggt_loss.py --images "$IMAGES" --frames frames.json --checkpoint "$VGGT_WEIGHTS" --every-frame --submap-size 64 --max-loops 0 --output vggt-single
+python scripts/evaluate_local_camera_pairs.py --pairs matches/pairs.json --state "$STATE" --selection selection.json --reader "$COLMAP_READER" --da3 "$DA3_POSES" --vggt vggt/poses.json --output evaluation
+python scripts/evaluate_local_camera_pairs.py --pairs matches/pairs.json --state "$STATE" --selection selection.json --reader "$COLMAP_READER" --da3 "$DA3_POSES" --vggt vggt-single/poses.json --output evaluation-single
+python scripts/render_local_pair_review.py --pairs matches/pairs.json --evaluation evaluation/report.json --images "$IMAGES" --output correspondences
+python scripts/summarize_local_camera_pairs.py --evidence evidence/local-camera-gap-098
+```
+
+Run each inference with its installed environment; VGGT requires its upstream
+checkout as working directory (invoke this repository's script by absolute path).
+`STATE` and `COLMAP_READER` are outputs/dependencies of the earlier reconstruction
+pipeline. The original full DA3 file is required to reproduce its recorded hash;
+the published subset supports inspecting the selected poses without downloading
+the full run. Output directories must be new. Reuse the published raw cache for
+geometry experiments; no need to repeat the neural matching or SAM inference.
+
+The single-submap trial was added after the first comparison exposed a weak link
+crossing a submap boundary. It uses the identical frozen images, matches and
+criteria; neither trial is certified as a recovered trajectory.

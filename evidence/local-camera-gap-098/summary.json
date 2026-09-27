@@ -1,0 +1,156 @@
+{
+  "status": "complete-diagnostic-experiment-no-recovered-trajectory",
+  "accepted_poses": 0,
+  "inputs": {
+    "pairs.json": "24ca8d48569d5a7d298400757aa5ae2776f7835f60cdbfebca20fa69ca895daa",
+    "evaluation.json": "24ac76dc2d1b92911b53df899e33f9cd30f24c4505587f7833fbb3b79ee0e8e9",
+    "evaluation-single.json": "c1c399e30813ba542f5893b6eebf4f0ed4e5d2029c8f1bcd6be42ff1cecb3766"
+  },
+  "frames": 61,
+  "pairs": 1830,
+  "camera_counts": {
+    "colmap": 23,
+    "da3": 61,
+    "vggt": 61
+  },
+  "sensitivity": {
+    "lookback": {
+      "homography_passes": 12,
+      "relative_pose_screen_passes": 13,
+      "supported_components": [
+        [
+          "frame_006490.jpg",
+          "frame_006501.jpg",
+          "frame_006505.jpg",
+          "frame_006511.jpg",
+          "frame_006512.jpg",
+          "frame_006513.jpg",
+          "frame_006514.jpg",
+          "frame_006515.jpg"
+        ]
+      ]
+    },
+    "lookahead": {
+      "homography_passes": 10,
+      "relative_pose_screen_passes": 14,
+      "supported_components": [
+        [
+          "frame_006490.jpg",
+          "frame_006501.jpg",
+          "frame_006505.jpg",
+          "frame_006511.jpg",
+          "frame_006512.jpg",
+          "frame_006513.jpg",
+          "frame_006514.jpg",
+          "frame_006515.jpg"
+        ]
+      ]
+    }
+  },
+  "cross_return_pairs": 658,
+  "cross_return_insufficient_matches": 658,
+  "supported_planar_pair_comparisons": [
+    {
+      "a": "frame_006490.jpg",
+      "b": "frame_006513.jpg",
+      "da3_px": 18.72908874419185,
+      "vggt_four_px": 47.31593166044921,
+      "vggt_single_px": 93.59923365209977,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006501.jpg",
+      "b": "frame_006512.jpg",
+      "da3_px": 8.188415070417712,
+      "vggt_four_px": 3.2652845330871854,
+      "vggt_single_px": 35.001874409222324,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006501.jpg",
+      "b": "frame_006514.jpg",
+      "da3_px": 7.589396041496718,
+      "vggt_four_px": 3.3187346501990875,
+      "vggt_single_px": 57.114469846631884,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006501.jpg",
+      "b": "frame_006515.jpg",
+      "da3_px": 7.08239251988222,
+      "vggt_four_px": 6.228736698275028,
+      "vggt_single_px": 41.35044651349399,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006511.jpg",
+      "b": "frame_006512.jpg",
+      "da3_px": 1.5549450200233361,
+      "vggt_four_px": 5.326978002571133,
+      "vggt_single_px": 1.9566997074095824,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006511.jpg",
+      "b": "frame_006513.jpg",
+      "da3_px": 6.725609769722466,
+      "vggt_four_px": 1.6517071555199847,
+      "vggt_single_px": 23.7842281280387,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006511.jpg",
+      "b": "frame_006514.jpg",
+      "da3_px": 5.750833617185254,
+      "vggt_four_px": 1.0064833158873585,
+      "vggt_single_px": 14.38439129477904,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006511.jpg",
+      "b": "frame_006515.jpg",
+      "da3_px": 5.935315407243607,
+      "vggt_four_px": 2.4749718834580974,
+      "vggt_single_px": 16.119589747030357,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006512.jpg",
+      "b": "frame_006514.jpg",
+      "da3_px": 6.884635332098883,
+      "vggt_four_px": 2.512894439303295,
+      "vggt_single_px": 13.030020879894312,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006513.jpg",
+      "b": "frame_006514.jpg",
+      "da3_px": 1.9019116089299328,
+      "vggt_four_px": 1.6893289781872278,
+      "vggt_single_px": 32.541904685631145,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006513.jpg",
+      "b": "frame_006515.jpg",
+      "da3_px": 3.650000053810573,
+      "vggt_four_px": 1.2692502713052258,
+      "vggt_single_px": 15.345282727100916,
+      "colmap_status": "unavailable"
+    },
+    {
+      "a": "frame_006514.jpg",
+      "b": "frame_006515.jpg",
+      "da3_px": 1.498072902888185,
+      "vggt_four_px": 1.5927076226126,
+      "vggt_single_px": 10.015070037438596,
+      "colmap_status": "unavailable"
+    }
+  ],
+  "median_of_pair_medians_px": {
+    "da3_px": 6.330462588483036,
+    "vggt_four_px": 2.493933161380696,
+    "vggt_single_px": 19.951908937534526
+  },
+  "limitation": "Planar-supported and correlated pair subset; epipolar errors do not establish metric scale, depth, full 3D pose correctness or a continuous camera path."
+}
