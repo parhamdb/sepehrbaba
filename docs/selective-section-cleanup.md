@@ -89,3 +89,14 @@ Load the generated `TRAINING/splats/scene.ply` files through a private manifest 
 A saved project records placements; it does not weld, deform, deduplicate or fill
 the source Gaussian geometry. Add further reviewed sections to the manifest with
 new IDs, restart the server, and continue aligning them against the saved area.
+
+## Retained artifacts
+
+The repository's `evidence/clean-sections/` contains reviewed input archives and
+Gaussian checkpoints through Git LFS. Run `git lfs pull` after cloning. Each input
+archive contains masks, native and filtered sparse models, frame timestamps,
+source/mask hashes, and review decisions. It excludes private runtime paths and
+credentials. Extract source frames from the retained video, then use the native
+model with the pinned undistorter to reproduce the training images; verify their
+hashes against `mask-report.json`. The filtered model and masks belong to those
+undistorted images, not directly to distorted source pixels.

@@ -1,0 +1,47 @@
+{
+  "held_out_views": 8,
+  "static_region_psnr_db": 24.37171107176915,
+  "metric_scope": "Only unmasked pixels; automatic person masks inspected separately. Scores do not prove novel-view geometry.",
+  "views": [
+    {
+      "image": "frame_006412",
+      "static_fraction": 0.9551742464581922,
+      "static_psnr_db": 20.020453562894588
+    },
+    {
+      "image": "frame_006423",
+      "static_fraction": 0.957326358634266,
+      "static_psnr_db": 24.827205445507282
+    },
+    {
+      "image": "frame_006433",
+      "static_fraction": 0.9113509294220157,
+      "static_psnr_db": 28.136616407464388
+    },
+    {
+      "image": "frame_006443",
+      "static_fraction": 0.899606589053474,
+      "static_psnr_db": 23.60445983740769
+    },
+    {
+      "image": "frame_006454",
+      "static_fraction": 0.7601453835479395,
+      "static_psnr_db": 25.51290104840024
+    },
+    {
+      "image": "frame_006465",
+      "static_fraction": 0.8302473617968825,
+      "static_psnr_db": 24.838123262660176
+    },
+    {
+      "image": "frame_006475",
+      "static_fraction": 0.9113826967760674,
+      "static_psnr_db": 25.648427976225356
+    },
+    {
+      "image": "frame_006485",
+      "static_fraction": 0.960138525833414,
+      "static_psnr_db": 30.111328738046268
+    }
+  ]
+}
