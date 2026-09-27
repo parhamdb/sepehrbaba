@@ -96,3 +96,17 @@ same 8/24 held-out cameras. It does not establish novel-view geometry or restore
 occluded detail. Masks and initialization change together, so this is an end-to-end
 cleanup comparison, not an isolated segmentation ablation. Brush optimization can
 also vary between runs; a small score change alone is not proof of improvement.
+
+The reviewed input archive is retained through Git LFS as
+`evidence/sam31-video-sections/reviewed-tracking-inputs.tar.gz` with a checksum in
+`inputs-receipt.json`. It contains per-instance tracked masks, merged proposals,
+protection maps, four correction polygons, final training masks, frame timestamps,
+and sparse camera/point models. Reuse the byte-verified undistorted source images
+from the baseline section dataset. Credentials, private worker paths, source
+image duplicates and model weights are excluded from this archive.
+
+After corrections, the later masks add only 0.059% of image area on average
+(maximum 2.118%). All approved baseline exclusions remain intact in both sections.
+Filtering masked seed observations removes 22 of 1,890 earlier points and none of
+9,976 later points. Camera positions stay fixed. These small changes limit how
+much improvement should be expected from temporal masks alone.

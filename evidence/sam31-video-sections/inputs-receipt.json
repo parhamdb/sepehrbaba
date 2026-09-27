@@ -1,0 +1,8 @@
+{
+  "archive": "reviewed-tracking-inputs.tar.gz",
+  "sha256": "759a15965b28bf169d65c2ee0b2f7d562be2d7678fdb92f2dcffccc81f884217",
+  "bytes": 11383317,
+  "json_files_checked": 325,
+  "unsafe_paths_or_private_runtime_markers": 0,
+  "contents": "Tracked instance proposals, protected merged proposals, review receipts, final masks, preserved cameras and filtered sparse initialization. No source images or model credentials."
+}

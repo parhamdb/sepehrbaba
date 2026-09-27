@@ -12,3 +12,5 @@ evidence/camera-comparison/*.mp4 filter=lfs diff=lfs merge=lfs -text
 evidence/camera-comparison/*.json.gz filter=lfs diff=lfs merge=lfs -text
 evidence/clean-sections/*.ply filter=lfs diff=lfs merge=lfs -text
 evidence/clean-sections/*.tar.gz filter=lfs diff=lfs merge=lfs -text
+evidence/sam31-video-sections/*.ply filter=lfs diff=lfs merge=lfs -text
+evidence/sam31-video-sections/*.tar.gz filter=lfs diff=lfs merge=lfs -text
