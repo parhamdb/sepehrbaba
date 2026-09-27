@@ -1,0 +1,14 @@
+{
+  "revision": "f0843a1807ad1166e31b0fd102e453c42c49a94c",
+  "status": "passed",
+  "checks": [
+    "Deployed HTML and two JSONs byte-identical to committed source",
+    "Eight original JPEG source hashes",
+    "All eight frame controls",
+    "Two point markers and toggle",
+    "Full-image view",
+    "Mobile layout",
+    "No page errors"
+  ],
+  "accepted_connection": false
+}

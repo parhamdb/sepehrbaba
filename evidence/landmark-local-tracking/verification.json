@@ -23,13 +23,22 @@
     },
     {
       "id": "live_publication",
-      "status": "untested",
-      "evidence": "Pending committed deployment."
+      "status": "passed",
+      "evidence": "Pages run36297018023 succeeded; live HTML/data/source hashes and browser controls passed. See live-validation.json."
     }
   ],
   "scientific_outcomes": {
     "A01": "unresolved; no supported seed; not tracked",
     "A02_A03": "approximate local controls only",
     "section_alignment": "not attempted; outside scope"
-  }
+  },
+  "tested_source_revision": "f0843a1807ad1166e31b0fd102e453c42c49a94c",
+  "deployment_run": 36297018023,
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "note": "Verification checks passed; scientific A01 localization remains unresolved. No connection claimed."
 }
