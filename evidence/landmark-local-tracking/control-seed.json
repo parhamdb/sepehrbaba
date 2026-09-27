@@ -1,0 +1,29 @@
+{
+  "verdict": "supported",
+  "seed_frame": "frame_006453.jpg",
+  "target_frame": "frame_006454.jpg",
+  "points": [
+    {
+      "id": "A02",
+      "x": 279,
+      "y": 619,
+      "uncertainty_px": 6,
+      "description": "Approximate visible lower-right corner of gray patch. Control seed only; endpoint localization is softened by blur."
+    },
+    {
+      "id": "A03",
+      "x": 209,
+      "y": 554,
+      "uncertainty_px": 6,
+      "description": "Approximate visible upper-left corner of gray patch at upper rim. Control seed only; edge localization is softened by blur."
+    }
+  ],
+  "reason": "The two exposed corners are sufficiently distinguishable for a bounded adjacent-frame tracking control. Supported means usable approximate control seeds, not exact pixel ground truth. This does not support or recover A01.",
+  "inspected_frames": [
+    "frame_006453.jpg",
+    "frame_006454.jpg"
+  ],
+  "inspected_contacts": [
+    "contact-040.png"
+  ]
+}

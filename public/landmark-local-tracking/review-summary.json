@@ -1,0 +1,5 @@
+{
+  "summary": "Independent GPT-6 Astra review supports A02/A03 as approximate local controls; A01 remains unresolved. Blur limits corner precision. In frame 006456, A02 is predicted visible by the forward run and invisible by the reverse run.",
+  "review_model": "gpt-6-astra",
+  "accepted_connection": false
+}

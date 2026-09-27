@@ -1,0 +1,73 @@
+{
+  "verdict": "supported_approximate_local_controls_only",
+  "points": [
+    {
+      "id": "A01",
+      "verdict": "unresolved",
+      "reason": "Green material obscures or blends with the lower-left gray-patch region; a unique physical corner is not exposed.",
+      "replacement_coordinate": null
+    },
+    {
+      "id": "A02",
+      "verdict": "supported_approximate",
+      "target_xy": [
+        278.6757507324219,
+        628.0748291015625
+      ],
+      "overlay_consistency": "No gross drift or feature switch seen; target marker follows apparent lower-right patch boundary.",
+      "identity_limit": "Blur prevents certified exact material corner or subpixel accuracy."
+    },
+    {
+      "id": "A03",
+      "verdict": "supported_approximate",
+      "target_xy": [
+        208.0431671142578,
+        562.9423980712891
+      ],
+      "overlay_consistency": "No gross drift or feature switch seen; target marker follows apparent upper-left patch/rim junction.",
+      "identity_limit": "Blur and merging with upper rim prevent certified exact material corner or subpixel accuracy."
+    }
+  ],
+  "marked_images_inspected": [
+    "marked/seed-vs-track-0.png",
+    "marked/seed-vs-track-1.png",
+    "marked/seed-vs-track-2.png",
+    "marked/seed-vs-track-3.png",
+    "marked/seed-vs-track-4.png",
+    "marked/seed-vs-track-5.png",
+    "marked/seed-vs-track-6.png",
+    "marked/seed-vs-track-7.png"
+  ],
+  "unmarked_originals_inspected": [
+    "images/frame_006453.jpg",
+    "images/frame_006454.jpg",
+    "images/frame_006548.jpg"
+  ],
+  "native_crops_inspected": [
+    "inspect-native-006453.png",
+    "inspect-native-006454.png",
+    "inspect-native-006548.png"
+  ],
+  "earlier_search_repeated": false,
+  "forced_forward_query_excluded_as_accuracy_evidence": true,
+  "forced_reverse_query_excluded_as_accuracy_evidence": true,
+  "visibility_caveat": "006456 A02 forward visible=true, reverse visible=false; strongest blurred frames cannot establish exact visibility visually.",
+  "crop_xyxy": [
+    60,
+    400,
+    500,
+    850
+  ],
+  "recorded_model_resolution_hw": [
+    384,
+    512
+  ],
+  "script_hash_matches_recorded_result": true,
+  "model_rerun": false,
+  "frame_count": 8,
+  "duration_seconds": 0.35051100000004,
+  "accepted_connection": false,
+  "full_gap_camera_recovery": false,
+  "fixes_required": [],
+  "publication_condition": "Describe A02/A03 as approximate local controls, retain A01 unresolved, and do not infer exact geometry or cross-gap recovery."
+}

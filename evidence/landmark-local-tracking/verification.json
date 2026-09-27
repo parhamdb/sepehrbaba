@@ -1,0 +1,35 @@
+{
+  "scope": "159-frame search, bounded local control, independent visual review, publication; no cross-gap reconstruction",
+  "checks": [
+    {
+      "id": "source_provenance",
+      "status": "passed",
+      "evidence": "All 159 source hashes checked for contact rendering; eight published JPEG hashes and four native crops verified."
+    },
+    {
+      "id": "thor_control",
+      "status": "passed",
+      "evidence": "Actual 8-frame CoTracker3 run; finite native coordinates; reversed-video returns recorded; script/input/model hashes retained."
+    },
+    {
+      "id": "local_browser",
+      "status": "passed",
+      "evidence": "Eight frame selections, two markers, marker/full-image toggles, mobile layout, no asset/page errors."
+    },
+    {
+      "id": "independent_review",
+      "status": "passed",
+      "evidence": "final-review.json; no required code fixes; two approximate controls, A01 unresolved."
+    },
+    {
+      "id": "live_publication",
+      "status": "untested",
+      "evidence": "Pending committed deployment."
+    }
+  ],
+  "scientific_outcomes": {
+    "A01": "unresolved; no supported seed; not tracked",
+    "A02_A03": "approximate local controls only",
+    "section_alignment": "not attempted; outside scope"
+  }
+}

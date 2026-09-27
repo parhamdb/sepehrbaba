@@ -389,4 +389,4 @@ passed its implementation checks but did not visibly resolve the dominant ghosts
 The accepted scene is unchanged; usage, limitations and preserved evidence are
 documented for a future experiment with stronger source or depth evidence.
 
-**Visual correspondence review:** [GPT-6 Astra’s marked before/after comparison](https://parhamdb.github.io/sepehrbaba/landmark-review.html) identifies a shared bag region and three tentative patch corners. [Findings and limitations](evidence/astra-landmark-review/results.md); no camera alignment accepted.
+**Visual correspondence review:** [GPT-6 Astra’s marked before/after comparison](https://parhamdb.github.io/sepehrbaba/landmark-review.html) identifies a shared bag region. A01 remains unresolved; A02/A03 are approximate visual hypotheses. [The nearby-frame search and CoTracker control](https://parhamdb.github.io/sepehrbaba/landmark-local-tracking.html) searched 159 frames and tracked two visible corners over 0.351 seconds before the gap. [Results and reproducibility](evidence/landmark-local-tracking/results.md); no cross-gap camera alignment accepted.

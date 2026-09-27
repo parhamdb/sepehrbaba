@@ -1,0 +1,327 @@
+{
+  "schema": 1,
+  "method": "CoTracker3 offline; original-frame crop; reversed-video cycle check",
+  "model_revision": "82e02e8029753ad4ef13cf06be7f4fc5facdda4d",
+  "model_resolution_hw": [
+    384,
+    512
+  ],
+  "torch_version": "2.10.0",
+  "identity": {
+    "checkpoint_sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834",
+    "script_sha256": "8f68be9c3b278b0393ad8135045d962f1b761ab57015eb0ed88bb8d0458dd52f",
+    "selection_sha256": "d5b5963ac847892fb227bc1620285654441bfb88105f216be4e44b8840814b16",
+    "seed_sha256": "b20b4809b214b130db464839c6cb94fda7fa373705ef20270e1335d9ca1583c6"
+  },
+  "crop_xyxy": [
+    60,
+    400,
+    500,
+    850
+  ],
+  "seed_frame": "frame_006453.jpg",
+  "target_frame": "frame_006454.jpg",
+  "points": [
+    {
+      "id": "A02",
+      "x": 279,
+      "y": 619,
+      "uncertainty_px": 6,
+      "description": "Approximate visible lower-right corner of gray patch. Control seed only; endpoint localization is softened by blur."
+    },
+    {
+      "id": "A03",
+      "x": 209,
+      "y": 554,
+      "uncertainty_px": 6,
+      "description": "Approximate visible upper-left corner of gray patch at upper rim. Control seed only; edge localization is softened by blur."
+    }
+  ],
+  "elapsed_seconds": 1.0847888551652431,
+  "target_predictions": [
+    {
+      "id": "A02",
+      "xy": [
+        278.6757507324219,
+        628.0748291015625
+      ],
+      "predicted_visible": true,
+      "cycle_error_native_px": 0.528421355737009,
+      "reverse_seed_predicted_visible": true
+    },
+    {
+      "id": "A03",
+      "xy": [
+        208.0431671142578,
+        562.9423980712891
+      ],
+      "predicted_visible": true,
+      "cycle_error_native_px": 0.6412477145336695,
+      "reverse_seed_predicted_visible": true
+    }
+  ],
+  "frames": [
+    {
+      "name": "frame_006450.jpg",
+      "timestamp": 410.037178,
+      "xy": [
+        [
+          271.93638610839844,
+          544.8913879394531
+        ],
+        [
+          206.16746520996094,
+          497.65406036376953
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          270.998291015625,
+          546.4749145507812
+        ],
+        [
+          206.28807067871094,
+          498.58663177490234
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "frame_006451.jpg",
+      "timestamp": 410.087256,
+      "xy": [
+        [
+          276.28855895996094,
+          577.7601623535156
+        ],
+        [
+          207.91375732421875,
+          515.0876083374023
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          278.71519470214844,
+          576.3571319580078
+        ],
+        [
+          208.32020568847656,
+          515.8737640380859
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "frame_006452.jpg",
+      "timestamp": 410.137322,
+      "xy": [
+        [
+          277.89610290527344,
+          608.4826049804688
+        ],
+        [
+          208.90008544921875,
+          546.4987335205078
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          277.8905334472656,
+          608.3808441162109
+        ],
+        [
+          208.25071716308594,
+          546.2763824462891
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "frame_006453.jpg",
+      "timestamp": 410.1874,
+      "xy": [
+        [
+          279.0,
+          618.9999847412109
+        ],
+        [
+          208.99998474121094,
+          553.9999847412109
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          279.42491149902344,
+          619.3141326904297
+        ],
+        [
+          209.4528045654297,
+          554.4540557861328
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "frame_006454.jpg",
+      "timestamp": 410.237478,
+      "xy": [
+        [
+          278.6757507324219,
+          628.0748291015625
+        ],
+        [
+          208.0431671142578,
+          562.9423980712891
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          278.6757507324219,
+          628.0748138427734
+        ],
+        [
+          208.0431671142578,
+          562.9423828125
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "frame_006455.jpg",
+      "timestamp": 410.287544,
+      "xy": [
+        [
+          278.64427185058594,
+          622.9619750976562
+        ],
+        [
+          209.2667236328125,
+          559.3372955322266
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          279.6682891845703,
+          623.1943969726562
+        ],
+        [
+          209.0310821533203,
+          560.3356628417969
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "frame_006456.jpg",
+      "timestamp": 410.337622,
+      "xy": [
+        [
+          267.3212127685547,
+          588.8798675537109
+        ],
+        [
+          193.1510772705078,
+          525.1374588012695
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          267.8972473144531,
+          589.5159759521484
+        ],
+        [
+          192.70501708984375,
+          520.7922821044922
+        ]
+      ],
+      "reverse_predicted_visible": [
+        false,
+        true
+      ]
+    },
+    {
+      "name": "frame_006457.jpg",
+      "timestamp": 410.387689,
+      "xy": [
+        [
+          250.54791259765625,
+          555.0133361816406
+        ],
+        [
+          175.2820281982422,
+          487.1603012084961
+        ]
+      ],
+      "predicted_visible": [
+        true,
+        true
+      ],
+      "reverse_xy": [
+        [
+          251.67794799804688,
+          556.0482940673828
+        ],
+        [
+          176.09686279296875,
+          487.9713134765625
+        ]
+      ],
+      "reverse_predicted_visible": [
+        true,
+        true
+      ]
+    }
+  ],
+  "limitations": [
+    "Visibility is a model prediction, thresholded by the official predictor at 0.9; query-frame visibility/coordinates are forced by that predictor.",
+    "Cycle consistency uses the same model and cannot certify semantic identity or stationarity.",
+    "No cross-gap solve or accepted camera connection; independent marked-image review required."
+  ],
+  "accepted_connection": false
+}

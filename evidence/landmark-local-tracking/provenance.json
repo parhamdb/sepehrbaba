@@ -1,0 +1,63 @@
+{
+  "source_crop_bounds_xyxy": {
+    "006449": [
+      105,
+      355,
+      265,
+      505
+    ],
+    "006453": [
+      145,
+      520,
+      305,
+      670
+    ],
+    "006454": [
+      145,
+      530,
+      305,
+      680
+    ],
+    "006548": [
+      820,
+      850,
+      1050,
+      1050
+    ]
+  },
+  "source_crop_check": "All four are exact unenhanced decoded JPEG pixel crops, right/bottom exclusive",
+  "artifacts_sha256": {
+    "contacts/contact-000.png": "c5acc136e6ac751c9aeeb523dc294c4d171b0228669e91595bad5b89ea94e3f6",
+    "contacts/contact-020.png": "d5dcd233c1cb582e32ac1ea24df1a25cf088a98be7789ce48fcb64547221e082",
+    "contacts/contact-040.png": "621c13a2a4261c95d087a0d88b42d67868fb15c42a2b16ffef8e74970aec0960",
+    "contacts/contact-060.png": "7182fd5df7ebdee5b74dd0d819c8ecdc41b6ae22b7b42f836b0fb4425d411339",
+    "contacts/contact-080.png": "e8429857a744cd9e74b8a29d252d9af9ec88957d6713c2b68d50eff75bd1badb",
+    "contacts/contact-100.png": "263ef75d34e398d5f282aaa2fae3310ca21de62416def1efe020c99f2cf7d090",
+    "contacts/contact-120.png": "e6760117a40a37cfa8a9ccc413849b6165009cbe46b1a242ac3e15bc5b2f91c5",
+    "contacts/contact-140.png": "5c6c2cedd11c751f0a468c3625f2a2b0e9ec9345cef749620a9cc4ce3c0ad45c",
+    "control-seed.json": "b20b4809b214b130db464839c6cb94fda7fa373705ef20270e1335d9ca1583c6",
+    "control-tracks.json": "ffe70021e73c5895b55dd1a0e7d7a808244d86894cd5cd8021a238639bc69fc2",
+    "final-review.json": "d8c94bdbc525c26c8fe48754770c7b0ef81243565f9e2fa0c21ae44f51e426b3",
+    "final-review.md": "ba7fcac6132c03e98ee2d71c048d8e74cd7cc66b3ba007f0113f31442876fb87",
+    "inspect-native-006449.png": "6506ad478016f5a5030a1539bfa1b213793dc7edae3aec3b8a9f310be162f589",
+    "inspect-native-006453.png": "f5572f6225009c68465cf1e5c1953a497b24f5afeb4fcb4e4f2610500a6da70a",
+    "inspect-native-006454.png": "b6b06e2a084fcbf63f40d40eb9bbd7199b986e21c501eaa9aeac7fd50eb70c7f",
+    "inspect-native-006548.png": "c95b8a20820b22db00f05e2e5e35b96a6a84f26a7952ba687d19de02f568f0c4",
+    "marked/seed-vs-track-0.png": "6ab4b81aee793ba6cae50d2ca621b1978d0fadb0dd8868031b3f8366ebba5841",
+    "marked/seed-vs-track-1.png": "5eb05349ce93f207b01a74d5936a2b42f050c55818698af5b8149d6a16fe6cf9",
+    "marked/seed-vs-track-2.png": "415c6a64bd2e671ab1cadeaef0ec6beb8384c1652b819db0b5a04f64d7c80ba9",
+    "marked/seed-vs-track-3.png": "a3d2d9d564ebf815a973e173f9d84bafe8b2e2996bfc4678bab4d679d9ea06d8",
+    "marked/seed-vs-track-4.png": "a5203dd06cb59fd65449811f8a420e1c140b68d24e37d1a80a758ce611315b37",
+    "marked/seed-vs-track-5.png": "e553f92d737e6cd01ed5b0ede3b3e018337ada2b5ff454a7a480f9f7feafbb39",
+    "marked/seed-vs-track-6.png": "9a2832502a45a2c45a564b8c5e705bc66b5fbe573a771a961bf763303ca0bc9e",
+    "marked/seed-vs-track-7.png": "79c920edf67ce8927fdd94185d5e8e4ae112ba2d6e63b34e835bf10f66b2b745",
+    "seed-review.json": "ffccb5146235eca23443efe4b2a9761fc705ce256c8c9d0375edf72c5017af4c",
+    "seed-review.md": "8c860610ebf434322a3bf219e132a8410225c595f047e3559ec5b770b1dd6a25",
+    "selection.json": "d5b5963ac847892fb227bc1620285654441bfb88105f216be4e44b8840814b16"
+  },
+  "review_models": [
+    "gpt-6-astra",
+    "gpt-6-astra"
+  ],
+  "accepted_connection": false
+}

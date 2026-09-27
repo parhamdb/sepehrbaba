@@ -1,0 +1,34 @@
+{
+  "verdict": "unresolved",
+  "seed_frame": null,
+  "target_frame": "frame_006454.jpg",
+  "points": [],
+  "reason": "No inspected frame exposes an unambiguous lower-left material corner of the gray patch. In the clearest pre-gap views, especially 006453 and 006454, the green area overlaps or visually merges with the lower-left gray boundary. The clearer later 006548 view also has this ambiguity. A gray-to-green junction would not establish the requested material corner, so no A01 coordinate is supplied.",
+  "inspected_frames": [
+    "frame_006423.jpg",
+    "frame_006434.jpg",
+    "frame_006441.jpg",
+    "frame_006442.jpg",
+    "frame_006449.jpg",
+    "frame_006453.jpg",
+    "frame_006454.jpg",
+    "frame_006457.jpg",
+    "frame_006459.jpg",
+    "frame_006463.jpg",
+    "frame_006464.jpg",
+    "frame_006466.jpg",
+    "frame_006468.jpg",
+    "frame_006477.jpg",
+    "frame_006548.jpg"
+  ],
+  "inspected_contacts": [
+    "contact-000.png",
+    "contact-020.png",
+    "contact-040.png",
+    "contact-060.png",
+    "contact-080.png",
+    "contact-100.png",
+    "contact-120.png",
+    "contact-140.png"
+  ]
+}
