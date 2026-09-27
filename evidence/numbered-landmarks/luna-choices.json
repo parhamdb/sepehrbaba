@@ -1,0 +1,66 @@
+{
+  "model": "gpt-6-luna",
+  "questions": [
+    {
+      "id": "Q1",
+      "choice": "none",
+      "confidence": "medium",
+      "reason": "The query is on a smooth segment of the white cord near a dark boundary. Choice 2 appears to be on the same cord near its bend, but the cord is flexible and there is no visible mark identifying the queried material point along it. A shared cord/region is insufficient.",
+      "physical_point_identifiable": false
+    },
+    {
+      "id": "Q2",
+      "choice": "none",
+      "confidence": "high",
+      "reason": "The query lies in a smooth, dark reflective patch. None of the four target choices shows a distinctive mark or corner that can be tied to this particular point; similar dark reflections and boundaries are not enough to establish identity.",
+      "physical_point_identifiable": false
+    },
+    {
+      "id": "Q3",
+      "choice": "none",
+      "confidence": "medium",
+      "reason": "The query is on a blurry dark/light boundary beside the cord. Target choices are on other broad dark, green, or tan transitions; no persistent material mark identifies one as the same point.",
+      "physical_point_identifiable": false
+    },
+    {
+      "id": "Q4",
+      "choice": "none",
+      "confidence": "medium",
+      "reason": "The source point is at a soft, poorly resolved edge next to a large foreground occlusion. The target choices fall on separate broad regions or reflective patches, with no distinctive material point to match. Occlusion and changing support make this especially unreliable.",
+      "physical_point_identifiable": false
+    },
+    {
+      "id": "Q5",
+      "choice": "none",
+      "confidence": "medium",
+      "reason": "The source point is near a blurred boundary between a tan soft form and dark reflective material. Several target choices lie around similar boundaries, but no stable fleck, seam, or corner identifies the same physical point; the flexible/soft support may also shift.",
+      "physical_point_identifiable": false
+    },
+    {
+      "id": "Q6",
+      "choice": "unclear",
+      "confidence": "low",
+      "reason": "The query is a very blurred dark patch near an edge. The pixels do not reveal whether it is a stable material feature or shadow/reflection, so I cannot determine whether any target option corresponds to the same point.",
+      "physical_point_identifiable": false
+    }
+  ],
+  "inspected_boards": [
+    "Q1-marked.png",
+    "Q1-unmarked.png",
+    "Q2-marked.png",
+    "Q2-unmarked.png",
+    "Q3-marked.png",
+    "Q3-unmarked.png",
+    "Q4-marked.png",
+    "Q4-unmarked.png",
+    "Q5-marked.png",
+    "Q5-unmarked.png",
+    "Q6-marked.png",
+    "Q6-unmarked.png"
+  ],
+  "limitations": [
+    "Reviewed the twelve numbered boards and original frames 006453, 006454, 006548, and 006549. No feature or matcher evidence was consulted.",
+    "The source is blurred and contains smooth reflective material, flexible cord, soft forms, and partial occlusion. These views support broad region judgments, not precise point correspondence.",
+    "No coordinates were generated. These are visual hypotheses only, not geometric acceptance evidence."
+  ]
+}

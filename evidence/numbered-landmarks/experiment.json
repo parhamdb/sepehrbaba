@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "pairs": [
+    [
+      "frame_006454.jpg",
+      "frame_006548.jpg"
+    ],
+    [
+      "frame_006453.jpg",
+      "frame_006548.jpg"
+    ],
+    [
+      "frame_006454.jpg",
+      "frame_006549.jpg"
+    ]
+  ],
+  "main_pair_index": 0,
+  "setting": "precise",
+  "source_roi_xyxy": [
+    155,
+    520,
+    300,
+    675
+  ],
+  "target_roi_xyxy": [
+    805,
+    825,
+    1065,
+    1090
+  ],
+  "review_source_crop_xyxy": [
+    110,
+    450,
+    360,
+    750
+  ],
+  "review_target_crop_xyxy": [
+    740,
+    720,
+    1080,
+    1160
+  ],
+  "maximum_reference_points": 6,
+  "minimum_reference_separation_px": 16,
+  "options_per_question": 4,
+  "option_order_seed": 20260927,
+  "reference_selection": "SIFT response, spatially separated, fixed source region; no old manual point coordinates",
+  "geometry_plan": "Report forward/reverse warp consistency, same-side neighboring-view checks, and leave-one-out local homography if at least six visually selected non-collinear points remain. No camera alignment accepted from one flexible patch.",
+  "thresholds": {
+    "sift_contrast": 0.004,
+    "target_snap_max_px": 25,
+    "warp_cycle_max_native_px": 10,
+    "local_homography_ransac_px": 5,
+    "held_out_local_reprojection_px": 5
+  },
+  "image_sha256": {
+    "frame_006453.jpg": "c9d8b2db47539f6ff7b159c4f6376de17f35b01fd9c4f22954335c398b3925ca",
+    "frame_006454.jpg": "55ef265cfa4ac5895392810a30dc976e3df7c2ee2c4752dc60f1409c8cafa22b",
+    "frame_006548.jpg": "dd471a1706eb281811de4c2f16db273806cc105cb21d0865edc5d5bcecb3ce4d",
+    "frame_006549.jpg": "5351c605981f845ef1f42ced28136bc8f111f932de3e974044edc69c81e6130d"
+  },
+  "samples": [
+    {
+      "name": "frame_006453.jpg",
+      "timestamp": 410.1874,
+      "side": "before"
+    },
+    {
+      "name": "frame_006454.jpg",
+      "timestamp": 410.237478,
+      "side": "before"
+    },
+    {
+      "name": "frame_006548.jpg",
+      "timestamp": 415.494189,
+      "side": "after"
+    },
+    {
+      "name": "frame_006549.jpg",
+      "timestamp": 415.544256,
+      "side": "after"
+    }
+  ],
+  "accepted_connection": false
+}

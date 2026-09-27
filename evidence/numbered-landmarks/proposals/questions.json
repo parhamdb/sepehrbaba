@@ -1,0 +1,329 @@
+{
+  "method": "Numbered detector choices; none and unclear permitted; scores hidden during visual review",
+  "questions": [
+    {
+      "id": "Q1",
+      "source_frame": "frame_006454.jpg",
+      "target_frame": "frame_006548.jpg",
+      "source_xy": [
+        174.26446533203125,
+        571.2757568359375
+      ],
+      "source_scale_px": 7.895552158355713,
+      "options": [
+        {
+          "label": "1",
+          "target_feature_index": 161,
+          "xy": [
+            1017.8339233398438,
+            897.4705810546875
+          ]
+        },
+        {
+          "label": "2",
+          "target_feature_index": 1,
+          "xy": [
+            842.1036987304688,
+            910.2063598632812
+          ]
+        },
+        {
+          "label": "3",
+          "target_feature_index": 287,
+          "xy": [
+            813.7805786132812,
+            1084.1348876953125
+          ]
+        },
+        {
+          "label": "4",
+          "target_feature_index": 265,
+          "xy": [
+            913.816162109375,
+            1054.226806640625
+          ]
+        }
+      ],
+      "allowed_answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "none",
+        "unclear"
+      ]
+    },
+    {
+      "id": "Q2",
+      "source_frame": "frame_006454.jpg",
+      "target_frame": "frame_006548.jpg",
+      "source_xy": [
+        197.81858825683594,
+        582.8145141601562
+      ],
+      "source_scale_px": 24.6562557220459,
+      "options": [
+        {
+          "label": "1",
+          "target_feature_index": 106,
+          "xy": [
+            893.9470825195312,
+            927.316650390625
+          ]
+        },
+        {
+          "label": "2",
+          "target_feature_index": 10,
+          "xy": [
+            805.2274169921875,
+            936.4429321289062
+          ]
+        },
+        {
+          "label": "3",
+          "target_feature_index": 48,
+          "xy": [
+            974.6596069335938,
+            906.5687255859375
+          ]
+        },
+        {
+          "label": "4",
+          "target_feature_index": 28,
+          "xy": [
+            940.4957275390625,
+            903.9443969726562
+          ]
+        }
+      ],
+      "allowed_answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "none",
+        "unclear"
+      ]
+    },
+    {
+      "id": "Q3",
+      "source_frame": "frame_006454.jpg",
+      "target_frame": "frame_006548.jpg",
+      "source_xy": [
+        174.75592041015625,
+        617.8268432617188
+      ],
+      "source_scale_px": 10.449771881103516,
+      "options": [
+        {
+          "label": "1",
+          "target_feature_index": 103,
+          "xy": [
+            857.9890747070312,
+            979.57958984375
+          ]
+        },
+        {
+          "label": "2",
+          "target_feature_index": 60,
+          "xy": [
+            973.6314697265625,
+            979.5589599609375
+          ]
+        },
+        {
+          "label": "3",
+          "target_feature_index": 78,
+          "xy": [
+            996.3465576171875,
+            919.4031982421875
+          ]
+        },
+        {
+          "label": "4",
+          "target_feature_index": 59,
+          "xy": [
+            1036.28271484375,
+            860.1461181640625
+          ]
+        }
+      ],
+      "allowed_answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "none",
+        "unclear"
+      ]
+    },
+    {
+      "id": "Q4",
+      "source_frame": "frame_006454.jpg",
+      "target_frame": "frame_006548.jpg",
+      "source_xy": [
+        155.00094604492188,
+        667.059326171875
+      ],
+      "source_scale_px": 14.8726806640625,
+      "options": [
+        {
+          "label": "1",
+          "target_feature_index": 224,
+          "xy": [
+            805.7632446289062,
+            1034.6427001953125
+          ]
+        },
+        {
+          "label": "2",
+          "target_feature_index": 45,
+          "xy": [
+            921.1346435546875,
+            922.0758056640625
+          ]
+        },
+        {
+          "label": "3",
+          "target_feature_index": 62,
+          "xy": [
+            855.3699340820312,
+            1013.2565307617188
+          ]
+        },
+        {
+          "label": "4",
+          "target_feature_index": 39,
+          "xy": [
+            918.62158203125,
+            944.7708129882812
+          ]
+        }
+      ],
+      "allowed_answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "none",
+        "unclear"
+      ]
+    },
+    {
+      "id": "Q5",
+      "source_frame": "frame_006454.jpg",
+      "target_frame": "frame_006548.jpg",
+      "source_xy": [
+        263.8873596191406,
+        579.5418090820312
+      ],
+      "source_scale_px": 10.248568534851074,
+      "options": [
+        {
+          "label": "1",
+          "target_feature_index": 82,
+          "xy": [
+            1015.788818359375,
+            936.8605346679688
+          ]
+        },
+        {
+          "label": "2",
+          "target_feature_index": 169,
+          "xy": [
+            996.6216430664062,
+            889.4462280273438
+          ]
+        },
+        {
+          "label": "3",
+          "target_feature_index": 146,
+          "xy": [
+            1002.8492431640625,
+            924.6383056640625
+          ]
+        },
+        {
+          "label": "4",
+          "target_feature_index": 103,
+          "xy": [
+            857.9890747070312,
+            979.57958984375
+          ]
+        }
+      ],
+      "allowed_answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "none",
+        "unclear"
+      ]
+    },
+    {
+      "id": "Q6",
+      "source_frame": "frame_006454.jpg",
+      "target_frame": "frame_006548.jpg",
+      "source_xy": [
+        184.13514709472656,
+        649.7157592773438
+      ],
+      "source_scale_px": 5.553433895111084,
+      "options": [
+        {
+          "label": "1",
+          "target_feature_index": 5,
+          "xy": [
+            836.9140014648438,
+            894.42333984375
+          ]
+        },
+        {
+          "label": "2",
+          "target_feature_index": 37,
+          "xy": [
+            1013.2166748046875,
+            957.0270385742188
+          ]
+        },
+        {
+          "label": "3",
+          "target_feature_index": 59,
+          "xy": [
+            1036.28271484375,
+            860.1461181640625
+          ]
+        },
+        {
+          "label": "4",
+          "target_feature_index": 185,
+          "xy": [
+            825.6904907226562,
+            1021.0142211914062
+          ]
+        }
+      ],
+      "allowed_answers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "none",
+        "unclear"
+      ]
+    }
+  ],
+  "source_crop_xyxy": [
+    110,
+    450,
+    360,
+    750
+  ],
+  "target_crop_xyxy": [
+    740,
+    720,
+    1080,
+    1160
+  ]
+}

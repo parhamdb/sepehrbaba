@@ -1,0 +1,17 @@
+{
+  "source": "Browser screenshots: SVG overlays over unchanged original JPEG pixels",
+  "sha256": {
+    "Q1-marked.png": "925531c77be0b8b87a3623891a5997b0f838fd2284d6dd4551c66891b67fb56e",
+    "Q1-unmarked.png": "074d8976734563a350657e4879b5f5a7e1256560578ca63b7fea7a1e8f7d832d",
+    "Q2-marked.png": "34ea2f0795a7522425d02e7e945f63b9ede62dfbb0f8a72d52b23bad4984b350",
+    "Q2-unmarked.png": "a0c833fb9f307262602f4143643a67968d0996aefcd55b580295ef061fa5c869",
+    "Q3-marked.png": "51d618137ff0c675269f2654c26fae6fb5522ba5a847427b3bdf7221dc3418f3",
+    "Q3-unmarked.png": "1cef6bcf7d168b221eba73f595800665123a16db3f8842ae2950eec18aac02b1",
+    "Q4-marked.png": "74e5993df32631874e3eb93d343f6f4c391da94d59d4eafecc55a44948c4b302",
+    "Q4-unmarked.png": "bbdf4f13741787d8a076250b5284ddbf97f779a0263470a98e2563b62a1d16e0",
+    "Q5-marked.png": "6ce01156c95ed46afcc63c8c747a303fd636d2d7487d0864b439cbcf63c59af0",
+    "Q5-unmarked.png": "190877d97b0bb580329da997941ded05e2712b28c3f4cc7e266c8058eda767bd",
+    "Q6-marked.png": "baca5f343eec5a3f6a3772c06a353cf88fdbce690d76bcf82d25e586c365774e",
+    "Q6-unmarked.png": "02d3a31f0a1770c36c6365b56245b56ad0fe1f101385b5cec58e2f9e182a7ae7"
+  }
+}

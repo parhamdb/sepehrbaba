@@ -104,3 +104,11 @@ part of this widened visual-search experiment.
 The next numerical experiment should use the strongest surviving frame pairs,
 reviewed regions and separate held-out observations. A weak shortlist is an
 instruction to search for more evidence, not permission to force an alignment.
+
+## Completed numbered-choice trial
+
+The proposed detector-and-numbered-choice approach was run on three RoMa v2 pairs
+with six source queries. Luna abstained on all six. Five model proposals passed
+coarse snap/cycle screens, showing why numerical consistency needs visual and
+physical checks. No homography or section connection was accepted.
+[Results, raw review, thresholds and reproduction](../evidence/numbered-landmarks/results.md).

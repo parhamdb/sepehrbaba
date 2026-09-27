@@ -1,0 +1,174 @@
+{
+  "summary": "Luna identified 0 of 6 physical point correspondences. No camera connection accepted.",
+  "questions": [
+    {
+      "id": "Q1",
+      "summary": "Luna: none. The query is on a smooth segment of the white cord near a dark boundary. Choice 2 appears to be on the same cord near its bend, but the cord is flexible and there is no visible mark identifying the queried material point along it. A shared cord/region is insufficient.",
+      "visual_review": {
+        "id": "Q1",
+        "choice": "none",
+        "confidence": "medium",
+        "reason": "The query is on a smooth segment of the white cord near a dark boundary. Choice 2 appears to be on the same cord near its bend, but the cord is flexible and there is no visible mark identifying the queried material point along it. A shared cord/region is insufficient.",
+        "physical_point_identifiable": false
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "2",
+        "snap_distance_px": 6.205414596236963,
+        "warp_cycle_error_px": 0.6066995124565364,
+        "source_neighbor_prediction_delta_px": 1.6779484458486884,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 0.03241613507270813,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.009728934615850449,
+        "target_neighbor_prediction_delta_px": 6.707103044162162,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": null,
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q2",
+      "summary": "Luna: none. The query lies in a smooth, dark reflective patch. None of the four target choices shows a distinctive mark or corner that can be tied to this particular point; similar dark reflections and boundaries are not enough to establish identity.",
+      "visual_review": {
+        "id": "Q2",
+        "choice": "none",
+        "confidence": "high",
+        "reason": "The query lies in a smooth, dark reflective patch. None of the four target choices shows a distinctive mark or corner that can be tied to this particular point; similar dark reflections and boundaries are not enough to establish identity.",
+        "physical_point_identifiable": false
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "1",
+        "snap_distance_px": 3.508583782672038,
+        "warp_cycle_error_px": 2.1908814715603127,
+        "source_neighbor_prediction_delta_px": 1.6382683920705063,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 0.13608360290527344,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.24303096532821655,
+        "target_neighbor_prediction_delta_px": 3.2752468185991894,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": null,
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q3",
+      "summary": "Luna: none. The query is on a blurry dark/light boundary beside the cord. Target choices are on other broad dark, green, or tan transitions; no persistent material mark identifies one as the same point.",
+      "visual_review": {
+        "id": "Q3",
+        "choice": "none",
+        "confidence": "medium",
+        "reason": "The query is on a blurry dark/light boundary beside the cord. Target choices are on other broad dark, green, or tan transitions; no persistent material mark identifies one as the same point.",
+        "physical_point_identifiable": false
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "1",
+        "snap_distance_px": 15.91302858541837,
+        "warp_cycle_error_px": 2.066334830626808,
+        "source_neighbor_prediction_delta_px": 4.647699049872259,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 1.2118157148361206,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.03241857513785362,
+        "target_neighbor_prediction_delta_px": 15.583944320902818,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": null,
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q4",
+      "summary": "Luna: none. The source point is at a soft, poorly resolved edge next to a large foreground occlusion. The target choices fall on separate broad regions or reflective patches, with no distinctive material point to match. Occlusion and changing support make this especially unreliable.",
+      "visual_review": {
+        "id": "Q4",
+        "choice": "none",
+        "confidence": "medium",
+        "reason": "The source point is at a soft, poorly resolved edge next to a large foreground occlusion. The target choices fall on separate broad regions or reflective patches, with no distinctive material point to match. Occlusion and changing support make this especially unreliable.",
+        "physical_point_identifiable": false
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "1",
+        "snap_distance_px": 46.34331559964471,
+        "warp_cycle_error_px": 16.162605034363093,
+        "source_neighbor_prediction_delta_px": 26.44142570486342,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 4.405429363250732,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.22629353404045105,
+        "target_neighbor_prediction_delta_px": 44.30932619840617,
+        "passes_snap_and_cycle_limits": false
+      },
+      "selected_option": null,
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q5",
+      "summary": "Luna: none. The source point is near a blurred boundary between a tan soft form and dark reflective material. Several target choices lie around similar boundaries, but no stable fleck, seam, or corner identifies the same physical point; the flexible/soft support may also shift.",
+      "visual_review": {
+        "id": "Q5",
+        "choice": "none",
+        "confidence": "medium",
+        "reason": "The source point is near a blurred boundary between a tan soft form and dark reflective material. Several target choices lie around similar boundaries, but no stable fleck, seam, or corner identifies the same physical point; the flexible/soft support may also shift.",
+        "physical_point_identifiable": false
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "3",
+        "snap_distance_px": 4.7087369505417564,
+        "warp_cycle_error_px": 2.02440963562718,
+        "source_neighbor_prediction_delta_px": 5.065091671257326,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 0.4889225959777832,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.563439130783081,
+        "target_neighbor_prediction_delta_px": 7.418471817787324,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": null,
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q6",
+      "summary": "Luna: unclear. The query is a very blurred dark patch near an edge. The pixels do not reveal whether it is a stable material feature or shadow/reflection, so I cannot determine whether any target option corresponds to the same point.",
+      "visual_review": {
+        "id": "Q6",
+        "choice": "unclear",
+        "confidence": "low",
+        "reason": "The query is a very blurred dark patch near an edge. The pixels do not reveal whether it is a stable material feature or shadow/reflection, so I cannot determine whether any target option corresponds to the same point.",
+        "physical_point_identifiable": false
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "4",
+        "snap_distance_px": 3.4398544542590557,
+        "warp_cycle_error_px": 8.117660260087016,
+        "source_neighbor_prediction_delta_px": 3.4369769683387554,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 43.91529083251953,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.0030517578125,
+        "target_neighbor_prediction_delta_px": 4.6214455144323,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": null,
+      "accepted_correspondence": false
+    }
+  ],
+  "geometry": {
+    "status": "blocked",
+    "reason": "Need six visually identifiable corresponding points; found 0.",
+    "supported_points": 0,
+    "homography_fitted": false
+  },
+  "thresholds": {
+    "sift_contrast": 0.004,
+    "target_snap_max_px": 25,
+    "warp_cycle_max_native_px": 10,
+    "local_homography_ransac_px": 5,
+    "held_out_local_reprojection_px": 5
+  },
+  "accepted_connection": false,
+  "limitations": [
+    "Model round-trip and neighboring-view consistency are not independent physical correspondence evidence.",
+    "Neighboring checks span about 0.05 seconds on each side, not the missing interval.",
+    "All queries lie in one flexible or occluded region. This experiment does not rule out matches elsewhere."
+  ]
+}
