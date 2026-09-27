@@ -41,6 +41,8 @@ with its source.
 
 **Latest landmark test:** [inspect six numbered choices](https://parhamdb.github.io/sepehrbaba/numbered-landmark-review.html). RoMa v2 produced candidates; Luna abstained, and a subsequent human review selected six matches. The local planar geometry check failed; both reviews are retained. [Reproducible method and retained rejections](evidence/numbered-landmarks/results.md). No new section join.
 
+**Depth-aware camera test:** [watch the projection overlays](https://parhamdb.github.io/sepehrbaba/depth-landmark-review.html). Your six selections were tested using cached depth and neighboring-frame tracking. Both camera hypotheses failed validation; no join was applied. [Measurements and reproduction](evidence/depth-landmarks/results.md).
+
 ## The video and the father behind it
 
 - **January 23, 2026:** Vahid Online's publication post is timestamped on this

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Depth-aware camera hypothesis — Sepehr Baba</title>
+<style>body{font:17px/1.55 system-ui;background:#11151a;color:#eee;max-width:1100px;margin:auto;padding:20px}a{color:#8bd6ff}video{width:100%;max-height:85vh;background:#000}.note{background:#242322;border-left:4px solid #f7c85c;padding:12px}select{font:inherit;padding:8px;background:#25303a;color:white}table{border-collapse:collapse;width:100%}th,td{padding:8px;text-align:left;border-bottom:1px solid #445}.scroll{overflow:auto}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>
+<nav><a href="numbered-landmark-review.html">Your six selected matches</a> · <a href="https://github.com/parhamdb/sepehrbaba/blob/main/evidence/depth-landmarks/results.md">Method, results and reproducible scripts</a></nav>
+<h1>Testing the selected matches in 3D</h1>
+<p id="status" role="status">Loading camera checks…</p>
+<p class="note">Graphic source imagery depicts deceased people. This is an unverified camera hypothesis. The two short windows are shown slowly side by side; the missing interval is not reconstructed. Neither candidate camera passed validation, and no scene join was applied.</p>
+<label>Direction <select id="direction"><option value="before_to_after">Earlier depth → later camera</option><option value="after_to_before">Later depth → earlier camera</option></select></label>
+<video id="video" controls playsinline preload="metadata"></video>
+<p><a id="download">Open / download this overlay</a></p>
+<p>Circles: <strong>yellow = your selected seed</strong>, green = locally tracked, grey = unreliable track. Crosses show the camera's predicted positions. Lines show disagreement. The left panel checks existing local camera motion; the right panel checks the candidate connection.</p>
+<p id="summary"></p><div class="scroll"><table><thead><tr><th>Landmark</th><th>Seed fit error</th><th>Excluded-point error</th></tr></thead><tbody id="errors"></tbody></table></div>
+<p>Errors are measured in original-image pixels; the fixed check uses 5 pixels. Each excluded-point test fits the other five landmarks. Nearby-frame errors are checks on the same points using cached camera motion, not independent proof from other scene objects.</p>
+<p>DA3 depth confidence is particularly weak at the earlier seed. Tracking also loses points at image edges. These failures do not establish that your matches are wrong; depth error, tracking drift, surface motion and incorrect correspondence remain possible causes. No separate stationary landmark has verified this connection.</p>
+<details><summary>Numerical record</summary><pre id="details"></pre></details>
+<p><a href="depth-landmark-review/report.json">Complete measurements</a> · <a href="https://github.com/parhamdb/sepehrbaba/blob/main/evidence/depth-landmarks/experiment.json">Frozen inputs and thresholds</a></p>
+<script>
+const $=id=>document.getElementById(id);let data;
+function render(){const name=$('direction').value,f=data.fits[name],v=f.variants.shared_lens;const url='depth-landmark-review/'+name+'.mp4';$('video').src=url;$('video').poster='depth-landmark-review/'+name+'-10.jpg';$('download').href=url;$('status').textContent='Both 3D camera hypotheses failed the seed and excluded-point checks. No verified join.';$('summary').textContent=`Withheld neighboring views: median error ${f.summary.temporal_median_error_px?.toFixed(2)??'unavailable'} pixels over ${f.summary.temporal_usable_samples} usable point observations. Separate stationary-landmark validation is unavailable.`;$('errors').replaceChildren(...v.fit.error_px.map((e,i)=>{const tr=document.createElement('tr');for(const value of ['Q'+(i+1),e.toFixed(2)+' px',v.held_out[i]?v.held_out[i].error_px.toFixed(2)+' px':'No fit']){const td=document.createElement('td');td.textContent=value;tr.append(td);}return tr;}));$('details').textContent=JSON.stringify({summary:f.summary,shared_lens:v,cached_lens:f.variants.cached_lens,forward_reverse:data.forward_reverse_closure},null,2);}
+$('direction').onchange=()=>{if(data)render();};fetch('depth-landmark-review/report.json').then(r=>{if(!r.ok)throw Error('Measurements unavailable');return r.json();}).then(d=>{data=d;render();}).catch(e=>$('status').textContent=e.message);
+</script></html>

@@ -1,0 +1,29 @@
+{
+  "evaluation_sha256": "ea07046d7d73c2462d4cf826e2cb4ed904b6072386abacdbbc38c4dea28cecd0",
+  "script_sha256": "a1d5770fe9e2fb324de3be6aa76388a20bfb1e28990309364dfa3aa5637df933",
+  "video_fps": 4,
+  "source_samples_per_side": 21,
+  "source_window_seconds": {
+    "before": [
+      409.736733,
+      410.7382
+    ],
+    "after": [
+      414.913478,
+      415.994922
+    ]
+  },
+  "videos": {
+    "before_to_after.mp4": {
+      "sha256": "095160efcff29d21989d7ee6e16619a58eb61745c94f59e0bca56442ea51e7ff",
+      "frames": 21,
+      "duration_seconds": 5.25
+    },
+    "after_to_before.mp4": {
+      "sha256": "65ead535ad87fe82becee4ea6a49c2befa6182ad1865d54b49ffff1c60b3ef49",
+      "frames": 21,
+      "duration_seconds": 5.25
+    }
+  },
+  "accepted_connection": false
+}
