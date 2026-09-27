@@ -90,3 +90,32 @@ as needed before launch. The exporter checks camera-origin and view-direction
 mapping, preserves source model hashes, and verifies the matrix-to-Euler roundtrip.
 The initial nonzero rotations/scales are these independent camera gauges. Users
 still need to align the scenes; resetting restores this starting view.
+
+## Phone and tablet controls
+
+On phones, the scene stays above a compact control panel; landscape phones place
+controls beside the scene. Select **Move**, **Rotate**, or **Scale** to adjust one
+kind of placement at a time. Buttons have at least 44-pixel touch targets. **More**
+contains lock/visibility, Solo/Show all, Focus/Top view, reset and import/export.
+The section selector and **Save** remain accessible while the panel scrolls.
+**Hide** expands the scene; **Controls** brings the panel back.
+
+Drag with one finger to orbit the camera. Use two fingers to pan and pinch to
+zoom. These gestures change the viewing camera only; use the placement controls
+to move the selected section. Desktop mouse controls remain available.
+
+Mobile regression check (isolated temporary project, never the live LAN state):
+
+```sh
+node tests/stitch-mobile-check.mjs
+node tests/stitch-save-race-check.mjs
+```
+
+The mobile check uses Chromium touch emulation with real browser touch events,
+phone portrait/landscape, narrow phone, tablet and desktop sizes. It checks
+placement/save/reload, locking, pan/pinch/orbit and finger release, visible
+controls, panel collapse and browser errors. Screenshots are written under
+`dist/stitch-editor/mobile-check/`. This is browser emulation, not a physical
+phone performance or Safari compatibility claim. `STITCH_TEST_WEB` selects a
+staged web build for all three editor checks; `STITCH_MOBILE_ONLY` selects one
+named mobile check when diagnosing an observed failure.

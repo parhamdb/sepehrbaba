@@ -16,7 +16,7 @@ const manifestPath=path.join(root,'manifest.json');
 await writeFile(manifestPath,JSON.stringify({version:1,camera:{position:[-.7367625,.6438815,1.3413154],target:[.6424272,-.3078598,5.187895]},scenes:[{id:'earlier',label:'Earlier test',asset,locked:true},{id:'later',label:'Later test',asset,locked:false}]}));
 let server,browser;
 try{
- ({server}=await createStitchServer({manifestPath,assetsRoot,stateRoot:path.join(root,'state'),webRoot:path.resolve('dist/stitch-editor')}));
+ ({server}=await createStitchServer({manifestPath,assetsRoot,stateRoot:path.join(root,'state'),webRoot:path.resolve(process.env.STITCH_TEST_WEB ?? 'dist/stitch-editor')}));
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const url=`http://127.0.0.1:${server.address().port}`;
  const errors=[];
@@ -52,6 +52,6 @@ try{
  assert.equal(await digest(),before,'Source Gaussian bytes changed');assert.deepEqual(errors,[]);
  await browser.close();browser=null;await new Promise(resolve=>server.close(resolve));
  const expanded=JSON.parse(await readFile(manifestPath,'utf8'));expanded.scenes.push({id:'third',label:'Additional section',asset,locked:false});await writeFile(manifestPath,JSON.stringify(expanded));
- ({server}=await createStitchServer({manifestPath,assetsRoot,stateRoot:path.join(root,'state'),webRoot:path.resolve('dist/stitch-editor')}));await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));receipt=await(await fetch(`http://127.0.0.1:${server.address().port}/api/project`)).json();assert.equal(receipt.project.scenes[1].transform.rotation[1],25);assert.equal(receipt.project.scenes.length,3);
+ ({server}=await createStitchServer({manifestPath,assetsRoot,stateRoot:path.join(root,'state'),webRoot:path.resolve(process.env.STITCH_TEST_WEB ?? 'dist/stitch-editor')}));await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));receipt=await(await fetch(`http://127.0.0.1:${server.address().port}/api/project`)).json();assert.equal(receipt.project.scenes[1].transform.rotation[1],25);assert.equal(receipt.project.scenes.length,3);
  console.log(JSON.stringify({status:'passed',coloredPixels:colored,checks:['two real Gaussian scenes render','XYZ rotation translation uniform scale','locked reference unchanged','orbit independent of scene placement','solo/show all/previous/next/reset','save reload browser and server restart plus append section','stale and cross-origin save rejection','source PLY SHA256 unchanged','no browser exceptions']}));
 }finally{await browser?.close();if(server?.listening)await new Promise(resolve=>server.close(resolve));await rm(root,{recursive:true,force:true});}

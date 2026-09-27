@@ -10,7 +10,7 @@ const manifestPath=path.join(root,'manifest.json');
 await writeFile(manifestPath,JSON.stringify({version:1,scenes:[{id:'scene',asset:'preview.ply',locked:false}]}));
 let server,browser,release;
 try {
- ({server}=await createStitchServer({manifestPath,assetsRoot:path.resolve(process.env.STITCH_TEST_ASSETS??'public/assets'),stateRoot:path.join(root,'state'),webRoot:path.resolve('dist/stitch-editor')}));
+ ({server}=await createStitchServer({manifestPath,assetsRoot:path.resolve(process.env.STITCH_TEST_ASSETS??'public/assets'),stateRoot:path.join(root,'state'),webRoot:path.resolve(process.env.STITCH_TEST_WEB ?? 'dist/stitch-editor')}));
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  browser=await chromium.launch({headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
  const page=await browser.newPage();await page.goto(`http://127.0.0.1:${server.address().port}`);await page.waitForFunction(()=>window.stitchEditor?.ready,{},{timeout:90000});

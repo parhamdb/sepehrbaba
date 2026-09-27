@@ -17,7 +17,7 @@ let yaw = 0, pitch = 15, distance = 5, target = new pc.Vec3();
 function status(text) { $('status').textContent = text; }
 function selectedScene() {return project.scenes[selected];}
 function markDirty() {dirty=true;status('Unsaved placement changes.'); expose();}
-function expose() {window.stitchEditor = {ready:entities.size === project.scenes.length, project:clone(project), selected:selectedScene().id, camera:{yaw,pitch,distance}, dirty};}
+function expose() {window.stitchEditor = {ready:entities.size === project.scenes.length, project:clone(project), selected:selectedScene().id, camera:{yaw,pitch,distance,target:[target.x,target.y,target.z]}, dirty};}
 function cameraUpdate() {
   const y=yaw*Math.PI/180,p=pitch*Math.PI/180;
   camera.setPosition(target.x+distance*Math.cos(p)*Math.sin(y),target.y+distance*Math.sin(p),target.z+distance*Math.cos(p)*Math.cos(y));
@@ -28,7 +28,7 @@ function apply(scene) {
   const t=scene.transform; entity.setLocalPosition(...t.position); entity.setLocalEulerAngles(...t.rotation); entity.setLocalScale(t.scale,t.scale,t.scale); entity.enabled=scene.visible; app.renderNextFrame=true;
 }
 function controls() {
-  const s=selectedScene(); const definition=manifest.scenes.find(m=>m.id===s.id); $('quality').textContent=definition.status ?? 'Quality not reviewed. Placement is provisional.'; $('scene').value=s.id; $('visible').checked=s.visible; $('locked').checked=s.locked; $('transform').disabled=s.locked;
+  const s=selectedScene(); const definition=manifest.scenes.find(m=>m.id===s.id); $('quality').textContent=definition.status ?? 'Quality not reviewed. Placement is provisional.'; $('scene').value=s.id; $('visible').checked=s.visible; $('locked').checked=s.locked; $('transform').disabled=s.locked; $('reset-transform').disabled=s.locked;
   for(const group of ['position','rotation']) for(let axis=0;axis<3;axis++) $(`${group}-${axis}`).value=s.transform[group][axis];
   $('scale').value=s.transform.scale;
   $('previous').disabled=selected===0; $('next').disabled=selected===project.scenes.length-1; expose();
@@ -40,11 +40,12 @@ function change(group,axis,value) {
   apply(selectedScene());controls();markDirty();
 }
 for(const group of ['position','rotation','scale']) {
-  const heading=document.createElement('strong');heading.textContent=group==='position'?'Move XYZ':group==='rotation'?'Rotate XYZ (degrees)':'Uniform scale';$('fields').append(heading);
+  const panel=document.createElement('div');panel.className='transform-group'+(group==='position'?' active':'');panel.dataset.group=group;$('fields').append(panel);
+  const heading=document.createElement('strong');heading.textContent=group==='position'?'Move XYZ':group==='rotation'?'Rotate XYZ (degrees)':'Uniform scale';panel.append(heading);
   for(let axis=0;axis<(group==='scale'?1:3);axis++) {
     const row=document.createElement('div');row.className='axis';
     const label=document.createElement('label');label.textContent=group==='scale'?'×':'XYZ'[axis];
-    const input=document.createElement('input');input.type='number';input.step=group==='rotation'?'1':'.01'; input.id=group==='scale'?'scale':`${group}-${axis}`; label.htmlFor=input.id;
+    const input=document.createElement('input');input.type='number';input.inputMode='decimal';input.step=group==='rotation'?'1':'.01'; input.id=group==='scale'?'scale':`${group}-${axis}`; label.htmlFor=input.id;
     if(group==='scale') input.min='.000001'; input.addEventListener('change',()=>change(group,axis,Number(input.value)));
     row.append(label,input);
     for(const direction of [-1,1]) {const b=document.createElement('button');b.textContent=direction<0?'−':'+';b.type='button';b.setAttribute('aria-label',`${direction<0?'Decrease':'Increase'} ${group} ${group==='scale'?'':'XYZ'[axis]}`);b.addEventListener('click',()=>{
@@ -52,9 +53,20 @@ for(const group of ['position','rotation','scale']) {
       const step=Number($(group==='rotation'?'rotate-step':'move-step').value);
       if(!Number.isFinite(step)||step<=0) return;
       change(group,axis,group==='scale'?t.scale*Math.pow(1.01,direction):t[group][axis]+direction*step);
-    });row.append(b);} $('fields').append(row);
+    });row.append(b);} panel.append(row);
+  }
+  if(group!=='scale') {
+    const label=document.createElement('label');label.className='step';label.textContent=group==='position'?'Move step':'Rotation step °';
+    const input=document.createElement('input');input.type='number';input.inputMode='decimal';input.id=group==='position'?'move-step':'rotate-step';input.value=group==='position'?'.05':'1';input.min=group==='position'?'.0001':'.01';input.step=group==='position'?'.01':'1';label.append(input);panel.append(label);
   }
 }
+for(const button of document.querySelectorAll('.panel-tabs button')) button.onclick=()=>{
+  document.querySelector('aside').dataset.panel=button.dataset.panel;
+  for(const tab of document.querySelectorAll('.panel-tabs button'))tab.setAttribute('aria-pressed',String(tab===button));
+  for(const panel of document.querySelectorAll('.transform-group'))panel.classList.toggle('active',panel.dataset.group===button.dataset.panel);
+  $('panel-content').scrollTop=0;
+};
+$('panel-toggle').onclick=()=>{const collapsed=document.querySelector('aside').classList.toggle('collapsed');$('panel-toggle').textContent=collapsed?'Controls':'Hide';$('panel-toggle').setAttribute('aria-expanded',String(!collapsed));};
 function focusSelected() {
   const entity=entities.get(selectedScene().id), child=entity.children[0], local=child.gsplat.resource.aabb;
   const bounds=new pc.BoundingBox();bounds.setFromTransformedAabb(local,child.getWorldTransform());target.copy(bounds.center);distance=Math.max(.1,bounds.halfExtents.length()*1.3);cameraUpdate();
@@ -65,19 +77,32 @@ $('visible').onchange=()=>{selectedScene().visible=$('visible').checked;apply(se
 $('locked').onchange=()=>{selectedScene().locked=$('locked').checked;controls();markDirty();};
 $('solo').onclick=()=>{soloMode=true;for(const s of project.scenes){s.visible=s.id===selectedScene().id;apply(s);}controls();markDirty();};
 $('show-all').onclick=()=>{soloMode=false;for(const s of project.scenes){s.visible=true;apply(s);}controls();markDirty();};
-$('reset-transform').onclick=()=>{selectedScene().transform=clone(initial.scenes.find(s=>s.id===selectedScene().id).transform);apply(selectedScene());controls();markDirty();};
+$('reset-transform').onclick=()=>{if(selectedScene().locked)return;selectedScene().transform=clone(initial.scenes.find(s=>s.id===selectedScene().id).transform);apply(selectedScene());controls();markDirty();};
 $('focus').onclick=focusSelected;$('top').onclick=()=>{pitch=89;cameraUpdate();};
 $('save').onclick=async()=>{const submitted=JSON.stringify(project);$('save').disabled=true;try {const response=await fetch('/api/project',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({revision,project:JSON.parse(submitted)})});const result=await response.json();if(!response.ok)throw Error(result.error);revision=result.revision;dirty=JSON.stringify(project)!==submitted;status(dirty?'Earlier placement saved; newer changes are still unsaved.':'Saved on this server.');expose();}catch(e){status(`Save failed: ${e.message}`);}finally{$('save').disabled=false;}};
 $('reload').onclick=async()=>{if(dirty&&!confirm('Discard unsaved placement changes?'))return;try{const response=await fetch('/api/project');if(!response.ok)throw Error('Could not reload project.');const data=await response.json();project=data.project;revision=data.revision;for(const s of project.scenes)apply(s);dirty=false;controls();status('Reloaded saved placements.');}catch(e){status(e.message);}};
 $('export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(project,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='stitch-project.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 $('import').onclick=()=>$('file').click();
 $('file').onchange=async()=>{try {const data=JSON.parse(await $('file').files[0].text());if(data.version!==1||!Array.isArray(data.scenes)||data.scenes.length!==project.scenes.length)throw Error('Scene list differs from this project.');const seen=new Set();for(const s of data.scenes){const expected=project.scenes.find(p=>p.id===s.id);if(!expected||s.asset!==expected.asset||seen.has(s.id)||!s.transform||!['position','rotation'].every(k=>Array.isArray(s.transform[k])&&s.transform[k].length===3&&s.transform[k].every(Number.isFinite))||!Number.isFinite(s.transform.scale)||s.transform.scale<=0||typeof s.visible!=='boolean'||typeof s.locked!=='boolean')throw Error('Invalid scene or transform.');seen.add(s.id);}project=data;for(const s of project.scenes)apply(s);controls();markDirty();}catch(e){status(`Import failed: ${e.message}`);}finally{$('file').value='';}};
-let drag;
+// Rebase each event on the current active pointers, so lifting a finger never
+// reuses a stale drag origin or accidentally moves the selected Gaussian scene.
+const pointers=new Map();
+function panCamera(dx,dy) {target.add(camera.right.clone().mulScalar(-dx*distance*.002));target.add(camera.up.clone().mulScalar(dy*distance*.002));}
+function zoomCamera(factor) {distance=Math.max(.001,Math.min(100000,distance*factor));}
+function pairGeometry() {const [a,b]=[...pointers.values()];return {x:(a.x+b.x)/2,y:(a.y+b.y)/2,span:Math.hypot(a.x-b.x,a.y-b.y)};}
 canvas.addEventListener('contextmenu',e=>e.preventDefault());
-canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey};canvas.setPointerCapture(e.pointerId);});
-canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;if(drag.pan){target.add(camera.right.clone().mulScalar(-dx*distance*.002));target.add(camera.up.clone().mulScalar(dy*distance*.002));}else{yaw-=dx*.3;pitch=Math.max(-89,Math.min(89,pitch+dy*.3));}cameraUpdate();});
-for(const name of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(name,()=>drag=null);
-canvas.addEventListener('wheel',e=>{e.preventDefault();distance=Math.max(.001,Math.min(100000,distance*Math.exp(e.deltaY*.001)));cameraUpdate();},{passive:false});
+canvas.addEventListener('pointerdown',e=>{pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey});canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointermove',e=>{
+  const point=pointers.get(e.pointerId);if(!point)return;
+  const before=pointers.size===2?pairGeometry():null;
+  const dx=e.clientX-point.x,dy=e.clientY-point.y;point.x=e.clientX;point.y=e.clientY;
+  if(before){const after=pairGeometry();panCamera(after.x-before.x,after.y-before.y);if(before.span>0&&after.span>0)zoomCamera(before.span/after.span);}
+  else if(pointers.size===1){if(point.pan)panCamera(dx,dy);else{yaw-=dx*.3;pitch=Math.max(-89,Math.min(89,pitch+dy*.3));}}
+  cameraUpdate();
+});
+for(const name of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(name,e=>pointers.delete(e.pointerId));
+window.addEventListener('blur',()=>pointers.clear());
+canvas.addEventListener('wheel',e=>{e.preventDefault();zoomCamera(Math.exp(e.deltaY*.001));cameraUpdate();},{passive:false});
 new ResizeObserver(()=>{app.resizeCanvas(viewport.clientWidth,viewport.clientHeight);app.renderNextFrame=true;}).observe(viewport);
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
 window.addEventListener('pagehide',()=>app.destroy());
