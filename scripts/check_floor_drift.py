@@ -4,7 +4,7 @@
 Plane comparisons assume a common level floor, not verified scene identity.
 Feature correspondences are image-selected; repeated tiles can still mislead.
 """
-import argparse, hashlib, json, gzip
+import argparse, hashlib, json, gzip, shutil
 from pathlib import Path
 import cv2
 import numpy as np
@@ -33,21 +33,27 @@ def world_points(xy, depth, K, C, R):
 
 def plane_fit(points, camera, tolerance, seed=0):
     if len(points)<300:return None
+    # Monocular world scale is arbitrary and can collapse; use local normalized
+    # coordinates so tiny world-unit triangles are not mistaken for degeneracy.
+    origin=np.median(points,axis=0);scale=float(np.median(np.linalg.norm(points-origin,axis=1)))
+    if not np.isfinite(scale) or scale<1e-30:return None
+    normalized=(points-origin)/scale;relative_tolerance=tolerance/scale
     rng=np.random.default_rng(seed)
-    x=points[rng.choice(len(points),min(4000,len(points)),replace=False)]
+    x=normalized[rng.choice(len(points),min(4000,len(points)),replace=False)]
     best=np.zeros(len(x),bool)
     for _ in range(160):
         a,b,c=x[rng.choice(len(x),3,replace=False)];n=np.cross(b-a,c-a);norm=np.linalg.norm(n)
         if norm<1e-10:continue
-        n/=norm;keep=abs((x-a)@n)<tolerance
+        n/=norm;keep=abs((x-a)@n)<relative_tolerance
         if keep.sum()>best.sum():best=keep
     if best.sum()<300 or best.mean()<.65:return None
-    center=x[best].mean(0);_,_,v=np.linalg.svd(x[best]-center,full_matrices=False);n=v[-1]
+    local_center=x[best].mean(0);_,_,v=np.linalg.svd(x[best]-local_center,full_matrices=False);n=v[-1]
+    center=origin+local_center*scale
     if n@(camera-center)<0:n=-n
     d=-float(n@center);height=float(n@camera+d)
     if height<=tolerance:return None
     return dict(normal=n.tolist(),offset=d,centroid=center.tolist(),camera_height=height,
-                inlier_fraction=float(best.mean()),median_residual=float(np.median(abs(x[best]@n+d))))
+                inlier_fraction=float(best.mean()),median_residual=float(np.median(abs((x[best]-local_center)@n)))*scale)
 
 
 def plane_difference(reference, candidate):
@@ -73,9 +79,12 @@ def grid_mask(shape,K,C,R,reference):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('images','masks','inference','comparison','snapshot','native','output'):p.add_argument('--'+k,type=Path,required=True)
+    p.add_argument('--reuse-pairs',type=Path,help='Reuse unchanged feature checks when only plane fitting changes')
     a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
     cv2.setNumThreads(2);cv2.setRNGSeed(0)
     selection=json.loads((a.masks/'selection.json').read_text());data=json.loads((a.inference/'poses.json').read_text())
+    previous=json.loads(a.reuse_pairs.read_text()) if a.reuse_pairs else None
+    if previous and (previous['poses_sha256']!=sha(a.inference/'poses.json') or previous['selection_sha256']!=sha(a.masks/'selection.json')):raise ValueError('Pair source changed')
     baseline,_=frozen_baseline(a.snapshot,json.load(gzip.open(a.comparison,'rt')),a.native)
     sif=cv2.SIFT_create(nfeatures=2000);rows=[];cache={};reference=None
     for f in selection['samples']:
@@ -99,8 +108,11 @@ def main():
         row=dict(**f,floor_fraction=meta['floor_fraction'],mask_sha256=sha(a.masks/(f['name']+'.png')),source_sha256=meta['source_sha256'],depth_sha256=sha(npz),
                  usable_depth_pixels=len(xyz),plane=fit,status='plane-proposal' if fit else 'insufficient-floor-plane',review_required=True)
         if fit and reference is None:reference=fit;reference_frame=f['name']
-        if fit:row.update(plane_difference(reference,fit))
-        keys,desc=sif.detectAndCompute(cv2.cvtColor(view,cv2.COLOR_BGR2GRAY),fm)
+        if fit:row.update(plane_difference(reference,fit),camera_height_ratio_to_reference=fit['camera_height']/reference['camera_height'])
+        if previous:
+            old=next(r for r in previous['samples'] if r['index']==i)
+            if any(row[k]!=old[k] for k in ('source_sha256','mask_sha256','depth_sha256')):raise ValueError('Pair inputs changed')
+        keys,desc=([],None) if previous else sif.detectAndCompute(cv2.cvtColor(view,cv2.COLOR_BGR2GRAY),fm)
         xy=np.array([k.pt for k in keys]).reshape(-1,2)
         cache[i]=dict(view=view,xy=xy,desc=desc,depth=depth,K=K,C=C,R=R,pose=as_pose(pose),mask=fm)
         overlay=view.copy();visible=fm>0;overlay[visible]=(overlay[visible]*.7+np.array([220,180,0])*.3).astype('uint8')
@@ -109,7 +121,7 @@ def main():
             overlay[cv2.resize(grid.astype('uint8'),(540,960),interpolation=cv2.INTER_NEAREST)>0]=(0,255,255)
         cv2.rectangle(overlay,(0,0),(540,92),(0,0,0),-1)
         cv2.putText(overlay,f"{f['timestamp']:.2f}s | FLOOR PROPOSAL",(8,24),0,.65,(255,255,255),1)
-        text=f"tilt {row['tilt_deg']:.1f}deg | offset {row['signed_offset_camera_heights']:.2f} heights" if fit else 'No supported plane: floor hidden / uncertain'
+        text=f"tilt {row['tilt_deg']:.1f}deg | offset {row['signed_offset_camera_heights']:.2g} heights" if fit else 'No supported plane: floor hidden / uncertain'
         cv2.putText(overlay,text,(8,51),0,.5,(255,255,255),1)
         cv2.putText(overlay,'Yellow: ONE fixed reference grid; not a correction',(8,77),0,.48,(255,255,255),1)
         row['image']=f'sample-{i}.jpg';cv2.imwrite(str(a.output/row['image']),overlay)
@@ -118,7 +130,14 @@ def main():
     lookup={r['index']:r for r in rows};anchor_ids=[pair[0] for pair in selection['pairs']]
     schedules=[(x,y,'nearby') for x,y in selection['pairs']]
     schedules += [(x,y,'across-segments') for n,x in enumerate(anchor_ids) for y in anchor_ids[n+1:] if lookup[y]['timestamp']-lookup[x]['timestamp']>=15]
-    pairs=[];candidates=[]
+    pairs=previous['pairs'] if previous else [];candidates=[]
+    if previous:
+        schedules=[]
+        for pair in pairs:
+            if pair.get('image'):
+                name=pair['image']
+                if Path(name).name!=name:raise ValueError('Unsafe pair image name')
+                shutil.copyfile(a.reuse_pairs.parent/name,a.output/name)
     for first,second,kind in schedules:
         A=cache[first];B=cache[second];raw=matches(A['desc'],B['desc']);m=unique_locations(raw,A['xy'],B['xy'])
         result=dict(first=first,second=second,kind=kind,seconds_apart=lookup[second]['timestamp']-lookup[first]['timestamp'],raw_descriptor_matches=len(raw),matches=len(m),status='insufficient-matches',accepted_connection=False)

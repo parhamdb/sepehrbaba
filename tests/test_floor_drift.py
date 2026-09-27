@@ -7,6 +7,12 @@ from check_static_floor_bridge import project
 
 
 class FloorTests(unittest.TestCase):
+    def test_plane_fit_is_invariant_to_tiny_monocular_scale(self):
+        rng=np.random.default_rng(9);pts=np.c_[rng.uniform(-2,2,1000),np.zeros(1000),rng.uniform(-2,2,1000)]
+        fit=plane_fit(pts*1e-7,np.array([0,2e-7,0]),2e-9)
+        self.assertIsNotNone(fit)
+        self.assertAlmostEqual(fit['camera_height']/1e-7,2.)
+
     def test_descriptor_orientations_cannot_duplicate_holdout_landmarks(self):
         a=np.array([[10.,10.],[10,10],[11,11],[30,30],[50,50],[70,70]])
         b=np.array([[20.,20.],[20,20],[21,21],[40,40],[60,60],[60,60]])
