@@ -1,0 +1,140 @@
+{
+  "status": "review required",
+  "method": "approximate alpha-compositing attribution; source overlays are projected footprints, not causal object labels",
+  "ply_sha256": "dd145616a86f034c8a9bdf3d589e41776cb272b0dbab78b892cb2e3d0b87b63b",
+  "selected_ids": [
+    17923,
+    18829,
+    3947,
+    3598
+  ],
+  "candidates": [
+    {
+      "id": 17923,
+      "weight": 0.12176015736255466,
+      "axis_ratio": 1.638319953276947
+    },
+    {
+      "id": 18829,
+      "weight": 0.11474118998726035,
+      "axis_ratio": 1.3620935667776963
+    },
+    {
+      "id": 3947,
+      "weight": 0.10151045979611936,
+      "axis_ratio": 2.2179073189131264
+    },
+    {
+      "id": 3598,
+      "weight": 0.09183498169953506,
+      "axis_ratio": 2.044008380084399
+    },
+    {
+      "id": 6533,
+      "weight": 0.07133280697671432,
+      "axis_ratio": 1.6556215503685334
+    },
+    {
+      "id": 24681,
+      "weight": 0.05369101383678558,
+      "axis_ratio": 5.313412387019414
+    },
+    {
+      "id": 19694,
+      "weight": 0.051169260221017435,
+      "axis_ratio": 1.6112313281685102
+    },
+    {
+      "id": 22739,
+      "weight": 0.035288376187541624,
+      "axis_ratio": 1.159472261222287
+    },
+    {
+      "id": 80,
+      "weight": 0.03456037500018316,
+      "axis_ratio": 1.4152683024066368
+    },
+    {
+      "id": 9590,
+      "weight": 0.03396424625363858,
+      "axis_ratio": 5.970178229115911
+    },
+    {
+      "id": 4167,
+      "weight": 0.03288872137552394,
+      "axis_ratio": 1.5101630377753263
+    },
+    {
+      "id": 5515,
+      "weight": 0.02769195536242855,
+      "axis_ratio": 1.6420147533401286
+    }
+  ],
+  "frames": [
+    {
+      "name": "frame_006554",
+      "timestamp": 415.794622,
+      "support": 0.3271975475206451,
+      "source_sha256": "c90f89d1e346db1d2c969acf777806771c18c574bfd420c2ee970b7e92bdadf7"
+    },
+    {
+      "name": "frame_006562",
+      "timestamp": 416.195211,
+      "support": 0.323601522439198,
+      "source_sha256": "cb46b96bd88321faf73bf01d8acde360b5f9d1afead39e1d6607e734d4193218"
+    },
+    {
+      "name": "frame_006549",
+      "timestamp": 415.544256,
+      "support": 0.29848755748663613,
+      "source_sha256": "f14df09919ca175d42165e57d390e5898470bb76f58bd5e49a7d4da9b098fd37"
+    },
+    {
+      "name": "frame_006567",
+      "timestamp": 416.445578,
+      "support": 0.266377891752223,
+      "source_sha256": "4c2c73fbec745e8dabbf736603dde733773a9045d64d15ecd9afbd88a7cff969"
+    },
+    {
+      "name": "frame_006750",
+      "timestamp": 426.248489,
+      "support": 0.23513354998208302,
+      "source_sha256": "db9b9155ff8ef9438557457efa14548a36f96c1cfe2231cda10dab3134027ead"
+    },
+    {
+      "name": "frame_006572",
+      "timestamp": 416.695944,
+      "support": 0.2339752502061586,
+      "source_sha256": "da7b3b348b8219e462bbf8e614d7cb1c2587bfd4b3c7b88b20fb889460e2a205"
+    }
+  ],
+  "request": {
+    "scene": "later-padding",
+    "view": {
+      "position": [
+        -2.9384849071502672,
+        -4.454981327056885,
+        -5.023035049438477
+      ],
+      "target": [
+        -2.5130707919597626,
+        -3.5581215620040894,
+        5.014131546020508
+      ],
+      "up": [
+        0.23475585530454426,
+        0.9672646140823974,
+        -0.09637870482768952
+      ],
+      "fov": 60,
+      "width": 760,
+      "height": 850
+    },
+    "pixel": [
+      0.8200000160618832,
+      0.25
+    ]
+  },
+  "ranked_training_frames": 64,
+  "trace_id": "74c79625-75d3-4691-a6f5-6001288a2304"
+}

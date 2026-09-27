@@ -111,6 +111,8 @@ require visual review before publication.
 **[Preserved source and checksum](evidence/README.md)** ·
 **[Reconstruction method](docs/method.md)** · **[Contributing](CONTRIBUTING.md)**
 
+**[Source-guided ghost inspection](docs/ghost-feedback-loop.md):** select a visible ray, isolate its contributing splats, review timestamped source frames, then run reviewed SAM3.1 video masks and a five-native-pixel padding experiment. The correction loop retains baselines and evaluates each retraining before promotion.
+
 [Current tools and ranked options for stitching, motion removal, cleanup and missing regions](docs/reconstruction-options-2026-09.md)
 (research checked September 26, 2026). Follow the
 [tracked-occluder and cleanup comparison](docs/tracked-cleanup-experiment.md)

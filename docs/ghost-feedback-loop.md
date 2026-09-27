@@ -126,3 +126,28 @@ The later candidate is a padding-only control. They are different scenes, so the
 relative scores cannot isolate the contribution of tracking versus padding.
 Acceptance and quality decisions are retained in
 [the campaign ledger](../evidence/ghost-feedback/verification.json).
+
+## First measured result
+
+The later padding-only candidate completed all 8,000 steps. Against the previous
+SAM-video tracked checkpoint on the same 24 held-out views and frozen image-mask
+reference pixels, PSNR changed from 25.64966 to 25.66645 dB (+0.01679 dB).
+Twelve views improved and twelve worsened; the worst change was -0.68133 dB.
+Independent visual review of six displayed matched views found no convincing
+ray/ghosting improvement and no broad new loss of bodies or coverings. Keep the
+candidate for comparison; these results do not justify promotion. The comparator
+is the prior tracked version, not the older image-mask version.
+
+The [reviewed input archive](../evidence/ghost-feedback/reviewed-inputs.tar.gz)
+contains the final proposal masks, protected regions, metadata, approvals, and
+raw SAM attempt records. The [geometry archive](../evidence/ghost-feedback/candidate-geometry.tar.gz)
+contains the corresponding filtered sparse models. Candidate PLY files and
+comparison receipts are retained beside these archives. Original source imagery
+and the earlier datasets remain in the existing evidence archives. Runtime
+configuration, credentials, personal paths, and worker logs are not published.
+
+The retained [novel-view screenshots](../evidence/ghost-feedback/novel-view-review/)
+also show long rays remaining in the later candidate. A fresh trace uses new
+checkpoint IDs and returns six source frames; this verifies the inspector across
+retraining, not a successful cleanup. Further automatic expansion is not warranted
+by this result.
