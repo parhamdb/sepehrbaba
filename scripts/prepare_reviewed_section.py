@@ -39,12 +39,21 @@ def main():
             image=source_image.convert('RGB');mask=mask_image.convert('L');protected=np.asarray(protected_image)>0
         correction=review.get('corrections',{}).get(name,{})
         if correction and not correction.get('reason'):raise ValueError('Correction requires rationale')
+        if type(correction.get('override_protection',False)) is not bool:raise ValueError('Protection override must be explicit boolean')
         draw=ImageDraw.Draw(mask)
         for label,value in [('exclude',0),('preserve',255)]:
             for polygon in correction.get(label,[]):
                 if len(polygon)<3 or any(len(v)!=2 or not all(0<=x<=1 for x in v) for v in polygon):raise ValueError('Invalid normalized polygon')
                 draw.polygon([(round(x*(mask.width-1)),round(y*(mask.height-1))) for x,y in polygon],fill=value)
         array=np.asarray(mask).copy();array[protected]=255
+        # Only source-reviewed hand/foot polygons may override a mistaken
+        # semantic protection proposal; this never disables protection globally.
+        if correction.get('override_protection', False):
+            manual=Image.fromarray(array);draw=ImageDraw.Draw(manual)
+            for label,value in [('exclude',0),('preserve',255)]:
+                for polygon in correction.get(label,[]):
+                    draw.polygon([(round(x*(mask.width-1)),round(y*(mask.height-1))) for x,y in polygon],fill=value)
+            array=np.asarray(manual).copy()
         output=a.output/'masks'/(Path(name).stem+'.png');Image.fromarray(array).save(output)
         excluded=array==0
         arr=np.asarray(image).copy();arr[excluded]=(arr[excluded]*.4+np.array([255,75,20])*.6).astype('uint8')

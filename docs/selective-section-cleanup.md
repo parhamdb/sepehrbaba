@@ -49,3 +49,13 @@ pixels restored after corrections. Original inputs remain byte-identical.
 Before training, the existing `clean_static_geometry.py --preserve-poses` removes
 masked feature observations and unsupported seed points without changing camera
 poses. This reduces initialization from moving obstructions.
+
+The later audit inspected all 235 proposals and added 134 source-reviewed
+polygons across 129 images for foreground hands, shoes and partial visitors.
+[The receipt](../evidence/clean-sections/later-review.json) retains every polygon.
+Only the verified foreground hand uses `override_protection: true`, because SAM
+sometimes incorrectly protected it together with the ground body. That explicit
+manual exclusion overrides semantic protection only inside the reviewed polygon.
+Blurred hand edges and tiny partial walker remnants remain uncertain. Four
+polygons extending beyond the image were geometrically clipped to its boundary;
+the validator rejected the unbounded input and its partial dataset was preserved.
