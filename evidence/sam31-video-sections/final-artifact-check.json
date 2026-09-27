@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "tracked_mask_hashes_verified": 626,
+  "final_training_masks_verified": 313,
+  "protected_pixel_invariant": true,
+  "candidate_hashes_verified": 2,
+  "input_archive_hash_verified": true
+}

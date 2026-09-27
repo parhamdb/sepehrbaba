@@ -38,5 +38,18 @@
     "untested": 0
   },
   "quality_outcome": "Experiment completed; no demonstrated reconstruction quality upgrade. Baseline remains default.",
-  "final_artifact_review": "pending after source freeze"
+  "final_artifact_review": {
+    "status": "passed",
+    "source_revision": "3e4568be375ae4b0e5a6cc65d8d3f7460b2b3793",
+    "evidence": [
+      "final-artifact-check.json",
+      "final-viewer-check.json"
+    ],
+    "counts": {
+      "passed": 5,
+      "failed": 0,
+      "blocked": 0,
+      "untested": 0
+    }
+  }
 }

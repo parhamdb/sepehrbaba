@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "source_revision": "3e4568be375ae4b0e5a6cc65d8d3f7460b2b3793",
+  "variants": [
+    {
+      "viewport": {
+        "width": 1100,
+        "height": 850
+      },
+      "status": "passed",
+      "four_assets_loaded": true,
+      "only_controls_verified": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "passed",
+      "four_assets_loaded": true,
+      "only_controls_verified": true
+    }
+  ],
+  "errors": []
+}

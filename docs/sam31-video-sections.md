@@ -165,3 +165,16 @@ node scripts/stitch-editor-server.mjs \
 The two source sections are still independent reconstructions. Switching versions
 compares the same section; it does not connect them across the camera gap. No
 existing source video, previous scene or saved alignment is overwritten.
+
+## Final verification
+
+All five acceptance items passed: video propagation, complete registered-frame
+coverage, reviewed masks, completed comparisons, and a usable separate viewer.
+There are zero failed, blocked or untested acceptance items. This means the
+experiment is delivered; it does not mean either candidate is a quality upgrade.
+Final artifact checks verified 626 tracked-mask hashes, all 313 final training masks,
+protected-pixel retention, both PLY hashes and the archive checksum. Desktop and
+phone checks loaded all four assets and verified each Only control without browser
+exceptions. Original scene files and saved alignment remained unchanged.
+
+[Acceptance ledger](../evidence/sam31-video-sections/verification.json).
