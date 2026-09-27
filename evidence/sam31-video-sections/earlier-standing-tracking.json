@@ -1,0 +1,908 @@
+{
+  "method": "SAM 3.1 video propagation with persistent object IDs",
+  "script_sha256": "ba83b169cccf75453d745b511ef467f7dd73e347cfe63c3f4c6a29cdbfda4597",
+  "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+  "prompt": "standing person",
+  "frames": 78,
+  "elapsed_seconds": 48.4413526058197,
+  "cpu_roi_align": true,
+  "status": "proposals only; motion and protected static details require review",
+  "rows": [
+    {
+      "name": "frame_006412.jpg",
+      "timestamp": 408.134389,
+      "object_ids": [],
+      "excluded_fraction": 0.0,
+      "source_sha256": "7a5b473488842183bf0491f37aa85f1da4a897960d1c50aba824594d17b25b62",
+      "mask_sha256": "ef14f11038c2ef9c87ecb5857f657f2d9e9ba508ecea5cb5a71d9be47223c226"
+    },
+    {
+      "name": "frame_006414.jpg",
+      "timestamp": 408.234533,
+      "object_ids": [],
+      "excluded_fraction": 0.0,
+      "source_sha256": "c82ae9a40e655ef1479d41f88dc61c91156bdf0b5188afed4c8a7e0a366b7c8d",
+      "mask_sha256": "ef14f11038c2ef9c87ecb5857f657f2d9e9ba508ecea5cb5a71d9be47223c226"
+    },
+    {
+      "name": "frame_006415.jpg",
+      "timestamp": 408.284611,
+      "object_ids": [],
+      "excluded_fraction": 0.0,
+      "source_sha256": "ed8e3500b2b6590e719bb8a76a4f5573f7a6622bb1e8831132aba76ccb3d1f31",
+      "mask_sha256": "ef14f11038c2ef9c87ecb5857f657f2d9e9ba508ecea5cb5a71d9be47223c226"
+    },
+    {
+      "name": "frame_006416.jpg",
+      "timestamp": 408.334689,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.02569726820924904,
+      "source_sha256": "a7069de34ce75c695ca2c1e02a12803ee50df48fb6e20944c4dde7c85a43c6d5",
+      "mask_sha256": "2ef9ceefbc8d50a7808a990e46988e8ad2d1e9c3b657a19f1dc958d7521e8bc3"
+    },
+    {
+      "name": "frame_006417.jpg",
+      "timestamp": 408.384756,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.03497081437376964,
+      "source_sha256": "3a03e2dc4fb985cea932ee86db66f2d44cfd771aa851301ca4a9e9100366dcda",
+      "mask_sha256": "90d784edf30e06e437ba56b0660074c7631f7fa114a66dd99b180ebe7a731492"
+    },
+    {
+      "name": "frame_006418.jpg",
+      "timestamp": 408.434833,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.037314034917868784,
+      "source_sha256": "609ba9943ffb097ffd37aac6d536b9d44264a0b2b28a6eea568bde831f0ddbfe",
+      "mask_sha256": "f4eb6ab1c59961c7568bea566b410d90dc1c0a423cfe1af24ca36b25d3142d13"
+    },
+    {
+      "name": "frame_006419.jpg",
+      "timestamp": 408.4849,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.03806485380966212,
+      "source_sha256": "a5fbcc6c8e24a1702066b556f3032e42ac6d386564ddf471e1a1a81f134ea04d",
+      "mask_sha256": "cd3ee36c4bb2f26ebd8c198e2668e2399fdcd3e132a583161706f9225c3b2473"
+    },
+    {
+      "name": "frame_006420.jpg",
+      "timestamp": 408.534978,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.031399256139671476,
+      "source_sha256": "f81a25f710a77dde7c6e8c5714a574fdbdd9ed82861381eb9e79f729989ddb4d",
+      "mask_sha256": "efc737948ec6da0b6e09b814f53f7b6804232c77d5edc1a4620e457bbc9be474"
+    },
+    {
+      "name": "frame_006421.jpg",
+      "timestamp": 408.585056,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.03007511214380224,
+      "source_sha256": "d8f5c23c3972c70539d2e829e47840452d2532546139b232a9b469653e88518b",
+      "mask_sha256": "25275ae8632b30af1ea0c1d3c408bad2c6ca4bfc0d3c91c81dd6429407430ea0"
+    },
+    {
+      "name": "frame_006422.jpg",
+      "timestamp": 408.635122,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.04076104495433569,
+      "source_sha256": "ea5b3790f1d968888eb0cfac5e4003ef8d015638d6761c786dcc026ac1b70aa0",
+      "mask_sha256": "64dcc2d36423d106ed8d2ed928f581c5f41b6fd1e57ebe0c732f5198ed398258"
+    },
+    {
+      "name": "frame_006423.jpg",
+      "timestamp": 408.6852,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.038051743473069354,
+      "source_sha256": "e07bf3009e48d6e38c185ab32f3574896b6a0c906ca39d1cd9167e07927b9de3",
+      "mask_sha256": "805de052b34562a273112883f887ecc137ddbf3b8903b8b7cb60427ce4c0078e"
+    },
+    {
+      "name": "frame_006424.jpg",
+      "timestamp": 408.735267,
+      "object_ids": [
+        0
+      ],
+      "excluded_fraction": 0.03972633685093749,
+      "source_sha256": "c91964c9df8eeb65b3c7d5d5c221f75cafe32f7276984c7623843f7651a8951b",
+      "mask_sha256": "9799c4b6f072788fa3a532fe10c3ae90cab62585aedb4ac3a232790a22731323"
+    },
+    {
+      "name": "frame_006425.jpg",
+      "timestamp": 408.785344,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.05580061800109724,
+      "source_sha256": "35e2b2452bff2d7223ec5911b7fe77d6661f5a95927dcc461c121d516a034af8",
+      "mask_sha256": "e3e3475b9bf803bdf95cc9f3f515cbe04ace21c46e6adbc1dc93dd53d5c223da"
+    },
+    {
+      "name": "frame_006426.jpg",
+      "timestamp": 408.835422,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.061235861006228416,
+      "source_sha256": "912045ecc474908afe99c546d84430a891552edf6eb2797427106ca28abaddd3",
+      "mask_sha256": "1dbd35ef2fd33f691ebf1f6f00a0901e2ad02eaf57372cc5929d1b79daffeac2"
+    },
+    {
+      "name": "frame_006427.jpg",
+      "timestamp": 408.885489,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.06380447849098009,
+      "source_sha256": "a7bfad6498feba872ec68a960e810ae1198a54706ff49cc51802f6a74390c415",
+      "mask_sha256": "91c0c608ed492972fb123e2ac3533576aae2f29cab0354bc591ed04793071bf0"
+    },
+    {
+      "name": "frame_006428.jpg",
+      "timestamp": 408.935567,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.06251966550488915,
+      "source_sha256": "77b802d1c53ed772a370aeed9a55c7c0b0d3d995b0f5dec3aa49580393f0483f",
+      "mask_sha256": "b1329dcefa5cad1a5998f5bb71a769bbe00cb1cfa331c318cc7237f121595df6"
+    },
+    {
+      "name": "frame_006429.jpg",
+      "timestamp": 408.985633,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.06313938103075484,
+      "source_sha256": "16dcabccf67fcd7ce36d84c55af843384b6d527b9a772f61de60b9370127d43e",
+      "mask_sha256": "92e0dd96a3d7b0ca88a117b3903ef89619df8ec5ad2ae5583e5793bb16e108b0"
+    },
+    {
+      "name": "frame_006430.jpg",
+      "timestamp": 409.035711,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.06963151886274889,
+      "source_sha256": "7ecc413cc13dc7335ba27f5611248c47bacf244e1023576d815622c5bcd416ff",
+      "mask_sha256": "81d23e534cdbc7b5c08818dec7916f51bb2e257474f6f46b0cdd0645a0e2d479"
+    },
+    {
+      "name": "frame_006431.jpg",
+      "timestamp": 409.085789,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.07590128521638106,
+      "source_sha256": "d941157cd1f7513722d0e490626267dabdccf9dd0c8f084c0ecc31b05cdabf1d",
+      "mask_sha256": "9f707e11e8b3b83945540fb7d85da35e7c8388b07f8e26f1530e22f062099bbe"
+    },
+    {
+      "name": "frame_006432.jpg",
+      "timestamp": 409.135856,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.07928425630102946,
+      "source_sha256": "dc9438ae10a8feaae947c035764aabc1df3e999f58b9e0cef94e1545015c2104",
+      "mask_sha256": "92c2cbafce000d17d512d025c906397325803e13dbb36748c6a44864981076d3"
+    },
+    {
+      "name": "frame_006433.jpg",
+      "timestamp": 409.185933,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.07846385177655146,
+      "source_sha256": "e1f56d202e18a13e52751be91dfbc0c3b736c71f353499ad10213af6f5294a82",
+      "mask_sha256": "1378e7c370ce124f8cb7e5a04623b071f3c13395f70444a8c3c08926ef347d66"
+    },
+    {
+      "name": "frame_006434.jpg",
+      "timestamp": 409.236,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.08282555991222125,
+      "source_sha256": "d13d6ec18fdf9784159e0d42871e3f7e9630e15587f47281b690c35bf306ea29",
+      "mask_sha256": "ac217029cb07234ce9fcca179952d0c641b2ce728c5fa274777304bc26ebf2cc"
+    },
+    {
+      "name": "frame_006435.jpg",
+      "timestamp": 409.286078,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.08183572949946752,
+      "source_sha256": "35dfb905c57fddea05dad1249d920ea367cd4e772eedf9cfc8a9c357048dc016",
+      "mask_sha256": "b01ed3e4ab3370b29d40a19cc5f900289ebf464b88a384f575a1a44ae2bbaf2f"
+    },
+    {
+      "name": "frame_006436.jpg",
+      "timestamp": 409.336156,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.08788312437473779,
+      "source_sha256": "c8a6af498c0d7132d1512952586fdccb35f1dac2c367cbd4d2eeabd92a1ac528",
+      "mask_sha256": "700d5c1f770223b5e9a91ed1c21b0b2e6e4d4ed98dcbfef3742471472ee4431a"
+    },
+    {
+      "name": "frame_006437.jpg",
+      "timestamp": 409.386222,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.08930357892019233,
+      "source_sha256": "84f9964dd5975e4c469dbc56764bed92e7ab12df59d357ec97a7beac7f35a83c",
+      "mask_sha256": "c26282691083c6bc0b41e50e17d1b5c9aa684d7d0f13a0b0274466fb1bb39a3f"
+    },
+    {
+      "name": "frame_006438.jpg",
+      "timestamp": 409.4363,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.08088825555878272,
+      "source_sha256": "2d4902ad6fbc2ed8b557cb0da5ef01588c7af200738aa4ff95b0aa3f3affd44c",
+      "mask_sha256": "69e810d8fdc591d30267db3a21e8237b830555ca4d70f64384976a38995f47a4"
+    },
+    {
+      "name": "frame_006439.jpg",
+      "timestamp": 409.486367,
+      "object_ids": [
+        0,
+        1
+      ],
+      "excluded_fraction": 0.09273394891406074,
+      "source_sha256": "f438d864114fa885026ae66ba89021c4d77de5afbff72c2d5778cff3bb9228fb",
+      "mask_sha256": "138f7a336fae02a8117c3d76f8b2b3f6401d87c3e0945fb2aa12a09e17921bdd"
+    },
+    {
+      "name": "frame_006440.jpg",
+      "timestamp": 409.536444,
+      "object_ids": [
+        0,
+        1,
+        4
+      ],
+      "excluded_fraction": 0.09579823797076194,
+      "source_sha256": "36eb69fcb16785050188b5f344f297732b07cee9627e3dca1d597ed129391695",
+      "mask_sha256": "292d3046c44b1eddcfd943ee6b42ae90df15097b296103d6b68d613f0ca3e151"
+    },
+    {
+      "name": "frame_006441.jpg",
+      "timestamp": 409.586522,
+      "object_ids": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.1068668917610611,
+      "source_sha256": "0bb4f2ca0d5fbe113e022bf80593916f48d3461c38559114743a1542ceaf3d2d",
+      "mask_sha256": "e90600c18bfedb951146e07c89dd8aaefb3853a4d9ea49d515fdd5da70b0cd90"
+    },
+    {
+      "name": "frame_006442.jpg",
+      "timestamp": 409.636589,
+      "object_ids": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.09774361022364217,
+      "source_sha256": "f863f3cc2a2923ab6bd31ac38f33727f98fe5a6e7e961797e1154e2cecfca2c0",
+      "mask_sha256": "679c2fd4d8387053de4f1fd41d6563cb7de84c00f8fed21b5ac2b2ecf4a59c92"
+    },
+    {
+      "name": "frame_006443.jpg",
+      "timestamp": 409.686667,
+      "object_ids": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.1092312905411947,
+      "source_sha256": "f643a2419f2b3de9b7641fe6b96f20110a5e8d4bd20c337fb7e445d8e112dd46",
+      "mask_sha256": "9e45b35c7e3db8be407d799d96d558ebb90449c7ce8dd90a58626afc20766ec9"
+    },
+    {
+      "name": "frame_006444.jpg",
+      "timestamp": 409.736733,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.11408463629909317,
+      "source_sha256": "1d2bfb4a5a7fff5f1222694fe706a4b66ccb8e3f63830dd3e073e1d114076686",
+      "mask_sha256": "40b8c3c5b0deac5e6cd6847e279a30f9f41a7084b68e944ee79a00496c364e2e"
+    },
+    {
+      "name": "frame_006445.jpg",
+      "timestamp": 409.786811,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.11366762674670022,
+      "source_sha256": "f3648836066d6a77918d6a3d508d948db15094ce9e472f462f6240c7e6b611a1",
+      "mask_sha256": "15995198f39b54f4c7b062497e1cd51c0f6e488d6013e522e75562779d733a33"
+    },
+    {
+      "name": "frame_006446.jpg",
+      "timestamp": 409.836889,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.14174341256010586,
+      "source_sha256": "ca24d9f9ace6ccf3d40498df00965d4c066677d7056b0cb472f0fbbcd60cb905",
+      "mask_sha256": "11dac56f0a7f3fb575e56ff4f98e264dc62a8ea1851795e52fa2d1c4aa9b9294"
+    },
+    {
+      "name": "frame_006447.jpg",
+      "timestamp": 409.886956,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.15067810694807499,
+      "source_sha256": "151aef76825bfa2afa341da10a8afc18111b1994cabcf05d94bc2094ca61c372",
+      "mask_sha256": "6414d8343321784b1330d64adbeb3d9401c8514c5d06df1010131f57880b70be"
+    },
+    {
+      "name": "frame_006448.jpg",
+      "timestamp": 409.937033,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.17051152499435246,
+      "source_sha256": "b4a92f21b1e595252319e21d68027f9974386c499594516805f5e07c3ed0881c",
+      "mask_sha256": "7e505888868eb8818674400b4fb30574992d3d18acef769fdd069486cc04ae34"
+    },
+    {
+      "name": "frame_006449.jpg",
+      "timestamp": 409.9871,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.16599753525672056,
+      "source_sha256": "2f3eb124358db1bd41f9fa9ee2a12a6a5c076ecee2190aa71775c140c5e05dad",
+      "mask_sha256": "965867efa72d8a5f0b9538399e426216933a990bf115f9ea00ac6362a8b850dc"
+    },
+    {
+      "name": "frame_006451.jpg",
+      "timestamp": 410.087256,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.22080378465162812,
+      "source_sha256": "2e60854833841cff69008ebe810b7bad5cd0b02771f627bacc14cacda0adcc79",
+      "mask_sha256": "f8fa0933db3e8ff60668ade346913af989a95980f1df72acf8f5ad1c08a5ba74"
+    },
+    {
+      "name": "frame_006452.jpg",
+      "timestamp": 410.137322,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.23512027221092716,
+      "source_sha256": "7e7a8e82f236223fa8798f6e1517a38177506efcb027c8ee486c478e4fd4436a",
+      "mask_sha256": "3cb8fffcc6d88c218eabdcdb4a9bab60834c3ca44e13594a90df3915af6c7ddc"
+    },
+    {
+      "name": "frame_006453.jpg",
+      "timestamp": 410.1874,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.24194369816374608,
+      "source_sha256": "874eecbf2412fd5d3d9b368ce774e9a1df4975c2bd4c6e72c1e68e43e6b45679",
+      "mask_sha256": "7ef034b5a6b2b45de32810c8e28ed3a621f136f3dba99dbe37f980b44402f550"
+    },
+    {
+      "name": "frame_006454.jpg",
+      "timestamp": 410.237478,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.2388158743989415,
+      "source_sha256": "14cf9dc6c6e319ca8eb9b95ee924deb5ccac86ef96711728bf747c095a564c28",
+      "mask_sha256": "583a2173667f215d2485978e83364edc7e2e4c2bfbc77f287e43b5beabdb85b7"
+    },
+    {
+      "name": "frame_006455.jpg",
+      "timestamp": 410.287544,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.23490344741343144,
+      "source_sha256": "e22e2285de9f2b3856044f336a56f2ab1476ab33ef50941100ddfdff873308fe",
+      "mask_sha256": "9f029aa7d07abbc99eb6ae0f73a5378fb8cd41de53caedd7d76b6bcb71b0787f"
+    },
+    {
+      "name": "frame_006456.jpg",
+      "timestamp": 410.337622,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.20432358731080777,
+      "source_sha256": "8f4ffef3337f277629b59d2b8847714724063140af987ea78960dfd80e873adb",
+      "mask_sha256": "477b74b890c1caf153680ac5d9c3cdee415ca077c0592d6dcbb64f6f63bdc7f4"
+    },
+    {
+      "name": "frame_006457.jpg",
+      "timestamp": 410.387689,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.17586104656791557,
+      "source_sha256": "8fca22b48bbbd06fe4bea0be619ab4449298405aebcebab4c51e04c1deaf851f",
+      "mask_sha256": "60cecbf20a15c87a2d9176179b4db33b9b25fd35b466e230b3c5e0e68ddf967c"
+    },
+    {
+      "name": "frame_006458.jpg",
+      "timestamp": 410.437767,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.17095324248878563,
+      "source_sha256": "a5f947c13860cedf942190a29bfbb44d7f1b81dbacedfbd276b3370480ef3c77",
+      "mask_sha256": "f4f547d82c4609608931e12f01866ae537a14f0aa91250e1fd92b2ce8b7ee17b"
+    },
+    {
+      "name": "frame_006459.jpg",
+      "timestamp": 410.487844,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.15933647578016588,
+      "source_sha256": "bcb50e78f66a61d8453ce3c84f5bf8e722c0ac745727bf2a85988b760e2a4abf",
+      "mask_sha256": "752d5c371dc5e566334651ec8bdf53a0a17fa353cc0b2d0e02785865a452be1c"
+    },
+    {
+      "name": "frame_006460.jpg",
+      "timestamp": 410.537911,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.16251573240391132,
+      "source_sha256": "7f6929ec25a791cb5273381664e6e0a9ec9d714625c30e0aa49fb7bca00d3f04",
+      "mask_sha256": "4ea1ea7bc0f44b3100d20dd7210367b0b145c1cb65f150a81dc57e5b1a3e0b4b"
+    },
+    {
+      "name": "frame_006462.jpg",
+      "timestamp": 410.638056,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.19541561783973924,
+      "source_sha256": "7302aea944238dadd1910eee62173048edbc64f8697c57b9140c657cf8a4dc6d",
+      "mask_sha256": "acdc950fa299b112184b6c42be7614edd6ba38a454a879a41e8e2c6cdcf6163c"
+    },
+    {
+      "name": "frame_006463.jpg",
+      "timestamp": 410.688133,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.1768655000484074,
+      "source_sha256": "5c51a43c67fab6ee3cd1ce1fcdf74ef0ba1fc166a4308b43642b014f8cf494dc",
+      "mask_sha256": "1af7e96285e31460add54bc752bf6ac2c95f4acdde1fcfb2bbd617e12bffd31a"
+    },
+    {
+      "name": "frame_006464.jpg",
+      "timestamp": 410.7382,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.18089491157582213,
+      "source_sha256": "3d118f123dc9b9b7c8e8ce740c3a4b82fb8ddaaefdb2f842e059670062707f4f",
+      "mask_sha256": "471da574267ace07db9404c677a3979bc33f9231696c85c25f2b43546099e0b7"
+    },
+    {
+      "name": "frame_006465.jpg",
+      "timestamp": 410.788278,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.17096181463194243,
+      "source_sha256": "9d37bad72d0b0a1e9c480dc908ca428765c7501629cf7adbaea1bc40f346a4f6",
+      "mask_sha256": "96725cf6e25899c17e519095a87b2d02f33a280192e310188715195d974feb48"
+    },
+    {
+      "name": "frame_006466.jpg",
+      "timestamp": 410.838356,
+      "object_ids": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "excluded_fraction": 0.17225671249233548,
+      "source_sha256": "eba098ad0cd35bbbeb047ed97a3eacd90fa2853ea7318e29972b5a3ceb319cba",
+      "mask_sha256": "577e7b0c905ffe2b6b8985ceda17a65b05f64cd22036d0483ddb5dacf88d6e59"
+    },
+    {
+      "name": "frame_006467.jpg",
+      "timestamp": 410.888422,
+      "object_ids": [
+        0,
+        3,
+        5
+      ],
+      "excluded_fraction": 0.1714136170006777,
+      "source_sha256": "5e60d13dd399d091d098de4b2ef9b71edcdd12e0ec7d64cabc6d99a83f98600e",
+      "mask_sha256": "8332901a8dae0211caae08eaaf88f96f291b0bf788259e8ce6122c80d9e5ea34"
+    },
+    {
+      "name": "frame_006468.jpg",
+      "timestamp": 410.9385,
+      "object_ids": [
+        0,
+        3,
+        5
+      ],
+      "excluded_fraction": 0.15628277584148192,
+      "source_sha256": "e62bffb0ddfa5f02f754cc22b0f13c67e0f6af9e01316db52169077f852165e4",
+      "mask_sha256": "059066c217f15083287bfcfc3c9e48432c1c2d1731e34a723f0d59ca3c9fb65d"
+    },
+    {
+      "name": "frame_006469.jpg",
+      "timestamp": 410.988578,
+      "object_ids": [
+        0,
+        3,
+        5
+      ],
+      "excluded_fraction": 0.13893981750411463,
+      "source_sha256": "c4349ff0fc8696059572c6df06cce0db6ad4a4f45f5e4a893ee599d20121d1ff",
+      "mask_sha256": "0342b5c7f5e3b96aafb2ee58691633dfae047403613c58b31ae4a54544784f19"
+    },
+    {
+      "name": "frame_006470.jpg",
+      "timestamp": 411.038656,
+      "object_ids": [
+        0,
+        3,
+        5
+      ],
+      "excluded_fraction": 0.12317514199503017,
+      "source_sha256": "7ab28df24d63d0ff7d2a99378766273dbaf5f0830b87cb07d98565c180317462",
+      "mask_sha256": "5ae41fc1da3e893b03489adc06af7e6aabb06556eb90ed3a33d73295dc5d8a05"
+    },
+    {
+      "name": "frame_006471.jpg",
+      "timestamp": 411.088733,
+      "object_ids": [
+        0,
+        3
+      ],
+      "excluded_fraction": 0.13041608174395714,
+      "source_sha256": "bf0a8f6d8806f8e1d77d6bbc3ece05218fa4183574765e445b5df821efc6c4fe",
+      "mask_sha256": "fd6601feb913c7b5fc3db58b8f32a8a3bbacd9a9cdf3996411dd298bd54e7ee6"
+    },
+    {
+      "name": "frame_006472.jpg",
+      "timestamp": 411.1388,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.12030750798722045,
+      "source_sha256": "73ba1bb4038ac64b456daf7af92258693486723edf2d3849b68a5d77c3effb49",
+      "mask_sha256": "96c816efc6f972f3df24851b7af1be337fdd7d883a9795fe709ee6fb11a87d92"
+    },
+    {
+      "name": "frame_006473.jpg",
+      "timestamp": 411.188878,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.11759618953109369,
+      "source_sha256": "dc97772f638e18ddfa085022fc66f9551634807b071291520b7a050da7493dac",
+      "mask_sha256": "3eb4d2820c8b2bd866cc4293a710f5a227716fecaa42b1c553f3f6f9635e89f0"
+    },
+    {
+      "name": "frame_006474.jpg",
+      "timestamp": 411.238956,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.12138406831897247,
+      "source_sha256": "1a0e8b96394a55559cc24fd549dc0a3a13fdb814bd74793830049f2effa23d71",
+      "mask_sha256": "c81c2563d79c11be55ee8bcd903b64b8ecb1e062d4ac64e990c57abdc36e6d22"
+    },
+    {
+      "name": "frame_006475.jpg",
+      "timestamp": 411.289022,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.11617422225449382,
+      "source_sha256": "2ad0a7d0c50e1b63472c2e75460b7393233ff5f15bb2d41c7259993d3360e615",
+      "mask_sha256": "bb0255622dc7a5dfa1124569a3c721b5ccc754b815108379c02d0a7636e677b2"
+    },
+    {
+      "name": "frame_006476.jpg",
+      "timestamp": 411.3391,
+      "object_ids": [
+        0,
+        3,
+        4
+      ],
+      "excluded_fraction": 0.10879562397134282,
+      "source_sha256": "74346069b4becbdb116b64b569a412a49081eee9e6a0fcd4bf9c6a6373b4ff99",
+      "mask_sha256": "1e02aca4a51540c0f3a98f25e4610eb7817789675702f19a26e94bffd54d8132"
+    },
+    {
+      "name": "frame_006477.jpg",
+      "timestamp": 411.389167,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.09296741375415497,
+      "source_sha256": "7afb5de944c4afd99f3710e6152ae8ffdf6a25644de073d26c08b7d94996db96",
+      "mask_sha256": "61124aa0288511c13a295b5ef1b1e9d34e0143db0592f47a9f26d1a8524f340c"
+    },
+    {
+      "name": "frame_006478.jpg",
+      "timestamp": 411.439244,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.08507347839416529,
+      "source_sha256": "8f05db61200117ca3bc0a2060d370c72a51c7168fde7c409f5fd4ac57277e776",
+      "mask_sha256": "5ee2fb40af5ce10cf8353550766b1e56f9abff180a68efa91413dbcdf83e1404"
+    },
+    {
+      "name": "frame_006479.jpg",
+      "timestamp": 411.489322,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.06719955142479105,
+      "source_sha256": "1cc2dc641a881c2a29f298a9d094012bffc8f9e6c629780e835642d63bd36bdc",
+      "mask_sha256": "433087c6c9d79ce90c19f36c18ab33e46111aaf19c5ca4f5099e0f1cd52a6f9c"
+    },
+    {
+      "name": "frame_006480.jpg",
+      "timestamp": 411.539389,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.05128763675089554,
+      "source_sha256": "52d8c89c5e20d0768c79358f8330c3ab6c0416e60208b257970c7b171cfb6ce0",
+      "mask_sha256": "6e2d60b65a532e57905fa9f866ba66bf2030a2e705b1df5b909ad189af587a05"
+    },
+    {
+      "name": "frame_006481.jpg",
+      "timestamp": 411.589467,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.03606098928582954,
+      "source_sha256": "58344e245cbad15274533643c25c647ea2c14b19f328c25629139e5c9fd25c19",
+      "mask_sha256": "6b78189ea85ca0181c3a7b9c04eba62916069f1460407676e1dffe65bc8d107f"
+    },
+    {
+      "name": "frame_006482.jpg",
+      "timestamp": 411.639533,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.0278433294607416,
+      "source_sha256": "f263227acbeaa8b5e991f367aae1866c6243f1d6193d2a054e75fbc8b41cd318",
+      "mask_sha256": "c61a721a0e2c14b244aacbf9c7d808fb533bea3aaf4f655a4b2531a14be172ce"
+    },
+    {
+      "name": "frame_006483.jpg",
+      "timestamp": 411.689611,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.02996770823248459,
+      "source_sha256": "f586111a9ad4c01c8437b0d2792b56d2d170b955cb70cf166b1c243d485f1135",
+      "mask_sha256": "b8f8c505a285b6413ef6d669aa14ab94282cedeb35bd1758a56e3ed58c1e7e49"
+    },
+    {
+      "name": "frame_006484.jpg",
+      "timestamp": 411.749678,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.031426989544002325,
+      "source_sha256": "5fd51e30f6db1d0e4d5b052fa8769242bf85bc182e4c15a351dd249cd19ad3a5",
+      "mask_sha256": "ddeb6d95efdbedcb409fde138dd31f2585934e819c4c0a1eb17ef36617350814"
+    },
+    {
+      "name": "frame_006485.jpg",
+      "timestamp": 411.809756,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.038238313647658694,
+      "source_sha256": "7780d5b9eb3f8b461e12041edd1cbdc3a797fd95154ac847f81517cfb9273304",
+      "mask_sha256": "f3193f47f3203f4f97929e44018482b3e3f9d9e0f00d5cb505a85f87a6d51057"
+    },
+    {
+      "name": "frame_006486.jpg",
+      "timestamp": 411.869822,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.0460475360635105,
+      "source_sha256": "59efe78b76feccc1cf4a8ddee5c0f86891ebedf7aed1dfc414352d56c33c2f49",
+      "mask_sha256": "75bf7d965e99030b260429b128120c6b619f6c3bccb456879bb6cb0fdb458312"
+    },
+    {
+      "name": "frame_006487.jpg",
+      "timestamp": 411.929889,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.05923250072611095,
+      "source_sha256": "5b65596422a7949919736daf64e6b67bc9bf57f9b8bacd52264cb5f88f0de491",
+      "mask_sha256": "5f80c33217b4f8afe8d705225b81152e327da57a212df671c52961c73704e521"
+    },
+    {
+      "name": "frame_006488.jpg",
+      "timestamp": 411.989956,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.09887513312034078,
+      "source_sha256": "a9a37f9924e846c36586cbb0071adfb7fa0b1f83d06c24a09fd351e70b77c934",
+      "mask_sha256": "6915ca0d5507c0b72da252663030b7bbb556c9bf701b63730f6a8679949abec2"
+    },
+    {
+      "name": "frame_006489.jpg",
+      "timestamp": 412.050033,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.12512757365992191,
+      "source_sha256": "94cc91a3f9f611af085822db94860bcc349d4b3383b5eb2b1b28295d7304e772",
+      "mask_sha256": "2566b6775bb43d26d2c4e57f03feb80e3e20c5d3c3c2016ab4aada1f3c06d703"
+    },
+    {
+      "name": "frame_006490.jpg",
+      "timestamp": 412.1101,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.1432430333688321,
+      "source_sha256": "167e49047afe28e3aa428c0cf6fc2313d5d8b54e09fa639b197f8d77cdc9f247",
+      "mask_sha256": "89b0244a95a48ac12b8c83211153cd7b4ce5318c5495c390ca4c207c55979744"
+    },
+    {
+      "name": "frame_006491.jpg",
+      "timestamp": 412.170167,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.13363113967147514,
+      "source_sha256": "1a363e93567f136c49b493cccc4c41d1f4150688c7a5f6e6b8733be2ac5b4fc7",
+      "mask_sha256": "c82218cedd5199ef95fbbb8a6faf9d6027e9a14230e56796bdbbd4280a1c8a43"
+    },
+    {
+      "name": "frame_006492.jpg",
+      "timestamp": 412.230244,
+      "object_ids": [
+        0,
+        4
+      ],
+      "excluded_fraction": 0.13498805950882628,
+      "source_sha256": "7d9fca212bc3cece650df76c311bc5e20a451f95238813425454ffb4cd01e655",
+      "mask_sha256": "6ef86af31a6444b4631d3e1ede3620ebcea4aab97727e0fe675c3e356305101c"
+    }
+  ]
+}

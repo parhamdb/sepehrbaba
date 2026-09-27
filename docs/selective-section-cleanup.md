@@ -14,6 +14,9 @@ Protection wins where proposals conflict. These semantic labels are imperfect:
 absence of a protection detection does not establish that no body is present.
 Every output is a proposal until visual inspection; masks are stored separately.
 
+A subsequent [SAM 3.1 video-tracking experiment](sam31-video-sections.md) now
+runs temporal propagation on these same sections as a separate candidate.
+
 This is independent-frame segmentation, not the previously blocked video-tracker
 adapter and not automatic world-motion classification. A CPU ROI Align fallback
 handles both tensor and list/tuple boxes on workers without that CUDA kernel.

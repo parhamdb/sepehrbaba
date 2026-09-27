@@ -1,0 +1,99 @@
+{
+  "status": "reviewed-for-provisional-training",
+  "observations": "Independent visual review of all20 sheets covering235frames. Four frames had new exclusions on foreground bodies or bags; explicit lower-region preservation corrects these. Remaining additions follow standing/walking visitors. Existing reviewed hand exclusions retained. Render review required.",
+  "manifest_sha256": "180f49b7e320cbc21ad842077f1561f7863dd61473ab61d92759abe4a7f8ca14",
+  "corrections": {
+    "frame_006619.jpg": {
+      "reason": "Visual review found false video-tracked exclusions on lying body clothing and body-bag edges. Restore lower region; pixelwise check confirms it contains no approved baseline exclusions. Walking visitor remains above this region.",
+      "preserve": [
+        [
+          [
+            0,
+            0.35
+          ],
+          [
+            1,
+            0.35
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    "frame_006624.jpg": {
+      "reason": "Visual review found false video-tracked exclusions on lying body clothing and body-bag edges. Restore lower region; pixelwise check confirms it contains no approved baseline exclusions. Walking visitor remains above this region.",
+      "preserve": [
+        [
+          [
+            0,
+            0.35
+          ],
+          [
+            1,
+            0.35
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    "frame_006625.jpg": {
+      "reason": "Visual review found false video-tracked exclusions on lying body clothing and body-bag edges. Restore lower region; pixelwise check confirms it contains no approved baseline exclusions. Walking visitor remains above this region.",
+      "preserve": [
+        [
+          [
+            0,
+            0.35
+          ],
+          [
+            1,
+            0.35
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    "frame_006627.jpg": {
+      "reason": "Visual review found false video-tracked exclusions on lying body clothing and body-bag edges. Restore lower region; pixelwise check confirms it contains no approved baseline exclusions. Walking visitor remains above this region.",
+      "preserve": [
+        [
+          [
+            0,
+            0.35
+          ],
+          [
+            1,
+            0.35
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    }
+  }
+}

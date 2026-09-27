@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "sections": {
+    "earlier": {
+      "frames": 78,
+      "baseline_exclusions_preserved": true,
+      "protected_pixels_retained": true,
+      "mean_added_fraction": 0.006324683665937659,
+      "maximum_added_fraction": 0.031649865266079324,
+      "retained_seed_points": 1868,
+      "removed_seed_points": 22,
+      "camera_translation_change": 0.0,
+      "preserve_poses": true,
+      "source_images_and_masks_copy_verified": true,
+      "review_sha256": "2ca9ce7ffb46e3c0e9c9771d7dd9743b28708f1724772d08ab04df793ced2a8b"
+    },
+    "later": {
+      "frames": 235,
+      "baseline_exclusions_preserved": true,
+      "protected_pixels_retained": true,
+      "mean_added_fraction": 0.0005884791422544992,
+      "maximum_added_fraction": 0.02117710778118794,
+      "retained_seed_points": 9976,
+      "removed_seed_points": 0,
+      "camera_translation_change": 0.0,
+      "preserve_poses": true,
+      "source_images_and_masks_copy_verified": true,
+      "review_sha256": "43d5da83a56a11605b43dee5c2dbe36f181523596560ab89eb10ed096c4dc6f4"
+    }
+  }
+}

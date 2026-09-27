@@ -1,0 +1,40 @@
+{
+  "scope": "Two registered sections; temporal masks and independent comparison candidates",
+  "source_commits": [
+    "83dc442",
+    "3515f03"
+  ],
+  "checks": [
+    {
+      "id": "T1",
+      "status": "passed",
+      "evidence": "Four tracking receipts retain persistent object IDs; native propagate_in_video completed."
+    },
+    {
+      "id": "T2",
+      "status": "passed",
+      "evidence": "78+235 frames each with standing and walking prompts; source and mask hashes retained."
+    },
+    {
+      "id": "T3",
+      "status": "passed",
+      "evidence": "All313 mask overlays reviewed; four later false positives corrected and reinspected. mask-verification.json verifies baseline exclusion and protected-pixel invariants."
+    },
+    {
+      "id": "T4",
+      "status": "untested",
+      "evidence": "Earlier training active; later queued. Fixed-mask render comparison pending."
+    },
+    {
+      "id": "T5",
+      "status": "untested",
+      "evidence": "Separate candidate viewer and artifact review pending."
+    }
+  ],
+  "counts": {
+    "passed": 3,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 2
+  }
+}
