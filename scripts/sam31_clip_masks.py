@@ -21,6 +21,7 @@ def main():
     p.add_argument('--review-stride',type=int,default=15,help='Write an overlay every N frames; use 1 for full review')
     p.add_argument('--limit',type=int,default=0,help='Optional smoke-test frame count, 0 means every frame')
     p.add_argument('--cpu-roi-align',action='store_true',help='Use the same torchvision ROI Align on CPU when its CUDA kernel is unavailable')
+    p.add_argument('--seed',type=Path,help='Reviewed JSON: frame name, normalized points and point_labels, reason; separate proposal session')
     a=p.parse_args()
     if a.review_stride<1:p.error('review-stride must be positive')
     import numpy as np
@@ -39,6 +40,12 @@ def main():
     torch.set_num_threads(4)
     frames=json.loads(a.frames.read_text())
     if a.limit:frames=frames[:a.limit]
+    seed=json.loads(a.seed.read_text()) if a.seed else None
+    seed_index=0
+    if seed:
+        seed_index=next(i for i,f in enumerate(frames) if f['name']==seed['frame'])
+        if not seed.get('reason') or len(seed['points'])!=len(seed['point_labels']) or not seed['points']:raise ValueError('Reviewed seed points and reason required')
+        if any(len(point)!=2 or not all(0<=x<=1 for x in point) for point in seed['points']) or any(x not in (0,1) for x in seed['point_labels']):raise ValueError('Invalid normalized point prompt')
     a.output.mkdir(parents=True,exist_ok=False)
     video=a.output/'tracking-frames';video.mkdir()
     masks=a.output/'proposals';masks.mkdir()
@@ -60,9 +67,16 @@ def main():
     started=time.time();rows=[]
     with torch.inference_mode(),torch.autocast('cuda',dtype=torch.bfloat16):
         sid=predictor.handle_request(dict(type='start_session',resource_path=str(video)))['session_id']
-        predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=0,text=a.prompt))
-        for response in predictor.handle_stream_request(dict(type='propagate_in_video',session_id=sid)):
+        if seed:
+            predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=seed_index,points=seed['points'],point_labels=seed['point_labels'],obj_id=1,rel_coordinates=True,clear_old_points=True,output_prob_thresh=.5))
+        else:predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=0,text=a.prompt))
+        propagation=dict(type='propagate_in_video',session_id=sid)
+        if seed:propagation.update(start_frame_index=seed_index,propagation_direction='both')
+        seen=set()
+        for response in predictor.handle_stream_request(propagation):
             i=response['frame_index'];out=response['outputs'];f=frames[i]
+            if i in seen:continue
+            seen.add(i)
             ids=np.asarray(out['out_obj_ids']).astype(int)
             binary=np.asarray(out['out_binary_masks']).astype(bool)
             with Image.open(a.images/f['name']) as im:
@@ -83,7 +97,7 @@ def main():
         predictor.handle_request(dict(type='close_session',session_id=sid))
     if sorted(x['name'] for x in rows)!=sorted(x['name'] for x in frames):raise ValueError('Incomplete mask inventory')
     report=dict(method='SAM 3.1 video propagation with persistent object IDs',script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),checkpoint_sha256=hashlib.sha256(checkpoint.read_bytes()).hexdigest(),prompt=a.prompt,frames=len(rows),elapsed_seconds=time.time()-started,
-        cpu_roi_align=a.cpu_roi_align,
+        cpu_roi_align=a.cpu_roi_align,seed=seed,
         status='proposals only; motion and protected static details require review',rows=rows)
     (a.output/'report.json').write_text(json.dumps(report,indent=2)+'\n')
     print('SAM 3.1 inference finished; proposals require review',flush=True)
