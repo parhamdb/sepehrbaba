@@ -59,3 +59,33 @@ manual exclusion overrides semantic protection only inside the reviewed polygon.
 Blurred hand edges and tiny partial walker remnants remain uncertain. Four
 polygons extending beyond the image were geometrically clipped to its boundary;
 the validator rejected the unbounded input and its partial dataset was preserved.
+
+## Reproduce the reviewed training stage
+
+Use fresh output directories. The review receipt must match the proposal manifest
+hash and complete source-image inventory. The worker needs the existing pinned
+COLMAP 3.12.6 and Brush 0.3.0 toolchain; authentication stays in its model cache.
+
+```sh
+python scripts/prepare_reviewed_section.py --dataset ORIGINAL_DATASET \
+  --proposals FULL_PROPOSALS --review REVIEW.json --output REVIEWED_DATASET
+python scripts/clean_static_geometry.py --source-dataset REVIEWED_DATASET \
+  --work STATIC_WORK --colmap COLMAP_BINARY --preserve-poses
+python scripts/video_to_splat.py --stage train --dataset STATIC_WORK/dataset \
+  --output TRAINING --brush BRUSH_BINARY --steps 8000 \
+  --train-resolution 1920 --max-splats 500000 --eval-split-every 10
+python scripts/inspect_brush.py STATIC_WORK/dataset TRAINING/splats/eval_8000 \
+  INSPECTION --expected-views EXPECTED_COUNT
+```
+
+Held-out counts are 8 earlier and 24 later. Their images are reserved for evaluation,
+so the 78/235 registered-image inventories are not claims that every image was
+used as a training view. No new camera recovery is performed. Mask changes alter
+the evaluated pixel set, so PSNR cannot be directly compared with the earlier
+blanket-person-mask result as a quality improvement score.
+
+Load the generated `TRAINING/splats/scene.ply` files through a private manifest in
+[the LAN editor](lan-stitch-editor.md), with distinct filenames and status labels.
+A saved project records placements; it does not weld, deform, deduplicate or fill
+the source Gaussian geometry. Add further reviewed sections to the manifest with
+new IDs, restart the server, and continue aligning them against the saved area.
