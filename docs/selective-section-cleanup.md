@@ -6,8 +6,10 @@ and 235 registered images at 414.562967–427.800311 s. Original cameras are reu
 this is not a fresh camera-recovery claim. Each component remains independent.
 
 `clean_section_masks.py` uses the cached SAM 3.1 checkpoint's native image detector
-on undistorted training images. Prompts propose standing, sitting and walking
-people for exclusion; lying people and body bags are protection proposals.
+on undistorted training images. Default prompts propose standing and walking people for exclusion; lying people
+and body bags are protection proposals. Additional reviewed categories can be
+passed with repeated `--exclude` arguments. The initial sitting-person proposal
+misclassified clothing on a ground body, so it is not used for these sections.
 Protection wins where proposals conflict. These semantic labels are imperfect:
 absence of a protection detection does not establish that no body is present.
 Every output is a proposal until visual inspection; masks are stored separately.
@@ -37,3 +39,13 @@ the two components independently, inspect held-out views, and load their resulti
 PLY files in the LAN editor. Manual alignment changes only saved transforms.
 
 [Campaign verification](../evidence/clean-sections/verification.md)
+
+The earlier full proposal audit found six missed leg/shoe views. The retained
+[review receipt](../evidence/clean-sections/earlier-review.json) records explicit
+normalized exclusion polygons and their reasons. `prepare_reviewed_section.py`
+checks every proposal/source hash and creates a new dataset, with protected
+pixels restored after corrections. Original inputs remain byte-identical.
+
+Before training, the existing `clean_static_geometry.py --preserve-poses` removes
+masked feature observations and unsupported seed points without changing camera
+poses. This reduces initialization from moving obstructions.

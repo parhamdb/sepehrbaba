@@ -21,6 +21,7 @@ def main():
     parser.add_argument('--dataset', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--sample-count', type=int, default=0)
+    parser.add_argument('--exclude', action='append', help='Reviewed obstruction category; repeat as needed')
     args = parser.parse_args()
     import cv2
     import numpy as np
@@ -39,8 +40,8 @@ def main():
             parser.error('sample-count must be at least two')
         files = [files[i] for i in sorted(set(np.linspace(0,len(files)-1,args.sample_count).round().astype(int))) ]
     checkpoint = Path(hf_hub_download('facebook/sam3.1','sam3.1_multiplex.pt',local_files_only=True))
-    exclude = ['standing person', 'sitting person', 'walking person']
-    protect = ['person lying on the ground', 'body bag']
+    exclude = args.exclude or ['standing person', 'walking person']
+    protect = ['person lying on the ground', 'person lying down', 'body bag']
     manifest = dict(model='SAM 3.1 native image detector', checkpoint_sha256=sha(checkpoint),
         script_sha256=sha(__file__), exclude_prompts=exclude, protect_prompts=protect,
         threshold=.5, dilation_pixels=5, images={p.name:sha(p) for p in files},
