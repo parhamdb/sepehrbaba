@@ -7,6 +7,7 @@ Outputs retain per-object masks, source frame IDs and source timestamps.
 import argparse
 import json
 import inspect
+import hashlib
 from pathlib import Path
 import time
 
@@ -17,9 +18,11 @@ def main():
     p.add_argument('--frames',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--prompt',default='standing person')
+    p.add_argument('--review-stride',type=int,default=15,help='Write an overlay every N frames; use 1 for full review')
     p.add_argument('--limit',type=int,default=0,help='Optional smoke-test frame count, 0 means every frame')
     p.add_argument('--cpu-roi-align',action='store_true',help='Use the same torchvision ROI Align on CPU when its CUDA kernel is unavailable')
     a=p.parse_args()
+    if a.review_stride<1:p.error('review-stride must be positive')
     import numpy as np
     import torch
     from PIL import Image,ImageDraw
@@ -28,7 +31,7 @@ def main():
         import torchvision
         roi_align = torchvision.ops.roi_align
         def cpu_roi_align(input, boxes, *args, **kwargs):
-            cpu_boxes = [b.cpu().float() for b in boxes] if isinstance(boxes, list) else boxes.cpu().float()
+            cpu_boxes = [b.cpu().float() for b in boxes] if isinstance(boxes, (list, tuple)) else boxes.cpu().float()
             with torch.autocast('cuda', enabled=False):
                 result = roi_align(input.cpu().float(), cpu_boxes, *args, **kwargs)
             return result.to(device=input.device, dtype=input.dtype)
@@ -41,7 +44,9 @@ def main():
     masks=a.output/'proposals';masks.mkdir()
     reviews=a.output/'review';reviews.mkdir()
     for i,f in enumerate(frames):(video/f'{i:06d}.jpg').symlink_to((a.images/f['name']).resolve(strict=True))
-    predictor=build_sam3_predictor(version='sam3.1',compile=False,warm_up=False,
+    from huggingface_hub import hf_hub_download
+    checkpoint=Path(hf_hub_download('facebook/sam3.1','sam3.1_multiplex.pt',local_files_only=True))
+    predictor=build_sam3_predictor(checkpoint_path=str(checkpoint),version='sam3.1',compile=False,warm_up=False,
         use_fa3=False,async_loading_frames=False,max_num_objects=16)
     # Current base predictor passes this SAM2 option to multiplex SAM3.1,
     # whose init_state has no such parameter. False is the default behavior.
@@ -67,17 +72,17 @@ def main():
                 Image.fromarray((~union).astype('uint8')*255).save(masks/(f['name']+'.png'))
                 np.savez_compressed(masks/(Path(f['name']).stem+'.npz'),ids=ids,
                     shape=np.array([height,width]),masks=np.packbits(binary.reshape(len(ids),-1),axis=1) if len(ids) else np.empty((0,0),dtype=np.uint8))
-                if i%15==0 or i==len(frames)-1:
+                if i%a.review_stride==0 or i==len(frames)-1:
                     arr=np.asarray(im).copy();arr[union]=(arr[union]*.4+np.array([255,100,20])*.6).astype('uint8')
                     review=Image.fromarray(arr);review.thumbnail((432,768))
                     draw=ImageDraw.Draw(review);draw.rectangle((0,0,432,35),fill='black')
                     draw.text((5,5),f'{f["timestamp"]:.3f}s | IDs {ids.tolist()} | PROPOSAL',fill='white')
                     review.save(reviews/(Path(f['name']).stem+'.jpg'))
-            rows.append(dict(**f,object_ids=ids.tolist(),excluded_fraction=float(union.mean())))
+            rows.append(dict(**f,object_ids=ids.tolist(),excluded_fraction=float(union.mean()),source_sha256=hashlib.sha256((a.images/f['name']).read_bytes()).hexdigest(),mask_sha256=hashlib.sha256((masks/(f['name']+'.png')).read_bytes()).hexdigest()))
             if i%20==0:print(f'Proposed masks {i+1}/{len(frames)}',flush=True)
         predictor.handle_request(dict(type='close_session',session_id=sid))
     if sorted(x['name'] for x in rows)!=sorted(x['name'] for x in frames):raise ValueError('Incomplete mask inventory')
-    report=dict(method='SAM 3.1',prompt=a.prompt,frames=len(rows),elapsed_seconds=time.time()-started,
+    report=dict(method='SAM 3.1 video propagation with persistent object IDs',script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),checkpoint_sha256=hashlib.sha256(checkpoint.read_bytes()).hexdigest(),prompt=a.prompt,frames=len(rows),elapsed_seconds=time.time()-started,
         cpu_roi_align=a.cpu_roi_align,
         status='proposals only; motion and protected static details require review',rows=rows)
     (a.output/'report.json').write_text(json.dumps(report,indent=2)+'\n')
