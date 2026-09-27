@@ -93,7 +93,7 @@ This is a diagnostic aid, not certification of camera accuracy or global alignme
 
 [Cross-gap connection checks](https://parhamdb.github.io/sepehrbaba/camera-connections.html): four local candidates, five camera-agreement failures, ten windows needing longer clips; **zero verified joins**.
 
-**[LAN manual stitching editor](docs/lan-stitch-editor.md):** load separate Gaussian sections, rotate, move and uniformly scale them, compare individual renders, and save reversible placements. [Selective section cleanup](docs/selective-section-cleanup.md) preserves ground bodies while excluding reviewed visitors.
+**[LAN manual stitching editor](docs/lan-stitch-editor.md):** load separate Gaussian sections, rotate, move and uniformly scale them, compare individual renders, and save reversible placements. [Two cleaned sections and their runnable setup](evidence/clean-sections/results.md) are available, covering 06:48.13–06:52.23 and 06:54.56–07:07.80. [Selective cleanup](docs/selective-section-cleanup.md) preserves ground bodies while excluding reviewed visitors.
 
 [Floor-reference drift review](https://parhamdb.github.io/sepehrbaba/floor-drift.html): inspect proposed floor masks, a fixed reference grid, and floor-feature reprojection checks at 100 sampled frames across the recording. [Method and limitations](docs/floor-drift.md). This diagnoses inconsistencies; it does not correct or join scenes.
 

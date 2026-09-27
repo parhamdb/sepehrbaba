@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "camera": {
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1
+    ]
+  },
+  "scenes": [
+    {
+      "id": "earlier",
+      "label": "Earlier \u00b7 06:48.13\u201306:52.23",
+      "asset": "earlier-clean.ply",
+      "locked": true,
+      "status": "Selective masks reviewed; provisional reconstruction. Seed-camera starting view, not aligned to other sections.",
+      "transform": {
+        "position": [
+          -0.03845046355840028,
+          -0.045000834215678145,
+          -0.02074821789989064
+        ],
+        "rotation": [
+          2.8702587082248114,
+          -7.023044538429939,
+          4.7419330986681745
+        ],
+        "scale": 0.08354802453370708
+      }
+    },
+    {
+      "id": "later",
+      "label": "Later \u00b7 06:54.56\u201307:07.80",
+      "asset": "later-clean.ply",
+      "locked": false,
+      "status": "Selective masks reviewed; provisional reconstruction. Seed-camera starting view, not aligned to other sections.",
+      "transform": {
+        "position": [
+          0.16802656485641632,
+          0.44763034618281167,
+          0.5471599384572238
+        ],
+        "rotation": [
+          5.106039481331118,
+          -2.4173456651404543,
+          13.589558068893627
+        ],
+        "scale": 0.0991460406364089
+      }
+    }
+  ]
+}

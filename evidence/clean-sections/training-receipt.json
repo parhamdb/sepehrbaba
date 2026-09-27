@@ -1,0 +1,36 @@
+{
+  "earlier": {
+    "training": {
+      "steps": 8000,
+      "max_splats": 500000,
+      "resolution": 1920,
+      "brush_version": "brush-cli 0.3.0",
+      "eval_split_every": 10
+    },
+    "elapsed_seconds": 494.7354018688202,
+    "status": "passed",
+    "cameras": 78,
+    "retained_initial_points": 1890,
+    "gaussian_sha256": "9c35bc6722aaada15adfa8d6d70c884ff1fdcd0392c0775cff01ecac157dad1a",
+    "baseline_sha256": "b5c241dda4bbdec0152fe83aab7d1ab61437a37444f1a8ebfbd1e649973de4ac",
+    "source_images_and_masks_unchanged": true,
+    "camera_poses_preserved": true
+  },
+  "later": {
+    "training": {
+      "steps": 8000,
+      "max_splats": 500000,
+      "resolution": 1920,
+      "brush_version": "brush-cli 0.3.0",
+      "eval_split_every": 10
+    },
+    "elapsed_seconds": 541.5982022285461,
+    "status": "passed",
+    "cameras": 235,
+    "retained_initial_points": 9976,
+    "gaussian_sha256": "2cdd544cfaddec1dee1e6c182930ddf52e17dd62e9a7143543b6f34529d2f61d",
+    "baseline_sha256": "79ae73fa47444c939c33664ae0d0509d0dc85627d8f973eece71f0cd713e1bbf",
+    "source_images_and_masks_unchanged": true,
+    "camera_poses_preserved": true
+  }
+}

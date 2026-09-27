@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "Both cleaned Gaussian assets render individually and together",
+    "Later transform changes leave earlier locked scene unchanged",
+    "Saved placements persist across browser reload",
+    "Reset restores initial independent camera gauges",
+    "Camera orbit does not change placements",
+    "Mobile layout fits and no browser exceptions"
+  ],
+  "visible_pixels": {
+    "earlier": 610246,
+    "later": 737563
+  }
+}

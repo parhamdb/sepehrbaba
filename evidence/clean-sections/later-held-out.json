@@ -1,0 +1,127 @@
+{
+  "held_out_views": 24,
+  "static_region_psnr_db": 25.776036009977766,
+  "metric_scope": "Only unmasked pixels; automatic person masks inspected separately. Scores do not prove novel-view geometry.",
+  "views": [
+    {
+      "image": "frame_006531",
+      "static_fraction": 0.8888476308046628,
+      "static_psnr_db": 22.002309951125675
+    },
+    {
+      "image": "frame_006541",
+      "static_fraction": 1.0,
+      "static_psnr_db": 27.049087177932087
+    },
+    {
+      "image": "frame_006551",
+      "static_fraction": 1.0,
+      "static_psnr_db": 29.257845438389953
+    },
+    {
+      "image": "frame_006561",
+      "static_fraction": 1.0,
+      "static_psnr_db": 30.18796374881252
+    },
+    {
+      "image": "frame_006571",
+      "static_fraction": 1.0,
+      "static_psnr_db": 29.20076419479869
+    },
+    {
+      "image": "frame_006581",
+      "static_fraction": 1.0,
+      "static_psnr_db": 27.331141179570587
+    },
+    {
+      "image": "frame_006591",
+      "static_fraction": 0.9574901314023899,
+      "static_psnr_db": 25.161652306306085
+    },
+    {
+      "image": "frame_006601",
+      "static_fraction": 0.9497089434623286,
+      "static_psnr_db": 24.858240764419193
+    },
+    {
+      "image": "frame_006611",
+      "static_fraction": 0.9484886041484706,
+      "static_psnr_db": 20.773563841121927
+    },
+    {
+      "image": "frame_006621",
+      "static_fraction": 0.935092684307344,
+      "static_psnr_db": 22.42059003502558
+    },
+    {
+      "image": "frame_006631",
+      "static_fraction": 0.9756854344866621,
+      "static_psnr_db": 22.0527294871205
+    },
+    {
+      "image": "frame_006641",
+      "static_fraction": 1.0,
+      "static_psnr_db": 27.459931523471063
+    },
+    {
+      "image": "frame_006651",
+      "static_fraction": 1.0,
+      "static_psnr_db": 27.50996889510582
+    },
+    {
+      "image": "frame_006661",
+      "static_fraction": 0.9776742801657046,
+      "static_psnr_db": 27.83168222045053
+    },
+    {
+      "image": "frame_006671",
+      "static_fraction": 0.958804155301718,
+      "static_psnr_db": 25.721465497779747
+    },
+    {
+      "image": "frame_006682",
+      "static_fraction": 0.9860595385058285,
+      "static_psnr_db": 28.866570991422556
+    },
+    {
+      "image": "frame_006692",
+      "static_fraction": 0.9747041860419726,
+      "static_psnr_db": 28.218938218840663
+    },
+    {
+      "image": "frame_006702",
+      "static_fraction": 0.9655626198503974,
+      "static_psnr_db": 29.063360094076206
+    },
+    {
+      "image": "frame_006712",
+      "static_fraction": 0.9521140024299439,
+      "static_psnr_db": 26.908810347560372
+    },
+    {
+      "image": "frame_006722",
+      "static_fraction": 0.9527048984351747,
+      "static_psnr_db": 26.640322993817975
+    },
+    {
+      "image": "frame_006732",
+      "static_fraction": 1.0,
+      "static_psnr_db": 25.274828302382723
+    },
+    {
+      "image": "frame_006742",
+      "static_fraction": 1.0,
+      "static_psnr_db": 29.60807345215492
+    },
+    {
+      "image": "frame_006752",
+      "static_fraction": 1.0,
+      "static_psnr_db": 27.56128816168619
+    },
+    {
+      "image": "frame_006762",
+      "static_fraction": 1.0,
+      "static_psnr_db": 26.447422480320707
+    }
+  ]
+}
