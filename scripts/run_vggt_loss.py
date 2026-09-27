@@ -19,6 +19,7 @@ def main():
     p.add_argument('--submap-size',type=int,default=16)
     p.add_argument('--max-loops',type=int,default=1,choices=[0,1])
     p.add_argument('--min-disparity',type=float,default=50)
+    p.add_argument('--every-frame',action='store_true',help='Use every supplied frame for a bounded comparison clip')
     a=p.parse_args()
     import cv2
     import numpy as np
@@ -44,7 +45,7 @@ def main():
         for i,f in enumerate(frames):
             path=a.images/f['name']; im=cv2.imread(str(path))
             if im is None:raise ValueError('Source image failed to decode')
-            if solver.flow_tracker.compute_disparity(im,a.min_disparity,False):pending.append(str(path))
+            if a.every_frame or solver.flow_tracker.compute_disparity(im,a.min_disparity,False):pending.append(str(path))
             if len(pending)>=a.submap_size+1 or (i==len(frames)-1 and len(pending)>1):
                 predictions=solver.run_predictions(pending,model,a.max_loops,None,None)
                 solver.add_points(predictions);solver.graph.optimize()
@@ -76,7 +77,7 @@ def main():
     result=dict(method='VGGT-SLAM 2.0',status='candidate poses; independent recovery review pending',
         input_frames=len(frames),estimated_frames=len(rows),submaps=submaps,
         loops=solver.graph.get_num_loops(),elapsed_seconds=time.time()-started,
-        settings=dict(submap_size=a.submap_size,max_loops=a.max_loops,min_disparity=a.min_disparity,portrait_mode='pad'),
+        settings=dict(submap_size=a.submap_size,max_loops=a.max_loops,min_disparity=a.min_disparity,every_frame=a.every_frame,portrait_mode='pad'),
         frames=[rows[k] for k in sorted(rows)])
     (a.output/'poses.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k!='frames'}),flush=True)
