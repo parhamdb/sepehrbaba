@@ -1,0 +1,28 @@
+{
+  "earlier": {
+    "status": "passed",
+    "elapsed_seconds": 495.28218507766724,
+    "dataset_fingerprint": "92e25392af99817505d554e47e92ac3b0a82784e07b290f0e816f346b120dd10",
+    "training": {
+      "steps": 8000,
+      "max_splats": 500000,
+      "resolution": 1920,
+      "brush_version": "brush-cli 0.3.0",
+      "eval_split_every": 10
+    },
+    "ply_sha256": "79efb7fe2c562a730142a6fc5feff72d8e11899478e54e67cb6a5679df494579"
+  },
+  "later": {
+    "status": "passed",
+    "elapsed_seconds": 542.0837507247925,
+    "dataset_fingerprint": "73b0d780bb9a81eebea523c8ba14cb4ede0cf4a9f703fb070dab1e9567803b12",
+    "training": {
+      "steps": 8000,
+      "max_splats": 500000,
+      "resolution": 1920,
+      "brush_version": "brush-cli 0.3.0",
+      "eval_split_every": 10
+    },
+    "ply_sha256": "b977c76909d577acb96d9102c7ce16b659be544929e46dafae117083b87ce83a"
+  }
+}

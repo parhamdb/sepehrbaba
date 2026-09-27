@@ -22,19 +22,21 @@
     },
     {
       "id": "T4",
-      "status": "untested",
-      "evidence": "Earlier 8000-step training and eight-view fixed-mask comparison complete; no material improvement. Later training active."
+      "status": "passed",
+      "evidence": "Both8000-step training runs completed. Fixedbaselinepixel comparisons across8+24 held-out views plus interactive seed/orbit review completed. Neither candidate demonstrates improvement; originals retained."
     },
     {
       "id": "T5",
-      "status": "untested",
-      "evidence": "Separate candidate viewer and artifact review pending."
+      "status": "passed",
+      "evidence": "Four-version LANcomparison renders with Only controls verified on desktop/mobile. Public reproduction manifest and initial state validate; artifacts, receipts, and instructions retained."
     }
   ],
   "counts": {
-    "passed": 3,
+    "passed": 5,
     "failed": 0,
     "blocked": 0,
-    "untested": 2
-  }
+    "untested": 0
+  },
+  "quality_outcome": "Experiment completed; no demonstrated reconstruction quality upgrade. Baseline remains default.",
+  "final_artifact_review": "pending after source freeze"
 }

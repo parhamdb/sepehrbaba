@@ -1,0 +1,12 @@
+{
+  "baseline": {
+    "gaussians": 25805,
+    "longest_axis_p95": 0.9039655123525241,
+    "longest_to_second_axis_ratio_p95": 11.389340948053347
+  },
+  "tracked": {
+    "gaussians": 25766,
+    "longest_axis_p95": 0.8514161684977222,
+    "longest_to_second_axis_ratio_p95": 11.739261631513337
+  }
+}

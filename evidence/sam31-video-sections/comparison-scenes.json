@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "camera": {
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      1
+    ]
+  },
+  "scenes": [
+    {
+      "id": "earlier-tracked",
+      "label": "Earlier \u00b7 SAM video tracking candidate",
+      "asset": "sam31-video-sections/earlier-tracked.ply",
+      "locked": false,
+      "transform": {
+        "position": [
+          -0.03845046355840028,
+          -0.045000834215678145,
+          -0.02074821789989064
+        ],
+        "rotation": [
+          2.8702587082248114,
+          -7.023044538429939,
+          4.7419330986681745
+        ],
+        "scale": 0.08354802453370708
+      },
+      "status": "Experimental comparison; neither tracked candidate demonstrates a clear upgrade. Seed alignment is provisional. Use Only to compare versions."
+    },
+    {
+      "id": "earlier-baseline",
+      "label": "Earlier \u00b7 Previous image masks",
+      "asset": "clean-sections/earlier-clean.ply",
+      "locked": false,
+      "transform": {
+        "position": [
+          -0.03845046355840028,
+          -0.045000834215678145,
+          -0.02074821789989064
+        ],
+        "rotation": [
+          2.8702587082248114,
+          -7.023044538429939,
+          4.7419330986681745
+        ],
+        "scale": 0.08354802453370708
+      },
+      "status": "Experimental comparison; neither tracked candidate demonstrates a clear upgrade. Seed alignment is provisional. Use Only to compare versions."
+    },
+    {
+      "id": "later-tracked",
+      "label": "Later \u00b7 SAM video tracking candidate",
+      "asset": "sam31-video-sections/later-tracked.ply",
+      "locked": false,
+      "transform": {
+        "position": [
+          0.16802656485641632,
+          0.44763034618281167,
+          0.5471599384572238
+        ],
+        "rotation": [
+          5.106039481331118,
+          -2.4173456651404543,
+          13.589558068893627
+        ],
+        "scale": 0.0991460406364089
+      },
+      "status": "Experimental comparison; neither tracked candidate demonstrates a clear upgrade. Seed alignment is provisional. Use Only to compare versions."
+    },
+    {
+      "id": "later-baseline",
+      "label": "Later \u00b7 Previous image masks",
+      "asset": "clean-sections/later-clean.ply",
+      "locked": false,
+      "transform": {
+        "position": [
+          0.16802656485641632,
+          0.44763034618281167,
+          0.5471599384572238
+        ],
+        "rotation": [
+          5.106039481331118,
+          -2.4173456651404543,
+          13.589558068893627
+        ],
+        "scale": 0.0991460406364089
+      },
+      "status": "Experimental comparison; neither tracked candidate demonstrates a clear upgrade. Seed alignment is provisional. Use Only to compare versions."
+    }
+  ]
+}

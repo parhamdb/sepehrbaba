@@ -1,0 +1,22 @@
+{
+  "status": "comparison candidate only; baseline retained",
+  "reviewed_views": [
+    "frame_006531",
+    "frame_006581",
+    "frame_006621",
+    "frame_006671",
+    "frame_006712",
+    "frame_006762"
+  ],
+  "finding": "Independent review found no convincing improvement in detail or ghosting in the six displayed views. Bodies and coverings remain visible with similar softness and floor blur.",
+  "additional_review": {
+    "worst_view": "frame_006722",
+    "finding": "Source and both renders inspected separately. Both lose clothing and floor detail; candidate has different floor shading. This is not an improvement.",
+    "interactive_views": [
+      "seed",
+      "orbit"
+    ],
+    "interactive_finding": "Rays and blurred or stretched floor geometry remain in both versions. No clear material upgrade."
+  },
+  "metric_caveat": "Fixed baseline scoring support can include visitor pixels newly excluded by the candidate."
+}

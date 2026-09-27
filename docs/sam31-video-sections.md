@@ -117,10 +117,51 @@ The earlier candidate completed 8,000 steps. On the same eight held-out views an
 frozen baseline scoring pixels, PSNR changed from 24.3717 to 24.2144 dB
 (-0.1573 dB); one view improved. Independent inspection of the six contact-sheet
 views found no convincing material improvement. The candidate floor appears
-slightly smoother and less distinct at frame006475; blur remains in both models.
+slightly smoother and less distinct at frame 006475; blur remains in both models.
 The previous scene remains the default. Newly excluded visitor pixels can still
 fall within baseline scoring support, so the score alone is not a quality verdict.
 
 [Earlier source/baseline/candidate comparison](../evidence/sam31-video-sections/earlier-comparison/comparison.jpg)
 and [numeric results](../evidence/sam31-video-sections/earlier-comparison/comparison.json).
-The later comparison and combined viewer are pending at this checkpoint.
+Both section comparisons and the combined viewer are now available; see below.
+
+The earlier interactive check also captured the same seed and orbited viewpoints
+for both versions. Rays persist and some are more noticeable in the tracked
+candidate. Its 7,060 Gaussians versus 7,232 baseline Gaussians do not establish
+cleaner geometry; the 95th-percentile longest/second-longest axis ratio actually
+increased from 17.11 to 18.45. These descriptive statistics are not ghost labels.
+
+The later candidate completed 8,000 steps in 542 seconds (earlier: 495 seconds).
+Across its 24 fixed held-out views, PSNR changed from 25.7760 to 25.6497 dB
+(-0.1264 dB), with 8 improved views. Six sampled views, the worst score-change view
+006722, and matching seed/orbit editor views were inspected. Bodies and coverings
+remain visibly present, while softness, rays and floor distortion persist. Neither
+candidate is promoted. The experiment successfully exercises video tracking but
+does not demonstrate improved reconstruction quality.
+
+[Later comparison](../evidence/sam31-video-sections/later-comparison/comparison.jpg),
+[worst-score view](../evidence/sam31-video-sections/later-comparison/worst-view.jpg),
+and [numeric results](../evidence/sam31-video-sections/later-comparison/comparison.json).
+
+## Open the four-version comparison
+
+Download LFS artifacts, build the existing editor, and use a fresh state directory.
+The public manifest uses the already published seed transforms; it does not
+publish anyone's private live editing state. The previous scene remains visible
+initially. On phones open **Filters**, scroll to **Show / hide sections**, and use
+**Only** next to a version. Camera position remains unchanged when switching.
+
+```sh
+git lfs pull
+npm ci
+npm run build
+mkdir NEW_COMPARISON_STATE
+cp evidence/sam31-video-sections/comparison-initial-state.json NEW_COMPARISON_STATE/project.json
+node scripts/stitch-editor-server.mjs \
+  --manifest evidence/sam31-video-sections/comparison-scenes.json \
+  --assets evidence --state NEW_COMPARISON_STATE --host 0.0.0.0 --port 8093
+```
+
+The two source sections are still independent reconstructions. Switching versions
+compares the same section; it does not connect them across the camera gap. No
+existing source video, previous scene or saved alignment is overwritten.

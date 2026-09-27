@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "source_revision": "75c77ac",
+  "viewer_bundle_sha256": "9fe8058367da94bb2fa8180b628bba413defbace009a2a1c00d398897939d56f",
+  "scenes": [
+    "earlier-baseline",
+    "earlier-tracked",
+    "later-baseline",
+    "later-tracked"
+  ],
+  "desktop_viewport": [
+    1100,
+    850
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "only_visibility_verified": true,
+  "browser_errors": [],
+  "original_assets_and_saved_alignment_unchanged": true,
+  "comparison_saved_state_unchanged": true,
+  "novel_view_captures": [
+    "seed",
+    "orbit"
+  ],
+  "discovery_note": "Desktop passed. Initial mobile harness tried controls while their Filters tab was hidden; corrected harness opened the existing Filters tab. No product change required."
+}
