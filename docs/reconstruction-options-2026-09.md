@@ -12,6 +12,11 @@ code from papers, rank options against our observed failures, and preserve
 sources plus a concrete next experiment. Model installation, GPU experiments
 and generation of synthetic content are outside this research pass.
 
+For camera connections after the later gap-skipping failures, see the
+[September 27 follow-up](connection-research-2026-09-27.md). It updates priorities
+and current tool availability; the historical execution/access notes below are
+not a current runtime-status report.
+
 ## What changes the recommendation for our case
 
 The [three connection attempts](connecting-scenes.md) found plausible appearance

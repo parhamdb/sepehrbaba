@@ -144,3 +144,5 @@ first experiment. They follow the resulting per-gap evidence.
 **Local camera follow-up:** [gap 098 independent geometry and VGGT context ablation](../evidence/local-camera-gap-098/results.md). All 1,830 pairs were tested; the supported image graph stops before the registered return. Zero new poses accepted.
 
 **Skip the missing interval:** [direct section alignment across gap 098](../evidence/skipped-gap-bridge/results.md) tested 280 cross-section pairs with existing static landmarks, augmented SIFT triangulation and fresh ALIKED detections. No alignment accepted; manual common-landmark review is the next distinct option.
+
+**Research after these failures:** [ranked connection options and proposed experiment, September 27](connection-research-2026-09-27.md). Priorities: preserve verified stationary detail, dense RoMa v2 matching, point re-detection, wider overlap retrieval and joint camera refinement. Research only; no new solver run.
