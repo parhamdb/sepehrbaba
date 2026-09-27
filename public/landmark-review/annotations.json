@@ -71,7 +71,13 @@
       "confidence": "medium",
       "stationarity_reason": "The reflective strip appears attached to the near wall of the same floor-resting black bag, corroborated by the green strip immediately below/left and the thin white cord to its left. No handling of this patch is visible in the inspected views. Absolute stationarity across the missing interval is unverified; flexible bag material can deform.",
       "ambiguity": "Physical patch boundary, not a specular highlight, is intended. Blur, oblique view and dark edge contrast make the exact corner approximate. All patch candidates are tightly clustered and share the same deformable support; they are not independent scene-wide constraints.",
-      "usable_for_geometric_test": true
+      "usable_for_geometric_test": false,
+      "second_review": {
+        "model": "gpt-6-astra",
+        "verdict": "unresolved",
+        "scope": "point localization unresolved",
+        "reason": "Before marker is on the gray/green transition region, toward the left of the gray patch lower portion. The after markers sit at or just below the bottom-left vicinity of the gray patch, near its contact with the dark lower edge. The before view has an irregular, poorly separated gray/green boundary; the marker does not unambiguously select the same bottom-left material corner. Same-region recognition is supported, but calling these centers the same corner is not."
+      }
     },
     {
       "id": "A02",
@@ -102,7 +108,13 @@
       "confidence": "medium",
       "stationarity_reason": "The reflective strip appears attached to the near wall of the same floor-resting black bag, corroborated by the green strip immediately below/left and the thin white cord to its left. No handling of this patch is visible in the inspected views. Absolute stationarity across the missing interval is unverified; flexible bag material can deform.",
       "ambiguity": "Physical patch boundary, not a specular highlight, is intended. Blur, oblique view and dark edge contrast make the exact corner approximate. All patch candidates are tightly clustered and share the same deformable support; they are not independent scene-wide constraints.",
-      "usable_for_geometric_test": true
+      "usable_for_geometric_test": true,
+      "second_review": {
+        "model": "gpt-6-astra",
+        "verdict": "supported",
+        "scope": "approximate visual hypothesis",
+        "reason": "Before and after centers are at the lower-right termination of the gray patch, where its right edge meets its lower edge against black material. The surrounding shape provides a plausible same-feature correspondence in both after images. Blur and the marker width prevent exact edge localization; this is not a certified point match."
+      }
     },
     {
       "id": "A03",
@@ -133,7 +145,13 @@
       "confidence": "medium",
       "stationarity_reason": "The reflective strip appears attached to the near wall of the same floor-resting black bag, corroborated by the green strip immediately below/left and the thin white cord to its left. No handling of this patch is visible in the inspected views. Absolute stationarity across the missing interval is unverified; flexible bag material can deform.",
       "ambiguity": "Physical patch boundary, not a specular highlight, is intended. Blur, oblique view and dark edge contrast make the exact corner approximate. All patch candidates are tightly clustered and share the same deformable support; they are not independent scene-wide constraints.",
-      "usable_for_geometric_test": true
+      "usable_for_geometric_test": true,
+      "second_review": {
+        "model": "gpt-6-astra",
+        "verdict": "supported",
+        "scope": "approximate visual hypothesis",
+        "reason": "The markers fall near the upper-left start of the gray patch at the sloping upper boundary of the black side wall. The patch extends rightward and downward from this area in both views. This supports a coarse upper-left-feature hypothesis. The bright folded/reflected top boundary and blur leave the exact material junction ambiguous; the highlights themselves should not be treated as a material landmark."
+      }
     }
   ],
   "overlap_assessment": {

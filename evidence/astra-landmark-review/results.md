@@ -1,7 +1,15 @@
 # GPT-6 Astra visual review: a shared bag region across the gap
 
-**A GPT-6 Astra subagent found convincing regional overlap and three tentative
-point correspondences. No camera alignment has been established.**
+**A second GPT-6 Astra review supports the shared region, leaves A01 unresolved,
+and retains A02/A03 as approximate visual hypotheses. No camera alignment has
+been established.**
+
+The [independent marked-image review](second-review/review.md) inspected eight
+marked comparisons and the original images. It rejected a proposed A01 move
+from (211, 621) to (226, 636): the shifted center lands in green material without
+a distinct matching corner. That shift was not published. Original coordinates
+are preserved, with A01 excluded from geometric testing pending relocalization.
+A02/A03 remain tentative. [Review inputs and hashes](second-review/input-manifest.json).
 
 [Open the interactive marked comparison](https://parhamdb.github.io/sepehrbaba/landmark-review.html).
 Choose a point, switch the after frame, hide markers, or inspect the full original
@@ -50,7 +58,7 @@ than the same material point. It found no confidently shared floor landmark and
 did not assume repeating tile intersections, white coverings or generic bag
 shapes were identical. No facial identities or biometric landmarks were used.
 
-`usable_for_geometric_test: true` means a candidate worth refining or rejecting,
+In the original annotations, `usable_for_geometric_test: true` means a candidate worth refining or rejecting,
 not a measured 3D landmark or accepted alignment. No model inference, geometric
 solve, camera modification or reconstruction training was performed in this
 visual-review task.

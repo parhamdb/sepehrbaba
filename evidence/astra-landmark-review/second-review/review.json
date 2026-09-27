@@ -1,0 +1,114 @@
+{
+  "review_date": "2026-09-27",
+  "method": "Independent visual inspection with view_image of all eight marked screenshots, all three unmarked original JPEGs, and both supplied exact unenhanced crops; annotations read after image inspection. No inference, enhancement, reconstruction, or public-repository write.",
+  "coordinate_system": "1080x1920 native pixels; top-left origin",
+  "region_recognition": {
+    "verdict": "supported",
+    "reason": "The combination of a pale curved region above a black side wall, the descending pale cord, a gray roughly rectangular patch to its right, and green material at the lower left is recognizably consistent across the views. This is stronger than matching a generic black bag. It supports the same local assembly; it does not establish an exact material point or rigidity."
+  },
+  "candidates": [
+    {
+      "id": "A01",
+      "variant": "original",
+      "before_xy": [
+        211,
+        621
+      ],
+      "after_xy": [
+        [
+          944,
+          1008
+        ],
+        [
+          946,
+          1020
+        ]
+      ],
+      "verdict": "unresolved",
+      "precise_corner_supported": false,
+      "reason": "Before marker is on the gray/green transition region, toward the left of the gray patch lower portion. The after markers sit at or just below the bottom-left vicinity of the gray patch, near its contact with the dark lower edge. The before view has an irregular, poorly separated gray/green boundary; the marker does not unambiguously select the same bottom-left material corner. Same-region recognition is supported, but calling these centers the same corner is not.",
+      "replacement_xy": null,
+      "replacement_reason": "Cannot confidently localize the same lower-left material corner from these pixels. A precise replacement would overstate the visible boundary."
+    },
+    {
+      "id": "A01",
+      "variant": "adjusted",
+      "before_xy": [
+        226,
+        636
+      ],
+      "after_xy": [
+        [
+          944,
+          1008
+        ],
+        [
+          946,
+          1020
+        ]
+      ],
+      "verdict": "rejected",
+      "precise_corner_supported": false,
+      "reason": "The shifted before center is in the green area below the visible gray patch, with no distinctive corner at its center. The after centers remain at the gray patch lower-left/bottom-edge vicinity. Moving right is superficially plausible, but the added downward displacement is not supported as a corner correction. This rejects the proposed coordinate correction, not identification of the local assembly.",
+      "replacement_xy": null,
+      "replacement_reason": "Do not publish this shift as a corrected match; the intended lower-left material corner remains unresolved."
+    },
+    {
+      "id": "A02",
+      "variant": "original_unchanged",
+      "before_xy": [
+        276,
+        626
+      ],
+      "after_xy": [
+        [
+          1008,
+          990
+        ],
+        [
+          1014,
+          1003
+        ]
+      ],
+      "verdict": "supported",
+      "support_level": "approximate visual hypothesis",
+      "precise_corner_supported": false,
+      "reason": "Before and after centers are at the lower-right termination of the gray patch, where its right edge meets its lower edge against black material. The surrounding shape provides a plausible same-feature correspondence in both after images. Blur and the marker width prevent exact edge localization; this is not a certified point match.",
+      "replacement_xy": null,
+      "replacement_reason": "No visible evidence justifies changing the existing approximate coordinates. Retain the stated uncertainty as an annotation estimate, not a calibrated confidence interval."
+    },
+    {
+      "id": "A03",
+      "variant": "original_unchanged",
+      "before_xy": [
+        205,
+        562
+      ],
+      "after_xy": [
+        [
+          914,
+          894
+        ],
+        [
+          917,
+          907
+        ]
+      ],
+      "verdict": "supported",
+      "support_level": "approximate visual hypothesis",
+      "precise_corner_supported": false,
+      "reason": "The markers fall near the upper-left start of the gray patch at the sloping upper boundary of the black side wall. The patch extends rightward and downward from this area in both views. This supports a coarse upper-left-feature hypothesis. The bright folded/reflected top boundary and blur leave the exact material junction ambiguous; the highlights themselves should not be treated as a material landmark.",
+      "replacement_xy": null,
+      "replacement_reason": "No independently better coordinate is apparent. Existing coordinates can remain tentative; no subpixel or uniquely resolved corner is claimed."
+    }
+  ],
+  "limitations": [
+    "A01 original unresolved and adjusted rejected concern point localization, not a demonstrated wrong-object match.",
+    "A02 and A03 supported means worth retaining as approximate visual hypotheses only.",
+    "Gray patch is visually recognizable; its exact material, including whether it is reflective tape, is not established by this review.",
+    "The adjacent after frames repeat nearly the same view and do not provide an independent before-to-after baseline.",
+    "No claim of stationarity, rigid support, alignment, pose, or accepted reconstruction bridge.",
+    "No facial identity, biometric correspondence, or bodily landmark used."
+  ],
+  "recommendation": "Preserve original annotations as historical proposals; mark A01 unresolved and do not promote the 15/15 adjustment. Retain A02 and A03 as tentative approximate visual hypotheses. No alignment accepted."
+}

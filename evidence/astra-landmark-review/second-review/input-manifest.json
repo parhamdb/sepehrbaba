@@ -1,0 +1,21 @@
+{
+  "source": "Browser screenshots of unchanged original JPEGs with separate SVG markers",
+  "screenshots_sha256": {
+    "adjusted-A01-after1.png": "1c8d7e092fd337699f1de5ddc34183393ccd81d681f4b5898de8a5526bc78c80",
+    "adjusted-A01-after2.png": "39aa22abb8bca78706e9f7fdf5b2df465b586aef130bc85c6f361b13bfc43e5d",
+    "adjusted-A02-after1.png": "24b75901f5df92686b0eecc3f0523f3e3cee60abc30cfe98c136b164bf5f605d",
+    "adjusted-A02-after2.png": "4ff04b60650e86fcedd39e17d4369eab646d814c2276193fceccb98f59b7c189",
+    "adjusted-A03-after1.png": "1792873172e0a636d112d16840aec98f294e149bb4f79d56d64e6e245620a6b6",
+    "adjusted-A03-after2.png": "599eb42a18d03f17f2f648b142e15740efebfe7cd31168e687eb573a8b11c363",
+    "original-A01-after1.png": "8ee65b595ca2a85dc6195da6c669c630100c8285bb2fb5b4118183cdfb37d12c",
+    "original-A01-after2.png": "4d1b798a1efdbb957d66d6827f567d983d426098a80c10f227ebdabec59a4cd2"
+  },
+  "original_A01_before_xy": [
+    211,
+    621
+  ],
+  "proposed_A01_before_xy": [
+    226,
+    636
+  ]
+}

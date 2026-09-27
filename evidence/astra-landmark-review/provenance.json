@@ -26,5 +26,15 @@
     "visual_review": "parent inspected two native patch crops and full page screenshot"
   },
   "accepted_connection": false,
-  "geometric_validation": "not performed"
+  "geometric_validation": "not performed",
+  "annotations_sha256_scope": "Unedited Astra annotations in astra-candidates.json; public annotations include second-review verdicts.",
+  "public_annotations_sha256": "3ef2dd2893e5bd4c6b960515b33e77b1798d25efee28786da3a6de32f73ac099",
+  "second_review": {
+    "model": "gpt-6-astra",
+    "report": "second-review/review.json",
+    "report_sha256": "c2ef49b5106e15748745322cd55bb488ab557eef64cfc8e9b3ba75bd9ea47d17",
+    "A01_original": "unresolved; excluded from geometric testing",
+    "A01_proposed_shift": "rejected; not applied",
+    "A02_A03": "approximate visual hypotheses only"
+  }
 }
