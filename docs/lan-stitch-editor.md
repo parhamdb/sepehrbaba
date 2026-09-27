@@ -4,6 +4,12 @@ This local application loads independently reconstructed Gaussian PLY sections t
 
 A saved placement is an approximate manual alignment, not a verified camera connection. This editor does not mask people, clean geometry, or fill missing surfaces. Inspect the floor and several identifiable stationary features from multiple viewpoints. Bodies, coverings and belongings are part of the documentation and must not be blanket-masked as people.
 
+For pairwise manual adjustment, expose exactly one earlier section and one later
+section. Keep alternative reconstruction versions in a separate comparison setup
+or the evidence archive, rather than listing them as additional sections in the
+adjustment editor. Back up the manifest and saved state before reducing an
+existing scene list; retain the chosen pair's transforms and filter settings.
+
 ## Launch
 
 From the repository root, using the existing locked dependencies:
