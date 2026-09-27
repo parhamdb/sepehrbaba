@@ -142,3 +142,5 @@ first experiment. They follow the resulting per-gap evidence.
 - [SAM 3 official implementation](https://github.com/facebookresearch/sam3)
 
 **Local camera follow-up:** [gap 098 independent geometry and VGGT context ablation](../evidence/local-camera-gap-098/results.md). All 1,830 pairs were tested; the supported image graph stops before the registered return. Zero new poses accepted.
+
+**Skip the missing interval:** [direct section alignment across gap 098](../evidence/skipped-gap-bridge/results.md) tested 280 cross-section pairs with existing static landmarks, augmented SIFT triangulation and fresh ALIKED detections. No alignment accepted; manual common-landmark review is the next distinct option.

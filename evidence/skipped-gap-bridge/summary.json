@@ -1,0 +1,58 @@
+{
+  "accepted_connection": false,
+  "variants": {
+    "existing": {
+      "cross_pairs": 280,
+      "groups": 2,
+      "fit": 2,
+      "withheld": 0,
+      "image_geometry_passes": 0,
+      "landmarks": {
+        "before": {
+          "original": 25,
+          "added": 0
+        },
+        "after": {
+          "original": 36,
+          "added": 0
+        }
+      }
+    },
+    "augmented": {
+      "cross_pairs": 280,
+      "groups": 3,
+      "fit": 3,
+      "withheld": 0,
+      "image_geometry_passes": 0,
+      "landmarks": {
+        "before": {
+          "original": 25,
+          "added": 8
+        },
+        "after": {
+          "original": 36,
+          "added": 4
+        }
+      }
+    },
+    "learned": {
+      "cross_pairs": 280,
+      "groups": 0,
+      "fit": 0,
+      "withheld": 0,
+      "image_geometry_passes": 0,
+      "landmarks": {
+        "before": {
+          "original": 0,
+          "added": 5
+        },
+        "after": {
+          "original": 0,
+          "added": 1
+        }
+      }
+    }
+  },
+  "selection_sha256": "a6492f30f98f5f34a6d1bdb9afe104bec63d9fdeebb2fb23566571e52b83dbb5",
+  "source_commit": "79fc4b56047e3f1379f5b0ba0a7339ca52864fdc"
+}

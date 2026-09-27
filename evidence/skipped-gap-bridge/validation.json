@@ -1,0 +1,75 @@
+{
+  "tested_source": "79fc4b56047e3f1379f5b0ba0a7339ca52864fdc",
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "units": {
+    "passed": 8,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "checks": [
+    {
+      "id": "numerical-controls",
+      "status": "passed",
+      "evidence": "Seven discovery controls and one focused learned-ID control passed; final regression all eight passed in 0.307 seconds on Thor."
+    },
+    {
+      "id": "source-mask-match-provenance",
+      "status": "passed",
+      "evidence": "38 current source hashes verified; archived mask/source metadata agree; both complete caches contain exactly 703 unique pairs and 280 cross-section pairs."
+    },
+    {
+      "id": "three-variant-execution",
+      "status": "passed",
+      "evidence": "Existing, augmented and fresh learned variants completed. Final outputs match discovery values excluding evaluator revision hash; final code hash matches tested_source."
+    },
+    {
+      "id": "visual-review",
+      "status": "passed",
+      "evidence": "All four mask contact sheets, two strongest SIFT and two strongest ALIKED cross-pair panels inspected. Raw candidates remain explicitly unverified."
+    },
+    {
+      "id": "public-evidence-review",
+      "status": "passed",
+      "evidence": "Scripts committed, methods and limitations documented; relative links/review manifests checked; JSON/Markdown/new scripts/archive metadata privacy-scanned; archive ownership normalized."
+    }
+  ],
+  "scientific_outcome": {
+    "status": "blocked-insufficient-independent-landmarks",
+    "accepted_connections": 0,
+    "alignment_fitted": false,
+    "groups_by_variant": {
+      "existing": 2,
+      "augmented": 3,
+      "learned": 0
+    },
+    "requirement": "12 fitting and six withheld distinct landmarks, plus 3D/reprojection/view-coverage checks",
+    "next_decision": "Manual audit of genuine shared stationary landmarks; do not infer endpoint alignment from time alone."
+  },
+  "execution_budget": "Three distinct hypotheses; one discovery pass, focused learned-ID control, one final complete numerical/three-variant pass reusing inference. No more automatic variants launched.",
+  "independent_review": {
+    "initial_findings": [
+      "pooled coverage",
+      "incomplete cache acceptance"
+    ],
+    "resolution": "Fixed before first dataset evaluation; regression controls passed; reviewer confirmed both fixes and learned-native-coordinate handling."
+  },
+  "artifact_sha256": {
+    "masks.tar.gz": "75b8903dc90658cf6de7324357131930abff57f008b11f186f10b9cf1fc88c1e",
+    "existing.json": "b5ebbbf7ec06f4ef691a532f47b8941f611dbd36a8ff6addd5856a04f75fe71c",
+    "augmented.json": "ac67e95d03ab4bfb7528e49ca84b912cf4233a84213106c28f5a6127efe4d681",
+    "augmented-final.json": "9f71b576e5f81edcb2a4fb0c0629525bf8e7c84fcf668ac44b1d96737a2dc12b",
+    "selection.json": "a6492f30f98f5f34a6d1bdb9afe104bec63d9fdeebb2fb23566571e52b83dbb5",
+    "learned-final.json": "78d7201ceed8747a90cf5b864e4feea45ba077d2c4b2bfca0af2f26e4f96eecc",
+    "learned.json": "78d7201ceed8747a90cf5b864e4feea45ba077d2c4b2bfca0af2f26e4f96eecc",
+    "summary.json": "469f069a7b30a34620b12c856f646dc6855e2da97f87699760f22b65e2f01cc2",
+    "sift-pairs.json": "83b450c2cea1c7c24458685d54889d2819cd5cddc285d45f0d79b9259eeac5b6",
+    "learned-pairs.json": "56265e20ab434e0d044ce9c44f1d89fd1ec06abae837659a95abe6ace0ddcd41",
+    "existing-final.json": "f3a8c66bd4ef292aa83727001be64832b8e98255235a0e868b1a7e34f582b2c9"
+  }
+}

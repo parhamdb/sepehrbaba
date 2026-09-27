@@ -1,0 +1,119 @@
+{
+  "pairs_sha256": "56265e20ab434e0d044ce9c44f1d89fd1ec06abae837659a95abe6ace0ddcd41",
+  "selection_sha256": "a6492f30f98f5f34a6d1bdb9afe104bec63d9fdeebb2fb23566571e52b83dbb5",
+  "script_sha256": "95f5373da55adf01c35b0dcabded87d380fac4cc407bad4059ad9170bf9b2942",
+  "pairs": [
+    {
+      "file": "frame_006476--frame_006569.jpg",
+      "a": "frame_006476.jpg",
+      "b": "frame_006569.jpg",
+      "matches": 13,
+      "shown_match_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "file": "frame_006489--frame_006569.jpg",
+      "a": "frame_006489.jpg",
+      "b": "frame_006569.jpg",
+      "matches": 12,
+      "shown_match_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "file": "frame_006491--frame_006549.jpg",
+      "a": "frame_006491.jpg",
+      "b": "frame_006549.jpg",
+      "matches": 11,
+      "shown_match_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "file": "frame_006477--frame_006723.jpg",
+      "a": "frame_006477.jpg",
+      "b": "frame_006723.jpg",
+      "matches": 10,
+      "shown_match_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "file": "frame_006454--frame_006549.jpg",
+      "a": "frame_006454.jpg",
+      "b": "frame_006549.jpg",
+      "matches": 9,
+      "shown_match_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "file": "frame_006476--frame_006600.jpg",
+      "a": "frame_006476.jpg",
+      "b": "frame_006600.jpg",
+      "matches": 9,
+      "shown_match_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

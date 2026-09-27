@@ -17,6 +17,9 @@ hash agrees, infer the rest, then run the existing native SIFT + LightGlue
 matcher on all 703 pairs (including 280 cross-gap pairs and within-side pairs).
 No cameras filter or select the image matches. Keep the raw cache.
 
+[Completed comparison and review images](../evidence/skipped-gap-bridge/results.md):
+three attempts, no accepted connection.
+
 ## Alignment method and acceptance
 
 Read both COLMAP models without modifying them. Associate native SIFT indices
