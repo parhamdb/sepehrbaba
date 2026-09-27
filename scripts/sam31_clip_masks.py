@@ -44,8 +44,13 @@ def main():
     seed_index=0
     if seed:
         seed_index=next(i for i,f in enumerate(frames) if f['name']==seed['frame'])
-        if not seed.get('reason') or len(seed['points'])!=len(seed['point_labels']) or not seed['points']:raise ValueError('Reviewed seed points and reason required')
-        if any(len(point)!=2 or not all(0<=x<=1 for x in point) for point in seed['points']) or any(x not in (0,1) for x in seed['point_labels']):raise ValueError('Invalid normalized point prompt')
+        if not seed.get('reason'):raise ValueError('Reviewed seed reason required')
+        if 'box' in seed:
+            x,y,w,h=seed['box']
+            if not seed.get('text') or not (0<=x<1 and 0<=y<1 and w>0 and h>0 and x+w<=1 and y+h<=1):raise ValueError('Invalid normalized semantic box')
+        else:
+            if len(seed['points'])!=len(seed['point_labels']) or not seed['points']:raise ValueError('Seed points required')
+            if any(len(point)!=2 or not all(0<=x<=1 for x in point) for point in seed['points']) or any(x not in (0,1) for x in seed['point_labels']):raise ValueError('Invalid normalized point prompt')
     a.output.mkdir(parents=True,exist_ok=False)
     video=a.output/'tracking-frames';video.mkdir()
     masks=a.output/'proposals';masks.mkdir()
@@ -68,7 +73,8 @@ def main():
     with torch.inference_mode(),torch.autocast('cuda',dtype=torch.bfloat16):
         sid=predictor.handle_request(dict(type='start_session',resource_path=str(video)))['session_id']
         if seed:
-            predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=seed_index,points=seed['points'],point_labels=seed['point_labels'],obj_id=1,rel_coordinates=True,clear_old_points=True,output_prob_thresh=.5))
+            if 'box' in seed:predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=seed_index,text=seed['text'],bounding_boxes=[seed['box']],bounding_box_labels=[1],clear_old_boxes=True))
+            else:predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=seed_index,points=seed['points'],point_labels=seed['point_labels'],obj_id=1,rel_coordinates=True,clear_old_points=True,output_prob_thresh=.5))
         else:predictor.handle_request(dict(type='add_prompt',session_id=sid,frame_index=0,text=a.prompt))
         propagation=dict(type='propagate_in_video',session_id=sid)
         if seed:propagation.update(start_frame_index=seed_index,propagation_direction='both')
@@ -96,7 +102,7 @@ def main():
             if i%20==0:print(f'Proposed masks {i+1}/{len(frames)}',flush=True)
         predictor.handle_request(dict(type='close_session',session_id=sid))
     if sorted(x['name'] for x in rows)!=sorted(x['name'] for x in frames):raise ValueError('Incomplete mask inventory')
-    report=dict(method='SAM 3.1 video propagation with persistent object IDs',script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),checkpoint_sha256=hashlib.sha256(checkpoint.read_bytes()).hexdigest(),prompt=a.prompt,frames=len(rows),elapsed_seconds=time.time()-started,
+    report=dict(method='SAM 3.1 video propagation with persistent object IDs',script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),checkpoint_sha256=hashlib.sha256(checkpoint.read_bytes()).hexdigest(),prompt=None if seed else a.prompt,frames=len(rows),nonempty_frames=sum(r['excluded_fraction']>0 for r in rows),elapsed_seconds=time.time()-started,
         cpu_roi_align=a.cpu_roi_align,seed=seed,
         status='proposals only; motion and protected static details require review',rows=rows)
     (a.output/'report.json').write_text(json.dumps(report,indent=2)+'\n')
