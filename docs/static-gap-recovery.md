@@ -68,3 +68,47 @@ A usable outcome is a reviewed recovery candidate **or a reproducible negative
 result that distinguishes masking failure, lack of static texture and bad map
 support**. This does not promise a continuous trajectory through fully obscured
 frames. No automatic joins or invented camera paths are permitted.
+
+## Paired experiment results
+
+All 39 SAM previews were inspected. Cyan areas generally isolate visible floor
+and wall surfaces; blur and some boundary errors remain. The person subtraction
+also removes deceased people, whose semantic class does not imply motion. This
+experiment tests architectural anchors, not whether every person is moving.
+
+| Gap | Maximum unmasked missing-frame matches | Masked maximum | New passing poses |
+|---|---:|---:|---:|
+| 098 | 97 | 6 | 0 |
+| 103 | 37 | 2 | 0 |
+| 144 | 60 | 0 | 0 |
+
+Unmasked: 120 screens, ten passing in-map control screens. Masked: 88 screens,
+zero passing controls, plus eight unsupported query/direction combinations with
+fewer than two usable descriptors. The 10/30-second rows duplicate each other.
+No scene connection was accepted. These results do not establish that SAM masks
+are intrinsically harmful: masking changes the landmark support available.
+
+The support audit found a specific limitation:
+
+| Gap | Earlier-map floor/wall landmarks | Later-map floor/wall landmarks |
+|---|---:|---:|
+| 098 | 14 | 34 |
+| 103 | 4 | 3 |
+| 144 | 4 | 2 |
+
+Five of six reference maps cannot possibly meet the 18 distinct-landmark minimum
+using this selected support. Some frames still have many unused static SIFT
+features: the two earlier gap-144 anchors have 197 and 372 descriptors inside the
+mask support, but only four reconstructed landmarks in their union. That motivates
+triangulating additional static points from fixed reference cameras, instead of
+repeating a matcher against an almost empty map. Query frames also vary sharply:
+gap-144's midpoint has 168 static descriptors, whereas its first and last missing
+frames have zero and one. Neither rematching nor triangulation alone fixes frames
+with no repeatable visible signal.
+
+Evidence: [frozen selection](../evidence/static-gap-recovery/selection.json),
+[unmasked report](../evidence/static-gap-recovery/unmasked.json),
+[masked report](../evidence/static-gap-recovery/masked.json),
+[feature/map support audit](../evidence/static-gap-recovery/support.json),
+[reproducible mask archive](../evidence/static-gap-recovery/masks.tar.gz), and
+[review contact sheets](../evidence/static-gap-recovery/review).

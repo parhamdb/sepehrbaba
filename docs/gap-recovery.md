@@ -54,6 +54,8 @@ not relocalization in general. The low control pass rate is an additional reason
 not to treat this as a definitive ranking of algorithms. All other methods retain explicit tested/untested
 status below.
 
+**Next completed campaign:** [denser anchors and SAM static-region comparison](static-gap-recovery.md), including the map-support audit.
+
 ## Targeted follow-ups
 
 [Nearest-map and ALIKED results](../evidence/gap-recovery/followups.md): both
