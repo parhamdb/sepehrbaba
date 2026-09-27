@@ -2,7 +2,7 @@ import sys, unittest
 from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
-from evaluate_skipped_gap_bridge import similarity, apply, screen_similarity, unique_groups, verify_cache, view_coverage
+from evaluate_skipped_gap_bridge import similarity, apply, screen_similarity, unique_groups, verify_cache, view_coverage, model_data
 
 
 class BridgeTests(unittest.TestCase):
@@ -55,6 +55,14 @@ class BridgeTests(unittest.TestCase):
         tiny=np.array([[0,0],[1,0],[0,1]])
         result=view_coverage(dict(first=tiny,second=tiny+[900,1600]))
         self.assertTrue(all(v<.005 for v in result.values()))
+
+    def test_learned_ids_are_never_native_map_observation_ids(self):
+        from types import SimpleNamespace as NS
+        camera=NS(model='SIMPLE_RADIAL',width=1080,height=1920,params=[1500.,540.,960.,0.])
+        images={i:NS(name=n,camera_id=1,qvec=[1,0,0,0],tvec=np.array([float(i),0,0])) for i,n in enumerate(('a','b'))}
+        reader=NS(read_images_binary=lambda p:images,read_cameras_binary=lambda p:{1:camera},read_points3D_binary=lambda p:{},qvec2rotmat=lambda q:np.eye(3))
+        poses,landmarks,mapping,norm=model_data(reader,Path('.'),['a','b'],dict(feature_family='aliked-native'))
+        self.assertEqual(len(poses),2);self.assertEqual(landmarks,{});self.assertEqual(mapping,{})
 
 
 if __name__=='__main__':unittest.main()

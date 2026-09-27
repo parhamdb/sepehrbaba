@@ -24,7 +24,7 @@ with their exact reconstructed observations; reject coordinate disagreement.
 Existing landmarks require at least three observations and ≤2.5-pixel map error.
 Descriptor support must remain inside the static masks, as in the prior campaign.
 
-Two declared variants share the cache and criteria:
+The first two declared variants share the SIFT cache and criteria:
 
 1. Existing reconstructed static landmarks only.
 2. Add static landmarks triangulated inside each component with fixed cameras:
@@ -97,3 +97,31 @@ Each evaluator requires a complete all-pairs cache, validates the frozen selecti
 and state hashes, and records source model hashes. Output directories must be new.
 Existing matching and triangulation dependencies are in this repository. No
 source database, camera model, or published scene is overwritten.
+
+## Third targeted hypothesis: fresh learned detections
+
+When both SIFT variants lack enough cross-component landmark groups, test freshly
+detected ALIKED features with LightGlue on the **same frozen 38 images and masks**.
+This differs from describing old SIFT locations with ALIKED. Extract at native
+1920-pixel long edge on CPU (Thor lacks the required CUDA deformable convolution),
+retain candidates ≥32 pixels inside the mask and ≥3 pixels apart, and match on GPU.
+The 32-pixel margin is a conservative exclusion, not proof that a learned
+feature's full receptive field contains no person. Mask errors and moving shadows
+remain possible; geometry and visual review remain necessary.
+
+Learned keypoint indices are explicitly **not** associated with existing COLMAP
+point indices. Build their 3D landmarks only by within-component triangulation
+with the same three-view/parallax/reprojection requirements. Reuse the identical
+alignment thresholds; record checkpoint hashes and reject missing cached weights.
+This is the third and final hypothesis in this bounded campaign, not an
+unlimited model search.
+
+```sh
+python scripts/match_learned_static_clip.py --selection selection.json --images "$IMAGES" --masks masks --lightglue "$LIGHTGLUE" --output learned-matches
+python scripts/evaluate_skipped_gap_bridge.py --selection selection.json --pairs learned-matches/pairs.json --state "$STATE" --reader "$COLMAP_READER" --augment --output learned
+python scripts/render_skipped_bridge_pairs.py --selection selection.json --pairs learned-matches/pairs.json --images "$IMAGES" --output learned-review
+```
+
+An additional focused control verifies that ALIKED IDs never enter native-map
+indexing. Unchanged SIFT results remain valid after this isolated feature-family
+branch; the final regression rechecks all eight numerical controls once.

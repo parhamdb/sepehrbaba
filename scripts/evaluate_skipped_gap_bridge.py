@@ -85,6 +85,9 @@ def model_data(reader,root,names,raw):
         f,cx,cy,k=cam.params;K=np.array([[f,0,cx],[0,f,cy],[0,0,1.]])
         R=reader.qvec2rotmat(im.qvec);C=(-R.T@im.tvec-origin)/extent
         poses[name]=dict(R=R.tolist(),t=(-R@C).tolist(),center=C.tolist(),K=K.tolist(),dist=[float(k),0.,0.,0.])
+        # Fresh learned keypoint IDs are never COLMAP observation indices.
+        if raw.get('feature_family')=='aliked-native':continue
+        if raw.get('feature_family','sift')!='sift':raise ValueError('Unknown feature family')
         ids=np.array(raw['frames'][name]['feature_ids'],int);xy=np.array(raw['frames'][name]['xy']).reshape(-1,2)
         if len(ids) and (ids.max()>=len(im.xys) or np.max(np.abs(im.xys[ids]-xy))>.01):raise ValueError('Native feature index association mismatch')
         for index,fid in enumerate(ids):
