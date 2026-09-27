@@ -19,4 +19,11 @@ classified the intercepted response and LAN module into different address spaces
 The staged check now serves the actual HTML and bundle from an isolated loopback
 server. The deployed check uses the real LAN response without interception.
 
-Final receipt and deployed artifact hashes will be recorded after source freeze.
+Final source `f538591`: **6 passed, 0 failed, 0 blocked, 0 untested** (four
+layouts, live slider interaction/synchronization/isolation, and server-state
+preservation). The full final check ran against the deployed LAN editor with all
+non-GET project requests blocked. No browser errors occurred. The saved alignment
+file remained byte-identical. The service was not restarted. Served HTML/JS
+hashes match the tested files; see [final receipt](final.json). Live phone
+screenshots were inspected, including 320×568 with all three controls visible.
+Code and documentation are committed; no filter values were saved by testing.

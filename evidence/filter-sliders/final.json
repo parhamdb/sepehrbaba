@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "height": 568,
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": "passed"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "status": "passed"
+    },
+    {
+      "width": 1280,
+      "height": 850,
+      "status": "passed"
+    },
+    {
+      "name": "touch slider live update, numeric sync and independent settings",
+      "status": "passed"
+    }
+  ],
+  "projectUnchanged": true,
+  "browserErrors": [],
+  "source": "f538591",
+  "servedHashes": {
+    "index.html": "98090b90f55a6556a63e4a31e0f62444ccd10ff9c2d634bdb70313d1066317db",
+    "editor.js": "9fe8058367da94bb2fa8180b628bba413defbace009a2a1c00d398897939d56f"
+  },
+  "savedAlignmentFileUnchanged": true
+}
