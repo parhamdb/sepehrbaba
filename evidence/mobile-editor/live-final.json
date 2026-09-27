@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": [
+    "live cleaned scenes load at phone portrait and landscape sizes",
+    "canvas and placement/save controls visible",
+    "no browser exceptions",
+    "all test writes blocked; project and revision unchanged",
+    "served HTML and JS match frozen build"
+  ]
+}
