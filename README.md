@@ -39,7 +39,7 @@ with its source.
 
 **Recovery experiments:** [gap inventory and ranked recovery methods](docs/gap-recovery.md) — test different methods at each missing interval, retaining evidence for successful and failed attempts. [Static-anchor experiment](evidence/static-gap-recovery/results.md). [Local-camera comparison](evidence/local-camera-gap-098/results.md): partial static links found. [Latest direct section-joining experiment](evidence/skipped-gap-bridge/results.md): the missing interval was skipped, but the two sections still lack a verified alignment.
 
-**Latest landmark test:** [inspect six numbered choices](https://parhamdb.github.io/sepehrbaba/numbered-landmark-review.html). RoMa v2 produced candidates; blind Luna review verified zero physical point matches. [Reproducible method and retained rejections](evidence/numbered-landmarks/results.md). No new section join.
+**Latest landmark test:** [inspect six numbered choices](https://parhamdb.github.io/sepehrbaba/numbered-landmark-review.html). RoMa v2 produced candidates; Luna abstained, and a subsequent human review selected six matches. The local planar geometry check failed; both reviews are retained. [Reproducible method and retained rejections](evidence/numbered-landmarks/results.md). No new section join.
 
 ## The video and the father behind it
 

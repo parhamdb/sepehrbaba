@@ -25,6 +25,8 @@ try {
   const page = await browser.newPage({ viewport: { width: 1300, height: 1000 } });
   await page.goto(`http://127.0.0.1:${server.address().port}/numbered-landmark-review.html`);
   await page.locator('#question option').first().waitFor({ state: 'attached' });
+  // Preserve the original blind-review board presentation; no selected answer.
+  await page.locator('#reviewer').selectOption('luna');
   for (let i = 0; i < questions.questions.length; i++) {
     const id = questions.questions[i].id;
     if (!/^Q\d+$/.test(id)) throw Error('Invalid question ID');

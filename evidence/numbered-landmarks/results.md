@@ -1,6 +1,6 @@
 # Numbered landmark experiment — September 27, 2026
 
-**Result: zero visually verified point correspondences; no camera join.**
+**Initial blind-review result: zero visually verified point correspondences; no camera join.**
 RoMa v2 ran on three original-image pairs on Thor. GPT-6 Luna reviewed six
 queries, each with four detector-generated alternatives, and abstained on all
 six: five `none`, one `unclear`. A homography was not fitted because the frozen
@@ -121,3 +121,50 @@ visible on both sides, including more distant views and revisits. Use an LLM to
 name/rank those observations and a matcher to estimate coordinates. Do not spend
 further coordinate-refinement attempts on this six-point set. These results
 reject this shortlist, not every possible cross-gap correspondence.
+
+## Human selections and geometric check
+
+The user subsequently selected **Q1→2, Q2→1, Q3→1, Q4→1, Q5→1, Q6→4**.
+These assertions are recorded separately in [human-choices.json](human-choices.json),
+with no invented confidence or pixel uncertainty. Luna's original record remains
+unchanged. This human review was not blind: the model and Luna results were public.
+The page defaults to the human selections and allows switching to Luna's review.
+
+The existing 5 px RANSAC and 5 px held-out thresholds were retained. We now had six
+user-identified points, so the previously blocked local homography check ran on
+Thor using OpenCV 4.11.0. No dense-model inference was repeated. Its
+[complete result](human-evaluation.json) records the fitted matrix, inlier mask,
+actual reprojection errors and held-out errors:
+
+| Point excluded from fitting | User's option | Error predicting that point (native px) |
+|---|---|---:|
+| Q1 | 2 | No valid fit |
+| Q2 | 1 | 31.89 |
+| Q3 | 1 | 43.55 |
+| Q4 | 1 | 147.06 |
+| Q5 | 1 | 325.54 |
+| Q6 | 4 | 57.70 |
+
+The all-point RANSAC fit interpolates Q1, Q2, Q3 and Q5; Q4 and Q6 miss by
+263.99 and 135.42 px. Fitting four pairs exactly is not validation of the other
+two or of camera geometry. Five of the six source points occupy a narrow strip;
+Q5 is the main point extending to the right. This limited layout, depth differences,
+flexible material and possible correspondence error are competing explanations.
+**This failed planar-fit check does not establish which human selections are
+wrong.** A single homography is not a general 3D scene model. No section transform
+or camera correction was applied. Human selections remain available for future
+multi-view/depth checks and additional spatially spread observations.
+
+[OpenCV's homography reference](https://docs.opencv.org/3.4.20/d9/d0c/group__calib3d.html)
+describes the RANSAC reprojection threshold and rejection of collinear samples.
+Here we also directly recompute errors rather than equating an inlier mask with
+verified correspondence.
+
+Reproduce the human result with the same evaluator and OpenCV version:
+
+```bash
+python3 scripts/evaluate_numbered_landmarks.py \
+  --experiment-dir evidence/numbered-landmarks \
+  --review evidence/numbered-landmarks/human-choices.json \
+  --output /tmp/numbered-human-evaluation.json
+```

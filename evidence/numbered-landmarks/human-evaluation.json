@@ -1,0 +1,273 @@
+{
+  "summary": "Human reviewer selected 6 of 6 correspondences. The local held-out geometry check did not pass. No camera connection accepted.",
+  "questions": [
+    {
+      "id": "Q1",
+      "summary": "Human reviewer: 2. User selected this corresponding target point; subject to geometric checks.",
+      "visual_review": {
+        "id": "Q1",
+        "choice": "2",
+        "confidence": "not stated",
+        "reason": "User selected this corresponding target point; subject to geometric checks.",
+        "physical_point_identifiable": true
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "2",
+        "snap_distance_px": 6.205414596236963,
+        "warp_cycle_error_px": 0.6066995124565364,
+        "source_neighbor_prediction_delta_px": 1.6779484458486884,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 0.03241613507270813,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.009728934615850449,
+        "target_neighbor_prediction_delta_px": 6.707103044162162,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": {
+        "xy": [
+          842.1036987304688,
+          910.2063598632812
+        ],
+        "model_prediction_distance_px": 6.205414596236963,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.009728934615850449,
+        "target_neighbor_prediction_delta_px": 6.707103044162162
+      },
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q2",
+      "summary": "Human reviewer: 1. User selected this corresponding target point; subject to geometric checks.",
+      "visual_review": {
+        "id": "Q2",
+        "choice": "1",
+        "confidence": "not stated",
+        "reason": "User selected this corresponding target point; subject to geometric checks.",
+        "physical_point_identifiable": true
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "1",
+        "snap_distance_px": 3.508583782672038,
+        "warp_cycle_error_px": 2.1908814715603127,
+        "source_neighbor_prediction_delta_px": 1.6382683920705063,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 0.13608360290527344,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.24303096532821655,
+        "target_neighbor_prediction_delta_px": 3.2752468185991894,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": {
+        "xy": [
+          893.9470825195312,
+          927.316650390625
+        ],
+        "model_prediction_distance_px": 3.508583782672038,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.24303096532821655,
+        "target_neighbor_prediction_delta_px": 3.2752468185991894
+      },
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q3",
+      "summary": "Human reviewer: 1. User selected this corresponding target point; subject to geometric checks.",
+      "visual_review": {
+        "id": "Q3",
+        "choice": "1",
+        "confidence": "not stated",
+        "reason": "User selected this corresponding target point; subject to geometric checks.",
+        "physical_point_identifiable": true
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "1",
+        "snap_distance_px": 15.91302858541837,
+        "warp_cycle_error_px": 2.066334830626808,
+        "source_neighbor_prediction_delta_px": 4.647699049872259,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 1.2118157148361206,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.03241857513785362,
+        "target_neighbor_prediction_delta_px": 15.583944320902818,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": {
+        "xy": [
+          857.9890747070312,
+          979.57958984375
+        ],
+        "model_prediction_distance_px": 15.91302858541837,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.03241857513785362,
+        "target_neighbor_prediction_delta_px": 15.583944320902818
+      },
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q4",
+      "summary": "Human reviewer: 1. User selected this corresponding target point; subject to geometric checks.",
+      "visual_review": {
+        "id": "Q4",
+        "choice": "1",
+        "confidence": "not stated",
+        "reason": "User selected this corresponding target point; subject to geometric checks.",
+        "physical_point_identifiable": true
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "1",
+        "snap_distance_px": 46.34331559964471,
+        "warp_cycle_error_px": 16.162605034363093,
+        "source_neighbor_prediction_delta_px": 26.44142570486342,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 4.405429363250732,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.22629353404045105,
+        "target_neighbor_prediction_delta_px": 44.30932619840617,
+        "passes_snap_and_cycle_limits": false
+      },
+      "selected_option": {
+        "xy": [
+          805.7632446289062,
+          1034.6427001953125
+        ],
+        "model_prediction_distance_px": 46.34331559964471,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.22629353404045105,
+        "target_neighbor_prediction_delta_px": 44.30932619840617
+      },
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q5",
+      "summary": "Human reviewer: 1. User selected this corresponding target point; subject to geometric checks.",
+      "visual_review": {
+        "id": "Q5",
+        "choice": "1",
+        "confidence": "not stated",
+        "reason": "User selected this corresponding target point; subject to geometric checks.",
+        "physical_point_identifiable": true
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "3",
+        "snap_distance_px": 4.7087369505417564,
+        "warp_cycle_error_px": 2.02440963562718,
+        "source_neighbor_prediction_delta_px": 5.065091671257326,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 0.4889225959777832,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.563439130783081,
+        "target_neighbor_prediction_delta_px": 7.418471817787324,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": {
+        "xy": [
+          1015.788818359375,
+          936.8605346679688
+        ],
+        "model_prediction_distance_px": 18.441372504374087,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.04456072300672531,
+        "target_neighbor_prediction_delta_px": 20.736242954947834
+      },
+      "accepted_correspondence": false
+    },
+    {
+      "id": "Q6",
+      "summary": "Human reviewer: 4. User selected this corresponding target point; subject to geometric checks.",
+      "visual_review": {
+        "id": "Q6",
+        "choice": "4",
+        "confidence": "not stated",
+        "reason": "User selected this corresponding target point; subject to geometric checks.",
+        "physical_point_identifiable": true
+      },
+      "model_diagnostics": {
+        "model_preferred_option": "4",
+        "snap_distance_px": 3.4398544542590557,
+        "warp_cycle_error_px": 8.117660260087016,
+        "source_neighbor_prediction_delta_px": 3.4369769683387554,
+        "source_neighbor_lk_valid": true,
+        "source_neighbor_lk_return_error_px": 43.91529083251953,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.0030517578125,
+        "target_neighbor_prediction_delta_px": 4.6214455144323,
+        "passes_snap_and_cycle_limits": true
+      },
+      "selected_option": {
+        "xy": [
+          825.6904907226562,
+          1021.0142211914062
+        ],
+        "model_prediction_distance_px": 3.4398544542590557,
+        "target_neighbor_lk_valid": true,
+        "target_neighbor_lk_return_error_px": 0.0030517578125,
+        "target_neighbor_prediction_delta_px": 4.6214455144323
+      },
+      "accepted_correspondence": false
+    }
+  ],
+  "geometry": {
+    "status": "evaluated",
+    "reason": "Local flexible-surface fit only; not section alignment.",
+    "supported_points": 6,
+    "homography_fitted": true,
+    "all_point_fit": {
+      "matrix": [
+        [
+          0.5068372794423344,
+          -1.2068443253781145,
+          757.9992242854141
+        ],
+        [
+          0.19501485710687644,
+          -1.168773370548202,
+          803.2771527831649
+        ],
+        [
+          0.00017011232322216506,
+          -0.0014762516118080953,
+          1.0
+        ]
+      ],
+      "ransac_inliers": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "reprojection_errors_px": [
+        1.1593828079623528e-12,
+        5.684341886080801e-13,
+        1.4244919937188647e-12,
+        263.99433472333027,
+        9.779711566628324e-13,
+        135.41719773270822
+      ]
+    },
+    "opencv_version": "4.11.0",
+    "held_out_errors_px": [
+      null,
+      31.88787058121895,
+      43.54908785324074,
+      147.05764767034677,
+      325.5371649649372,
+      57.704239759321794
+    ],
+    "held_out_pass": false
+  },
+  "thresholds": {
+    "sift_contrast": 0.004,
+    "target_snap_max_px": 25,
+    "warp_cycle_max_native_px": 10,
+    "local_homography_ransac_px": 5,
+    "held_out_local_reprojection_px": 5
+  },
+  "accepted_connection": false,
+  "limitations": [
+    "Model round-trip and neighboring-view consistency are not independent physical correspondence evidence.",
+    "Neighboring checks span about 0.05 seconds on each side, not the missing interval.",
+    "All queries lie in one flexible or occluded region. This experiment does not rule out matches elsewhere."
+  ]
+}

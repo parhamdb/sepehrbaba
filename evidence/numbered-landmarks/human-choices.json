@@ -1,0 +1,55 @@
+{
+  "reviewer_label": "Human reviewer",
+  "review_type": "user_selected_correspondences",
+  "date": "2026-09-27",
+  "source": "User supplied these six target option labels after seeing the published numbered review.",
+  "questions": [
+    {
+      "id": "Q1",
+      "choice": "2",
+      "confidence": "not stated",
+      "reason": "User selected this corresponding target point; subject to geometric checks.",
+      "physical_point_identifiable": true
+    },
+    {
+      "id": "Q2",
+      "choice": "1",
+      "confidence": "not stated",
+      "reason": "User selected this corresponding target point; subject to geometric checks.",
+      "physical_point_identifiable": true
+    },
+    {
+      "id": "Q3",
+      "choice": "1",
+      "confidence": "not stated",
+      "reason": "User selected this corresponding target point; subject to geometric checks.",
+      "physical_point_identifiable": true
+    },
+    {
+      "id": "Q4",
+      "choice": "1",
+      "confidence": "not stated",
+      "reason": "User selected this corresponding target point; subject to geometric checks.",
+      "physical_point_identifiable": true
+    },
+    {
+      "id": "Q5",
+      "choice": "1",
+      "confidence": "not stated",
+      "reason": "User selected this corresponding target point; subject to geometric checks.",
+      "physical_point_identifiable": true
+    },
+    {
+      "id": "Q6",
+      "choice": "4",
+      "confidence": "not stated",
+      "reason": "User selected this corresponding target point; subject to geometric checks.",
+      "physical_point_identifiable": true
+    }
+  ],
+  "limitations": [
+    "These are human correspondence assertions, not independent geometric verification.",
+    "Confidence and pixel uncertainty were not specified.",
+    "The reviewer had access to the published model and Luna results; this was not a blind review."
+  ]
+}

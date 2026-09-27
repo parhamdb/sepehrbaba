@@ -24,6 +24,7 @@ def evaluate(root, review_path):
     questions = read(props/'questions.json')['questions']
     evidence = read(props/'matcher-evidence.json')
     review = read(review_path)
+    reviewer = review.get('reviewer_label', 'Luna')
     ids = [q['id'] for q in questions]
     answers = {q['id']: q for q in review['questions']}
     if set(answers) != set(ids) or len(review['questions']) != len(ids):
@@ -69,7 +70,7 @@ def evaluate(root, review_path):
                 supported.append((q['source_xy'], option['xy']))
         elif answer['physical_point_identifiable']:
             raise ValueError('Abstention cannot identify a corresponding point')
-        rows.append(dict(id=q['id'], summary=f"Luna: {answer['choice']}. {answer['reason']}", visual_review=answer, model_diagnostics=diagnostics, selected_option=selected, accepted_correspondence=False))
+        rows.append(dict(id=q['id'], summary=f"{reviewer}: {answer['choice']}. {answer['reason']}", visual_review=answer, model_diagnostics=diagnostics, selected_option=selected, accepted_correspondence=False))
     geometry = dict(status='blocked', reason=f'Need six visually identifiable corresponding points; found {len(supported)}.', supported_points=len(supported), homography_fitted=False)
     if len(supported) >= 6:
         import cv2
@@ -78,6 +79,13 @@ def evaluate(root, review_path):
         if min(np.linalg.matrix_rank(x-x.mean(axis=0)) for x in (src, dst)) < 2:
             geometry['reason'] = 'Collinear points cannot constrain a local homography.'
         else:
+            cv2.setRNGSeed(20260927)
+            all_H, all_mask = cv2.findHomography(src, dst, cv2.RANSAC, limits['local_homography_ransac_px'])
+            geometry['all_point_fit'] = dict(matrix=all_H.tolist() if all_H is not None else None, ransac_inliers=all_mask[:, 0].astype(bool).tolist() if all_mask is not None else None)
+            if all_H is not None:
+                projected = cv2.perspectiveTransform(src[:, None], all_H)[:, 0]
+                geometry['all_point_fit']['reprojection_errors_px'] = [distance(a.tolist(), b.tolist()) for a, b in zip(projected, dst)]
+            geometry['opencv_version'] = cv2.__version__
             errors = []
             for i in range(len(src)):
                 keep = np.arange(len(src)) != i
@@ -88,7 +96,11 @@ def evaluate(root, review_path):
                     projected = cv2.perspectiveTransform(src[i:i+1, None], H)[0, 0]
                     errors.append(distance(projected.tolist(), dst[i].tolist()))
             geometry.update(status='evaluated', reason='Local flexible-surface fit only; not section alignment.', homography_fitted=True, held_out_errors_px=errors, held_out_pass=all(e is not None and e <= limits['held_out_local_reprojection_px'] for e in errors))
-    return dict(summary=f"Luna identified {len(supported)} of {len(rows)} physical point correspondences. No camera connection accepted.", questions=rows, geometry=geometry, thresholds=limits, accepted_connection=False, limitations=['Model round-trip and neighboring-view consistency are not independent physical correspondence evidence.', 'Neighboring checks span about 0.05 seconds on each side, not the missing interval.', 'All queries lie in one flexible or occluded region. This experiment does not rule out matches elsewhere.'])
+    summary = f"{reviewer} identified {len(supported)} of {len(rows)} physical point correspondences. No camera connection accepted."
+    if review.get("review_type") == "user_selected_correspondences":
+        outcome = "passed" if geometry.get("held_out_pass") else "did not pass"
+        summary = f"Human reviewer selected {len(supported)} of {len(rows)} correspondences. The local held-out geometry check {outcome}. No camera connection accepted."
+    return dict(summary=summary, questions=rows, geometry=geometry, thresholds=limits, accepted_connection=False, limitations=['Model round-trip and neighboring-view consistency are not independent physical correspondence evidence.', 'Neighboring checks span about 0.05 seconds on each side, not the missing interval.', 'All queries lie in one flexible or occluded region. This experiment does not rule out matches elsewhere.'])
 
 
 def main():
