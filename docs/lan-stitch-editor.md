@@ -122,8 +122,9 @@ named mobile check when diagnosing an observed failure.
 
 ## Independent section inspection
 
-Open **Inspect** on a phone (the inspection panel is always present on desktop).
-Each section has a Show checkbox and an **Only** button. Only also selects that
+Open **Filters** on a phone (the inspection panel is always present on desktop).
+The three filter inputs appear first, with no section-list scrolling required.
+Scroll below them to **Show / hide sections**. Each section has a Show checkbox and an **Only** button. Only also selects that
 section for editing. Switching sections while soloing follows the selection;
 manually changing a Show checkbox exits solo mode. **Show all sections** restores
 the comparison without changing placement.
@@ -176,3 +177,23 @@ locked alignment, save/reload and export/import, server restart, invalid setting
 phone control access and unchanged source hashes. Run browser checks sequentially
 on constrained hosts. `STITCH_FILTER_ONLY` selects a named check for failure-only
 reruns. Images are retained under `dist/stitch-editor/filter-check/`.
+
+### Live filter sliders
+
+The **Filters** tab puts all three sliders and numeric fields first. Dragging a
+slider immediately updates the selected section; the numeric field shows its
+current threshold. Visible endpoints are 0–1 for opacity, 0–50× median for size,
+and 0–100 for ray axis ratio. Zero disables that filter. Use the numeric box for
+precise or larger values. Entering a larger value expands the slider range; that
+range stays steady while dragging and is reset by **Reset filters**.
+
+The section list follows the filters. On small phones the panel uses more height
+while Filters is selected, keeping all three controls visible without scrolling
+and retaining a scene view. Filter algorithms, source files and project storage
+are unchanged by the slider UI.
+
+`node tests/stitch-filter-access-check.mjs` checks immediate visibility without
+scrolling at four screen sizes, touch interaction, numeric/slider synchronization,
+stable expanded maxima and independent section state. `STITCH_TEST_WEB` starts an
+isolated server against a staged build; otherwise `STITCH_TEST_URL` selects an
+existing editor, defaulting to loopback port 8092. All project writes are blocked.

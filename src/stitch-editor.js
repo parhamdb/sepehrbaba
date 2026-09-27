@@ -3,7 +3,7 @@ import {validateFilters,measureSplats,filterSummary,filterModifier} from './stit
 const $ = id => document.getElementById(id);
 const clone = value => JSON.parse(JSON.stringify(value));
 let project, initial, manifest, revision, selected = 0, dirty = false, soloMode = false;
-const entities = new Map(), measurements = new Map(), filterKeys = new Map(), filterCounts = new Map(), originals = new Set();
+const entities = new Map(), measurements = new Map(), filterKeys = new Map(), filterCounts = new Map(), sliderLimits = new Map(), originals = new Set();
 const canvas = $('canvas'), viewport = $('viewport');
 const app = new pc.Application(canvas, {graphicsDeviceOptions:{deviceTypes:['webgl2'],antialias:false,alpha:false}});
 app.setCanvasFillMode(pc.FILLMODE_NONE, viewport.clientWidth, viewport.clientHeight);
@@ -42,7 +42,11 @@ function applyFilter(scene) {
 function inspectionControls() {
   const s=selectedScene(),f=s.filters;
   $('filter-heading').textContent=`Filters: ${manifest.scenes.find(m=>m.id===s.id).label??s.id}`;
-  $('filter-opacity').value=f.minOpacity;$('filter-size').value=f.maxSize;$('filter-ratio').value=f.maxRatio;$('filter-original').checked=originals.has(s.id);
+  $('filter-opacity').value=f.minOpacity;$('filter-size').value=f.maxSize;$('filter-ratio').value=f.maxRatio;
+  for(const [name,key,limit] of [['opacity','minOpacity',1],['size','maxSize',50],['ratio','maxRatio',100]]){
+    const limits=sliderLimits.get(s.id)??{};limits[name]=Math.max(limits[name]??limit,f[key]);sliderLimits.set(s.id,limits);
+    const slider=$(`slider-${name}`);slider.max=limits[name];slider.value=f[key];$(`slider-${name}-max`).textContent=slider.max+(name==='opacity'?'':'×');
+  }$('filter-original').checked=originals.has(s.id);
   const summary=filterCounts.get(s.id);
   $('filter-summary').textContent=`${originals.has(s.id)?'Original preview. ':''}Approximately ${summary.hidden.toLocaleString()} / ${summary.total.toLocaleString()} splats hidden (${(100*summary.hidden/summary.total).toFixed(1)}%).`;
   for(const row of $('section-list').children){const item=project.scenes.find(s=>s.id===row.dataset.scene);row.querySelector('input').checked=item.visible;}
@@ -53,8 +57,9 @@ function setFilters(filters) {
   try{selectedScene().filters=validateFilters(filters);originals.delete(selectedScene().id);applyFilter(selectedScene());controls();markDirty();}catch(e){status(e.message);inspectionControls();}
 }
 for(const id of ['filter-opacity','filter-size','filter-ratio'])$(id).onchange=()=>setFilters({minOpacity:Number($('filter-opacity').value),maxSize:Number($('filter-size').value),maxRatio:Number($('filter-ratio').value)});
+for(const [name,key] of [['opacity','minOpacity'],['size','maxSize'],['ratio','maxRatio']])$(`slider-${name}`).oninput=e=>setFilters({...selectedScene().filters,[key]:Number(e.target.value)});
 $('filter-rays').onclick=()=>setFilters({...selectedScene().filters,maxRatio:10});
-$('filter-reset').onclick=()=>setFilters(validateFilters());
+$('filter-reset').onclick=()=>{sliderLimits.delete(selectedScene().id);setFilters(validateFilters());};
 $('filter-original').onchange=()=>{if($('filter-original').checked)originals.add(selectedScene().id);else originals.delete(selectedScene().id);applyFilter(selectedScene());controls();};
 function sectionRows() {
   for(const s of project.scenes){
