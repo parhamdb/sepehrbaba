@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "passed",
+      "samples": 100,
+      "planes": 87,
+      "nearby_pairs": 1,
+      "distant_pairs": 0,
+      "video": {
+        "duration": 100,
+        "width": 540,
+        "height": 1000
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "passed",
+      "samples": 100,
+      "planes": 87,
+      "nearby_pairs": 1,
+      "distant_pairs": 0,
+      "video": {
+        "duration": 100,
+        "width": 540,
+        "height": 1000
+      },
+      "page_errors": []
+    }
+  ]
+}

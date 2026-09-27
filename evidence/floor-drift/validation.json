@@ -29,11 +29,11 @@
     },
     {
       "id": "published-desktop",
-      "status": "untested"
+      "status": "passed"
     },
     {
       "id": "published-mobile",
-      "status": "untested"
+      "status": "passed"
     }
   ],
   "history": [
@@ -43,10 +43,14 @@
   ],
   "report_sha256": "f32bd8cb1a92270469101c0a535aadec7f74f14e4404aa2af99de3fc4ec606fe",
   "counts": {
-    "passed": 6,
+    "passed": 8,
     "failed": 0,
     "blocked": 0,
-    "untested": 2
+    "untested": 0
   },
-  "final_math_test_count": 5
+  "final_math_test_count": 5,
+  "deployed_source_commit": "1c6ed111e8877cfd9364a321d55bb8bedd82be10",
+  "deployment": "https://github.com/parhamdb/sepehrbaba/actions/runs/36286199482",
+  "published_report_matches_inspected_sha256": true,
+  "status": "diagnostic delivery complete; no camera correction or accepted join"
 }
