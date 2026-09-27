@@ -1,0 +1,58 @@
+{
+  "scope": "Interactive tracing on both current sections; one reviewed point-SAM+padding cycle, plus later padding control; compare and stop unsupported masking",
+  "budget": "45min active work; at most3distinct hypotheses for one blocker; one discovery, focused fixes, one final check",
+  "checks": [
+    {
+      "id": "G1",
+      "status": "passed",
+      "evidence": "Selected4Gaussians draw the visible ray in isolated browserrender. Source trace receipt4843fc28 ranks trainingframes and retainscheckpointIDs."
+    },
+    {
+      "id": "G2",
+      "status": "passed",
+      "evidence": "Desktop and390x844phone pick/trace/isolate/restore succeeded; earlier andlater actualassets eachreturned sourceframes. No browsererrors."
+    },
+    {
+      "id": "G3",
+      "status": "untested",
+      "evidence": "Point-guided SAM propagation completed; padding masks generating and review pending."
+    },
+    {
+      "id": "G4",
+      "status": "untested",
+      "evidence": "Retraining and fixed-reference comparison pending."
+    },
+    {
+      "id": "G5",
+      "status": "untested",
+      "evidence": "Repeatable feedback records, release docs and final artifact review pending."
+    }
+  ],
+  "counts": {
+    "passed": 2,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 3
+  },
+  "discovery_failures": [
+    {
+      "test": "integer camera vector projection",
+      "cause": "NumPy integer in-place normalization",
+      "resolution": "Explicit float coordinate transform; focused test passed."
+    }
+  ],
+  "seed_attempts": [
+    {
+      "kind": "singlepoint",
+      "outcome": "wrongseed inleggap;1/78nonempty"
+    },
+    {
+      "kind": "correctedpoints",
+      "outcome": "correctvisitor atseed but77/78empty; rejected"
+    },
+    {
+      "kind": "semanticbox",
+      "outcome": "78/78nonempty; maskreviewpending"
+    }
+  ]
+}

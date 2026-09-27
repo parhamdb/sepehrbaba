@@ -1,0 +1,40 @@
+{
+  "frame": "frame_006449.jpg",
+  "points": [
+    [
+      0.37,
+      0.2
+    ],
+    [
+      0.55,
+      0.21
+    ],
+    [
+      0.33,
+      0.33
+    ],
+    [
+      0.46,
+      0.16
+    ],
+    [
+      0.8,
+      0.4
+    ]
+  ],
+  "point_labels": [
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "reason": "Corrected source-reviewed seed: the first positive point accidentally landed in the gap between the legs and tracked a tiny background patch. Three positive points now identify gray trouser legs and shoe; gap and floor are negative. Body and covering protections remain mandatory. Ray-to-visitor causality remains unproven.",
+  "trace_id": "4843fc28-8696-4f09-9bc1-e03e7d751537",
+  "selected_ids": [
+    2923,
+    3946,
+    6174,
+    5812
+  ]
+}

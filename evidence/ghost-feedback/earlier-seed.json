@@ -1,0 +1,25 @@
+{
+  "frame": "frame_006449.jpg",
+  "points": [
+    [
+      0.46,
+      0.15
+    ],
+    [
+      0.78,
+      0.22
+    ]
+  ],
+  "point_labels": [
+    1,
+    0
+  ],
+  "reason": "Ray trace4843fc28 identifies four elongated splats overlapping a walking visitor across sourceframes. Existing masks cover most of the visitor; point-guided segmentation and a5pixel native border test remaining boundaries. Static coverings also intersect the footprint and must remain protected. Association is a hypothesis, not a proven cause.",
+  "trace_id": "4843fc28-8696-4f09-9bc1-e03e7d751537",
+  "selected_ids": [
+    2923,
+    3946,
+    6174,
+    5812
+  ]
+}

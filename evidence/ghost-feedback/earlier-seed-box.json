@@ -1,0 +1,18 @@
+{
+  "frame": "frame_006449.jpg",
+  "box": [
+    0.22,
+    0,
+    0.46,
+    0.44
+  ],
+  "text": "standing person",
+  "reason": "Third distinct hypothesis: normalized semanticbox around the source-reviewed gray-trousered visitor uses native semantic video propagation. Corrected point-only seed segmented the visitor at the seed but produced empty masks elsewhere. This proposal must be reviewed; static coverings remain protected.",
+  "trace_id": "4843fc28-8696-4f09-9bc1-e03e7d751537",
+  "selected_ids": [
+    2923,
+    3946,
+    6174,
+    5812
+  ]
+}

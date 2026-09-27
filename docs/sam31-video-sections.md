@@ -178,3 +178,6 @@ phone checks loaded all four assets and verified each Only control without brows
 exceptions. Original scene files and saved alignment remained unchanged.
 
 [Acceptance ledger](../evidence/sam31-video-sections/verification.json).
+
+A subsequent [interactive ray-to-video feedback loop](ghost-feedback-loop.md)
+adds source inspection, reviewed object seeds and explicit native-pixel padding.
