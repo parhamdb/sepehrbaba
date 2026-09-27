@@ -110,3 +110,17 @@ After corrections, the later masks add only 0.059% of image area on average
 Filtering masked seed observations removes 22 of 1,890 earlier points and none of
 9,976 later points. Camera positions stay fixed. These small changes limit how
 much improvement should be expected from temporal masks alone.
+
+## Render comparison
+
+The earlier candidate completed 8,000 steps. On the same eight held-out views and
+frozen baseline scoring pixels, PSNR changed from 24.3717 to 24.2144 dB
+(-0.1573 dB); one view improved. Independent inspection of the six contact-sheet
+views found no convincing material improvement. The candidate floor appears
+slightly smoother and less distinct at frame006475; blur remains in both models.
+The previous scene remains the default. Newly excluded visitor pixels can still
+fall within baseline scoring support, so the score alone is not a quality verdict.
+
+[Earlier source/baseline/candidate comparison](../evidence/sam31-video-sections/earlier-comparison/comparison.jpg)
+and [numeric results](../evidence/sam31-video-sections/earlier-comparison/comparison.json).
+The later comparison and combined viewer are pending at this checkpoint.

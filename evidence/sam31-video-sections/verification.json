@@ -23,7 +23,7 @@
     {
       "id": "T4",
       "status": "untested",
-      "evidence": "Earlier training active; later queued. Fixed-mask render comparison pending."
+      "evidence": "Earlier 8000-step training and eight-view fixed-mask comparison complete; no material improvement. Later training active."
     },
     {
       "id": "T5",

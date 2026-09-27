@@ -1,0 +1,13 @@
+{
+  "status": "comparison candidate only; baseline retained",
+  "reviewed_views": [
+    "frame_006412",
+    "frame_006423",
+    "frame_006443",
+    "frame_006454",
+    "frame_006475",
+    "frame_006485"
+  ],
+  "finding": "No convincing material improvement in six shown held-out views. Both remove major visitors while substantial blur remains. Candidate floor appears smoother with less local detail at006475. No novel-view conclusion.",
+  "metric_caveat": "Newly excluded visitor pixels can still be included in the frozen baseline scoring support; the score alone does not decide quality."
+}
