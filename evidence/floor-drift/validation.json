@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "source_commit": "c709a41",
+  "source_commit": "6699461",
   "scope": "Sampled floor drift diagnosis and review page; no camera corrections or joins.",
   "checks": [
     {
@@ -17,15 +17,15 @@
     },
     {
       "id": "five-math-regressions-final",
-      "status": "untested"
+      "status": "passed"
     },
     {
       "id": "local-desktop",
-      "status": "untested"
+      "status": "passed"
     },
     {
       "id": "local-mobile",
-      "status": "untested"
+      "status": "passed"
     },
     {
       "id": "published-desktop",
@@ -43,9 +43,10 @@
   ],
   "report_sha256": "f32bd8cb1a92270469101c0a535aadec7f74f14e4404aa2af99de3fc4ec606fe",
   "counts": {
-    "passed": 3,
+    "passed": 6,
     "failed": 0,
     "blocked": 0,
-    "untested": 5
-  }
+    "untested": 2
+  },
+  "final_math_test_count": 5
 }
