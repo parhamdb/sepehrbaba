@@ -1,0 +1,70 @@
+# Static-anchor gap recovery
+
+This follow-up tests gaps **098 (412.29–414.51 s), 103 (438.63–446.57 s), and
+144 (552.98–554.63 s)**, selected because the previous midpoint tests had relatively
+more candidate matches. These are explicitly targeted cases, not an unbiased
+sample of the entire recording.
+
+The first campaign used sparse reference anchors and tested only gap midpoints
+and first returns. Here we test the **first, midpoint and last missing frame** and
+first registered return. Choose the nearest eligible reference component on each
+side, then its sharpest registered frame in each of the 0–1, 1–2, 2–4, 4–6, 6–8
+and 8–10 second distance bins. Whole-image Laplacian variance is only an anchor
+selection proxy; it can favor a sharp person over a blurred floor. It does not use
+camera-fit success or match counts to pick winners. Keep a distinct registered
+control if one is available.
+
+Freeze this selection for two otherwise identical variants:
+
+1. Denser sharp anchors, original unmasked SIFT descriptors, ratio matching and
+   LightGlue, fixed reference intrinsics and held-out-landmark PnP.
+2. The same views and settings, restricting both anchor and query descriptors to
+   SAM 3.1 proposals for **floor, ground and wall**, excluding a 21-pixel dilation
+   of **person** masks. Descriptor centers must be at least `max(8, 12*scale)`
+   pixels inside the allowed region. This conservative support check avoids using
+   a floor-centered descriptor whose patch includes a foreground person.
+
+SAM outputs are semantic proposals. They neither establish that an object is
+stationary nor undo bad original triangulation. Reference maps remain provisional;
+a passing camera screen needs visual/static correspondence review. Floor-only
+constraints can also be ambiguous. Controls already present in the reference map
+remain controls even if they pass.
+
+The two reported search windows (10 and 30 seconds) are identical in this campaign
+because explicit anchors are restricted to ten seconds. They retain the runner's
+schema for comparison and must not be counted as independent supporting evidence.
+
+## Reproduce
+
+```sh
+python scripts/select_gap_anchors.py --state "$BATCH/state.json" \
+  --frames "$NATIVE/frames.json" --images "$NATIVE/images" --output selection.json
+python scripts/mask_gap_anchors.py --selection selection.json \
+  --images "$NATIVE/images" --output masks
+# Run in the SIFT/LightGlue environment; add --masks masks for the masked variant.
+python scripts/probe_gap_recovery.py --state "$BATCH/state.json" \
+  --frames "$NATIVE/frames.json" --database "$DATABASE" \
+  --reader "$COLMAP_SOURCE/scripts/python/read_write_model.py" \
+  --lightglue "$LIGHTGLUE_SOURCE" --selection selection.json --output unmasked
+```
+
+Masking uses the cached, approved SAM 3.1 checkpoint in the SAM environment.
+Extraction is native resolution. The established CPU ROI Align fallback supports
+this hardware's torchvision build. Source, model, selection and mask hashes are
+recorded; no credentials or host configuration are required in the public repo.
+
+## Frozen acceptance inventory
+
+One complete discovery, focused failure-only checks, one final validation of the
+frozen artifact. No full-video inference or splat training in this campaign.
+
+- Nine geometry/selection/resume tests, including mask support and sharp-anchor bins.
+- SAM masks produced with verified source identities; inspect all selected previews.
+- Three-gap unmasked and masked variants complete with identical selection/settings.
+- Inspect any new passing camera correspondences; keep unsupported intervals unknown.
+- Public scripts, reproducible selection, masks and results committed without private configuration.
+
+A usable outcome is a reviewed recovery candidate **or a reproducible negative
+result that distinguishes masking failure, lack of static texture and bad map
+support**. This does not promise a continuous trajectory through fully obscured
+frames. No automatic joins or invented camera paths are permitted.

@@ -3,7 +3,8 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
 from inventory_camera_gaps import inventory
-from probe_gap_recovery import localize,select_anchors,unique_correspondences,verify_models,digest,choose_reference
+from select_gap_anchors import select_bins
+from probe_gap_recovery import localize,select_anchors,unique_correspondences,verify_models,digest,choose_reference,mask_indices
 
 
 class RecoveryTests(unittest.TestCase):
@@ -41,6 +42,17 @@ class RecoveryTests(unittest.TestCase):
         self.assertEqual(choose_reference(components,times,40,-1,'support')['id'],'large')
         self.assertEqual(choose_reference(components,times,40,-1,'nearest')['id'],'near')
         self.assertIsNone(choose_reference(components,times,40,1,'nearest'))
+
+    def test_static_mask_requires_descriptor_support_not_just_center(self):
+        distance=np.zeros((100,100),np.float32);distance[20:80,20:80]=20
+        features=dict(kp=np.array([[50,50],[10,10],[50,50],[-1,40]],float),scales=np.array([1.,1.,3.,1.]))
+        kept=mask_indices(features,np.arange(4),distance)
+        self.assertEqual(kept.tolist(),[0])
+
+    def test_anchor_bins_choose_sharpest_without_fit_results(self):
+        times={'a':9.2,'b':9.6,'c':8.5,'d':6.0,'e':0.,'f':10.}
+        quality={'a':2,'b':1,'c':3,'d':4,'e':5,'f':100}
+        self.assertEqual(select_bins(list(times),times,10,-1,quality.get),['a','c','d','e'])
 
     def test_resume_rejects_changed_model(self):
         with tempfile.TemporaryDirectory() as temp:

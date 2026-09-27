@@ -93,6 +93,15 @@ def localize(rows, K, dist):
     return result
 
 
+def mask_indices(features, indices, distance):
+    """Keep entire conservative descriptor support inside a proposed static region."""
+    xy=features['kp'][indices,:2];h,w=distance.shape
+    inside=(xy[:,0]>=0)&(xy[:,0]<w)&(xy[:,1]>=0)&(xy[:,1]<h)
+    safe=indices[inside];pixels=features['kp'][safe,:2].astype(int)
+    radius=np.maximum(8.,12.*features['scales'][safe])
+    return safe[distance[pixels[:,1],pixels[:,0]]>=radius]
+
+
 def verify_models(report, components):
     paths={c['id']:Path(c['path']) for c in components}
     checked={}
@@ -105,11 +114,14 @@ def verify_models(report, components):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('state','frames','database','reader','lightglue','output'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--selection',type=Path,help='Frozen explicit anchors and query frames')
+    p.add_argument('--masks',type=Path,help='SAM static-region masks for every selected image')
     p.add_argument('--descriptor',choices=['sift','aliked-at-sift'],default='sift')
     p.add_argument('--images',type=Path,help='Native images; required for ALIKED descriptors at existing SIFT locations')
     p.add_argument('--reference-policy',choices=['support','nearest'],default='support')
     p.add_argument('--gap-ids',nargs='*');p.add_argument('--max-keypoints',type=int,default=2048)
     a=p.parse_args()
+    if a.masks and not a.selection:p.error('--masks requires --selection')
     if a.descriptor!='sift' and a.images is None:p.error('--images required for ALIKED')
     a.output.mkdir(parents=True,exist_ok=True)
     import fcntl
@@ -133,7 +145,8 @@ def main():
         from lightglue.utils import load_image
         extractor=ALIKED(max_num_keypoints=a.max_keypoints).eval().cpu()
     state=json.loads(a.state.read_text());frames=json.loads(a.frames.read_text());times={f['name']:f['timestamp'] for f in frames}
-    inv=inventory(state,frames);wanted=a.gap_ids or inv['experiment_gap_ids']
+    selection=json.loads(a.selection.read_text()) if a.selection else None
+    inv=inventory(state,frames);wanted=a.gap_ids or (list(selection['cases']) if selection else inv['experiment_gap_ids'])
     if not set(wanted)<=set(inv['experiment_gap_ids']):raise ValueError('Unknown experiment gap')
     gaps=[g for g in inv['gaps'] if g['id'] in wanted]
     db=sqlite3.connect(a.database.resolve().as_uri()+'?mode=ro',uri=True)
@@ -143,11 +156,25 @@ def main():
     identity={k:digest(getattr(a,k)) for k in ('state','frames','database','reader')}
     identity.update(script=digest(Path(__file__)),inventory_script=digest(Path(__file__).with_name('inventory_camera_gaps.py')),
                     lightglue=pin,max_keypoints=a.max_keypoints,gap_ids=wanted,reference_policy=a.reference_policy,descriptor=a.descriptor)
+    if selection:
+        if any(selection['identity'][k]!=identity[k] for k in ('state','frames')):raise ValueError('Selection input identity mismatch')
+        identity['selection']=digest(a.selection)
+        if not set(wanted)<=selection['cases'].keys():raise ValueError('Selection missing requested gaps')
+    if a.masks:
+        mask_manifest=json.loads((a.masks/'selection.json').read_text())
+        if mask_manifest['selection_sha256']!=identity['selection']:raise ValueError('Masks from different selection')
+        identity['mask_manifest']=digest(a.masks/'selection.json')
+        identity['masks']={}
+        for sample in selection['samples']:
+            name=sample['name'];meta=json.loads((a.masks/(name+'.json')).read_text());actual=digest(a.masks/(name+'.png'))
+            if meta['mask_sha256']!=actual or meta['source_sha256']!=selection['image_sha256'][name]:raise ValueError('Mask/source identity mismatch')
+            identity['masks'][name]=actual
     path=a.output/'report.json'
     report=json.loads(path.read_text()) if path.exists() else dict(identity=identity,status='running',gaps=[],
         limitations=['Existing map landmarks may include moving people. No automatic joins.',
         'One shared calibration within each reference component; cross-component calibration is untested.',
-        'Only midpoint and first returning tracked frame sampled; not dense recovery.'],started=time.time())
+        'Explicit boundary/midpoint queries when selection is supplied, otherwise midpoint and first return; not dense recovery.',
+        'Masks are semantic proposals, not independently certified static geometry; landmark triangulation itself remains from the original map.'],started=time.time())
     if report['identity']!=identity:raise ValueError('Changed campaign inputs; use another output')
     verify_models(report,state['components'])
     for name,expected in report.get('image_sha256',{}).items():
@@ -169,6 +196,14 @@ def main():
         else:raise ValueError('Unsupported feature convention')
         d=d.astype(np.float32);d/=np.maximum(np.linalg.norm(d,axis=1,keepdims=True),1e-8)
         return dict(kp=kp,d=d,scales=scales,oris=oris)
+    @lru_cache(maxsize=16)
+    def mask_distance(name):
+        path=a.masks/(name+'.png')
+        if digest(path)!=identity['masks'][name]:raise ValueError('Mask changed during run')
+        mask=cv2.imread(str(path),cv2.IMREAD_GRAYSCALE)
+        if mask is None or mask.shape!=(1920,1080):raise ValueError('Expected native static mask')
+        # Pad zero to treat the image edge as an invalid descriptor boundary.
+        return cv2.distanceTransform(np.pad((mask>0).astype(np.uint8),1),cv2.DIST_L2,5)[1:-1,1:-1]
     @lru_cache(maxsize=32)
     def learned_descriptors(name,indices):
         f=features(name);idx=np.asarray(indices,dtype=int)
@@ -196,21 +231,27 @@ def main():
         if gap['id'] in completed:continue
         row=dict(id=gap['id'],midpoint=gap['midpoint'],after=gap['after'],trials=[],pair_counts=[])
         for direction,label,boundary in ((-1,'lookback',gap['first']['timestamp']),(1,'lookahead',gap['last']['timestamp'])):
-            component=choose_reference(state['components'],times,boundary,direction,a.reference_policy)
+            explicit=selection['cases'][gap['id']]['directions'].get(label) if selection else None
+            component=(next(c for c in state['components'] if c['id']==explicit['component']) if explicit else None) if selection else choose_reference(state['components'],times,boundary,direction,a.reference_policy)
             if component is None:
                 row['trials'].append(dict(direction=label,status='unsupported',reason='no four-view map with two reference cameras within 30 seconds'));continue
             cid=component['id']
-            ims,points,K,dist,hashes=model(cid);anchors=select_anchors(component,times,boundary,direction)
+            ims,points,K,dist,hashes=model(cid);anchors=explicit['anchors'] if explicit else select_anchors(component,times,boundary,direction)
+            if any(n not in component['names'] or not 0<direction*(times[n]-boundary)<=30 for n in anchors):raise ValueError('Anchor violates component or time boundary')
             row.setdefault('model_sha256',{})[cid]=hashes
             controls=[n for n in component['names'] if n not in anchors and 0<direction*(times[n]-boundary)<=10]
-            control=min(controls,key=lambda n:abs(times[n]-boundary)) if controls else None
-            queries=[(gap['midpoint'],'missing-midpoint')]+([(gap['after'],'registered-return')] if gap['after'] else [])
+            control=explicit['control'] if explicit else (min(controls,key=lambda n:abs(times[n]-boundary)) if controls else None)
+            queries=[(q,q['kind']) for q in selection['cases'][gap['id']]['queries']] if selection else [(gap['midpoint'],'missing-midpoint')]+([(gap['after'],'registered-return')] if gap['after'] else [])
             if control and all(q['name']!=control for q,_ in queries):queries.append((dict(name=control,timestamp=times[control]),'positive-control'))
             for query,query_kind in queries:
                 qname=query['name'];qf=features(qname)
                 if qf is None:
                     row['trials'].append(dict(query=qname,direction=label,status='unsupported',reason='missing cached features'));continue
-                qi=np.argsort(qf['scales'],kind='stable')[-a.max_keypoints:]
+                qi=np.arange(len(qf['kp']))
+                if a.masks:qi=mask_indices(qf,qi,mask_distance(qname))
+                qi=qi[np.argsort(qf['scales'][qi],kind='stable')[-a.max_keypoints:]]
+                if len(qi)<2:
+                    row['trials'].append(dict(query=qname,query_kind=query_kind,direction=label,status='unsupported',reason='fewer than two features inside static descriptor support'));continue
                 qt=feature_tensor(qf,qi,qname);ratio_method='sift' if extractor is None else 'aliked-ratio'
                 collected={m:[] for m in (ratio_method,'lightglue')}
                 for anchor in anchors:
@@ -220,6 +261,7 @@ def main():
                     if len(im.point3D_ids)!=len(af['kp']) or np.max(np.abs(im.xys-af['kp'][:,:2]),initial=0)>.01:
                         raise ValueError('Map observation and database feature indices disagree')
                     ai=np.array([i for i,pid in enumerate(im.point3D_ids) if pid>=0 and pid in points and points[pid].error<=2.5 and len(points[pid].image_ids)>=3 and len(set(points[pid].image_ids)-{image_ids[qname]})>=3],int)
+                    if a.masks:ai=mask_indices(af,ai,mask_distance(anchor))
                     ai=ai[np.argsort(af['scales'][ai],kind='stable')[-a.max_keypoints:]]
                     if len(ai)<2 or len(qi)<2:continue
                     at=feature_tensor(af,ai,anchor)
@@ -246,6 +288,9 @@ def main():
         write(path,report)
         print(f"{len(report['gaps'])}/{len(gaps)} {gap['id']} new_candidates={sum(t.get('passed',False) and t.get('evidence_role')=='recovery-candidate' for t in row['trials'])}",flush=True)
     verify_models(report,state['components'])
+    if a.masks:
+        for name,expected in identity['masks'].items():
+            if digest(a.masks/(name+'.png'))!=expected:raise ValueError('Mask changed during experiment')
     for name,expected in report.get('image_sha256',{}).items():
         if digest(a.images/name)!=expected:raise ValueError('Source image changed during experiment')
     report.update(status='complete-candidates-not-certified',finished=time.time());write(path,report);db.close()
