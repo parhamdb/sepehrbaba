@@ -19,26 +19,31 @@
     },
     {
       "id": "G4",
-      "status": "untested",
-      "evidence": "Retraining and fixed-reference comparison pending."
+      "status": "passed",
+      "evidence": "Both8000-step jobs finished;32 held-out views compared on frozen reference pixels. Candidate hashes verified. Quality decision: neither promoted; earlier localized spike reduction, dominant rays remain."
     },
     {
       "id": "G5",
-      "status": "untested",
-      "evidence": "Repeatable feedback records, release docs and final artifact review pending."
+      "status": "passed",
+      "evidence": "Same-camera repeat ray pick on new checkpoint, six source strips, isolated surviving ray reviewed; desktop and390x844phone workflows passed; docs and reproducible inputs retained. Stop broader masking without new evidence."
     }
   ],
   "counts": {
-    "passed": 3,
+    "passed": 5,
     "failed": 0,
     "blocked": 0,
-    "untested": 2
+    "untested": 0
   },
   "discovery_failures": [
     {
       "test": "integer camera vector projection",
       "cause": "NumPy integer in-place normalization",
       "resolution": "Explicit float coordinate transform; focused test passed."
+    },
+    {
+      "test": "desktop final browser harness",
+      "cause": "Harness tried mobile-only Filters tab at desktop width",
+      "resolution": "Use tab only when visible; actual desktop and mobile workflows passed without product changes."
     }
   ],
   "seed_attempts": [
@@ -54,5 +59,11 @@
       "kind": "semanticbox",
       "outcome": "78/78 nonempty; all78 frames reviewed and approved for provisional training"
     }
-  ]
+  ],
+  "quality_outcome": "No convincing overall improvement; baseline retained. Workflow acceptance does not mean ghosting solved.",
+  "final_numeric_tests": {
+    "passed": 2,
+    "failed": 0,
+    "source_code_commit": "b3d7bc0"
+  }
 }

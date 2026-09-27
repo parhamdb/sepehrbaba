@@ -1,0 +1,67 @@
+{
+  "metric_scope": "Identical baseline unmasked pixels; not proof of novel-view geometry or restored detail",
+  "held_out_views": 8,
+  "baseline_psnr_db": 24.214412766222054,
+  "candidate_psnr_db": 24.18267797099627,
+  "delta_db": -0.03173479522578404,
+  "improved_views": 3,
+  "worst_view_delta_db": -0.5590846943008323,
+  "views": [
+    {
+      "image": "frame_006412.jpg",
+      "baseline_psnr_db": 19.975655813031196,
+      "candidate_psnr_db": 20.00860077652153,
+      "delta_db": 0.03294496349033338,
+      "reference_mask_sha256": "7242b02b1ec54e26dd16fd7e86a21fef9d0283c681d9c570159ffaea1bf855d7"
+    },
+    {
+      "image": "frame_006423.jpg",
+      "baseline_psnr_db": 24.710352763467938,
+      "candidate_psnr_db": 24.767315023604212,
+      "delta_db": 0.05696226013627381,
+      "reference_mask_sha256": "7148c1821ed515fdc95f5e8cdc6ed6033f34cb22496cb74e960fc5bb0e9ae5b0"
+    },
+    {
+      "image": "frame_006433.jpg",
+      "baseline_psnr_db": 28.100060094220083,
+      "candidate_psnr_db": 28.08809780996313,
+      "delta_db": -0.011962284256952671,
+      "reference_mask_sha256": "4d2d40cf840dff98486f34a2c6657da8e1bfce13afc598cae6bfbe8cd21be176"
+    },
+    {
+      "image": "frame_006443.jpg",
+      "baseline_psnr_db": 23.306801635400248,
+      "candidate_psnr_db": 23.39122109065977,
+      "delta_db": 0.08441945525952121,
+      "reference_mask_sha256": "a5ba60fd9f946081ff2643173c064a6a4d815b68e7c9e23cfedee471364acb8b"
+    },
+    {
+      "image": "frame_006454.jpg",
+      "baseline_psnr_db": 25.5921818246164,
+      "candidate_psnr_db": 25.391735924248792,
+      "delta_db": -0.20044590036760823,
+      "reference_mask_sha256": "2c3ddcf01315c6b10eb06eaf2c15a44670b69d31973cbce677cedef30e38a9cf"
+    },
+    {
+      "image": "frame_006465.jpg",
+      "baseline_psnr_db": 24.78784303940786,
+      "candidate_psnr_db": 24.743513538938707,
+      "delta_db": -0.044329500469153515,
+      "reference_mask_sha256": "18a4bc225a1878857d2fc63cf4cbd691ccd7e4d233cfde47aa0da3e4c9871d75"
+    },
+    {
+      "image": "frame_006475.jpg",
+      "baseline_psnr_db": 24.90619912200301,
+      "candidate_psnr_db": 24.718241313209877,
+      "delta_db": -0.18795780879313284,
+      "reference_mask_sha256": "ec7bcd1111542b6a6fd649a92bfd5d9c617344ce9a22e530a499083863517c80"
+    },
+    {
+      "image": "frame_006485.jpg",
+      "baseline_psnr_db": 29.937747252236484,
+      "candidate_psnr_db": 29.37866255793565,
+      "delta_db": -0.5590846943008323,
+      "reference_mask_sha256": "8978cc3f0a883a366472e0a934167f6562e66061f800dbbc23247d6abf662a32"
+    }
+  ]
+}

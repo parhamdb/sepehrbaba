@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scene": "earlier-feedback",
+  "sourceFrames": 6,
+  "checks": [
+    "actual candidate loads",
+    "matched camera screenshot",
+    "fresh checkpoint trace",
+    "isolate and restore",
+    "no page errors",
+    "project writes blocked"
+  ]
+}

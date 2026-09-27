@@ -1,0 +1,32 @@
+{
+  "status": "ready for render review",
+  "hypothesis": "Source-traced visitor semantic-box SAM tracking plus five-native-pixel raw-mask padding and three-pixel baseline border",
+  "review_sha256": "13c4598f04f2d5ea1b80057c2932984a3a69873ae441775691ab7ea5fc5ceff9",
+  "proposal_sha256": "c25234e8125c60abfafee22b2d667da8c9005842de8858d4e349c914872b1a10",
+  "trace_sha256": "31c8e53c7090722684231db56dfccc47e554b5c4390b4dfd1802cc2bc334e19e",
+  "script_sha256": "7e7df4110190c87014b10d31e6f4dfaee0303d202eafde2290fa8714c578b211",
+  "stages": {
+    "prepare": {
+      "status": "passed",
+      "started": 1790537120.1339543,
+      "finished": 1790537126.4263718
+    },
+    "geometry": {
+      "status": "passed",
+      "started": 1790537126.4268,
+      "finished": 1790537127.8768365
+    },
+    "train": {
+      "status": "passed",
+      "started": 1790537127.8772771,
+      "finished": 1790537617.8478734
+    },
+    "compare": {
+      "status": "passed",
+      "started": 1790537617.8483403,
+      "finished": 1790537620.2305746
+    }
+  },
+  "promotion": "not approved",
+  "candidate_sha256": "40388b4f1b637fd05183cc06586e15eb77a2778f197c7a4694e1bed0198b7039"
+}

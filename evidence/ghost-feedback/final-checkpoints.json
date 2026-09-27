@@ -1,0 +1,12 @@
+[
+  {
+    "section": "earlier",
+    "stages": "all passed",
+    "checkpoint_hash_matches": true
+  },
+  {
+    "section": "later",
+    "stages": "all passed",
+    "checkpoint_hash_matches": true
+  }
+]

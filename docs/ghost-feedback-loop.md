@@ -151,3 +151,34 @@ also show long rays remaining in the later candidate. A fresh trace uses new
 checkpoint IDs and returns six source frames; this verifies the inspector across
 retraining, not a successful cleanup. Further automatic expansion is not warranted
 by this result.
+
+## Source-guided correction and repeat inspection
+
+The earlier source-guided SAM plus padding candidate completed 8,000 steps.
+Against the prior tracked version on eight held-out views and frozen reference
+pixels, PSNR changed from 24.21441 to 24.18268 dB (-0.03173 dB); three views
+improved. Independent review found a localized reduction of an upright spike
+behind the rear purple-covered body, but no scene-wide improvement. Other
+rays and diffuse floor ghosting remain. Both candidates stay experimental.
+
+The same saved camera and selected pixel were traced again against the new
+checkpoint. New Gaussian IDs 3583, 5956, 6377, and 5 isolate a surviving diagonal
+ray. The [repeat source strips](../evidence/ghost-feedback/repeat-trace/) overlap
+already-excluded visitors and legitimate static coverings. Three source strips
+were inspected directly, including frames 006491, 006453, and 006419. This is
+insufficient evidence for another broader mask: neither footprint overlap nor
+nonempty SAM tracking establishes the cause. Stop this masking hypothesis here;
+the next diagnosis should distinguish pose/depth inconsistency and weak static
+view support before proposing further exclusions.
+
+The inspector is an interactive tool and the correction cycle is agent-reviewed.
+It is not an unattended classifier that automatically erases every suspect
+footprint. One full source-guided correction and reinspection, plus the padding
+control, were completed in this campaign. Training jobs are finished. Desktop
+and phone picking, source tracing, isolation, and restoration were verified with
+the real assets. All 313 actual training masks match their reviewed proposals,
+and source-image hashes are unchanged. Original editor state was preserved.
+
+Trace download URLs are local to the running inspector session. Restarting the
+server invalidates those URLs; receipts and images remain on disk. Retained
+campaign examples are committed above. Re-pick a scene to obtain a fresh URL.
