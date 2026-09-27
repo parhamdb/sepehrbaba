@@ -1,0 +1,16 @@
+[
+  {
+    "section": "earlier",
+    "frames": 78,
+    "baseline_exclusions_retained": true,
+    "protected_pixels_retained": true,
+    "review_manifest_matches": true
+  },
+  {
+    "section": "later",
+    "frames": 235,
+    "baseline_exclusions_retained": true,
+    "protected_pixels_retained": true,
+    "review_manifest_matches": true
+  }
+]

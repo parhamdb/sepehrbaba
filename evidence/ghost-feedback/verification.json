@@ -1,5 +1,5 @@
 {
-  "scope": "Interactive tracing on both current sections; one reviewed point-SAM+padding cycle, plus later padding control; compare and stop unsupported masking",
+  "scope": "Interactive tracing on both current sections; one reviewed semantic-box SAM plus padding cycle and later padding control; compare and stop unsupported masking",
   "budget": "45min active work; at most3distinct hypotheses for one blocker; one discovery, focused fixes, one final check",
   "checks": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "id": "G3",
-      "status": "untested",
-      "evidence": "Point-guided SAM propagation completed; padding masks generating and review pending."
+      "status": "passed",
+      "evidence": "All313 masks independently reviewed; baseline exclusions and protected pixels verified; radius5 native kernel validated on worker."
     },
     {
       "id": "G4",
@@ -29,10 +29,10 @@
     }
   ],
   "counts": {
-    "passed": 2,
+    "passed": 3,
     "failed": 0,
     "blocked": 0,
-    "untested": 3
+    "untested": 2
   },
   "discovery_failures": [
     {
@@ -52,7 +52,7 @@
     },
     {
       "kind": "semanticbox",
-      "outcome": "78/78nonempty; maskreviewpending"
+      "outcome": "78/78 nonempty; all78 frames reviewed and approved for provisional training"
     }
   ]
 }

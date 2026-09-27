@@ -1,0 +1,32 @@
+{
+  "status": "ready for render review",
+  "hypothesis": "Additional three-pixel border around prior radius-two masks; raw-mask radius-five convention; protected details retained",
+  "review_sha256": "75b6f1247a622b34b3f967795955dd89f414321cc091019f9098112e1edacdce",
+  "proposal_sha256": "21f62044f29fa14a76002989f7d8b7df034b8fb7015d3589df217439da9121b0",
+  "trace_sha256": null,
+  "script_sha256": "7e7df4110190c87014b10d31e6f4dfaee0303d202eafde2290fa8714c578b211",
+  "stages": {
+    "prepare": {
+      "status": "passed",
+      "started": 1790536541.4800253,
+      "finished": 1790536557.9718666
+    },
+    "geometry": {
+      "status": "passed",
+      "started": 1790536557.972251,
+      "finished": 1790536562.4222834
+    },
+    "train": {
+      "status": "passed",
+      "started": 1790536562.4227347,
+      "finished": 1790537111.6385026
+    },
+    "compare": {
+      "status": "passed",
+      "started": 1790537111.6389742,
+      "finished": 1790537117.3522553
+    }
+  },
+  "promotion": "not approved",
+  "candidate_sha256": "dd145616a86f034c8a9bdf3d589e41776cb272b0dbab78b892cb2e3d0b87b63b"
+}
