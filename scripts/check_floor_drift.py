@@ -16,6 +16,15 @@ from compare_da3_full import image_metrics
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
+def unique_locations(pairs, first, second, radius=3.):
+    """One correspondence per spatial landmark, regardless of SIFT orientation."""
+    kept=[]
+    for i,j in pairs:
+        if any(np.linalg.norm(first[i]-first[a])<radius or np.linalg.norm(second[j]-second[b])<radius for a,b in kept):continue
+        kept.append((i,j))
+    return kept
+
+
 def world_points(xy, depth, K, C, R):
     """Camera-z depth and camera-to-world rotation; xy in depth-image pixels."""
     rays=np.c_[xy,np.ones(len(xy))]@np.linalg.inv(K).T
@@ -111,8 +120,8 @@ def main():
     schedules += [(x,y,'across-segments') for n,x in enumerate(anchor_ids) for y in anchor_ids[n+1:] if lookup[y]['timestamp']-lookup[x]['timestamp']>=15]
     pairs=[];candidates=[]
     for first,second,kind in schedules:
-        A=cache[first];B=cache[second];m=matches(A['desc'],B['desc'])
-        result=dict(first=first,second=second,kind=kind,seconds_apart=lookup[second]['timestamp']-lookup[first]['timestamp'],matches=len(m),status='insufficient-matches',accepted_connection=False)
+        A=cache[first];B=cache[second];raw=matches(A['desc'],B['desc']);m=unique_locations(raw,A['xy'],B['xy'])
+        result=dict(first=first,second=second,kind=kind,seconds_apart=lookup[second]['timestamp']-lookup[first]['timestamp'],raw_descriptor_matches=len(raw),matches=len(m),status='insufficient-matches',accepted_connection=False)
         if len(m)>=20:
             ids=np.array([j for j,k in m]);x=A['xy'][ids];y=B['xy'][[k for j,k in m]]
             hold=ids%5==0;train=~hold
