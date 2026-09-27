@@ -41,6 +41,16 @@ def select_anchors(component, times, boundary, direction):
     return selected
 
 
+def choose_reference(components, times, boundary, direction, policy='support'):
+    ranked=[]
+    for c in components:
+        distances=[direction*(times[n]-boundary) for n in c['names'] if 0<direction*(times[n]-boundary)<=30]
+        if len(distances)<2 or len(c['names'])<4:continue
+        key=(len(distances),len(c['names']),c['id']) if policy=='support' else (-min(distances),len(distances),len(c['names']),c['id'])
+        ranked.append((key,c))
+    return max(ranked,key=lambda row:row[0])[1] if ranked else None
+
+
 def unique_correspondences(rows):
     # Score-ordered, one 3D landmark and one distinct query location per row.
     output=[];ids=set();pixels=[]
@@ -95,6 +105,7 @@ def verify_models(report, components):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('state','frames','database','reader','lightglue','output'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--reference-policy',choices=['support','nearest'],default='support')
     p.add_argument('--gap-ids',nargs='*');p.add_argument('--max-keypoints',type=int,default=2048)
     a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
     import fcntl
@@ -120,7 +131,7 @@ def main():
         raise ValueError('Use a checkpointed read-only database snapshot, not a nonempty WAL')
     identity={k:digest(getattr(a,k)) for k in ('state','frames','database','reader')}
     identity.update(script=digest(Path(__file__)),inventory_script=digest(Path(__file__).with_name('inventory_camera_gaps.py')),
-                    lightglue=pin,max_keypoints=a.max_keypoints,gap_ids=wanted)
+                    lightglue=pin,max_keypoints=a.max_keypoints,gap_ids=wanted,reference_policy=a.reference_policy)
     path=a.output/'report.json'
     report=json.loads(path.read_text()) if path.exists() else dict(identity=identity,status='running',gaps=[],
         limitations=['Existing map landmarks may include moving people. No automatic joins.',
@@ -162,11 +173,10 @@ def main():
         if gap['id'] in completed:continue
         row=dict(id=gap['id'],midpoint=gap['midpoint'],after=gap['after'],trials=[],pair_counts=[])
         for direction,label,boundary in ((-1,'lookback',gap['first']['timestamp']),(1,'lookahead',gap['last']['timestamp'])):
-            # Choose the component with most registered support inside this time neighborhood.
-            ranked=[(len([n for n in c['names'] if 0<direction*(times[n]-boundary)<=30]),len(c['names']),c['id'],c) for c in state['components']]
-            support,_,cid,component=max(ranked,key=lambda r:r[:3])
-            if support<2:
-                row['trials'].append(dict(direction=label,status='unsupported',reason='fewer than two reference cameras within 30 seconds'));continue
+            component=choose_reference(state['components'],times,boundary,direction,a.reference_policy)
+            if component is None:
+                row['trials'].append(dict(direction=label,status='unsupported',reason='no four-view map with two reference cameras within 30 seconds'));continue
+            cid=component['id']
             ims,points,K,dist,hashes=model(cid);anchors=select_anchors(component,times,boundary,direction)
             row.setdefault('model_sha256',{})[cid]=hashes
             controls=[n for n in component['names'] if n not in anchors and 0<direction*(times[n]-boundary)<=10]

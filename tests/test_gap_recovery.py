@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
 from inventory_camera_gaps import inventory
-from probe_gap_recovery import localize,select_anchors,unique_correspondences,verify_models,digest
+from probe_gap_recovery import localize,select_anchors,unique_correspondences,verify_models,digest,choose_reference
 
 
 class RecoveryTests(unittest.TestCase):
@@ -34,6 +34,13 @@ class RecoveryTests(unittest.TestCase):
         for row in rows:
             if row['id']%5==0:row['xy']=[1000-row['xy'][0],1800-row['xy'][1]]
         self.assertFalse(localize(rows,K,np.zeros(4))['passed'])
+
+    def test_nearest_map_can_differ_from_largest_support(self):
+        times={str(i):float(i) for i in range(100)}
+        components=[dict(id='large',names=[str(i) for i in range(10,30)]),dict(id='near',names=[str(i) for i in range(35,39)])]
+        self.assertEqual(choose_reference(components,times,40,-1,'support')['id'],'large')
+        self.assertEqual(choose_reference(components,times,40,-1,'nearest')['id'],'near')
+        self.assertIsNone(choose_reference(components,times,40,1,'nearest'))
 
     def test_resume_rejects_changed_model(self):
         with tempfile.TemporaryDirectory() as temp:
