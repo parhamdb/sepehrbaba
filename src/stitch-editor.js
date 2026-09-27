@@ -1,0 +1,100 @@
+import * as pc from 'playcanvas';
+const $ = id => document.getElementById(id);
+const clone = value => JSON.parse(JSON.stringify(value));
+let project, initial, manifest, revision, selected = 0, dirty = false, soloMode = false;
+const entities = new Map();
+const canvas = $('canvas'), viewport = $('viewport');
+const app = new pc.Application(canvas, {graphicsDeviceOptions:{deviceTypes:['webgl2'],antialias:false,alpha:false}});
+app.setCanvasFillMode(pc.FILLMODE_NONE, viewport.clientWidth, viewport.clientHeight);
+app.setCanvasResolution(pc.RESOLUTION_AUTO);
+app.autoRender = false;
+app.systems.gsplat.on('frame:request', () => {app.renderNextFrame=true;});
+app.graphicsDevice.maxPixelRatio = Math.min(devicePixelRatio, 1.5);
+const camera = new pc.Entity('camera');
+camera.addComponent('camera', {clearColor:new pc.Color(.055,.075,.063),nearClip:.01,farClip:10000,fov:60});
+app.root.addChild(camera);
+let yaw = 0, pitch = 15, distance = 5, target = new pc.Vec3();
+function status(text) { $('status').textContent = text; }
+function selectedScene() {return project.scenes[selected];}
+function markDirty() {dirty=true;status('Unsaved placement changes.'); expose();}
+function expose() {window.stitchEditor = {ready:entities.size === project.scenes.length, project:clone(project), selected:selectedScene().id, camera:{yaw,pitch,distance}, dirty};}
+function cameraUpdate() {
+  const y=yaw*Math.PI/180,p=pitch*Math.PI/180;
+  camera.setPosition(target.x+distance*Math.cos(p)*Math.sin(y),target.y+distance*Math.sin(p),target.z+distance*Math.cos(p)*Math.cos(y));
+  camera.lookAt(target); app.renderNextFrame=true; if(project) expose();
+}
+function apply(scene) {
+  const entity=entities.get(scene.id); if(!entity) return;
+  const t=scene.transform; entity.setLocalPosition(...t.position); entity.setLocalEulerAngles(...t.rotation); entity.setLocalScale(t.scale,t.scale,t.scale); entity.enabled=scene.visible; app.renderNextFrame=true;
+}
+function controls() {
+  const s=selectedScene(); const definition=manifest.scenes.find(m=>m.id===s.id); $('quality').textContent=definition.status ?? 'Quality not reviewed. Placement is provisional.'; $('scene').value=s.id; $('visible').checked=s.visible; $('locked').checked=s.locked; $('transform').disabled=s.locked;
+  for(const group of ['position','rotation']) for(let axis=0;axis<3;axis++) $(`${group}-${axis}`).value=s.transform[group][axis];
+  $('scale').value=s.transform.scale;
+  $('previous').disabled=selected===0; $('next').disabled=selected===project.scenes.length-1; expose();
+}
+function select(index) {selected=index;if(soloMode){for(const s of project.scenes){s.visible=s.id===selectedScene().id;apply(s);}markDirty();}controls();}
+function change(group,axis,value) {
+  if(selectedScene().locked || !Number.isFinite(value) || (group==='scale' && value<=0)) return controls();
+  if(group==='scale') selectedScene().transform.scale=value; else selectedScene().transform[group][axis]=value;
+  apply(selectedScene());controls();markDirty();
+}
+for(const group of ['position','rotation','scale']) {
+  const heading=document.createElement('strong');heading.textContent=group==='position'?'Move XYZ':group==='rotation'?'Rotate XYZ (degrees)':'Uniform scale';$('fields').append(heading);
+  for(let axis=0;axis<(group==='scale'?1:3);axis++) {
+    const row=document.createElement('div');row.className='axis';
+    const label=document.createElement('label');label.textContent=group==='scale'?'×':'XYZ'[axis];
+    const input=document.createElement('input');input.type='number';input.step=group==='rotation'?'1':'.01'; input.id=group==='scale'?'scale':`${group}-${axis}`; label.htmlFor=input.id;
+    if(group==='scale') input.min='.000001'; input.addEventListener('change',()=>change(group,axis,Number(input.value)));
+    row.append(label,input);
+    for(const direction of [-1,1]) {const b=document.createElement('button');b.textContent=direction<0?'−':'+';b.type='button';b.setAttribute('aria-label',`${direction<0?'Decrease':'Increase'} ${group} ${group==='scale'?'':'XYZ'[axis]}`);b.addEventListener('click',()=>{
+      const t=selectedScene().transform;
+      const step=Number($(group==='rotation'?'rotate-step':'move-step').value);
+      if(!Number.isFinite(step)||step<=0) return;
+      change(group,axis,group==='scale'?t.scale*Math.pow(1.01,direction):t[group][axis]+direction*step);
+    });row.append(b);} $('fields').append(row);
+  }
+}
+function focusSelected() {
+  const entity=entities.get(selectedScene().id), child=entity.children[0], local=child.gsplat.resource.aabb;
+  const bounds=new pc.BoundingBox();bounds.setFromTransformedAabb(local,child.getWorldTransform());target.copy(bounds.center);distance=Math.max(.1,bounds.halfExtents.length()*1.3);cameraUpdate();
+}
+$('scene').addEventListener('change',()=>select(project.scenes.findIndex(s=>s.id===$('scene').value)));
+$('previous').onclick=()=>select(Math.max(0,selected-1));$('next').onclick=()=>select(Math.min(project.scenes.length-1,selected+1));
+$('visible').onchange=()=>{selectedScene().visible=$('visible').checked;apply(selectedScene());markDirty();};
+$('locked').onchange=()=>{selectedScene().locked=$('locked').checked;controls();markDirty();};
+$('solo').onclick=()=>{soloMode=true;for(const s of project.scenes){s.visible=s.id===selectedScene().id;apply(s);}controls();markDirty();};
+$('show-all').onclick=()=>{soloMode=false;for(const s of project.scenes){s.visible=true;apply(s);}controls();markDirty();};
+$('reset-transform').onclick=()=>{selectedScene().transform=clone(initial.scenes.find(s=>s.id===selectedScene().id).transform);apply(selectedScene());controls();markDirty();};
+$('focus').onclick=focusSelected;$('top').onclick=()=>{pitch=89;cameraUpdate();};
+$('save').onclick=async()=>{try {const response=await fetch('/api/project',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({revision,project})});const result=await response.json();if(!response.ok)throw Error(result.error); revision=result.revision;dirty=false;status('Saved on this server.');expose();} catch(e){status(`Save failed: ${e.message}`);}};
+$('reload').onclick=async()=>{if(dirty&&!confirm('Discard unsaved placement changes?'))return;try{const response=await fetch('/api/project');if(!response.ok)throw Error('Could not reload project.');const data=await response.json();project=data.project;revision=data.revision;for(const s of project.scenes)apply(s);dirty=false;controls();status('Reloaded saved placements.');}catch(e){status(e.message);}};
+$('export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(project,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='stitch-project.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$('import').onclick=()=>$('file').click();
+$('file').onchange=async()=>{try {const data=JSON.parse(await $('file').files[0].text());if(data.version!==1||!Array.isArray(data.scenes)||data.scenes.length!==project.scenes.length)throw Error('Scene list differs from this project.');const seen=new Set();for(const s of data.scenes){const expected=project.scenes.find(p=>p.id===s.id);if(!expected||s.asset!==expected.asset||seen.has(s.id)||!s.transform||!['position','rotation'].every(k=>Array.isArray(s.transform[k])&&s.transform[k].length===3&&s.transform[k].every(Number.isFinite))||!Number.isFinite(s.transform.scale)||s.transform.scale<=0||typeof s.visible!=='boolean'||typeof s.locked!=='boolean')throw Error('Invalid scene or transform.');seen.add(s.id);}project=data;for(const s of project.scenes)apply(s);controls();markDirty();}catch(e){status(`Import failed: ${e.message}`);}finally{$('file').value='';}};
+let drag;
+canvas.addEventListener('contextmenu',e=>e.preventDefault());
+canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey};canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;if(drag.pan){target.add(camera.right.clone().mulScalar(-dx*distance*.002));target.add(camera.up.clone().mulScalar(dy*distance*.002));}else{yaw-=dx*.3;pitch=Math.max(-89,Math.min(89,pitch+dy*.3));}cameraUpdate();});
+for(const name of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(name,()=>drag=null);
+canvas.addEventListener('wheel',e=>{e.preventDefault();distance=Math.max(.001,Math.min(100000,distance*Math.exp(e.deltaY*.001)));cameraUpdate();},{passive:false});
+new ResizeObserver(()=>{app.resizeCanvas(viewport.clientWidth,viewport.clientHeight);app.renderNextFrame=true;}).observe(viewport);
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+window.addEventListener('pagehide',()=>app.destroy());
+try {
+  const response=await fetch('/api/project');if(!response.ok)throw Error('Project could not be opened.');
+  ({project,initial,manifest,revision}=await response.json());
+  app.start();
+  for(const s of project.scenes) {
+    status(`Loading ${manifest.scenes.find(m=>m.id===s.id).label ?? s.id}…`);
+    const asset=await new Promise((resolve,reject)=>app.assets.loadFromUrl(`/assets/${s.id}.ply`,'gsplat',(error,asset)=>error?reject(Error(error)):resolve(asset)));
+    const entity=new pc.Entity(s.id), content=new pc.Entity(`${s.id}-gaussians`);
+    // Match the repository's SuperSplat viewer PLY coordinate convention.
+    content.setLocalEulerAngles(0,0,180);content.addComponent('gsplat',{asset,unified:true});entity.addChild(content);app.root.addChild(entity);entities.set(s.id,entity);apply(s);
+    const option=document.createElement('option');option.value=s.id;option.textContent=manifest.scenes.find(m=>m.id===s.id).label ?? s.id;$('scene').append(option);
+  }
+  for(const e of document.querySelectorAll('aside button, aside input, aside select'))e.disabled=false;
+  selected=Math.min(1,project.scenes.length-1);controls();
+  if(manifest.camera){target.set(...manifest.camera.target);const d=new pc.Vec3(...manifest.camera.position).sub(target);distance=d.length();pitch=Math.asin(d.y/distance)*180/Math.PI;yaw=Math.atan2(d.x,d.z)*180/Math.PI;cameraUpdate();}else focusSelected();
+  status(`${project.scenes.length} Gaussian scenes loaded. Select a section to place it.`);
+}catch(e){status(`Could not open editor: ${e.message}`);console.error(e);}

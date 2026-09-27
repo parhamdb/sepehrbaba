@@ -1,0 +1,57 @@
+// Focused integration check; build the editor before running this file.
+import assert from 'node:assert/strict';
+import {mkdtemp,writeFile,readFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {chromium} from '@playwright/test';
+import {PNG} from 'pngjs';
+import {createStitchServer} from '../scripts/stitch-editor-server.mjs';
+const root=await mkdtemp(path.join(tmpdir(),'stitch-check-'));
+const assetsRoot=path.resolve(process.env.STITCH_TEST_ASSETS ?? 'public/assets');
+const asset='preview.ply';
+const digest=async()=>createHash('sha256').update(await readFile(path.join(assetsRoot,asset))).digest('hex');
+const before=await digest();
+const manifestPath=path.join(root,'manifest.json');
+await writeFile(manifestPath,JSON.stringify({version:1,camera:{position:[-.7367625,.6438815,1.3413154],target:[.6424272,-.3078598,5.187895]},scenes:[{id:'earlier',label:'Earlier test',asset,locked:true},{id:'later',label:'Later test',asset,locked:false}]}));
+let server,browser;
+try{
+ ({server}=await createStitchServer({manifestPath,assetsRoot,stateRoot:path.join(root,'state'),webRoot:path.resolve('dist/stitch-editor')}));
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ const url=`http://127.0.0.1:${server.address().port}`;
+ const errors=[];
+ browser=await chromium.launch({headless:true,args:['--enable-unsafe-swiftshader','--use-angle=swiftshader']});
+ const page=await browser.newPage({viewport:{width:1280,height:850}});
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(url);
+ await page.waitForFunction(()=>window.stitchEditor?.ready,{},{timeout:120000});
+ await page.waitForTimeout(3000);
+ const screenshot=await page.screenshot();
+ const png=PNG.sync.read(screenshot);let colored=0;
+ for(let y=0;y<650;y++)for(let x=350;x<1200;x++){const i=(y*png.width+x)*4;const [r,g,b]=png.data.subarray(i,i+3);if(Math.max(r,g,b)-Math.min(r,g,b)>25&&Math.max(r,g,b)>65)colored++;}
+ assert(colored>1000,`Actual splat image missing: ${colored} colored pixels`);
+ await writeFile(path.resolve('dist/stitch-editor/test-render.png'),screenshot);
+ await page.locator('#rotation-1').fill('25');await page.locator('#rotation-1').dispatchEvent('change');
+ await page.locator('#position-0').fill('0.3');await page.locator('#position-0').dispatchEvent('change');
+ await page.locator('#scale').fill('1.1');await page.locator('#scale').dispatchEvent('change');
+ let state=await page.evaluate(()=>window.stitchEditor);
+ assert.deepEqual(state.project.scenes[0].transform,{position:[0,0,0],rotation:[0,0,0],scale:1});
+ assert.equal(state.project.scenes[1].transform.rotation[1],25);assert.equal(state.project.scenes[1].transform.position[0],.3);assert.equal(state.project.scenes[1].transform.scale,1.1);
+ const box=await page.locator('canvas').boundingBox();await page.mouse.move(box.x+250,box.y+200);await page.mouse.down();await page.mouse.move(box.x+300,box.y+220);await page.mouse.up();
+ const orbit=await page.evaluate(()=>window.stitchEditor);assert.notEqual(orbit.camera.yaw,state.camera.yaw);assert.deepEqual(orbit.project,state.project);
+ await page.locator('#solo').click();assert.equal(await page.evaluate(()=>window.stitchEditor.project.scenes[0].visible),false);
+ await page.locator('#show-all').click();await page.locator('#save').click();await page.waitForFunction(()=>!window.stitchEditor.dirty);
+ await page.reload();await page.waitForFunction(()=>window.stitchEditor?.ready,{},{timeout:120000});
+ state=await page.evaluate(()=>window.stitchEditor);assert.equal(state.project.scenes[1].transform.rotation[1],25);assert.equal(state.project.scenes[1].transform.scale,1.1);
+ await page.locator('#previous').click();assert.equal(await page.locator('#position-0').isDisabled(),true);await page.locator('#next').click();
+ await page.locator('#reset-transform').click();assert.equal(await page.evaluate(()=>window.stitchEditor.project.scenes[1].transform.scale),1);
+ page.on('dialog',d=>d.accept());await page.locator('#reload').click();await page.waitForFunction(()=>window.stitchEditor.project.scenes[1].transform.scale===1.1);
+ let receipt=await(await fetch(url+'/api/project')).json();
+ const stale=await fetch(url+'/api/project',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({project:receipt.project,revision:'stale'})});assert.equal(stale.status,409);
+ const cross=await fetch(url+'/api/project',{method:'PUT',headers:{'Content-Type':'application/json','Origin':'http://elsewhere.invalid'},body:JSON.stringify({project:receipt.project,revision:receipt.revision})});assert.equal(cross.status,403);
+ assert.equal(await digest(),before,'Source Gaussian bytes changed');assert.deepEqual(errors,[]);
+ await browser.close();browser=null;await new Promise(resolve=>server.close(resolve));
+ const expanded=JSON.parse(await readFile(manifestPath,'utf8'));expanded.scenes.push({id:'third',label:'Additional section',asset,locked:false});await writeFile(manifestPath,JSON.stringify(expanded));
+ ({server}=await createStitchServer({manifestPath,assetsRoot,stateRoot:path.join(root,'state'),webRoot:path.resolve('dist/stitch-editor')}));await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));receipt=await(await fetch(`http://127.0.0.1:${server.address().port}/api/project`)).json();assert.equal(receipt.project.scenes[1].transform.rotation[1],25);assert.equal(receipt.project.scenes.length,3);
+ console.log(JSON.stringify({status:'passed',coloredPixels:colored,checks:['two real Gaussian scenes render','XYZ rotation translation uniform scale','locked reference unchanged','orbit independent of scene placement','solo/show all/previous/next/reset','save reload browser and server restart plus append section','stale and cross-origin save rejection','source PLY SHA256 unchanged','no browser exceptions']}));
+}finally{await browser?.close();if(server?.listening)await new Promise(resolve=>server.close(resolve));await rm(root,{recursive:true,force:true});}

@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "title": "Existing uncleaned previews — editor demonstration only",
+  "camera": {"position": [-0.7367625,0.6438815,1.3413154],"target":[0.6424272,-0.3078598,5.1878950]},
+  "scenes": [
+    {"id":"earlier","label":"Existing 18-second pilot (uncleaned)","asset":"preview.ply","locked":true},
+    {"id":"later","label":"Existing 71-second scene (uncleaned)","asset":"recovery-71s.ply","locked":false}
+  ]
+}
