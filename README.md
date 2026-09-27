@@ -37,6 +37,8 @@ and court proceedings.** We want families, researchers, investigators, and the
 public to explore what the recording shows and compare every reconstruction
 with its source.
 
+**Recovery experiments:** [gap inventory and ranked recovery methods](docs/gap-recovery.md) — test different methods at each missing interval, retaining evidence for successful and failed attempts.
+
 ## The video and the father behind it
 
 - **January 23, 2026:** Vahid Online's publication post is timestamped on this

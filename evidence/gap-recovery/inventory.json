@@ -1,0 +1,7206 @@
+{
+  "schema": 1,
+  "source_frames": 12793,
+  "registered_union": 9403,
+  "missing_frames": 3390,
+  "component_count": 239,
+  "gaps": [
+    {
+      "id": "gap-001",
+      "first": {
+        "name": "frame_000408.jpg",
+        "timestamp": 27.081967
+      },
+      "last": {
+        "name": "frame_000408.jpg",
+        "timestamp": 27.081967
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_000407.jpg",
+        "timestamp": 27.0157
+      },
+      "after": {
+        "name": "frame_000409.jpg",
+        "timestamp": 27.148633
+      },
+      "midpoint": {
+        "name": "frame_000408.jpg",
+        "timestamp": 27.081967
+      }
+    },
+    {
+      "id": "gap-002",
+      "first": {
+        "name": "frame_000410.jpg",
+        "timestamp": 27.212778
+      },
+      "last": {
+        "name": "frame_000410.jpg",
+        "timestamp": 27.212778
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_000409.jpg",
+        "timestamp": 27.148633
+      },
+      "after": {
+        "name": "frame_000411.jpg",
+        "timestamp": 27.277967
+      },
+      "midpoint": {
+        "name": "frame_000410.jpg",
+        "timestamp": 27.212778
+      }
+    },
+    {
+      "id": "gap-003",
+      "first": {
+        "name": "frame_001021.jpg",
+        "timestamp": 67.877033
+      },
+      "last": {
+        "name": "frame_001021.jpg",
+        "timestamp": 67.877033
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_001020.jpg",
+        "timestamp": 67.811256
+      },
+      "after": {
+        "name": "frame_001022.jpg",
+        "timestamp": 67.9437
+      },
+      "midpoint": {
+        "name": "frame_001021.jpg",
+        "timestamp": 67.877033
+      }
+    },
+    {
+      "id": "gap-004",
+      "first": {
+        "name": "frame_001044.jpg",
+        "timestamp": 69.410322
+      },
+      "last": {
+        "name": "frame_001048.jpg",
+        "timestamp": 69.666967
+      },
+      "missing_frames": 5,
+      "sampled_span_seconds": 0.256645000000006,
+      "before": {
+        "name": "frame_001043.jpg",
+        "timestamp": 69.343656
+      },
+      "after": {
+        "name": "frame_001049.jpg",
+        "timestamp": 69.733633
+      },
+      "midpoint": {
+        "name": "frame_001046.jpg",
+        "timestamp": 69.533633
+      }
+    },
+    {
+      "id": "gap-005",
+      "first": {
+        "name": "frame_001323.jpg",
+        "timestamp": 88.012089
+      },
+      "last": {
+        "name": "frame_001323.jpg",
+        "timestamp": 88.012089
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_001322.jpg",
+        "timestamp": 87.945889
+      },
+      "after": {
+        "name": "frame_001324.jpg",
+        "timestamp": 88.078222
+      },
+      "midpoint": {
+        "name": "frame_001323.jpg",
+        "timestamp": 88.012089
+      }
+    },
+    {
+      "id": "gap-006",
+      "first": {
+        "name": "frame_001407.jpg",
+        "timestamp": 93.609022
+      },
+      "last": {
+        "name": "frame_001414.jpg",
+        "timestamp": 94.065433
+      },
+      "missing_frames": 8,
+      "sampled_span_seconds": 0.4564110000000028,
+      "before": {
+        "name": "frame_001406.jpg",
+        "timestamp": 93.542356
+      },
+      "after": {
+        "name": "frame_001415.jpg",
+        "timestamp": 94.108767
+      },
+      "midpoint": {
+        "name": "frame_001410.jpg",
+        "timestamp": 93.808778
+      }
+    },
+    {
+      "id": "gap-007",
+      "first": {
+        "name": "frame_001465.jpg",
+        "timestamp": 97.375144
+      },
+      "last": {
+        "name": "frame_001486.jpg",
+        "timestamp": 98.688433
+      },
+      "missing_frames": 22,
+      "sampled_span_seconds": 1.3132889999999975,
+      "before": {
+        "name": "frame_001464.jpg",
+        "timestamp": 97.308489
+      },
+      "after": {
+        "name": "frame_001487.jpg",
+        "timestamp": 98.7551
+      },
+      "midpoint": {
+        "name": "frame_001475.jpg",
+        "timestamp": 98.021789
+      }
+    },
+    {
+      "id": "gap-008",
+      "first": {
+        "name": "frame_001530.jpg",
+        "timestamp": 101.548656
+      },
+      "last": {
+        "name": "frame_001537.jpg",
+        "timestamp": 101.988322
+      },
+      "missing_frames": 8,
+      "sampled_span_seconds": 0.43966600000000255,
+      "before": {
+        "name": "frame_001529.jpg",
+        "timestamp": 101.4822
+      },
+      "after": {
+        "name": "frame_001538.jpg",
+        "timestamp": 102.054989
+      },
+      "midpoint": {
+        "name": "frame_001533.jpg",
+        "timestamp": 101.731656
+      }
+    },
+    {
+      "id": "gap-009",
+      "first": {
+        "name": "frame_001661.jpg",
+        "timestamp": 110.197822
+      },
+      "last": {
+        "name": "frame_001714.jpg",
+        "timestamp": 113.6877
+      },
+      "missing_frames": 54,
+      "sampled_span_seconds": 3.4898780000000045,
+      "before": {
+        "name": "frame_001660.jpg",
+        "timestamp": 110.131167
+      },
+      "after": {
+        "name": "frame_001715.jpg",
+        "timestamp": 113.754367
+      },
+      "midpoint": {
+        "name": "frame_001687.jpg",
+        "timestamp": 111.937644
+      }
+    },
+    {
+      "id": "gap-010",
+      "first": {
+        "name": "frame_001716.jpg",
+        "timestamp": 113.821033
+      },
+      "last": {
+        "name": "frame_001716.jpg",
+        "timestamp": 113.821033
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_001715.jpg",
+        "timestamp": 113.754367
+      },
+      "after": {
+        "name": "frame_001717.jpg",
+        "timestamp": 113.8877
+      },
+      "midpoint": {
+        "name": "frame_001716.jpg",
+        "timestamp": 113.821033
+      }
+    },
+    {
+      "id": "gap-011",
+      "first": {
+        "name": "frame_001737.jpg",
+        "timestamp": 115.187656
+      },
+      "last": {
+        "name": "frame_001770.jpg",
+        "timestamp": 117.344244
+      },
+      "missing_frames": 34,
+      "sampled_span_seconds": 2.1565879999999993,
+      "before": {
+        "name": "frame_001736.jpg",
+        "timestamp": 115.120989
+      },
+      "after": {
+        "name": "frame_001771.jpg",
+        "timestamp": 117.410911
+      },
+      "midpoint": {
+        "name": "frame_001753.jpg",
+        "timestamp": 116.244289
+      }
+    },
+    {
+      "id": "gap-012",
+      "first": {
+        "name": "frame_001772.jpg",
+        "timestamp": 117.477578
+      },
+      "last": {
+        "name": "frame_001774.jpg",
+        "timestamp": 117.6109
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.13332200000000682,
+      "before": {
+        "name": "frame_001771.jpg",
+        "timestamp": 117.410911
+      },
+      "after": {
+        "name": "frame_001775.jpg",
+        "timestamp": 117.677567
+      },
+      "midpoint": {
+        "name": "frame_001773.jpg",
+        "timestamp": 117.544244
+      }
+    },
+    {
+      "id": "gap-013",
+      "first": {
+        "name": "frame_001776.jpg",
+        "timestamp": 117.744233
+      },
+      "last": {
+        "name": "frame_001778.jpg",
+        "timestamp": 117.877567
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.13333400000000495,
+      "before": {
+        "name": "frame_001775.jpg",
+        "timestamp": 117.677567
+      },
+      "after": {
+        "name": "frame_001779.jpg",
+        "timestamp": 117.944222
+      },
+      "midpoint": {
+        "name": "frame_001777.jpg",
+        "timestamp": 117.8109
+      }
+    },
+    {
+      "id": "gap-014",
+      "first": {
+        "name": "frame_001918.jpg",
+        "timestamp": 127.197711
+      },
+      "last": {
+        "name": "frame_001918.jpg",
+        "timestamp": 127.197711
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_001917.jpg",
+        "timestamp": 127.131689
+      },
+      "after": {
+        "name": "frame_001919.jpg",
+        "timestamp": 127.264144
+      },
+      "midpoint": {
+        "name": "frame_001918.jpg",
+        "timestamp": 127.197711
+      }
+    },
+    {
+      "id": "gap-015",
+      "first": {
+        "name": "frame_001935.jpg",
+        "timestamp": 128.335167
+      },
+      "last": {
+        "name": "frame_001941.jpg",
+        "timestamp": 128.710756
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.37558899999999085,
+      "before": {
+        "name": "frame_001934.jpg",
+        "timestamp": 128.269222
+      },
+      "after": {
+        "name": "frame_001942.jpg",
+        "timestamp": 128.777422
+      },
+      "midpoint": {
+        "name": "frame_001938.jpg",
+        "timestamp": 128.530989
+      }
+    },
+    {
+      "id": "gap-016",
+      "first": {
+        "name": "frame_001967.jpg",
+        "timestamp": 130.437244
+      },
+      "last": {
+        "name": "frame_001971.jpg",
+        "timestamp": 130.677356
+      },
+      "missing_frames": 5,
+      "sampled_span_seconds": 0.24011200000001054,
+      "before": {
+        "name": "frame_001966.jpg",
+        "timestamp": 130.370811
+      },
+      "after": {
+        "name": "frame_001972.jpg",
+        "timestamp": 130.744022
+      },
+      "midpoint": {
+        "name": "frame_001969.jpg",
+        "timestamp": 130.568789
+      }
+    },
+    {
+      "id": "gap-017",
+      "first": {
+        "name": "frame_002011.jpg",
+        "timestamp": 133.300378
+      },
+      "last": {
+        "name": "frame_002016.jpg",
+        "timestamp": 133.610589
+      },
+      "missing_frames": 6,
+      "sampled_span_seconds": 0.31021100000000956,
+      "before": {
+        "name": "frame_002010.jpg",
+        "timestamp": 133.234178
+      },
+      "after": {
+        "name": "frame_002017.jpg",
+        "timestamp": 133.677256
+      },
+      "midpoint": {
+        "name": "frame_002013.jpg",
+        "timestamp": 133.4306
+      }
+    },
+    {
+      "id": "gap-018",
+      "first": {
+        "name": "frame_002058.jpg",
+        "timestamp": 136.397556
+      },
+      "last": {
+        "name": "frame_002063.jpg",
+        "timestamp": 136.710867
+      },
+      "missing_frames": 6,
+      "sampled_span_seconds": 0.3133109999999988,
+      "before": {
+        "name": "frame_002057.jpg",
+        "timestamp": 136.330889
+      },
+      "after": {
+        "name": "frame_002064.jpg",
+        "timestamp": 136.777533
+      },
+      "midpoint": {
+        "name": "frame_002060.jpg",
+        "timestamp": 136.520878
+      }
+    },
+    {
+      "id": "gap-019",
+      "first": {
+        "name": "frame_002297.jpg",
+        "timestamp": 152.301244
+      },
+      "last": {
+        "name": "frame_002299.jpg",
+        "timestamp": 152.430044
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.12880000000001246,
+      "before": {
+        "name": "frame_002296.jpg",
+        "timestamp": 152.235256
+      },
+      "after": {
+        "name": "frame_002300.jpg",
+        "timestamp": 152.496478
+      },
+      "midpoint": {
+        "name": "frame_002298.jpg",
+        "timestamp": 152.3652
+      }
+    },
+    {
+      "id": "gap-020",
+      "first": {
+        "name": "frame_002356.jpg",
+        "timestamp": 156.2026
+      },
+      "last": {
+        "name": "frame_002361.jpg",
+        "timestamp": 156.532944
+      },
+      "missing_frames": 6,
+      "sampled_span_seconds": 0.33034399999999664,
+      "before": {
+        "name": "frame_002355.jpg",
+        "timestamp": 156.135689
+      },
+      "after": {
+        "name": "frame_002362.jpg",
+        "timestamp": 156.598089
+      },
+      "midpoint": {
+        "name": "frame_002358.jpg",
+        "timestamp": 156.335678
+      }
+    },
+    {
+      "id": "gap-021",
+      "first": {
+        "name": "frame_002431.jpg",
+        "timestamp": 161.196111
+      },
+      "last": {
+        "name": "frame_002455.jpg",
+        "timestamp": 162.752489
+      },
+      "missing_frames": 25,
+      "sampled_span_seconds": 1.5563779999999952,
+      "before": {
+        "name": "frame_002430.jpg",
+        "timestamp": 161.1318
+      },
+      "after": {
+        "name": "frame_002456.jpg",
+        "timestamp": 162.819156
+      },
+      "midpoint": {
+        "name": "frame_002443.jpg",
+        "timestamp": 161.975856
+      }
+    },
+    {
+      "id": "gap-022",
+      "first": {
+        "name": "frame_002793.jpg",
+        "timestamp": 185.262233
+      },
+      "last": {
+        "name": "frame_002808.jpg",
+        "timestamp": 186.195533
+      },
+      "missing_frames": 16,
+      "sampled_span_seconds": 0.9333000000000027,
+      "before": {
+        "name": "frame_002792.jpg",
+        "timestamp": 185.195567
+      },
+      "after": {
+        "name": "frame_002809.jpg",
+        "timestamp": 186.2622
+      },
+      "midpoint": {
+        "name": "frame_002800.jpg",
+        "timestamp": 185.718878
+      }
+    },
+    {
+      "id": "gap-023",
+      "first": {
+        "name": "frame_003061.jpg",
+        "timestamp": 203.061689
+      },
+      "last": {
+        "name": "frame_003065.jpg",
+        "timestamp": 203.318333
+      },
+      "missing_frames": 5,
+      "sampled_span_seconds": 0.2566439999999943,
+      "before": {
+        "name": "frame_003060.jpg",
+        "timestamp": 202.995022
+      },
+      "after": {
+        "name": "frame_003066.jpg",
+        "timestamp": 203.385
+      },
+      "midpoint": {
+        "name": "frame_003063.jpg",
+        "timestamp": 203.185011
+      }
+    },
+    {
+      "id": "gap-024",
+      "first": {
+        "name": "frame_003210.jpg",
+        "timestamp": 212.932144
+      },
+      "last": {
+        "name": "frame_003216.jpg",
+        "timestamp": 213.327967
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.39582300000000714,
+      "before": {
+        "name": "frame_003209.jpg",
+        "timestamp": 212.865489
+      },
+      "after": {
+        "name": "frame_003217.jpg",
+        "timestamp": 213.3954
+      },
+      "midpoint": {
+        "name": "frame_003213.jpg",
+        "timestamp": 213.127978
+      }
+    },
+    {
+      "id": "gap-025",
+      "first": {
+        "name": "frame_003437.jpg",
+        "timestamp": 228.064867
+      },
+      "last": {
+        "name": "frame_003438.jpg",
+        "timestamp": 228.131533
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.0666659999999979,
+      "before": {
+        "name": "frame_003436.jpg",
+        "timestamp": 227.9982
+      },
+      "after": {
+        "name": "frame_003439.jpg",
+        "timestamp": 228.198589
+      },
+      "midpoint": {
+        "name": "frame_003437.jpg",
+        "timestamp": 228.064867
+      }
+    },
+    {
+      "id": "gap-026",
+      "first": {
+        "name": "frame_003891.jpg",
+        "timestamp": 258.326722
+      },
+      "last": {
+        "name": "frame_003891.jpg",
+        "timestamp": 258.326722
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_003890.jpg",
+        "timestamp": 258.260056
+      },
+      "after": {
+        "name": "frame_003892.jpg",
+        "timestamp": 258.393389
+      },
+      "midpoint": {
+        "name": "frame_003891.jpg",
+        "timestamp": 258.326722
+      }
+    },
+    {
+      "id": "gap-027",
+      "first": {
+        "name": "frame_003893.jpg",
+        "timestamp": 258.450044
+      },
+      "last": {
+        "name": "frame_003893.jpg",
+        "timestamp": 258.450044
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_003892.jpg",
+        "timestamp": 258.393389
+      },
+      "after": {
+        "name": "frame_003894.jpg",
+        "timestamp": 258.516711
+      },
+      "midpoint": {
+        "name": "frame_003893.jpg",
+        "timestamp": 258.450044
+      }
+    },
+    {
+      "id": "gap-028",
+      "first": {
+        "name": "frame_003920.jpg",
+        "timestamp": 260.262044
+      },
+      "last": {
+        "name": "frame_003930.jpg",
+        "timestamp": 260.8933
+      },
+      "missing_frames": 11,
+      "sampled_span_seconds": 0.6312560000000076,
+      "before": {
+        "name": "frame_003919.jpg",
+        "timestamp": 260.1969
+      },
+      "after": {
+        "name": "frame_003931.jpg",
+        "timestamp": 260.959967
+      },
+      "midpoint": {
+        "name": "frame_003925.jpg",
+        "timestamp": 260.549967
+      }
+    },
+    {
+      "id": "gap-029",
+      "first": {
+        "name": "frame_003978.jpg",
+        "timestamp": 264.073189
+      },
+      "last": {
+        "name": "frame_003992.jpg",
+        "timestamp": 264.843644
+      },
+      "missing_frames": 15,
+      "sampled_span_seconds": 0.7704549999999699,
+      "before": {
+        "name": "frame_003977.jpg",
+        "timestamp": 264.016522
+      },
+      "after": {
+        "name": "frame_003993.jpg",
+        "timestamp": 264.886967
+      },
+      "midpoint": {
+        "name": "frame_003985.jpg",
+        "timestamp": 264.539844
+      }
+    },
+    {
+      "id": "gap-030",
+      "first": {
+        "name": "frame_004070.jpg",
+        "timestamp": 269.974
+      },
+      "last": {
+        "name": "frame_004076.jpg",
+        "timestamp": 270.363967
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.38996700000001283,
+      "before": {
+        "name": "frame_004069.jpg",
+        "timestamp": 269.907344
+      },
+      "after": {
+        "name": "frame_004077.jpg",
+        "timestamp": 270.430633
+      },
+      "midpoint": {
+        "name": "frame_004073.jpg",
+        "timestamp": 270.163978
+      }
+    },
+    {
+      "id": "gap-031",
+      "first": {
+        "name": "frame_004099.jpg",
+        "timestamp": 271.874156
+      },
+      "last": {
+        "name": "frame_004117.jpg",
+        "timestamp": 273.030544
+      },
+      "missing_frames": 19,
+      "sampled_span_seconds": 1.1563879999999926,
+      "before": {
+        "name": "frame_004098.jpg",
+        "timestamp": 271.808144
+      },
+      "after": {
+        "name": "frame_004118.jpg",
+        "timestamp": 273.097211
+      },
+      "midpoint": {
+        "name": "frame_004108.jpg",
+        "timestamp": 272.473911
+      }
+    },
+    {
+      "id": "gap-032",
+      "first": {
+        "name": "frame_004137.jpg",
+        "timestamp": 274.353833
+      },
+      "last": {
+        "name": "frame_004137.jpg",
+        "timestamp": 274.353833
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004136.jpg",
+        "timestamp": 274.297167
+      },
+      "after": {
+        "name": "frame_004138.jpg",
+        "timestamp": 274.4205
+      },
+      "midpoint": {
+        "name": "frame_004137.jpg",
+        "timestamp": 274.353833
+      }
+    },
+    {
+      "id": "gap-033",
+      "first": {
+        "name": "frame_004139.jpg",
+        "timestamp": 274.487167
+      },
+      "last": {
+        "name": "frame_004168.jpg",
+        "timestamp": 276.227522
+      },
+      "missing_frames": 30,
+      "sampled_span_seconds": 1.7403550000000223,
+      "before": {
+        "name": "frame_004138.jpg",
+        "timestamp": 274.4205
+      },
+      "after": {
+        "name": "frame_004169.jpg",
+        "timestamp": 276.294178
+      },
+      "midpoint": {
+        "name": "frame_004153.jpg",
+        "timestamp": 275.260889
+      }
+    },
+    {
+      "id": "gap-034",
+      "first": {
+        "name": "frame_004208.jpg",
+        "timestamp": 278.784444
+      },
+      "last": {
+        "name": "frame_004388.jpg",
+        "timestamp": 290.012978
+      },
+      "missing_frames": 181,
+      "sampled_span_seconds": 11.228533999999968,
+      "before": {
+        "name": "frame_004207.jpg",
+        "timestamp": 278.744378
+      },
+      "after": {
+        "name": "frame_004389.jpg",
+        "timestamp": 290.083044
+      },
+      "midpoint": {
+        "name": "frame_004298.jpg",
+        "timestamp": 283.706978
+      }
+    },
+    {
+      "id": "gap-035",
+      "first": {
+        "name": "frame_004399.jpg",
+        "timestamp": 290.783711
+      },
+      "last": {
+        "name": "frame_004399.jpg",
+        "timestamp": 290.783711
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004398.jpg",
+        "timestamp": 290.713644
+      },
+      "after": {
+        "name": "frame_004400.jpg",
+        "timestamp": 290.853778
+      },
+      "midpoint": {
+        "name": "frame_004399.jpg",
+        "timestamp": 290.783711
+      }
+    },
+    {
+      "id": "gap-036",
+      "first": {
+        "name": "frame_004423.jpg",
+        "timestamp": 292.465311
+      },
+      "last": {
+        "name": "frame_004423.jpg",
+        "timestamp": 292.465311
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004422.jpg",
+        "timestamp": 292.395244
+      },
+      "after": {
+        "name": "frame_004424.jpg",
+        "timestamp": 292.535378
+      },
+      "midpoint": {
+        "name": "frame_004423.jpg",
+        "timestamp": 292.465311
+      }
+    },
+    {
+      "id": "gap-037",
+      "first": {
+        "name": "frame_004427.jpg",
+        "timestamp": 292.725589
+      },
+      "last": {
+        "name": "frame_004427.jpg",
+        "timestamp": 292.725589
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004426.jpg",
+        "timestamp": 292.665522
+      },
+      "after": {
+        "name": "frame_004428.jpg",
+        "timestamp": 292.785656
+      },
+      "midpoint": {
+        "name": "frame_004427.jpg",
+        "timestamp": 292.725589
+      }
+    },
+    {
+      "id": "gap-038",
+      "first": {
+        "name": "frame_004429.jpg",
+        "timestamp": 292.845733
+      },
+      "last": {
+        "name": "frame_004432.jpg",
+        "timestamp": 293.025933
+      },
+      "missing_frames": 4,
+      "sampled_span_seconds": 0.18020000000001346,
+      "before": {
+        "name": "frame_004428.jpg",
+        "timestamp": 292.785656
+      },
+      "after": {
+        "name": "frame_004433.jpg",
+        "timestamp": 293.086011
+      },
+      "midpoint": {
+        "name": "frame_004430.jpg",
+        "timestamp": 292.9058
+      }
+    },
+    {
+      "id": "gap-039",
+      "first": {
+        "name": "frame_004434.jpg",
+        "timestamp": 293.156078
+      },
+      "last": {
+        "name": "frame_004435.jpg",
+        "timestamp": 293.226144
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.07006599999999708,
+      "before": {
+        "name": "frame_004433.jpg",
+        "timestamp": 293.086011
+      },
+      "after": {
+        "name": "frame_004436.jpg",
+        "timestamp": 293.296211
+      },
+      "midpoint": {
+        "name": "frame_004434.jpg",
+        "timestamp": 293.156078
+      }
+    },
+    {
+      "id": "gap-040",
+      "first": {
+        "name": "frame_004441.jpg",
+        "timestamp": 293.646544
+      },
+      "last": {
+        "name": "frame_004441.jpg",
+        "timestamp": 293.646544
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004440.jpg",
+        "timestamp": 293.576478
+      },
+      "after": {
+        "name": "frame_004442.jpg",
+        "timestamp": 293.716611
+      },
+      "midpoint": {
+        "name": "frame_004441.jpg",
+        "timestamp": 293.646544
+      }
+    },
+    {
+      "id": "gap-041",
+      "first": {
+        "name": "frame_004445.jpg",
+        "timestamp": 293.926811
+      },
+      "last": {
+        "name": "frame_004445.jpg",
+        "timestamp": 293.926811
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004444.jpg",
+        "timestamp": 293.856744
+      },
+      "after": {
+        "name": "frame_004446.jpg",
+        "timestamp": 293.996878
+      },
+      "midpoint": {
+        "name": "frame_004445.jpg",
+        "timestamp": 293.926811
+      }
+    },
+    {
+      "id": "gap-042",
+      "first": {
+        "name": "frame_004447.jpg",
+        "timestamp": 294.066944
+      },
+      "last": {
+        "name": "frame_004447.jpg",
+        "timestamp": 294.066944
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004446.jpg",
+        "timestamp": 293.996878
+      },
+      "after": {
+        "name": "frame_004448.jpg",
+        "timestamp": 294.137011
+      },
+      "midpoint": {
+        "name": "frame_004447.jpg",
+        "timestamp": 294.066944
+      }
+    },
+    {
+      "id": "gap-043",
+      "first": {
+        "name": "frame_004475.jpg",
+        "timestamp": 295.938844
+      },
+      "last": {
+        "name": "frame_004475.jpg",
+        "timestamp": 295.938844
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004474.jpg",
+        "timestamp": 295.868778
+      },
+      "after": {
+        "name": "frame_004476.jpg",
+        "timestamp": 296.0089
+      },
+      "midpoint": {
+        "name": "frame_004475.jpg",
+        "timestamp": 295.938844
+      }
+    },
+    {
+      "id": "gap-044",
+      "first": {
+        "name": "frame_004542.jpg",
+        "timestamp": 299.7636
+      },
+      "last": {
+        "name": "frame_004635.jpg",
+        "timestamp": 306.219822
+      },
+      "missing_frames": 94,
+      "sampled_span_seconds": 6.456222000000025,
+      "before": {
+        "name": "frame_004541.jpg",
+        "timestamp": 299.703522
+      },
+      "after": {
+        "name": "frame_004636.jpg",
+        "timestamp": 306.289889
+      },
+      "midpoint": {
+        "name": "frame_004588.jpg",
+        "timestamp": 302.926689
+      }
+    },
+    {
+      "id": "gap-045",
+      "first": {
+        "name": "frame_004637.jpg",
+        "timestamp": 306.349956
+      },
+      "last": {
+        "name": "frame_004637.jpg",
+        "timestamp": 306.349956
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004636.jpg",
+        "timestamp": 306.289889
+      },
+      "after": {
+        "name": "frame_004638.jpg",
+        "timestamp": 306.410022
+      },
+      "midpoint": {
+        "name": "frame_004637.jpg",
+        "timestamp": 306.349956
+      }
+    },
+    {
+      "id": "gap-046",
+      "first": {
+        "name": "frame_004639.jpg",
+        "timestamp": 306.4701
+      },
+      "last": {
+        "name": "frame_004639.jpg",
+        "timestamp": 306.4701
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004638.jpg",
+        "timestamp": 306.410022
+      },
+      "after": {
+        "name": "frame_004640.jpg",
+        "timestamp": 306.530167
+      },
+      "midpoint": {
+        "name": "frame_004639.jpg",
+        "timestamp": 306.4701
+      }
+    },
+    {
+      "id": "gap-047",
+      "first": {
+        "name": "frame_004665.jpg",
+        "timestamp": 307.951944
+      },
+      "last": {
+        "name": "frame_004682.jpg",
+        "timestamp": 309.023111
+      },
+      "missing_frames": 18,
+      "sampled_span_seconds": 1.0711669999999458,
+      "before": {
+        "name": "frame_004664.jpg",
+        "timestamp": 307.901867
+      },
+      "after": {
+        "name": "frame_004683.jpg",
+        "timestamp": 309.093178
+      },
+      "midpoint": {
+        "name": "frame_004673.jpg",
+        "timestamp": 308.392511
+      }
+    },
+    {
+      "id": "gap-048",
+      "first": {
+        "name": "frame_004684.jpg",
+        "timestamp": 309.163244
+      },
+      "last": {
+        "name": "frame_004684.jpg",
+        "timestamp": 309.163244
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004683.jpg",
+        "timestamp": 309.093178
+      },
+      "after": {
+        "name": "frame_004685.jpg",
+        "timestamp": 309.233311
+      },
+      "midpoint": {
+        "name": "frame_004684.jpg",
+        "timestamp": 309.163244
+      }
+    },
+    {
+      "id": "gap-049",
+      "first": {
+        "name": "frame_004709.jpg",
+        "timestamp": 310.465067
+      },
+      "last": {
+        "name": "frame_004709.jpg",
+        "timestamp": 310.465067
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004708.jpg",
+        "timestamp": 310.414989
+      },
+      "after": {
+        "name": "frame_004710.jpg",
+        "timestamp": 310.515144
+      },
+      "midpoint": {
+        "name": "frame_004709.jpg",
+        "timestamp": 310.465067
+      }
+    },
+    {
+      "id": "gap-050",
+      "first": {
+        "name": "frame_004712.jpg",
+        "timestamp": 310.615289
+      },
+      "last": {
+        "name": "frame_004759.jpg",
+        "timestamp": 313.418589
+      },
+      "missing_frames": 48,
+      "sampled_span_seconds": 2.803299999999979,
+      "before": {
+        "name": "frame_004711.jpg",
+        "timestamp": 310.565211
+      },
+      "after": {
+        "name": "frame_004760.jpg",
+        "timestamp": 313.478656
+      },
+      "midpoint": {
+        "name": "frame_004735.jpg",
+        "timestamp": 312.036889
+      }
+    },
+    {
+      "id": "gap-051",
+      "first": {
+        "name": "frame_004898.jpg",
+        "timestamp": 320.358711
+      },
+      "last": {
+        "name": "frame_004919.jpg",
+        "timestamp": 321.460211
+      },
+      "missing_frames": 22,
+      "sampled_span_seconds": 1.1014999999999873,
+      "before": {
+        "name": "frame_004897.jpg",
+        "timestamp": 320.318644
+      },
+      "after": {
+        "name": "frame_004920.jpg",
+        "timestamp": 321.510289
+      },
+      "midpoint": {
+        "name": "frame_004908.jpg",
+        "timestamp": 320.839433
+      }
+    },
+    {
+      "id": "gap-052",
+      "first": {
+        "name": "frame_004921.jpg",
+        "timestamp": 321.560356
+      },
+      "last": {
+        "name": "frame_004921.jpg",
+        "timestamp": 321.560356
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004920.jpg",
+        "timestamp": 321.510289
+      },
+      "after": {
+        "name": "frame_004922.jpg",
+        "timestamp": 321.610433
+      },
+      "midpoint": {
+        "name": "frame_004921.jpg",
+        "timestamp": 321.560356
+      }
+    },
+    {
+      "id": "gap-053",
+      "first": {
+        "name": "frame_004923.jpg",
+        "timestamp": 321.660511
+      },
+      "last": {
+        "name": "frame_004923.jpg",
+        "timestamp": 321.660511
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004922.jpg",
+        "timestamp": 321.610433
+      },
+      "after": {
+        "name": "frame_004924.jpg",
+        "timestamp": 321.710578
+      },
+      "midpoint": {
+        "name": "frame_004923.jpg",
+        "timestamp": 321.660511
+      }
+    },
+    {
+      "id": "gap-054",
+      "first": {
+        "name": "frame_004958.jpg",
+        "timestamp": 323.413078
+      },
+      "last": {
+        "name": "frame_004958.jpg",
+        "timestamp": 323.413078
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004957.jpg",
+        "timestamp": 323.363
+      },
+      "after": {
+        "name": "frame_004959.jpg",
+        "timestamp": 323.463144
+      },
+      "midpoint": {
+        "name": "frame_004958.jpg",
+        "timestamp": 323.413078
+      }
+    },
+    {
+      "id": "gap-055",
+      "first": {
+        "name": "frame_004961.jpg",
+        "timestamp": 323.573289
+      },
+      "last": {
+        "name": "frame_004961.jpg",
+        "timestamp": 323.573289
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_004960.jpg",
+        "timestamp": 323.513222
+      },
+      "after": {
+        "name": "frame_004962.jpg",
+        "timestamp": 323.633356
+      },
+      "midpoint": {
+        "name": "frame_004961.jpg",
+        "timestamp": 323.573289
+      }
+    },
+    {
+      "id": "gap-056",
+      "first": {
+        "name": "frame_004967.jpg",
+        "timestamp": 323.933711
+      },
+      "last": {
+        "name": "frame_004969.jpg",
+        "timestamp": 324.053856
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.12014499999997952,
+      "before": {
+        "name": "frame_004966.jpg",
+        "timestamp": 323.873644
+      },
+      "after": {
+        "name": "frame_004970.jpg",
+        "timestamp": 324.113922
+      },
+      "midpoint": {
+        "name": "frame_004968.jpg",
+        "timestamp": 323.993778
+      }
+    },
+    {
+      "id": "gap-057",
+      "first": {
+        "name": "frame_004971.jpg",
+        "timestamp": 324.173989
+      },
+      "last": {
+        "name": "frame_004983.jpg",
+        "timestamp": 324.804856
+      },
+      "missing_frames": 13,
+      "sampled_span_seconds": 0.6308669999999665,
+      "before": {
+        "name": "frame_004970.jpg",
+        "timestamp": 324.113922
+      },
+      "after": {
+        "name": "frame_004984.jpg",
+        "timestamp": 324.854933
+      },
+      "midpoint": {
+        "name": "frame_004977.jpg",
+        "timestamp": 324.474433
+      }
+    },
+    {
+      "id": "gap-058",
+      "first": {
+        "name": "frame_005029.jpg",
+        "timestamp": 327.108233
+      },
+      "last": {
+        "name": "frame_005029.jpg",
+        "timestamp": 327.108233
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005028.jpg",
+        "timestamp": 327.058167
+      },
+      "after": {
+        "name": "frame_005030.jpg",
+        "timestamp": 327.158311
+      },
+      "midpoint": {
+        "name": "frame_005029.jpg",
+        "timestamp": 327.108233
+      }
+    },
+    {
+      "id": "gap-059",
+      "first": {
+        "name": "frame_005051.jpg",
+        "timestamp": 328.209844
+      },
+      "last": {
+        "name": "frame_005076.jpg",
+        "timestamp": 329.461689
+      },
+      "missing_frames": 26,
+      "sampled_span_seconds": 1.251845000000003,
+      "before": {
+        "name": "frame_005050.jpg",
+        "timestamp": 328.159778
+      },
+      "after": {
+        "name": "frame_005077.jpg",
+        "timestamp": 329.511756
+      },
+      "midpoint": {
+        "name": "frame_005063.jpg",
+        "timestamp": 328.810733
+      }
+    },
+    {
+      "id": "gap-060",
+      "first": {
+        "name": "frame_005109.jpg",
+        "timestamp": 331.1141
+      },
+      "last": {
+        "name": "frame_005109.jpg",
+        "timestamp": 331.1141
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005108.jpg",
+        "timestamp": 331.064033
+      },
+      "after": {
+        "name": "frame_005110.jpg",
+        "timestamp": 331.164178
+      },
+      "midpoint": {
+        "name": "frame_005109.jpg",
+        "timestamp": 331.1141
+      }
+    },
+    {
+      "id": "gap-061",
+      "first": {
+        "name": "frame_005132.jpg",
+        "timestamp": 332.285789
+      },
+      "last": {
+        "name": "frame_005143.jpg",
+        "timestamp": 333.016533
+      },
+      "missing_frames": 12,
+      "sampled_span_seconds": 0.7307439999999588,
+      "before": {
+        "name": "frame_005131.jpg",
+        "timestamp": 332.225711
+      },
+      "after": {
+        "name": "frame_005144.jpg",
+        "timestamp": 333.0866
+      },
+      "midpoint": {
+        "name": "frame_005137.jpg",
+        "timestamp": 332.596133
+      }
+    },
+    {
+      "id": "gap-062",
+      "first": {
+        "name": "frame_005153.jpg",
+        "timestamp": 333.667211
+      },
+      "last": {
+        "name": "frame_005161.jpg",
+        "timestamp": 334.147778
+      },
+      "missing_frames": 9,
+      "sampled_span_seconds": 0.48056700000000774,
+      "before": {
+        "name": "frame_005152.jpg",
+        "timestamp": 333.607144
+      },
+      "after": {
+        "name": "frame_005162.jpg",
+        "timestamp": 334.207844
+      },
+      "midpoint": {
+        "name": "frame_005157.jpg",
+        "timestamp": 333.907489
+      }
+    },
+    {
+      "id": "gap-063",
+      "first": {
+        "name": "frame_005194.jpg",
+        "timestamp": 335.820189
+      },
+      "last": {
+        "name": "frame_005194.jpg",
+        "timestamp": 335.820189
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005193.jpg",
+        "timestamp": 335.770111
+      },
+      "after": {
+        "name": "frame_005195.jpg",
+        "timestamp": 335.870267
+      },
+      "midpoint": {
+        "name": "frame_005194.jpg",
+        "timestamp": 335.820189
+      }
+    },
+    {
+      "id": "gap-064",
+      "first": {
+        "name": "frame_005222.jpg",
+        "timestamp": 337.222244
+      },
+      "last": {
+        "name": "frame_005222.jpg",
+        "timestamp": 337.222244
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005221.jpg",
+        "timestamp": 337.172167
+      },
+      "after": {
+        "name": "frame_005223.jpg",
+        "timestamp": 337.272322
+      },
+      "midpoint": {
+        "name": "frame_005222.jpg",
+        "timestamp": 337.222244
+      }
+    },
+    {
+      "id": "gap-065",
+      "first": {
+        "name": "frame_005312.jpg",
+        "timestamp": 341.3586
+      },
+      "last": {
+        "name": "frame_005312.jpg",
+        "timestamp": 341.3586
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005311.jpg",
+        "timestamp": 341.318533
+      },
+      "after": {
+        "name": "frame_005313.jpg",
+        "timestamp": 341.398667
+      },
+      "midpoint": {
+        "name": "frame_005312.jpg",
+        "timestamp": 341.3586
+      }
+    },
+    {
+      "id": "gap-066",
+      "first": {
+        "name": "frame_005314.jpg",
+        "timestamp": 341.438733
+      },
+      "last": {
+        "name": "frame_005314.jpg",
+        "timestamp": 341.438733
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005313.jpg",
+        "timestamp": 341.398667
+      },
+      "after": {
+        "name": "frame_005315.jpg",
+        "timestamp": 341.4788
+      },
+      "midpoint": {
+        "name": "frame_005314.jpg",
+        "timestamp": 341.438733
+      }
+    },
+    {
+      "id": "gap-067",
+      "first": {
+        "name": "frame_005316.jpg",
+        "timestamp": 341.518867
+      },
+      "last": {
+        "name": "frame_005400.jpg",
+        "timestamp": 346.124767
+      },
+      "missing_frames": 85,
+      "sampled_span_seconds": 4.60590000000002,
+      "before": {
+        "name": "frame_005315.jpg",
+        "timestamp": 341.4788
+      },
+      "after": {
+        "name": "frame_005401.jpg",
+        "timestamp": 346.174844
+      },
+      "midpoint": {
+        "name": "frame_005358.jpg",
+        "timestamp": 343.971722
+      }
+    },
+    {
+      "id": "gap-068",
+      "first": {
+        "name": "frame_005402.jpg",
+        "timestamp": 346.224922
+      },
+      "last": {
+        "name": "frame_005402.jpg",
+        "timestamp": 346.224922
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005401.jpg",
+        "timestamp": 346.174844
+      },
+      "after": {
+        "name": "frame_005403.jpg",
+        "timestamp": 346.274989
+      },
+      "midpoint": {
+        "name": "frame_005402.jpg",
+        "timestamp": 346.224922
+      }
+    },
+    {
+      "id": "gap-069",
+      "first": {
+        "name": "frame_005529.jpg",
+        "timestamp": 351.923756
+      },
+      "last": {
+        "name": "frame_005533.jpg",
+        "timestamp": 352.124044
+      },
+      "missing_frames": 5,
+      "sampled_span_seconds": 0.20028800000000047,
+      "before": {
+        "name": "frame_005528.jpg",
+        "timestamp": 351.873678
+      },
+      "after": {
+        "name": "frame_005534.jpg",
+        "timestamp": 352.174122
+      },
+      "midpoint": {
+        "name": "frame_005531.jpg",
+        "timestamp": 352.0239
+      }
+    },
+    {
+      "id": "gap-070",
+      "first": {
+        "name": "frame_005585.jpg",
+        "timestamp": 354.727878
+      },
+      "last": {
+        "name": "frame_005585.jpg",
+        "timestamp": 354.727878
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005584.jpg",
+        "timestamp": 354.6778
+      },
+      "after": {
+        "name": "frame_005586.jpg",
+        "timestamp": 354.777944
+      },
+      "midpoint": {
+        "name": "frame_005585.jpg",
+        "timestamp": 354.727878
+      }
+    },
+    {
+      "id": "gap-071",
+      "first": {
+        "name": "frame_005600.jpg",
+        "timestamp": 355.388911
+      },
+      "last": {
+        "name": "frame_005649.jpg",
+        "timestamp": 358.192311
+      },
+      "missing_frames": 50,
+      "sampled_span_seconds": 2.8034000000000106,
+      "before": {
+        "name": "frame_005599.jpg",
+        "timestamp": 355.348844
+      },
+      "after": {
+        "name": "frame_005650.jpg",
+        "timestamp": 358.242389
+      },
+      "midpoint": {
+        "name": "frame_005624.jpg",
+        "timestamp": 356.650578
+      }
+    },
+    {
+      "id": "gap-072",
+      "first": {
+        "name": "frame_005668.jpg",
+        "timestamp": 359.233678
+      },
+      "last": {
+        "name": "frame_005668.jpg",
+        "timestamp": 359.233678
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005667.jpg",
+        "timestamp": 359.173611
+      },
+      "after": {
+        "name": "frame_005669.jpg",
+        "timestamp": 359.293744
+      },
+      "midpoint": {
+        "name": "frame_005668.jpg",
+        "timestamp": 359.233678
+      }
+    },
+    {
+      "id": "gap-073",
+      "first": {
+        "name": "frame_005670.jpg",
+        "timestamp": 359.353811
+      },
+      "last": {
+        "name": "frame_005675.jpg",
+        "timestamp": 359.654167
+      },
+      "missing_frames": 6,
+      "sampled_span_seconds": 0.3003559999999652,
+      "before": {
+        "name": "frame_005669.jpg",
+        "timestamp": 359.293744
+      },
+      "after": {
+        "name": "frame_005676.jpg",
+        "timestamp": 359.714233
+      },
+      "midpoint": {
+        "name": "frame_005672.jpg",
+        "timestamp": 359.473956
+      }
+    },
+    {
+      "id": "gap-074",
+      "first": {
+        "name": "frame_005677.jpg",
+        "timestamp": 359.774311
+      },
+      "last": {
+        "name": "frame_005677.jpg",
+        "timestamp": 359.774311
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005676.jpg",
+        "timestamp": 359.714233
+      },
+      "after": {
+        "name": "frame_005678.jpg",
+        "timestamp": 359.834378
+      },
+      "midpoint": {
+        "name": "frame_005677.jpg",
+        "timestamp": 359.774311
+      }
+    },
+    {
+      "id": "gap-075",
+      "first": {
+        "name": "frame_005691.jpg",
+        "timestamp": 360.745244
+      },
+      "last": {
+        "name": "frame_005691.jpg",
+        "timestamp": 360.745244
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005690.jpg",
+        "timestamp": 360.675178
+      },
+      "after": {
+        "name": "frame_005692.jpg",
+        "timestamp": 360.815311
+      },
+      "midpoint": {
+        "name": "frame_005691.jpg",
+        "timestamp": 360.745244
+      }
+    },
+    {
+      "id": "gap-076",
+      "first": {
+        "name": "frame_005709.jpg",
+        "timestamp": 361.726533
+      },
+      "last": {
+        "name": "frame_005709.jpg",
+        "timestamp": 361.726533
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005708.jpg",
+        "timestamp": 361.676467
+      },
+      "after": {
+        "name": "frame_005710.jpg",
+        "timestamp": 361.776611
+      },
+      "midpoint": {
+        "name": "frame_005709.jpg",
+        "timestamp": 361.726533
+      }
+    },
+    {
+      "id": "gap-077",
+      "first": {
+        "name": "frame_005742.jpg",
+        "timestamp": 363.418956
+      },
+      "last": {
+        "name": "frame_005743.jpg",
+        "timestamp": 363.469033
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.050077000000044336,
+      "before": {
+        "name": "frame_005741.jpg",
+        "timestamp": 363.368889
+      },
+      "after": {
+        "name": "frame_005744.jpg",
+        "timestamp": 363.519111
+      },
+      "midpoint": {
+        "name": "frame_005742.jpg",
+        "timestamp": 363.418956
+      }
+    },
+    {
+      "id": "gap-078",
+      "first": {
+        "name": "frame_005766.jpg",
+        "timestamp": 364.620722
+      },
+      "last": {
+        "name": "frame_005766.jpg",
+        "timestamp": 364.620722
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005765.jpg",
+        "timestamp": 364.570644
+      },
+      "after": {
+        "name": "frame_005767.jpg",
+        "timestamp": 364.670789
+      },
+      "midpoint": {
+        "name": "frame_005766.jpg",
+        "timestamp": 364.620722
+      }
+    },
+    {
+      "id": "gap-079",
+      "first": {
+        "name": "frame_005768.jpg",
+        "timestamp": 364.720867
+      },
+      "last": {
+        "name": "frame_005771.jpg",
+        "timestamp": 364.871089
+      },
+      "missing_frames": 4,
+      "sampled_span_seconds": 0.1502219999999852,
+      "before": {
+        "name": "frame_005767.jpg",
+        "timestamp": 364.670789
+      },
+      "after": {
+        "name": "frame_005772.jpg",
+        "timestamp": 364.921156
+      },
+      "midpoint": {
+        "name": "frame_005769.jpg",
+        "timestamp": 364.770944
+      }
+    },
+    {
+      "id": "gap-080",
+      "first": {
+        "name": "frame_005773.jpg",
+        "timestamp": 364.971233
+      },
+      "last": {
+        "name": "frame_005779.jpg",
+        "timestamp": 365.291667
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.3204340000000343,
+      "before": {
+        "name": "frame_005772.jpg",
+        "timestamp": 364.921156
+      },
+      "after": {
+        "name": "frame_005780.jpg",
+        "timestamp": 365.351733
+      },
+      "midpoint": {
+        "name": "frame_005776.jpg",
+        "timestamp": 365.121456
+      }
+    },
+    {
+      "id": "gap-081",
+      "first": {
+        "name": "frame_005789.jpg",
+        "timestamp": 365.892367
+      },
+      "last": {
+        "name": "frame_005870.jpg",
+        "timestamp": 371.527778
+      },
+      "missing_frames": 82,
+      "sampled_span_seconds": 5.635411000000033,
+      "before": {
+        "name": "frame_005788.jpg",
+        "timestamp": 365.8323
+      },
+      "after": {
+        "name": "frame_005871.jpg",
+        "timestamp": 371.597844
+      },
+      "midpoint": {
+        "name": "frame_005829.jpg",
+        "timestamp": 368.655044
+      }
+    },
+    {
+      "id": "gap-082",
+      "first": {
+        "name": "frame_005885.jpg",
+        "timestamp": 372.578778
+      },
+      "last": {
+        "name": "frame_005885.jpg",
+        "timestamp": 372.578778
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005884.jpg",
+        "timestamp": 372.508711
+      },
+      "after": {
+        "name": "frame_005886.jpg",
+        "timestamp": 372.648844
+      },
+      "midpoint": {
+        "name": "frame_005885.jpg",
+        "timestamp": 372.578778
+      }
+    },
+    {
+      "id": "gap-083",
+      "first": {
+        "name": "frame_005890.jpg",
+        "timestamp": 372.929111
+      },
+      "last": {
+        "name": "frame_005890.jpg",
+        "timestamp": 372.929111
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_005889.jpg",
+        "timestamp": 372.859044
+      },
+      "after": {
+        "name": "frame_005891.jpg",
+        "timestamp": 372.999178
+      },
+      "midpoint": {
+        "name": "frame_005890.jpg",
+        "timestamp": 372.929111
+      }
+    },
+    {
+      "id": "gap-084",
+      "first": {
+        "name": "frame_005910.jpg",
+        "timestamp": 374.330444
+      },
+      "last": {
+        "name": "frame_005998.jpg",
+        "timestamp": 380.496311
+      },
+      "missing_frames": 89,
+      "sampled_span_seconds": 6.1658669999999915,
+      "before": {
+        "name": "frame_005909.jpg",
+        "timestamp": 374.260378
+      },
+      "after": {
+        "name": "frame_005999.jpg",
+        "timestamp": 380.566389
+      },
+      "midpoint": {
+        "name": "frame_005954.jpg",
+        "timestamp": 377.413378
+      }
+    },
+    {
+      "id": "gap-085",
+      "first": {
+        "name": "frame_006024.jpg",
+        "timestamp": 382.318078
+      },
+      "last": {
+        "name": "frame_006299.jpg",
+        "timestamp": 401.406467
+      },
+      "missing_frames": 276,
+      "sampled_span_seconds": 19.088389000000006,
+      "before": {
+        "name": "frame_006023.jpg",
+        "timestamp": 382.248011
+      },
+      "after": {
+        "name": "frame_006300.jpg",
+        "timestamp": 401.476533
+      },
+      "midpoint": {
+        "name": "frame_006161.jpg",
+        "timestamp": 391.917211
+      }
+    },
+    {
+      "id": "gap-086",
+      "first": {
+        "name": "frame_006301.jpg",
+        "timestamp": 401.5466
+      },
+      "last": {
+        "name": "frame_006301.jpg",
+        "timestamp": 401.5466
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006300.jpg",
+        "timestamp": 401.476533
+      },
+      "after": {
+        "name": "frame_006302.jpg",
+        "timestamp": 401.616667
+      },
+      "midpoint": {
+        "name": "frame_006301.jpg",
+        "timestamp": 401.5466
+      }
+    },
+    {
+      "id": "gap-087",
+      "first": {
+        "name": "frame_006306.jpg",
+        "timestamp": 401.856956
+      },
+      "last": {
+        "name": "frame_006306.jpg",
+        "timestamp": 401.856956
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006305.jpg",
+        "timestamp": 401.796878
+      },
+      "after": {
+        "name": "frame_006307.jpg",
+        "timestamp": 401.907022
+      },
+      "midpoint": {
+        "name": "frame_006306.jpg",
+        "timestamp": 401.856956
+      }
+    },
+    {
+      "id": "gap-088",
+      "first": {
+        "name": "frame_006308.jpg",
+        "timestamp": 401.9571
+      },
+      "last": {
+        "name": "frame_006308.jpg",
+        "timestamp": 401.9571
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006307.jpg",
+        "timestamp": 401.907022
+      },
+      "after": {
+        "name": "frame_006309.jpg",
+        "timestamp": 402.007167
+      },
+      "midpoint": {
+        "name": "frame_006308.jpg",
+        "timestamp": 401.9571
+      }
+    },
+    {
+      "id": "gap-089",
+      "first": {
+        "name": "frame_006314.jpg",
+        "timestamp": 402.257533
+      },
+      "last": {
+        "name": "frame_006314.jpg",
+        "timestamp": 402.257533
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006313.jpg",
+        "timestamp": 402.207467
+      },
+      "after": {
+        "name": "frame_006315.jpg",
+        "timestamp": 402.307611
+      },
+      "midpoint": {
+        "name": "frame_006314.jpg",
+        "timestamp": 402.257533
+      }
+    },
+    {
+      "id": "gap-090",
+      "first": {
+        "name": "frame_006342.jpg",
+        "timestamp": 403.949489
+      },
+      "last": {
+        "name": "frame_006343.jpg",
+        "timestamp": 404.019556
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.07006699999999455,
+      "before": {
+        "name": "frame_006341.jpg",
+        "timestamp": 403.879422
+      },
+      "after": {
+        "name": "frame_006344.jpg",
+        "timestamp": 404.089622
+      },
+      "midpoint": {
+        "name": "frame_006342.jpg",
+        "timestamp": 403.949489
+      }
+    },
+    {
+      "id": "gap-091",
+      "first": {
+        "name": "frame_006363.jpg",
+        "timestamp": 405.420889
+      },
+      "last": {
+        "name": "frame_006363.jpg",
+        "timestamp": 405.420889
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006362.jpg",
+        "timestamp": 405.350822
+      },
+      "after": {
+        "name": "frame_006364.jpg",
+        "timestamp": 405.490956
+      },
+      "midpoint": {
+        "name": "frame_006363.jpg",
+        "timestamp": 405.420889
+      }
+    },
+    {
+      "id": "gap-092",
+      "first": {
+        "name": "frame_006372.jpg",
+        "timestamp": 405.981522
+      },
+      "last": {
+        "name": "frame_006372.jpg",
+        "timestamp": 405.981522
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006371.jpg",
+        "timestamp": 405.921444
+      },
+      "after": {
+        "name": "frame_006373.jpg",
+        "timestamp": 406.041589
+      },
+      "midpoint": {
+        "name": "frame_006372.jpg",
+        "timestamp": 405.981522
+      }
+    },
+    {
+      "id": "gap-093",
+      "first": {
+        "name": "frame_006384.jpg",
+        "timestamp": 406.642378
+      },
+      "last": {
+        "name": "frame_006389.jpg",
+        "timestamp": 406.892744
+      },
+      "missing_frames": 6,
+      "sampled_span_seconds": 0.25036599999998543,
+      "before": {
+        "name": "frame_006383.jpg",
+        "timestamp": 406.5923
+      },
+      "after": {
+        "name": "frame_006390.jpg",
+        "timestamp": 406.952811
+      },
+      "midpoint": {
+        "name": "frame_006386.jpg",
+        "timestamp": 406.742522
+      }
+    },
+    {
+      "id": "gap-094",
+      "first": {
+        "name": "frame_006409.jpg",
+        "timestamp": 407.984178
+      },
+      "last": {
+        "name": "frame_006409.jpg",
+        "timestamp": 407.984178
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006408.jpg",
+        "timestamp": 407.934111
+      },
+      "after": {
+        "name": "frame_006410.jpg",
+        "timestamp": 408.034244
+      },
+      "midpoint": {
+        "name": "frame_006409.jpg",
+        "timestamp": 407.984178
+      }
+    },
+    {
+      "id": "gap-095",
+      "first": {
+        "name": "frame_006413.jpg",
+        "timestamp": 408.184467
+      },
+      "last": {
+        "name": "frame_006413.jpg",
+        "timestamp": 408.184467
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006412.jpg",
+        "timestamp": 408.134389
+      },
+      "after": {
+        "name": "frame_006414.jpg",
+        "timestamp": 408.234533
+      },
+      "midpoint": {
+        "name": "frame_006413.jpg",
+        "timestamp": 408.184467
+      }
+    },
+    {
+      "id": "gap-096",
+      "first": {
+        "name": "frame_006450.jpg",
+        "timestamp": 410.037178
+      },
+      "last": {
+        "name": "frame_006450.jpg",
+        "timestamp": 410.037178
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006449.jpg",
+        "timestamp": 409.9871
+      },
+      "after": {
+        "name": "frame_006451.jpg",
+        "timestamp": 410.087256
+      },
+      "midpoint": {
+        "name": "frame_006450.jpg",
+        "timestamp": 410.037178
+      }
+    },
+    {
+      "id": "gap-097",
+      "first": {
+        "name": "frame_006461.jpg",
+        "timestamp": 410.587989
+      },
+      "last": {
+        "name": "frame_006461.jpg",
+        "timestamp": 410.587989
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006460.jpg",
+        "timestamp": 410.537911
+      },
+      "after": {
+        "name": "frame_006462.jpg",
+        "timestamp": 410.638056
+      },
+      "midpoint": {
+        "name": "frame_006461.jpg",
+        "timestamp": 410.587989
+      }
+    },
+    {
+      "id": "gap-098",
+      "first": {
+        "name": "frame_006493.jpg",
+        "timestamp": 412.290311
+      },
+      "last": {
+        "name": "frame_006530.jpg",
+        "timestamp": 414.512889
+      },
+      "missing_frames": 38,
+      "sampled_span_seconds": 2.2225779999999986,
+      "before": {
+        "name": "frame_006492.jpg",
+        "timestamp": 412.230244
+      },
+      "after": {
+        "name": "frame_006531.jpg",
+        "timestamp": 414.562967
+      },
+      "midpoint": {
+        "name": "frame_006511.jpg",
+        "timestamp": 413.471533
+      }
+    },
+    {
+      "id": "gap-099",
+      "first": {
+        "name": "frame_006675.jpg",
+        "timestamp": 422.453322
+      },
+      "last": {
+        "name": "frame_006675.jpg",
+        "timestamp": 422.453322
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006674.jpg",
+        "timestamp": 422.403244
+      },
+      "after": {
+        "name": "frame_006676.jpg",
+        "timestamp": 422.5034
+      },
+      "midpoint": {
+        "name": "frame_006675.jpg",
+        "timestamp": 422.453322
+      }
+    },
+    {
+      "id": "gap-100",
+      "first": {
+        "name": "frame_006766.jpg",
+        "timestamp": 427.279589
+      },
+      "last": {
+        "name": "frame_006775.jpg",
+        "timestamp": 427.760233
+      },
+      "missing_frames": 10,
+      "sampled_span_seconds": 0.4806440000000407,
+      "before": {
+        "name": "frame_006765.jpg",
+        "timestamp": 427.219522
+      },
+      "after": {
+        "name": "frame_006776.jpg",
+        "timestamp": 427.800311
+      },
+      "midpoint": {
+        "name": "frame_006770.jpg",
+        "timestamp": 427.509867
+      }
+    },
+    {
+      "id": "gap-101",
+      "first": {
+        "name": "frame_006806.jpg",
+        "timestamp": 429.282422
+      },
+      "last": {
+        "name": "frame_006863.jpg",
+        "timestamp": 432.236556
+      },
+      "missing_frames": 58,
+      "sampled_span_seconds": 2.9541340000000105,
+      "before": {
+        "name": "frame_006805.jpg",
+        "timestamp": 429.222356
+      },
+      "after": {
+        "name": "frame_006864.jpg",
+        "timestamp": 432.286633
+      },
+      "midpoint": {
+        "name": "frame_006834.jpg",
+        "timestamp": 430.784444
+      }
+    },
+    {
+      "id": "gap-102",
+      "first": {
+        "name": "frame_006865.jpg",
+        "timestamp": 432.3367
+      },
+      "last": {
+        "name": "frame_006865.jpg",
+        "timestamp": 432.3367
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_006864.jpg",
+        "timestamp": 432.286633
+      },
+      "after": {
+        "name": "frame_006866.jpg",
+        "timestamp": 432.386778
+      },
+      "midpoint": {
+        "name": "frame_006865.jpg",
+        "timestamp": 432.3367
+      }
+    },
+    {
+      "id": "gap-103",
+      "first": {
+        "name": "frame_006976.jpg",
+        "timestamp": 438.6346
+      },
+      "last": {
+        "name": "frame_007111.jpg",
+        "timestamp": 446.574122
+      },
+      "missing_frames": 136,
+      "sampled_span_seconds": 7.939522000000011,
+      "before": {
+        "name": "frame_006975.jpg",
+        "timestamp": 438.584522
+      },
+      "after": {
+        "name": "frame_007112.jpg",
+        "timestamp": 446.644189
+      },
+      "midpoint": {
+        "name": "frame_007043.jpg",
+        "timestamp": 442.269422
+      }
+    },
+    {
+      "id": "gap-104",
+      "first": {
+        "name": "frame_007113.jpg",
+        "timestamp": 446.714256
+      },
+      "last": {
+        "name": "frame_007114.jpg",
+        "timestamp": 446.784322
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.07006599999999708,
+      "before": {
+        "name": "frame_007112.jpg",
+        "timestamp": 446.644189
+      },
+      "after": {
+        "name": "frame_007115.jpg",
+        "timestamp": 446.844389
+      },
+      "midpoint": {
+        "name": "frame_007113.jpg",
+        "timestamp": 446.714256
+      }
+    },
+    {
+      "id": "gap-105",
+      "first": {
+        "name": "frame_007162.jpg",
+        "timestamp": 449.227844
+      },
+      "last": {
+        "name": "frame_007175.jpg",
+        "timestamp": 449.928778
+      },
+      "missing_frames": 14,
+      "sampled_span_seconds": 0.7009340000000179,
+      "before": {
+        "name": "frame_007161.jpg",
+        "timestamp": 449.167767
+      },
+      "after": {
+        "name": "frame_007176.jpg",
+        "timestamp": 449.978856
+      },
+      "midpoint": {
+        "name": "frame_007168.jpg",
+        "timestamp": 449.578267
+      }
+    },
+    {
+      "id": "gap-106",
+      "first": {
+        "name": "frame_007177.jpg",
+        "timestamp": 450.028922
+      },
+      "last": {
+        "name": "frame_007177.jpg",
+        "timestamp": 450.028922
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007176.jpg",
+        "timestamp": 449.978856
+      },
+      "after": {
+        "name": "frame_007178.jpg",
+        "timestamp": 450.079
+      },
+      "midpoint": {
+        "name": "frame_007177.jpg",
+        "timestamp": 450.028922
+      }
+    },
+    {
+      "id": "gap-107",
+      "first": {
+        "name": "frame_007179.jpg",
+        "timestamp": 450.129067
+      },
+      "last": {
+        "name": "frame_007179.jpg",
+        "timestamp": 450.129067
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007178.jpg",
+        "timestamp": 450.079
+      },
+      "after": {
+        "name": "frame_007180.jpg",
+        "timestamp": 450.179144
+      },
+      "midpoint": {
+        "name": "frame_007179.jpg",
+        "timestamp": 450.129067
+      }
+    },
+    {
+      "id": "gap-108",
+      "first": {
+        "name": "frame_007193.jpg",
+        "timestamp": 450.8301
+      },
+      "last": {
+        "name": "frame_007193.jpg",
+        "timestamp": 450.8301
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007192.jpg",
+        "timestamp": 450.780022
+      },
+      "after": {
+        "name": "frame_007194.jpg",
+        "timestamp": 450.880167
+      },
+      "midpoint": {
+        "name": "frame_007193.jpg",
+        "timestamp": 450.8301
+      }
+    },
+    {
+      "id": "gap-109",
+      "first": {
+        "name": "frame_007202.jpg",
+        "timestamp": 451.280756
+      },
+      "last": {
+        "name": "frame_007202.jpg",
+        "timestamp": 451.280756
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007201.jpg",
+        "timestamp": 451.230689
+      },
+      "after": {
+        "name": "frame_007203.jpg",
+        "timestamp": 451.330833
+      },
+      "midpoint": {
+        "name": "frame_007202.jpg",
+        "timestamp": 451.280756
+      }
+    },
+    {
+      "id": "gap-110",
+      "first": {
+        "name": "frame_007207.jpg",
+        "timestamp": 451.531122
+      },
+      "last": {
+        "name": "frame_007209.jpg",
+        "timestamp": 451.631267
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.10014499999999771,
+      "before": {
+        "name": "frame_007206.jpg",
+        "timestamp": 451.481056
+      },
+      "after": {
+        "name": "frame_007210.jpg",
+        "timestamp": 451.681344
+      },
+      "midpoint": {
+        "name": "frame_007208.jpg",
+        "timestamp": 451.5812
+      }
+    },
+    {
+      "id": "gap-111",
+      "first": {
+        "name": "frame_007231.jpg",
+        "timestamp": 452.702867
+      },
+      "last": {
+        "name": "frame_007282.jpg",
+        "timestamp": 455.746444
+      },
+      "missing_frames": 52,
+      "sampled_span_seconds": 3.0435769999999707,
+      "before": {
+        "name": "frame_007230.jpg",
+        "timestamp": 452.652789
+      },
+      "after": {
+        "name": "frame_007283.jpg",
+        "timestamp": 455.816511
+      },
+      "midpoint": {
+        "name": "frame_007256.jpg",
+        "timestamp": 454.144633
+      }
+    },
+    {
+      "id": "gap-112",
+      "first": {
+        "name": "frame_007287.jpg",
+        "timestamp": 456.096778
+      },
+      "last": {
+        "name": "frame_007287.jpg",
+        "timestamp": 456.096778
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007286.jpg",
+        "timestamp": 456.026711
+      },
+      "after": {
+        "name": "frame_007288.jpg",
+        "timestamp": 456.166844
+      },
+      "midpoint": {
+        "name": "frame_007287.jpg",
+        "timestamp": 456.096778
+      }
+    },
+    {
+      "id": "gap-113",
+      "first": {
+        "name": "frame_007369.jpg",
+        "timestamp": 460.582656
+      },
+      "last": {
+        "name": "frame_007369.jpg",
+        "timestamp": 460.582656
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007368.jpg",
+        "timestamp": 460.532578
+      },
+      "after": {
+        "name": "frame_007370.jpg",
+        "timestamp": 460.632722
+      },
+      "midpoint": {
+        "name": "frame_007369.jpg",
+        "timestamp": 460.582656
+      }
+    },
+    {
+      "id": "gap-114",
+      "first": {
+        "name": "frame_007371.jpg",
+        "timestamp": 460.6828
+      },
+      "last": {
+        "name": "frame_007371.jpg",
+        "timestamp": 460.6828
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007370.jpg",
+        "timestamp": 460.632722
+      },
+      "after": {
+        "name": "frame_007372.jpg",
+        "timestamp": 460.732878
+      },
+      "midpoint": {
+        "name": "frame_007371.jpg",
+        "timestamp": 460.6828
+      }
+    },
+    {
+      "id": "gap-115",
+      "first": {
+        "name": "frame_007373.jpg",
+        "timestamp": 460.792944
+      },
+      "last": {
+        "name": "frame_007373.jpg",
+        "timestamp": 460.792944
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007372.jpg",
+        "timestamp": 460.732878
+      },
+      "after": {
+        "name": "frame_007374.jpg",
+        "timestamp": 460.853011
+      },
+      "midpoint": {
+        "name": "frame_007373.jpg",
+        "timestamp": 460.792944
+      }
+    },
+    {
+      "id": "gap-116",
+      "first": {
+        "name": "frame_007375.jpg",
+        "timestamp": 460.913089
+      },
+      "last": {
+        "name": "frame_007375.jpg",
+        "timestamp": 460.913089
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007374.jpg",
+        "timestamp": 460.853011
+      },
+      "after": {
+        "name": "frame_007376.jpg",
+        "timestamp": 460.963156
+      },
+      "midpoint": {
+        "name": "frame_007375.jpg",
+        "timestamp": 460.913089
+      }
+    },
+    {
+      "id": "gap-117",
+      "first": {
+        "name": "frame_007514.jpg",
+        "timestamp": 468.842956
+      },
+      "last": {
+        "name": "frame_007535.jpg",
+        "timestamp": 470.124422
+      },
+      "missing_frames": 22,
+      "sampled_span_seconds": 1.2814659999999662,
+      "before": {
+        "name": "frame_007513.jpg",
+        "timestamp": 468.782889
+      },
+      "after": {
+        "name": "frame_007536.jpg",
+        "timestamp": 470.184489
+      },
+      "midpoint": {
+        "name": "frame_007524.jpg",
+        "timestamp": 469.403667
+      }
+    },
+    {
+      "id": "gap-118",
+      "first": {
+        "name": "frame_007597.jpg",
+        "timestamp": 472.998767
+      },
+      "last": {
+        "name": "frame_007671.jpg",
+        "timestamp": 477.913789
+      },
+      "missing_frames": 75,
+      "sampled_span_seconds": 4.915022000000022,
+      "before": {
+        "name": "frame_007596.jpg",
+        "timestamp": 472.948689
+      },
+      "after": {
+        "name": "frame_007672.jpg",
+        "timestamp": 477.983856
+      },
+      "midpoint": {
+        "name": "frame_007634.jpg",
+        "timestamp": 475.321322
+      }
+    },
+    {
+      "id": "gap-119",
+      "first": {
+        "name": "frame_007693.jpg",
+        "timestamp": 479.455256
+      },
+      "last": {
+        "name": "frame_007693.jpg",
+        "timestamp": 479.455256
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007692.jpg",
+        "timestamp": 479.385189
+      },
+      "after": {
+        "name": "frame_007694.jpg",
+        "timestamp": 479.525322
+      },
+      "midpoint": {
+        "name": "frame_007693.jpg",
+        "timestamp": 479.455256
+      }
+    },
+    {
+      "id": "gap-120",
+      "first": {
+        "name": "frame_007718.jpg",
+        "timestamp": 481.206922
+      },
+      "last": {
+        "name": "frame_007719.jpg",
+        "timestamp": 481.276989
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.07006699999999455,
+      "before": {
+        "name": "frame_007717.jpg",
+        "timestamp": 481.136856
+      },
+      "after": {
+        "name": "frame_007720.jpg",
+        "timestamp": 481.347056
+      },
+      "midpoint": {
+        "name": "frame_007718.jpg",
+        "timestamp": 481.206922
+      }
+    },
+    {
+      "id": "gap-121",
+      "first": {
+        "name": "frame_007741.jpg",
+        "timestamp": 482.818456
+      },
+      "last": {
+        "name": "frame_007741.jpg",
+        "timestamp": 482.818456
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007740.jpg",
+        "timestamp": 482.748389
+      },
+      "after": {
+        "name": "frame_007742.jpg",
+        "timestamp": 482.888522
+      },
+      "midpoint": {
+        "name": "frame_007741.jpg",
+        "timestamp": 482.818456
+      }
+    },
+    {
+      "id": "gap-122",
+      "first": {
+        "name": "frame_007743.jpg",
+        "timestamp": 482.958589
+      },
+      "last": {
+        "name": "frame_007743.jpg",
+        "timestamp": 482.958589
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007742.jpg",
+        "timestamp": 482.888522
+      },
+      "after": {
+        "name": "frame_007744.jpg",
+        "timestamp": 483.028656
+      },
+      "midpoint": {
+        "name": "frame_007743.jpg",
+        "timestamp": 482.958589
+      }
+    },
+    {
+      "id": "gap-123",
+      "first": {
+        "name": "frame_007745.jpg",
+        "timestamp": 483.098722
+      },
+      "last": {
+        "name": "frame_007745.jpg",
+        "timestamp": 483.098722
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007744.jpg",
+        "timestamp": 483.028656
+      },
+      "after": {
+        "name": "frame_007746.jpg",
+        "timestamp": 483.168789
+      },
+      "midpoint": {
+        "name": "frame_007745.jpg",
+        "timestamp": 483.098722
+      }
+    },
+    {
+      "id": "gap-124",
+      "first": {
+        "name": "frame_007747.jpg",
+        "timestamp": 483.238856
+      },
+      "last": {
+        "name": "frame_007747.jpg",
+        "timestamp": 483.238856
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007746.jpg",
+        "timestamp": 483.168789
+      },
+      "after": {
+        "name": "frame_007748.jpg",
+        "timestamp": 483.308922
+      },
+      "midpoint": {
+        "name": "frame_007747.jpg",
+        "timestamp": 483.238856
+      }
+    },
+    {
+      "id": "gap-125",
+      "first": {
+        "name": "frame_007777.jpg",
+        "timestamp": 485.340856
+      },
+      "last": {
+        "name": "frame_007793.jpg",
+        "timestamp": 486.461922
+      },
+      "missing_frames": 17,
+      "sampled_span_seconds": 1.1210660000000416,
+      "before": {
+        "name": "frame_007776.jpg",
+        "timestamp": 485.270789
+      },
+      "after": {
+        "name": "frame_007794.jpg",
+        "timestamp": 486.531989
+      },
+      "midpoint": {
+        "name": "frame_007785.jpg",
+        "timestamp": 485.901389
+      }
+    },
+    {
+      "id": "gap-126",
+      "first": {
+        "name": "frame_007795.jpg",
+        "timestamp": 486.602056
+      },
+      "last": {
+        "name": "frame_007795.jpg",
+        "timestamp": 486.602056
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007794.jpg",
+        "timestamp": 486.531989
+      },
+      "after": {
+        "name": "frame_007796.jpg",
+        "timestamp": 486.672122
+      },
+      "midpoint": {
+        "name": "frame_007795.jpg",
+        "timestamp": 486.602056
+      }
+    },
+    {
+      "id": "gap-127",
+      "first": {
+        "name": "frame_007800.jpg",
+        "timestamp": 486.952389
+      },
+      "last": {
+        "name": "frame_007802.jpg",
+        "timestamp": 487.092522
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.14013299999999163,
+      "before": {
+        "name": "frame_007799.jpg",
+        "timestamp": 486.882322
+      },
+      "after": {
+        "name": "frame_007803.jpg",
+        "timestamp": 487.162589
+      },
+      "midpoint": {
+        "name": "frame_007801.jpg",
+        "timestamp": 487.022456
+      }
+    },
+    {
+      "id": "gap-128",
+      "first": {
+        "name": "frame_007818.jpg",
+        "timestamp": 488.213589
+      },
+      "last": {
+        "name": "frame_007942.jpg",
+        "timestamp": 496.352056
+      },
+      "missing_frames": 125,
+      "sampled_span_seconds": 8.138466999999991,
+      "before": {
+        "name": "frame_007817.jpg",
+        "timestamp": 488.143522
+      },
+      "after": {
+        "name": "frame_007943.jpg",
+        "timestamp": 496.412122
+      },
+      "midpoint": {
+        "name": "frame_007880.jpg",
+        "timestamp": 492.437778
+      }
+    },
+    {
+      "id": "gap-129",
+      "first": {
+        "name": "frame_007944.jpg",
+        "timestamp": 496.4722
+      },
+      "last": {
+        "name": "frame_007945.jpg",
+        "timestamp": 496.532267
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.060067000000003645,
+      "before": {
+        "name": "frame_007943.jpg",
+        "timestamp": 496.412122
+      },
+      "after": {
+        "name": "frame_007946.jpg",
+        "timestamp": 496.592333
+      },
+      "midpoint": {
+        "name": "frame_007944.jpg",
+        "timestamp": 496.4722
+      }
+    },
+    {
+      "id": "gap-130",
+      "first": {
+        "name": "frame_007963.jpg",
+        "timestamp": 497.7035
+      },
+      "last": {
+        "name": "frame_007963.jpg",
+        "timestamp": 497.7035
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_007962.jpg",
+        "timestamp": 497.643422
+      },
+      "after": {
+        "name": "frame_007964.jpg",
+        "timestamp": 497.763567
+      },
+      "midpoint": {
+        "name": "frame_007963.jpg",
+        "timestamp": 497.7035
+      }
+    },
+    {
+      "id": "gap-131",
+      "first": {
+        "name": "frame_007982.jpg",
+        "timestamp": 498.714856
+      },
+      "last": {
+        "name": "frame_008134.jpg",
+        "timestamp": 507.895444
+      },
+      "missing_frames": 153,
+      "sampled_span_seconds": 9.180588,
+      "before": {
+        "name": "frame_007981.jpg",
+        "timestamp": 498.664789
+      },
+      "after": {
+        "name": "frame_008135.jpg",
+        "timestamp": 507.935511
+      },
+      "midpoint": {
+        "name": "frame_008058.jpg",
+        "timestamp": 503.070244
+      }
+    },
+    {
+      "id": "gap-132",
+      "first": {
+        "name": "frame_008151.jpg",
+        "timestamp": 508.576578
+      },
+      "last": {
+        "name": "frame_008151.jpg",
+        "timestamp": 508.576578
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_008150.jpg",
+        "timestamp": 508.536511
+      },
+      "after": {
+        "name": "frame_008152.jpg",
+        "timestamp": 508.616644
+      },
+      "midpoint": {
+        "name": "frame_008151.jpg",
+        "timestamp": 508.576578
+      }
+    },
+    {
+      "id": "gap-133",
+      "first": {
+        "name": "frame_008155.jpg",
+        "timestamp": 508.756856
+      },
+      "last": {
+        "name": "frame_008155.jpg",
+        "timestamp": 508.756856
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_008154.jpg",
+        "timestamp": 508.706789
+      },
+      "after": {
+        "name": "frame_008156.jpg",
+        "timestamp": 508.806933
+      },
+      "midpoint": {
+        "name": "frame_008155.jpg",
+        "timestamp": 508.756856
+      }
+    },
+    {
+      "id": "gap-134",
+      "first": {
+        "name": "frame_008196.jpg",
+        "timestamp": 510.809878
+      },
+      "last": {
+        "name": "frame_008196.jpg",
+        "timestamp": 510.809878
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_008195.jpg",
+        "timestamp": 510.759811
+      },
+      "after": {
+        "name": "frame_008197.jpg",
+        "timestamp": 510.859956
+      },
+      "midpoint": {
+        "name": "frame_008196.jpg",
+        "timestamp": 510.809878
+      }
+    },
+    {
+      "id": "gap-135",
+      "first": {
+        "name": "frame_008225.jpg",
+        "timestamp": 512.262011
+      },
+      "last": {
+        "name": "frame_008254.jpg",
+        "timestamp": 513.594056
+      },
+      "missing_frames": 30,
+      "sampled_span_seconds": 1.3320449999999937,
+      "before": {
+        "name": "frame_008224.jpg",
+        "timestamp": 512.211933
+      },
+      "after": {
+        "name": "frame_008255.jpg",
+        "timestamp": 513.637389
+      },
+      "midpoint": {
+        "name": "frame_008239.jpg",
+        "timestamp": 512.963033
+      }
+    },
+    {
+      "id": "gap-136",
+      "first": {
+        "name": "frame_008280.jpg",
+        "timestamp": 515.257333
+      },
+      "last": {
+        "name": "frame_008297.jpg",
+        "timestamp": 516.108122
+      },
+      "missing_frames": 18,
+      "sampled_span_seconds": 0.8507889999999634,
+      "before": {
+        "name": "frame_008279.jpg",
+        "timestamp": 515.190667
+      },
+      "after": {
+        "name": "frame_008298.jpg",
+        "timestamp": 516.148189
+      },
+      "midpoint": {
+        "name": "frame_008288.jpg",
+        "timestamp": 515.747522
+      }
+    },
+    {
+      "id": "gap-137",
+      "first": {
+        "name": "frame_008319.jpg",
+        "timestamp": 516.989589
+      },
+      "last": {
+        "name": "frame_008421.jpg",
+        "timestamp": 521.106244
+      },
+      "missing_frames": 103,
+      "sampled_span_seconds": 4.116654999999923,
+      "before": {
+        "name": "frame_008318.jpg",
+        "timestamp": 516.949522
+      },
+      "after": {
+        "name": "frame_008422.jpg",
+        "timestamp": 521.172911
+      },
+      "midpoint": {
+        "name": "frame_008370.jpg",
+        "timestamp": 519.032989
+      }
+    },
+    {
+      "id": "gap-138",
+      "first": {
+        "name": "frame_008593.jpg",
+        "timestamp": 532.5966
+      },
+      "last": {
+        "name": "frame_008607.jpg",
+        "timestamp": 533.503622
+      },
+      "missing_frames": 15,
+      "sampled_span_seconds": 0.9070219999999836,
+      "before": {
+        "name": "frame_008592.jpg",
+        "timestamp": 532.530367
+      },
+      "after": {
+        "name": "frame_008608.jpg",
+        "timestamp": 533.546944
+      },
+      "midpoint": {
+        "name": "frame_008600.jpg",
+        "timestamp": 533.073156
+      }
+    },
+    {
+      "id": "gap-139",
+      "first": {
+        "name": "frame_008713.jpg",
+        "timestamp": 540.480089
+      },
+      "last": {
+        "name": "frame_008713.jpg",
+        "timestamp": 540.480089
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_008712.jpg",
+        "timestamp": 540.413422
+      },
+      "after": {
+        "name": "frame_008714.jpg",
+        "timestamp": 540.546756
+      },
+      "midpoint": {
+        "name": "frame_008713.jpg",
+        "timestamp": 540.480089
+      }
+    },
+    {
+      "id": "gap-140",
+      "first": {
+        "name": "frame_008718.jpg",
+        "timestamp": 540.813411
+      },
+      "last": {
+        "name": "frame_008719.jpg",
+        "timestamp": 540.880078
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.06666700000005221,
+      "before": {
+        "name": "frame_008717.jpg",
+        "timestamp": 540.746744
+      },
+      "after": {
+        "name": "frame_008720.jpg",
+        "timestamp": 540.946744
+      },
+      "midpoint": {
+        "name": "frame_008718.jpg",
+        "timestamp": 540.813411
+      }
+    },
+    {
+      "id": "gap-141",
+      "first": {
+        "name": "frame_008758.jpg",
+        "timestamp": 542.499344
+      },
+      "last": {
+        "name": "frame_008780.jpg",
+        "timestamp": 543.400822
+      },
+      "missing_frames": 23,
+      "sampled_span_seconds": 0.9014779999999973,
+      "before": {
+        "name": "frame_008757.jpg",
+        "timestamp": 542.459278
+      },
+      "after": {
+        "name": "frame_008781.jpg",
+        "timestamp": 543.4509
+      },
+      "midpoint": {
+        "name": "frame_008769.jpg",
+        "timestamp": 542.940078
+      }
+    },
+    {
+      "id": "gap-142",
+      "first": {
+        "name": "frame_008960.jpg",
+        "timestamp": 550.652856
+      },
+      "last": {
+        "name": "frame_008966.jpg",
+        "timestamp": 550.893256
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.2403999999999087,
+      "before": {
+        "name": "frame_008959.jpg",
+        "timestamp": 550.612789
+      },
+      "after": {
+        "name": "frame_008967.jpg",
+        "timestamp": 550.933322
+      },
+      "midpoint": {
+        "name": "frame_008963.jpg",
+        "timestamp": 550.773056
+      }
+    },
+    {
+      "id": "gap-143",
+      "first": {
+        "name": "frame_008991.jpg",
+        "timestamp": 551.894922
+      },
+      "last": {
+        "name": "frame_008991.jpg",
+        "timestamp": 551.894922
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_008990.jpg",
+        "timestamp": 551.854856
+      },
+      "after": {
+        "name": "frame_008992.jpg",
+        "timestamp": 551.934989
+      },
+      "midpoint": {
+        "name": "frame_008991.jpg",
+        "timestamp": 551.894922
+      }
+    },
+    {
+      "id": "gap-144",
+      "first": {
+        "name": "frame_009018.jpg",
+        "timestamp": 552.976722
+      },
+      "last": {
+        "name": "frame_009055.jpg",
+        "timestamp": 554.629311
+      },
+      "missing_frames": 38,
+      "sampled_span_seconds": 1.6525890000000345,
+      "before": {
+        "name": "frame_009017.jpg",
+        "timestamp": 552.936656
+      },
+      "after": {
+        "name": "frame_009056.jpg",
+        "timestamp": 554.679378
+      },
+      "midpoint": {
+        "name": "frame_009036.jpg",
+        "timestamp": 553.697922
+      }
+    },
+    {
+      "id": "gap-145",
+      "first": {
+        "name": "frame_009057.jpg",
+        "timestamp": 554.729456
+      },
+      "last": {
+        "name": "frame_009057.jpg",
+        "timestamp": 554.729456
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009056.jpg",
+        "timestamp": 554.679378
+      },
+      "after": {
+        "name": "frame_009058.jpg",
+        "timestamp": 554.779522
+      },
+      "midpoint": {
+        "name": "frame_009057.jpg",
+        "timestamp": 554.729456
+      }
+    },
+    {
+      "id": "gap-146",
+      "first": {
+        "name": "frame_009060.jpg",
+        "timestamp": 554.879678
+      },
+      "last": {
+        "name": "frame_009062.jpg",
+        "timestamp": 554.979822
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.10014400000000023,
+      "before": {
+        "name": "frame_009059.jpg",
+        "timestamp": 554.8296
+      },
+      "after": {
+        "name": "frame_009063.jpg",
+        "timestamp": 555.029889
+      },
+      "midpoint": {
+        "name": "frame_009061.jpg",
+        "timestamp": 554.929744
+      }
+    },
+    {
+      "id": "gap-147",
+      "first": {
+        "name": "frame_009132.jpg",
+        "timestamp": 557.9546
+      },
+      "last": {
+        "name": "frame_009141.jpg",
+        "timestamp": 558.375233
+      },
+      "missing_frames": 10,
+      "sampled_span_seconds": 0.4206329999999525,
+      "before": {
+        "name": "frame_009131.jpg",
+        "timestamp": 557.914533
+      },
+      "after": {
+        "name": "frame_009142.jpg",
+        "timestamp": 558.4453
+      },
+      "midpoint": {
+        "name": "frame_009136.jpg",
+        "timestamp": 558.1549
+      }
+    },
+    {
+      "id": "gap-148",
+      "first": {
+        "name": "frame_009143.jpg",
+        "timestamp": 558.515367
+      },
+      "last": {
+        "name": "frame_009143.jpg",
+        "timestamp": 558.515367
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009142.jpg",
+        "timestamp": 558.4453
+      },
+      "after": {
+        "name": "frame_009144.jpg",
+        "timestamp": 558.585433
+      },
+      "midpoint": {
+        "name": "frame_009143.jpg",
+        "timestamp": 558.515367
+      }
+    },
+    {
+      "id": "gap-149",
+      "first": {
+        "name": "frame_009148.jpg",
+        "timestamp": 558.8657
+      },
+      "last": {
+        "name": "frame_009148.jpg",
+        "timestamp": 558.8657
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009147.jpg",
+        "timestamp": 558.795633
+      },
+      "after": {
+        "name": "frame_009149.jpg",
+        "timestamp": 558.935767
+      },
+      "midpoint": {
+        "name": "frame_009148.jpg",
+        "timestamp": 558.8657
+      }
+    },
+    {
+      "id": "gap-150",
+      "first": {
+        "name": "frame_009171.jpg",
+        "timestamp": 560.107356
+      },
+      "last": {
+        "name": "frame_009206.jpg",
+        "timestamp": 562.299778
+      },
+      "missing_frames": 36,
+      "sampled_span_seconds": 2.192421999999965,
+      "before": {
+        "name": "frame_009170.jpg",
+        "timestamp": 560.057278
+      },
+      "after": {
+        "name": "frame_009207.jpg",
+        "timestamp": 562.369844
+      },
+      "midpoint": {
+        "name": "frame_009188.jpg",
+        "timestamp": 561.038578
+      }
+    },
+    {
+      "id": "gap-151",
+      "first": {
+        "name": "frame_009240.jpg",
+        "timestamp": 564.682044
+      },
+      "last": {
+        "name": "frame_009263.jpg",
+        "timestamp": 566.103644
+      },
+      "missing_frames": 24,
+      "sampled_span_seconds": 1.4216000000000122,
+      "before": {
+        "name": "frame_009239.jpg",
+        "timestamp": 564.611978
+      },
+      "after": {
+        "name": "frame_009264.jpg",
+        "timestamp": 566.163711
+      },
+      "midpoint": {
+        "name": "frame_009251.jpg",
+        "timestamp": 565.452778
+      }
+    },
+    {
+      "id": "gap-152",
+      "first": {
+        "name": "frame_009290.jpg",
+        "timestamp": 567.815489
+      },
+      "last": {
+        "name": "frame_009292.jpg",
+        "timestamp": 567.955622
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.14013299999999163,
+      "before": {
+        "name": "frame_009289.jpg",
+        "timestamp": 567.745422
+      },
+      "after": {
+        "name": "frame_009293.jpg",
+        "timestamp": 568.025689
+      },
+      "midpoint": {
+        "name": "frame_009291.jpg",
+        "timestamp": 567.885556
+      }
+    },
+    {
+      "id": "gap-153",
+      "first": {
+        "name": "frame_009296.jpg",
+        "timestamp": 568.235889
+      },
+      "last": {
+        "name": "frame_009319.jpg",
+        "timestamp": 569.847422
+      },
+      "missing_frames": 24,
+      "sampled_span_seconds": 1.6115330000000085,
+      "before": {
+        "name": "frame_009295.jpg",
+        "timestamp": 568.165822
+      },
+      "after": {
+        "name": "frame_009320.jpg",
+        "timestamp": 569.917489
+      },
+      "midpoint": {
+        "name": "frame_009307.jpg",
+        "timestamp": 569.006622
+      }
+    },
+    {
+      "id": "gap-154",
+      "first": {
+        "name": "frame_009378.jpg",
+        "timestamp": 572.371422
+      },
+      "last": {
+        "name": "frame_009404.jpg",
+        "timestamp": 573.443178
+      },
+      "missing_frames": 27,
+      "sampled_span_seconds": 1.0717559999999366,
+      "before": {
+        "name": "frame_009377.jpg",
+        "timestamp": 572.331356
+      },
+      "after": {
+        "name": "frame_009405.jpg",
+        "timestamp": 573.493256
+      },
+      "midpoint": {
+        "name": "frame_009391.jpg",
+        "timestamp": 572.892289
+      }
+    },
+    {
+      "id": "gap-155",
+      "first": {
+        "name": "frame_009406.jpg",
+        "timestamp": 573.543322
+      },
+      "last": {
+        "name": "frame_009406.jpg",
+        "timestamp": 573.543322
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009405.jpg",
+        "timestamp": 573.493256
+      },
+      "after": {
+        "name": "frame_009407.jpg",
+        "timestamp": 573.6034
+      },
+      "midpoint": {
+        "name": "frame_009406.jpg",
+        "timestamp": 573.543322
+      }
+    },
+    {
+      "id": "gap-156",
+      "first": {
+        "name": "frame_009408.jpg",
+        "timestamp": 573.663467
+      },
+      "last": {
+        "name": "frame_009408.jpg",
+        "timestamp": 573.663467
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009407.jpg",
+        "timestamp": 573.6034
+      },
+      "after": {
+        "name": "frame_009409.jpg",
+        "timestamp": 573.723533
+      },
+      "midpoint": {
+        "name": "frame_009408.jpg",
+        "timestamp": 573.663467
+      }
+    },
+    {
+      "id": "gap-157",
+      "first": {
+        "name": "frame_009427.jpg",
+        "timestamp": 574.8048
+      },
+      "last": {
+        "name": "frame_009445.jpg",
+        "timestamp": 575.856067
+      },
+      "missing_frames": 19,
+      "sampled_span_seconds": 1.0512670000000526,
+      "before": {
+        "name": "frame_009426.jpg",
+        "timestamp": 574.744733
+      },
+      "after": {
+        "name": "frame_009446.jpg",
+        "timestamp": 575.906144
+      },
+      "midpoint": {
+        "name": "frame_009436.jpg",
+        "timestamp": 575.345433
+      }
+    },
+    {
+      "id": "gap-158",
+      "first": {
+        "name": "frame_009467.jpg",
+        "timestamp": 576.8876
+      },
+      "last": {
+        "name": "frame_009474.jpg",
+        "timestamp": 577.168067
+      },
+      "missing_frames": 8,
+      "sampled_span_seconds": 0.2804669999999305,
+      "before": {
+        "name": "frame_009466.jpg",
+        "timestamp": 576.847533
+      },
+      "after": {
+        "name": "frame_009475.jpg",
+        "timestamp": 577.208133
+      },
+      "midpoint": {
+        "name": "frame_009470.jpg",
+        "timestamp": 577.0078
+      }
+    },
+    {
+      "id": "gap-159",
+      "first": {
+        "name": "frame_009553.jpg",
+        "timestamp": 580.333333
+      },
+      "last": {
+        "name": "frame_009582.jpg",
+        "timestamp": 581.685333
+      },
+      "missing_frames": 30,
+      "sampled_span_seconds": 1.3519999999999754,
+      "before": {
+        "name": "frame_009552.jpg",
+        "timestamp": 580.293267
+      },
+      "after": {
+        "name": "frame_009583.jpg",
+        "timestamp": 581.7254
+      },
+      "midpoint": {
+        "name": "frame_009567.jpg",
+        "timestamp": 580.914278
+      }
+    },
+    {
+      "id": "gap-160",
+      "first": {
+        "name": "frame_009702.jpg",
+        "timestamp": 586.683467
+      },
+      "last": {
+        "name": "frame_009702.jpg",
+        "timestamp": 586.683467
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009701.jpg",
+        "timestamp": 586.633389
+      },
+      "after": {
+        "name": "frame_009703.jpg",
+        "timestamp": 586.733533
+      },
+      "midpoint": {
+        "name": "frame_009702.jpg",
+        "timestamp": 586.683467
+      }
+    },
+    {
+      "id": "gap-161",
+      "first": {
+        "name": "frame_009709.jpg",
+        "timestamp": 586.973933
+      },
+      "last": {
+        "name": "frame_009709.jpg",
+        "timestamp": 586.973933
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009708.jpg",
+        "timestamp": 586.933867
+      },
+      "after": {
+        "name": "frame_009710.jpg",
+        "timestamp": 587.014
+      },
+      "midpoint": {
+        "name": "frame_009709.jpg",
+        "timestamp": 586.973933
+      }
+    },
+    {
+      "id": "gap-162",
+      "first": {
+        "name": "frame_009721.jpg",
+        "timestamp": 587.454733
+      },
+      "last": {
+        "name": "frame_009722.jpg",
+        "timestamp": 587.4948
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.040067000000021835,
+      "before": {
+        "name": "frame_009720.jpg",
+        "timestamp": 587.414667
+      },
+      "after": {
+        "name": "frame_009723.jpg",
+        "timestamp": 587.544878
+      },
+      "midpoint": {
+        "name": "frame_009721.jpg",
+        "timestamp": 587.454733
+      }
+    },
+    {
+      "id": "gap-163",
+      "first": {
+        "name": "frame_009753.jpg",
+        "timestamp": 588.846933
+      },
+      "last": {
+        "name": "frame_009753.jpg",
+        "timestamp": 588.846933
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_009752.jpg",
+        "timestamp": 588.806867
+      },
+      "after": {
+        "name": "frame_009754.jpg",
+        "timestamp": 588.887
+      },
+      "midpoint": {
+        "name": "frame_009753.jpg",
+        "timestamp": 588.846933
+      }
+    },
+    {
+      "id": "gap-164",
+      "first": {
+        "name": "frame_009781.jpg",
+        "timestamp": 589.9688
+      },
+      "last": {
+        "name": "frame_009796.jpg",
+        "timestamp": 590.589822
+      },
+      "missing_frames": 16,
+      "sampled_span_seconds": 0.621022000000039,
+      "before": {
+        "name": "frame_009780.jpg",
+        "timestamp": 589.928733
+      },
+      "after": {
+        "name": "frame_009797.jpg",
+        "timestamp": 590.629889
+      },
+      "midpoint": {
+        "name": "frame_009788.jpg",
+        "timestamp": 590.249267
+      }
+    },
+    {
+      "id": "gap-165",
+      "first": {
+        "name": "frame_010095.jpg",
+        "timestamp": 602.569756
+      },
+      "last": {
+        "name": "frame_010095.jpg",
+        "timestamp": 602.569756
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010094.jpg",
+        "timestamp": 602.529689
+      },
+      "after": {
+        "name": "frame_010096.jpg",
+        "timestamp": 602.609822
+      },
+      "midpoint": {
+        "name": "frame_010095.jpg",
+        "timestamp": 602.569756
+      }
+    },
+    {
+      "id": "gap-166",
+      "first": {
+        "name": "frame_010171.jpg",
+        "timestamp": 606.535178
+      },
+      "last": {
+        "name": "frame_010178.jpg",
+        "timestamp": 607.025644
+      },
+      "missing_frames": 8,
+      "sampled_span_seconds": 0.4904660000000831,
+      "before": {
+        "name": "frame_010170.jpg",
+        "timestamp": 606.465111
+      },
+      "after": {
+        "name": "frame_010179.jpg",
+        "timestamp": 607.095711
+      },
+      "midpoint": {
+        "name": "frame_010174.jpg",
+        "timestamp": 606.745378
+      }
+    },
+    {
+      "id": "gap-167",
+      "first": {
+        "name": "frame_010202.jpg",
+        "timestamp": 608.707244
+      },
+      "last": {
+        "name": "frame_010212.jpg",
+        "timestamp": 609.407911
+      },
+      "missing_frames": 11,
+      "sampled_span_seconds": 0.7006670000000668,
+      "before": {
+        "name": "frame_010201.jpg",
+        "timestamp": 608.637178
+      },
+      "after": {
+        "name": "frame_010213.jpg",
+        "timestamp": 609.477978
+      },
+      "midpoint": {
+        "name": "frame_010207.jpg",
+        "timestamp": 609.057578
+      }
+    },
+    {
+      "id": "gap-168",
+      "first": {
+        "name": "frame_010217.jpg",
+        "timestamp": 609.758244
+      },
+      "last": {
+        "name": "frame_010217.jpg",
+        "timestamp": 609.758244
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010216.jpg",
+        "timestamp": 609.688178
+      },
+      "after": {
+        "name": "frame_010218.jpg",
+        "timestamp": 609.828311
+      },
+      "midpoint": {
+        "name": "frame_010217.jpg",
+        "timestamp": 609.758244
+      }
+    },
+    {
+      "id": "gap-169",
+      "first": {
+        "name": "frame_010239.jpg",
+        "timestamp": 611.299711
+      },
+      "last": {
+        "name": "frame_010385.jpg",
+        "timestamp": 620.349833
+      },
+      "missing_frames": 147,
+      "sampled_span_seconds": 9.050121999999988,
+      "before": {
+        "name": "frame_010238.jpg",
+        "timestamp": 611.229644
+      },
+      "after": {
+        "name": "frame_010386.jpg",
+        "timestamp": 620.4199
+      },
+      "midpoint": {
+        "name": "frame_010312.jpg",
+        "timestamp": 616.264633
+      }
+    },
+    {
+      "id": "gap-170",
+      "first": {
+        "name": "frame_010453.jpg",
+        "timestamp": 625.074378
+      },
+      "last": {
+        "name": "frame_010454.jpg",
+        "timestamp": 625.134456
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.06007799999997587,
+      "before": {
+        "name": "frame_010452.jpg",
+        "timestamp": 625.014311
+      },
+      "after": {
+        "name": "frame_010455.jpg",
+        "timestamp": 625.194522
+      },
+      "midpoint": {
+        "name": "frame_010453.jpg",
+        "timestamp": 625.074378
+      }
+    },
+    {
+      "id": "gap-171",
+      "first": {
+        "name": "frame_010512.jpg",
+        "timestamp": 627.6384
+      },
+      "last": {
+        "name": "frame_010514.jpg",
+        "timestamp": 627.718533
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.08013299999993251,
+      "before": {
+        "name": "frame_010511.jpg",
+        "timestamp": 627.598333
+      },
+      "after": {
+        "name": "frame_010515.jpg",
+        "timestamp": 627.7586
+      },
+      "midpoint": {
+        "name": "frame_010513.jpg",
+        "timestamp": 627.678467
+      }
+    },
+    {
+      "id": "gap-172",
+      "first": {
+        "name": "frame_010539.jpg",
+        "timestamp": 628.780133
+      },
+      "last": {
+        "name": "frame_010540.jpg",
+        "timestamp": 628.8202
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.040067000000021835,
+      "before": {
+        "name": "frame_010538.jpg",
+        "timestamp": 628.740067
+      },
+      "after": {
+        "name": "frame_010541.jpg",
+        "timestamp": 628.860267
+      },
+      "midpoint": {
+        "name": "frame_010539.jpg",
+        "timestamp": 628.780133
+      }
+    },
+    {
+      "id": "gap-173",
+      "first": {
+        "name": "frame_010559.jpg",
+        "timestamp": 629.581467
+      },
+      "last": {
+        "name": "frame_010559.jpg",
+        "timestamp": 629.581467
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010558.jpg",
+        "timestamp": 629.5414
+      },
+      "after": {
+        "name": "frame_010560.jpg",
+        "timestamp": 629.621533
+      },
+      "midpoint": {
+        "name": "frame_010559.jpg",
+        "timestamp": 629.581467
+      }
+    },
+    {
+      "id": "gap-174",
+      "first": {
+        "name": "frame_010576.jpg",
+        "timestamp": 630.342389
+      },
+      "last": {
+        "name": "frame_010578.jpg",
+        "timestamp": 630.422522
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.08013299999993251,
+      "before": {
+        "name": "frame_010575.jpg",
+        "timestamp": 630.302322
+      },
+      "after": {
+        "name": "frame_010579.jpg",
+        "timestamp": 630.462589
+      },
+      "midpoint": {
+        "name": "frame_010577.jpg",
+        "timestamp": 630.382456
+      }
+    },
+    {
+      "id": "gap-175",
+      "first": {
+        "name": "frame_010584.jpg",
+        "timestamp": 630.662922
+      },
+      "last": {
+        "name": "frame_010584.jpg",
+        "timestamp": 630.662922
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010583.jpg",
+        "timestamp": 630.622856
+      },
+      "after": {
+        "name": "frame_010585.jpg",
+        "timestamp": 630.702989
+      },
+      "midpoint": {
+        "name": "frame_010584.jpg",
+        "timestamp": 630.662922
+      }
+    },
+    {
+      "id": "gap-176",
+      "first": {
+        "name": "frame_010603.jpg",
+        "timestamp": 631.424189
+      },
+      "last": {
+        "name": "frame_010611.jpg",
+        "timestamp": 631.744722
+      },
+      "missing_frames": 9,
+      "sampled_span_seconds": 0.32053300000006857,
+      "before": {
+        "name": "frame_010602.jpg",
+        "timestamp": 631.384122
+      },
+      "after": {
+        "name": "frame_010612.jpg",
+        "timestamp": 631.784789
+      },
+      "midpoint": {
+        "name": "frame_010607.jpg",
+        "timestamp": 631.584456
+      }
+    },
+    {
+      "id": "gap-177",
+      "first": {
+        "name": "frame_010632.jpg",
+        "timestamp": 632.586122
+      },
+      "last": {
+        "name": "frame_010755.jpg",
+        "timestamp": 640.214678
+      },
+      "missing_frames": 124,
+      "sampled_span_seconds": 7.628556000000003,
+      "before": {
+        "name": "frame_010631.jpg",
+        "timestamp": 632.546056
+      },
+      "after": {
+        "name": "frame_010756.jpg",
+        "timestamp": 640.264756
+      },
+      "midpoint": {
+        "name": "frame_010693.jpg",
+        "timestamp": 636.250422
+      }
+    },
+    {
+      "id": "gap-178",
+      "first": {
+        "name": "frame_010770.jpg",
+        "timestamp": 640.835689
+      },
+      "last": {
+        "name": "frame_010771.jpg",
+        "timestamp": 640.875756
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.040067000000021835,
+      "before": {
+        "name": "frame_010769.jpg",
+        "timestamp": 640.795622
+      },
+      "after": {
+        "name": "frame_010772.jpg",
+        "timestamp": 640.915822
+      },
+      "midpoint": {
+        "name": "frame_010770.jpg",
+        "timestamp": 640.835689
+      }
+    },
+    {
+      "id": "gap-179",
+      "first": {
+        "name": "frame_010778.jpg",
+        "timestamp": 641.292478
+      },
+      "last": {
+        "name": "frame_010781.jpg",
+        "timestamp": 641.492467
+      },
+      "missing_frames": 4,
+      "sampled_span_seconds": 0.19998900000007325,
+      "before": {
+        "name": "frame_010777.jpg",
+        "timestamp": 641.225811
+      },
+      "after": {
+        "name": "frame_010782.jpg",
+        "timestamp": 641.559133
+      },
+      "midpoint": {
+        "name": "frame_010779.jpg",
+        "timestamp": 641.359144
+      }
+    },
+    {
+      "id": "gap-180",
+      "first": {
+        "name": "frame_010783.jpg",
+        "timestamp": 641.6258
+      },
+      "last": {
+        "name": "frame_010783.jpg",
+        "timestamp": 641.6258
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010782.jpg",
+        "timestamp": 641.559133
+      },
+      "after": {
+        "name": "frame_010784.jpg",
+        "timestamp": 641.692467
+      },
+      "midpoint": {
+        "name": "frame_010783.jpg",
+        "timestamp": 641.6258
+      }
+    },
+    {
+      "id": "gap-181",
+      "first": {
+        "name": "frame_010817.jpg",
+        "timestamp": 643.0912
+      },
+      "last": {
+        "name": "frame_010817.jpg",
+        "timestamp": 643.0912
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010816.jpg",
+        "timestamp": 643.051133
+      },
+      "after": {
+        "name": "frame_010818.jpg",
+        "timestamp": 643.131267
+      },
+      "midpoint": {
+        "name": "frame_010817.jpg",
+        "timestamp": 643.0912
+      }
+    },
+    {
+      "id": "gap-182",
+      "first": {
+        "name": "frame_010825.jpg",
+        "timestamp": 643.411733
+      },
+      "last": {
+        "name": "frame_010825.jpg",
+        "timestamp": 643.411733
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010824.jpg",
+        "timestamp": 643.371667
+      },
+      "after": {
+        "name": "frame_010826.jpg",
+        "timestamp": 643.4518
+      },
+      "midpoint": {
+        "name": "frame_010825.jpg",
+        "timestamp": 643.411733
+      }
+    },
+    {
+      "id": "gap-183",
+      "first": {
+        "name": "frame_010827.jpg",
+        "timestamp": 643.491867
+      },
+      "last": {
+        "name": "frame_010862.jpg",
+        "timestamp": 645.174267
+      },
+      "missing_frames": 36,
+      "sampled_span_seconds": 1.6824000000000296,
+      "before": {
+        "name": "frame_010826.jpg",
+        "timestamp": 643.4518
+      },
+      "after": {
+        "name": "frame_010863.jpg",
+        "timestamp": 645.214333
+      },
+      "midpoint": {
+        "name": "frame_010844.jpg",
+        "timestamp": 644.173
+      }
+    },
+    {
+      "id": "gap-184",
+      "first": {
+        "name": "frame_010867.jpg",
+        "timestamp": 645.3746
+      },
+      "last": {
+        "name": "frame_010868.jpg",
+        "timestamp": 645.414667
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.040067000000021835,
+      "before": {
+        "name": "frame_010866.jpg",
+        "timestamp": 645.334533
+      },
+      "after": {
+        "name": "frame_010869.jpg",
+        "timestamp": 645.454733
+      },
+      "midpoint": {
+        "name": "frame_010867.jpg",
+        "timestamp": 645.3746
+      }
+    },
+    {
+      "id": "gap-185",
+      "first": {
+        "name": "frame_010870.jpg",
+        "timestamp": 645.4948
+      },
+      "last": {
+        "name": "frame_010871.jpg",
+        "timestamp": 645.534867
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.04006699999990815,
+      "before": {
+        "name": "frame_010869.jpg",
+        "timestamp": 645.454733
+      },
+      "after": {
+        "name": "frame_010872.jpg",
+        "timestamp": 645.574933
+      },
+      "midpoint": {
+        "name": "frame_010870.jpg",
+        "timestamp": 645.4948
+      }
+    },
+    {
+      "id": "gap-186",
+      "first": {
+        "name": "frame_010882.jpg",
+        "timestamp": 645.9756
+      },
+      "last": {
+        "name": "frame_010882.jpg",
+        "timestamp": 645.9756
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010881.jpg",
+        "timestamp": 645.935533
+      },
+      "after": {
+        "name": "frame_010883.jpg",
+        "timestamp": 646.015667
+      },
+      "midpoint": {
+        "name": "frame_010882.jpg",
+        "timestamp": 645.9756
+      }
+    },
+    {
+      "id": "gap-187",
+      "first": {
+        "name": "frame_010892.jpg",
+        "timestamp": 646.376267
+      },
+      "last": {
+        "name": "frame_010892.jpg",
+        "timestamp": 646.376267
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010891.jpg",
+        "timestamp": 646.3362
+      },
+      "after": {
+        "name": "frame_010893.jpg",
+        "timestamp": 646.416333
+      },
+      "midpoint": {
+        "name": "frame_010892.jpg",
+        "timestamp": 646.376267
+      }
+    },
+    {
+      "id": "gap-188",
+      "first": {
+        "name": "frame_010894.jpg",
+        "timestamp": 646.4564
+      },
+      "last": {
+        "name": "frame_010927.jpg",
+        "timestamp": 648.098678
+      },
+      "missing_frames": 34,
+      "sampled_span_seconds": 1.6422779999999193,
+      "before": {
+        "name": "frame_010893.jpg",
+        "timestamp": 646.416333
+      },
+      "after": {
+        "name": "frame_010928.jpg",
+        "timestamp": 648.168744
+      },
+      "midpoint": {
+        "name": "frame_010910.jpg",
+        "timestamp": 647.117478
+      }
+    },
+    {
+      "id": "gap-189",
+      "first": {
+        "name": "frame_010929.jpg",
+        "timestamp": 648.238811
+      },
+      "last": {
+        "name": "frame_010930.jpg",
+        "timestamp": 648.308878
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.07006699999999455,
+      "before": {
+        "name": "frame_010928.jpg",
+        "timestamp": 648.168744
+      },
+      "after": {
+        "name": "frame_010931.jpg",
+        "timestamp": 648.368956
+      },
+      "midpoint": {
+        "name": "frame_010929.jpg",
+        "timestamp": 648.238811
+      }
+    },
+    {
+      "id": "gap-190",
+      "first": {
+        "name": "frame_010932.jpg",
+        "timestamp": 648.429022
+      },
+      "last": {
+        "name": "frame_010932.jpg",
+        "timestamp": 648.429022
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_010931.jpg",
+        "timestamp": 648.368956
+      },
+      "after": {
+        "name": "frame_010933.jpg",
+        "timestamp": 648.4791
+      },
+      "midpoint": {
+        "name": "frame_010932.jpg",
+        "timestamp": 648.429022
+      }
+    },
+    {
+      "id": "gap-191",
+      "first": {
+        "name": "frame_010957.jpg",
+        "timestamp": 649.480722
+      },
+      "last": {
+        "name": "frame_010982.jpg",
+        "timestamp": 650.482389
+      },
+      "missing_frames": 26,
+      "sampled_span_seconds": 1.0016669999999976,
+      "before": {
+        "name": "frame_010956.jpg",
+        "timestamp": 649.440656
+      },
+      "after": {
+        "name": "frame_010983.jpg",
+        "timestamp": 650.522456
+      },
+      "midpoint": {
+        "name": "frame_010969.jpg",
+        "timestamp": 649.961522
+      }
+    },
+    {
+      "id": "gap-192",
+      "first": {
+        "name": "frame_011043.jpg",
+        "timestamp": 652.926456
+      },
+      "last": {
+        "name": "frame_011043.jpg",
+        "timestamp": 652.926456
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011042.jpg",
+        "timestamp": 652.886389
+      },
+      "after": {
+        "name": "frame_011044.jpg",
+        "timestamp": 652.966522
+      },
+      "midpoint": {
+        "name": "frame_011043.jpg",
+        "timestamp": 652.926456
+      }
+    },
+    {
+      "id": "gap-193",
+      "first": {
+        "name": "frame_011057.jpg",
+        "timestamp": 653.487389
+      },
+      "last": {
+        "name": "frame_011057.jpg",
+        "timestamp": 653.487389
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011056.jpg",
+        "timestamp": 653.447322
+      },
+      "after": {
+        "name": "frame_011058.jpg",
+        "timestamp": 653.527456
+      },
+      "midpoint": {
+        "name": "frame_011057.jpg",
+        "timestamp": 653.487389
+      }
+    },
+    {
+      "id": "gap-194",
+      "first": {
+        "name": "frame_011083.jpg",
+        "timestamp": 655.011144
+      },
+      "last": {
+        "name": "frame_011083.jpg",
+        "timestamp": 655.011144
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011082.jpg",
+        "timestamp": 654.944478
+      },
+      "after": {
+        "name": "frame_011084.jpg",
+        "timestamp": 655.077811
+      },
+      "midpoint": {
+        "name": "frame_011083.jpg",
+        "timestamp": 655.011144
+      }
+    },
+    {
+      "id": "gap-195",
+      "first": {
+        "name": "frame_011224.jpg",
+        "timestamp": 661.357644
+      },
+      "last": {
+        "name": "frame_011238.jpg",
+        "timestamp": 662.0986
+      },
+      "missing_frames": 15,
+      "sampled_span_seconds": 0.7409559999999829,
+      "before": {
+        "name": "frame_011223.jpg",
+        "timestamp": 661.317578
+      },
+      "after": {
+        "name": "frame_011239.jpg",
+        "timestamp": 662.168667
+      },
+      "midpoint": {
+        "name": "frame_011231.jpg",
+        "timestamp": 661.648122
+      }
+    },
+    {
+      "id": "gap-196",
+      "first": {
+        "name": "frame_011518.jpg",
+        "timestamp": 674.072878
+      },
+      "last": {
+        "name": "frame_011524.jpg",
+        "timestamp": 674.313278
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.24040000000002237,
+      "before": {
+        "name": "frame_011517.jpg",
+        "timestamp": 674.032811
+      },
+      "after": {
+        "name": "frame_011525.jpg",
+        "timestamp": 674.353344
+      },
+      "midpoint": {
+        "name": "frame_011521.jpg",
+        "timestamp": 674.193078
+      }
+    },
+    {
+      "id": "gap-197",
+      "first": {
+        "name": "frame_011526.jpg",
+        "timestamp": 674.393411
+      },
+      "last": {
+        "name": "frame_011526.jpg",
+        "timestamp": 674.393411
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011525.jpg",
+        "timestamp": 674.353344
+      },
+      "after": {
+        "name": "frame_011527.jpg",
+        "timestamp": 674.433478
+      },
+      "midpoint": {
+        "name": "frame_011526.jpg",
+        "timestamp": 674.393411
+      }
+    },
+    {
+      "id": "gap-198",
+      "first": {
+        "name": "frame_011593.jpg",
+        "timestamp": 677.746078
+      },
+      "last": {
+        "name": "frame_011593.jpg",
+        "timestamp": 677.746078
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011592.jpg",
+        "timestamp": 677.679422
+      },
+      "after": {
+        "name": "frame_011594.jpg",
+        "timestamp": 677.812744
+      },
+      "midpoint": {
+        "name": "frame_011593.jpg",
+        "timestamp": 677.746078
+      }
+    },
+    {
+      "id": "gap-199",
+      "first": {
+        "name": "frame_011595.jpg",
+        "timestamp": 677.879411
+      },
+      "last": {
+        "name": "frame_011601.jpg",
+        "timestamp": 678.279411
+      },
+      "missing_frames": 7,
+      "sampled_span_seconds": 0.39999999999997726,
+      "before": {
+        "name": "frame_011594.jpg",
+        "timestamp": 677.812744
+      },
+      "after": {
+        "name": "frame_011602.jpg",
+        "timestamp": 678.346078
+      },
+      "midpoint": {
+        "name": "frame_011598.jpg",
+        "timestamp": 678.079411
+      }
+    },
+    {
+      "id": "gap-200",
+      "first": {
+        "name": "frame_011714.jpg",
+        "timestamp": 684.951367
+      },
+      "last": {
+        "name": "frame_011714.jpg",
+        "timestamp": 684.951367
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011713.jpg",
+        "timestamp": 684.9113
+      },
+      "after": {
+        "name": "frame_011715.jpg",
+        "timestamp": 684.991433
+      },
+      "midpoint": {
+        "name": "frame_011714.jpg",
+        "timestamp": 684.951367
+      }
+    },
+    {
+      "id": "gap-201",
+      "first": {
+        "name": "frame_011717.jpg",
+        "timestamp": 685.071567
+      },
+      "last": {
+        "name": "frame_011717.jpg",
+        "timestamp": 685.071567
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011716.jpg",
+        "timestamp": 685.0315
+      },
+      "after": {
+        "name": "frame_011718.jpg",
+        "timestamp": 685.111633
+      },
+      "midpoint": {
+        "name": "frame_011717.jpg",
+        "timestamp": 685.071567
+      }
+    },
+    {
+      "id": "gap-202",
+      "first": {
+        "name": "frame_011735.jpg",
+        "timestamp": 685.792767
+      },
+      "last": {
+        "name": "frame_011736.jpg",
+        "timestamp": 685.832833
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.04006600000002436,
+      "before": {
+        "name": "frame_011734.jpg",
+        "timestamp": 685.7527
+      },
+      "after": {
+        "name": "frame_011737.jpg",
+        "timestamp": 685.8729
+      },
+      "midpoint": {
+        "name": "frame_011735.jpg",
+        "timestamp": 685.792767
+      }
+    },
+    {
+      "id": "gap-203",
+      "first": {
+        "name": "frame_011738.jpg",
+        "timestamp": 685.912967
+      },
+      "last": {
+        "name": "frame_011739.jpg",
+        "timestamp": 685.953033
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.04006600000002436,
+      "before": {
+        "name": "frame_011737.jpg",
+        "timestamp": 685.8729
+      },
+      "after": {
+        "name": "frame_011740.jpg",
+        "timestamp": 685.9931
+      },
+      "midpoint": {
+        "name": "frame_011738.jpg",
+        "timestamp": 685.912967
+      }
+    },
+    {
+      "id": "gap-204",
+      "first": {
+        "name": "frame_011741.jpg",
+        "timestamp": 686.033167
+      },
+      "last": {
+        "name": "frame_011783.jpg",
+        "timestamp": 687.765967
+      },
+      "missing_frames": 43,
+      "sampled_span_seconds": 1.7327999999999975,
+      "before": {
+        "name": "frame_011740.jpg",
+        "timestamp": 685.9931
+      },
+      "after": {
+        "name": "frame_011784.jpg",
+        "timestamp": 687.836033
+      },
+      "midpoint": {
+        "name": "frame_011762.jpg",
+        "timestamp": 686.874567
+      }
+    },
+    {
+      "id": "gap-205",
+      "first": {
+        "name": "frame_011785.jpg",
+        "timestamp": 687.9061
+      },
+      "last": {
+        "name": "frame_011785.jpg",
+        "timestamp": 687.9061
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011784.jpg",
+        "timestamp": 687.836033
+      },
+      "after": {
+        "name": "frame_011786.jpg",
+        "timestamp": 687.976167
+      },
+      "midpoint": {
+        "name": "frame_011785.jpg",
+        "timestamp": 687.9061
+      }
+    },
+    {
+      "id": "gap-206",
+      "first": {
+        "name": "frame_011812.jpg",
+        "timestamp": 689.127933
+      },
+      "last": {
+        "name": "frame_011822.jpg",
+        "timestamp": 689.5286
+      },
+      "missing_frames": 11,
+      "sampled_span_seconds": 0.40066699999999855,
+      "before": {
+        "name": "frame_011811.jpg",
+        "timestamp": 689.087867
+      },
+      "after": {
+        "name": "frame_011823.jpg",
+        "timestamp": 689.568667
+      },
+      "midpoint": {
+        "name": "frame_011817.jpg",
+        "timestamp": 689.328267
+      }
+    },
+    {
+      "id": "gap-207",
+      "first": {
+        "name": "frame_011824.jpg",
+        "timestamp": 689.608733
+      },
+      "last": {
+        "name": "frame_011824.jpg",
+        "timestamp": 689.608733
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011823.jpg",
+        "timestamp": 689.568667
+      },
+      "after": {
+        "name": "frame_011825.jpg",
+        "timestamp": 689.6488
+      },
+      "midpoint": {
+        "name": "frame_011824.jpg",
+        "timestamp": 689.608733
+      }
+    },
+    {
+      "id": "gap-208",
+      "first": {
+        "name": "frame_011827.jpg",
+        "timestamp": 689.728933
+      },
+      "last": {
+        "name": "frame_011827.jpg",
+        "timestamp": 689.728933
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011826.jpg",
+        "timestamp": 689.688867
+      },
+      "after": {
+        "name": "frame_011828.jpg",
+        "timestamp": 689.769
+      },
+      "midpoint": {
+        "name": "frame_011827.jpg",
+        "timestamp": 689.728933
+      }
+    },
+    {
+      "id": "gap-209",
+      "first": {
+        "name": "frame_011864.jpg",
+        "timestamp": 691.411533
+      },
+      "last": {
+        "name": "frame_011872.jpg",
+        "timestamp": 691.812122
+      },
+      "missing_frames": 9,
+      "sampled_span_seconds": 0.4005890000000818,
+      "before": {
+        "name": "frame_011863.jpg",
+        "timestamp": 691.361467
+      },
+      "after": {
+        "name": "frame_011873.jpg",
+        "timestamp": 691.8622
+      },
+      "midpoint": {
+        "name": "frame_011868.jpg",
+        "timestamp": 691.611833
+      }
+    },
+    {
+      "id": "gap-210",
+      "first": {
+        "name": "frame_011940.jpg",
+        "timestamp": 695.267111
+      },
+      "last": {
+        "name": "frame_011940.jpg",
+        "timestamp": 695.267111
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_011939.jpg",
+        "timestamp": 695.207033
+      },
+      "after": {
+        "name": "frame_011941.jpg",
+        "timestamp": 695.327178
+      },
+      "midpoint": {
+        "name": "frame_011940.jpg",
+        "timestamp": 695.267111
+      }
+    },
+    {
+      "id": "gap-211",
+      "first": {
+        "name": "frame_011942.jpg",
+        "timestamp": 695.387244
+      },
+      "last": {
+        "name": "frame_011952.jpg",
+        "timestamp": 695.947967
+      },
+      "missing_frames": 11,
+      "sampled_span_seconds": 0.560722999999939,
+      "before": {
+        "name": "frame_011941.jpg",
+        "timestamp": 695.327178
+      },
+      "after": {
+        "name": "frame_011953.jpg",
+        "timestamp": 695.998033
+      },
+      "midpoint": {
+        "name": "frame_011947.jpg",
+        "timestamp": 695.6876
+      }
+    },
+    {
+      "id": "gap-212",
+      "first": {
+        "name": "frame_011954.jpg",
+        "timestamp": 696.048111
+      },
+      "last": {
+        "name": "frame_011955.jpg",
+        "timestamp": 696.098178
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.05006700000001274,
+      "before": {
+        "name": "frame_011953.jpg",
+        "timestamp": 695.998033
+      },
+      "after": {
+        "name": "frame_011956.jpg",
+        "timestamp": 696.148256
+      },
+      "midpoint": {
+        "name": "frame_011954.jpg",
+        "timestamp": 696.048111
+      }
+    },
+    {
+      "id": "gap-213",
+      "first": {
+        "name": "frame_012187.jpg",
+        "timestamp": 706.9247
+      },
+      "last": {
+        "name": "frame_012187.jpg",
+        "timestamp": 706.9247
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_012186.jpg",
+        "timestamp": 706.874622
+      },
+      "after": {
+        "name": "frame_012188.jpg",
+        "timestamp": 706.974767
+      },
+      "midpoint": {
+        "name": "frame_012187.jpg",
+        "timestamp": 706.9247
+      }
+    },
+    {
+      "id": "gap-214",
+      "first": {
+        "name": "frame_012197.jpg",
+        "timestamp": 707.425433
+      },
+      "last": {
+        "name": "frame_012197.jpg",
+        "timestamp": 707.425433
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_012196.jpg",
+        "timestamp": 707.375356
+      },
+      "after": {
+        "name": "frame_012198.jpg",
+        "timestamp": 707.4755
+      },
+      "midpoint": {
+        "name": "frame_012197.jpg",
+        "timestamp": 707.425433
+      }
+    },
+    {
+      "id": "gap-215",
+      "first": {
+        "name": "frame_012216.jpg",
+        "timestamp": 708.316789
+      },
+      "last": {
+        "name": "frame_012247.jpg",
+        "timestamp": 709.708956
+      },
+      "missing_frames": 32,
+      "sampled_span_seconds": 1.3921669999999722,
+      "before": {
+        "name": "frame_012215.jpg",
+        "timestamp": 708.276722
+      },
+      "after": {
+        "name": "frame_012248.jpg",
+        "timestamp": 709.759022
+      },
+      "midpoint": {
+        "name": "frame_012231.jpg",
+        "timestamp": 708.967822
+      }
+    },
+    {
+      "id": "gap-216",
+      "first": {
+        "name": "frame_012262.jpg",
+        "timestamp": 710.460056
+      },
+      "last": {
+        "name": "frame_012264.jpg",
+        "timestamp": 710.5602
+      },
+      "missing_frames": 3,
+      "sampled_span_seconds": 0.10014400000000023,
+      "before": {
+        "name": "frame_012261.jpg",
+        "timestamp": 710.409978
+      },
+      "after": {
+        "name": "frame_012265.jpg",
+        "timestamp": 710.610267
+      },
+      "midpoint": {
+        "name": "frame_012263.jpg",
+        "timestamp": 710.510122
+      }
+    },
+    {
+      "id": "gap-217",
+      "first": {
+        "name": "frame_012322.jpg",
+        "timestamp": 713.464456
+      },
+      "last": {
+        "name": "frame_012345.jpg",
+        "timestamp": 714.696122
+      },
+      "missing_frames": 24,
+      "sampled_span_seconds": 1.2316659999999047,
+      "before": {
+        "name": "frame_012321.jpg",
+        "timestamp": 713.414378
+      },
+      "after": {
+        "name": "frame_012346.jpg",
+        "timestamp": 714.7462
+      },
+      "midpoint": {
+        "name": "frame_012333.jpg",
+        "timestamp": 714.035256
+      }
+    },
+    {
+      "id": "gap-218",
+      "first": {
+        "name": "frame_012347.jpg",
+        "timestamp": 714.796267
+      },
+      "last": {
+        "name": "frame_012350.jpg",
+        "timestamp": 714.946489
+      },
+      "missing_frames": 4,
+      "sampled_span_seconds": 0.1502220000000989,
+      "before": {
+        "name": "frame_012346.jpg",
+        "timestamp": 714.7462
+      },
+      "after": {
+        "name": "frame_012351.jpg",
+        "timestamp": 715.006556
+      },
+      "midpoint": {
+        "name": "frame_012348.jpg",
+        "timestamp": 714.846344
+      }
+    },
+    {
+      "id": "gap-219",
+      "first": {
+        "name": "frame_012381.jpg",
+        "timestamp": 716.808667
+      },
+      "last": {
+        "name": "frame_012381.jpg",
+        "timestamp": 716.808667
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_012380.jpg",
+        "timestamp": 716.748589
+      },
+      "after": {
+        "name": "frame_012382.jpg",
+        "timestamp": 716.868733
+      },
+      "midpoint": {
+        "name": "frame_012381.jpg",
+        "timestamp": 716.808667
+      }
+    },
+    {
+      "id": "gap-220",
+      "first": {
+        "name": "frame_012383.jpg",
+        "timestamp": 716.9288
+      },
+      "last": {
+        "name": "frame_012414.jpg",
+        "timestamp": 719.070867
+      },
+      "missing_frames": 32,
+      "sampled_span_seconds": 2.1420669999999973,
+      "before": {
+        "name": "frame_012382.jpg",
+        "timestamp": 716.868733
+      },
+      "after": {
+        "name": "frame_012415.jpg",
+        "timestamp": 719.140933
+      },
+      "midpoint": {
+        "name": "frame_012398.jpg",
+        "timestamp": 717.9498
+      }
+    },
+    {
+      "id": "gap-221",
+      "first": {
+        "name": "frame_012453.jpg",
+        "timestamp": 721.083611
+      },
+      "last": {
+        "name": "frame_012495.jpg",
+        "timestamp": 723.076611
+      },
+      "missing_frames": 43,
+      "sampled_span_seconds": 1.9929999999999382,
+      "before": {
+        "name": "frame_012452.jpg",
+        "timestamp": 721.043544
+      },
+      "after": {
+        "name": "frame_012496.jpg",
+        "timestamp": 723.116678
+      },
+      "midpoint": {
+        "name": "frame_012474.jpg",
+        "timestamp": 722.095122
+      }
+    },
+    {
+      "id": "gap-222",
+      "first": {
+        "name": "frame_012503.jpg",
+        "timestamp": 723.397144
+      },
+      "last": {
+        "name": "frame_012504.jpg",
+        "timestamp": 723.437211
+      },
+      "missing_frames": 2,
+      "sampled_span_seconds": 0.040067000000021835,
+      "before": {
+        "name": "frame_012502.jpg",
+        "timestamp": 723.357078
+      },
+      "after": {
+        "name": "frame_012505.jpg",
+        "timestamp": 723.477289
+      },
+      "midpoint": {
+        "name": "frame_012503.jpg",
+        "timestamp": 723.397144
+      }
+    },
+    {
+      "id": "gap-223",
+      "first": {
+        "name": "frame_012506.jpg",
+        "timestamp": 723.517344
+      },
+      "last": {
+        "name": "frame_012506.jpg",
+        "timestamp": 723.517344
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_012505.jpg",
+        "timestamp": 723.477289
+      },
+      "after": {
+        "name": "frame_012507.jpg",
+        "timestamp": 723.557411
+      },
+      "midpoint": {
+        "name": "frame_012506.jpg",
+        "timestamp": 723.517344
+      }
+    },
+    {
+      "id": "gap-224",
+      "first": {
+        "name": "frame_012518.jpg",
+        "timestamp": 723.998156
+      },
+      "last": {
+        "name": "frame_012518.jpg",
+        "timestamp": 723.998156
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_012517.jpg",
+        "timestamp": 723.958089
+      },
+      "after": {
+        "name": "frame_012519.jpg",
+        "timestamp": 724.038211
+      },
+      "midpoint": {
+        "name": "frame_012518.jpg",
+        "timestamp": 723.998156
+      }
+    },
+    {
+      "id": "gap-225",
+      "first": {
+        "name": "frame_012572.jpg",
+        "timestamp": 726.161756
+      },
+      "last": {
+        "name": "frame_012583.jpg",
+        "timestamp": 726.642511
+      },
+      "missing_frames": 12,
+      "sampled_span_seconds": 0.4807550000000447,
+      "before": {
+        "name": "frame_012571.jpg",
+        "timestamp": 726.121689
+      },
+      "after": {
+        "name": "frame_012584.jpg",
+        "timestamp": 726.692589
+      },
+      "midpoint": {
+        "name": "frame_012577.jpg",
+        "timestamp": 726.362089
+      }
+    },
+    {
+      "id": "gap-226",
+      "first": {
+        "name": "frame_012612.jpg",
+        "timestamp": 727.914522
+      },
+      "last": {
+        "name": "frame_012623.jpg",
+        "timestamp": 728.355256
+      },
+      "missing_frames": 12,
+      "sampled_span_seconds": 0.4407340000000204,
+      "before": {
+        "name": "frame_012611.jpg",
+        "timestamp": 727.874456
+      },
+      "after": {
+        "name": "frame_012624.jpg",
+        "timestamp": 728.395322
+      },
+      "midpoint": {
+        "name": "frame_012617.jpg",
+        "timestamp": 728.114856
+      }
+    },
+    {
+      "id": "gap-227",
+      "first": {
+        "name": "frame_012657.jpg",
+        "timestamp": 730.226133
+      },
+      "last": {
+        "name": "frame_012657.jpg",
+        "timestamp": 730.226133
+      },
+      "missing_frames": 1,
+      "sampled_span_seconds": 0.0,
+      "before": {
+        "name": "frame_012656.jpg",
+        "timestamp": 730.159478
+      },
+      "after": {
+        "name": "frame_012658.jpg",
+        "timestamp": 730.2928
+      },
+      "midpoint": {
+        "name": "frame_012657.jpg",
+        "timestamp": 730.226133
+      }
+    },
+    {
+      "id": "gap-228",
+      "first": {
+        "name": "frame_012670.jpg",
+        "timestamp": 731.092778
+      },
+      "last": {
+        "name": "frame_012716.jpg",
+        "timestamp": 733.521856
+      },
+      "missing_frames": 47,
+      "sampled_span_seconds": 2.429078000000004,
+      "before": {
+        "name": "frame_012669.jpg",
+        "timestamp": 731.026111
+      },
+      "after": {
+        "name": "frame_012717.jpg",
+        "timestamp": 733.561922
+      },
+      "midpoint": {
+        "name": "frame_012693.jpg",
+        "timestamp": 732.550233
+      }
+    },
+    {
+      "id": "gap-229",
+      "first": {
+        "name": "frame_012751.jpg",
+        "timestamp": 734.954211
+      },
+      "last": {
+        "name": "frame_012793.jpg",
+        "timestamp": 737.247122
+      },
+      "missing_frames": 43,
+      "sampled_span_seconds": 2.2929110000000037,
+      "before": {
+        "name": "frame_012750.jpg",
+        "timestamp": 734.904133
+      },
+      "after": null,
+      "midpoint": {
+        "name": "frame_012772.jpg",
+        "timestamp": 736.1157
+      }
+    }
+  ],
+  "experiment_gap_ids": [
+    "gap-007",
+    "gap-009",
+    "gap-011",
+    "gap-021",
+    "gap-031",
+    "gap-033",
+    "gap-034",
+    "gap-044",
+    "gap-047",
+    "gap-050",
+    "gap-051",
+    "gap-059",
+    "gap-067",
+    "gap-071",
+    "gap-081",
+    "gap-084",
+    "gap-085",
+    "gap-098",
+    "gap-101",
+    "gap-103",
+    "gap-111",
+    "gap-117",
+    "gap-118",
+    "gap-125",
+    "gap-128",
+    "gap-131",
+    "gap-135",
+    "gap-137",
+    "gap-144",
+    "gap-150",
+    "gap-151",
+    "gap-153",
+    "gap-154",
+    "gap-157",
+    "gap-159",
+    "gap-169",
+    "gap-177",
+    "gap-183",
+    "gap-188",
+    "gap-191",
+    "gap-204",
+    "gap-215",
+    "gap-217",
+    "gap-220",
+    "gap-221",
+    "gap-228",
+    "gap-229"
+  ],
+  "unsupported_adjacent_transitions": [
+    {
+      "before": {
+        "name": "frame_000407.jpg",
+        "timestamp": 27.0157
+      },
+      "after": {
+        "name": "frame_000409.jpg",
+        "timestamp": 27.148633
+      },
+      "components_before": [
+        "4ad9dc0c1773ab54",
+        "c7e321573a1c343b"
+      ],
+      "components_after": [
+        "08bbaddfe5bc1fed",
+        "9065166282f53f33"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001043.jpg",
+        "timestamp": 69.343656
+      },
+      "after": {
+        "name": "frame_001049.jpg",
+        "timestamp": 69.733633
+      },
+      "components_before": [
+        "995b0be444be96be",
+        "f94fb3a229ce1c73"
+      ],
+      "components_after": [
+        "36d1a2297917d036",
+        "e1cea1297ffa49b9",
+        "e8cbf0be6e420c6c"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001406.jpg",
+        "timestamp": 93.542356
+      },
+      "after": {
+        "name": "frame_001415.jpg",
+        "timestamp": 94.108767
+      },
+      "components_before": [
+        "36b9620eae3b9e29",
+        "e8cbf0be6e420c6c"
+      ],
+      "components_after": [
+        "66cdc0d763be9e81"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001464.jpg",
+        "timestamp": 97.308489
+      },
+      "after": {
+        "name": "frame_001487.jpg",
+        "timestamp": 98.7551
+      },
+      "components_before": [
+        "69ec407b0e21116a"
+      ],
+      "components_after": [
+        "d123d4d0e7cc9d89"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001529.jpg",
+        "timestamp": 101.4822
+      },
+      "after": {
+        "name": "frame_001538.jpg",
+        "timestamp": 102.054989
+      },
+      "components_before": [
+        "928272317bf8706e",
+        "d123d4d0e7cc9d89"
+      ],
+      "components_after": [
+        "02db4c14005bf032",
+        "3daeace60873785d"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001660.jpg",
+        "timestamp": 110.131167
+      },
+      "after": {
+        "name": "frame_001715.jpg",
+        "timestamp": 113.754367
+      },
+      "components_before": [
+        "02db4c14005bf032"
+      ],
+      "components_after": [
+        "474c06f3c136421b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001736.jpg",
+        "timestamp": 115.120989
+      },
+      "after": {
+        "name": "frame_001771.jpg",
+        "timestamp": 117.410911
+      },
+      "components_before": [
+        "474c06f3c136421b"
+      ],
+      "components_after": [
+        "a831f2115ec6164b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_001917.jpg",
+        "timestamp": 127.131689
+      },
+      "after": {
+        "name": "frame_001919.jpg",
+        "timestamp": 127.264144
+      },
+      "components_before": [
+        "a831f2115ec6164b",
+        "f495020ae24344d3"
+      ],
+      "components_after": [
+        "12f413270fb37ca4",
+        "3704071b8bab002c"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_002057.jpg",
+        "timestamp": 136.330889
+      },
+      "after": {
+        "name": "frame_002064.jpg",
+        "timestamp": 136.777533
+      },
+      "components_before": [
+        "12f413270fb37ca4"
+      ],
+      "components_after": [
+        "6deb698bd2335e70",
+        "d70514268da00728"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_002792.jpg",
+        "timestamp": 185.195567
+      },
+      "after": {
+        "name": "frame_002809.jpg",
+        "timestamp": 186.2622
+      },
+      "components_before": [
+        "30f51bc34902b226",
+        "6c04a624830836e8"
+      ],
+      "components_after": [
+        "35730ed6893f800a",
+        "88b7933cdb8dfb8b",
+        "ad2074d6e6e51c50",
+        "c47b3420830ebbe1"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_003892.jpg",
+        "timestamp": 258.393389
+      },
+      "after": {
+        "name": "frame_003894.jpg",
+        "timestamp": 258.516711
+      },
+      "components_before": [
+        "0fe70058f5e24dfb"
+      ],
+      "components_after": [
+        "a87836c23aa01ef2"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_003919.jpg",
+        "timestamp": 260.1969
+      },
+      "after": {
+        "name": "frame_003931.jpg",
+        "timestamp": 260.959967
+      },
+      "components_before": [
+        "a87836c23aa01ef2"
+      ],
+      "components_after": [
+        "0fe70058f5e24dfb"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_003977.jpg",
+        "timestamp": 264.016522
+      },
+      "after": {
+        "name": "frame_003993.jpg",
+        "timestamp": 264.886967
+      },
+      "components_before": [
+        "6cb16866ce09fe11",
+        "ceb01f0b92ed32f2"
+      ],
+      "components_after": [
+        "2b645d2a888fbe6c",
+        "9bd1ff3652321fd9"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004098.jpg",
+        "timestamp": 271.808144
+      },
+      "after": {
+        "name": "frame_004118.jpg",
+        "timestamp": 273.097211
+      },
+      "components_before": [
+        "9bd1ff3652321fd9",
+        "b7ef9c1589d48e3d"
+      ],
+      "components_after": [
+        "abfe96b61cfc529c"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004138.jpg",
+        "timestamp": 274.4205
+      },
+      "after": {
+        "name": "frame_004169.jpg",
+        "timestamp": 276.294178
+      },
+      "components_before": [
+        "abfe96b61cfc529c"
+      ],
+      "components_after": [
+        "9e0794a70eb857a2"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004207.jpg",
+        "timestamp": 278.744378
+      },
+      "after": {
+        "name": "frame_004389.jpg",
+        "timestamp": 290.083044
+      },
+      "components_before": [
+        "9e0794a70eb857a2"
+      ],
+      "components_after": [
+        "38f2f0f96eb6e2dd"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004433.jpg",
+        "timestamp": 293.086011
+      },
+      "after": {
+        "name": "frame_004436.jpg",
+        "timestamp": 293.296211
+      },
+      "components_before": [
+        "38f2f0f96eb6e2dd"
+      ],
+      "components_after": [
+        "02d5fbe398fceb6c"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004541.jpg",
+        "timestamp": 299.703522
+      },
+      "after": {
+        "name": "frame_004636.jpg",
+        "timestamp": 306.289889
+      },
+      "components_before": [
+        "18de3cc273c6fa10"
+      ],
+      "components_after": [
+        "7bc89c31bd31a1d6",
+        "8ab5424d9b7a7ff7"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004664.jpg",
+        "timestamp": 307.901867
+      },
+      "after": {
+        "name": "frame_004683.jpg",
+        "timestamp": 309.093178
+      },
+      "components_before": [
+        "7bc89c31bd31a1d6",
+        "8ab5424d9b7a7ff7"
+      ],
+      "components_after": [
+        "e4245d95cf2cbc1d"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004711.jpg",
+        "timestamp": 310.565211
+      },
+      "after": {
+        "name": "frame_004760.jpg",
+        "timestamp": 313.478656
+      },
+      "components_before": [
+        "e4245d95cf2cbc1d"
+      ],
+      "components_after": [
+        "b9b178c66ea91db1"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004897.jpg",
+        "timestamp": 320.318644
+      },
+      "after": {
+        "name": "frame_004920.jpg",
+        "timestamp": 321.510289
+      },
+      "components_before": [
+        "b9b178c66ea91db1"
+      ],
+      "components_after": [
+        "8e2ea1c491f111eb"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_004970.jpg",
+        "timestamp": 324.113922
+      },
+      "after": {
+        "name": "frame_004984.jpg",
+        "timestamp": 324.854933
+      },
+      "components_before": [
+        "8e2ea1c491f111eb",
+        "b1f911d68d7900d7"
+      ],
+      "components_after": [
+        "5e4f720676a3bab1",
+        "7ab5e73172f28090"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005050.jpg",
+        "timestamp": 328.159778
+      },
+      "after": {
+        "name": "frame_005077.jpg",
+        "timestamp": 329.511756
+      },
+      "components_before": [
+        "5e4f720676a3bab1",
+        "7ab5e73172f28090"
+      ],
+      "components_after": [
+        "58685f1684531306"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005152.jpg",
+        "timestamp": 333.607144
+      },
+      "after": {
+        "name": "frame_005162.jpg",
+        "timestamp": 334.207844
+      },
+      "components_before": [
+        "58685f1684531306"
+      ],
+      "components_after": [
+        "3fc22e6a2b338a47",
+        "4573968b1e567b27"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005315.jpg",
+        "timestamp": 341.4788
+      },
+      "after": {
+        "name": "frame_005401.jpg",
+        "timestamp": 346.174844
+      },
+      "components_before": [
+        "3fc22e6a2b338a47",
+        "4573968b1e567b27",
+        "5f33b9a35bc14e3a"
+      ],
+      "components_after": [
+        "294fc93b0fef1529",
+        "9951cd54737e2254"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005528.jpg",
+        "timestamp": 351.873678
+      },
+      "after": {
+        "name": "frame_005534.jpg",
+        "timestamp": 352.174122
+      },
+      "components_before": [
+        "100cd2621efafadc"
+      ],
+      "components_after": [
+        "88cdb1e1f9fb8fba"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005599.jpg",
+        "timestamp": 355.348844
+      },
+      "after": {
+        "name": "frame_005650.jpg",
+        "timestamp": 358.242389
+      },
+      "components_before": [
+        "88cdb1e1f9fb8fba"
+      ],
+      "components_after": [
+        "9b9cc05d070aa1a2"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005788.jpg",
+        "timestamp": 365.8323
+      },
+      "after": {
+        "name": "frame_005871.jpg",
+        "timestamp": 371.597844
+      },
+      "components_before": [
+        "16169c9855a0cd45"
+      ],
+      "components_after": [
+        "76281a4085b4c346"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_005909.jpg",
+        "timestamp": 374.260378
+      },
+      "after": {
+        "name": "frame_005999.jpg",
+        "timestamp": 380.566389
+      },
+      "components_before": [
+        "76281a4085b4c346"
+      ],
+      "components_after": [
+        "7438c3a41bd7c30b",
+        "a54f6b0011215a98"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_006023.jpg",
+        "timestamp": 382.248011
+      },
+      "after": {
+        "name": "frame_006300.jpg",
+        "timestamp": 401.476533
+      },
+      "components_before": [
+        "7438c3a41bd7c30b",
+        "a54f6b0011215a98"
+      ],
+      "components_after": [
+        "90ca6ac42755960b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_006383.jpg",
+        "timestamp": 406.5923
+      },
+      "after": {
+        "name": "frame_006390.jpg",
+        "timestamp": 406.952811
+      },
+      "components_before": [
+        "df558f29b89038f5"
+      ],
+      "components_after": [
+        "d1c131e9b3ac8528"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_006492.jpg",
+        "timestamp": 412.230244
+      },
+      "after": {
+        "name": "frame_006531.jpg",
+        "timestamp": 414.562967
+      },
+      "components_before": [
+        "cbc3a19f69fce48a"
+      ],
+      "components_after": [
+        "0bc7a95fc61b9c4c",
+        "48ac33abf7790e63"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_006805.jpg",
+        "timestamp": 429.222356
+      },
+      "after": {
+        "name": "frame_006864.jpg",
+        "timestamp": 432.286633
+      },
+      "components_before": [
+        "857cbe29ce1f9096",
+        "cf2b9a1784c80409",
+        "f17e86ace29c3c66"
+      ],
+      "components_after": [
+        "94b7707ff16b3b09"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_006975.jpg",
+        "timestamp": 438.584522
+      },
+      "after": {
+        "name": "frame_007112.jpg",
+        "timestamp": 446.644189
+      },
+      "components_before": [
+        "47d258b755c6eae6"
+      ],
+      "components_after": [
+        "0cf8032ba7cd6e89",
+        "6dfc8125cc1aa344"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007161.jpg",
+        "timestamp": 449.167767
+      },
+      "after": {
+        "name": "frame_007176.jpg",
+        "timestamp": 449.978856
+      },
+      "components_before": [
+        "0cf8032ba7cd6e89",
+        "6dfc8125cc1aa344"
+      ],
+      "components_after": [
+        "99c7fabeb054f59b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007206.jpg",
+        "timestamp": 451.481056
+      },
+      "after": {
+        "name": "frame_007210.jpg",
+        "timestamp": 451.681344
+      },
+      "components_before": [
+        "99c7fabeb054f59b"
+      ],
+      "components_after": [
+        "d00e5842959a5764"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007230.jpg",
+        "timestamp": 452.652789
+      },
+      "after": {
+        "name": "frame_007283.jpg",
+        "timestamp": 455.816511
+      },
+      "components_before": [
+        "d00e5842959a5764"
+      ],
+      "components_after": [
+        "0c56d8692ec5efd9",
+        "786b2cf81c4b0f7f"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007513.jpg",
+        "timestamp": 468.782889
+      },
+      "after": {
+        "name": "frame_007536.jpg",
+        "timestamp": 470.184489
+      },
+      "components_before": [
+        "0c56d8692ec5efd9",
+        "786b2cf81c4b0f7f",
+        "bcc1c5ef35ee2103"
+      ],
+      "components_after": [
+        "cbf441c74d984dbb"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007596.jpg",
+        "timestamp": 472.948689
+      },
+      "after": {
+        "name": "frame_007672.jpg",
+        "timestamp": 477.983856
+      },
+      "components_before": [
+        "cbf441c74d984dbb"
+      ],
+      "components_after": [
+        "6b26024b3aa30e2b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007776.jpg",
+        "timestamp": 485.270789
+      },
+      "after": {
+        "name": "frame_007794.jpg",
+        "timestamp": 486.531989
+      },
+      "components_before": [
+        "2f99e6d2efe98107",
+        "6b26024b3aa30e2b"
+      ],
+      "components_after": [
+        "96f366b1b88b7b5f"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007817.jpg",
+        "timestamp": 488.143522
+      },
+      "after": {
+        "name": "frame_007943.jpg",
+        "timestamp": 496.412122
+      },
+      "components_before": [
+        "96f366b1b88b7b5f"
+      ],
+      "components_after": [
+        "ce4e01b9c025704a"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_007981.jpg",
+        "timestamp": 498.664789
+      },
+      "after": {
+        "name": "frame_008135.jpg",
+        "timestamp": 507.935511
+      },
+      "components_before": [
+        "ce4e01b9c025704a"
+      ],
+      "components_after": [
+        "cb8e1e2e0df8b6db",
+        "d42d6de04e70895e"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008224.jpg",
+        "timestamp": 512.211933
+      },
+      "after": {
+        "name": "frame_008255.jpg",
+        "timestamp": 513.637389
+      },
+      "components_before": [
+        "bba64ed047837f8f"
+      ],
+      "components_after": [
+        "b96322e492d3f58b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008279.jpg",
+        "timestamp": 515.190667
+      },
+      "after": {
+        "name": "frame_008298.jpg",
+        "timestamp": 516.148189
+      },
+      "components_before": [
+        "b96322e492d3f58b"
+      ],
+      "components_after": [
+        "c20e488e7b09fbec"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008318.jpg",
+        "timestamp": 516.949522
+      },
+      "after": {
+        "name": "frame_008422.jpg",
+        "timestamp": 521.172911
+      },
+      "components_before": [
+        "c20e488e7b09fbec"
+      ],
+      "components_after": [
+        "13c19b6d7306a2d7",
+        "5331f03101ad8379",
+        "c8c211093a341530"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008592.jpg",
+        "timestamp": 532.530367
+      },
+      "after": {
+        "name": "frame_008608.jpg",
+        "timestamp": 533.546944
+      },
+      "components_before": [
+        "265d3aaa400b30bf"
+      ],
+      "components_after": [
+        "13c19b6d7306a2d7",
+        "bc2e1094ac6d2632",
+        "c8c211093a341530"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008717.jpg",
+        "timestamp": 540.746744
+      },
+      "after": {
+        "name": "frame_008720.jpg",
+        "timestamp": 540.946744
+      },
+      "components_before": [
+        "243fb5c3b3597ff4"
+      ],
+      "components_after": [
+        "3326e7d9dd21dc7e"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008757.jpg",
+        "timestamp": 542.459278
+      },
+      "after": {
+        "name": "frame_008781.jpg",
+        "timestamp": 543.4509
+      },
+      "components_before": [
+        "a52f9e1b572150ab"
+      ],
+      "components_after": [
+        "670d0ba80ae8f584"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_008959.jpg",
+        "timestamp": 550.612789
+      },
+      "after": {
+        "name": "frame_008967.jpg",
+        "timestamp": 550.933322
+      },
+      "components_before": [
+        "c3b4f100aab09afc"
+      ],
+      "components_after": [
+        "f54b6aa7e614bdbc"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009017.jpg",
+        "timestamp": 552.936656
+      },
+      "after": {
+        "name": "frame_009056.jpg",
+        "timestamp": 554.679378
+      },
+      "components_before": [
+        "1aa286769465401b"
+      ],
+      "components_after": [
+        "7196a1c2cc7c240f"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009131.jpg",
+        "timestamp": 557.914533
+      },
+      "after": {
+        "name": "frame_009142.jpg",
+        "timestamp": 558.4453
+      },
+      "components_before": [
+        "7196a1c2cc7c240f"
+      ],
+      "components_after": [
+        "9d8e670709a1c301"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009170.jpg",
+        "timestamp": 560.057278
+      },
+      "after": {
+        "name": "frame_009207.jpg",
+        "timestamp": 562.369844
+      },
+      "components_before": [
+        "9d8e670709a1c301"
+      ],
+      "components_after": [
+        "0ee1c566a1689974",
+        "69c8829009c3a85e"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009239.jpg",
+        "timestamp": 564.611978
+      },
+      "after": {
+        "name": "frame_009264.jpg",
+        "timestamp": 566.163711
+      },
+      "components_before": [
+        "0ee1c566a1689974",
+        "69c8829009c3a85e"
+      ],
+      "components_after": [
+        "0c823cbee36e1409"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009295.jpg",
+        "timestamp": 568.165822
+      },
+      "after": {
+        "name": "frame_009320.jpg",
+        "timestamp": 569.917489
+      },
+      "components_before": [
+        "0c823cbee36e1409",
+        "17badf236a3b538c"
+      ],
+      "components_after": [
+        "e88420606fc80c6b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009377.jpg",
+        "timestamp": 572.331356
+      },
+      "after": {
+        "name": "frame_009405.jpg",
+        "timestamp": 573.493256
+      },
+      "components_before": [
+        "e88420606fc80c6b"
+      ],
+      "components_after": [
+        "1cdc906a00262037"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009426.jpg",
+        "timestamp": 574.744733
+      },
+      "after": {
+        "name": "frame_009446.jpg",
+        "timestamp": 575.906144
+      },
+      "components_before": [
+        "1cdc906a00262037"
+      ],
+      "components_after": [
+        "f09c4902618c3ba7"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009466.jpg",
+        "timestamp": 576.847533
+      },
+      "after": {
+        "name": "frame_009475.jpg",
+        "timestamp": 577.208133
+      },
+      "components_before": [
+        "f09c4902618c3ba7"
+      ],
+      "components_after": [
+        "a99a1a99a14fb546"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009552.jpg",
+        "timestamp": 580.293267
+      },
+      "after": {
+        "name": "frame_009583.jpg",
+        "timestamp": 581.7254
+      },
+      "components_before": [
+        "1be1fbada49f9854"
+      ],
+      "components_after": [
+        "0010d487d07dba76",
+        "cb726515159ab9b1"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009780.jpg",
+        "timestamp": 589.928733
+      },
+      "after": {
+        "name": "frame_009797.jpg",
+        "timestamp": 590.629889
+      },
+      "components_before": [
+        "756abbf9130f7170",
+        "cb726515159ab9b1"
+      ],
+      "components_after": [
+        "3d512b50d5aab54d",
+        "ad857ec7dcd9a11f"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_009980.jpg",
+        "timestamp": 597.962089
+      },
+      "after": {
+        "name": "frame_009981.jpg",
+        "timestamp": 598.002156
+      },
+      "components_before": [
+        "3d512b50d5aab54d",
+        "ad857ec7dcd9a11f"
+      ],
+      "components_after": [
+        "93132a6a193d8cfd"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010170.jpg",
+        "timestamp": 606.465111
+      },
+      "after": {
+        "name": "frame_010179.jpg",
+        "timestamp": 607.095711
+      },
+      "components_before": [
+        "3d512b50d5aab54d",
+        "ad857ec7dcd9a11f",
+        "e5407c65bcfcb373"
+      ],
+      "components_after": [
+        "4aac8bc2b3394b2f",
+        "c9531d33ef68601f"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010201.jpg",
+        "timestamp": 608.637178
+      },
+      "after": {
+        "name": "frame_010213.jpg",
+        "timestamp": 609.477978
+      },
+      "components_before": [
+        "4aac8bc2b3394b2f",
+        "c9531d33ef68601f"
+      ],
+      "components_after": [
+        "07d336c4ddbe3fe1"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010238.jpg",
+        "timestamp": 611.229644
+      },
+      "after": {
+        "name": "frame_010386.jpg",
+        "timestamp": 620.4199
+      },
+      "components_before": [
+        "07d336c4ddbe3fe1"
+      ],
+      "components_after": [
+        "dfb403f2f4a2e9a5"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010511.jpg",
+        "timestamp": 627.598333
+      },
+      "after": {
+        "name": "frame_010515.jpg",
+        "timestamp": 627.7586
+      },
+      "components_before": [
+        "d3d9b429d129ffd9",
+        "e6a2d4cc512b2844"
+      ],
+      "components_after": [
+        "566fb6b5bad7b045"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010602.jpg",
+        "timestamp": 631.384122
+      },
+      "after": {
+        "name": "frame_010612.jpg",
+        "timestamp": 631.784789
+      },
+      "components_before": [
+        "65fcf014512dbf18"
+      ],
+      "components_after": [
+        "b023d346eea43afc"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010631.jpg",
+        "timestamp": 632.546056
+      },
+      "after": {
+        "name": "frame_010756.jpg",
+        "timestamp": 640.264756
+      },
+      "components_before": [
+        "b023d346eea43afc"
+      ],
+      "components_after": [
+        "3f9515b46c590265",
+        "cf625017f10f0f4b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010782.jpg",
+        "timestamp": 641.559133
+      },
+      "after": {
+        "name": "frame_010784.jpg",
+        "timestamp": 641.692467
+      },
+      "components_before": [
+        "3f9515b46c590265",
+        "cf625017f10f0f4b"
+      ],
+      "components_after": [
+        "5f234064283011cd",
+        "b3feaac470042478"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010826.jpg",
+        "timestamp": 643.4518
+      },
+      "after": {
+        "name": "frame_010863.jpg",
+        "timestamp": 645.214333
+      },
+      "components_before": [
+        "5f234064283011cd",
+        "b3feaac470042478"
+      ],
+      "components_after": [
+        "26bef72a3e9148ba",
+        "88d2478ce726ca59"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010893.jpg",
+        "timestamp": 646.416333
+      },
+      "after": {
+        "name": "frame_010928.jpg",
+        "timestamp": 648.168744
+      },
+      "components_before": [
+        "88d2478ce726ca59"
+      ],
+      "components_after": [
+        "799d4debe03b99eb",
+        "bef7dd4cde4c92f6"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_010956.jpg",
+        "timestamp": 649.440656
+      },
+      "after": {
+        "name": "frame_010983.jpg",
+        "timestamp": 650.522456
+      },
+      "components_before": [
+        "799d4debe03b99eb",
+        "bef7dd4cde4c92f6"
+      ],
+      "components_after": [
+        "cbfa77ae77907ccf"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011045.jpg",
+        "timestamp": 653.006589
+      },
+      "after": {
+        "name": "frame_011046.jpg",
+        "timestamp": 653.046656
+      },
+      "components_before": [
+        "cbfa77ae77907ccf"
+      ],
+      "components_after": [
+        "67d94072d13f5d5c"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011223.jpg",
+        "timestamp": 661.317578
+      },
+      "after": {
+        "name": "frame_011239.jpg",
+        "timestamp": 662.168667
+      },
+      "components_before": [
+        "0012e38e37f5d065"
+      ],
+      "components_after": [
+        "581c0222d2d21569",
+        "9f8acc5d473626d6",
+        "dbc4cf81ec0f67cd"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011594.jpg",
+        "timestamp": 677.812744
+      },
+      "after": {
+        "name": "frame_011602.jpg",
+        "timestamp": 678.346078
+      },
+      "components_before": [
+        "581c0222d2d21569"
+      ],
+      "components_after": [
+        "df6641d9d200cea7"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011740.jpg",
+        "timestamp": 685.9931
+      },
+      "after": {
+        "name": "frame_011784.jpg",
+        "timestamp": 687.836033
+      },
+      "components_before": [
+        "4a0ebdd6dd71c789",
+        "df6641d9d200cea7"
+      ],
+      "components_after": [
+        "cb6418a94c01cef4",
+        "f81983a55232f79b"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011811.jpg",
+        "timestamp": 689.087867
+      },
+      "after": {
+        "name": "frame_011823.jpg",
+        "timestamp": 689.568667
+      },
+      "components_before": [
+        "cb6418a94c01cef4",
+        "f81983a55232f79b"
+      ],
+      "components_after": [
+        "c6a396447993ad3d"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011863.jpg",
+        "timestamp": 691.361467
+      },
+      "after": {
+        "name": "frame_011873.jpg",
+        "timestamp": 691.8622
+      },
+      "components_before": [
+        "c6a396447993ad3d"
+      ],
+      "components_after": [
+        "cb6418a94c01cef4"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_011941.jpg",
+        "timestamp": 695.327178
+      },
+      "after": {
+        "name": "frame_011953.jpg",
+        "timestamp": 695.998033
+      },
+      "components_before": [
+        "cb6418a94c01cef4"
+      ],
+      "components_after": [
+        "42efc2ded00da0e2",
+        "71ccb149bc997e2d"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012215.jpg",
+        "timestamp": 708.276722
+      },
+      "after": {
+        "name": "frame_012248.jpg",
+        "timestamp": 709.759022
+      },
+      "components_before": [
+        "1de090d0d08c9bb2",
+        "f400240974055601"
+      ],
+      "components_after": [
+        "afa5df49f34770db"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012321.jpg",
+        "timestamp": 713.414378
+      },
+      "after": {
+        "name": "frame_012346.jpg",
+        "timestamp": 714.7462
+      },
+      "components_before": [
+        "afa5df49f34770db"
+      ],
+      "components_after": [
+        "67ed4885b4d50148"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012382.jpg",
+        "timestamp": 716.868733
+      },
+      "after": {
+        "name": "frame_012415.jpg",
+        "timestamp": 719.140933
+      },
+      "components_before": [
+        "67ed4885b4d50148"
+      ],
+      "components_after": [
+        "6538036f0f67d7e0"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012452.jpg",
+        "timestamp": 721.043544
+      },
+      "after": {
+        "name": "frame_012496.jpg",
+        "timestamp": 723.116678
+      },
+      "components_before": [
+        "4cff96327cd7cd29",
+        "6538036f0f67d7e0"
+      ],
+      "components_after": [
+        "2bf95e5ea7da0e41",
+        "8b4c10068eac92d7"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012571.jpg",
+        "timestamp": 726.121689
+      },
+      "after": {
+        "name": "frame_012584.jpg",
+        "timestamp": 726.692589
+      },
+      "components_before": [
+        "2bf95e5ea7da0e41",
+        "8b4c10068eac92d7"
+      ],
+      "components_after": [
+        "b24a2b8c8a7e6aa2",
+        "eadb2b4dea77eb97"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012611.jpg",
+        "timestamp": 727.874456
+      },
+      "after": {
+        "name": "frame_012624.jpg",
+        "timestamp": 728.395322
+      },
+      "components_before": [
+        "b24a2b8c8a7e6aa2",
+        "eadb2b4dea77eb97"
+      ],
+      "components_after": [
+        "71d36dd9f1b7a459"
+      ]
+    },
+    {
+      "before": {
+        "name": "frame_012669.jpg",
+        "timestamp": 731.026111
+      },
+      "after": {
+        "name": "frame_012717.jpg",
+        "timestamp": 733.561922
+      },
+      "components_before": [
+        "71d36dd9f1b7a459"
+      ],
+      "components_after": [
+        "79febdee5d792992"
+      ]
+    }
+  ],
+  "minimum_gap_span_seconds": 1.0,
+  "warning": "Union of provisional camera models. Shared frames indicate overlap, not an accepted alignment. Missing-frame spans exclude the intervals to bounding observations.",
+  "input_sha256": {
+    "state": "4b638c6b0d404724a439f81990026620427b55bbdd86ec330d5d446336f12a7d",
+    "frames": "c9278f4dd2285b5152da93cbbf645db3d672e4190ae2f9720bd3224178b86b28"
+  }
+}
