@@ -70,3 +70,23 @@ node tests/stitch-editor-check.mjs
 The check starts an ephemeral loopback server and Chromium, renders two actual Gaussian assets, exercises transforms and independent camera orbit, reference locking, visibility, previous/next, reset, save and reload, server restart persistence, and verifies the original PLY SHA-256 is unchanged. It checks stale and cross-origin save rejection and browser exceptions. `STITCH_TEST_ASSETS` can specify another directory containing `preview.ply`. Test screenshot is `dist/stitch-editor/test-render.png` (ignored build output). It uses the existing pilot twice to test independent entity transforms without inventing a synthetic reconstruction; final cleaned-section quality requires separate visual inspection.
 
 Validation budget for this delivery: one focused discovery, corrections at observed failures only, then one final focused pass on frozen source. No whole reconstruction or repository suite is required for this standalone editor.
+
+## Optional seed-camera starting view
+
+For this recording, the two sections can start in their selected seed-camera
+views instead of unrelated COLMAP origins. This is a display convenience, not
+registration: each seed camera maps independently to the origin looking along
++Z, and each seed's median positive sparse-point depth becomes one unit.
+
+```sh
+python scripts/stitch_seed_views.py \
+  --section earlier EARLIER_MODEL_TEXT frame_006454.jpg \
+  --section later LATER_MODEL_TEXT frame_006548.jpg --output SEED_VIEWS.json
+node scripts/stitch_manifest.mjs SEED_VIEWS.json sections.json
+```
+
+The manifest expects `earlier-clean.ply` and `later-clean.ply`; edit labels/status
+as needed before launch. The exporter checks camera-origin and view-direction
+mapping, preserves source model hashes, and verifies the matrix-to-Euler roundtrip.
+The initial nonzero rotations/scales are these independent camera gauges. Users
+still need to align the scenes; resetting restores this starting view.
