@@ -171,6 +171,7 @@ def main():
     else:
         state={'config':config,'started':time.time(),'status':'running','sections':[dict(r,status='pending') for r in plan]}
         save(a.output/'plan.json',plan)
+    state.update(status='running',updated=time.time())
     save(statepath,state)
     count=0;consecutive_failures=[]
     for row in state['sections']:
