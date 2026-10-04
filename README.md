@@ -97,7 +97,7 @@ This is a diagnostic aid, not certification of camera accuracy or global alignme
 
 [Floor-reference drift review](https://parhamdb.github.io/sepehrbaba/floor-drift.html): inspect proposed floor masks, a fixed reference grid, and floor-feature reprojection checks at 100 sampled frames across the recording. [Method and limitations](docs/floor-drift.md). This diagnoses inconsistencies; it does not correct or join scenes.
 
-**Full-video DA3 camera run:** [Method and status](docs/da3-full-recording.md). All 12,793 frames are queued for one streaming reconstruction, followed automatically by COLMAP/VGGT cross-reference. Inference is running; no continuous trajectory is certified.
+**Full-video DA3 camera run:** [Method](docs/da3-full-recording.md). Camera estimates and cached depth are now available for all 12,793 frames. This is prediction coverage; no correct continuous trajectory is certified.
 
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
 finished all 37 overlapping windows across the 12:17 recording. The
@@ -106,6 +106,13 @@ splats** available individually or as selected pairs for manual stitching.
 They contain **7,693 / 12,793 source frames (60.1%)**; exact remaining gaps are
 listed. These older candidates use blanket person masks, unlike the selectively
 cleaned pair above, and are not a complete or verified reconstruction.
+
+**[DA3 gap-splat experiment](docs/da3-gap-splats.md):** train 78 short, independent
+sections using retained DA3 predictions for frames missing from the 72-model
+baseline. Completed candidates are appended to the LAN library from #73 onward,
+with matching source-video timestamps. These experiments retain people and
+bodies without exclusion masks; moving-person ghosting and camera drift may
+remain. They do not automatically connect existing sections.
 
 **[Open the 3D pilot](https://parhamdb.github.io/sepehrbaba/)** ·
 **[Explore the earlier 48-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-48s)** ·

@@ -9,7 +9,7 @@ import {Mat4, Quat} from 'playcanvas';
 import {createStitchServer} from './stitch-editor-server.mjs';
 
 export async function createSectionLibrary({library, state, video, web = 'dist/stitch-editor', page = 'public/section-library.html'}) {
-  const catalog = JSON.parse(await readFile(path.join(library,'catalog.json'),'utf8'));
+  let catalog = JSON.parse(await readFile(path.join(library,'catalog.json'),'utf8'));
   // Numbers belong to the fixed catalog order, never the selected pair order.
   catalog.sections.forEach((s,i)=>{s.number=i+1;});
   const videoSize=video?(await stat(video)).size:0;
@@ -18,6 +18,19 @@ export async function createSectionLibrary({library, state, video, web = 'dist/s
   if (sections.size !== catalog.sections.length || !sections.size) throw Error('Invalid section inventory');
   for (const s of sections.values()) {
     if (!/^[a-zA-Z0-9_-]+$/.test(s.id) || s.asset !== `${s.id}.ply` || s.preview !== `${s.id}.jpg`) throw Error('Invalid section asset name');
+  }
+  let catalogStamp=(await stat(path.join(library,'catalog.json'))).mtimeMs;
+  async function refreshCatalog(){
+    const stamp=(await stat(path.join(library,'catalog.json'))).mtimeMs;if(stamp===catalogStamp)return;
+    const incoming=JSON.parse(await readFile(path.join(library,'catalog.json'),'utf8'));
+    if(incoming.sections.length<catalog.sections.length||catalog.sections.some((s,i)=>incoming.sections[i]?.id!==s.id||incoming.sections[i]?.sha256!==s.sha256))throw Error('Catalog update must preserve existing section order and asset identities');
+    for(const [i,s] of incoming.sections.entries()){
+      if(!/^[a-zA-Z0-9_-]+$/.test(s.id)||s.asset!==`${s.id}.ply`||s.preview!==`${s.id}.jpg`)throw Error('Invalid new section');
+      s.number=i+1;
+    }
+    if(new Set(incoming.sections.map(s=>s.id)).size!==incoming.sections.length)throw Error('Duplicate sections');
+    incoming.source_video=catalog.source_video;catalog=incoming;catalogStamp=stamp;
+    for(const s of catalog.sections)sections.set(s.id,s);
   }
   const pairs = new Map();
   const json = (res,code,body) => {res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(body));};
@@ -29,7 +42,7 @@ export async function createSectionLibrary({library, state, video, web = 'dist/s
         const s=sections.get(id),p=s.placement,m=new Mat4();
         for(let c=0;c<3;c++)for(let r=0;r<3;r++)m.data[c*4+r]=p.rotation_matrix[r][c];
         const e=new Quat().setFromMat4(m).getEulerAngles();
-        return {id,asset:s.asset,label:`#${String(s.number).padStart(2,'0')} · ${time(s.start)}–${time(s.end)}`,locked:i===0,
+        return {id,asset:s.asset,label:`#${String(s.number).padStart(2,'0')}${s.camera_method==='DA3'?' · DA3 experimental':''} · ${time(s.start)}–${time(s.end)}`,locked:i===0,
           sourceVideo:video?{url:`/?t=${s.start}&section=${s.id}#source`,number:s.number}:null,
           status:`Independent section; seed-camera display placement is NOT an alignment. ${s.mask_method} ${s.quality}`,
           transform:{position:p.position,rotation:[e.x,e.y,e.z],scale:p.scale}};
@@ -43,6 +56,7 @@ export async function createSectionLibrary({library, state, video, web = 'dist/s
   const server=http.createServer(async(req,res)=>{
     try {
       const url=new URL(req.url,'http://localhost');
+      if(url.pathname==='/api/catalog'||url.pathname.startsWith('/pair/'))await refreshCatalog();
       if(url.pathname.startsWith('/pair/')){
         const parts=url.pathname.slice('/pair/'.length).split('/');
         const ids=[parts.shift()];

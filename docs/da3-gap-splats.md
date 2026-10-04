@@ -69,3 +69,35 @@ numbered library additions and timestamp linkage; committed scripts and honest
 coverage/quality records. Test budget: one discovery, targeted failure checks,
 one final pass. The prior local test attempt lacked SciPy; all three focused
 checks passed in the actual worker's existing DA3 environment.
+
+## Numbered LAN previews
+
+`scripts/import_da3_gap_section.py` appends a completed experiment after checking
+its PLY, source-frame timestamps and evaluation inventory. Original entries stay
+in the same order; DA3 additions begin at #73, in completion order. Their cards
+and editor labels say **DA3 experimental**. The source-video overlay includes
+their numbers at the corresponding timestamps. Frame coverage counts their
+input views; it is not a measurement of accurate recovered surfaces.
+
+```sh
+python scripts/import_da3_gap_section.py --library /path/to/library \
+  --section /path/to/copied/da3-gap-000128 --frames /path/to/frames.json
+```
+
+The server accepts append-only catalog refreshes without restarting open pair
+editors. Reload the library page to see newly completed sections. Each ordered
+pair still has separate saved placements; importing does not edit those saves.
+The campaign's baseline catalog remains frozen at 72 entries, independently of
+the growing runtime catalog.
+
+For automatic copying, run `scripts/sync_da3_gap_sections.py` as a persistent
+local service with `--host`, `--control-path` (an existing authenticated SSH
+connection), `--remote`, `--local`, `--library` and `--frames`. It transfers only
+completed PLYs, preparation/evaluation receipts and renders, verifies the worker
+PLY hash, then imports. `--once` performs one scan. It never trains, changes Git,
+or stores credentials. Three consecutive transfer failures stop polling and
+retain `sync-error.txt`; reconnect and restart after inspecting the cause.
+
+Automatically imported models remain unreviewed experiments. Only an explicit
+visual review can establish whether a particular section is useful for manual
+alignment, and that review alone cannot certify metric accuracy.
