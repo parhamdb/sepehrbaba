@@ -1,5 +1,7 @@
 # Processing the complete 12:17 recording
 
+October 4 update: all 37 windows finished. The [full-recording section library](full-recording-section-library.md) recovers 72 existing splats, records exact coverage gaps, and opens selected pairs for manual stitching.
+
 The September 26 batch processes the complete **737.301333-second source and
 12,793 native frames**. This is a processing scope, not a claim that every frame
 can already be reconstructed. The previously published 48- and 71-second scenes
