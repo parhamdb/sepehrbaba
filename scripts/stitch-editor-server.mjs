@@ -1,4 +1,5 @@
 import http from 'node:http';
+import {validateCrop} from '../src/stitch-crop.js';
 import {validateFilters} from '../src/stitch-filters.js';
 import { readFile, writeFile, rename, mkdir, stat, realpath } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
@@ -17,7 +18,7 @@ export function validateProject(input, manifest) {
     const t = s.transform;
     if (!t || !['position', 'rotation'].every(k => Array.isArray(t[k]) && t[k].length === 3 && t[k].every(Number.isFinite)) || !Number.isFinite(t.scale) || t.scale <= 0) throw Error('Transforms require finite XYZ values and positive uniform scale.');
     if (typeof s.visible !== 'boolean' || typeof s.locked !== 'boolean') throw Error('Visibility and lock must be booleans.');
-    return { id: s.id, asset: original.asset, transform: { position: [...t.position], rotation: [...t.rotation], scale: t.scale }, visible: s.visible, locked: s.locked, filters: validateFilters(s.filters) };
+    return { id: s.id, asset: original.asset, transform: { position: [...t.position], rotation: [...t.rotation], scale: t.scale }, visible: s.visible, locked: s.locked, filters: validateFilters(s.filters), crop: validateCrop(s.crop) };
   });
   return { version: 1, scenes };
 }

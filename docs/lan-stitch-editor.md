@@ -203,3 +203,38 @@ scrolling at four screen sizes, touch interaction, numeric/slider synchronizatio
 stable expanded maxima and independent section state. `STITCH_TEST_WEB` starts an
 isolated server against a staged build; otherwise `STITCH_TEST_URL` selects an
 existing editor, defaulting to loopback port 8092. All project writes are blocked.
+
+## Reversible section cropping
+
+Open **Crop** on a phone, or **Crop selected section** on desktop. The selector
+still contains one earlier/later pair. Cropping starts disabled for older projects.
+Enable it and slide each axis's **start** and **end** boundary, or enter exact
+values. A green wire box shows the kept region. **Central 98%** offers a starting
+box from the middle 98% of splat centers on each axis, with a small margin; it is
+not a confidence estimate. Keep overlap landmarks until the sections are aligned.
+
+Each crop uses the original section's local coordinates and follows its move,
+rotation and uniform scale. The six limits and **Edge fade** are saved per section
+with placements, and included in JSON export/import. Fade is a percentage of the
+smallest crop-box dimension. **Reset crop** removes cropping; **Preview original**
+in Filters temporarily bypasses both filters and cropping. **Show crop boxes** is
+an unsaved display preference. Source PLY files remain unchanged.
+
+Cropping clips fragments at their rendered camera-facing Gaussian billboard
+positions, so a long splat can be trimmed even when its center remains inside.
+This preserves unified cross-section sorting. It is a visual clipping operation,
+not volumetric Gaussian intersection, mesh reconstruction, or a repair of depth.
+Different viewpoints can still reveal holes or bad geometry. Bounds do not define
+verified surfaces; edge fade does not establish correspondence between sections.
+
+Focused validation uses a known elongated splat to verify partial clipping,
+transformed boundaries, fade and bypass, then both actual reconstruction assets
+for phone controls and preservation checks:
+
+```sh
+node tests/stitch-crop-check.mjs
+```
+
+The test uses an isolated temporary project. It retains screenshots and results
+outside the checkout, including failures; it never writes the live placements.
+`CROP_ONLY=C4` selects a previously failed check without repeating passing ones.

@@ -1,10 +1,13 @@
 import * as pc from 'playcanvas';
+import {validateCrop,cropBounds,installCropRenderer,installCropControls} from './stitch-crop.js';
 import {validateFilters,measureSplats,filterSummary,filterModifier} from './stitch-filters.js';
 import {installTrace} from './stitch-trace.js';
 const $ = id => document.getElementById(id);
 const clone = value => JSON.parse(JSON.stringify(value));
 let project, initial, manifest, revision, selected = 0, dirty = false, soloMode = false;
 const entities = new Map(), measurements = new Map(), filterKeys = new Map(), filterCounts = new Map(), sliderLimits = new Map(), originals = new Set();
+let cropRenderer,cropControls;
+const cropDefaults=new Map(),cropCentral=new Map();
 const canvas = $('canvas'), viewport = $('viewport');
 const app = new pc.Application(canvas, {graphicsDeviceOptions:{deviceTypes:['webgl2'],antialias:false,alpha:false}});
 app.setCanvasFillMode(pc.FILLMODE_NONE, viewport.clientWidth, viewport.clientHeight);
@@ -75,7 +78,7 @@ function controls() {
   const s=selectedScene(); const definition=manifest.scenes.find(m=>m.id===s.id); $('quality').textContent=definition.status ?? 'Quality not reviewed. Placement is provisional.'; $('scene').value=s.id; $('visible').checked=s.visible; $('locked').checked=s.locked; $('transform').disabled=s.locked; $('reset-transform').disabled=s.locked;
   for(const group of ['position','rotation']) for(let axis=0;axis<3;axis++) $(`${group}-${axis}`).value=s.transform[group][axis];
   $('scale').value=s.transform.scale;
-  inspectionControls(); $('previous').disabled=selected===0; $('next').disabled=selected===project.scenes.length-1; expose();
+  inspectionControls(); cropControls?.refresh(); $('previous').disabled=selected===0; $('next').disabled=selected===project.scenes.length-1; expose();
 }
 function select(index) {selected=index;if(soloMode){for(const s of project.scenes){s.visible=s.id===selectedScene().id;apply(s);}markDirty();}controls();}
 function change(group,axis,value) {
@@ -125,10 +128,10 @@ $('inspect-show-all').onclick=()=>$('show-all').click();
 $('reset-transform').onclick=()=>{if(selectedScene().locked)return;selectedScene().transform=clone(initial.scenes.find(s=>s.id===selectedScene().id).transform);apply(selectedScene());controls();markDirty();};
 $('focus').onclick=focusSelected;$('top').onclick=()=>{pitch=89;cameraUpdate();};
 $('save').onclick=async()=>{const submitted=JSON.stringify(project);$('save').disabled=true;try {const response=await fetch('/api/project',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({revision,project:JSON.parse(submitted)})});const result=await response.json();if(!response.ok)throw Error(result.error);revision=result.revision;dirty=JSON.stringify(project)!==submitted;status(dirty?'Earlier placement saved; newer changes are still unsaved.':'Saved on this server.');expose();}catch(e){status(`Save failed: ${e.message}`);}finally{$('save').disabled=false;}};
-$('reload').onclick=async()=>{if(dirty&&!confirm('Discard unsaved placement changes?'))return;try{const response=await fetch('/api/project');if(!response.ok)throw Error('Could not reload project.');const data=await response.json();project=data.project;for(const s of project.scenes)s.filters=validateFilters(s.filters);originals.clear();revision=data.revision;for(const s of project.scenes)apply(s);dirty=false;controls();status('Reloaded saved placements.');}catch(e){status(e.message);}};
+$('reload').onclick=async()=>{if(dirty&&!confirm('Discard unsaved placement changes?'))return;try{const response=await fetch('/api/project');if(!response.ok)throw Error('Could not reload project.');const data=await response.json();project=data.project;for(const s of project.scenes){s.filters=validateFilters(s.filters);s.crop=validateCrop(s.crop);}cropRenderer?.setScenes(project.scenes);originals.clear();revision=data.revision;for(const s of project.scenes)apply(s);dirty=false;controls();status('Reloaded saved placements.');}catch(e){status(e.message);}};
 $('export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(project,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='stitch-project.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 $('import').onclick=()=>$('file').click();
-$('file').onchange=async()=>{try {const data=JSON.parse(await $('file').files[0].text());if(data.version!==1||!Array.isArray(data.scenes)||data.scenes.length!==project.scenes.length)throw Error('Scene list differs from this project.');const seen=new Set();for(const s of data.scenes){const expected=project.scenes.find(p=>p.id===s.id);if(!expected||s.asset!==expected.asset||seen.has(s.id)||!s.transform||!['position','rotation'].every(k=>Array.isArray(s.transform[k])&&s.transform[k].length===3&&s.transform[k].every(Number.isFinite))||!Number.isFinite(s.transform.scale)||s.transform.scale<=0||typeof s.visible!=='boolean'||typeof s.locked!=='boolean')throw Error('Invalid scene or transform.');s.filters=validateFilters(s.filters);seen.add(s.id);}project=data;originals.clear();for(const s of project.scenes)apply(s);controls();markDirty();}catch(e){status(`Import failed: ${e.message}`);}finally{$('file').value='';}};
+$('file').onchange=async()=>{try {const data=JSON.parse(await $('file').files[0].text());if(data.version!==1||!Array.isArray(data.scenes)||data.scenes.length!==project.scenes.length)throw Error('Scene list differs from this project.');const seen=new Set();for(const s of data.scenes){const expected=project.scenes.find(p=>p.id===s.id);if(!expected||s.asset!==expected.asset||seen.has(s.id)||!s.transform||!['position','rotation'].every(k=>Array.isArray(s.transform[k])&&s.transform[k].length===3&&s.transform[k].every(Number.isFinite))||!Number.isFinite(s.transform.scale)||s.transform.scale<=0||typeof s.visible!=='boolean'||typeof s.locked!=='boolean')throw Error('Invalid scene or transform.');s.filters=validateFilters(s.filters);s.crop=validateCrop(s.crop);seen.add(s.id);}project=data;cropRenderer?.setScenes(project.scenes);originals.clear();for(const s of project.scenes)apply(s);controls();markDirty();}catch(e){status(`Import failed: ${e.message}`);}finally{$('file').value='';}};
 // Rebase each event on the current active pointers, so lifting a finger never
 // reuses a stale drag origin or accidentally moves the selected Gaussian scene.
 const pointers=new Map();
@@ -154,16 +157,19 @@ window.addEventListener('pagehide',()=>app.destroy());
 try {
   const response=await fetch('/api/project');if(!response.ok)throw Error('Project could not be opened.');
   ({project,initial,manifest,revision}=await response.json());
-  for(const s of project.scenes)s.filters=validateFilters(s.filters);
+  for(const s of project.scenes){s.filters=validateFilters(s.filters);s.crop=validateCrop(s.crop);}cropRenderer?.setScenes(project.scenes);
   app.start();
   for(const s of project.scenes) {
     status(`Loading ${manifest.scenes.find(m=>m.id===s.id).label ?? s.id}…`);
     const asset=await new Promise((resolve,reject)=>app.assets.loadFromUrl(`/assets/${s.id}.ply`,'gsplat',(error,asset)=>error?reject(Error(error)):resolve(asset)));
     const entity=new pc.Entity(s.id), content=new pc.Entity(`${s.id}-gaussians`);
     // Match the repository's SuperSplat viewer PLY coordinate convention.
-    content.setLocalEulerAngles(0,0,180);content.addComponent('gsplat',{asset,unified:true});entity.addChild(content);app.root.addChild(entity);entities.set(s.id,entity);measurements.set(s.id,measureSplats(asset.resource.gsplatData));apply(s);
+    content.setLocalEulerAngles(0,0,180);content.addComponent('gsplat',{asset,unified:true});entity.addChild(content);app.root.addChild(entity);entities.set(s.id,entity);measurements.set(s.id,measureSplats(asset.resource.gsplatData));cropDefaults.set(s.id,cropBounds(asset.resource.gsplatData));cropCentral.set(s.id,cropBounds(asset.resource.gsplatData,.01));apply(s);
     const option=document.createElement('option');option.value=s.id;option.textContent=manifest.scenes.find(m=>m.id===s.id).label ?? s.id;$('scene').append(option);
   }
+  cropRenderer=installCropRenderer({pc,app,camera,entities,scenes:project.scenes,originals});
+  cropControls=installCropControls({selectedScene,defaults:cropDefaults,central:cropCentral,apply:()=>{originals.delete(selectedScene().id);apply(selectedScene());controls();},changed:markDirty});
+  $('crop-box').onchange=()=>cropRenderer.setShowBox($('crop-box').checked);
   sectionRows();
   for(const e of document.querySelectorAll('aside button, aside input, aside select'))e.disabled=false;
   selected=Math.min(1,project.scenes.length-1);controls();
