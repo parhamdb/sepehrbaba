@@ -2,14 +2,18 @@
 // Serve a time-ordered reconstruction library and isolated one/two-section editors.
 import http from 'node:http';
 import path from 'node:path';
-import {readFile, writeFile, mkdir} from 'node:fs/promises';
+import {readFile, writeFile, mkdir, stat} from 'node:fs/promises';
 import {createReadStream} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {Mat4, Quat} from 'playcanvas';
 import {createStitchServer} from './stitch-editor-server.mjs';
 
-export async function createSectionLibrary({library, state, web = 'dist/stitch-editor', page = 'public/section-library.html'}) {
+export async function createSectionLibrary({library, state, video, web = 'dist/stitch-editor', page = 'public/section-library.html'}) {
   const catalog = JSON.parse(await readFile(path.join(library,'catalog.json'),'utf8'));
+  // Numbers belong to the fixed catalog order, never the selected pair order.
+  catalog.sections.forEach((s,i)=>{s.number=i+1;});
+  const videoSize=video?(await stat(video)).size:0;
+  catalog.source_video=video?{url:'/source-video.mp4',duration:catalog.duration}:null;
   const sections = new Map(catalog.sections.map(s=>[s.id,s]));
   if (sections.size !== catalog.sections.length || !sections.size) throw Error('Invalid section inventory');
   for (const s of sections.values()) {
@@ -25,7 +29,8 @@ export async function createSectionLibrary({library, state, web = 'dist/stitch-e
         const s=sections.get(id),p=s.placement,m=new Mat4();
         for(let c=0;c<3;c++)for(let r=0;r<3;r++)m.data[c*4+r]=p.rotation_matrix[r][c];
         const e=new Quat().setFromMat4(m).getEulerAngles();
-        return {id,asset:s.asset,label:`${time(s.start)}–${time(s.end)}`,locked:i===0,
+        return {id,asset:s.asset,label:`#${String(s.number).padStart(2,'0')} · ${time(s.start)}–${time(s.end)}`,locked:i===0,
+          sourceVideo:video?{url:`/?t=${s.start}&section=${s.id}#source`,number:s.number}:null,
           status:`Independent section; seed-camera display placement is NOT an alignment. ${s.mask_method} ${s.quality}`,
           transform:{position:p.position,rotation:[e.x,e.y,e.z],scale:p.scale}};
       });
@@ -48,6 +53,26 @@ export async function createSectionLibrary({library, state, web = 'dist/stitch-e
         const child=await pair(ids);req.url='/'+parts.join('/')+url.search;child.emit('request',req,res);return;
       }
       if(!['GET','HEAD'].includes(req.method))return json(res,405,{error:'Read only'});
+      if(url.pathname==='/source-video.mp4'&&video){
+        // Byte ranges allow native mobile controls to seek within the original MP4.
+        let start=0,end=videoSize-1,code=200;
+        if(req.headers.range){
+          const match=req.headers.range.match(/^bytes=(\d*)-(\d*)$/);
+          if(!match||(!match[1]&&!match[2])){
+            res.writeHead(416,{'Content-Range':`bytes */${videoSize}`});return res.end();
+          }
+          if(!match[1])start=Math.max(0,videoSize-Number(match[2]));
+          else {start=Number(match[1]);if(match[2])end=Math.min(end,Number(match[2]));}
+          if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start<0||start>=videoSize||end<start){
+            res.writeHead(416,{'Content-Range':`bytes */${videoSize}`});return res.end();
+          }
+          code=206;
+        }
+        const headers={'Content-Type':'video/mp4','Accept-Ranges':'bytes','Content-Length':end-start+1,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'};
+        if(code===206)headers['Content-Range']=`bytes ${start}-${end}/${videoSize}`;
+        res.writeHead(code,headers);if(req.method==='HEAD')return res.end();
+        const stream=createReadStream(video,{start,end});stream.on('error',()=>res.destroy());res.on('close',()=>stream.destroy());stream.pipe(res);return;
+      }
       if(url.pathname==='/api/catalog')return json(res,200,catalog);
       if(url.pathname==='/api/trace')return json(res,200,{scenes:[]});
       const preview=url.pathname.match(/^\/previews\/([a-zA-Z0-9_-]+)\.jpg$/);

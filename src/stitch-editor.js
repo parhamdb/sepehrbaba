@@ -77,6 +77,8 @@ function sectionRows() {
 }
 function controls() {
   const s=selectedScene(); const definition=manifest.scenes.find(m=>m.id===s.id); $('quality').textContent=definition.status ?? 'Quality not reviewed. Placement is provisional.'; $('scene').value=s.id; $('visible').checked=s.visible; $('locked').checked=s.locked; $('transform').disabled=s.locked; $('reset-transform').disabled=s.locked;
+  const sourceLink=$('source-video-link');sourceLink.hidden=!definition.sourceVideo;
+  if(definition.sourceVideo){sourceLink.href=definition.sourceVideo.url;sourceLink.textContent=`Watch source video · Splat #${String(definition.sourceVideo.number).padStart(2,'0')}`;}
   for(const group of ['position','rotation']) for(let axis=0;axis<3;axis++) $(`${group}-${axis}`).value=s.transform[group][axis];
   $('scale').value=s.transform.scale;
   inspectionControls(); cropControls?.refresh(); $('previous').disabled=selected===0; $('next').disabled=selected===project.scenes.length-1; expose();

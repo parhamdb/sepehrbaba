@@ -106,3 +106,27 @@ were unchanged. One discovered single-section API routing defect was fixed in
 [mobile pair](../evidence/section-library/mobile-pair.png) preserve the delivery
 checkpoint. The three held-out contact sheets in that directory show all 72
 legacy outputs. Loading/rendering success does not establish geometry quality.
+
+## Find a splat in the original video
+
+Supply `--video /path/to/original.mp4` to the library server. The original file
+is served unchanged, with byte-range support for seeking; it is not cut into
+new clips or modified with burned-in labels. The player shows the current time
+and every splat whose section range contains that time. Intervals outside all
+ranges explicitly show “No reconstructed section”. A range can still contain
+unregistered frames; this indicates related footage, not exact camera recovery.
+
+Splat numbers #01–#72 follow the fixed catalog order, including overlapping
+alternatives. The same numbers appear on cards, selection menus, video overlays
+and editor section labels. Watch buttons and the Jump to splat menu seek to the
+section start. Links such as `/?t=414.562967&section=SECTION_ID#source` reopen that
+part of the original video. The editor's “Watch source video” link opens it in a
+new tab, preserving unsaved editor changes. On browsers that support container
+fullscreen, “Fullscreen with numbers” retains the overlay; inline playback is
+available on phones. Native video-only fullscreen may omit HTML overlays.
+
+Verification for this change is limited to unchanged source bytes and HTTP
+seeking, overlap/gap timestamp mapping, all 72 number mappings, live playback and
+jump controls, editor-to-video links, mobile layout, and unchanged saved pair
+projects. Existing 72-splat rendering evidence is reused; reconstruction and
+masking are unchanged.
