@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "pair": [
+    "earlier-tracked",
+    "later-tracked"
+  ],
+  "browserErrors": [],
+  "savedProjectLoaded": true,
+  "bothSoloToggles": true
+}

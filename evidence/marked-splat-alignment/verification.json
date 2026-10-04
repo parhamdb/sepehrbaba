@@ -1,0 +1,47 @@
+{
+  "tested_source": "8a4fc7f",
+  "date": "2026-10-04",
+  "counts": {
+    "passed": 4,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "checks": [
+    {
+      "id": "reproduction",
+      "status": "passed",
+      "evidence": "Final source reproduces all three fits and anchor diagnostics exactly."
+    },
+    {
+      "id": "matrix",
+      "status": "passed",
+      "evidence": "Editor transform round-trip maximum matrix error 7.450580596923828e-9."
+    },
+    {
+      "id": "persistence",
+      "status": "passed",
+      "evidence": "Only later transform changed; API and saved file match; both original live PLY hashes match provenance."
+    },
+    {
+      "id": "browser",
+      "status": "passed",
+      "evidence": "Actual two-asset render inspected, both solo toggles passed, zero page errors."
+    }
+  ],
+  "quality_status": "Provisional starting placement only. Floor mismatch and rays remain. No verified geometric connection.",
+  "previous_placement": "Backed up locally before revision-checked save; original manifest reset retained.",
+  "live_transform": {
+    "position": [
+      0.64210444688797,
+      0.5389178395271301,
+      0.8159741759300232
+    ],
+    "rotation": [
+      15.455768748627275,
+      14.209999404509153,
+      -11.838109385349485
+    ],
+    "scale": 0.08917658793672881
+  }
+}

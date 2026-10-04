@@ -1,0 +1,25 @@
+{
+  "human_choices_sha256": "dcf79c75487b2e1473602025006f73b6aebab0e73d819d6008c75a46bcd31f7e",
+  "script_sha256": "6b02da292ef5785b382d6935f7aa26baed072c45ce61f7d04a0489ba90b7cf09",
+  "inputs": {
+    "earlier": {
+      "seed_sha256": "95d692099bd5c86defa5b2e06f0f3cef4475160e3c48fb499c3105bb2a2a1496",
+      "ply_sha256": "79efb7fe2c562a730142a6fc5feff72d8e11899478e54e67cb6a5679df494579",
+      "views_sha256": "ac1256ae4b63ffb6cfbf2d1d572d69c10f2385e630ae93a5a6b5cbb2b1f96317",
+      "calibration_archive_sha256": "10639769a1114c339c78dd9a9174404d8cc7583f4683e912100afadc009c2224",
+      "reference_preview_sha256": "7841c0653fdf90719f29eff336bea5bc927fdd10634fab45d8358ce7a77830ec"
+    },
+    "later": {
+      "seed_sha256": "c800d18feeafd16a273398e1ba6b3d1701d39735bc01112c2771955474dc49ca",
+      "ply_sha256": "b977c76909d577acb96d9102c7ce16b659be544929e46dafae117083b87ce83a",
+      "views_sha256": "629265feebfb54d1ea4970db191b98a4ee34fd89f3f992bed704f760d72766fa",
+      "calibration_archive_sha256": "41649e0598ad5e933d2ecc5e66ca487d66944cf144827635508d715352b35860",
+      "reference_preview_sha256": "1811efa8bb40700a9b354f41068925e6a5f750fd75f41f308bd493e477b23c90"
+    }
+  },
+  "limitations": [
+    "Approximate Gaussian center-depth attribution, not a physical surface measurement.",
+    "All six points lie on one local region; no independent cross-section landmark validation.",
+    "Estimated floor parallelism is imposed, not independently validated."
+  ]
+}
