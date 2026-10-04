@@ -38,11 +38,14 @@ export async function createSectionLibrary({library, state, web = 'dist/stitch-e
   const server=http.createServer(async(req,res)=>{
     try {
       const url=new URL(req.url,'http://localhost');
-      const match=url.pathname.match(/^\/pair\/([a-zA-Z0-9_-]+)(?:\/([a-zA-Z0-9_-]+))?(\/.*)$/);
-      if(match){
-        const ids=[match[1],match[2]].filter(Boolean);
+      if(url.pathname.startsWith('/pair/')){
+        const parts=url.pathname.slice('/pair/'.length).split('/');
+        const ids=[parts.shift()];
+        // A single-section URL continues directly with /api or /assets.
+        // Consume a second segment only when it names an actual section.
+        if(sections.has(parts[0]))ids.push(parts.shift());
         if(new Set(ids).size!==ids.length||ids.some(id=>!sections.has(id)))return json(res,404,{error:'Unknown or duplicate section'});
-        const child=await pair(ids);req.url=match[3]+url.search;child.emit('request',req,res);return;
+        const child=await pair(ids);req.url='/'+parts.join('/')+url.search;child.emit('request',req,res);return;
       }
       if(!['GET','HEAD'].includes(req.method))return json(res,405,{error:'Read only'});
       if(url.pathname==='/api/catalog')return json(res,200,catalog);
