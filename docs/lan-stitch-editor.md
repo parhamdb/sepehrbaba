@@ -238,3 +238,7 @@ node tests/stitch-crop-check.mjs
 The test uses an isolated temporary project. It retains screenshots and results
 outside the checkout, including failures; it never writes the live placements.
 `CROP_ONLY=C4` selects a previously failed check without repeating passing ones.
+
+[Crop verification and rendered examples](../evidence/crop-editor/verification.json)
+record the tested source and bundle. The live LAN editor runs as an enabled user
+service with failure restart; runtime paths and placement backups stay private.

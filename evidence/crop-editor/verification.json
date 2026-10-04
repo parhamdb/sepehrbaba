@@ -1,0 +1,83 @@
+{
+  "source_commit": "d9a42d6",
+  "engine": "PlayCanvas 2.22.3, WebGL2",
+  "scope": "Reversible per-section rendered crop with saved settings; visual cleanup only",
+  "checks": [
+    {
+      "id": "C1",
+      "status": "passed",
+      "description": "Legacy defaults and invalid crop rejection"
+    },
+    {
+      "id": "C2",
+      "status": "passed",
+      "description": "Partial Gaussian extent clipping and edge fade"
+    },
+    {
+      "id": "C3",
+      "status": "passed",
+      "description": "Crop follows section rotation, movement and scale"
+    },
+    {
+      "id": "C4",
+      "status": "passed",
+      "description": "Independent section settings and invalid-input rollback"
+    },
+    {
+      "id": "C5",
+      "status": "passed",
+      "description": "Save, disk persistence, reload and invalid save rejection"
+    },
+    {
+      "id": "C6",
+      "status": "passed",
+      "description": "Original preview bypass and restoration"
+    },
+    {
+      "id": "C7",
+      "status": "passed",
+      "description": "Actual reconstruction assets and phone controls at three sizes"
+    },
+    {
+      "id": "C8",
+      "status": "passed",
+      "description": "No shader errors and source asset integrity"
+    },
+    {
+      "id": "L1",
+      "status": "passed",
+      "checks": [
+        "live phone crop tab and touch slider",
+        "independent crop settings",
+        "reset restores full extent",
+        "desktop crop controls",
+        "transforms and saved project unchanged",
+        "no browser/shader errors",
+        "served bundle matches tested build"
+      ],
+      "description": "Live two-section LAN deployment"
+    }
+  ],
+  "counts": {
+    "passed": 9,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "bundle_sha256": "cc7a5b93a69183c895534081518c1a0d95812784fd59424ccaadd9d7faea0d40",
+  "deployed_state": "Exactly one earlier/later pair; legacy crops disabled; persistent user service active and enabled",
+  "saved_placements_unchanged": true,
+  "original_ply_hashes_unchanged": true,
+  "validation_budget": "One discovery pass, focused failure checks, one final full pass, then live deployment check",
+  "resolved_findings": [
+    "GPU scalar parameter cache retained old enable value; use a vector parameter with element-wise cache checks.",
+    "Boundary editor mutated existing crop before validation; clone before editing and verify rejected edit preserves valid state.",
+    "Phone test selector matched both tab and active panel; target button explicitly.",
+    "Real-asset test uses existing clean-section pose manifest with tracked PLY assets."
+  ],
+  "limits": [
+    "Clip positions lie on rendered camera-facing Gaussian billboards, not reconstructed physical surfaces.",
+    "No scene-wide quality improvement or repaired camera geometry is asserted.",
+    "Physical phone Safari performance has not been verified."
+  ]
+}
