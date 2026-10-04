@@ -15,7 +15,11 @@ of the recording remains unreconstructed. Every source interval was attempted;
 that does not mean all twelve minutes were successfully reconstructed.
 
 The remaining 101 component failures comprise 100 preparation/geometry failures
-and one Brush training failure (empty Gaussian array). Failures can overlap
+and one Brush training failure (empty Gaussian array). Among preparation failures,
+30 had low registration coverage, 23 had both low coverage and too few sparse
+points, 43 had too few points, and four contained fewer than twenty source
+frames. These are recorded screening failures; the library does not silently
+relax their thresholds. Failures can overlap
 successful components. The library lists exact missing-frame intervals, including
 holes inside broad section spans, instead of substituting a continuous camera
 path. It does not rerun completed training, weaken geometry gates, or generate
@@ -86,3 +90,19 @@ state isolation; mobile catalog selection; preservation of the current pair.
 Validation budget: one discovery pass, focused failure checks and one final pass.
 No new geometry recovery, full-recording SAM cleanup, automatic stitching or
 invented geometry is part of this library delivery.
+
+## Verified delivery
+
+Final verification on source `b71d945`: **77 passed, 0 failed, 0 blocked,
+0 untested**. All 72 PLYs passed byte-identity and actual browser render checks.
+Pair editing, save/reload, isolation, mobile selection and the live deployment
+passed. The existing pair's manifest, transforms, filters, crop and visibility
+were unchanged. One discovered single-section API routing defect was fixed in
+`b417ec6` before the final pass. No training or source assets were altered.
+
+[Portable catalog and frame gaps](../evidence/section-library/catalog.json),
+[verification ledger](../evidence/section-library/verification.json),
+[browser render samples](../evidence/section-library/browser-contact.jpg), and
+[mobile pair](../evidence/section-library/mobile-pair.png) preserve the delivery
+checkpoint. The three held-out contact sheets in that directory show all 72
+legacy outputs. Loading/rendering success does not establish geometry quality.

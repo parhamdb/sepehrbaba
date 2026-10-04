@@ -1,0 +1,414 @@
+{
+  "tested_source": "b71d945093a886959bb7ae1b03d96ba81005d00b",
+  "date": "2026-10-04",
+  "counts": {
+    "passed": 77,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "checks": [
+    {
+      "id": "inventory",
+      "status": "passed",
+      "models": 72,
+      "frames": 7693
+    },
+    {
+      "id": "render-1136c3af2ee75d87",
+      "status": "passed",
+      "visibleFraction": 0.8632326007326007
+    },
+    {
+      "id": "render-9065166282f53f33",
+      "status": "passed",
+      "visibleFraction": 0.8715796703296704
+    },
+    {
+      "id": "render-ce64521bd6f1714a",
+      "status": "passed",
+      "visibleFraction": 0.943282967032967
+    },
+    {
+      "id": "render-36d1a2297917d036",
+      "status": "passed",
+      "visibleFraction": 0.8954578754578755
+    },
+    {
+      "id": "render-d123d4d0e7cc9d89",
+      "status": "passed",
+      "visibleFraction": 0.8748534798534798
+    },
+    {
+      "id": "render-474c06f3c136421b",
+      "status": "passed",
+      "visibleFraction": 0.7216826923076923
+    },
+    {
+      "id": "render-30f51bc34902b226",
+      "status": "passed",
+      "visibleFraction": 0.8644803113553114
+    },
+    {
+      "id": "render-53e833847804a605",
+      "status": "passed",
+      "visibleFraction": 0.6652518315018315
+    },
+    {
+      "id": "render-9bd1ff3652321fd9",
+      "status": "passed",
+      "visibleFraction": 0.576650641025641
+    },
+    {
+      "id": "render-18de3cc273c6fa10",
+      "status": "passed",
+      "visibleFraction": 0.7367010073260073
+    },
+    {
+      "id": "render-3fc22e6a2b338a47",
+      "status": "passed",
+      "visibleFraction": 0.7812179487179487
+    },
+    {
+      "id": "render-88cdb1e1f9fb8fba",
+      "status": "passed",
+      "visibleFraction": 0.6305723443223443
+    },
+    {
+      "id": "render-857cbe29ce1f9096",
+      "status": "passed",
+      "visibleFraction": 0.7173328754578755
+    },
+    {
+      "id": "render-786b2cf81c4b0f7f",
+      "status": "passed",
+      "visibleFraction": 0.6123351648351648
+    },
+    {
+      "id": "render-2f99e6d2efe98107",
+      "status": "passed",
+      "visibleFraction": 0.4570260989010989
+    },
+    {
+      "id": "render-5331f03101ad8379",
+      "status": "passed",
+      "visibleFraction": 0.8944734432234432
+    },
+    {
+      "id": "render-670d0ba80ae8f584",
+      "status": "passed",
+      "visibleFraction": 0.6025412087912088
+    },
+    {
+      "id": "render-e88420606fc80c6b",
+      "status": "passed",
+      "visibleFraction": 0.758592032967033
+    },
+    {
+      "id": "render-cb726515159ab9b1",
+      "status": "passed",
+      "visibleFraction": 0.7458745421245421
+    },
+    {
+      "id": "render-6b4cf3dc2a9791da",
+      "status": "passed",
+      "visibleFraction": 0.36209935897435896
+    },
+    {
+      "id": "render-d3d9b429d129ffd9",
+      "status": "passed",
+      "visibleFraction": 0.31462225274725275
+    },
+    {
+      "id": "render-cbfa77ae77907ccf",
+      "status": "passed",
+      "visibleFraction": 0.8219894688644688
+    },
+    {
+      "id": "render-581c0222d2d21569",
+      "status": "passed",
+      "visibleFraction": 0.7336836080586081
+    },
+    {
+      "id": "render-afa5df49f34770db",
+      "status": "passed",
+      "visibleFraction": 0.7631891025641026
+    },
+    {
+      "id": "pair-edit-save-isolation",
+      "status": "passed",
+      "exactlyTwo": true,
+      "savedReload": true,
+      "otherPairAndSingleUnaffected": true
+    },
+    {
+      "id": "mobile-library-selection",
+      "status": "passed",
+      "sections": 72,
+      "overflow": false
+    },
+    {
+      "id": "browser-errors",
+      "status": "passed",
+      "count": 0
+    },
+    {
+      "id": "render-4ad9dc0c1773ab54",
+      "status": "passed",
+      "visibleFraction": 0.7835714285714286
+    },
+    {
+      "id": "render-08bbaddfe5bc1fed",
+      "status": "passed",
+      "visibleFraction": 0.8132005494505494
+    },
+    {
+      "id": "render-369bf6d3a427b275",
+      "status": "passed",
+      "visibleFraction": 0.9443063186813188
+    },
+    {
+      "id": "render-e8cbf0be6e420c6c",
+      "status": "passed",
+      "visibleFraction": 0.9014583333333334
+    },
+    {
+      "id": "render-3daeace60873785d",
+      "status": "passed",
+      "visibleFraction": 0.8138186813186814
+    },
+    {
+      "id": "render-a831f2115ec6164b",
+      "status": "passed",
+      "visibleFraction": 0.6690476190476191
+    },
+    {
+      "id": "render-88b7933cdb8dfb8b",
+      "status": "passed",
+      "visibleFraction": 0.7804761904761905
+    },
+    {
+      "id": "render-a87836c23aa01ef2",
+      "status": "passed",
+      "visibleFraction": 0.6818635531135531
+    },
+    {
+      "id": "render-9e0794a70eb857a2",
+      "status": "passed",
+      "visibleFraction": 0.630625
+    },
+    {
+      "id": "render-b9b178c66ea91db1",
+      "status": "passed",
+      "visibleFraction": 0.29480769230769227
+    },
+    {
+      "id": "render-294fc93b0fef1529",
+      "status": "passed",
+      "visibleFraction": 0.6076373626373627
+    },
+    {
+      "id": "render-cbc3a19f69fce48a",
+      "status": "passed",
+      "visibleFraction": 0.5972115384615384
+    },
+    {
+      "id": "render-94b7707ff16b3b09",
+      "status": "passed",
+      "visibleFraction": 0.7188873626373626
+    },
+    {
+      "id": "render-cbf441c74d984dbb",
+      "status": "passed",
+      "visibleFraction": 0.3811401098901099
+    },
+    {
+      "id": "render-ce4e01b9c025704a",
+      "status": "passed",
+      "visibleFraction": 0.8391758241758241
+    },
+    {
+      "id": "render-e1e88a7bb66c0002",
+      "status": "passed",
+      "visibleFraction": 0.7483424908424909
+    },
+    {
+      "id": "render-c3b4f100aab09afc",
+      "status": "passed",
+      "visibleFraction": 0.632026098901099
+    },
+    {
+      "id": "render-1be1fbada49f9854",
+      "status": "passed",
+      "visibleFraction": 0.5403502747252747
+    },
+    {
+      "id": "render-3d512b50d5aab54d",
+      "status": "passed",
+      "visibleFraction": 0.4734203296703297
+    },
+    {
+      "id": "render-8266159fd1899948",
+      "status": "passed",
+      "visibleFraction": 0.3103388278388278
+    },
+    {
+      "id": "render-65fcf014512dbf18",
+      "status": "passed",
+      "visibleFraction": 0.804709249084249
+    },
+    {
+      "id": "render-d826f28aee4adda5",
+      "status": "passed",
+      "visibleFraction": 0.4452129120879121
+    },
+    {
+      "id": "render-df6641d9d200cea7",
+      "status": "passed",
+      "visibleFraction": 0.7302724358974358
+    },
+    {
+      "id": "render-2bf95e5ea7da0e41",
+      "status": "passed",
+      "visibleFraction": 0.6006456043956044
+    },
+    {
+      "id": "render-c7e321573a1c343b",
+      "status": "passed",
+      "visibleFraction": 0.8211675824175824
+    },
+    {
+      "id": "render-206ab2a0412aef47",
+      "status": "passed",
+      "visibleFraction": 0.8098878205128205
+    },
+    {
+      "id": "render-995b0be444be96be",
+      "status": "passed",
+      "visibleFraction": 0.8394299450549451
+    },
+    {
+      "id": "render-69ec407b0e21116a",
+      "status": "passed",
+      "visibleFraction": 0.8925618131868132
+    },
+    {
+      "id": "render-02db4c14005bf032",
+      "status": "passed",
+      "visibleFraction": 0.7925869963369964
+    },
+    {
+      "id": "render-6deb698bd2335e70",
+      "status": "passed",
+      "visibleFraction": 0.7492147435897436
+    },
+    {
+      "id": "render-ad2074d6e6e51c50",
+      "status": "passed",
+      "visibleFraction": 0.7831501831501831
+    },
+    {
+      "id": "render-6cb16866ce09fe11",
+      "status": "passed",
+      "visibleFraction": 0.7880196886446886
+    },
+    {
+      "id": "render-02d5fbe398fceb6c",
+      "status": "passed",
+      "visibleFraction": 0.775455586080586
+    },
+    {
+      "id": "render-7ab5e73172f28090",
+      "status": "passed",
+      "visibleFraction": 0.6815086996336996
+    },
+    {
+      "id": "render-100cd2621efafadc",
+      "status": "passed",
+      "visibleFraction": 0.49307234432234437
+    },
+    {
+      "id": "render-0bc7a95fc61b9c4c",
+      "status": "passed",
+      "visibleFraction": 0.4407257326007326
+    },
+    {
+      "id": "render-6dfc8125cc1aa344",
+      "status": "passed",
+      "visibleFraction": 0.5962065018315018
+    },
+    {
+      "id": "render-6b26024b3aa30e2b",
+      "status": "passed",
+      "visibleFraction": 0.4475412087912088
+    },
+    {
+      "id": "render-b96322e492d3f58b",
+      "status": "passed",
+      "visibleFraction": 0.38993360805860805
+    },
+    {
+      "id": "render-243fb5c3b3597ff4",
+      "status": "passed",
+      "visibleFraction": 0.7848351648351648
+    },
+    {
+      "id": "render-7196a1c2cc7c240f",
+      "status": "passed",
+      "visibleFraction": 0.752257326007326
+    },
+    {
+      "id": "render-0010d487d07dba76",
+      "status": "passed",
+      "visibleFraction": 0.699532967032967
+    },
+    {
+      "id": "render-dfb403f2f4a2e9a5",
+      "status": "passed",
+      "visibleFraction": 0.10091804029304029
+    },
+    {
+      "id": "render-e6a2d4cc512b2844",
+      "status": "passed",
+      "visibleFraction": 0.376941391941392
+    },
+    {
+      "id": "render-5f234064283011cd",
+      "status": "passed",
+      "visibleFraction": 0.74375
+    },
+    {
+      "id": "render-dbc4cf81ec0f67cd",
+      "status": "passed",
+      "visibleFraction": 0.7362957875457876
+    },
+    {
+      "id": "render-71ccb149bc997e2d",
+      "status": "passed",
+      "visibleFraction": 0.5167032967032967
+    },
+    {
+      "id": "render-8b4c10068eac92d7",
+      "status": "passed",
+      "visibleFraction": 0.609757326007326
+    },
+    {
+      "id": "live-deployment-and-original-pair",
+      "status": "passed",
+      "evidence": {
+        "status": "passed",
+        "libraryCards": 72,
+        "mobilePairScenes": 2,
+        "originalPairAndManifestUnchanged": true,
+        "browserErrors": []
+      }
+    }
+  ],
+  "artifacts": {
+    "editor.js": "7b486db5f6258fdc1885489ce41e0990ec08dea72e410a4f98e296206d1de0f5",
+    "index.html": "1e2098521656981a60b4b2a709d4ece6af9eee645936b94b7b624c9dfe3ca6a9"
+  },
+  "quality": "Software and rendering acceptance only. Legacy masks, ghosting, unverified geometry and missing intervals remain.",
+  "review": "Independent read-only review completed; discovery found and fixed single-section API routing before final validation.",
+  "runtime": "Persistent LAN service; no GPU training job started for this delivery."
+}
