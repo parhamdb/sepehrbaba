@@ -1,5 +1,15 @@
 # Experimental DA3 splats for missing video intervals
 
+**October 4, 2026 launch checkpoint:** pilot #73 (02:07.065–02:16.978)
+completed in 596 seconds and is available in the numbered LAN library. It has
+152 camera views, including 146 absent from the baseline, and 16 held-out
+appearance renders averaging 15.91 dB PSNR. Visual inspection shows recognizable
+content but blurred wall detail, streaking and a smeared moving visitor. It is
+not accepted as accurate geometry. The remaining 77 experiments are queued in
+a persistent sequential worker; extrapolating the pilot gives about 13 hours,
+with substantial per-section variation possible. This is a launch snapshot,
+not a claim that the full batch finished.
+
 The current 72-model library is based on COLMAP. This experiment trains separate
 short sections from already retained full-recording DA3 camera/depth predictions
 for the 5,100 source frames absent from those splats. A frozen plan uses ten-second
@@ -101,3 +111,17 @@ retain `sync-error.txt`; reconnect and restart after inspecting the cause.
 Automatically imported models remain unreviewed experiments. Only an explicit
 visual review can establish whether a particular section is useful for manual
 alignment, and that review alone cannot certify metric accuracy.
+
+The launch uses worker unit `sepehr-da3-gap-batch-20261004.service` and local
+copying unit `sepehr-da3-gap-sync-20261004.service`. Runtime paths and access
+details stay in private service configuration. Neither service has a runtime
+cutoff. They require the existing machines and authenticated connection to
+remain available; after a reboot or connection failure, inspect progress and
+restart explicitly. Training is independent of the copying service.
+
+The pilot used commit `9caa87d`. Before continuation, commit `27a8bed` fixed only
+the top-level resumed status display. A narrowly checked script-identity
+migration preserved the pilot and original progress/script backups, verified
+the exact one-line change, then updated the recorded script hash. See
+[`status-fix-migration.json`](../evidence/da3-gap-splats/status-fix-migration.json).
+No training setting or source input changed.

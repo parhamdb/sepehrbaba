@@ -1,0 +1,62 @@
+{
+  "scope": "Delivery and operation of an experimental gap campaign; not geometry acceptance or whole-batch completion",
+  "source_revision": "ee6da0c",
+  "rows": [
+    {
+      "id": "append-only-refresh",
+      "status": "passed"
+    },
+    {
+      "id": "old-sections-preserved",
+      "status": "passed"
+    },
+    {
+      "id": "new-splat-visible",
+      "status": "passed"
+    },
+    {
+      "id": "video-number-link",
+      "status": "passed"
+    },
+    {
+      "id": "missing-frame-plan",
+      "status": "passed"
+    },
+    {
+      "id": "normalized-camera-projection",
+      "status": "passed"
+    },
+    {
+      "id": "camera-binary-export",
+      "status": "passed"
+    },
+    {
+      "id": "resume-running-status",
+      "status": "passed"
+    },
+    {
+      "id": "native-pilot-train-and-heldout-inventory",
+      "status": "passed"
+    },
+    {
+      "id": "hash-verified-sync-and-idempotent-import",
+      "status": "passed"
+    },
+    {
+      "id": "saved-placement-preservation",
+      "status": "passed"
+    },
+    {
+      "id": "persistent-worker-and-copy-service",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 12,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "visual_review": "Source/render comparisons and live editor inspected. Pilot useful as a comparison only; visibly blurry and ghosted.",
+  "final_pass": "Four pipeline checks passed in the worker DA3 environment; four real LAN browser checks passed. Unchanged completed native training reused; no repeat GPU training."
+}

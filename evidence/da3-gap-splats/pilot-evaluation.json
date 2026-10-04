@@ -1,0 +1,71 @@
+{
+  "held_out_views": 16,
+  "full_image_psnr_db": 15.906564002552784,
+  "views": [
+    {
+      "name": "frame_001916.jpg",
+      "psnr_db": 13.848478110313865
+    },
+    {
+      "name": "frame_001926.jpg",
+      "psnr_db": 15.294813784239697
+    },
+    {
+      "name": "frame_001936.jpg",
+      "psnr_db": 10.702786787339003
+    },
+    {
+      "name": "frame_001946.jpg",
+      "psnr_db": 13.64017711805637
+    },
+    {
+      "name": "frame_001956.jpg",
+      "psnr_db": 17.772303189040738
+    },
+    {
+      "name": "frame_001966.jpg",
+      "psnr_db": 12.483248592000514
+    },
+    {
+      "name": "frame_001976.jpg",
+      "psnr_db": 17.284586420339064
+    },
+    {
+      "name": "frame_001986.jpg",
+      "psnr_db": 18.82673237785236
+    },
+    {
+      "name": "frame_001996.jpg",
+      "psnr_db": 18.530910170022413
+    },
+    {
+      "name": "frame_002006.jpg",
+      "psnr_db": 16.944691016708965
+    },
+    {
+      "name": "frame_002016.jpg",
+      "psnr_db": 15.599568179785264
+    },
+    {
+      "name": "frame_002026.jpg",
+      "psnr_db": 19.97465015554054
+    },
+    {
+      "name": "frame_002036.jpg",
+      "psnr_db": 19.288838870955512
+    },
+    {
+      "name": "frame_002046.jpg",
+      "psnr_db": 21.786908370520493
+    },
+    {
+      "name": "frame_002056.jpg",
+      "psnr_db": 23.36320299430487
+    },
+    {
+      "name": "frame_002066.jpg",
+      "psnr_db": 19.293491069996115
+    }
+  ],
+  "scope": "Brush appearance holdout only; DA3 inferred cameras from all views. Unmasked moving objects included. Not geometric validation."
+}

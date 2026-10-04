@@ -1,0 +1,39 @@
+{
+  "captured_utc": "2026-10-04T09:17:55.996199+00:00",
+  "source_revision": "ee6da0c",
+  "status": "batch-running",
+  "total_experiments": 78,
+  "completed": 1,
+  "running": 1,
+  "pending": 76,
+  "failed": 0,
+  "pilot": {
+    "id": "da3-gap-000128",
+    "start": 127.065022,
+    "end": 136.977533,
+    "missing_frames": 146,
+    "frames": 152,
+    "status": "complete",
+    "started": 1791104641.185884,
+    "stage": "evaluate",
+    "finished": 1791105237.5045445,
+    "ply_sha256": "ddc846544699663178855b60e07f7417dadde94614d3a0dff96a3e08030905de",
+    "held_out_views": 16,
+    "full_image_psnr_db": 15.906564002552784
+  },
+  "pilot_elapsed_seconds": 596.3186604976654,
+  "existing_sections_preserved": 72,
+  "frames_represented_after_pilot": 7839,
+  "source_frames": 12793,
+  "quality": "Unverified; visible wall blur, streaks, and smeared moving visitor. No exclusion masks. Not a recovered connection.",
+  "worker_unit": "sepehr-da3-gap-batch-20261004.service",
+  "sync_unit": "sepehr-da3-gap-sync-20261004.service",
+  "config": {
+    "steps": 8000,
+    "poses_sha256": "0cc767b621615e5bcfe01c7087acc231cf7054bd831926683e816e6ae8da08d3",
+    "catalog_sha256": "48814079bbb3c35d3ef9a711b9f98f76b71eab50860701334cb5d831cee81f47",
+    "script_sha256": "e3f22e00ac2fb1adab9a3f2a8fcd74cc0a72e64c665c58b0e181898a054ed83c",
+    "validator_sha256": "5a474e73cb33977b833491fa405190095bc7528dfc4dde03679ff02adf621131",
+    "brush_sha256": "b1053f78b7d9dbd51f763fc2401f3e1d69ff88204c247d65576234df48743764"
+  }
+}

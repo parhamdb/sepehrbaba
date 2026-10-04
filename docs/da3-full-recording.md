@@ -1,7 +1,11 @@
 # Full-recording DA3 camera experiment
 
-**Status: all 799 initial chunks completed September 26, 2026; loop processing,
-camera export and cross-reference are not yet complete.**
+**Status checked October 4, 2026: retained progress reports `poses-complete`,
+with camera estimates and depth available for all 12,793 frames.**
+The exported trajectory remains unverified; complete predictions do not establish
+correct camera recovery. The [gap-splat experiment](da3-gap-splats.md) now reuses
+these results in independent short sections. This status check does not certify
+cross-method agreement or global alignment.
 This run uses all **12,793 native source frames across 737.301333 seconds**.
 It does not yet establish a correct continuous camera path or replace the
 published 3D scenes. The earlier [connection checks](camera-connections.md)

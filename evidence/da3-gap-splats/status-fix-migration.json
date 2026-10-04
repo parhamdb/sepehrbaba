@@ -1,0 +1,7 @@
+{
+  "change": "Operational status reset on resume; training and input settings unchanged",
+  "old_script_sha256": "6fc82b92fa4750f5f73e0c458e8a4ebd4edeeb49a8907c8ecfd218139a77a605",
+  "new_script_sha256": "e3f22e00ac2fb1adab9a3f2a8fcd74cc0a72e64c665c58b0e181898a054ed83c",
+  "pilot_ply_sha256": "ddc846544699663178855b60e07f7417dadde94614d3a0dff96a3e08030905de",
+  "time": 1791105362.1498075
+}
