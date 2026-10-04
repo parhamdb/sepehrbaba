@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "id": "video-ranges",
+      "status": "passed"
+    },
+    {
+      "id": "numbered-editor-metadata",
+      "status": "passed"
+    },
+    {
+      "id": "playback-seek-overlap-gap",
+      "status": "passed"
+    },
+    {
+      "id": "editor-source-link",
+      "status": "passed"
+    },
+    {
+      "id": "mobile-video",
+      "status": "passed"
+    },
+    {
+      "id": "source-and-saved-placements-preserved",
+      "status": "passed",
+      "saved_project_files": 1,
+      "source_sha256": "9f4e121a4d89afdd5dd8b958070203b4c8247e6792f92031f149400931add02a"
+    }
+  ],
+  "counts": {
+    "passed": 6,
+    "failed": 0,
+    "blocked": 0,
+    "untested": 0
+  },
+  "tested_source": "6a97161be147e2b29a2d38cfebb05a2535c5690a",
+  "date": "2026-10-04",
+  "build_sha256": "c1279758a92060af1b5e909e1b8a36534ddd63c28d8f3ce23b9ee15bd4dc6f1f",
+  "scope": "Original video linkage and fixed catalog numbering. Labels indicate section time spans, not exact per-frame reconstruction."
+}

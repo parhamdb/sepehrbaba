@@ -130,3 +130,12 @@ seeking, overlap/gap timestamp mapping, all 72 number mappings, live playback an
 jump controls, editor-to-video links, mobile layout, and unchanged saved pair
 projects. Existing 72-splat rendering evidence is reused; reconstruction and
 masking are unchanged.
+
+The video-linkage delivery passed **6 checks, with 0 failed, blocked or untested**
+on source `6a97161`: original-byte range requests, all 72 number mappings, actual
+playback and seeks across overlapping ranges and gaps, editor source links,
+mobile controls, and preservation of video/project bytes. See the
+[verification receipt](../evidence/section-video/verification.json),
+[desktop overlap example](../evidence/section-video/desktop-video.png), and
+[phone view](../evidence/section-video/mobile-video.png). No extra reconstruction
+or source-video transcoding was performed.
