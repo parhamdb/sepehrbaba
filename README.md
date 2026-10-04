@@ -100,10 +100,12 @@ This is a diagnostic aid, not certification of camera accuracy or global alignme
 **Full-video DA3 camera run:** [Method and status](docs/da3-full-recording.md). All 12,793 frames are queued for one streaming reconstruction, followed automatically by COLMAP/VGGT cross-reference. Inference is running; no continuous trajectory is certified.
 
 **Full-recording processing:** the [complete-video batch](docs/full-recording-batch.md)
-reuses retained components, trains additional scenes and searches the remaining
-gaps in 37 overlapping windows. Its scope is all 12,793 native frames across
-12:17. Processing scope is not completed reconstruction coverage; new results
-require visual review before publication.
+finished all 37 overlapping windows across the 12:17 recording. The
+[LAN section library](docs/full-recording-section-library.md) makes **72 existing
+splats** available individually or as selected pairs for manual stitching.
+They contain **7,693 / 12,793 source frames (60.1%)**; exact remaining gaps are
+listed. These older candidates use blanket person masks, unlike the selectively
+cleaned pair above, and are not a complete or verified reconstruction.
 
 **[Open the 3D pilot](https://parhamdb.github.io/sepehrbaba/)** ·
 **[Explore the earlier 48-second scene](https://parhamdb.github.io/sepehrbaba/?scene=recovery-48s)** ·
